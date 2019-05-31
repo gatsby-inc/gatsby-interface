@@ -7,5 +7,5 @@ export {
   PrimaryDeleteButton,
   SecondaryDeleteButton,
   SuccessButton,
-  TextButton,
-} from "./components/Button"
+  TextButton
+} from './components/Button';

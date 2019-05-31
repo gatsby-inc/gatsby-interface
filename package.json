@@ -1,8 +1,9 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
+  "module": "lib/index.esm.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
@@ -10,20 +11,21 @@
     "build-storybook": "build-storybook",
     "stylelint": "stylelint './src/**/*.js'",
     "format": "prettier-eslint --write \"src/**/*.js\" && eslint src --fix --color --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
-    "lint:commit": "prettier-eslint --eslint-config-path=.eslintrc --write"
+    "lint:commit": "prettier-eslint --eslint-config-path=.eslintrc --write",
+    "prepare": "rimraf ./lib",
+    "build": "yarn prepare && rollup -c"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "emotion": "^9.2.9",
-    "react-emotion": "^9.2.9",
-    "react-icons": "^3.7.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "emotion": "^9.2.9",
     "gatsby": "2.6.0",
     "prop-types": "^15.6.1",
     "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "react-dom": "^16.8.1",
+    "react-emotion": "^9.2.9",
+    "react-icons": "^3.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
@@ -48,7 +50,9 @@
     "babel-plugin-react-docgen": "^2.0.2",
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-preset-gatsby": "^0.1.11",
+    "babel-preset-react": "^6.24.1",
     "dotenv": "^5.0.1",
+    "emotion": "^9.2.9",
     "eslint": "^5.13.0",
     "eslint-config-google": "^0.12.0",
     "eslint-config-prettier": "^4.0.0",
@@ -68,8 +72,17 @@
     "prop-types": "^15.6.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-emotion": "^9.2.9",
+    "react-icons": "^3.7.0",
     "react-test-renderer": "^16.8.6",
     "react-testing-library": "^5.6.1",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.13.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-filesize": "^6.1.0",
+    "rollup-plugin-node-resolve": "^5.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.2",
     "stylelint": "^9.9.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",
