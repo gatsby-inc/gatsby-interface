@@ -1,10 +1,9 @@
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
-import { text, boolean } from "@storybook/addon-knobs"
+import { text, boolean, radios } from "@storybook/addon-knobs"
 
 import { TextInput } from "../src/components/TextInput"
-import { radios } from "@storybook/addon-knobs"
 
 const variants = {
   Default: `DEFAULT`,

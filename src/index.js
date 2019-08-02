@@ -24,3 +24,11 @@ export { Textarea } from "./components/Textarea"
 export { Label } from "./components/Label"
 
 export { InputError } from "./components/InputError"
+
+export { Heading } from "./components/Heading"
+
+export { Subheading } from "./components/Subheading"
+
+export { Lede } from "./components/Lede"
+
+export { Text } from "./components/Text"
