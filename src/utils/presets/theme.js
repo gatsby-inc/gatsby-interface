@@ -22,6 +22,14 @@ export const styles = {
       transition: `box-shadow 0.15s ease-in-out`,
     },
   },
+  label: {
+    color: palette.grey[700],
+    fontSize: fontSizes[`2xs`],
+    margin: `0 0 ${spaces.xs} ${spaces[`2xs`]}`,
+  },
+  link: {
+    color: palette.purple[600],
+  },
   heading: {
     color: palette.grey[900],
     fontFamily: fontFamilies.headerFontFamily,

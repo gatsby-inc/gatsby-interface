@@ -3,16 +3,16 @@ import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 import { Link as GatsbyLink } from "gatsby"
 
-import { palette } from "../../utils/presets"
+import { palette, styles } from "../../utils/presets"
 
 const Link = ({ children, href, target, to, variant = `DEFAULT` }) => {
   const baseStyles = {
+    ...styles.link,
     alignItems: `center`,
-    color: palette.purple[600],
     display: `inline-flex`,
   }
 
-  const styles = {
+  const linkStyles = {
     SIMPLE: {
       textDecoration: `none`,
       ":focus, :hover": {
@@ -36,7 +36,7 @@ const Link = ({ children, href, target, to, variant = `DEFAULT` }) => {
       rel={target === `_blank` ? `noopener noreferrer` : ``}
       css={{
         ...baseStyles,
-        ...styles[variant],
+        ...linkStyles[variant],
       }}
     >
       {children}
@@ -46,7 +46,7 @@ const Link = ({ children, href, target, to, variant = `DEFAULT` }) => {
       to={to}
       css={{
         ...baseStyles,
-        ...styles[variant],
+        ...linkStyles[variant],
       }}
     >
       {children}

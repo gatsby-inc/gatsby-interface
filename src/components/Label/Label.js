@@ -2,13 +2,11 @@
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 
-import { spaces, palette, fontSizes } from "../../utils/presets"
+import { spaces, palette, fontSizes, styles } from "../../utils/presets"
 
 const baseStyles = {
-  color: palette.grey[700],
+  ...styles.label,
   display: `block`,
-  fontSize: fontSizes[`2xs`],
-  margin: `0 0 ${spaces.xs} ${spaces[`2xs`]}`,
 }
 
 const Label = ({ children, id, variant = `DEFAULT` }) => {
