@@ -1,12 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PrimaryButton> renders unchanged 1`] = `
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: translateX(0.2em) scale(1.05);
+    -ms-transform: translateX(0.2em) scale(1.05);
+    transform: translateX(0.2em) scale(1.05);
+  }
+
+  66% {
+    -webkit-transform: translateX(0.2em) scale(0.85);
+    -ms-transform: translateX(0.2em) scale(0.85);
+    transform: translateX(0.2em) scale(0.85);
+  }
+}
+
 .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635E69;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -40,6 +54,12 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
 }
 
 .emotion-0 svg {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -49,13 +69,13 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
 }
 
 .emotion-0:hover:not([disabled]) svg {
-  -webkit-animation: animation-1hbxf4 1s linear infinite;
-  animation: animation-1hbxf4 1s linear infinite;
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
 }
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background: #542C85;
+  background: #542c85;
 }
 
 <div>

@@ -61,7 +61,7 @@ const ButtonSkeleton = ({
   }
 
   return (
-    <StyledComponent disabled={disabled} loading={loading} {...rest}>
+    <StyledComponent disabled={disabled} showLoading={loading} {...rest}>
       {loading ? (
         <Fragment>
           {loadingLabel} <MdRefresh />

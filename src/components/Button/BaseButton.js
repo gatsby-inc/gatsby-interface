@@ -80,8 +80,10 @@ export const StyledBaseButton = styled(SkeletonStyledComponent)`
   }
 
   svg {
-    animation: ${props =>
-      props.loading ? `${loading} 1s linear infinite` : ``};
+    animation-name: ${props => (props.showLoading ? loading : ``)};
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     flex-shrink: 0;
     transform: translateX(0.2em) scale(1);
   }
