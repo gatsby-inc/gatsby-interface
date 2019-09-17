@@ -18,7 +18,7 @@
     "format": "prettier-eslint --write \"src/**/*.js\" && eslint src --fix --color --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint .",
-    "lint:prettier:x": "prettier-eslint --eslint-config-path=.eslintrc --write",
+    "lint:prettier": "prettier-eslint --eslint-config-path=.eslintrc --write",
     "chromatic": "chromatic test"
   },
   "author": "",
