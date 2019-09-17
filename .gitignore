@@ -8,3 +8,4 @@ package-lock.json
 .env.development
 .env.production
 assets/fonts
+storybook-static
