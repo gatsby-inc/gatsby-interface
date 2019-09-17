@@ -31,7 +31,6 @@ const TextInput = ({
       type={type}
       id={id}
       placeholder={placeholder}
-      type={type}
       value={value}
       defaultValue={defaultValue}
       onChange={onChange}

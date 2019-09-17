@@ -1,12 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-
 import { storiesOf } from "@storybook/react"
-import { action } from "@storybook/addon-actions"
-import { MdArrowForward } from "react-icons/md"
-import { boolean, radios } from "@storybook/addon-knobs"
-
 import { StoryUtils } from "../../../utils/storybook"
 import Heading from "./Heading"
 

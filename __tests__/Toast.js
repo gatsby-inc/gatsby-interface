@@ -246,7 +246,7 @@ describe(`useShowErrorAlert hook`, () => {
       )
     }
 
-    const { getByText, debug } = render(
+    const { getByText } = render(
       <ToastProvider>
         <TestComponent />
       </ToastProvider>

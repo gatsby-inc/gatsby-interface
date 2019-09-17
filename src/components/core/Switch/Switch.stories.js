@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { useState } from "react"
+import { useState } from "react"
 import { Formik } from "formik"
 
 import { storiesOf } from "@storybook/react"

@@ -1,8 +1,6 @@
-import React, { Fragment } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
-import { MdRefresh } from "react-icons/md"
-import { Link } from "gatsby"
 
 const SkeletonStyledContainer = styled(`div`)``
 const SkeletonStyledInput = styled(`input`)``

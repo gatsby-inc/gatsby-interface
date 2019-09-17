@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
 import { MdInfoOutline } from "react-icons/md"
 import colors from "../../theme/colors"
-import { hidden } from "ansi-colors"
 
 const StoryUtils = {}
 

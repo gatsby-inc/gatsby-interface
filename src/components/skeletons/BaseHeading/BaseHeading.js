@@ -1,8 +1,5 @@
-import React, { Fragment } from "react"
-import { jsx, keyframes } from "@emotion/core"
+import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import { secureTargetBlankLink } from "../../../utils/helpers"
 
 const AS_OPTIONS = {
   h1: `h1`,

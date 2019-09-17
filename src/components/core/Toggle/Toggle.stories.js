@@ -1,14 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { useState } from "react"
-
+import { useState } from "react"
 import { storiesOf } from "@storybook/react"
-
 import { StoryUtils } from "../../../utils/storybook"
 import { Formik } from "formik"
 import Toggle from "./Toggle"
 import Debug from "../../../utils/formik/Debug"
-
 import { spaces } from "../../../utils/presets"
 import fontSizes from "../../../theme/fontSizes"
 import colors from "../../../theme/colors"

@@ -1,8 +1,6 @@
 import React from "react"
-
 import { storiesOf } from "@storybook/react"
-import { MdEdit, MdArrowForward, MdAdd, MdDelete } from "react-icons/md"
-
+import { MdAdd, MdDelete } from "react-icons/md"
 import { SettingsCard } from "./"
 import { StoryUtils } from "../../../utils/storybook"
 
@@ -11,7 +9,7 @@ storiesOf(`core/SettingsCard`, module)
     <StoryUtils.Container secondaryBg={true}>
       <StoryUtils.Stack width={`35em`}>
         <SettingsCard>
-          <SettingsCard.Title>Card's title</SettingsCard.Title>
+          <SettingsCard.Title>{`Card's title`}</SettingsCard.Title>
           <SettingsCard.EditButton hiddenIf="OPEN" />
 
           <SettingsCard.Content>
@@ -42,7 +40,7 @@ storiesOf(`core/SettingsCard`, module)
     <StoryUtils.Container secondaryBg={true}>
       <StoryUtils.Stack width={`35em`}>
         <SettingsCard>
-          <SettingsCard.Title>Card's title</SettingsCard.Title>
+          <SettingsCard.Title>{`Card's title`}</SettingsCard.Title>
           <SettingsCard.EditButton
             onClick={() =>
               alert(
@@ -59,7 +57,7 @@ storiesOf(`core/SettingsCard`, module)
           </SettingsCard.Content>
         </SettingsCard>
         <SettingsCard>
-          <SettingsCard.Title>Card's title</SettingsCard.Title>
+          <SettingsCard.Title>{`Card's title`}</SettingsCard.Title>
           <SettingsCard.EditButton
             onClick={() =>
               alert(
@@ -87,7 +85,7 @@ storiesOf(`core/SettingsCard`, module)
     <StoryUtils.Container secondaryBg={true}>
       <StoryUtils.Stack width={`35em`}>
         <SettingsCard>
-          <SettingsCard.Title>Card's title</SettingsCard.Title>
+          <SettingsCard.Title>{`Card's title`}</SettingsCard.Title>
           <SettingsCard.EditButton
             label="Change"
             onClick={() =>
@@ -105,7 +103,7 @@ storiesOf(`core/SettingsCard`, module)
           </SettingsCard.Content>
         </SettingsCard>
         <SettingsCard>
-          <SettingsCard.Title>Card's title</SettingsCard.Title>
+          <SettingsCard.Title>{`Card's title`}</SettingsCard.Title>
           <SettingsCard.EditButton
             onClick={() =>
               alert(

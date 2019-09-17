@@ -16,14 +16,16 @@
     "dev": "watch 'yarn run build' src",
     "stylelint": "stylelint './src/**/*.js'",
     "format": "prettier-eslint --write \"src/**/*.js\" && eslint src --fix --color --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
-    "lint:commit": "prettier-eslint --eslint-config-path=.eslintrc --write",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint .",
+    "lint:prettier:x": "prettier-eslint --eslint-config-path=.eslintrc --write",
     "chromatic": "chromatic test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "filestack-react": "^3.1.0",
     "@reach/alert": "^0.1.5",
+    "filestack-react": "^3.1.0",
     "gatsby-design-tokens": "^1.0.0"
   },
   "peerDependencies": {
@@ -96,6 +98,7 @@
     "jest-dom": "^3.1.1",
     "jest-emotion": "^10.0.14",
     "lint-staged": "^8.1.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.16.1",
     "prettier-eslint-cli": "^4.7.1",
     "prop-types": "^15.6.1",
@@ -131,7 +134,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md,yml,yaml}": [
-      "yarn lint:commit",
+      "yarn lint",
       "git add"
     ]
   }

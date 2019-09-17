@@ -1,18 +1,9 @@
 /** @jsx jsx */
-import { jsx, keyframes } from "@emotion/core"
-import React, { Fragment } from "react"
+import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import { MdRefresh, MdArrowForward } from "react-icons/md"
-
 import { BaseButton } from "../../skeletons/BaseButton"
 import styles from "../../../theme/styles/button"
-
-import {
-  BUTTON_SIZES,
-  BUTTON_TONES,
-  BUTTON_VARIANTS,
-} from "../../../utils/options"
 
 const Button = props => {
   const {

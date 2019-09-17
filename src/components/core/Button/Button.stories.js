@@ -1,12 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-
 import { storiesOf } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 import { MdArrowForward } from "react-icons/md"
-import { boolean, radios } from "@storybook/addon-knobs"
-
+import { radios } from "@storybook/addon-knobs"
 import {
   BUTTON_SIZES,
   BUTTON_TONES,
@@ -29,7 +26,6 @@ import README_MANUAL_STYLING from "./README_MANUAL_STYLING.md"
 import README_LEGACY from "./README_LEGACY.md"
 import colors from "../../../theme/colors"
 import styles from "../../../theme/styles/button"
-import tones from "../../../theme/tones"
 import { StoryUtils } from "../../../utils/storybook"
 
 storiesOf(`core/Button`, module)
@@ -50,7 +46,7 @@ storiesOf(`core/Button`, module)
           size={radios(`size`, BUTTON_SIZES, `L`)}
           tone={radios(`tone`, BUTTON_TONES, `BRAND`)}
         >
-          Button variant 'PRIMARY'
+          {`Button variant 'PRIMARY'`}
         </Button>
         <Button
           onClick={action(`Button was clicked`)}
@@ -58,7 +54,7 @@ storiesOf(`core/Button`, module)
           size={radios(`size`, BUTTON_SIZES, `L`)}
           tone={radios(`tone`, BUTTON_TONES, `BRAND`)}
         >
-          Button variant 'SECONDARY'
+          {`Button variant 'SECONDARY'`}
         </Button>
         <Button
           onClick={action(`Button was clicked`)}
@@ -66,7 +62,7 @@ storiesOf(`core/Button`, module)
           size={radios(`size`, BUTTON_SIZES, `L`)}
           tone={radios(`tone`, BUTTON_TONES, `BRAND`)}
         >
-          Button variant 'GHOST'
+          {`Button variant 'GHOST'`}
         </Button>
       </StoryUtils.Stack>
     </StoryUtils.Container>
@@ -80,14 +76,14 @@ storiesOf(`core/Button`, module)
           variant={radios(`variant`, BUTTON_VARIANTS, `PRIMARY`)}
           tone={radios(`tone`, BUTTON_TONES, `BRAND`)}
         >
-          Button size 'XL'
+          {`Button size 'XL'`}
         </Button>
         <Button
           onClick={action(`Button was clicked`)}
           variant={radios(`variant`, BUTTON_VARIANTS, `PRIMARY`)}
           tone={radios(`tone`, BUTTON_TONES, `BRAND`)}
         >
-          Button size 'L'
+          {`Button size 'L'`}
         </Button>
         <Button
           onClick={action(`Button was clicked`)}
@@ -95,7 +91,7 @@ storiesOf(`core/Button`, module)
           variant={radios(`variant`, BUTTON_VARIANTS, `PRIMARY`)}
           tone={radios(`tone`, BUTTON_TONES, `BRAND`)}
         >
-          Button size 'M'
+          {`Button size 'M'`}
         </Button>
         <Button
           onClick={action(`Button was clicked`)}
@@ -103,7 +99,7 @@ storiesOf(`core/Button`, module)
           variant={radios(`variant`, BUTTON_VARIANTS, `PRIMARY`)}
           tone={radios(`tone`, BUTTON_TONES, `BRAND`)}
         >
-          Button size 'S'
+          {`Button size 'S'`}
         </Button>
       </StoryUtils.Stack>
     </StoryUtils.Container>
@@ -117,7 +113,7 @@ storiesOf(`core/Button`, module)
           variant={radios(`variant`, BUTTON_VARIANTS, `PRIMARY`)}
           size={radios(`size`, BUTTON_SIZES, `L`)}
         >
-          Button tone 'BRAND'
+          {`Button tone 'BRAND'`}
         </Button>
         <Button
           onClick={action(`Button was clicked`)}
@@ -125,7 +121,7 @@ storiesOf(`core/Button`, module)
           variant={radios(`variant`, BUTTON_VARIANTS, `PRIMARY`)}
           size={radios(`size`, BUTTON_SIZES, `L`)}
         >
-          Button tone 'SUCCESS'
+          {`Button tone 'SUCCESS'`}
         </Button>
         <Button
           onClick={action(`Button was clicked`)}
@@ -133,7 +129,7 @@ storiesOf(`core/Button`, module)
           variant={radios(`variant`, BUTTON_VARIANTS, `PRIMARY`)}
           size={radios(`size`, BUTTON_SIZES, `L`)}
         >
-          Button tone 'DANGER'
+          {`Button tone 'DANGER'`}
         </Button>
         <Button
           onClick={action(`Button was clicked`)}
@@ -141,7 +137,7 @@ storiesOf(`core/Button`, module)
           variant={radios(`variant`, BUTTON_VARIANTS, `PRIMARY`)}
           size={radios(`size`, BUTTON_SIZES, `L`)}
         >
-          Button tone 'NEUTRAL'
+          {`Button tone 'NEUTRAL'`}
         </Button>
       </StoryUtils.Stack>
     </StoryUtils.Container>
@@ -227,7 +223,7 @@ storiesOf(`core/Button`, module)
               ...styles.variants[`PRIMARY`]({ tone: `BRAND` }),
             }}
           >
-            I'm a &lt;button&gt; but I look like the &lt;Button&gt;
+            {`I'm a <button> but I look like the <Button>`}
           </button>
         </StoryUtils.Stack>
       </StoryUtils.Container>

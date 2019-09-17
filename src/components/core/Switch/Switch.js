@@ -1,9 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { Fragment, useState, useEffect } from "react"
 import PropTypes from "prop-types"
-
-import colors from "../../../theme/colors"
 import fonts from "../../../theme/fonts"
 import hiddenStyles from "../../../theme/styles/hidden"
 import { spaces } from "../../../utils/presets"

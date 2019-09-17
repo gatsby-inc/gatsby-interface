@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
 import { colors } from "../presets"
 
 const CardsWrapper = ({ children, width = `45rem` }) => (

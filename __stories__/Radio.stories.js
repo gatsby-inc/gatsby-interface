@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from "react"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
 
 import { storiesOf } from "@storybook/react"
-import { radios, boolean } from "@storybook/addon-knobs"
+import { radios } from "@storybook/addon-knobs"
 
 import { Radio, RadioSkeleton } from "../src/components/Radio"
 import { fontFamilies, fontSizes, colors, spaces } from "../src/utils/presets"

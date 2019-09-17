@@ -1,14 +1,11 @@
 /** @jsx jsx */
 import { jsx, keyframes } from "@emotion/core"
-import React, {
+import {
   Fragment,
   useState,
-  useEffect,
   createRef,
   forwardRef,
-  useMemo,
 } from "react"
-import PropTypes from "prop-types"
 import deepmerge from "deepmerge"
 
 import { MdInfo } from "react-icons/md"

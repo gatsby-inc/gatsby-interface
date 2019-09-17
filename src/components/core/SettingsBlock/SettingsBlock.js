@@ -1,16 +1,13 @@
 /** @jsx jsx */
-import { jsx, css, keyframes } from "@emotion/core"
-import React, { Fragment } from "react"
+import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 import { MdHelpOutline } from "react-icons/md"
-
 import { ContentBox } from "../../skeletons/ContentBox"
 import { Button } from "../Button"
 import { Heading } from "../Heading"
 import {
   breakpoints,
   fontFamilies,
-  palette,
   spaces,
 } from "../../../utils/presets"
 import cardStyles from "../../../theme/styles/card"

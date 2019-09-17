@@ -4,7 +4,7 @@ import fontSizes from "../fontSizes"
 import fonts from "../fonts"
 import tones from "../tones"
 
-import { breakpoints, radius, spaces } from "../../utils/presets"
+import { radius, spaces } from "../../utils/presets"
 
 const base = props => {
   const { loading = false } = props || {}

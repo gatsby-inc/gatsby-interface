@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { Fragment, useState, useEffect, useMemo } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-
 import fonts from "../../../theme/fonts"
 import colors from "../../../theme/colors"
 import tones from "../../../theme/tones"
@@ -11,8 +10,6 @@ import { spaces } from "../../../utils/presets"
 import deepmerge from "deepmerge"
 
 const IN_ON_POSITIONS = [`LEFT`, `RIGHT`]
-const TONES = [`BRAND`, `SUCCESS`]
-
 const ToggleContext = React.createContext()
 
 function getLeftValue({ checked, active, inOnPosition }) {
@@ -49,8 +46,6 @@ function Toggle({
   useEffect(() => {
     setState({ ...state, fieldValue, checked: fieldValue === true })
   }, [fieldValue])
-
-  const value = useMemo(() => state, [state, fieldValue])
 
   return (
     <ToggleContext.Provider value={state}>
@@ -104,7 +99,6 @@ Toggle.Input = ({ customCss = {}, ...rest }) => {
     fieldName,
     checked,
     onChange,
-    inOnPosition,
   } = Toggle.useToggleContext()
 
   return (
@@ -125,9 +119,7 @@ Toggle.Input = ({ customCss = {}, ...rest }) => {
 
 Toggle.Mark = ({ customCss = {}, ...rest }) => {
   const {
-    fieldName,
     checked,
-    onChange,
     inOnPosition,
     tone,
   } = Toggle.useToggleContext()
@@ -142,7 +134,6 @@ Toggle.Mark = ({ customCss = {}, ...rest }) => {
           cursor: `pointer`,
           display: `inline-block`,
           height: `24px`,
-          marginRight: spaces.xs,
           order: 1,
           padding: `3px`,
           transition: `all .3s ease, background .5s`,

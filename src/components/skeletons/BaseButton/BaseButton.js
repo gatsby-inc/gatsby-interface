@@ -1,5 +1,4 @@
 import React, { Fragment } from "react"
-import { jsx, keyframes } from "@emotion/core"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { secureTargetBlankLink } from "../../../utils/helpers"
@@ -63,7 +62,7 @@ function BaseButton(props) {
         rel={secureTargetBlankLink({ rel, target })}
         {...rest}
       >
-        <Content children={children} label={label} DefaultIcon={DefaultIcon} />
+        <Content label={label} DefaultIcon={DefaultIcon} >{children}</Content>
       </a>
     )
   }
@@ -71,7 +70,7 @@ function BaseButton(props) {
   if (to) {
     return (
       <Link to={to} role={role} {...rest}>
-        <Content children={children} label={label} DefaultIcon={DefaultIcon} />
+        <Content label={label} DefaultIcon={DefaultIcon}>{children}</Content>
       </Link>
     )
   }
@@ -85,7 +84,7 @@ function BaseButton(props) {
           {LoadingIcon && <LoadingIcon />}
         </Fragment>
       ) : (
-        <Content children={children} label={label} DefaultIcon={DefaultIcon} />
+        <Content label={label} DefaultIcon={DefaultIcon}>{children}</Content>
       )}
     </button>
   )

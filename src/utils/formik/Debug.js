@@ -2,8 +2,6 @@
 // https://github.com/jaredpalmer/formik-alicante/blob/master/src/components/Debug.js
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
-import React from "react"
 import { FormikConsumer } from "formik"
 
 const Debug = () => (

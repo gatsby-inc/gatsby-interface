@@ -1,15 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { useState } from "react"
-
 import { storiesOf } from "@storybook/react"
-
 import { StoryUtils } from "../../../utils/storybook"
 import ToggleTip from "./ToggleTip"
-
-import { spaces } from "../../../utils/presets"
-import fontSizes from "../../../theme/fontSizes"
-import colors from "../../../theme/colors"
 
 storiesOf(`core/ToggleTip`, module)
   .addParameters({

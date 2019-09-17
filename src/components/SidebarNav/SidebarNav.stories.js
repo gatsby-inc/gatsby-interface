@@ -1,10 +1,8 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core"
-import React, { useState } from "react"
-
+import { jsx } from "@emotion/core"
+import { useState } from "react"
 import { storiesOf } from "@storybook/react"
 import { StoryUtils } from "../../utils/storybook"
-
 import SidebarNav from "./SidebarNav"
 import { General, Integrations, Preview, Skull } from "../../assets"
 

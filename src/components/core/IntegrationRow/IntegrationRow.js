@@ -1,20 +1,17 @@
 /** @jsx jsx */
-import { jsx, css, keyframes } from "@emotion/core"
-import React, { Fragment, useEffect, useState } from "react"
+import { jsx } from "@emotion/core"
+import { Fragment } from "react"
 import PropTypes from "prop-types"
 import { MdEdit, MdArrowForward, MdFlashOn } from "react-icons/md"
-
 import { ContentBox } from "../../skeletons/ContentBox"
 import { Link } from "../../Link"
 import { Button } from "../Button"
 import { Heading } from "../Heading"
 import { Badge } from "../Badge"
-import { breakpoints, spaces } from "../../../utils/presets"
+import { spaces } from "../../../utils/presets"
 import fontSizes from "../../../theme/fontSizes"
-import fonts from "../../../theme/fonts"
 import colors from "../../../theme/colors"
 import cardStyles from "../../../theme/styles/card"
-import { styles as headingStyles } from "../../../theme/styles/heading"
 
 function IntegrationRow({
   isConnected = false,

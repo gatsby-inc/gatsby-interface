@@ -1,13 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-
 import { storiesOf } from "@storybook/react"
 import { hrefTo } from "@storybook/addon-links"
 import { action } from "@storybook/addon-actions"
-import { MdArrowForward } from "react-icons/md"
-import { radios, boolean } from "@storybook/addon-knobs"
-
 import BaseButton from "./BaseButton"
 import Readme from "./README.md"
 

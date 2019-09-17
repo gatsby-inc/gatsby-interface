@@ -1,11 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { Fragment } from "react"
 import PropTypes from "prop-types"
-
 import { BaseHeading } from "../../skeletons/BaseHeading"
 import { styles, options } from "../../../theme/styles/heading"
-import tones from "../../../theme/tones"
 
 const { baseStyle, variantStyles } = styles
 const { VARIANTS, TONES } = options
