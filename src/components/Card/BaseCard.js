@@ -10,6 +10,7 @@ export const StyledBaseCard = styled(SkeletonStyledComponent)`
   border-radius: ${spaces[`2xs`]};
   margin-bottom: ${spaces.m};
   padding: ${spaces.m} ${spaces.l};
+  background-color: white;
 
   :last-child {
     margin-bottom: 0;

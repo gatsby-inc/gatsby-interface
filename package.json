@@ -32,8 +32,10 @@
   "dependencies": {
     "@loadable/component": "^5.10.2",
     "@reach/alert": "^0.1.5",
+    "@reach/dialog": "^0.4.0",
     "filestack-react": "^3.1.0",
-    "gatsby-design-tokens": "^1.0.0"
+    "gatsby-design-tokens": "^1.0.0",
+    "react-spring": "^8.0.27"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.14",
