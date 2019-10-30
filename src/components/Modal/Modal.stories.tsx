@@ -1,10 +1,8 @@
 import React, { useState } from "react"
 import { storiesOf } from "@storybook/react"
 import { Modal, ModalType } from "./Modal"
-import { ModalPanel } from "./ModalPanel"
 import { withKnobs, boolean, select, number } from "@storybook/addon-knobs"
-import { ModalFullScreen } from "./ModalFullScreen"
-import { ModalCard } from "./ModalCard"
+import { ModalFullScreen, ModalCard, ModalPanel } from "./"
 
 const label = `Type`
 const options = {

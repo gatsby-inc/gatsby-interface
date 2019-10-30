@@ -22,7 +22,7 @@ const CardAnimation = styled.div<ModalCardProps>`
 `
 
 export const ModalCard: React.FC<ModalCardProps> = ({ children, maxWidth }) => (
-    <CardAnimation maxWidth={maxWidth}>
-      <Card>{children}</Card>
-    </CardAnimation>
-  )
+  <CardAnimation maxWidth={maxWidth}>
+    <Card>{children}</Card>
+  </CardAnimation>
+)

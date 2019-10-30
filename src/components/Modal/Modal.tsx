@@ -43,7 +43,7 @@ const Overlay = styled(DialogOverlay)<any>`
   animation: ${props => props.animation} 0.5s ease forwards;
 `
 
-const Content = styled(DialogContent)<any>`
+const Content = styled(DialogContent)`
   margin: 0;
   padding: 0;
   background: transparent;
