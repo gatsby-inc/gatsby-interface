@@ -9,7 +9,7 @@ const cardIncoming = keyframes`
   }
 `
 
-const Card = styled.div`
+export const ModalCard = styled.div`
   background: ${palette.white};
   border-radius: ${radius.large};
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
@@ -29,5 +29,3 @@ const Card = styled.div`
     width: 620px;
   }
 `
-
-export const ModalCard: React.FC = ({ children }) => <Card>{children}</Card>
