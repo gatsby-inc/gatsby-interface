@@ -1,11 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { keyframes } from "@emotion/core"
-import { Card } from "../Card"
-
-export interface ModalCardProps {
-  maxWidth?: string
-}
+import { palette, radius, spaces, breakpoints } from "../../utils/presets"
 
 const cardIncoming = keyframes`
   100% {
@@ -13,16 +9,25 @@ const cardIncoming = keyframes`
   }
 `
 
-const CardAnimation = styled.div<ModalCardProps>`
+const Card = styled.div`
+  background: ${palette.white};
+  border-radius: ${radius.large};
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+  max-width: calc(100% - (${spaces.m} * 2));
+  outline: none;
   animation: ${cardIncoming} 0.5s 0.25s ease forwards;
   transform: translate(0, 90vh) scale(0.9) perspective(1000px) rotateX(-90deg);
   transform-origin: top center;
   margin: 0 auto;
-  max-width: ${props => props.maxWidth || `100%`};
+  padding: ${spaces.m};
+
+  @media (min-width: ${breakpoints.mobile}px) {
+    max-width: calc(100% - (${spaces.l} * 2));
+  }
+
+  @media (min-width: ${breakpoints.phablet}px) {
+    width: 620px;
+  }
 `
 
-export const ModalCard: React.FC<ModalCardProps> = ({ children, maxWidth }) => (
-  <CardAnimation maxWidth={maxWidth}>
-    <Card>{children}</Card>
-  </CardAnimation>
-)
+export const ModalCard: React.FC = ({ children }) => <Card>{children}</Card>

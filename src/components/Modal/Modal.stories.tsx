@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { storiesOf } from "@storybook/react"
 import { Modal, ModalType } from "./Modal"
-import { withKnobs, boolean, select, number } from "@storybook/addon-knobs"
+import { withKnobs, boolean, select } from "@storybook/addon-knobs"
 import { ModalFullScreen, ModalCard, ModalPanel } from "./"
 import { PanelPosition } from "./ModalPanel"
 
@@ -15,30 +15,18 @@ const options = {
 
 storiesOf(`Modal`, module)
   .addDecorator(withKnobs)
-  .add(`Card`, () => {
-    const maxWidthLabel = `Max width`
-    const maxWidthOptions = {
-      range: true,
-      min: 20,
-      max: 100,
-      step: 1,
-    }
-
-    const value = number(maxWidthLabel, 100, maxWidthOptions)
-
-    return (
-      <Modal
-        type={select(label, options, `info`) as ModalType}
-        aria-label="Some impressive content"
-        isVisible={boolean(`Is opened?`, true)}
-        onClose={() => console.log(`Dismissed!`)}
-      >
-        <ModalCard maxWidth={`${value}%`}>
-          <div>Hello world</div>
-        </ModalCard>
-      </Modal>
-    )
-  })
+  .add(`Card`, () => (
+    <Modal
+      type={select(label, options, `info`) as ModalType}
+      aria-label="Some impressive content"
+      isVisible={boolean(`Is opened?`, true)}
+      onClose={() => console.log(`Dismissed!`)}
+    >
+      <ModalCard>
+        <div>Hello world</div>
+      </ModalCard>
+    </Modal>
+  ))
   .add(`Panel`, () => {
     const positionLabel = `Position`
     const positionOptions = {
@@ -102,7 +90,7 @@ const NestedExample = () => {
               isVisible={isChildrenOpened}
               onClose={() => console.log(`Dismissed!`)}
             >
-              <ModalCard maxWidth="50%">
+              <ModalCard>
                 <div>Children modal</div>
               </ModalCard>
             </Modal>
