@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react"
 import { Modal, ModalType } from "./Modal"
 import { withKnobs, boolean, select, number } from "@storybook/addon-knobs"
 import { ModalFullScreen, ModalCard, ModalPanel } from "./"
+import { PanelPosition } from "./ModalPanel"
 
 const label = `Type`
 const options = {
@@ -54,7 +55,7 @@ storiesOf(`Modal`, module)
       >
         <ModalPanel
           position={
-            select(positionLabel, positionOptions, `left`) as "left" | "right"
+            select(positionLabel, positionOptions, `left`) as PanelPosition
           }
         >
           <div>Hello world</div>
@@ -79,6 +80,8 @@ storiesOf(`Modal`, module)
 const NestedExample = () => {
   const [isParentOpened, setParent] = useState(false)
   const [isChildrenOpened, setChildren] = useState(false)
+
+  const user = {}
 
   return (
     <div>

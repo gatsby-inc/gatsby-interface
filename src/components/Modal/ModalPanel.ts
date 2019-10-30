@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import { keyframes } from "@emotion/core"
 import { palette, spaces } from "../../utils/presets"
 
-const buildTranslation = (position: PanelProps["position"]) => keyframes`
+const buildTranslation = (position: PanelPosition) => keyframes`
   0% {
     transform: translate3d${position === `left` ? `(-100%, 0,0)` : `(100%,0,0)`}
    }
@@ -15,8 +15,10 @@ const buildTranslation = (position: PanelProps["position"]) => keyframes`
 const translateLeft = buildTranslation(`left`)
 const translateRight = buildTranslation(`right`)
 
+export type PanelPosition = "left" | "right"
+
 export interface PanelProps {
-  position?: "left" | "right"
+  position?: PanelPosition
   maxWidth?: string
 }
 

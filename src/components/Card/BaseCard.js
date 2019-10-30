@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import CardSkeleton, { SkeletonStyledComponent } from "./Card.Skeleton"
-import { spaces, breakpoints } from "../../utils/presets"
+import { spaces, breakpoints, palette } from "../../utils/presets"
 
 export const StyledBaseCard = styled(SkeletonStyledComponent)`
   box-shadow: 0px 1px 2px rgba(46, 41, 51, 0.08),
@@ -10,7 +10,7 @@ export const StyledBaseCard = styled(SkeletonStyledComponent)`
   border-radius: ${spaces[`2xs`]};
   margin-bottom: ${spaces.m};
   padding: ${spaces.m} ${spaces.l};
-  background-color: white;
+  background-color: ${palette.white};
 
   :last-child {
     margin-bottom: 0;
