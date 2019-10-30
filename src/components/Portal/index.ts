@@ -5,6 +5,7 @@ export interface PortalProps {
   tag?: string
 }
 
+// Relying on a specific type extending HTMLElement allows to create custom HTML elements like <gatsby-portal></<gatsby-portal>
 interface GatsbyElement extends HTMLElement {}
 
 const Portal: React.FC<PortalProps> = ({ children, tag = `gatsby-portal` }) => {
@@ -19,7 +20,7 @@ const Portal: React.FC<PortalProps> = ({ children, tag = `gatsby-portal` }) => {
 
     return () =>
       portalNodeRef.current && document.body.removeChild(portalNodeRef.current)
-  }, [])
+  }, [tag])
 
   return hasInitialized && portalNodeRef.current
     ? createPortal(children, portalNodeRef.current)
