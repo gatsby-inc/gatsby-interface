@@ -3,8 +3,30 @@ import { storiesOf } from "@storybook/react"
 import Portal from "./"
 import README from "./README.md"
 import { text } from "@storybook/addon-knobs"
+import styled from "@emotion/styled"
+import { Global, css } from "@emotion/core"
+
+const Toast = styled.div`
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border-radius: 3px;
+  color: white;
+  background: #272727;
+  margin: 0.2rem;
+`
 
 storiesOf(`Portal`, module)
+  .addDecorator(storyFn => (
+    <>`     `<Global
+        styles={css`
+          toast-container {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+          }
+        `}
+      />`     `{storyFn()}`   `</>
+  ))
   .addParameters({
     options: {
       showPanel: true,
@@ -23,6 +45,14 @@ storiesOf(`Portal`, module)
       <div>This is the parent portal</div>
       <Portal>
         <div>This is the child portal</div>
+      </Portal>
+    </Portal>
+  ))
+  .add(`Same destination portal`, () => (
+    <Portal tag="toast-node" target="toast-container">
+      <Toast>Parent toast</Toast>
+      <Portal tag="toast-node" target="toast-container">
+        <Toast>Child toast</Toast>
       </Portal>
     </Portal>
   ))
