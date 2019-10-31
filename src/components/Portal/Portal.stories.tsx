@@ -17,7 +17,8 @@ const Toast = styled.div`
 
 storiesOf(`Portal`, module)
   .addDecorator(storyFn => (
-    <>`     `<Global
+    <div>
+      <Global
         styles={css`
           toast-container {
             position: fixed;
@@ -25,7 +26,9 @@ storiesOf(`Portal`, module)
             bottom: 0;
           }
         `}
-      />`     `{storyFn()}`   `</>
+      />
+      {storyFn()}
+    </div>
   ))
   .addParameters({
     options: {
