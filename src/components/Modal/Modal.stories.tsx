@@ -19,8 +19,8 @@ storiesOf(`Modal`, module)
     <Modal
       type={select(label, options, `info`) as ModalType}
       aria-label="Some impressive content"
-      isVisible={boolean(`Is opened?`, true)}
-      onClose={() => console.log(`Dismissed!`)}
+      isOpen={boolean(`Is opened?`, true)}
+      onDismiss={() => console.log(`Dismissed!`)}
     >
       <ModalCard>
         <div>Hello world</div>
@@ -38,8 +38,8 @@ storiesOf(`Modal`, module)
       <Modal
         type={select(label, options, `info`) as ModalType}
         aria-label="Some impressive content"
-        isVisible={boolean(`Is opened?`, true)}
-        onClose={() => console.log(`Dismissed!`)}
+        isOpen={boolean(`Is opened?`, true)}
+        onDismiss={() => console.log(`Dismissed!`)}
       >
         <ModalPanel
           position={
@@ -55,8 +55,8 @@ storiesOf(`Modal`, module)
     <Modal
       type={select(label, options, `info`) as any}
       aria-label="Some impressive content"
-      isVisible={boolean(`Is opened?`, true)}
-      onClose={() => console.log(`Dismissed!`)}
+      isOpen={boolean(`Is opened?`, true)}
+      onDismiss={() => console.log(`Dismissed!`)}
     >
       <ModalFullScreen>
         <div>Hello world</div>
@@ -77,8 +77,8 @@ const NestedExample = () => {
       <Modal
         type={select(label, options, `info`) as any}
         aria-label="Some impressive content"
-        isVisible={isParentOpened}
-        onClose={() => console.log(`Dismissed!`)}
+        isOpen={isParentOpened}
+        onDismiss={() => console.log(`Dismissed!`)}
       >
         <ModalFullScreen>
           <div>Parent modal</div>
@@ -87,8 +87,8 @@ const NestedExample = () => {
 
             <Modal
               aria-label="Some impressive content"
-              isVisible={isChildrenOpened}
-              onClose={() => console.log(`Dismissed!`)}
+              isOpen={isChildrenOpened}
+              onDismiss={() => console.log(`Dismissed!`)}
             >
               <ModalCard>
                 <div>Children modal</div>

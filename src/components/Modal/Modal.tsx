@@ -1,5 +1,5 @@
 import React from "react"
-import { DialogOverlay, DialogContent } from "@reach/dialog"
+import { DialogOverlay, DialogContent, DialogOverlayProps } from "@reach/dialog"
 import styled from "@emotion/styled"
 import { palette } from "../../utils/presets"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
@@ -25,10 +25,8 @@ const errorFade = buildFadeIn(hexToRGBA(palette.red[`500`], 0.75))
 const infoFade = buildFadeIn(hexToRGBA(palette.purple[`500`], 0.75))
 const warnFade = buildFadeIn(hexToRGBA(palette.orange[`500`], 0.75))
 
-export interface ModalProps {
+export interface ModalProps extends Omit<DialogOverlayProps, "ref"> {
   type?: ModalType
-  isVisible?: boolean
-  onClose: () => void
 }
 
 const getBackgroundAnimation = (type?: ModalType) => {
@@ -39,9 +37,9 @@ const getBackgroundAnimation = (type?: ModalType) => {
   return infoFade
 }
 
-const Overlay = styled(DialogOverlay)<{
-  animation: ReturnType<typeof buildFadeIn>
-}>`
+const Overlay = styled(DialogOverlay)<
+  DialogOverlayProps & { animation: ReturnType<typeof buildFadeIn> }
+>`
   animation: ${props => props.animation} 0.5s ease forwards;
 `
 
@@ -52,19 +50,8 @@ const Content = styled(DialogContent)`
   width: auto;
 `
 
-export const Modal: React.FC<ModalProps> = ({
-  children,
-  type,
-  isVisible,
-  onClose,
-  ...props
-}) => (
-  <Overlay
-    {...props}
-    animation={getBackgroundAnimation(type)}
-    isOpen={isVisible}
-    onDismiss={onClose}
-  >
+export const Modal: React.FC<ModalProps> = ({ children, type, ...props }) => (
+  <Overlay {...props} animation={getBackgroundAnimation(type)}>
     <Content>{children}</Content>
   </Overlay>
 )
