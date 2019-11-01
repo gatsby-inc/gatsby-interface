@@ -69,8 +69,6 @@ const NestedExample = () => {
   const [isParentOpened, setParent] = useState(false)
   const [isChildrenOpened, setChildren] = useState(false)
 
-  const user = {}
-
   return (
     <div>
       <button onClick={() => setParent(true)}>Show parent</button>
