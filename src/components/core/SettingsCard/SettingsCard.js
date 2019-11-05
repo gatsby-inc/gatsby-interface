@@ -7,12 +7,7 @@ import { MdEdit, MdArrowForward } from "react-icons/md"
 import { ContentBox } from "../../skeletons/ContentBox"
 import { Button } from "../Button"
 import { Heading } from "../Heading"
-import {
-  breakpoints,
-  fontFamilies,
-  palette,
-  spaces,
-} from "../../../utils/presets"
+import { breakpoints, fontFamilies, palette, spaces } from "../../../theme"
 import cardStyles from "../../../theme/styles/card"
 import fontSizes from "../../../theme/fontSizes"
 import colors from "../../../theme/colors"

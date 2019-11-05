@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-import { breakpoints } from "../../utils/presets"
+import { breakpoints } from "../../theme"
 
 export const CardHeader = styled(`header`)`
   align-items: center;

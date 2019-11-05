@@ -15,7 +15,7 @@ import { MdInfo } from "react-icons/md"
 import { useEventListener } from "../../../utils/hooks"
 import colors from "../../../theme/colors"
 import fontSizes from "../../../theme/fontSizes"
-import { spaces, radius } from "../../../utils/presets"
+import { spaces, radius } from "../../../theme"
 import { showCustomCssDeprecationMessage } from "../../../utils/maintenance/deprecationMessages"
 
 function ToggleTip({ children, tip, customCss, width, className, ...rest }) {

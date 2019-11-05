@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 
-import { spaces } from "../../utils/presets"
+import { spaces } from "../../theme"
 import input from "../../theme/styles/input"
 import searchInputBg from "./assets/searchInputBg.svg"
 

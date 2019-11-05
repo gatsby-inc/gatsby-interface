@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core"
 import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 
-import { spaces, radius } from "../../../utils/presets"
+import { spaces, radius } from "../../../theme"
 import fontSizes from "../../../theme/fontSizes"
 import fonts from "../../../theme/fonts"
 import colors from "../../../theme/colors"

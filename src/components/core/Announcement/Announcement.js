@@ -4,7 +4,7 @@ import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 
 import cardStyles from "../../../theme/styles/card"
-import { spaces } from "../../../utils/presets"
+import { spaces } from "../../../theme"
 import fontSizes from "../../../theme/fontSizes"
 import fonts from "../../../theme/fonts"
 import colors from "../../../theme/colors"

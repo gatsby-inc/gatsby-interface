@@ -7,13 +7,7 @@ import Alert from "@reach/alert"
 import { keyframes, css } from "@emotion/core"
 import { MdDone, MdClose, MdWarning } from "react-icons/md"
 
-import {
-  fontSizes,
-  dimensions,
-  palette,
-  radius,
-  spaces,
-} from "../../utils/presets"
+import { fontSizes, dimensions, palette, radius, spaces } from "../../theme"
 import { ToastTones } from "./constants"
 
 const toastEntryAnimation = keyframes`

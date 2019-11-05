@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 
-import { spaces } from "../../utils/presets"
+import { spaces } from "../../theme"
 import styles from "../../theme/styles/input"
 
 const Textarea = ({

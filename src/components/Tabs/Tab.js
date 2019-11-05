@@ -11,7 +11,7 @@ import {
   breakpoints,
   fontFamilies,
   fontSizes,
-} from "../../utils/presets"
+} from "../../theme"
 
 export const baseStyles = {
   alignItems: `center`,

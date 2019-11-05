@@ -5,7 +5,7 @@ import { MdCheck, MdClose, MdRefresh } from "react-icons/md"
 
 import colors from "../../theme/colors"
 
-import { spaces, fontFamilies, fontSizes } from "../../utils/presets"
+import { spaces, fontFamilies, fontSizes } from "../../theme"
 
 const loading = keyframes` 
   0% {

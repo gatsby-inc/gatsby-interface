@@ -7,7 +7,7 @@ import { color, select, withKnobs } from "@storybook/addon-knobs"
 import { css } from "@emotion/core"
 import { StoryUtils } from "../../utils/storybook"
 import * as icons from "./icons"
-import { colors as presetColors, palette } from "../../utils/presets"
+import { colors as presetColors, palette } from "../../theme"
 
 const sizes = [`xsmall`, `small`, `medium`, `large`]
 const customSizes = [`1em`, `16px`, `24px`, `32px`, `40px`, `64px`]

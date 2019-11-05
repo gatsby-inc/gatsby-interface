@@ -87,12 +87,13 @@ export { Switch } from "./components/core/Switch"
 
 export * from "./components/CopyButton"
 
-export { colors, palette } from "./utils/presets/colors"
-export { fontFamilies, fontSizes } from "./utils/presets/typography"
-export { spaces } from "./utils/presets/spaces"
-export { breakpoints } from "./utils/presets/breakpoints"
-export { dimensions, radius } from "./utils/presets/sizes"
+export { palette } from "./theme/palette"
+export { fontFamilies, fontSizes } from "./theme/typography"
+export { spaces } from "./theme/spaces"
+export { breakpoints } from "./theme/breakpoints"
+export { dimensions, radius } from "./theme/sizes"
 
+export { default as colors } from "./theme"
 export { default as cardStyles } from "./theme/styles/card"
 export { default as buttonStyles } from "./theme/styles/button"
 export { default as fontWeights } from "./theme/fontWeights"

@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 import colors from "../../theme/colors"
 
-import { spaces, fontSizes } from "../../utils/presets"
+import { spaces, fontSizes } from "../../theme"
 
 const baseStyles = {
   color: colors.grey[70],

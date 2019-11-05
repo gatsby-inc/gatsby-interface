@@ -9,7 +9,7 @@ import { Formik } from "formik"
 import Toggle from "./Toggle"
 import Debug from "../../../utils/formik/Debug"
 
-import { spaces } from "../../../utils/presets"
+import { spaces } from "../../../theme"
 import fontSizes from "../../../theme/fontSizes"
 import colors from "../../../theme/colors"
 

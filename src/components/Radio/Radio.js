@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 
 import colors from "../../theme/colors"
 
-import { radius, spaces, fontFamilies, fontSizes } from "../../utils/presets"
+import { radius, spaces, fontFamilies, fontSizes } from "../../theme"
 
 const INPUT_BORDER_WIDTH = `2px`
 const INPUT_INNER_DIA = `22px`

@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 
-import { breakpoints, dimensions } from "../../utils/presets"
+import { breakpoints, dimensions } from "../../theme"
 
 const TabsNav = ({ children }) => (
   <nav

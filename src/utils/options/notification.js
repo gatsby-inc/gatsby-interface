@@ -3,7 +3,7 @@ import Success from "../../assets/status/Success"
 import Danger from "../../assets/status/Danger"
 import { MdWarning } from "react-icons/md"
 
-import { palette } from "../presets"
+import { palette } from "../../theme"
 
 const Warning = styled(MdWarning)`
   fill: ${palette.yellow[`500`]};

@@ -29,7 +29,7 @@ Or you could directly import and apply `styles` object:
 
 ```javascript
 import { Button } from "gatsby-interface"
-import { styles } from "../../../utils/presets"
+import { styles } from "../../../theme"
 
 function Component(props) {
   return (

@@ -1,6 +1,6 @@
 import colors from "../colors"
 
-import { breakpoints, radius, spaces } from "../../utils/presets"
+import { breakpoints, radius, spaces } from "../"
 
 const card = {
   frame: {

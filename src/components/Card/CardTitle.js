@@ -2,12 +2,7 @@ import styled from "@emotion/styled"
 
 import colors from "../../theme/colors"
 
-import {
-  spaces,
-  breakpoints,
-  fontFamilies,
-  fontSizes,
-} from "../../utils/presets"
+import { spaces, breakpoints, fontFamilies, fontSizes } from "../../theme"
 
 export const CardTitle = styled(`h2`)`
   align-items: center;

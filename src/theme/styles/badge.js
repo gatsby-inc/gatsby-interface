@@ -3,7 +3,7 @@ import tones from "../tones"
 import fontSizes from "../fontSizes"
 import fonts from "../fonts"
 
-import { breakpoints, radius, spaces } from "../../utils/presets"
+import { breakpoints, radius, spaces } from "../"
 
 const VARIANTS = [`PILL`, `STATUS`]
 const TONES = [`BRAND`, `SUCCESS`, `DANGER`, `NEUTRAL`]

@@ -6,7 +6,7 @@ import { MdClose, MdArrowForward } from "react-icons/md"
 
 import styles from "../../theme/styles/notification"
 import tones from "../../theme/tones"
-import { spaces, palette } from "../../utils/presets"
+import { spaces, palette } from "../../theme"
 import { Link } from "../Link"
 import { Button } from "../core/Button"
 

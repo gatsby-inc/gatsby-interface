@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import colors from "../../theme/colors"
-import { spaces, fontFamilies, fontSizes } from "../../utils/presets"
+import { spaces, fontFamilies, fontSizes } from "../../theme"
 
 const SidebarNav = ({ children, options, style, ...rest }) => (
   <nav

@@ -7,7 +7,7 @@ import { storiesOf } from "@storybook/react"
 import { StoryUtils } from "../../../utils/storybook"
 import ToggleTip from "./ToggleTip"
 
-import { spaces } from "../../../utils/presets"
+import { spaces } from "../../../theme"
 import fontSizes from "../../../theme/fontSizes"
 import colors from "../../../theme/colors"
 

@@ -4,12 +4,7 @@ import PropTypes from "prop-types"
 
 import colors from "../../theme/colors"
 
-import {
-  fontFamilies,
-  fontSizes,
-  breakpoints,
-  spaces,
-} from "../../utils/presets"
+import { fontFamilies, fontSizes, breakpoints, spaces } from "../../theme"
 
 const TabFigure = ({ children }) => (
   <span
