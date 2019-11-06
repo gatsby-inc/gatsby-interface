@@ -1,5 +1,10 @@
 import React from "react"
-import { DialogOverlay, DialogContent, DialogOverlayProps } from "@reach/dialog"
+import {
+  DialogOverlay,
+  DialogContent,
+  DialogOverlayProps,
+  DialogContentProps,
+} from "@reach/dialog"
 import styled from "@emotion/styled"
 import { palette } from "../../utils/presets"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
@@ -25,7 +30,9 @@ const errorFade = buildFadeIn(hexToRGBA(palette.red[`500`], 0.75))
 const infoFade = buildFadeIn(hexToRGBA(palette.purple[`500`], 0.75))
 const warnFade = buildFadeIn(hexToRGBA(palette.orange[`500`], 0.75))
 
-export interface ModalProps extends Omit<DialogOverlayProps, "ref"> {
+export interface ModalProps
+  extends Omit<DialogOverlayProps, "ref">,
+    Omit<DialogContentProps, "ref"> {
   type?: ModalType
 }
 
@@ -50,8 +57,19 @@ const Content = styled(DialogContent)`
   width: auto;
 `
 
-export const Modal: React.FC<ModalProps> = ({ children, type, ...props }) => (
-  <Overlay {...props} animation={getBackgroundAnimation(type)}>
-    <Content>{children}</Content>
+export const Modal: React.FC<ModalProps> = ({
+  type,
+  initialFocusRef,
+  isOpen,
+  onDismiss,
+  ...props
+}) => (
+  <Overlay
+    initialFocusRef={initialFocusRef}
+    isOpen={isOpen}
+    onDismiss={onDismiss}
+    animation={getBackgroundAnimation(type)}
+  >
+    <Content {...props} />
   </Overlay>
 )
