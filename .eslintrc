@@ -88,3 +88,7 @@ overrides:
         - error
         - backtick
         - allowTemplateLiterals: true
+      "@typescript-eslint/no-unused-vars":
+        - warn
+        - args: "none"
+        
