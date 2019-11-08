@@ -1,11 +1,9 @@
 /** @jsx jsx */
-
 import { storiesOf } from "@storybook/react"
-
 import README_MAIN from "./README_MAIN.md"
 import README_ICONS from "../Button/README_ICONS.md"
 import customStyling from "../Button/README_customStyling.md"
-import LinkButton from "./LinkButton"
+import { LinkButton, LinkButtonProps } from "./LinkButton"
 import {
   showcaseVariants,
   showcaseSizes,

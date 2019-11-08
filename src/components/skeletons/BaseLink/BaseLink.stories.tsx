@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core"
 
 import { storiesOf } from "@storybook/react"
 
-import BaseLink from "./BaseLink"
+import { BaseLink } from "./BaseLink"
 import Readme from "./README.md"
 import { StoryUtils } from "../../../utils/storybook"
 
@@ -17,9 +17,9 @@ storiesOf(`skeletons/BaseLink`, module)
     },
   })
   .add(`default`, () => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>
-          <BaseLink to="/">Link</BaseLink>
-        </StoryUtils.Stack>
-      </StoryUtils.Container>
-    ))
+    <StoryUtils.Container>
+      <StoryUtils.Stack>
+        <BaseLink to="/">Link</BaseLink>
+      </StoryUtils.Stack>
+    </StoryUtils.Container>
+  ))

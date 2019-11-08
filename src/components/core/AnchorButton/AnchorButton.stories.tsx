@@ -5,7 +5,7 @@ import { storiesOf } from "@storybook/react"
 import README_MAIN from "./README_MAIN.md"
 import README_ICONS from "../Button/README_ICONS.md"
 import customStyling from "../Button/README_customStyling.md"
-import AnchorButton from "./AnchorButton"
+import { AnchorButton } from "./AnchorButton"
 import {
   showcaseVariants,
   showcaseSizes,
