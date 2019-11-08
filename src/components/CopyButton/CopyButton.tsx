@@ -4,8 +4,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { css } from "@emotion/core"
 
-import { Button } from "../core/Button"
 import copyToClipboard from "../../utils/helpers/copyToClipboard"
+import { ButtonProps, Button } from "../core/Button/Button"
 
 const baseCss = css`
   html:not([dir="rtl"]) & {

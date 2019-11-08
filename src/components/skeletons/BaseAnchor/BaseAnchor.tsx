@@ -3,7 +3,7 @@ import secureTargetBlankLink from "../../../utils/helpers/secureTargetBlankLink"
 
 export type BaseAnchorProps = Omit<JSX.IntrinsicElements["a"], "ref">
 
-const BaseAnchor = React.forwardRef<HTMLAnchorElement, BaseAnchorProps>(
+export const BaseAnchor = React.forwardRef<HTMLAnchorElement, BaseAnchorProps>(
   (
     { role, target = `_blank`, rel, children, ...rest }: BaseAnchorProps,
     ref
@@ -19,5 +19,3 @@ const BaseAnchor = React.forwardRef<HTMLAnchorElement, BaseAnchorProps>(
     </a>
   )
 )
-
-export default BaseAnchor

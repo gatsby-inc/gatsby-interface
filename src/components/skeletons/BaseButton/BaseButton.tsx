@@ -38,5 +38,3 @@ export const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
     )
   }
 )
-
-export default BaseButton

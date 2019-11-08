@@ -1,3 +1,1 @@
-export { default as AnchorButton } from "./AnchorButton"
-
-export type AnchorButtonProps = AnchorButtonProps
+export * from "./AnchorButton"

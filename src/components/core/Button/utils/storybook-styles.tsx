@@ -9,6 +9,8 @@ import { radios } from "@storybook/addon-knobs"
 
 import { StoryUtils } from "../../../../utils/storybook"
 import colors from "../../../../theme/colors"
+import { Story } from "@storybook/react"
+import { ButtonSize, ButtonTone, ButtonVariant } from "../Button"
 
 function enumToOptions<T extends string>(
   memo: { [k: string]: string },
