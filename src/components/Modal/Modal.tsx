@@ -47,6 +47,7 @@ const getBackgroundAnimation = (type?: ModalType) => {
 const Overlay = styled(DialogOverlay)<
   DialogOverlayProps & { animation: ReturnType<typeof buildFadeIn> }
 >`
+  z-index: 9999;
   animation: ${props => props.animation} 0.5s ease forwards;
 `
 
