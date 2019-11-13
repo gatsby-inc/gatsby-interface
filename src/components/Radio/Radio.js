@@ -83,7 +83,6 @@ const RadioInput = styled(`input`)`
   opacity: 0;
   position: absolute;
   width: ${INPUT_INNER_DIA};
-  z-index: 2;
 
   &:checked + label::before {
     border-color: ${colors.purple[60]};
@@ -117,7 +116,6 @@ const ColourfulContainer = styled(StandardContainer)`
     content: "";
     position: absolute;
     background: #eee;
-    z-index: -1;
   }
   :before {
     border-radius: ${radius.large};

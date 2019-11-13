@@ -6,7 +6,7 @@ import {
   DialogContentProps,
 } from "@reach/dialog"
 import styled from "@emotion/styled"
-import { palette } from "../../utils/presets"
+import { palette, zIndices } from "../../utils/presets"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
 import { keyframes } from "@emotion/core"
 
@@ -47,7 +47,7 @@ const getBackgroundAnimation = (type?: ModalType) => {
 const Overlay = styled(DialogOverlay)<
   DialogOverlayProps & { animation: ReturnType<typeof buildFadeIn> }
 >`
-  z-index: 9999;
+  z-index: ${zIndices.modals};
   animation: ${props => props.animation} 0.5s ease forwards;
 `
 

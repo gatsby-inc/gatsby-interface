@@ -4,6 +4,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { css } from "@emotion/core"
 import Toast from "./Toast"
+import { zIndices } from "../../utils/presets"
 
 export const ToastContext = React.createContext()
 export const ToastConsumer = ToastContext.Consumer
@@ -17,7 +18,7 @@ const containerCss = css`
   position: fixed;
   transform: translate(-50%, 0);
   width: 100%;
-  z-index: 1;
+  z-index: ${zIndices.toasts};
 `
 
 const DEFAULT_TIMEOUT = 5000
