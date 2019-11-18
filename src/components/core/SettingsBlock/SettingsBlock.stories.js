@@ -17,7 +17,7 @@ storiesOf(`core/SettingsBlock`, module)
           <SettingsBlock.Header>
             <SettingsBlock.Title>
               Automated Integrations
-              <SettingsBlock.Doclink to="/" />
+              <SettingsBlock.Doclink to="/some-where" />
             </SettingsBlock.Title>
           </SettingsBlock.Header>
           <SettingsBlock.Content>
