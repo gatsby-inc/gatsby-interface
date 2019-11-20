@@ -66,10 +66,10 @@ workflows:
       - is-green
   run-prerelease:
     jobs:
-      - is_green
+      - is-green
       - prerelease:
           requires:
-            - is_green
+            - is-green
           filters:
             branches:
               only: chore/automate-prerelease # TODO this should be "dev"
