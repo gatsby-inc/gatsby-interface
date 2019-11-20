@@ -6,7 +6,7 @@ defaults: &defaults
     - image: circleci/node:10
 
 jobs:
-  install:
+  is-green:
     <<: *defaults
     steps:
       - checkout
@@ -29,28 +29,21 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - persist_to_workspace:
-          root: ~/repo
-          paths: .
-  test:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
       - run:
           name: Type check
           command: yarn type-check
+
       - run:
           name: Test
           command: yarn test
-  build:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
+
       - run:
           name: Build rollup
           command: yarn build:rollup
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
   prerelease:
     <<: *defaults
     steps:
@@ -68,15 +61,9 @@ jobs:
 
 workflows:
   version: 2
-  is_green:
+  test:
     jobs:
-      - install
-      - test:
-          requires:
-            - install
-      - build:
-          requires:
-            - install
+      - is-green
   run-prerelease:
     jobs:
       - is_green
