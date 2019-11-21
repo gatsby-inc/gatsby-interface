@@ -2,16 +2,14 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import {
-  FormFieldSkeletonProps,
-  FormFieldSkeletonLabelProps,
-} from "../../form-skeletons/components/FormFieldSkeleton"
+import { FormFieldSkeletonProps } from "../../form-skeletons/components/FormFieldSkeleton"
+import { FormField } from "./FormField"
 import InputFieldSkeleton from "../../form-skeletons/components/InputFieldSkeleton"
 import colors from "../../../theme/colors"
 import { fontSizes, radius, spaces } from "../../../utils/presets"
 
 function InputField(props: FormFieldSkeletonProps) {
-  return <InputFieldSkeleton {...props} />
+  return <InputFieldSkeleton {...props}></InputFieldSkeleton>
 }
 
 const Control: React.FC<
@@ -41,21 +39,16 @@ const Control: React.FC<
 InputField.Control = Control
 InputField.Control.displayName = `InputField.Control`
 
-const Label: React.FC<FormFieldSkeletonLabelProps> = props => (
-  <InputFieldSkeleton.Label
-    css={{
-      color: `red`,
-    }}
-    {...props}
-  />
-)
+InputField.Wrapper = FormField.Wrapper
+InputField.Wrapper.displayName = `InputField.Wrapper`
 
-InputField.Label = Label
+InputField.Label = FormField.Label
 InputField.Label.displayName = `InputField.Label`
 
-InputField.Hint = InputFieldSkeleton.Hint
+InputField.Hint = FormField.Hint
 InputField.Hint.displayName = `InputField.Hint`
-InputField.Error = InputFieldSkeleton.Error
+
+InputField.Error = FormField.Error
 InputField.Error.displayName = `InputField.Hint`
 
 export default InputField

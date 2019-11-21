@@ -118,7 +118,7 @@ const FormFieldSkeletonError: React.FC<FormFieldSkeletonErrorProps> = ({
   )
 }
 
-function FormFieldSkeleton(props: FormFieldSkeletonProps) {
+export function FormFieldSkeleton(props: FormFieldSkeletonProps) {
   return <FormFieldSkeletonProvider {...props} />
 }
 
