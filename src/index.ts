@@ -87,6 +87,7 @@ export { default as cardStyles } from "./theme/styles/card"
 export { default as buttonStyles } from "./theme/styles/button"
 export { default as fontWeights } from "./theme/fontWeights"
 
+export * from "./components/Avatar"
 export * from "./components/icons"
 export * from "./components/form-skeletons"
 export * from "./components/DecorativeDots"
