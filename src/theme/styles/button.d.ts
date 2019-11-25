@@ -8,4 +8,4 @@ const buttonThemeStyles: {
     variants: Record<ButtonVariant, (props: { tone: ButtonTone }) => Interpolation>
 }
 
-export = ButtonThemeStyles
+export default ButtonThemeStyles
