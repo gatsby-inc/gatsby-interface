@@ -1,5 +1,264 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Avatar Avatar 1`] = `
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-1 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+}
+
+.emotion-0 {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <div>
+            <span
+              class="emotion-1 emotion-2"
+              title="A cute kitten"
+            >
+              <img
+                alt="A cute kitten"
+                class="emotion-0"
+                src="https://placekitten.com/200/300"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Avatar AvatarsGroup 1`] = `
+.emotion-11 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+  border: 2px solid #fff;
+}
+
+.emotion-3 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+  border: 2px solid #fff;
+  margin-left: -4px;
+}
+
+.emotion-8 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+  border: 2px solid #fff;
+  margin-left: -4px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-11"
+        >
+          <div>
+            <div
+              class="emotion-10"
+            >
+              <span
+                class="emotion-1 emotion-2"
+                style="z-index: 3;"
+                title="A cute kitten"
+              >
+                <img
+                  alt="A cute kitten"
+                  class="emotion-0"
+                  src="https://placekitten.com/200/300"
+                />
+              </span>
+              <span
+                class="emotion-3 emotion-2"
+                style="z-index: 2;"
+                title="John Doe"
+              >
+                <span
+                  aria-label="John Doe"
+                >
+                  JD
+                </span>
+              </span>
+              <span
+                class="emotion-3 emotion-2"
+                style="z-index: 1;"
+                title="A random picture of Praha"
+              >
+                <img
+                  alt="A random picture of Praha"
+                  class="emotion-0"
+                  src="https://loremflickr.com/g/320/240/praha"
+                />
+              </span>
+              <span
+                class="emotion-8 emotion-2"
+                title="More users not displayed"
+              >
+                <span
+                  aria-label="More users not displayed"
+                >
+                  +1
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Breadcrumb default 1`] = `
 .emotion-4 {
   -webkit-align-items: center;
