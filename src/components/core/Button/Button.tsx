@@ -29,11 +29,11 @@ export function getButtonStyles({
   leftIcon,
   rightIcon,
 }: {
-  children: React.ReactNode
-  loading?: boolean
+  children: React.ReactNode;
+  loading?: boolean;
 } & ButtonStyleProps): {
-  css: ReturnType<typeof css>
-  children: React.ReactNode
+  css: ReturnType<typeof css>;
+  children: React.ReactNode;
 } {
   return {
     css: {

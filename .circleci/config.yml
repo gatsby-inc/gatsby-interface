@@ -39,7 +39,7 @@ jobs:
 
       - run:
           name: Build rollup
-          command: yarn build:rollup
+          command: yarn build
 
       - persist_to_workspace:
           root: ~/repo
@@ -51,7 +51,7 @@ jobs:
           at: ~/repo
       - run:
           name: Build package
-          command: yarn build:rollup
+          command: yarn build
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc

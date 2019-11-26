@@ -275,6 +275,47 @@ html[dir="rtl"] .emotion-0 {
 </div>
 `;
 
+exports[`Storyshots DecorativeDots Default 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-0"
+        >
+          <svg
+            aria-hidden="true"
+            height="200"
+            style="overflow: visible;"
+            width="300"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots File Upload File Upload with Custom Components 1`] = `
 .emotion-0 {
   -webkit-align-items: center;
@@ -1467,7 +1508,7 @@ exports[`Storyshots SidebarNav usage example 1`] = `
 
 .emotion-0 {
   color: inherit;
-  line-height: 1.375rem;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -1479,7 +1520,7 @@ exports[`Storyshots SidebarNav usage example 1`] = `
 }
 
 .emotion-3 {
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0;
   border-left: 1px solid #8a4baf;
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
@@ -1497,7 +1538,7 @@ exports[`Storyshots SidebarNav usage example 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0;
   border-left: 1px solid #d9d7e0;
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
@@ -1892,7 +1933,7 @@ exports[`Storyshots Toast Default 1`] = `
   -ms-transform: translate(-50%,0);
   transform: translate(-50%,0);
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 }
 
 <div>

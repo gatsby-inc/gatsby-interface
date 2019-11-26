@@ -9,5 +9,5 @@
     "@babel/preset-react",
     "@babel/typescript"
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "plugins": [["babel-plugin-typescript-to-proptypes", { "typeCheck": true }], "@babel/plugin-proposal-class-properties"]
 }

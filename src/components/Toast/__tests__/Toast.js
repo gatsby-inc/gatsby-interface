@@ -1,22 +1,21 @@
 import React from "react"
 import { render, fireEvent, act } from "@testing-library/react"
-
 import {
   ToastProvider,
   ToastConsumer,
   useShowSuccessToast,
   useShowErrorToast,
   useShowErrorAlert,
-} from "../src/components/Toast"
-import Toast from "../src/components/Toast/Toast"
+} from "../"
+import { Toast } from "../Toast"
 
 describe(`Toast`, () => {
   const baseProps = {
-    id: 0,
     message: `Lorem ipsum`,
+    onClose: () => {},
+    closeButtonLabel: "close",
     tone: `SUCCESS`,
-    onRemove: () => {},
-    closeButtonLabel: `close`,
+    id: 0,
   }
 
   it(`renders unchanged`, async () => {
@@ -48,12 +47,12 @@ describe(`Toast`, () => {
   it(`calls onRemove callback when clicking the close button`, async () => {
     const removeFn = jest.fn()
     const { getByLabelText } = render(
-      <Toast {...baseProps} id={123} onRemove={removeFn} />
+      <Toast {...baseProps} onClose={removeFn} />
     )
 
     fireEvent.click(getByLabelText(`close`))
 
-    expect(removeFn).toHaveBeenCalledWith(123)
+    expect(removeFn).toHaveBeenCalled()
   })
 })
 

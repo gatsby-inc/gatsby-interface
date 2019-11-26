@@ -1,12 +1,8 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core"
-
-import PropTypes from "prop-types"
-
+import React from "react"
 import Alert from "@reach/alert"
-import { keyframes, css } from "@emotion/core"
+import { keyframes, css, jsx } from "@emotion/core"
 import { MdDone, MdClose, MdWarning } from "react-icons/md"
-
 import {
   fontSizes,
   dimensions,
@@ -14,7 +10,7 @@ import {
   radius,
   spaces,
 } from "../../utils/presets"
-import { ToastTones } from "./constants"
+import { ToastTone } from "./types"
 
 const toastEntryAnimation = keyframes`
   100% {
@@ -81,13 +77,19 @@ const ToastIconByTone = {
   DANGER: MdWarning,
 }
 
-export default function Toast({
-  id,
+export interface ToastProps {
+  message: React.ReactNode;
+  onClose: () => void;
+  closeButtonLabel: string;
+  tone: ToastTone;
+}
+
+export const Toast: React.FC<ToastProps> = ({
   message,
   tone,
-  onRemove,
   closeButtonLabel,
-}) {
+  onClose,
+}) => {
   const IconComponent = ToastIconByTone[tone]
 
   return (
@@ -115,19 +117,11 @@ export default function Toast({
       <button
         css={closeButtonCss}
         type="button"
-        onClick={() => onRemove(id)}
+        onClick={onClose}
         aria-label={closeButtonLabel}
       >
         <MdClose />
       </button>
     </Alert>
   )
-}
-
-Toast.propTypes = {
-  id: PropTypes.number.isRequired,
-  message: PropTypes.node.isRequired,
-  tone: PropTypes.oneOf(ToastTones),
-  onRemove: PropTypes.func.isRequired,
-  closeButtonLabel: PropTypes.string.isRequired,
 }

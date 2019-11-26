@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core"
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
@@ -11,7 +9,7 @@ import {
   useShowErrorToast,
   useShowSuccessToast,
   useShowErrorAlert,
-} from "./"
+} from "."
 import README from "./README.md"
 
 storiesOf(`Toast`, module)

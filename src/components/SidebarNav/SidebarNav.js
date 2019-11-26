@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core"
 import { Fragment } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { lineHeights } from "gatsby-design-tokens"
 
 import colors from "../../theme/colors"
 import { spaces, fontFamilies, fontSizes } from "../../utils/presets"
@@ -104,7 +105,7 @@ const baseItemStyles = active => {
 
 const baseLinkStyles = {
   color: `inherit`,
-  lineHeight: `1.375rem`,
+  lineHeight: lineHeights.dense,
   textDecoration: `none`,
 }
 
@@ -148,7 +149,7 @@ SidebarNav.Item.propTypes = {
 SidebarNav.SubItem = ({ active, onClick, to, children }) => (
   <li
     css={{
-      padding: `${spaces[`2xs`]} ${spaces.m}`,
+      padding: `${spaces.xs} ${spaces.m}`,
       marginBottom: `0`,
       borderLeft: active
         ? `1px solid ${colors.purple[50]}`
