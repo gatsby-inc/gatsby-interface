@@ -87,7 +87,7 @@ const Label: React.FC<FormFieldLabelProps> = ({
 FormField.Label = Label
 FormField.Label.displayName = `FormField.Label`
 
-// todo: find a proper style for
+// todo: find a proper type for
 const sharedDescriptionStyles: any = (hasChildren: boolean) => ({
   alignItems: `flex-start`,
   color: colors.grey[50],
