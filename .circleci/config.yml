@@ -1,11 +1,15 @@
+# This configuration is partially based on the CircleCI blog post on publishing NPM packages
+# https://circleci.com/blog/publishing-npm-packages-using-circleci-2-0/
 version: 2
 
+# Default configuration that can be shared between jobs
 defaults: &defaults
   working_directory: ~/repo
   docker:
     - image: circleci/node:10
 
 jobs:
+  # This job checks that the code is good to go (e.g. to be merged or released)
   is-green:
     <<: *defaults
     steps:
@@ -44,6 +48,7 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
+  # This job publishes as prerelease version, available as gatsby-interface@next
   prerelease:
     <<: *defaults
     steps:
@@ -57,7 +62,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run:
           name: Release "next" version
-          command: npm run release -- --dry-run --no-verify --prerelease next
+          command: npm run release -- --dry-run --no-verify --prerelease next --skip.changelog=true
 
 workflows:
   version: 2
