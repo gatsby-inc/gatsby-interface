@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Avatar Avatar 1`] = `
-.emotion-3 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -48,6 +48,8 @@ exports[`Storyshots Avatar Avatar 1`] = `
   object-fit: cover;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 <div>
@@ -57,11 +59,11 @@ exports[`Storyshots Avatar Avatar 1`] = `
     <div>
       <div>
         <div
-          class="emotion-3"
+          class="emotion-2"
         >
           <div>
             <span
-              class="emotion-1 emotion-2"
+              class="emotion-1"
               title="A cute kitten"
             >
               <img
@@ -79,7 +81,7 @@ exports[`Storyshots Avatar Avatar 1`] = `
 `;
 
 exports[`Storyshots Avatar AvatarsGroup 1`] = `
-.emotion-11 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -101,9 +103,11 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
   object-fit: cover;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-.emotion-10 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -140,7 +144,7 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
   border: 2px solid #fff;
 }
 
-.emotion-3 {
+.emotion-2 {
   background: #f0f0f2;
   border-radius: 50%;
   display: -webkit-inline-box;
@@ -167,7 +171,7 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
   margin-left: -4px;
 }
 
-.emotion-8 {
+.emotion-5 {
   background: #f0f0f2;
   border-radius: 50%;
   display: -webkit-inline-box;
@@ -201,14 +205,14 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
     <div>
       <div>
         <div
-          class="emotion-11"
+          class="emotion-7"
         >
           <div>
             <div
-              class="emotion-10"
+              class="emotion-6"
             >
               <span
-                class="emotion-1 emotion-2"
+                class="emotion-1"
                 style="z-index: 3;"
                 title="A cute kitten"
               >
@@ -219,7 +223,7 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
                 />
               </span>
               <span
-                class="emotion-3 emotion-2"
+                class="emotion-2"
                 style="z-index: 2;"
                 title="John Doe"
               >
@@ -230,7 +234,7 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
                 </span>
               </span>
               <span
-                class="emotion-3 emotion-2"
+                class="emotion-2"
                 style="z-index: 1;"
                 title="A random picture of Praha"
               >
@@ -241,7 +245,7 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
                 />
               </span>
               <span
-                class="emotion-8 emotion-2"
+                class="emotion-5"
                 title="More users not displayed"
               >
                 <span
