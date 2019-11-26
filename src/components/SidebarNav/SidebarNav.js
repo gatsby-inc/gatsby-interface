@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core"
 import { Fragment } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { lineHeights } from "gatsby-design-tokens"
 
 import colors from "../../theme/colors"
 import { spaces, fontFamilies, fontSizes } from "../../utils/presets"
@@ -104,7 +105,7 @@ const baseItemStyles = active => {
 
 const baseLinkStyles = {
   color: `inherit`,
-  lineHeight: `1.25rem`,
+  lineHeight: lineHeights.dense,
   textDecoration: `none`,
 }
 
