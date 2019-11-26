@@ -2,7 +2,10 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import { FormFieldSkeletonProps } from "../../form-skeletons/components/FormFieldSkeleton"
+import {
+  FormFieldSkeleton,
+  FormFieldSkeletonProps,
+} from "../../form-skeletons/components/FormFieldSkeleton"
 import { FormField } from "./FormField"
 import InputFieldSkeleton from "../../form-skeletons/components/InputFieldSkeleton"
 import colors from "../../../theme/colors"
@@ -14,27 +17,43 @@ function InputField(props: FormFieldSkeletonProps) {
 
 const Control: React.FC<
   React.InputHTMLAttributes<HTMLInputElement>
-> = props => (
-  <InputFieldSkeleton.Control
-    css={{
-      border: `1px solid ${colors.grey[30]}`,
-      borderRadius: radius.default,
-      color: colors.grey[90],
-      fontSize: fontSizes.s,
-      height: `2.25rem`,
-      padding: `0 ${spaces.s}`,
-      width: `100%`,
+> = props => {
+  const { hasError } = FormFieldSkeleton.useFormFieldSkeleton()
 
-      ":focus": {
-        borderColor: colors.purple[40],
-        boxShadow: `0 0 0 3px ${colors.purple[20]}`,
-        outline: `0`,
-        transition: `box-shadow 0.15s ease-in-out`,
-      },
-    }}
-    {...props}
-  />
-)
+  return (
+    <InputFieldSkeleton.Control
+      css={{
+        border: `1px solid ${colors.grey[30]}`,
+        borderColor: hasError ? `red` : colors.grey[30],
+        borderRadius: radius.default,
+        color: colors.grey[90],
+        fontSize: fontSizes.s,
+        height: `2.25rem`,
+        padding: `0 ${spaces.s}`,
+        width: `100%`,
+        position: `relative`,
+        zIndex: 1,
+
+        "&:required l": {
+          background: `blue`,
+        },
+
+        ":focus": {
+          borderColor: colors.purple[40],
+          boxShadow: `0 0 0 3px ${colors.purple[20]}`,
+          outline: `0`,
+          transition: `box-shadow 0.15s ease-in-out`,
+        },
+
+        ":disabled": {
+          background: colors.grey[10],
+          cursor: `not-allowed`,
+        },
+      }}
+      {...props}
+    />
+  )
+}
 
 InputField.Control = Control
 InputField.Control.displayName = `InputField.Control`
