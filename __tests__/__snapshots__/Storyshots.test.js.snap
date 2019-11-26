@@ -1467,7 +1467,7 @@ exports[`Storyshots SidebarNav usage example 1`] = `
 
 .emotion-0 {
   color: inherit;
-  line-height: 1.25rem;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
