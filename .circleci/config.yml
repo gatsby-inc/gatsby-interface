@@ -62,7 +62,10 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run:
           name: Release "next" version
-          command: npm run release -- --dry-run --no-verify --prerelease next --skip.changelog=true
+          command: npm run release -- --no-verify --prerelease next --skip.changelog=true
+      - run:
+          name: Publish to NPM
+          command: git push --follow-tags origin dev && npm publish --tag next
 
 workflows:
   version: 2
@@ -77,4 +80,4 @@ workflows:
             - is-green
           filters:
             branches:
-              only: chore/automate-prerelease # TODO this should be "dev"
+              only: dev
