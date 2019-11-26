@@ -22992,6 +22992,1780 @@ exports[`Storyshots core/ToggleTip shortcut usage 1`] = `
 </div>
 `;
 
+exports[`Storyshots form FormField 1`] = `
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots form/InputField InputField 1`] = `
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 80%;
+  width: 25rem;
+}
+
+.emotion-4:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-0 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  color: #635e69;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0.5rem 0.25rem 0.25rem;
+  position: relative;
+}
+
+.emotion-1 {
+  border: 1px solid #d9d7e0;
+  border-color: #d9d7e0;
+  border-radius: 4px;
+  color: #232129;
+  font-size: 1rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-1:required l {
+  background: blue;
+}
+
+.emotion-1:focus {
+  border-color: #b17acc;
+  box-shadow: 0 0 0 3px #f1defa;
+  outline: 0;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.emotion-1:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  opacity: 0;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+
+.emotion-2 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  margin-top: 0.5rem;
+}
+
+.emotion-3 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-6"
+        >
+          <div
+            class="emotion-5"
+          >
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-1"
+              >
+                Last name
+                 
+              </label>
+              <input
+                aria-invalid="false"
+                class="emotion-1"
+                id="input-example-1"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-1__error"
+              />
+              <div
+                class="emotion-3"
+                id="input-example-1__hint"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots form/InputField InputFieldBlock 1`] = `
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 80%;
+  width: 25rem;
+}
+
+.emotion-4:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-0 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  color: #635e69;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0.5rem 0.25rem 0.25rem;
+  position: relative;
+}
+
+.emotion-1 {
+  border: 1px solid #d9d7e0;
+  border-color: #d9d7e0;
+  border-radius: 4px;
+  color: #232129;
+  font-size: 1rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-1:required l {
+  background: blue;
+}
+
+.emotion-1:focus {
+  border-color: #b17acc;
+  box-shadow: 0 0 0 3px #f1defa;
+  outline: 0;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.emotion-1:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  opacity: 0;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+
+.emotion-2 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  margin-top: 0.5rem;
+}
+
+.emotion-3 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-6"
+        >
+          <div
+            class="emotion-5"
+          >
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-2a"
+              >
+                First name
+                 
+              </label>
+              <input
+                aria-invalid="false"
+                class="emotion-1"
+                id="input-example-2a"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-2a__error"
+              />
+              <div
+                class="emotion-3"
+                id="input-example-2a__hint"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots form/InputField Label sizes 1`] = `
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+.emotion-16 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 80%;
+  width: 25rem;
+}
+
+.emotion-4:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-5 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  color: #635e69;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0.5rem 0.25rem 0.25rem;
+  position: relative;
+}
+
+.emotion-1 {
+  border: 1px solid #d9d7e0;
+  border-color: #d9d7e0;
+  border-radius: 4px;
+  color: #232129;
+  font-size: 1rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-1:required l {
+  background: blue;
+}
+
+.emotion-1:focus {
+  border-color: #b17acc;
+  box-shadow: 0 0 0 3px #f1defa;
+  outline: 0;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.emotion-1:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  opacity: 0;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+
+.emotion-2 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  margin-top: 0.5rem;
+}
+
+.emotion-3 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-0 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  color: #635e69;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0.5rem 0.25rem 0.25rem;
+  position: relative;
+}
+
+.emotion-10 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  color: #635e69;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0.5rem 0.25rem 0.25rem;
+  position: relative;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-16"
+        >
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-3a"
+              >
+                Label size L
+                 
+              </label>
+              <input
+                aria-invalid="false"
+                class="emotion-1"
+                id="input-example-3a"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-3a__error"
+              />
+              <div
+                class="emotion-3"
+                id="input-example-3a__hint"
+              />
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-5"
+                for="input-example-3b"
+              >
+                Label size M (default value)
+                 
+              </label>
+              <input
+                aria-invalid="false"
+                class="emotion-1"
+                id="input-example-3b"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-3b__error"
+              />
+              <div
+                class="emotion-3"
+                id="input-example-3b__hint"
+              />
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-10"
+                for="input-example-3d"
+              >
+                Label size S
+                 
+              </label>
+              <input
+                aria-invalid="false"
+                class="emotion-1"
+                id="input-example-3d"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-3d__error"
+              />
+              <div
+                class="emotion-3"
+                id="input-example-3d__hint"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots form/InputField disbled 1`] = `
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 80%;
+  width: 25rem;
+}
+
+.emotion-4:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-0 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  color: #635e69;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0.5rem 0.25rem 0.25rem;
+  position: relative;
+}
+
+.emotion-1 {
+  border: 1px solid #d9d7e0;
+  border-color: #d9d7e0;
+  border-radius: 4px;
+  color: #232129;
+  font-size: 1rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-1:required l {
+  background: blue;
+}
+
+.emotion-1:focus {
+  border-color: #b17acc;
+  box-shadow: 0 0 0 3px #f1defa;
+  outline: 0;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.emotion-1:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  opacity: 0;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+
+.emotion-2 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  margin-top: 0.5rem;
+}
+
+.emotion-3 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-9"
+        >
+          <div
+            class="emotion-8"
+          >
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-5a"
+              >
+                First name
+                 
+              </label>
+              <input
+                aria-invalid="false"
+                class="emotion-1"
+                disabled=""
+                id="input-example-5a"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-5a__error"
+              />
+              <div
+                class="emotion-3"
+                id="input-example-5a__hint"
+              />
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-5b"
+              >
+                First name
+                 
+              </label>
+              <input
+                class="emotion-1"
+                disabled=""
+                id="input-example-5b"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots form/InputField error & hint styles 1`] = `
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+.emotion-26 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 80%;
+  width: 25rem;
+}
+
+.emotion-4:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-0 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  color: #635e69;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0.5rem 0.25rem 0.25rem;
+  position: relative;
+}
+
+.emotion-11 {
+  border: 1px solid #d9d7e0;
+  border-color: #d9d7e0;
+  border-radius: 4px;
+  color: #232129;
+  font-size: 1rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-11:required l {
+  background: blue;
+}
+
+.emotion-11:focus {
+  border-color: #b17acc;
+  box-shadow: 0 0 0 3px #f1defa;
+  outline: 0;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.emotion-11:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.emotion-12 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  opacity: 0;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+
+.emotion-12 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  margin-top: 0.5rem;
+}
+
+.emotion-3 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-1 {
+  border: 1px solid #d9d7e0;
+  border-color: red;
+  border-radius: 4px;
+  color: #232129;
+  font-size: 1rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-1:required l {
+  background: blue;
+}
+
+.emotion-1:focus {
+  border-color: #b17acc;
+  box-shadow: 0 0 0 3px #f1defa;
+  outline: 0;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.emotion-1:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 0;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  opacity: 0;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+
+.emotion-2 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-13 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 0;
+  margin-top: 0.5rem;
+}
+
+.emotion-13 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-23 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 0;
+  margin-top: 0.25rem;
+}
+
+.emotion-23 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-26"
+        >
+          <div
+            class="emotion-25"
+          >
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-4a"
+              >
+                Last name
+                 
+              </label>
+              <input
+                aria-describedby="input-example-4a__error"
+                aria-invalid="true"
+                class="emotion-1"
+                id="input-example-4a"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-4a__error"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                  />
+                </svg>
+                Short error message.
+              </div>
+              <div
+                class="emotion-3"
+                id="input-example-4a__hint"
+              />
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-4b"
+              >
+                Last name
+                 
+              </label>
+              <input
+                aria-describedby="input-example-4b__error"
+                aria-invalid="true"
+                class="emotion-1"
+                id="input-example-4b"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-4b__error"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                  />
+                </svg>
+                Long error message ... ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+              <div
+                class="emotion-3"
+                id="input-example-4b__hint"
+              />
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-4c"
+              >
+                Last name
+                 
+              </label>
+              <input
+                aria-describedby="input-example-4c__hint"
+                aria-invalid="false"
+                class="emotion-11"
+                id="input-example-4c"
+              />
+              <div
+                class="emotion-12"
+                id="input-example-4c__error"
+              />
+              <div
+                class="emotion-13"
+                id="input-example-4c__hint"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                  />
+                </svg>
+                Really short hint.
+              </div>
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-4d"
+              >
+                Last name
+                 
+              </label>
+              <input
+                aria-describedby="input-example-4d__hint"
+                aria-invalid="false"
+                class="emotion-11"
+                id="input-example-4d"
+              />
+              <div
+                class="emotion-12"
+                id="input-example-4d__error"
+              />
+              <div
+                class="emotion-13"
+                id="input-example-4d__hint"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                  />
+                </svg>
+                Much longer hint ... excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <label
+                class="emotion-0"
+                for="input-example-4e"
+              >
+                Last name
+                 
+              </label>
+              <input
+                aria-describedby="input-example-4e__error input-example-4e__hint"
+                aria-invalid="true"
+                class="emotion-1"
+                id="input-example-4e"
+              />
+              <div
+                class="emotion-2"
+                id="input-example-4e__error"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                  />
+                </svg>
+                Field with error 
+              </div>
+              <div
+                class="emotion-23"
+                id="input-example-4e__hint"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                  />
+                </svg>
+                and Hint at the same time 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots form/InputField required 1`] = `
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+@keyframes animation-0 {
+  50% {
+    opacity: .5;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+}
+
+.emotion-11 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 80%;
+  width: 25rem;
+}
+
+.emotion-5:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.emotion-1 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  color: #635e69;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0.5rem 0.25rem 0.25rem;
+  position: relative;
+}
+
+.emotion-2 {
+  border: 1px solid #d9d7e0;
+  border-color: #d9d7e0;
+  border-radius: 4px;
+  color: #232129;
+  font-size: 1rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-2:required l {
+  background: blue;
+}
+
+.emotion-2:focus {
+  border-color: #b17acc;
+  box-shadow: 0 0 0 3px #f1defa;
+  outline: 0;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.emotion-2:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  opacity: 0;
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+
+.emotion-3 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-4 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #78757a;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin: 0 0.25rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  margin-top: 0.5rem;
+}
+
+.emotion-4 svg {
+  color: current-color;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+  margin-top: 0.1em;
+  width: 1em;
+  height: 1em;
+}
+
+.emotion-0 {
+  color: #8a4baf;
+  font-size: 0.75rem;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-11"
+        >
+          <div
+            class="emotion-10"
+          >
+            <div
+              class="emotion-5"
+            >
+              <label
+                class="emotion-1"
+                for="input-example-5a"
+              >
+                First name
+                 
+                <span
+                  class="emotion-0"
+                >
+                  required
+                </span>
+              </label>
+              <input
+                aria-invalid="false"
+                class="emotion-2"
+                id="input-example-5a"
+                required=""
+              />
+              <div
+                class="emotion-3"
+                id="input-example-5a__error"
+              />
+              <div
+                class="emotion-4"
+                id="input-example-5a__hint"
+              />
+            </div>
+            <div
+              class="emotion-5"
+            >
+              <label
+                class="emotion-1"
+                for="input-example-5b"
+              >
+                First name
+                 
+                <span
+                  class="emotion-0"
+                >
+                  required
+                </span>
+              </label>
+              <input
+                class="emotion-2"
+                id="input-example-5b"
+                required=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots form-skeletons Default 1`] = `
 .emotion-0 {
   -webkit-align-items: center;
