@@ -83,6 +83,24 @@ function Component() {
 }
 ```
 
+#### Props
+
+| Prop           | Type                                      | Default value              | Description                                                                                                                            |
+| -------------- | ----------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| avatars        | [`AvatarDescriptor[]`](#avatardescriptor) |                            | Required, an array of objects describing each avatar in a group                                                                        |
+| size           | [`AvatarSize`](#avatarsize)               | `"medium"`                 | What size each avatar in a group should have                                                                                           |
+| borderColor    | `string`                                  |                            | Each avatar in a group is bordered; `borderColor` can be used to customize the color of these borders                                  |
+| truncatedCount | `number`                                  |                            | When passed an greater than 0, makes the group render an additional "placeholder" avatar that indicates how many users were "left out" |
+| truncatedLabel | `string`                                  | `"${truncatedCount} more"` | User-friendly label for the "truncated" placeholder avatar                                                                             |
+| className      | `string`                                  |                            | Custom class for the group element                                                                                                     |
+| style          | `React.CSSProperties`                     |                            | Custom style for the group element                                                                                                     |
+
+##### AvatarDescriptor
+
+```typescript
+export type AvatarDescriptor = Pick<AvatarProps, "src" | "label" | "fallback">
+```
+
 **IMPORTANT** Note that `AvatarsGroup` does not handle any slicing of the `avatars` array based on the value passed in `truncatedCount`. That means that if you have a list of 10 avatars but you only want to display 4, you have to slice it yourself:
 
 ```javascript
@@ -104,20 +122,40 @@ function Component() {
 }
 ```
 
-#### Props
+> Why not just let AvatarsGroup do the slicing?
 
-| Prop           | Type                                      | Default value              | Description                                                                                                                            |
-| -------------- | ----------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| avatars        | [`AvatarDescriptor[]`](#avatardescriptor) |                            | Required, an array of objects describing each avatar in a group                                                                        |
-| size           | [`AvatarSize`](#avatarsize)               | `"medium"`                 | What size each avatar in a group should have                                                                                           |
-| borderColor    | `string`                                  |                            | Each avatar in a group is bordered; `borderColor` can be used to customize the color of these borders                                  |
-| truncatedCount | `number`                                  |                            | When passed an greater than 0, makes the group render an additional "placeholder" avatar that indicates how many users were "left out" |
-| truncatedLabel | `string`                                  | `"${truncatedCount} more"` | User-friendly label for the "truncated" placeholder avatar                                                                             |
-| className      | `string`                                  |                            | Custom class for the group element                                                                                                     |
-| style          | `React.CSSProperties`                     |                            | Custom style for the group element                                                                                                     |
+Short answer: [inversion of control](https://kentcdodds.com/blog/inversion-of-control)
 
-##### AvatarDescriptor
+Long answer: Since `AvatarsGroup` is supposed to be a "core" component, we cannot build its API while making too many assumptions on how it's going to be used.
+It is possible that the list avatar is **already** pre-sliced (similar to common pagination), something like this:
 
-```typescript
-export type AvatarDescriptor = Pick<AvatarProps, "src" | "label" | "fallback">
+```jsx
+import { AvatarsGroup } from "gatsby-interface"
+
+function Component({ avatarsToDisplay, totalAvatars }) {
+  const truncatedCount = totalAvatars - avatarsToDisplay.length
+
+  return (
+    <AvatarsGroup
+      avatars={avatarsToDisplay}
+      truncatedCount={truncatedCount}
+      truncatedLabel={`${truncatedCount} more users`}
+    />
+  )
+}
 ```
+
+If `AvatarsGroup` did handle the slicing, we'd have to introduce a new prop just for the purpose of displaying how many avatars are left out:
+
+```jsx
+return (
+  <AvatarsGroup
+    avatars={avatarsToDisplay}
+    truncatedCount={0}
+    truncatedCountToDisplay={truncatedCount}
+    truncatedLabel={`${truncatedCount} more users`}
+  />
+)
+```
+
+The current API supports cases like this out of the box while keeping the props set to a required minimum.
