@@ -104,7 +104,7 @@ const baseItemStyles = active => {
 
 const baseLinkStyles = {
   color: `inherit`,
-  lineHeight: `1.375rem`,
+  lineHeight: `1.25rem`,
   textDecoration: `none`,
 }
 
@@ -148,7 +148,7 @@ SidebarNav.Item.propTypes = {
 SidebarNav.SubItem = ({ active, onClick, to, children }) => (
   <li
     css={{
-      padding: `${spaces[`2xs`]} ${spaces.m}`,
+      padding: `${spaces.xs} ${spaces.m}`,
       marginBottom: `0`,
       borderLeft: active
         ? `1px solid ${colors.purple[50]}`
