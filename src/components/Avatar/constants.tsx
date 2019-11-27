@@ -1,25 +1,25 @@
 import { fontSizes } from "../../utils/presets"
 import { AvatarSize } from "./types"
 
-export const DEFAULT_SIZE: AvatarSize = "medium"
+export const DEFAULT_SIZE: AvatarSize = "M"
 
 export const avatarSizeValues: Record<AvatarSize, string> = {
-  small: "24px",
-  medium: "32px",
-  large: "48px",
-  xlarge: "64px",
+  S: "24px",
+  M: "32px",
+  L: "48px",
+  XL: "64px",
 }
 
 export const borderSizeValues: Record<AvatarSize, number> = {
-  small: 1,
-  medium: 2,
-  large: 3,
-  xlarge: 4,
+  S: 1,
+  M: 2,
+  L: 3,
+  XL: 4,
 }
 
 export const placeholderFontSizes: Record<AvatarSize, string> = {
-  small: fontSizes["2xs"],
-  medium: fontSizes["xs"],
-  large: fontSizes["m"],
-  xlarge: fontSizes["l"],
+  S: fontSizes["2xs"],
+  M: fontSizes["xs"],
+  L: fontSizes["m"],
+  XL: fontSizes["l"],
 }

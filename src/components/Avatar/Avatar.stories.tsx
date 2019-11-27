@@ -1,14 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
-import {
-  text,
-  color,
-  select,
-  boolean,
-  number,
-  radios,
-} from "@storybook/addon-knobs"
+import { text, color, boolean, number, radios } from "@storybook/addon-knobs"
 
 import { StoryUtils } from "../../utils/storybook"
 import README from "./README.md"
@@ -34,15 +27,15 @@ storiesOf(`Avatar`, module)
             src={"https://placekitten.com/200/300"}
             label={text("label", "A cute kitten")}
             borderColor={bordered ? borderColor : null}
-            size={select(
+            size={radios(
               "size",
               {
-                small: "small",
-                medium: "medium",
-                large: "large",
-                xlarge: "xlarge",
+                small: "S",
+                medium: "M",
+                large: "L",
+                xlarge: "XL",
               },
-              "medium"
+              "M"
             )}
           />
         </div>
@@ -70,15 +63,18 @@ storiesOf(`Avatar`, module)
             size={radios(
               "size",
               {
-                small: "small",
-                medium: "medium",
-                large: "large",
-                xlarge: "xlarge",
+                small: "S",
+                medium: "M",
+                large: "L",
+                xlarge: "XL",
               },
-              "medium"
+              "M"
             )}
-            truncatedCount={number("truncatedCount", 1)}
-            truncatedLabel={text("truncatedLabel", "More users not displayed")}
+            omittedAvatarsCount={number("omittedAvatarsCount", 1)}
+            omittedAvatarsLabel={text(
+              "omittedAvatarsLabel",
+              "More users not displayed"
+            )}
           />
         </div>
       </StoryUtils.Container>

@@ -1,1 +1,1 @@
-export type AvatarSize = "small" | "medium" | "large" | "xlarge"
+export type AvatarSize = "S" | "M" | "L" | "XL"

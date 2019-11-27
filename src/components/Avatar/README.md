@@ -60,7 +60,7 @@ function LazyAvatar({ avatarUrl, userName }) => (
 
 This component can be used to display multiple avatars in a single line, e.g. to show a list of contributors or conversation participants.
 
-It also supports an indicator of how many avatars were "truncated"
+It also supports an indicator of how many avatars were left out
 
 ```javascript
 import { AvatarsGroup } from "gatsby-interface"
@@ -76,8 +76,8 @@ function Component() {
           label: `A random picture of Praha`,
         },
       ]}
-      truncatedCount={2}
-      truncatedLabel="2 more users"
+      omittedAvatarsCount={2}
+      omittedAvatarsLabel="2 more users"
     />
   )
 }
@@ -85,15 +85,15 @@ function Component() {
 
 #### Props
 
-| Prop           | Type                                      | Default value              | Description                                                                                                                            |
-| -------------- | ----------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| avatars        | [`AvatarDescriptor[]`](#avatardescriptor) |                            | Required, an array of objects describing each avatar in a group                                                                        |
-| size           | [`AvatarSize`](#avatarsize)               | `"medium"`                 | What size each avatar in a group should have                                                                                           |
-| borderColor    | `string`                                  |                            | Each avatar in a group is bordered; `borderColor` can be used to customize the color of these borders                                  |
-| truncatedCount | `number`                                  |                            | When passed an greater than 0, makes the group render an additional "placeholder" avatar that indicates how many users were "left out" |
-| truncatedLabel | `string`                                  | `"${truncatedCount} more"` | User-friendly label for the "truncated" placeholder avatar                                                                             |
-| className      | `string`                                  |                            | Custom class for the group element                                                                                                     |
-| style          | `React.CSSProperties`                     |                            | Custom style for the group element                                                                                                     |
+| Prop                | Type                                      | Default value                   | Description                                                                                                                         |
+| ------------------- | ----------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| avatars             | [`AvatarDescriptor[]`](#avatardescriptor) |                                 | Required, an array of objects describing each avatar in a group                                                                     |
+| size                | [`AvatarSize`](#avatarsize)               | `"medium"`                      | What size each avatar in a group should have                                                                                        |
+| borderColor         | `string`                                  |                                 | Each avatar in a group is bordered; `borderColor` can be used to customize the color of these borders                               |
+| omittedAvatarsCount | `number`                                  |                                 | When passed an greater than 0, makes the group render an additional "placeholder" avatar that indicates how many users were omitted |
+| omittedAvatarsLabel | `string`                                  | `"${omittedAvatarsCount} more"` | User-friendly label for the "omitted" placeholder avatar                                                                            |
+| className           | `string`                                  |                                 | Custom class for the group element                                                                                                  |
+| style               | `React.CSSProperties`                     |                                 | Custom style for the group element                                                                                                  |
 
 ##### AvatarDescriptor
 
@@ -101,7 +101,7 @@ function Component() {
 export type AvatarDescriptor = Pick<AvatarProps, "src" | "label" | "fallback">
 ```
 
-**IMPORTANT** Note that `AvatarsGroup` does not handle any slicing of the `avatars` array based on the value passed in `truncatedCount`. That means that if you have a list of 10 avatars but you only want to display 4, you have to slice it yourself:
+**IMPORTANT** Note that `AvatarsGroup` does not handle any slicing of the `avatars` array based on the value passed in `omittedAvatarsCount`. That means that if you have a list of 10 avatars but you only want to display 4, you have to slice it yourself:
 
 ```javascript
 import { AvatarsGroup } from "gatsby-interface"
@@ -111,12 +111,12 @@ function Component() {
     // 10 avatar descriptors
   ]
   const avatarsToShow = 4
-  const truncatedCount = avatars.length - avatarsToShow
+  const omittedAvatarsCount = avatars.length - avatarsToShow
   return (
     <AvatarsGroup
       avatars={avatars.slice(0, avatarsToShow)}
-      truncatedCount={truncatedCount}
-      truncatedLabel={`${truncatedCount} more users`}
+      omittedAvatarsCount={omittedAvatarsCount}
+      omittedAvatarsLabel={`${omittedAvatarsCount} more users`}
     />
   )
 }
@@ -133,13 +133,13 @@ It is possible that the list avatar is **already** pre-sliced (similar to common
 import { AvatarsGroup } from "gatsby-interface"
 
 function Component({ avatarsToDisplay, totalAvatars }) {
-  const truncatedCount = totalAvatars - avatarsToDisplay.length
+  const omittedAvatarsCount = totalAvatars - avatarsToDisplay.length
 
   return (
     <AvatarsGroup
       avatars={avatarsToDisplay}
-      truncatedCount={truncatedCount}
-      truncatedLabel={`${truncatedCount} more users`}
+      omittedAvatarsCount={omittedAvatarsCount}
+      omittedAvatarsLabel={`${omittedAvatarsCount} more users`}
     />
   )
 }
@@ -151,9 +151,9 @@ If `AvatarsGroup` did handle the slicing, we'd have to introduce a new prop just
 return (
   <AvatarsGroup
     avatars={avatarsToDisplay}
-    truncatedCount={0}
-    truncatedCountToDisplay={truncatedCount}
-    truncatedLabel={`${truncatedCount} more users`}
+    omittedAvatarsCount={0}
+    truncatedCountToDisplay={omittedAvatarsCount}
+    omittedAvatarsLabel={`${omittedAvatarsCount} more users`}
   />
 )
 ```

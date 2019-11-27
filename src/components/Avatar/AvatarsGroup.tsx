@@ -16,8 +16,8 @@ export type AvatarsGroupProps = {
   avatars: AvatarDescriptor[];
   size?: AvatarSize;
   borderColor?: string;
-  truncatedCount?: number;
-  truncatedLabel?: string;
+  omittedAvatarsCount?: number;
+  omittedAvatarsLabel?: string;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -26,8 +26,8 @@ export default function AvatarsGroup({
   avatars,
   size = DEFAULT_SIZE,
   borderColor = "#fff",
-  truncatedCount = 0,
-  truncatedLabel = `${truncatedCount} more`,
+  omittedAvatarsCount = 0,
+  omittedAvatarsLabel = `${omittedAvatarsCount} more`,
   className,
   style,
 }: AvatarsGroupProps) {
@@ -56,13 +56,13 @@ export default function AvatarsGroup({
           />
         )
       })}
-      {truncatedCount > 0 && (
+      {omittedAvatarsCount > 0 && (
         <Avatar
-          src="" // this is an avatar "lookalike" that indicates how many avatars were truncated
-          label={truncatedLabel}
+          src="" // this is an avatar "lookalike" that indicates how many avatars were left out
+          label={omittedAvatarsLabel}
           css={overlapCss}
           {...commonAvatarProps}
-          fallback={`+${truncatedCount}`}
+          fallback={`+${omittedAvatarsCount}`}
         />
       )}
     </div>
