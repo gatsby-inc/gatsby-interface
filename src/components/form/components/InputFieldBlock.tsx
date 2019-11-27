@@ -25,7 +25,7 @@ const InputFieldBlock = React.forwardRef<
     label,
     labelSize,
     error,
-    hint = ``,
+    hint,
     className,
     validationMode,
     ...rest
