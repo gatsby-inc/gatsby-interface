@@ -115,6 +115,7 @@ const ColourfulContainer = styled(StandardContainer)`
   :after {
     content: "";
     position: absolute;
+    z-index: -1;
     background: #eee;
   }
   :before {

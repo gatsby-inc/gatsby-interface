@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.53",
+  "version": "0.0.57",
   "description": "Component library for Gatsby projects",
   "source": "src/index.js",
   "files": [
@@ -18,15 +18,15 @@
     "tsc": "tsc",
     "type-check": "tsc --noEmit",
     "type-check:watch": "yarn type-check --watch",
+    "build": "yarn build:types && yarn build:rollup",
     "build:types": "tsc --emitDeclarationOnly -p tsconfig.build-types.json",
-    "build": "babel src -d dist",
-    "build:rollup": "yarn build:types && rollup -c",
-    "dev": "watch 'yarn run build' src",
+    "build:rollup": "rollup -c",
     "stylelint": "stylelint './src/**/*.js'",
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "lint": "eslint -c .eslintrc --max-warnings=0 src --fix --color --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
     "chromatic": "chromatic test",
-    "scaffold:icon": "babel-node --presets @babel/env scripts/scaffold-icon/scaffold-icon.js"
+    "scaffold:icon": "babel-node --presets @babel/env scripts/scaffold-icon/scaffold-icon.js",
+    "release": "standard-version"
   },
   "author": "",
   "license": "ISC",
@@ -146,6 +146,7 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-url": "^1.4.0",
+    "standard-version": "^7.0.1",
     "storybook-chromatic": "^2.1.1",
     "storybook-host": "^5.1.0",
     "storybook-readme": "^5.0.6",

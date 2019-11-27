@@ -6,7 +6,11 @@ import { radios } from "@storybook/addon-knobs"
 import Radio from "./Radio"
 import { StoryUtils } from "../../utils/storybook"
 
-function ControlledRadio({ name = `radioExample`, options = [] }) {
+function ControlledRadio({
+  name = `radioExample`,
+  options = [],
+  ...delegated
+}) {
   const [value, setValue] = React.useState(``)
 
   const selectionStyle = radios(
@@ -27,6 +31,7 @@ function ControlledRadio({ name = `radioExample`, options = [] }) {
           optionValue={optionValue}
           value={value}
           onChange={e => setValue(e.target.value)}
+          {...delegated}
         />
       ))}
     </div>
@@ -43,6 +48,20 @@ storiesOf(`Radio`, module)
             { value: `2`, label: `Option 2`, id: `option-2` },
             { value: `3`, label: `Option 3`, id: `option-3` },
           ]}
+        />
+      </div>
+    </StoryUtils.Container>
+  ))
+  .add(`Emphasized`, () => (
+    <StoryUtils.Container>
+      <div>
+        <ControlledRadio
+          options={[
+            { value: `1`, label: `Option 1`, id: `option-1` },
+            { value: `2`, label: `Option 2`, id: `option-2` },
+            { value: `3`, label: `Option 3`, id: `option-3` },
+          ]}
+          selectionStyle="emphasized"
         />
       </div>
     </StoryUtils.Container>

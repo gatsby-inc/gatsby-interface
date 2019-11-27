@@ -538,6 +538,47 @@ html[dir="rtl"] .emotion-0 {
 </div>
 `;
 
+exports[`Storyshots DecorativeDots Default 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-0"
+        >
+          <svg
+            aria-hidden="true"
+            height="200"
+            style="overflow: visible;"
+            width="300"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots File Upload File Upload with Custom Components 1`] = `
 .emotion-0 {
   -webkit-align-items: center;
@@ -1289,6 +1330,241 @@ exports[`Storyshots Radio Default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Radio Emphasized 1`] = `
+.emotion-18 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  width: 22px;
+}
+
+.emotion-0:checked + label::before {
+  border-color: #663399;
+}
+
+.emotion-0:checked + label::after {
+  opacity: 1;
+}
+
+.emotion-0:hover + label::before {
+  border-color: #b17acc;
+}
+
+.emotion-0:focus + label::before {
+  border-color: #663399;
+  box-shadow: 0 0 0 3px #f1defa;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #36313d;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important;
+  font-size: 1rem;
+  line-height: 1;
+  padding-left: calc(calc(22px + (2 * 2px)) + 0.75rem);
+  position: relative;
+  min-height: calc(22px + (2 * 2px));
+}
+
+.emotion-2:after,
+.emotion-2:before {
+  border-radius: 50%;
+  content: "";
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+.emotion-2:before {
+  background: #ffffff;
+  border: 2px solid #d9d7e0;
+  height: 22px;
+  width: 22px;
+}
+
+.emotion-2:after {
+  background: #663399;
+  height: 8px;
+  left: 7px;
+  opacity: 0;
+  width: 8px;
+}
+
+.emotion-2 small {
+  color: #78757a;
+  font-size: 0.875rem;
+  line-height: 1.1;
+}
+
+.emotion-2.emphasized {
+  padding: 0.75rem 1rem 0.75rem calc(calc(22px + (2 * 2px)) + 0.75rem + 1rem);
+}
+
+.emotion-2.emphasized:before {
+  left: 1rem;
+}
+
+.emotion-2.emphasized:after {
+  left: calc(1rem + 7px);
+}
+
+.emotion-4 {
+  margin-bottom: 1rem;
+  position: relative;
+  margin: 0.25rem 0;
+  position: relative;
+}
+
+.emotion-4:before,
+.emotion-4:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #eee;
+}
+
+.emotion-4:before {
+  border-radius: 8px;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+.emotion-4:after {
+  background: #ffffff;
+  border-radius: 6px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+}
+
+.emotion-4:hover:not(.selected):before,
+.emotion-4:hover:not(.selected):after {
+  background: #fcfaff;
+  opacity: 1;
+}
+
+.emotion-4.selected:before {
+  opacity: 1;
+  background-image: linear-gradient( 110deg,#8954a8 0,#663399 25%,#bc027f 50%,#ffdf37 75%,#05f7f4 100% );
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-18"
+        >
+          <div>
+            <div>
+              <div
+                class=" undefined emotion-4 emotion-5"
+              >
+                <input
+                  class="emotion-0 emotion-1"
+                  id="option-1"
+                  name="radioExample"
+                  type="radio"
+                  value="1"
+                />
+                <label
+                  class="emphasized emotion-2 emotion-3"
+                  for="option-1"
+                >
+                  Option 1
+                </label>
+              </div>
+              <div
+                class=" undefined emotion-4 emotion-5"
+              >
+                <input
+                  class="emotion-0 emotion-1"
+                  id="option-2"
+                  name="radioExample"
+                  type="radio"
+                  value="2"
+                />
+                <label
+                  class="emphasized emotion-2 emotion-3"
+                  for="option-2"
+                >
+                  Option 2
+                </label>
+              </div>
+              <div
+                class=" undefined emotion-4 emotion-5"
+              >
+                <input
+                  class="emotion-0 emotion-1"
+                  id="option-3"
+                  name="radioExample"
+                  type="radio"
+                  value="3"
+                />
+                <label
+                  class="emphasized emotion-2 emotion-3"
+                  for="option-3"
+                >
+                  Option 3
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Radio ReactNode as label 1`] = `
 .emotion-12 {
   -webkit-align-items: center;
@@ -1730,7 +2006,7 @@ exports[`Storyshots SidebarNav usage example 1`] = `
 
 .emotion-0 {
   color: inherit;
-  line-height: 1.375rem;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -1742,7 +2018,7 @@ exports[`Storyshots SidebarNav usage example 1`] = `
 }
 
 .emotion-3 {
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0;
   border-left: 1px solid #8a4baf;
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
@@ -1760,7 +2036,7 @@ exports[`Storyshots SidebarNav usage example 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0;
   border-left: 1px solid #d9d7e0;
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
