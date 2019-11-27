@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, keyframes } from "@emotion/core"
+import { Interpolation } from "@emotion/serialize"
 import React from "react"
 
 import { MdError, MdInfoOutline } from "react-icons/md"
@@ -87,42 +88,28 @@ const Label: React.FC<FormFieldLabelProps> = ({
 FormField.Label = Label
 FormField.Label.displayName = `FormField.Label`
 
-// todo: find a proper type for
-const sharedDescriptionStyles: any = (hasChildren: boolean) => ({
+const sharedDescriptionStyles: Interpolation = {
   alignItems: `flex-start`,
   color: colors.grey[50],
   display: `flex`,
   fontSize: fontSizes[`2xs`],
   lineHeight: 1.2,
   margin: `0 ${spaces[`2xs`]}`,
-  marginTop: hasChildren ? spaces.xs : 0,
   position: `relative`,
   zIndex: 0,
 
   svg: {
-    color: `current-color`,
     flexShrink: 0,
     marginRight: spaces[`2xs`],
     marginTop: `0.1em`,
     width: `1em`,
     height: `1em`,
   },
-})
+}
 
 const Hint: React.FC<FormFieldSkeletonHintProps> = ({ children, ...rest }) => {
-  const hasChildren: boolean = children ? true : false
-  const { hasError } = FormFieldSkeleton.useFormFieldSkeleton()
-
   return (
-    <FormFieldSkeleton.Hint
-      css={[
-        sharedDescriptionStyles(hasChildren),
-        {
-          marginTop: hasChildren && hasError ? spaces[`2xs`] : spaces.xs,
-        },
-      ]}
-      {...rest}
-    >
+    <FormFieldSkeleton.Hint css={sharedDescriptionStyles} {...rest}>
       <MdInfoOutline />
       {children}
     </FormFieldSkeleton.Hint>
@@ -130,13 +117,17 @@ const Hint: React.FC<FormFieldSkeletonHintProps> = ({ children, ...rest }) => {
 }
 
 const errorEntry = keyframes`
-    50% {
-      opacity: .5;
-      transform: translate(0, 0);
-    }
+  50% {
+    opacity: .5;
+  }
   to {
     opacity: 1;
-     transform: translate(0, 0);
+  }
+`
+
+const errorIconEntry = keyframes`
+  to {
+    transform: scale(1)
   }
 `
 
@@ -147,17 +138,22 @@ const Error: React.FC<FormFieldSkeletonErrorProps> = ({
   children,
   ...rest
 }) => {
-  const hasChildren: boolean = children ? true : false
+  const { hasHint } = FormFieldSkeleton.useFormFieldSkeleton()
 
   return (
     <FormFieldSkeleton.Error
       css={[
-        sharedDescriptionStyles(hasChildren),
+        sharedDescriptionStyles,
         {
           animation: `${errorEntry} .25s ease forwards`,
           color: colors.red[70],
+          marginTop: hasHint ? spaces[`2xs`] : 0,
           opacity: 0,
-          transform: `translate(0, -100%)`,
+
+          svg: {
+            animation: `${errorIconEntry} .25s ease-out forwards`,
+            transform: `scale(0)`,
+          },
         },
       ]}
       {...rest}

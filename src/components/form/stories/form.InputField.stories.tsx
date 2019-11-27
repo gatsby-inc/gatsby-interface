@@ -2,13 +2,18 @@
 import { jsx } from "@emotion/core"
 
 import { storiesOf } from "@storybook/react"
-import { text } from "@storybook/addon-knobs"
+import { text, radios } from "@storybook/addon-knobs"
 
 import { StoryUtils } from "../../../utils/storybook"
 import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
 import InputField from "../components/InputField"
 import InputFieldBlock from "../components/InputFieldBlock"
+import { FormFieldLabelSize } from "../components/FormField"
+import { enumToOptions } from "../../../utils/helpers"
+
+const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZE_OPTIONS = LABEL_SIZES.reduce(enumToOptions, {})
 
 const Wrapper: React.FC<{}> = ({ children }) => (
   <div
@@ -35,18 +40,19 @@ storiesOf(`form/InputField`, module)
   .add(`InputField`, () => {
     const hint = text(`Hint`, ``)
     const error = text(`Error`, ``)
+    const size: FormFieldLabelSize = radios(`size`, LABEL_SIZE_OPTIONS, `M`)
 
     return (
       <StoryUtils.Container>
         <Wrapper>
           <InputField id="input-example-1" hasError={!!error} hasHint={!!hint}>
             <InputField.Wrapper>
-              <InputField.Label>Last name</InputField.Label>
+              <InputField.Label size={size}>Last name</InputField.Label>
               <InputField.Control
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <InputField.Error>{error}</InputField.Error>
               <InputField.Hint>{hint}</InputField.Hint>
+              <InputField.Error>{error}</InputField.Error>
             </InputField.Wrapper>
           </InputField>
         </Wrapper>
@@ -57,6 +63,7 @@ storiesOf(`form/InputField`, module)
   .add(`InputFieldBlock`, () => {
     const hint = text(`Hint`, ``)
     const error = text(`Error`, ``)
+    const size: FormFieldLabelSize = radios(`size`, LABEL_SIZE_OPTIONS, `M`)
 
     return (
       <StoryUtils.Container>
@@ -64,6 +71,7 @@ storiesOf(`form/InputField`, module)
           <InputFieldBlock
             id="input-example-2a"
             label="First name"
+            labelSize={size}
             onChange={e => action(`Change`)(e.target.value)}
             error={error}
             hint={hint}
@@ -74,30 +82,23 @@ storiesOf(`form/InputField`, module)
   })
 
   .add(`Label sizes`, () => {
-    const hint = text(`Hint`, ``)
-    const error = text(`Error`, ``)
-
     return (
       <StoryUtils.Container>
         <Wrapper>
           <InputFieldBlock
             id="input-example-3a"
             label="Label size L"
-            error={error}
             labelSize="L"
           ></InputFieldBlock>
           <InputFieldBlock
             id="input-example-3b"
             label="Label size M (default value)"
-            error={error}
             labelSize="M"
           ></InputFieldBlock>
-          <InputField id="input-example-3d" hasError={!!error} hasHint={!!hint}>
+          <InputField id="input-example-3d" hasError={false} hasHint={false}>
             <InputField.Wrapper>
               <InputField.Label size="S">Label size S</InputField.Label>
               <InputField.Control />
-              <InputField.Error>{error}</InputField.Error>
-              <InputField.Hint>{hint}</InputField.Hint>
             </InputField.Wrapper>
           </InputField>
         </Wrapper>
@@ -124,7 +125,6 @@ storiesOf(`form/InputField`, module)
           <InputFieldBlock
             id="input-example-4c"
             label="Last name"
-            error={undefined}
             hint={`Really short hint.`}
           ></InputFieldBlock>
 

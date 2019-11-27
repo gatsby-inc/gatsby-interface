@@ -23010,16 +23010,18 @@ exports[`Storyshots form/InputField InputField 1`] = `
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
+  }
+}
+
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -23083,6 +23085,7 @@ exports[`Storyshots form/InputField InputField 1`] = `
   color: #232129;
   font-size: 1rem;
   height: 2.25rem;
+  margin-bottom: 0;
   padding: 0 0.75rem;
   width: 100%;
   position: relative;
@@ -23119,20 +23122,11 @@ exports[`Storyshots form/InputField InputField 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  -webkit-animation: animation-0 .25s ease forwards;
-  animation: animation-0 .25s ease forwards;
-  color: #da0013;
-  opacity: 0;
-  -webkit-transform: translate(0,-100%);
-  -ms-transform: translate(0,-100%);
-  transform: translate(0,-100%);
 }
 
 .emotion-2 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23155,14 +23149,16 @@ exports[`Storyshots form/InputField InputField 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  margin-top: 0.5rem;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  margin-top: 0;
+  opacity: 0;
 }
 
 .emotion-3 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23170,6 +23166,14 @@ exports[`Storyshots form/InputField InputField 1`] = `
   margin-top: 0.1em;
   width: 1em;
   height: 1em;
+}
+
+.emotion-3 svg {
+  -webkit-animation: animation-1 .25s ease-out forwards;
+  animation: animation-1 .25s ease-out forwards;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 <div>
@@ -23201,11 +23205,11 @@ exports[`Storyshots form/InputField InputField 1`] = `
               />
               <div
                 class="emotion-2"
-                id="input-example-1__error"
+                id="input-example-1__hint"
               />
               <div
                 class="emotion-3"
-                id="input-example-1__hint"
+                id="input-example-1__error"
               />
             </div>
           </div>
@@ -23220,16 +23224,18 @@ exports[`Storyshots form/InputField InputFieldBlock 1`] = `
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
+  }
+}
+
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -23293,6 +23299,7 @@ exports[`Storyshots form/InputField InputFieldBlock 1`] = `
   color: #232129;
   font-size: 1rem;
   height: 2.25rem;
+  margin-bottom: 0;
   padding: 0 0.75rem;
   width: 100%;
   position: relative;
@@ -23329,20 +23336,11 @@ exports[`Storyshots form/InputField InputFieldBlock 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  -webkit-animation: animation-0 .25s ease forwards;
-  animation: animation-0 .25s ease forwards;
-  color: #da0013;
-  opacity: 0;
-  -webkit-transform: translate(0,-100%);
-  -ms-transform: translate(0,-100%);
-  transform: translate(0,-100%);
 }
 
 .emotion-2 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23365,14 +23363,16 @@ exports[`Storyshots form/InputField InputFieldBlock 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  margin-top: 0.5rem;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  margin-top: 0;
+  opacity: 0;
 }
 
 .emotion-3 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23380,6 +23380,14 @@ exports[`Storyshots form/InputField InputFieldBlock 1`] = `
   margin-top: 0.1em;
   width: 1em;
   height: 1em;
+}
+
+.emotion-3 svg {
+  -webkit-animation: animation-1 .25s ease-out forwards;
+  animation: animation-1 .25s ease-out forwards;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 <div>
@@ -23411,11 +23419,11 @@ exports[`Storyshots form/InputField InputFieldBlock 1`] = `
               />
               <div
                 class="emotion-2"
-                id="input-example-2a__error"
+                id="input-example-2a__hint"
               />
               <div
                 class="emotion-3"
-                id="input-example-2a__hint"
+                id="input-example-2a__error"
               />
             </div>
           </div>
@@ -23430,20 +23438,22 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 }
 
-.emotion-16 {
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -23461,7 +23471,7 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
   padding: 20px;
 }
 
-.emotion-15 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23503,6 +23513,7 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
   color: #232129;
   font-size: 1rem;
   height: 2.25rem;
+  margin-bottom: 0;
   padding: 0 0.75rem;
   width: 100%;
   position: relative;
@@ -23539,20 +23550,11 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  -webkit-animation: animation-0 .25s ease forwards;
-  animation: animation-0 .25s ease forwards;
-  color: #da0013;
-  opacity: 0;
-  -webkit-transform: translate(0,-100%);
-  -ms-transform: translate(0,-100%);
-  transform: translate(0,-100%);
 }
 
 .emotion-2 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23575,14 +23577,16 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  margin-top: 0.5rem;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  margin-top: 0;
+  opacity: 0;
 }
 
 .emotion-3 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23590,6 +23594,14 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
   margin-top: 0.1em;
   width: 1em;
   height: 1em;
+}
+
+.emotion-3 svg {
+  -webkit-animation: animation-1 .25s ease-out forwards;
+  animation: animation-1 .25s ease-out forwards;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .emotion-0 {
@@ -23637,10 +23649,10 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
     <div>
       <div>
         <div
-          class="emotion-16"
+          class="emotion-14"
         >
           <div
-            class="emotion-15"
+            class="emotion-13"
           >
             <div
               class="emotion-4"
@@ -23659,11 +23671,11 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
               />
               <div
                 class="emotion-2"
-                id="input-example-3a__error"
+                id="input-example-3a__hint"
               />
               <div
                 class="emotion-3"
-                id="input-example-3a__hint"
+                id="input-example-3a__error"
               />
             </div>
             <div
@@ -23683,11 +23695,11 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
               />
               <div
                 class="emotion-2"
-                id="input-example-3b__error"
+                id="input-example-3b__hint"
               />
               <div
                 class="emotion-3"
-                id="input-example-3b__hint"
+                id="input-example-3b__error"
               />
             </div>
             <div
@@ -23705,14 +23717,6 @@ exports[`Storyshots form/InputField Label sizes 1`] = `
                 class="emotion-1"
                 id="input-example-3d"
               />
-              <div
-                class="emotion-2"
-                id="input-example-3d__error"
-              />
-              <div
-                class="emotion-3"
-                id="input-example-3d__hint"
-              />
             </div>
           </div>
         </div>
@@ -23726,32 +23730,36 @@ exports[`Storyshots form/InputField disbled 1`] = `
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 }
 
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
+  }
+}
+
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -23815,6 +23823,7 @@ exports[`Storyshots form/InputField disbled 1`] = `
   color: #232129;
   font-size: 1rem;
   height: 2.25rem;
+  margin-bottom: 0;
   padding: 0 0.75rem;
   width: 100%;
   position: relative;
@@ -23851,20 +23860,11 @@ exports[`Storyshots form/InputField disbled 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  -webkit-animation: animation-0 .25s ease forwards;
-  animation: animation-0 .25s ease forwards;
-  color: #da0013;
-  opacity: 0;
-  -webkit-transform: translate(0,-100%);
-  -ms-transform: translate(0,-100%);
-  transform: translate(0,-100%);
 }
 
 .emotion-2 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23887,14 +23887,16 @@ exports[`Storyshots form/InputField disbled 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  margin-top: 0.5rem;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  margin-top: 0;
+  opacity: 0;
 }
 
 .emotion-3 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23902,6 +23904,14 @@ exports[`Storyshots form/InputField disbled 1`] = `
   margin-top: 0.1em;
   width: 1em;
   height: 1em;
+}
+
+.emotion-3 svg {
+  -webkit-animation: animation-1 .25s ease-out forwards;
+  animation: animation-1 .25s ease-out forwards;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 <div>
@@ -23934,11 +23944,11 @@ exports[`Storyshots form/InputField disbled 1`] = `
               />
               <div
                 class="emotion-2"
-                id="input-example-5a__error"
+                id="input-example-5a__hint"
               />
               <div
                 class="emotion-3"
-                id="input-example-5a__hint"
+                id="input-example-5a__error"
               />
             </div>
             <div
@@ -23969,32 +23979,36 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 }
 
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
+  }
+}
+
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -24051,37 +24065,7 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
   position: relative;
 }
 
-.emotion-11 {
-  border: 1px solid #d9d7e0;
-  border-color: #d9d7e0;
-  border-radius: 4px;
-  color: #232129;
-  font-size: 1rem;
-  height: 2.25rem;
-  padding: 0 0.75rem;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.emotion-11:required l {
-  background: blue;
-}
-
-.emotion-11:focus {
-  border-color: #b17acc;
-  box-shadow: 0 0 0 3px #f1defa;
-  outline: 0;
-  -webkit-transition: box-shadow 0.15s ease-in-out;
-  transition: box-shadow 0.15s ease-in-out;
-}
-
-.emotion-11:disabled {
-  background: #f5f5f5;
-  cursor: not-allowed;
-}
-
-.emotion-12 {
+.emotion-2 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -24094,20 +24078,11 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  -webkit-animation: animation-0 .25s ease forwards;
-  animation: animation-0 .25s ease forwards;
-  color: #da0013;
-  opacity: 0;
-  -webkit-transform: translate(0,-100%);
-  -ms-transform: translate(0,-100%);
-  transform: translate(0,-100%);
 }
 
-.emotion-12 svg {
-  color: current-color;
+.emotion-2 svg {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -24130,14 +24105,16 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  margin-top: 0.5rem;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  margin-top: 0;
+  opacity: 0;
 }
 
 .emotion-3 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -24147,6 +24124,14 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
   height: 1em;
 }
 
+.emotion-3 svg {
+  -webkit-animation: animation-1 .25s ease-out forwards;
+  animation: animation-1 .25s ease-out forwards;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
 .emotion-1 {
   border: 1px solid #d9d7e0;
   border-color: red;
@@ -24154,6 +24139,7 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
   color: #232129;
   font-size: 1rem;
   height: 2.25rem;
+  margin-bottom: 0.5rem;
   padding: 0 0.75rem;
   width: 100%;
   position: relative;
@@ -24177,40 +24163,35 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  color: #78757a;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  margin: 0 0.25rem;
-  margin-top: 0.5rem;
+.emotion-11 {
+  border: 1px solid #d9d7e0;
+  border-color: #d9d7e0;
+  border-radius: 4px;
+  color: #232129;
+  font-size: 1rem;
+  height: 2.25rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0.75rem;
+  width: 100%;
   position: relative;
-  z-index: 0;
-  -webkit-animation: animation-0 .25s ease forwards;
-  animation: animation-0 .25s ease forwards;
-  color: #da0013;
-  opacity: 0;
-  -webkit-transform: translate(0,-100%);
-  -ms-transform: translate(0,-100%);
-  transform: translate(0,-100%);
+  z-index: 1;
 }
 
-.emotion-2 svg {
-  color: current-color;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin-right: 0.25rem;
-  margin-top: 0.1em;
-  width: 1em;
-  height: 1em;
+.emotion-11:required l {
+  background: blue;
+}
+
+.emotion-11:focus {
+  border-color: #b17acc;
+  box-shadow: 0 0 0 3px #f1defa;
+  outline: 0;
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.emotion-11:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
 }
 
 .emotion-13 {
@@ -24226,14 +24207,16 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0.5rem;
   position: relative;
   z-index: 0;
-  margin-top: 0.5rem;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  margin-top: 0.25rem;
+  opacity: 0;
 }
 
 .emotion-13 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -24243,34 +24226,12 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
   height: 1em;
 }
 
-.emotion-23 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  color: #78757a;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  margin: 0 0.25rem;
-  margin-top: 0.5rem;
-  position: relative;
-  z-index: 0;
-  margin-top: 0.25rem;
-}
-
-.emotion-23 svg {
-  color: current-color;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin-right: 0.25rem;
-  margin-top: 0.1em;
-  width: 1em;
-  height: 1em;
+.emotion-13 svg {
+  -webkit-animation: animation-1 .25s ease-out forwards;
+  animation: animation-1 .25s ease-out forwards;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 <div>
@@ -24303,6 +24264,10 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
               />
               <div
                 class="emotion-2"
+                id="input-example-4a__hint"
+              />
+              <div
+                class="emotion-3"
                 id="input-example-4a__error"
               >
                 <svg
@@ -24320,10 +24285,6 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
                 </svg>
                 Short error message.
               </div>
-              <div
-                class="emotion-3"
-                id="input-example-4a__hint"
-              />
             </div>
             <div
               class="emotion-4"
@@ -24343,6 +24304,10 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
               />
               <div
                 class="emotion-2"
+                id="input-example-4b__hint"
+              />
+              <div
+                class="emotion-3"
                 id="input-example-4b__error"
               >
                 <svg
@@ -24360,10 +24325,6 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
                 </svg>
                 Long error message ... ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </div>
-              <div
-                class="emotion-3"
-                id="input-example-4b__hint"
-              />
             </div>
             <div
               class="emotion-4"
@@ -24382,11 +24343,7 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
                 id="input-example-4c"
               />
               <div
-                class="emotion-12"
-                id="input-example-4c__error"
-              />
-              <div
-                class="emotion-13"
+                class="emotion-2"
                 id="input-example-4c__hint"
               >
                 <svg
@@ -24404,6 +24361,10 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
                 </svg>
                 Really short hint.
               </div>
+              <div
+                class="emotion-13"
+                id="input-example-4c__error"
+              />
             </div>
             <div
               class="emotion-4"
@@ -24422,11 +24383,7 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
                 id="input-example-4d"
               />
               <div
-                class="emotion-12"
-                id="input-example-4d__error"
-              />
-              <div
-                class="emotion-13"
+                class="emotion-2"
                 id="input-example-4d__hint"
               >
                 <svg
@@ -24444,6 +24401,10 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
                 </svg>
                 Much longer hint ... excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </div>
+              <div
+                class="emotion-13"
+                id="input-example-4d__error"
+              />
             </div>
             <div
               class="emotion-4"
@@ -24463,25 +24424,6 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
               />
               <div
                 class="emotion-2"
-                id="input-example-4e__error"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
-                  />
-                </svg>
-                Field with error 
-              </div>
-              <div
-                class="emotion-23"
                 id="input-example-4e__hint"
               >
                 <svg
@@ -24499,6 +24441,25 @@ exports[`Storyshots form/InputField error & hint styles 1`] = `
                 </svg>
                 and Hint at the same time 
               </div>
+              <div
+                class="emotion-13"
+                id="input-example-4e__error"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                  />
+                </svg>
+                Field with error 
+              </div>
             </div>
           </div>
         </div>
@@ -24512,32 +24473,36 @@ exports[`Storyshots form/InputField required 1`] = `
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 }
 
 @keyframes animation-0 {
   50% {
     opacity: .5;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    transform: translate(0,0);
+  }
+}
+
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes animation-1 {
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -24601,6 +24566,7 @@ exports[`Storyshots form/InputField required 1`] = `
   color: #232129;
   font-size: 1rem;
   height: 2.25rem;
+  margin-bottom: 0;
   padding: 0 0.75rem;
   width: 100%;
   position: relative;
@@ -24637,20 +24603,11 @@ exports[`Storyshots form/InputField required 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  -webkit-animation: animation-0 .25s ease forwards;
-  animation: animation-0 .25s ease forwards;
-  color: #da0013;
-  opacity: 0;
-  -webkit-transform: translate(0,-100%);
-  -ms-transform: translate(0,-100%);
-  transform: translate(0,-100%);
 }
 
 .emotion-3 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -24673,14 +24630,16 @@ exports[`Storyshots form/InputField required 1`] = `
   font-size: 0.75rem;
   line-height: 1.2;
   margin: 0 0.25rem;
-  margin-top: 0;
   position: relative;
   z-index: 0;
-  margin-top: 0.5rem;
+  -webkit-animation: animation-0 .25s ease forwards;
+  animation: animation-0 .25s ease forwards;
+  color: #da0013;
+  margin-top: 0;
+  opacity: 0;
 }
 
 .emotion-4 svg {
-  color: current-color;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -24688,6 +24647,14 @@ exports[`Storyshots form/InputField required 1`] = `
   margin-top: 0.1em;
   width: 1em;
   height: 1em;
+}
+
+.emotion-4 svg {
+  -webkit-animation: animation-1 .25s ease-out forwards;
+  animation: animation-1 .25s ease-out forwards;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .emotion-0 {
@@ -24730,11 +24697,11 @@ exports[`Storyshots form/InputField required 1`] = `
               />
               <div
                 class="emotion-3"
-                id="input-example-5a__error"
+                id="input-example-5a__hint"
               />
               <div
                 class="emotion-4"
-                id="input-example-5a__hint"
+                id="input-example-5a__error"
               />
             </div>
             <div
