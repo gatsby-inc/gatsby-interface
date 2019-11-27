@@ -10,7 +10,7 @@ import { StoryUtils } from "../../../../utils/storybook"
 import colors from "../../../../theme/colors"
 import { Story } from "@storybook/react"
 import { ButtonSize, ButtonTone, ButtonVariant } from "../Button"
-import { enumToOptions } from "../../../../utils/helpers"
+import enumToOptions from "../../../../utils/helpers/enumToOptions"
 
 const BUTTON_SIZES: ButtonSize[] = [`S`, `M`, `L`, `XL`]
 const BUTTON_SIZE_OPTIONS = BUTTON_SIZES.reduce(enumToOptions, {})
