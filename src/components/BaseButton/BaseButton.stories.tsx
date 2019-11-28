@@ -9,7 +9,7 @@ import Readme from "./README.md"
 import { text, boolean } from "@storybook/addon-knobs"
 import { StoryUtils } from "../../utils/storybook"
 
-storiesOf(`skeletons/BaseButton`, module)
+storiesOf(`BaseButton`, module)
   .addParameters({
     options: {
       showPanel: true,

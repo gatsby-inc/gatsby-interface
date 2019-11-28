@@ -7,7 +7,7 @@ import { BaseAnchor } from "./BaseAnchor"
 import Readme from "./README.md"
 import { StoryUtils } from "../../utils/storybook"
 
-storiesOf(`skeletons/BaseAnchor`, module)
+storiesOf(`BaseAnchor`, module)
   .addParameters({
     options: {
       showPanel: true,

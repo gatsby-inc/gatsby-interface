@@ -7,7 +7,7 @@ import { BaseLink } from "./BaseLink"
 import Readme from "./README.md"
 import { StoryUtils } from "../../utils/storybook"
 
-storiesOf(`skeletons/BaseLink`, module)
+storiesOf(`BaseLink`, module)
   .addParameters({
     options: {
       showPanel: true,
