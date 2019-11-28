@@ -3,11 +3,11 @@ import { jsx } from "@emotion/core"
 
 import { storiesOf } from "@storybook/react"
 
-import { BaseAnchor } from "./BaseAnchor"
+import { BaseLink } from "./BaseLink"
 import Readme from "./README.md"
-import { StoryUtils } from "../../../utils/storybook"
+import { StoryUtils } from "../../utils/storybook"
 
-storiesOf(`skeletons/BaseAnchor`, module)
+storiesOf(`skeletons/BaseLink`, module)
   .addParameters({
     options: {
       showPanel: true,
@@ -19,9 +19,7 @@ storiesOf(`skeletons/BaseAnchor`, module)
   .add(`default`, () => (
     <StoryUtils.Container>
       <StoryUtils.Stack>
-        <BaseAnchor href="https://gatsbyjs.com" target="_blank">
-          Anchor
-        </BaseAnchor>
+        <BaseLink to="/">Link</BaseLink>
       </StoryUtils.Stack>
     </StoryUtils.Container>
   ))

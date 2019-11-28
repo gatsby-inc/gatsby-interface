@@ -4,7 +4,7 @@ import { Fragment } from "react"
 import PropTypes from "prop-types"
 import { MdEdit, MdArrowForward, MdFlashOn, MdLaunch } from "react-icons/md"
 
-import { ContentBox } from "../../skeletons/ContentBox"
+import { ContentBox } from "../../ContentBox"
 import { Link } from "../../Link"
 import { Button } from "../Button"
 import { Heading } from "../Heading"

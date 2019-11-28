@@ -7,7 +7,7 @@ export {
   Success,
 } from "./assets"
 
-export { ContentBox } from "./components/skeletons/ContentBox"
+export { ContentBox } from "./components/ContentBox"
 
 export {
   Button,
