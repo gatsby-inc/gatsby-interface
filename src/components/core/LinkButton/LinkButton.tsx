@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { BaseLink, BaseLinkProps } from "../../skeletons/BaseLink"
+import { BaseLink, BaseLinkProps } from "../../BaseLink"
 import { getButtonStyles, ButtonStyleProps } from "../Button/Button"
 
 export type LinkButtonProps<TState = any> = BaseLinkProps<TState> &

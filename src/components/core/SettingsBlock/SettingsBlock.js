@@ -4,7 +4,7 @@ import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 import { MdHelpOutline } from "react-icons/md"
 
-import { ContentBox } from "../../skeletons/ContentBox"
+import { ContentBox } from "../../ContentBox"
 import { LinkButton } from "../LinkButton"
 import { Heading } from "../Heading"
 import { breakpoints, fontFamilies, spaces } from "../../../utils/presets"

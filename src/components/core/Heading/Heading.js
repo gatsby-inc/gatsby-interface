@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core"
 
 import PropTypes from "prop-types"
 
-import { BaseHeading } from "../../skeletons/BaseHeading"
+import { BaseHeading } from "../../BaseHeading"
 import { styles, options } from "../../../theme/styles/heading"
 
 import { showCustomCssDeprecationMessage } from "../../../utils/maintenance/deprecationMessages"

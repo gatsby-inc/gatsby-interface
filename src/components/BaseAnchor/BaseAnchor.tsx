@@ -1,5 +1,5 @@
 import React from "react"
-import secureTargetBlankLink from "../../../utils/helpers/secureTargetBlankLink"
+import secureTargetBlankLink from "../../utils/helpers/secureTargetBlankLink"
 
 export type BaseAnchorProps = Omit<JSX.IntrinsicElements["a"], "ref">
 

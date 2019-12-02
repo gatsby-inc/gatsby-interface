@@ -3,7 +3,7 @@ import { jsx, css } from "@emotion/core"
 import React from "react"
 import { MdRefresh } from "react-icons/md"
 
-import { BaseButton, BaseButtonProps } from "../../skeletons/BaseButton"
+import { BaseButton, BaseButtonProps } from "../../BaseButton"
 import styles from "../../../theme/styles/button"
 
 export type ButtonSize = "XL" | "L" | "M" | "S"
@@ -29,11 +29,11 @@ export function getButtonStyles({
   leftIcon,
   rightIcon,
 }: {
-  children: React.ReactNode;
-  loading?: boolean;
+  children: React.ReactNode
+  loading?: boolean
 } & ButtonStyleProps): {
-  css: ReturnType<typeof css>;
-  children: React.ReactNode;
+  css: ReturnType<typeof css>
+  children: React.ReactNode
 } {
   return {
     css: {

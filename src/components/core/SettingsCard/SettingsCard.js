@@ -4,7 +4,7 @@ import { Fragment, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { MdEdit, MdArrowForward } from "react-icons/md"
 
-import { ContentBox } from "../../skeletons/ContentBox"
+import { ContentBox } from "../../ContentBox"
 import { Button } from "../Button"
 import { Heading } from "../Heading"
 import { fontFamilies, spaces } from "../../../utils/presets"

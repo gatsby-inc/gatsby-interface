@@ -6,7 +6,7 @@ import { storiesOf } from "@storybook/react"
 import ContentBox from "./ContentBox"
 import Readme from "./README.md"
 
-storiesOf(`skeletons/ContentBox`, module)
+storiesOf(`ContentBox`, module)
   .addParameters({
     options: {
       showPanel: true,
