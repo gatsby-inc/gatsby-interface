@@ -126,7 +126,7 @@ workflows:
   run-release:
     jobs:
       - is-green
-      - prerelease:
+      - release:
           requires:
             - is-green
           filters:
