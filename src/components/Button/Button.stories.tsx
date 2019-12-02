@@ -67,13 +67,12 @@ storiesOf(`Button`, module)
       <StoryUtils.Container>
         <StoryUtils.Stack>
           <button
-            css={
-              {
-                ...styles.base(),
-                ...styles.sizes[`L`],
-                ...styles.variants[`PRIMARY`]({ tone: `BRAND` }),
-              } as any
-            }
+            css={Object.assign(
+              {},
+              styles.base(),
+              styles.sizes.L,
+              styles.variants.PRIMARY({ tone: `BRAND` })
+            )}
           >
             I'm a &lt;button&gt; but I look like the &lt;Button&gt;
           </button>

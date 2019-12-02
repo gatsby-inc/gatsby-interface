@@ -36,11 +36,12 @@ export function getButtonStyles({
   children: React.ReactNode
 } {
   return {
-    css: {
-      ...styles.base({ loading, leftIcon, rightIcon }),
-      ...styles.sizes[size],
-      ...styles.variants[variant]({ tone }),
-    },
+    css: Object.assign(
+      {},
+      styles.base({ loading, leftIcon, rightIcon }),
+      styles.sizes[size],
+      styles.variants[variant]({ tone })
+    ) as any,
     children:
       leftIcon || rightIcon ? (
         <React.Fragment>
