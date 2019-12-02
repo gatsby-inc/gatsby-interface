@@ -20,16 +20,16 @@ export {
   PrimaryDeleteButton,
   SecondaryDeleteButton,
   getButtonStyles,
-} from "./components/core/Button"
+} from "./components/Button"
 
-export { AnchorButton } from "./components/core/AnchorButton"
-export { LinkButton } from "./components/core/LinkButton"
+export { AnchorButton } from "./components/AnchorButton"
+export { LinkButton } from "./components/LinkButton"
 
-export { SettingsBlock } from "./components/core/SettingsBlock"
+export { SettingsBlock } from "./components/SettingsBlock"
 
-export { SettingsCard } from "./components/core/SettingsCard"
+export { SettingsCard } from "./components/SettingsCard"
 
-export { IntegrationRow } from "./components/core/IntegrationRow"
+export { IntegrationRow } from "./components/IntegrationRow"
 
 export { Link } from "./components/Link"
 
@@ -62,17 +62,17 @@ export { Notification } from "./components/Notification"
 
 export { SidebarNav } from "./components/SidebarNav"
 
-export { PricingCard } from "./components/core/PricingCard"
+export { PricingCard } from "./components/PricingCard"
 
-export { Heading } from "./components/core/Heading"
+export { Heading } from "./components/Heading"
 
-export { Announcement } from "./components/core/Announcement"
+export { Announcement } from "./components/Announcement"
 
-export { Badge } from "./components/core/Badge"
+export { Badge } from "./components/Badge"
 
 export { Breadcrumb } from "./components/Breadcrumb"
 
-export { Switch } from "./components/core/Switch"
+export { Switch } from "./components/Switch"
 
 export * from "./components/CopyButton"
 

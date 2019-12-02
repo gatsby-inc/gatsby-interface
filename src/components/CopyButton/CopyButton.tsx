@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import { css } from "@emotion/core"
 
 import copyToClipboard from "../../utils/helpers/copyToClipboard"
-import { ButtonProps, Button } from "../core/Button/Button"
+import { ButtonProps, Button } from "../Button/Button"
 
 const baseCss = css`
   html:not([dir="rtl"]) & {

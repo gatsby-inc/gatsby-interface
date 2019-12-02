@@ -1,9 +1,7 @@
 import React from "react"
-
 import { storiesOf } from "@storybook/react"
 import { radios } from "@storybook/addon-knobs"
-
-import Radio from "./Radio"
+import { Radio } from "./"
 import { StoryUtils } from "../../utils/storybook"
 
 function ControlledRadio({

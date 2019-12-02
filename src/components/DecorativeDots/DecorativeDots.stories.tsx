@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react"
 import { number } from "@storybook/addon-knobs"
 
 import { StoryUtils } from "../../utils/storybook"
-import DecorativeDots from "./DecorativeDots"
+import { DecorativeDots } from "./"
 import README from "./README.md"
 
 storiesOf(`DecorativeDots`, module)

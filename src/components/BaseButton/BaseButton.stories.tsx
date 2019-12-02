@@ -4,7 +4,7 @@ import { jsx } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
 
 import { MdSync } from "react-icons/md"
-import { BaseButton } from "./BaseButton"
+import { BaseButton } from "./"
 import Readme from "./README.md"
 import { text, boolean } from "@storybook/addon-knobs"
 import { StoryUtils } from "../../utils/storybook"

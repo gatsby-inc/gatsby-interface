@@ -1,8 +1,7 @@
 import React from "react"
-
 import { storiesOf } from "@storybook/react"
 import { StoryUtils } from "../../utils/storybook"
-import { Button } from "../core/Button"
+import { Button } from "../Button"
 import {
   ToastProvider,
   ToastConsumer,

@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
 import { storiesOf } from "@storybook/react"
-
-import ContentBox from "./ContentBox"
+import { ContentBox } from "./"
 import Readme from "./README.md"
 
 storiesOf(`ContentBox`, module)

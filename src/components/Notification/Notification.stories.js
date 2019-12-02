@@ -1,11 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
 import { storiesOf } from "@storybook/react"
 import { radios } from "@storybook/addon-knobs"
-
 import { NOTIFICATION_TONES } from "../../utils/options"
-import Notification from "./Notification"
+import { Notification } from "./"
 import { StoryUtils } from "../../utils/storybook"
 
 storiesOf(`Notification`, module).add(`default`, () => (

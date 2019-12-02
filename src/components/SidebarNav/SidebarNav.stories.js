@@ -1,11 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { useState } from "react"
-
 import { storiesOf } from "@storybook/react"
 import { StoryUtils } from "../../utils/storybook"
-
-import SidebarNav from "./SidebarNav"
+import { SidebarNav } from "./"
 import { General, Integrations, Preview, Skull } from "../../assets"
 
 // The active prop should be managed by path rather than component state. This use case is for storybook only

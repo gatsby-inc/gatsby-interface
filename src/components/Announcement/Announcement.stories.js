@@ -1,25 +1,24 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { storiesOf } from "@storybook/react"
-import { BaseAnchor } from "."
-import Readme from "./README.md"
-import { StoryUtils } from "../../utils/storybook"
 
-storiesOf(`BaseAnchor`, module)
+import { storiesOf } from "@storybook/react"
+
+import { StoryUtils } from "../../utils/storybook"
+import { Announcement } from "./"
+
+storiesOf(`Announcement`, module)
   .addParameters({
     options: {
       showPanel: true,
     },
-    readme: {
-      sidebar: Readme,
-    },
   })
-  .add(`default`, () => (
+  .add(`default usage`, () => (
     <StoryUtils.Container>
       <StoryUtils.Stack>
-        <BaseAnchor href="https://gatsbyjs.com" target="_blank">
-          Anchor
-        </BaseAnchor>
+        <Announcement>
+          We are working on adding more integrations all the time—watch your
+          inbox!
+        </Announcement>
       </StoryUtils.Stack>
     </StoryUtils.Container>
   ))

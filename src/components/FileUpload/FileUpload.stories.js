@@ -1,8 +1,6 @@
 import React from "react"
-
 import { storiesOf } from "@storybook/react"
-
-import FileUpload from "./FileUpload"
+import { FileUpload } from "./"
 import { StoryUtils } from "../../utils/storybook"
 
 // sample of data that filestack returns upon successful upload

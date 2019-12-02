@@ -1,7 +1,7 @@
 import React from "react"
 import { render } from "@testing-library/react"
 
-import { PrimaryButton } from "../src/components/core/Button"
+import { PrimaryButton } from "../src/components/Button"
 
 describe(`<PrimaryButton>`, () => {
   test(`renders unchanged`, async () => {

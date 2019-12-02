@@ -1,10 +1,8 @@
 import React from "react"
-
 import { storiesOf } from "@storybook/react"
 import { text } from "@storybook/addon-knobs"
-
 import { StoryUtils } from "../../utils/storybook"
-import CopyButton from "./CopyButton"
+import { CopyButton } from "./"
 import README from "./README.md"
 import { action } from "@storybook/addon-actions"
 

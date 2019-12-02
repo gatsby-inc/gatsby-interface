@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
-import { Button } from "../core/Button"
+import { Button } from "../Button"
 
 const UploadPreview = ({ file: { url, filename }, removeFile, index }) => (
   <div css={{ display: `flex`, alignItems: `center` }}>

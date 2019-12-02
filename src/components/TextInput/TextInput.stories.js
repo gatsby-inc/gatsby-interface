@@ -1,9 +1,7 @@
 import React from "react"
-
 import { storiesOf } from "@storybook/react"
 import { text, boolean, radios } from "@storybook/addon-knobs"
-
-import TextInput from "./TextInput"
+import { TextInput } from "./"
 import { StoryUtils } from "../../utils/storybook"
 
 const variants = {

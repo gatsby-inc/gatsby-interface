@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
 import { storiesOf } from "@storybook/react"
-
-import { BaseLink } from "./BaseLink"
+import { BaseLink } from "./"
 import Readme from "./README.md"
 import { StoryUtils } from "../../utils/storybook"
 

@@ -1,10 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
 import { storiesOf } from "@storybook/react"
 import { StoryUtils } from "../../utils/storybook"
-
-import Breadcrumb from "./Breadcrumb"
+import { Breadcrumb } from "./"
 
 storiesOf(`Breadcrumb`, module).add(`default`, () => (
   <StoryUtils.Container>
