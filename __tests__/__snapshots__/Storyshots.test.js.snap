@@ -170,7 +170,7 @@ exports[`Storyshots AnchorButton override/extend styles 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -192,6 +192,7 @@ exports[`Storyshots AnchorButton override/extend styles 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
   color: #663399;
@@ -370,7 +371,7 @@ exports[`Storyshots AnchorButton sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -392,6 +393,7 @@ exports[`Storyshots AnchorButton sizes 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -427,7 +429,7 @@ exports[`Storyshots AnchorButton sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -449,6 +451,7 @@ exports[`Storyshots AnchorButton sizes 1`] = `
   min-height: 1.6rem;
   padding: 0.3rem 0.5rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -484,7 +487,7 @@ exports[`Storyshots AnchorButton sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -506,6 +509,7 @@ exports[`Storyshots AnchorButton sizes 1`] = `
   min-height: 2rem;
   padding: 0.45rem 0.75rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -541,7 +545,7 @@ exports[`Storyshots AnchorButton sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -563,6 +567,7 @@ exports[`Storyshots AnchorButton sizes 1`] = `
   min-height: 3.25rem;
   padding: 0.65rem 1.25rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -809,7 +814,7 @@ exports[`Storyshots AnchorButton tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -831,6 +836,7 @@ exports[`Storyshots AnchorButton tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -866,7 +872,7 @@ exports[`Storyshots AnchorButton tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #78757a;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -888,6 +894,7 @@ exports[`Storyshots AnchorButton tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #78757a;
+  border: 1px solid #78757a;
   color: #ffffff;
   font-weight: bold;
 }
@@ -923,7 +930,7 @@ exports[`Storyshots AnchorButton tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #2ca72c;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -945,6 +952,7 @@ exports[`Storyshots AnchorButton tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #2ca72c;
+  border: 1px solid #2ca72c;
   color: #ffffff;
   font-weight: bold;
 }
@@ -980,7 +988,7 @@ exports[`Storyshots AnchorButton tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #da0013;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -1002,6 +1010,7 @@ exports[`Storyshots AnchorButton tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #da0013;
+  border: 1px solid #da0013;
   color: #ffffff;
   font-weight: bold;
 }
@@ -1164,7 +1173,7 @@ exports[`Storyshots AnchorButton variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -1186,6 +1195,7 @@ exports[`Storyshots AnchorButton variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -1221,7 +1231,7 @@ exports[`Storyshots AnchorButton variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -1243,6 +1253,7 @@ exports[`Storyshots AnchorButton variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
 }
 
@@ -1277,7 +1288,7 @@ exports[`Storyshots AnchorButton variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -1299,6 +1310,7 @@ exports[`Storyshots AnchorButton variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
 }
 
@@ -1576,7 +1588,7 @@ exports[`Storyshots AnchorButton with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -1598,6 +1610,7 @@ exports[`Storyshots AnchorButton with icons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -1634,7 +1647,7 @@ exports[`Storyshots AnchorButton with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -1656,6 +1669,7 @@ exports[`Storyshots AnchorButton with icons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -2466,7 +2480,7 @@ exports[`Storyshots Button in 'loading' state 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -2488,6 +2502,7 @@ exports[`Storyshots Button in 'loading' state 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -2808,7 +2823,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -2830,6 +2845,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -2865,7 +2881,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -2887,6 +2903,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
 }
 
@@ -2921,7 +2938,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -2943,6 +2960,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
 }
 
@@ -2977,7 +2995,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #2ca72c;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -2999,6 +3017,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #2ca72c;
+  border: 1px solid #2ca72c;
   color: #ffffff;
   font-weight: bold;
 }
@@ -3034,7 +3053,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #da0013;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -3056,6 +3075,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #da0013;
+  border: 1px solid #da0013;
   color: #ffffff;
   font-weight: bold;
 }
@@ -3091,7 +3111,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f0f0f2;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -3113,6 +3133,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f0f0f2;
   color: #78757a;
 }
 
@@ -3147,7 +3168,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #ffbab8;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -3169,6 +3190,7 @@ exports[`Storyshots Button legacy Buttons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #ffbab8;
   color: #da0013;
 }
 
@@ -3458,7 +3480,7 @@ exports[`Storyshots Button manually applied styles 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -3480,6 +3502,7 @@ exports[`Storyshots Button manually applied styles 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -3733,7 +3756,7 @@ exports[`Storyshots Button override/extend styles 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -3755,6 +3778,7 @@ exports[`Storyshots Button override/extend styles 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
   color: #663399;
@@ -4016,7 +4040,7 @@ exports[`Storyshots Button sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4038,6 +4062,7 @@ exports[`Storyshots Button sizes 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -4073,7 +4098,7 @@ exports[`Storyshots Button sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4095,6 +4120,7 @@ exports[`Storyshots Button sizes 1`] = `
   min-height: 1.6rem;
   padding: 0.3rem 0.5rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -4130,7 +4156,7 @@ exports[`Storyshots Button sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4152,6 +4178,7 @@ exports[`Storyshots Button sizes 1`] = `
   min-height: 2rem;
   padding: 0.45rem 0.75rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -4187,7 +4214,7 @@ exports[`Storyshots Button sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4209,6 +4236,7 @@ exports[`Storyshots Button sizes 1`] = `
   min-height: 3.25rem;
   padding: 0.65rem 1.25rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -4493,7 +4521,7 @@ exports[`Storyshots Button tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4515,6 +4543,7 @@ exports[`Storyshots Button tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -4550,7 +4579,7 @@ exports[`Storyshots Button tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #78757a;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4572,6 +4601,7 @@ exports[`Storyshots Button tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #78757a;
+  border: 1px solid #78757a;
   color: #ffffff;
   font-weight: bold;
 }
@@ -4607,7 +4637,7 @@ exports[`Storyshots Button tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #2ca72c;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4629,6 +4659,7 @@ exports[`Storyshots Button tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #2ca72c;
+  border: 1px solid #2ca72c;
   color: #ffffff;
   font-weight: bold;
 }
@@ -4664,7 +4695,7 @@ exports[`Storyshots Button tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #da0013;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4686,6 +4717,7 @@ exports[`Storyshots Button tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #da0013;
+  border: 1px solid #da0013;
   color: #ffffff;
   font-weight: bold;
 }
@@ -4970,7 +5002,7 @@ exports[`Storyshots Button variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -4992,6 +5024,7 @@ exports[`Storyshots Button variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -5027,7 +5060,7 @@ exports[`Storyshots Button variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -5049,6 +5082,7 @@ exports[`Storyshots Button variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
 }
 
@@ -5083,7 +5117,7 @@ exports[`Storyshots Button variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -5105,6 +5139,7 @@ exports[`Storyshots Button variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
 }
 
@@ -5379,7 +5414,7 @@ exports[`Storyshots Button with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -5401,6 +5436,7 @@ exports[`Storyshots Button with icons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -5437,7 +5473,7 @@ exports[`Storyshots Button with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -5459,6 +5495,7 @@ exports[`Storyshots Button with icons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -5894,7 +5931,7 @@ exports[`Storyshots CopyButton Default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -5916,6 +5953,7 @@ exports[`Storyshots CopyButton Default 1`] = `
   min-height: 1.6rem;
   padding: 0.3rem 0.5rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
 }
 
@@ -6807,7 +6845,7 @@ exports[`Storyshots IntegrationRow default usage 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -6829,6 +6867,7 @@ exports[`Storyshots IntegrationRow default usage 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
   grid-column: 3 / 4;
   grid-row: 1 / 2;
@@ -7406,7 +7445,7 @@ exports[`Storyshots IntegrationRow shortcut usage 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -7428,6 +7467,7 @@ exports[`Storyshots IntegrationRow shortcut usage 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
   grid-column: 3 / 4;
   grid-row: 1 / 2;
@@ -8038,7 +8078,7 @@ exports[`Storyshots IntegrationRow with inline SVG as logo 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -8060,6 +8100,7 @@ exports[`Storyshots IntegrationRow with inline SVG as logo 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
   grid-column: 3 / 4;
   grid-row: 1 / 2;
@@ -8595,7 +8636,7 @@ exports[`Storyshots LinkButton override/extend styles 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -8617,6 +8658,7 @@ exports[`Storyshots LinkButton override/extend styles 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
   color: #663399;
@@ -9019,7 +9061,7 @@ exports[`Storyshots LinkButton sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -9041,6 +9083,7 @@ exports[`Storyshots LinkButton sizes 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -9076,7 +9119,7 @@ exports[`Storyshots LinkButton sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -9098,6 +9141,7 @@ exports[`Storyshots LinkButton sizes 1`] = `
   min-height: 1.6rem;
   padding: 0.3rem 0.5rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -9133,7 +9177,7 @@ exports[`Storyshots LinkButton sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -9155,6 +9199,7 @@ exports[`Storyshots LinkButton sizes 1`] = `
   min-height: 2rem;
   padding: 0.45rem 0.75rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -9190,7 +9235,7 @@ exports[`Storyshots LinkButton sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -9212,6 +9257,7 @@ exports[`Storyshots LinkButton sizes 1`] = `
   min-height: 3.25rem;
   padding: 0.65rem 1.25rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -9682,7 +9728,7 @@ exports[`Storyshots LinkButton tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -9704,6 +9750,7 @@ exports[`Storyshots LinkButton tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -9739,7 +9786,7 @@ exports[`Storyshots LinkButton tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #78757a;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -9761,6 +9808,7 @@ exports[`Storyshots LinkButton tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #78757a;
+  border: 1px solid #78757a;
   color: #ffffff;
   font-weight: bold;
 }
@@ -9796,7 +9844,7 @@ exports[`Storyshots LinkButton tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #2ca72c;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -9818,6 +9866,7 @@ exports[`Storyshots LinkButton tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #2ca72c;
+  border: 1px solid #2ca72c;
   color: #ffffff;
   font-weight: bold;
 }
@@ -9853,7 +9902,7 @@ exports[`Storyshots LinkButton tones 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #da0013;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -9875,6 +9924,7 @@ exports[`Storyshots LinkButton tones 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #da0013;
+  border: 1px solid #da0013;
   color: #ffffff;
   font-weight: bold;
 }
@@ -10261,7 +10311,7 @@ exports[`Storyshots LinkButton variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -10283,6 +10333,7 @@ exports[`Storyshots LinkButton variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -10318,7 +10369,7 @@ exports[`Storyshots LinkButton variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -10340,6 +10391,7 @@ exports[`Storyshots LinkButton variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
 }
 
@@ -10374,7 +10426,7 @@ exports[`Storyshots LinkButton variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -10396,6 +10448,7 @@ exports[`Storyshots LinkButton variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
 }
 
@@ -10897,7 +10950,7 @@ exports[`Storyshots LinkButton with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -10919,6 +10972,7 @@ exports[`Storyshots LinkButton with icons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -10955,7 +11009,7 @@ exports[`Storyshots LinkButton with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -10977,6 +11031,7 @@ exports[`Storyshots LinkButton with icons 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }
@@ -11654,7 +11709,7 @@ exports[`Storyshots Notification default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -11676,6 +11731,7 @@ exports[`Storyshots Notification default 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
   padding: 0;
   min-height: auto;
@@ -12554,7 +12610,7 @@ exports[`Storyshots PricingCard individual multiplan card 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -12576,6 +12632,7 @@ exports[`Storyshots PricingCard individual multiplan card 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
   font-weight: 400;
 }
@@ -12808,7 +12865,7 @@ exports[`Storyshots PricingCard individual multiplan card 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -12830,6 +12887,7 @@ exports[`Storyshots PricingCard individual multiplan card 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
   font-weight: 800;
   cursor: default;
@@ -14203,7 +14261,7 @@ exports[`Storyshots PricingCard multiplan card 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #2ca72c;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -14225,6 +14283,7 @@ exports[`Storyshots PricingCard multiplan card 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #2ca72c;
+  border: 1px solid #2ca72c;
   color: #ffffff;
   font-weight: bold;
   min-width: 45%;
@@ -15584,7 +15643,7 @@ exports[`Storyshots PricingCard variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -15606,6 +15665,7 @@ exports[`Storyshots PricingCard variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
   font-weight: 400;
 }
@@ -15679,7 +15739,7 @@ exports[`Storyshots PricingCard variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -15701,6 +15761,7 @@ exports[`Storyshots PricingCard variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
   font-weight: 800;
   cursor: default;
@@ -15862,7 +15923,7 @@ exports[`Storyshots PricingCard variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -15884,6 +15945,7 @@ exports[`Storyshots PricingCard variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
   font-weight: 400;
@@ -15958,7 +16020,7 @@ exports[`Storyshots PricingCard variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -15980,6 +16042,7 @@ exports[`Storyshots PricingCard variants 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
   font-weight: 800;
@@ -18159,7 +18222,7 @@ exports[`Storyshots SettingsBlock default usage 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -18181,6 +18244,7 @@ exports[`Storyshots SettingsBlock default usage 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #78757a;
   margin-left: 0.25rem;
 }
@@ -19518,7 +19582,7 @@ exports[`Storyshots SettingsCard custom EditButton 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -19540,6 +19604,7 @@ exports[`Storyshots SettingsCard custom EditButton 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
 }
 
@@ -20246,7 +20311,7 @@ exports[`Storyshots SettingsCard default usage 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -20268,6 +20333,7 @@ exports[`Storyshots SettingsCard default usage 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
 }
 
@@ -20936,7 +21002,7 @@ exports[`Storyshots SettingsCard no secondary conent 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -20958,6 +21024,7 @@ exports[`Storyshots SettingsCard no secondary conent 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #663399;
 }
 
@@ -21772,7 +21839,7 @@ exports[`Storyshots SettingsCard with custom tone 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -21794,6 +21861,7 @@ exports[`Storyshots SettingsCard with custom tone 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: transparent;
+  border: 1px solid transparent;
   color: #da0013;
 }
 
@@ -23178,7 +23246,7 @@ exports[`Storyshots Toast Default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #663399;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -23200,6 +23268,7 @@ exports[`Storyshots Toast Default 1`] = `
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
   background: #663399;
+  border: 1px solid #663399;
   color: #ffffff;
   font-weight: bold;
 }

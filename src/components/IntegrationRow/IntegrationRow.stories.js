@@ -2,7 +2,7 @@ import React from "react"
 
 import { storiesOf } from "@storybook/react"
 import { radios } from "@storybook/addon-knobs"
-
+import { action } from "@storybook/addon-actions"
 import { IntegrationRow } from "./"
 import { StoryUtils } from "../../utils/storybook"
 import NetlifyLogo from "../../assets/NetlifyLogo"
@@ -55,14 +55,14 @@ storiesOf(`IntegrationRow`, module)
         <IntegrationRow
           title="Netlify"
           logoUrl={netlifyLogo}
-          button={{ onClick: () => alert(`onClickEdit()`) }}
+          button={{ onClick: action("onClick") }}
           isConnected={false}
           details={null}
         />
         <IntegrationRow
           title="Netlify"
           logoUrl={netlifyLogo}
-          button={{ onClick: () => alert(`onClickEdit()`) }}
+          button={{ onClick: action("onClick") }}
           isConnected={true}
           detailsVariant={radios(`details variant`, DETAILS_VARIANT, `PRIMARY`)}
           details={[

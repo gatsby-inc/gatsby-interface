@@ -1,5 +1,6 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
+import { action } from "@storybook/addon-actions"
 import { StoryUtils } from "../../utils/storybook"
 import { SettingsBlock } from "./"
 import { Announcement } from "../Announcement"
@@ -85,14 +86,14 @@ storiesOf(`SettingsBlock`, module)
             <IntegrationRow
               title="Contentful"
               logoUrl={contentfulLogo}
-              onClick={() => alert(`onClickEdit()`)}
+              onClick={action("onClick")}
               isConnected={false}
               details={null}
             />
             <IntegrationRow
               title="Netlify"
               logoUrl={netlifyLogo}
-              onClick={() => alert(`onClickEdit()`)}
+              onClick={action("onClick")}
               isConnected={false}
               details={null}
             />
@@ -114,14 +115,14 @@ storiesOf(`SettingsBlock`, module)
             <IntegrationRow
               title="Contentful"
               logoUrl={contentfulLogo}
-              onClick={() => alert(`onClickEdit()`)}
+              onClick={action("onClick")}
               isConnected={false}
               details={null}
             />
             <IntegrationRow
               title="Netlify"
               logoUrl={netlifyLogo}
-              onClick={() => alert(`onClickEdit()`)}
+              onClick={action("onClick")}
               isConnected={false}
               details={null}
             />

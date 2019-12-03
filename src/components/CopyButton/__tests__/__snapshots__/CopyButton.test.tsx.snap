@@ -20,7 +20,7 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #f1defa;
+  border: #635e69;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -42,6 +42,7 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
   min-height: 1.6rem;
   padding: 0.3rem 0.5rem;
   background: transparent;
+  border: 1px solid #f1defa;
   color: #663399;
 }
 
