@@ -5,6 +5,7 @@
 export * from "./components/AnchorButton"
 export * from "./components/Button"
 export * from "./components/LinkButton"
+export * from "./components/Avatar"
 export * from "./components/CopyButton"
 export * from "./components/form-skeletons"
 export * from "./components/DecorativeDots"

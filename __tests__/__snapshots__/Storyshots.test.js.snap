@@ -1834,6 +1834,269 @@ exports[`Storyshots Announcement default usage 1`] = `
 </div>
 `;
 
+exports[`Storyshots Avatar Avatar 1`] = `
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-1 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+}
+
+.emotion-0 {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-2"
+        >
+          <div>
+            <span
+              class="emotion-1"
+              title="A cute kitten"
+            >
+              <img
+                alt="A cute kitten"
+                class="emotion-0"
+                src="https://placekitten.com/200/300"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Avatar AvatarsGroup 1`] = `
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+  border: 2px solid #fff;
+}
+
+.emotion-2 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+  border: 2px solid #fff;
+  margin-left: -4px;
+}
+
+.emotion-5 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+  border: 2px solid #fff;
+  margin-left: -4px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-7"
+        >
+          <div>
+            <div
+              class="emotion-6"
+            >
+              <span
+                class="emotion-1"
+                style="z-index: 3;"
+                title="A cute kitten"
+              >
+                <img
+                  alt="A cute kitten"
+                  class="emotion-0"
+                  src="https://placekitten.com/200/300"
+                />
+              </span>
+              <span
+                class="emotion-2"
+                style="z-index: 2;"
+                title="John Doe"
+              >
+                <span
+                  aria-label="John Doe"
+                >
+                  JD
+                </span>
+              </span>
+              <span
+                class="emotion-2"
+                style="z-index: 1;"
+                title="A random picture of Praha"
+              >
+                <img
+                  alt="A random picture of Praha"
+                  class="emotion-0"
+                  src="https://loremflickr.com/g/320/240/praha"
+                />
+              </span>
+              <span
+                class="emotion-5"
+                title="More users not displayed"
+              >
+                <span
+                  aria-label="More users not displayed"
+                >
+                  +1
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Badge shortcut usage 1`] = `
 .emotion-2 {
   -webkit-align-items: center;
@@ -2275,6 +2538,437 @@ exports[`Storyshots BaseLink default 1`] = `
             >
               Link
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-1 {
+  display: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-1 {
+    background: none;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-0 {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #000000;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.emotion-0:before {
+  content: " ";
+  top: -7px;
+  width: 20px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0:after {
+  content: " ";
+  top: 7px;
+  width: 16px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+@media (max-width:1065px) {
+  .emotion-5 {
+    display: none;
+  }
+}
+
+.emotion-4 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-7"
+        >
+          <div
+            class="emotion-6"
+          >
+            <button
+              aria-expanded=""
+              class="emotion-1"
+            >
+              <div
+                class=" emotion-0"
+              />
+            </button>
+            <nav
+              class="emotion-5"
+            >
+              <ul
+                class="emotion-4"
+              >
+                <button
+                  aria-expanded=""
+                  class="emotion-1"
+                >
+                  <div
+                    class=" emotion-0"
+                  />
+                </button>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots BaseNavigation usage example 1`] = `
+.emotion-11 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-1 {
+  display: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-1 {
+    background: none;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+}
+
+.emotion-2 {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+.emotion-10 {
+  width: 100%;
+}
+
+.emotion-0 {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #000000;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.emotion-0:before {
+  content: " ";
+  top: -7px;
+  width: 20px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0:after {
+  content: " ";
+  top: 7px;
+  width: 16px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+@media (max-width:1065px) {
+  .emotion-9 {
+    display: none;
+  }
+}
+
+.emotion-8 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  color: #000000;
+}
+
+.emotion-5:hover > ul {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.emotion-3 {
+  color: #000000;
+  background: inherit;
+}
+
+.emotion-4 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-11"
+        >
+          <div
+            class="emotion-10"
+          >
+            <button
+              aria-expanded=""
+              class="emotion-1"
+            >
+              <div
+                class=" emotion-0"
+              />
+            </button>
+            <nav
+              class="emotion-9"
+            >
+              <ul
+                class="emotion-8"
+              >
+                <li
+                  class="emotion-5"
+                >
+                  <a
+                    href="/alpha"
+                  >
+                    <span>
+                      Alpha
+                    </span>
+                  </a>
+                  <button
+                    aria-controls="Alpha-dropdown"
+                    aria-expanded="false"
+                    class="emotion-3"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ∨
+                    </span>
+                    <span
+                      class="emotion-2"
+                    >
+                      Alpha Menu
+                    </span>
+                  </button>
+                  <ul
+                    class="emotion-4"
+                    id="Alpha-dropdown"
+                  >
+                    <li>
+                      <a
+                        href="/alpha/delta"
+                      >
+                        Delta
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/alpha/echo"
+                      >
+                        Echo
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="emotion-5"
+                >
+                  <a
+                    href="/bravo"
+                  >
+                    <span>
+                      Bravo
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-5"
+                >
+                  <a
+                    href="/charlie"
+                  >
+                    <span>
+                      Charlie
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -11183,7 +11877,3684 @@ exports[`Storyshots Modal Panel 1`] = `
 </div>
 `;
 
+exports[`Storyshots Navigation default example 1`] = `
+.emotion-29 {
+  padding: 2rem;
+}
+
+.emotion-28 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  display: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-1 {
+    background: none;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+}
+
+.emotion-0 {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #000000;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.emotion-0:before {
+  content: " ";
+  top: -7px;
+  width: 20px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0:after {
+  content: " ";
+  top: 7px;
+  width: 16px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-27 {
+  margin: 0 0 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width:1065px) {
+  .emotion-27 {
+    display: none;
+  }
+}
+
+@media (max-width:1065px) {
+  .emotion-27 {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: rgba(54,32,102,0.975);
+    padding: 5rem 3.5rem 5rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: right;
+  }
+}
+
+.emotion-26 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-26 {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 90rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  color: #000000;
+  padding: 0 0.75rem;
+}
+
+.emotion-3:hover > ul {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.emotion-3:hover > ul {
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-3:hover > ul:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-3 {
+    display: block;
+    color: #ffffff;
+  }
+
+  .emotion-3:hover > ul {
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    background: 0;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-3:hover > ul:after {
+    content: none;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-font-smoothing: antialiased;
+  line-height: calc(3.33rem);
+  position: relative;
+}
+
+.emotion-2 span {
+  position: relative;
+}
+
+.emotion-2.nav-item-active {
+  color: #663399;
+}
+
+.emotion-2.nav-item-active span:after {
+  width: 100%;
+}
+
+.emotion-2 span:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  opacity: 0.2;
+  background: linear-gradient(45deg,#8a4baf,#663399);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-2:hover {
+  opacity: 0.8;
+}
+
+@media (max-width:1065px) {
+  .emotion-2 {
+    color: #ffffff;
+    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: normal;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.75rem;
+  }
+
+  .emotion-2:focus,
+  .emotion-2:hover {
+    color: #ffb238;
+    background: none;
+    opacity: 1;
+  }
+}
+
+.emotion-6 {
+  color: #000000;
+  background: inherit;
+  margin-left: 0.125rem;
+  border: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-9:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-9 {
+    display: inline-block;
+    background: 0;
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-9:after {
+    content: none;
+  }
+}
+
+.emotion-7 a {
+  color: #78757a;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  display: block;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-7 a:hover {
+  color: #232129;
+  background: rgba(255,178,56,0.1);
+}
+
+.emotion-7 a:focus-within {
+  color: #232129;
+  background: rgba(255,178,56,0.1);
+}
+
+@media (max-width:1065px) {
+  .emotion-7 a {
+    color: #ffffff;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    font-size: 0.875rem;
+  }
+
+  .emotion-7 a:hover,
+  .emotion-7 a:focus-within {
+    opacity: 1;
+    color: #ffb238;
+    background: none;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-29"
+        >
+          <div
+            class="emotion-28"
+          >
+            <button
+              aria-expanded=""
+              class="emotion-1"
+            >
+              <div
+                class=" emotion-0"
+              />
+            </button>
+            <nav
+              class="emotion-27"
+            >
+              <ul
+                class="emotion-26"
+              >
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/why-gatsby/"
+                  >
+                    <span>
+                      Why Gatsby?
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/how-it-works/"
+                  >
+                    <span>
+                      How It Works
+                    </span>
+                  </a>
+                  <button
+                    aria-controls="How It Works-dropdown"
+                    aria-expanded="false"
+                    class="emotion-6"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ∨
+                    </span>
+                    <span
+                      class="emotion-5"
+                    >
+                      How It Works Menu
+                    </span>
+                  </button>
+                  <ul
+                    class="emotion-9"
+                    id="How It Works-dropdown"
+                  >
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/how-it-works/bring-data-from-anywhere/"
+                      >
+                        Bring Data From Anywhere
+                      </a>
+                    </li>
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/write-modern-apps/"
+                      >
+                        Write Modern Apps
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/integrations/"
+                  >
+                    <span>
+                      Integrations
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/about-us/"
+                  >
+                    <span>
+                      About Us
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/resources/"
+                  >
+                    <span>
+                      Resources
+                    </span>
+                  </a>
+                  <button
+                    aria-controls="Resources-dropdown"
+                    aria-expanded="false"
+                    class="emotion-6"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ∨
+                    </span>
+                    <span
+                      class="emotion-5"
+                    >
+                      Resources Menu
+                    </span>
+                  </button>
+                  <ul
+                    class="emotion-9"
+                    id="Resources-dropdown"
+                  >
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/resources/gatsby-days/"
+                      >
+                        Gatsby Days
+                      </a>
+                    </li>
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/resources/webinars/"
+                      >
+                        Webinars
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/docs/"
+                  >
+                    <span>
+                      Docs
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/contact-us/"
+                  >
+                    <span>
+                      Contact Us
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Navigation inverted example 1`] = `
+.emotion-28 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  display: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-1 {
+    background: none;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+}
+
+.emotion-27 {
+  margin: 0 0 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width:1065px) {
+  .emotion-27 {
+    display: none;
+  }
+}
+
+@media (max-width:1065px) {
+  .emotion-27 {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: rgba(54,32,102,0.975);
+    padding: 5rem 3.5rem 5rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: right;
+  }
+}
+
+.emotion-26 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-26 {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 90rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.emotion-5 {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-9:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-9 {
+    display: inline-block;
+    background: 0;
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-9:after {
+    content: none;
+  }
+}
+
+.emotion-7 a {
+  color: #78757a;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  display: block;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-7 a:hover {
+  color: #232129;
+  background: rgba(255,178,56,0.1);
+}
+
+.emotion-7 a:focus-within {
+  color: #232129;
+  background: rgba(255,178,56,0.1);
+}
+
+@media (max-width:1065px) {
+  .emotion-7 a {
+    color: #ffffff;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    font-size: 0.875rem;
+  }
+
+  .emotion-7 a:hover,
+  .emotion-7 a:focus-within {
+    opacity: 1;
+    color: #ffb238;
+    background: none;
+  }
+}
+
+.emotion-29 {
+  height: 100vh;
+  background: #362066;
+  padding: 2rem;
+}
+
+.emotion-0 {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #ffffff;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.emotion-0:before {
+  content: " ";
+  top: -7px;
+  width: 20px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #ffffff;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0:after {
+  content: " ";
+  top: 7px;
+  width: 16px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #ffffff;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  color: #ffffff;
+  padding: 0 0.75rem;
+}
+
+.emotion-3:hover > ul {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.emotion-3:hover > ul {
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-3:hover > ul:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-3 {
+    display: block;
+    color: #ffffff;
+  }
+
+  .emotion-3:hover > ul {
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    background: 0;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-3:hover > ul:after {
+    content: none;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-font-smoothing: antialiased;
+  line-height: calc(3.33rem);
+  position: relative;
+}
+
+.emotion-2 span {
+  position: relative;
+}
+
+.emotion-2.nav-item-active {
+  color: #ffb238;
+}
+
+.emotion-2.nav-item-active span:after {
+  width: 100%;
+}
+
+.emotion-2 span:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  opacity: 0.2;
+  background: linear-gradient(45deg,#ffd280,#ffb238);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-2:hover {
+  opacity: 0.8;
+}
+
+@media (max-width:1065px) {
+  .emotion-2 {
+    color: #ffffff;
+    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: normal;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.75rem;
+  }
+
+  .emotion-2:focus,
+  .emotion-2:hover {
+    color: #ffb238;
+    background: none;
+    opacity: 1;
+  }
+}
+
+.emotion-6 {
+  color: #ffffff;
+  background: 0;
+  margin-left: 0.125rem;
+  border: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-29"
+        >
+          <div
+            class="emotion-28"
+          >
+            <button
+              aria-expanded=""
+              class="emotion-1"
+            >
+              <div
+                class=" emotion-0"
+              />
+            </button>
+            <nav
+              class="emotion-27"
+            >
+              <ul
+                class="emotion-26"
+              >
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/why-gatsby/"
+                  >
+                    <span>
+                      Why Gatsby?
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/how-it-works/"
+                  >
+                    <span>
+                      How It Works
+                    </span>
+                  </a>
+                  <button
+                    aria-controls="How It Works-dropdown"
+                    aria-expanded="false"
+                    class="emotion-6"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ∨
+                    </span>
+                    <span
+                      class="emotion-5"
+                    >
+                      How It Works Menu
+                    </span>
+                  </button>
+                  <ul
+                    class="emotion-9"
+                    id="How It Works-dropdown"
+                  >
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/how-it-works/bring-data-from-anywhere/"
+                      >
+                        Bring Data From Anywhere
+                      </a>
+                    </li>
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/write-modern-apps/"
+                      >
+                        Write Modern Apps
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/integrations/"
+                  >
+                    <span>
+                      Integrations
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/about-us/"
+                  >
+                    <span>
+                      About Us
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/resources/"
+                  >
+                    <span>
+                      Resources
+                    </span>
+                  </a>
+                  <button
+                    aria-controls="Resources-dropdown"
+                    aria-expanded="false"
+                    class="emotion-6"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ∨
+                    </span>
+                    <span
+                      class="emotion-5"
+                    >
+                      Resources Menu
+                    </span>
+                  </button>
+                  <ul
+                    class="emotion-9"
+                    id="Resources-dropdown"
+                  >
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/resources/gatsby-days/"
+                      >
+                        Gatsby Days
+                      </a>
+                    </li>
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/resources/webinars/"
+                      >
+                        Webinars
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/docs/"
+                  >
+                    <span>
+                      Docs
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/contact-us/"
+                  >
+                    <span>
+                      Contact Us
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Navigation with item links as children 1`] = `
+.emotion-9 {
+  padding: 2rem;
+}
+
+.emotion-8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  display: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-1 {
+    background: none;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+}
+
+.emotion-0 {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #000000;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.emotion-0:before {
+  content: " ";
+  top: -7px;
+  width: 20px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0:after {
+  content: " ";
+  top: 7px;
+  width: 16px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-7 {
+  margin: 0 0 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width:1065px) {
+  .emotion-7 {
+    display: none;
+  }
+}
+
+@media (max-width:1065px) {
+  .emotion-7 {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: rgba(54,32,102,0.975);
+    padding: 5rem 3.5rem 5rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: right;
+  }
+}
+
+.emotion-6 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-6 {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 90rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  color: #000000;
+  padding: 0 0.75rem;
+}
+
+.emotion-3:hover > ul {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.emotion-3:hover > ul {
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-3:hover > ul:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-3 {
+    display: block;
+    color: #ffffff;
+  }
+
+  .emotion-3:hover > ul {
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    background: 0;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-3:hover > ul:after {
+    content: none;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-font-smoothing: antialiased;
+  line-height: calc(3.33rem);
+  position: relative;
+}
+
+.emotion-2 span {
+  position: relative;
+}
+
+.emotion-2.nav-item-active {
+  color: #663399;
+}
+
+.emotion-2.nav-item-active span:after {
+  width: 100%;
+}
+
+.emotion-2 span:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  opacity: 0.2;
+  background: linear-gradient(45deg,#8a4baf,#663399);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-2:hover {
+  opacity: 0.8;
+}
+
+@media (max-width:1065px) {
+  .emotion-2 {
+    color: #ffffff;
+    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: normal;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.75rem;
+  }
+
+  .emotion-2:focus,
+  .emotion-2:hover {
+    color: #ffb238;
+    background: none;
+    opacity: 1;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-9"
+        >
+          <div
+            class="emotion-8"
+          >
+            <button
+              aria-expanded=""
+              class="emotion-1"
+            >
+              <div
+                class=" emotion-0"
+              />
+            </button>
+            <nav
+              class="emotion-7"
+            >
+              <ul
+                class="emotion-6"
+              >
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/contact/"
+                  >
+                    <span>
+                      Contact
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/about/"
+                  >
+                    <span>
+                      About
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Navigation with item links as props and button as child 1`] = `
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+.emotion-30 {
+  padding: 2rem;
+}
+
+.emotion-29 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  display: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-1 {
+    background: none;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+}
+
+.emotion-0 {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #000000;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.emotion-0:before {
+  content: " ";
+  top: -7px;
+  width: 20px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0:after {
+  content: " ";
+  top: 7px;
+  width: 16px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-28 {
+  margin: 0 0 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width:1065px) {
+  .emotion-28 {
+    display: none;
+  }
+}
+
+@media (max-width:1065px) {
+  .emotion-28 {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: rgba(54,32,102,0.975);
+    padding: 5rem 3.5rem 5rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: right;
+  }
+}
+
+.emotion-27 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-27 {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 90rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  color: #000000;
+  padding: 0 0.75rem;
+}
+
+.emotion-3:hover > ul {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.emotion-3:hover > ul {
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-3:hover > ul:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-3 {
+    display: block;
+    color: #ffffff;
+  }
+
+  .emotion-3:hover > ul {
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    background: 0;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-3:hover > ul:after {
+    content: none;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-font-smoothing: antialiased;
+  line-height: calc(3.33rem);
+  position: relative;
+}
+
+.emotion-2 span {
+  position: relative;
+}
+
+.emotion-2.nav-item-active {
+  color: #663399;
+}
+
+.emotion-2.nav-item-active span:after {
+  width: 100%;
+}
+
+.emotion-2 span:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  opacity: 0.2;
+  background: linear-gradient(45deg,#8a4baf,#663399);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-2:hover {
+  opacity: 0.8;
+}
+
+@media (max-width:1065px) {
+  .emotion-2 {
+    color: #ffffff;
+    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: normal;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.75rem;
+  }
+
+  .emotion-2:focus,
+  .emotion-2:hover {
+    color: #ffb238;
+    background: none;
+    opacity: 1;
+  }
+}
+
+.emotion-6 {
+  color: #000000;
+  background: inherit;
+  margin-left: 0.125rem;
+  border: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-9:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-9 {
+    display: inline-block;
+    background: 0;
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-9:after {
+    content: none;
+  }
+}
+
+.emotion-7 a {
+  color: #78757a;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  display: block;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-7 a:hover {
+  color: #232129;
+  background: rgba(255,178,56,0.1);
+}
+
+.emotion-7 a:focus-within {
+  color: #232129;
+  background: rgba(255,178,56,0.1);
+}
+
+@media (max-width:1065px) {
+  .emotion-7 a {
+    color: #ffffff;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    font-size: 0.875rem;
+  }
+
+  .emotion-7 a:hover,
+  .emotion-7 a:focus-within {
+    opacity: 1;
+    color: #ffb238;
+    background: none;
+  }
+}
+
+.emotion-26 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: #635e69;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
+  transition: background 0.5s,border 0.5s,color 0.5s;
+  line-height: 1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  min-height: 2rem;
+  padding: 0.45rem 0.75rem;
+  background: #663399;
+  border: 1px solid #663399;
+  color: #ffffff;
+  font-weight: bold;
+  background: #663399;
+  border: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: .5rem;
+}
+
+.emotion-26[disabled],
+.emotion-26[disabled]:hover {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-26 svg {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0 0.25rem;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-26:hover:not([disabled]) svg {
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+}
+
+.emotion-26:hover {
+  background: #542c85;
+  border: 1px solid #542c85;
+}
+
+.emotion-26:focus {
+  background: #542c85;
+  border: 0;
+  color: #ffffff;
+}
+
+.emotion-26:hover:not([disabled]) {
+  background: #542c85;
+  border: 0;
+  color: #ffffff;
+}
+
+@media (max-width:1065px) {
+  .emotion-26 {
+    margin-top: .5rem;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-30"
+        >
+          <div
+            class="emotion-29"
+          >
+            <button
+              aria-expanded=""
+              class="emotion-1"
+            >
+              <div
+                class=" emotion-0"
+              />
+            </button>
+            <nav
+              class="emotion-28"
+            >
+              <ul
+                class="emotion-27"
+              >
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/why-gatsby/"
+                  >
+                    <span>
+                      Why Gatsby?
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/how-it-works/"
+                  >
+                    <span>
+                      How It Works
+                    </span>
+                  </a>
+                  <button
+                    aria-controls="How It Works-dropdown"
+                    aria-expanded="false"
+                    class="emotion-6"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ∨
+                    </span>
+                    <span
+                      class="emotion-5"
+                    >
+                      How It Works Menu
+                    </span>
+                  </button>
+                  <ul
+                    class="emotion-9"
+                    id="How It Works-dropdown"
+                  >
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/how-it-works/bring-data-from-anywhere/"
+                      >
+                        Bring Data From Anywhere
+                      </a>
+                    </li>
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/write-modern-apps/"
+                      >
+                        Write Modern Apps
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/integrations/"
+                  >
+                    <span>
+                      Integrations
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/about-us/"
+                  >
+                    <span>
+                      About Us
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/resources/"
+                  >
+                    <span>
+                      Resources
+                    </span>
+                  </a>
+                  <button
+                    aria-controls="Resources-dropdown"
+                    aria-expanded="false"
+                    class="emotion-6"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ∨
+                    </span>
+                    <span
+                      class="emotion-5"
+                    >
+                      Resources Menu
+                    </span>
+                  </button>
+                  <ul
+                    class="emotion-9"
+                    id="Resources-dropdown"
+                  >
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/resources/gatsby-days/"
+                      >
+                        Gatsby Days
+                      </a>
+                    </li>
+                    <li
+                      class="emotion-7"
+                    >
+                      <a
+                        href="/resources/webinars/"
+                      >
+                        Webinars
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/docs/"
+                  >
+                    <span>
+                      Docs
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/contact-us/"
+                  >
+                    <span>
+                      Contact Us
+                    </span>
+                  </a>
+                </li>
+                <a
+                  class="emotion-26"
+                  href="/get-started"
+                >
+                  Get started for free
+                   
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                    />
+                  </svg>
+                </a>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Navigation with item links as props and children 1`] = `
+.emotion-9 {
+  padding: 2rem;
+}
+
+.emotion-8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  display: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-1 {
+    background: none;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+}
+
+.emotion-0 {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #000000;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.emotion-0:before {
+  content: " ";
+  top: -7px;
+  width: 20px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0:after {
+  content: " ";
+  top: 7px;
+  width: 16px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-7 {
+  margin: 0 0 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width:1065px) {
+  .emotion-7 {
+    display: none;
+  }
+}
+
+@media (max-width:1065px) {
+  .emotion-7 {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: rgba(54,32,102,0.975);
+    padding: 5rem 3.5rem 5rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: right;
+  }
+}
+
+.emotion-6 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-6 {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 90rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  color: #000000;
+  padding: 0 0.75rem;
+}
+
+.emotion-3:hover > ul {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.emotion-3:hover > ul {
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-3:hover > ul:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-3 {
+    display: block;
+    color: #ffffff;
+  }
+
+  .emotion-3:hover > ul {
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    background: 0;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-3:hover > ul:after {
+    content: none;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-font-smoothing: antialiased;
+  line-height: calc(3.33rem);
+  position: relative;
+}
+
+.emotion-2 span {
+  position: relative;
+}
+
+.emotion-2.nav-item-active {
+  color: #663399;
+}
+
+.emotion-2.nav-item-active span:after {
+  width: 100%;
+}
+
+.emotion-2 span:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  opacity: 0.2;
+  background: linear-gradient(45deg,#8a4baf,#663399);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-2:hover {
+  opacity: 0.8;
+}
+
+@media (max-width:1065px) {
+  .emotion-2 {
+    color: #ffffff;
+    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: normal;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.75rem;
+  }
+
+  .emotion-2:focus,
+  .emotion-2:hover {
+    color: #ffb238;
+    background: none;
+    opacity: 1;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-9"
+        >
+          <div
+            class="emotion-8"
+          >
+            <button
+              aria-expanded=""
+              class="emotion-1"
+            >
+              <div
+                class=" emotion-0"
+              />
+            </button>
+            <nav
+              class="emotion-7"
+            >
+              <ul
+                class="emotion-6"
+              >
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/about/"
+                  >
+                    <span>
+                      About
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="emotion-3"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/contact/"
+                  >
+                    <span>
+                      Contact
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Navigation with nested item links as children 1`] = `
+.emotion-12 {
+  padding: 2rem;
+}
+
+.emotion-11 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  display: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-1 {
+    background: none;
+    border: 0;
+    display: block;
+    margin-left: auto;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    z-index: 22;
+    cursor: pointer;
+    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  }
+}
+
+.emotion-0 {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #000000;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.emotion-0:before {
+  content: " ";
+  top: -7px;
+  width: 20px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0:after {
+  content: " ";
+  top: 7px;
+  width: 16px;
+  right: 0;
+  border-radius: 2px;
+  height: 3px;
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #000000;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-0.active {
+  background: 0 0;
+}
+
+.emotion-0.active:after {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.active:before {
+  background: #ffffff;
+  top: 0;
+  width: 24px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.active:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.emotion-10 {
+  margin: 0 0 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width:1065px) {
+  .emotion-10 {
+    display: none;
+  }
+}
+
+@media (max-width:1065px) {
+  .emotion-10 {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: rgba(54,32,102,0.975);
+    padding: 5rem 3.5rem 5rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: right;
+  }
+}
+
+.emotion-9 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-9 {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 90rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.emotion-8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  color: #000000;
+  padding: 0 0.75rem;
+}
+
+.emotion-8:hover > ul {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.emotion-8:hover > ul {
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-8:hover > ul:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-8 {
+    display: block;
+    color: #ffffff;
+  }
+
+  .emotion-8:hover > ul {
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    background: 0;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-8:hover > ul:after {
+    content: none;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-font-smoothing: antialiased;
+  line-height: calc(3.33rem);
+  position: relative;
+}
+
+.emotion-2 span {
+  position: relative;
+}
+
+.emotion-2.nav-item-active {
+  color: #663399;
+}
+
+.emotion-2.nav-item-active span:after {
+  width: 100%;
+}
+
+.emotion-2 span:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  opacity: 0.2;
+  background: linear-gradient(45deg,#8a4baf,#663399);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-2:hover {
+  opacity: 0.8;
+}
+
+@media (max-width:1065px) {
+  .emotion-2 {
+    color: #ffffff;
+    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: normal;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.75rem;
+  }
+
+  .emotion-2:focus,
+  .emotion-2:hover {
+    color: #ffb238;
+    background: none;
+    opacity: 1;
+  }
+}
+
+.emotion-4 {
+  color: #000000;
+  background: inherit;
+  margin-left: 0.125rem;
+  border: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-3 {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+.emotion-7 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  left: auto;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 260px;
+  border-radius: 2px;
+}
+
+.emotion-7:after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-7 {
+    display: inline-block;
+    background: 0;
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-7:after {
+    content: none;
+  }
+}
+
+.emotion-5 a {
+  color: #78757a;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  display: block;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-5 a:hover {
+  color: #232129;
+  background: rgba(255,178,56,0.1);
+}
+
+.emotion-5 a:focus-within {
+  color: #232129;
+  background: rgba(255,178,56,0.1);
+}
+
+@media (max-width:1065px) {
+  .emotion-5 a {
+    color: #ffffff;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    font-size: 0.875rem;
+  }
+
+  .emotion-5 a:hover,
+  .emotion-5 a:focus-within {
+    opacity: 1;
+    color: #ffb238;
+    background: none;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-12"
+        >
+          <div
+            class="emotion-11"
+          >
+            <button
+              aria-expanded=""
+              class="emotion-1"
+            >
+              <div
+                class=" emotion-0"
+              />
+            </button>
+            <nav
+              class="emotion-10"
+            >
+              <ul
+                class="emotion-9"
+              >
+                <li
+                  class="emotion-8"
+                >
+                  <a
+                    class="emotion-2"
+                    href="/about/"
+                  >
+                    <span>
+                      About
+                    </span>
+                  </a>
+                  <button
+                    aria-controls="About-dropdown"
+                    aria-expanded="false"
+                    class="emotion-4"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ∨
+                    </span>
+                    <span
+                      class="emotion-3"
+                    >
+                      About Menu
+                    </span>
+                  </button>
+                  <ul
+                    class="emotion-7"
+                    id="About-dropdown"
+                  >
+                    <li
+                      class="emotion-5"
+                    >
+                      <a
+                        href="/contact/"
+                      >
+                        Contact
+                      </a>
+                    </li>
+                    <li
+                      class="emotion-5"
+                    >
+                      <a
+                        href="/faq/"
+                      >
+                        FAQ
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Notification default 1`] = `
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -11921,6 +16292,20 @@ exports[`Storyshots Portal Same destination portal 1`] = `
 `;
 
 exports[`Storyshots PricingCard individual multiplan card 1`] = `
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -13835,6 +18220,20 @@ exports[`Storyshots PricingCard multiplan card 1`] = `
   }
 }
 
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 .emotion-75 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -14918,6 +19317,20 @@ exports[`Storyshots PricingCard multiplan card 1`] = `
 `;
 
 exports[`Storyshots PricingCard variants 1`] = `
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -18157,6 +22570,20 @@ exports[`Storyshots SettingsBlock default usage 1`] = `
   }
 }
 
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 .emotion-21 {
   display: grid;
   justify-items: start;
@@ -19571,6 +23998,20 @@ exports[`Storyshots SettingsCard custom EditButton 1`] = `
   }
 }
 
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 .emotion-10 {
   display: grid;
   justify-items: start;
@@ -19796,6 +24237,20 @@ exports[`Storyshots SettingsCard custom EditButton 1`] = `
 `;
 
 exports[`Storyshots SettingsCard default usage 1`] = `
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -20991,6 +25446,20 @@ exports[`Storyshots SettingsCard no secondary conent 1`] = `
   }
 }
 
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 .emotion-12 {
   display: grid;
   justify-items: start;
@@ -21245,6 +25714,20 @@ exports[`Storyshots SettingsCard no secondary conent 1`] = `
 `;
 
 exports[`Storyshots SettingsCard with custom tone 1`] = `
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -22699,6 +27182,20 @@ exports[`Storyshots TextInput Default 1`] = `
 `;
 
 exports[`Storyshots Toast Default 1`] = `
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);

@@ -7,6 +7,9 @@ export const dimensions = {
   siteHeader: {
     height: `3.75rem`,
   },
+  layout: {
+    width: 90,
+  },
   dropdown: {
     list: {
       width: `250px`,

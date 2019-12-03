@@ -78,6 +78,36 @@ jobs:
       - run:
           name: Publish to NPM
           command: git push --follow-tags origin dev && npm publish --tag next
+  # This job publishes a new stable version
+  release:
+    <<: *defaults
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "7a:12:8a:c3:cf:c8:fe:f0:02:76:20:de:df:89:3d:ad"
+
+      - checkout
+
+      - attach_workspace:
+          at: ~/repo
+
+      - run:
+          name: Configure Git
+          command: |
+            git config user.email aleksei+CircleCI@gatsbyjs.com
+            git config user.name "Circle CI"
+      - run:
+          name: Build package
+          command: yarn build
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Release "next" version
+          command: npm run release -- --no-verify
+      - run:
+          name: Publish to NPM
+          command: git push --follow-tags origin master && npm publish
 
 workflows:
   version: 2
@@ -93,3 +123,12 @@ workflows:
           filters:
             branches:
               only: dev
+  run-release:
+    jobs:
+      - is-green
+      - release:
+          requires:
+            - is-green
+          filters:
+            branches:
+              only: master
