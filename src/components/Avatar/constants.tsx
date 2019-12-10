@@ -4,6 +4,7 @@ import { AvatarSize } from "./types"
 export const DEFAULT_SIZE: AvatarSize = "M"
 
 export const avatarSizeValues: Record<AvatarSize, string> = {
+  XS: "20px",
   S: "24px",
   M: "32px",
   L: "48px",
@@ -11,6 +12,7 @@ export const avatarSizeValues: Record<AvatarSize, string> = {
 }
 
 export const borderSizeValues: Record<AvatarSize, number> = {
+  XS: 0.5,
   S: 1,
   M: 2,
   L: 3,
@@ -18,6 +20,7 @@ export const borderSizeValues: Record<AvatarSize, number> = {
 }
 
 export const placeholderFontSizes: Record<AvatarSize, string> = {
+  XS: fontSizes["4xs"],
   S: fontSizes["2xs"],
   M: fontSizes["xs"],
   L: fontSizes["m"],
