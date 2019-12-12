@@ -78,7 +78,6 @@ export * from "./components/CopyButton"
 
 export { default as colors } from "./theme/colors"
 
-export { palette } from "./utils/presets/colors"
 export { fontFamilies, fontSizes } from "./utils/presets/typography"
 export { spaces } from "./utils/presets/spaces"
 export { breakpoints } from "./utils/presets/breakpoints"
