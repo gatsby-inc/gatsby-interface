@@ -90,6 +90,8 @@ export { default as buttonStyles } from "./theme/styles/button"
 export { default as fontWeights } from "./theme/fontWeights"
 
 export * from "./components/Avatar"
+export * from "./components/BaseAnchor"
+export * from "./components/Chip"
 export * from "./components/icons"
 export * from "./components/form-skeletons"
 export * from "./components/DecorativeDots"
