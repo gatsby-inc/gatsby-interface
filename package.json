@@ -23,7 +23,7 @@
     "build:rollup": "rollup -c",
     "stylelint": "stylelint './src/**/*.js'",
     "format": "prettier-eslint --write",
-    "format:all": "yarn format \"src/**/*.js\"",
+    "format:all": "yarn format \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "eslint -c .eslintrc --max-warnings=0 --fix --color --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
     "lint:all": "yarn lint src",
     "chromatic": "chromatic test",
