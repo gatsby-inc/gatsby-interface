@@ -30445,7 +30445,7 @@ exports[`Storyshots icons All icons 1`] = `
 `;
 
 exports[`Storyshots icons/Single icons BlogIcon 1`] = `
-.emotion-46 {
+.emotion-48 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -30463,7 +30463,7 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
   padding: 20px;
 }
 
-.emotion-45 {
+.emotion-47 {
   margin: 1rem 0;
 }
 
@@ -30510,6 +30510,14 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
   justify-content: space-around;
 }
 
+.emotion-34 {
+  color: var(--theme-ui-colors-gatsby,#663399);
+}
+
+.emotion-38 {
+  color: var(--theme-ui-colors-green-50,#37b635);
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -30517,10 +30525,10 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
     <div>
       <div>
         <div
-          class="emotion-46"
+          class="emotion-48"
         >
           <div
-            class="emotion-45"
+            class="emotion-47"
           >
             <h1>
               &lt;BlogIcon /&gt;
@@ -31061,7 +31069,7 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
               </div>
             </div>
             <h2>
-              Color:
+              Theme color:
             </h2>
             <div
               class="emotion-2"
@@ -31072,7 +31080,7 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
                 <span
                   style="color: rgb(102, 51, 153);"
                 >
-                  #663399
+                  gatsby
                 </span>
               </div>
               <div
@@ -31080,7 +31088,7 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#663399"
+                  class="emotion-34"
                   data-testid="icon-BlogIcon"
                   fill="none"
                   fill-rule="evenodd"
@@ -31122,9 +31130,9 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(255, 178, 56);"
+                  style="color: rgb(55, 182, 53);"
                 >
-                  #ffb238
+                  green.50
                 </span>
               </div>
               <div
@@ -31132,7 +31140,62 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#ffb238"
+                  class="emotion-38"
+                  data-testid="icon-BlogIcon"
+                  fill="none"
+                  fill-rule="evenodd"
+                  height="3em"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="currentColor"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <path
+                    d="M8.49188 11.265L7.43188 15.508L11.6739 14.447L18.0379 8.083L14.8559 4.901L8.49188 11.265Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21.751 4.37097L22.811 5.43097C22.9504 5.57027 23.061 5.73567 23.1364 5.91772C23.2119 6.09978 23.2507 6.29491 23.2507 6.49197C23.2507 6.68904 23.2119 6.88417 23.1364 7.06622C23.061 7.24827 22.9504 7.41367 22.811 7.55297L19.5 10.863"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.038 8.083L21.751 4.371C22.0322 4.0897 22.1901 3.70824 22.1901 3.3105C22.1901 2.91275 22.0322 2.53129 21.751 2.25L20.69 1.189C20.4087 0.90779 20.0272 0.749817 19.6295 0.749817C19.2317 0.749817 18.8502 0.90779 18.569 1.189L14.856 4.9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.75 14.25V21.75C18.75 22.1478 18.592 22.5294 18.3107 22.8107C18.0294 23.092 17.6478 23.25 17.25 23.25H2.25C1.85218 23.25 1.47064 23.092 1.18934 22.8107C0.908035 22.5294 0.75 22.1478 0.75 21.75V6.75C0.75 6.35218 0.908035 5.97064 1.18934 5.68934C1.47064 5.40804 1.85218 5.25 2.25 5.25H9.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h2>
+              Custom colors:
+            </h2>
+            <div
+              class="emotion-2"
+            >
+              <div
+                class="emotion-0"
+              >
+                <span
+                  style="color: rgb(242, 88, 62);"
+                >
+                  #F2583E
+                </span>
+              </div>
+              <div
+                class="emotion-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  color="#F2583E"
                   data-testid="icon-BlogIcon"
                   fill="none"
                   fill-rule="evenodd"
@@ -31174,9 +31237,9 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(232, 153, 206);"
+                  style="color: rgb(33, 190, 222);"
                 >
-                  #e899ce
+                  #21BEDE
                 </span>
               </div>
               <div
@@ -31184,59 +31247,7 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#e899ce"
-                  data-testid="icon-BlogIcon"
-                  fill="none"
-                  fill-rule="evenodd"
-                  height="3em"
-                  preserveAspectRatio="xMidYMid meet"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  style="vertical-align: middle;"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                >
-                  <path
-                    d="M8.49188 11.265L7.43188 15.508L11.6739 14.447L18.0379 8.083L14.8559 4.901L8.49188 11.265Z"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M21.751 4.37097L22.811 5.43097C22.9504 5.57027 23.061 5.73567 23.1364 5.91772C23.2119 6.09978 23.2507 6.29491 23.2507 6.49197C23.2507 6.68904 23.2119 6.88417 23.1364 7.06622C23.061 7.24827 22.9504 7.41367 22.811 7.55297L19.5 10.863"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M18.038 8.083L21.751 4.371C22.0322 4.0897 22.1901 3.70824 22.1901 3.3105C22.1901 2.91275 22.0322 2.53129 21.751 2.25L20.69 1.189C20.4087 0.90779 20.0272 0.749817 19.6295 0.749817C19.2317 0.749817 18.8502 0.90779 18.569 1.189L14.856 4.9"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M18.75 14.25V21.75C18.75 22.1478 18.592 22.5294 18.3107 22.8107C18.0294 23.092 17.6478 23.25 17.25 23.25H2.25C1.85218 23.25 1.47064 23.092 1.18934 22.8107C0.908035 22.5294 0.75 22.1478 0.75 21.75V6.75C0.75 6.35218 0.908035 5.97064 1.18934 5.68934C1.47064 5.40804 1.85218 5.25 2.25 5.25H9.75"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              <div
-                class="emotion-0"
-              >
-                <span
-                  style="color: rgb(184, 0, 0);"
-                >
-                  #b80000
-                </span>
-              </div>
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  aria-hidden="true"
-                  color="#b80000"
+                  color="#21BEDE"
                   data-testid="icon-BlogIcon"
                   fill="none"
                   fill-rule="evenodd"
@@ -31321,7 +31332,7 @@ exports[`Storyshots icons/Single icons BlogIcon 1`] = `
 `;
 
 exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
-.emotion-46 {
+.emotion-48 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -31339,7 +31350,7 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
   padding: 20px;
 }
 
-.emotion-45 {
+.emotion-47 {
   margin: 1rem 0;
 }
 
@@ -31386,6 +31397,14 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
   justify-content: space-around;
 }
 
+.emotion-34 {
+  color: var(--theme-ui-colors-gatsby,#663399);
+}
+
+.emotion-38 {
+  color: var(--theme-ui-colors-green-50,#37b635);
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -31393,10 +31412,10 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
     <div>
       <div>
         <div
-          class="emotion-46"
+          class="emotion-48"
         >
           <div
-            class="emotion-45"
+            class="emotion-47"
           >
             <h1>
               &lt;CheckCircleIcon /&gt;
@@ -31904,7 +31923,7 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
               </div>
             </div>
             <h2>
-              Color:
+              Theme color:
             </h2>
             <div
               class="emotion-2"
@@ -31915,7 +31934,7 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
                 <span
                   style="color: rgb(102, 51, 153);"
                 >
-                  #663399
+                  gatsby
                 </span>
               </div>
               <div
@@ -31923,7 +31942,7 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#663399"
+                  class="emotion-34"
                   data-testid="icon-CheckCircleIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -31962,9 +31981,9 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(255, 178, 56);"
+                  style="color: rgb(55, 182, 53);"
                 >
-                  #ffb238
+                  green.50
                 </span>
               </div>
               <div
@@ -31972,7 +31991,59 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#ffb238"
+                  class="emotion-38"
+                  data-testid="icon-CheckCircleIcon"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  height="3em"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="none"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                  />
+                  <path
+                    d="M9.87727 15.7413L7.38952 12.3449C7.1394 11.983 7.20585 11.4901 7.54289 11.2073L7.54289 11.2073C7.87994 10.9245 8.37685 10.9446 8.6899 11.2538L11.6026 14.2935C12.0767 14.7618 12.0453 15.5364 11.5349 15.9647L11.5349 15.9647C11.0244 16.3931 10.2561 16.2895 9.87727 15.7413Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M10.0811 15.9563C9.56249 15.5212 9.51156 14.7414 9.96912 14.2425L15.748 7.94176C16.0414 7.6218 16.5348 7.58958 16.8674 7.86865L16.8674 7.86865C17.2 8.14773 17.2539 8.63917 16.9898 8.98374L11.7882 15.7689C11.3764 16.3062 10.5996 16.3914 10.0811 15.9563L10.0811 15.9563Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M10.2123 12.8631C10.5034 13.2125 10.7169 13.4454 11.0856 13.0378C11.4544 12.6302 10.9692 14.0664 10.9692 14.0664L9.76593 13.6782L10.2123 12.8631Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h2>
+              Custom colors:
+            </h2>
+            <div
+              class="emotion-2"
+            >
+              <div
+                class="emotion-0"
+              >
+                <span
+                  style="color: rgb(242, 88, 62);"
+                >
+                  #F2583E
+                </span>
+              </div>
+              <div
+                class="emotion-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  color="#F2583E"
                   data-testid="icon-CheckCircleIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -32011,9 +32082,9 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(232, 153, 206);"
+                  style="color: rgb(33, 190, 222);"
                 >
-                  #e899ce
+                  #21BEDE
                 </span>
               </div>
               <div
@@ -32021,56 +32092,7 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#e899ce"
-                  data-testid="icon-CheckCircleIcon"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  height="3em"
-                  preserveAspectRatio="xMidYMid meet"
-                  stroke="none"
-                  stroke-width="1"
-                  style="vertical-align: middle;"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                  />
-                  <path
-                    d="M9.87727 15.7413L7.38952 12.3449C7.1394 11.983 7.20585 11.4901 7.54289 11.2073L7.54289 11.2073C7.87994 10.9245 8.37685 10.9446 8.6899 11.2538L11.6026 14.2935C12.0767 14.7618 12.0453 15.5364 11.5349 15.9647L11.5349 15.9647C11.0244 16.3931 10.2561 16.2895 9.87727 15.7413Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M10.0811 15.9563C9.56249 15.5212 9.51156 14.7414 9.96912 14.2425L15.748 7.94176C16.0414 7.6218 16.5348 7.58958 16.8674 7.86865L16.8674 7.86865C17.2 8.14773 17.2539 8.63917 16.9898 8.98374L11.7882 15.7689C11.3764 16.3062 10.5996 16.3914 10.0811 15.9563L10.0811 15.9563Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M10.2123 12.8631C10.5034 13.2125 10.7169 13.4454 11.0856 13.0378C11.4544 12.6302 10.9692 14.0664 10.9692 14.0664L9.76593 13.6782L10.2123 12.8631Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              <div
-                class="emotion-0"
-              >
-                <span
-                  style="color: rgb(184, 0, 0);"
-                >
-                  #b80000
-                </span>
-              </div>
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  aria-hidden="true"
-                  color="#b80000"
+                  color="#21BEDE"
                   data-testid="icon-CheckCircleIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -32149,7 +32171,7 @@ exports[`Storyshots icons/Single icons CheckCircleIcon 1`] = `
 `;
 
 exports[`Storyshots icons/Single icons CheckIcon 1`] = `
-.emotion-46 {
+.emotion-48 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -32167,7 +32189,7 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
   padding: 20px;
 }
 
-.emotion-45 {
+.emotion-47 {
   margin: 1rem 0;
 }
 
@@ -32214,6 +32236,14 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
   justify-content: space-around;
 }
 
+.emotion-34 {
+  color: var(--theme-ui-colors-gatsby,#663399);
+}
+
+.emotion-38 {
+  color: var(--theme-ui-colors-green-50,#37b635);
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -32221,10 +32251,10 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
     <div>
       <div>
         <div
-          class="emotion-46"
+          class="emotion-48"
         >
           <div
-            class="emotion-45"
+            class="emotion-47"
           >
             <h1>
               &lt;CheckIcon /&gt;
@@ -32644,7 +32674,7 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
               </div>
             </div>
             <h2>
-              Color:
+              Theme color:
             </h2>
             <div
               class="emotion-2"
@@ -32655,7 +32685,7 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
                 <span
                   style="color: rgb(102, 51, 153);"
                 >
-                  #663399
+                  gatsby
                 </span>
               </div>
               <div
@@ -32663,7 +32693,7 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#663399"
+                  class="emotion-34"
                   data-testid="icon-CheckIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -32694,9 +32724,9 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(255, 178, 56);"
+                  style="color: rgb(55, 182, 53);"
                 >
-                  #ffb238
+                  green.50
                 </span>
               </div>
               <div
@@ -32704,7 +32734,51 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#ffb238"
+                  class="emotion-38"
+                  data-testid="icon-CheckIcon"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  height="3em"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="none"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <path
+                    d="M9.3 16.7l-3.1-4.3A1 1 0 0 1 7.8 11l3.7 3.9c.6.6.6 1.6 0 2.1-.7.5-1.7.4-2.2-.3z"
+                  />
+                  <path
+                    d="M9.6 17c-.7-.6-.7-1.5-.2-2.2l7.3-8a1 1 0 0 1 1.6 1.3l-6.6 8.6c-.5.7-1.5.8-2.1.3z"
+                  />
+                  <path
+                    d="M9.7 13c.4.5.7.8 1.1.3.5-.5-.1 1.3-.1 1.3l-1.5-.5.5-1z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h2>
+              Custom colors:
+            </h2>
+            <div
+              class="emotion-2"
+            >
+              <div
+                class="emotion-0"
+              >
+                <span
+                  style="color: rgb(242, 88, 62);"
+                >
+                  #F2583E
+                </span>
+              </div>
+              <div
+                class="emotion-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  color="#F2583E"
                   data-testid="icon-CheckIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -32735,9 +32809,9 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(232, 153, 206);"
+                  style="color: rgb(33, 190, 222);"
                 >
-                  #e899ce
+                  #21BEDE
                 </span>
               </div>
               <div
@@ -32745,48 +32819,7 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#e899ce"
-                  data-testid="icon-CheckIcon"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  height="3em"
-                  preserveAspectRatio="xMidYMid meet"
-                  stroke="none"
-                  stroke-width="1"
-                  style="vertical-align: middle;"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                >
-                  <path
-                    d="M9.3 16.7l-3.1-4.3A1 1 0 0 1 7.8 11l3.7 3.9c.6.6.6 1.6 0 2.1-.7.5-1.7.4-2.2-.3z"
-                  />
-                  <path
-                    d="M9.6 17c-.7-.6-.7-1.5-.2-2.2l7.3-8a1 1 0 0 1 1.6 1.3l-6.6 8.6c-.5.7-1.5.8-2.1.3z"
-                  />
-                  <path
-                    d="M9.7 13c.4.5.7.8 1.1.3.5-.5-.1 1.3-.1 1.3l-1.5-.5.5-1z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              <div
-                class="emotion-0"
-              >
-                <span
-                  style="color: rgb(184, 0, 0);"
-                >
-                  #b80000
-                </span>
-              </div>
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  aria-hidden="true"
-                  color="#b80000"
+                  color="#21BEDE"
                   data-testid="icon-CheckIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -32849,7 +32882,7 @@ exports[`Storyshots icons/Single icons CheckIcon 1`] = `
 `;
 
 exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
-.emotion-46 {
+.emotion-48 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -32867,7 +32900,7 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
   padding: 20px;
 }
 
-.emotion-45 {
+.emotion-47 {
   margin: 1rem 0;
 }
 
@@ -32914,6 +32947,14 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
   justify-content: space-around;
 }
 
+.emotion-34 {
+  color: var(--theme-ui-colors-gatsby,#663399);
+}
+
+.emotion-38 {
+  color: var(--theme-ui-colors-green-50,#37b635);
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -32921,10 +32962,10 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
     <div>
       <div>
         <div
-          class="emotion-46"
+          class="emotion-48"
         >
           <div
-            class="emotion-45"
+            class="emotion-47"
           >
             <h1>
               &lt;CloseCircleIcon /&gt;
@@ -33355,7 +33396,7 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
               </div>
             </div>
             <h2>
-              Color:
+              Theme color:
             </h2>
             <div
               class="emotion-2"
@@ -33366,7 +33407,7 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
                 <span
                   style="color: rgb(102, 51, 153);"
                 >
-                  #663399
+                  gatsby
                 </span>
               </div>
               <div
@@ -33374,7 +33415,7 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#663399"
+                  class="emotion-34"
                   data-testid="icon-CloseCircleIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -33406,9 +33447,9 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(255, 178, 56);"
+                  style="color: rgb(55, 182, 53);"
                 >
-                  #ffb238
+                  green.50
                 </span>
               </div>
               <div
@@ -33416,7 +33457,52 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#ffb238"
+                  class="emotion-38"
+                  data-testid="icon-CloseCircleIcon"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  height="3em"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="none"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    fill="currentColor"
+                    r="10"
+                  />
+                  <path
+                    d="M16.6666 8.27331L15.7266 7.33331L12 11.06L8.27331 7.33331L7.33331 8.27331L11.06 12L7.33331 15.7266L8.27331 16.6666L12 12.94L15.7266 16.6666L16.6666 15.7266L12.94 12L16.6666 8.27331Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h2>
+              Custom colors:
+            </h2>
+            <div
+              class="emotion-2"
+            >
+              <div
+                class="emotion-0"
+              >
+                <span
+                  style="color: rgb(242, 88, 62);"
+                >
+                  #F2583E
+                </span>
+              </div>
+              <div
+                class="emotion-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  color="#F2583E"
                   data-testid="icon-CloseCircleIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -33448,9 +33534,9 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(232, 153, 206);"
+                  style="color: rgb(33, 190, 222);"
                 >
-                  #e899ce
+                  #21BEDE
                 </span>
               </div>
               <div
@@ -33458,49 +33544,7 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#e899ce"
-                  data-testid="icon-CloseCircleIcon"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  height="3em"
-                  preserveAspectRatio="xMidYMid meet"
-                  stroke="none"
-                  stroke-width="1"
-                  style="vertical-align: middle;"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    fill="currentColor"
-                    r="10"
-                  />
-                  <path
-                    d="M16.6666 8.27331L15.7266 7.33331L12 11.06L8.27331 7.33331L7.33331 8.27331L11.06 12L7.33331 15.7266L8.27331 16.6666L12 12.94L15.7266 16.6666L16.6666 15.7266L12.94 12L16.6666 8.27331Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              <div
-                class="emotion-0"
-              >
-                <span
-                  style="color: rgb(184, 0, 0);"
-                >
-                  #b80000
-                </span>
-              </div>
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  aria-hidden="true"
-                  color="#b80000"
+                  color="#21BEDE"
                   data-testid="icon-CloseCircleIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -33565,7 +33609,7 @@ exports[`Storyshots icons/Single icons CloseCircleIcon 1`] = `
 `;
 
 exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
-.emotion-46 {
+.emotion-48 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -33583,7 +33627,7 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
   padding: 20px;
 }
 
-.emotion-45 {
+.emotion-47 {
   margin: 1rem 0;
 }
 
@@ -33630,6 +33674,14 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
   justify-content: space-around;
 }
 
+.emotion-34 {
+  color: var(--theme-ui-colors-gatsby,#663399);
+}
+
+.emotion-38 {
+  color: var(--theme-ui-colors-green-50,#37b635);
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -33637,10 +33689,10 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
     <div>
       <div>
         <div
-          class="emotion-46"
+          class="emotion-48"
         >
           <div
-            class="emotion-45"
+            class="emotion-47"
           >
             <h1>
               &lt;EcommerceIcon /&gt;
@@ -34291,7 +34343,7 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
               </div>
             </div>
             <h2>
-              Color:
+              Theme color:
             </h2>
             <div
               class="emotion-2"
@@ -34302,7 +34354,7 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
                 <span
                   style="color: rgb(102, 51, 153);"
                 >
-                  #663399
+                  gatsby
                 </span>
               </div>
               <div
@@ -34310,7 +34362,7 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#663399"
+                  class="emotion-34"
                   data-testid="icon-EcommerceIcon"
                   fill="none"
                   fill-rule="evenodd"
@@ -34362,9 +34414,9 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(255, 178, 56);"
+                  style="color: rgb(55, 182, 53);"
                 >
-                  #ffb238
+                  green.50
                 </span>
               </div>
               <div
@@ -34372,7 +34424,72 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#ffb238"
+                  class="emotion-38"
+                  data-testid="icon-EcommerceIcon"
+                  fill="none"
+                  fill-rule="evenodd"
+                  height="3em"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="currentColor"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <path
+                    d="M3.75 5.25001C3.74961 4.96756 3.80495 4.6878 3.91286 4.42677C4.02076 4.16574 4.17912 3.92857 4.37884 3.72885C4.57857 3.52912 4.81574 3.37077 5.07677 3.26286C5.33779 3.15496 5.61755 3.09961 5.9 3.10001"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M0.75 4.687C0.75 3.64284 1.16479 2.64145 1.90312 1.90312C2.64145 1.16479 3.64284 0.75 4.687 0.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.5001 16.5H7.6731C7.39125 16.5008 7.11717 16.4077 6.89422 16.2353C6.67127 16.0628 6.51217 15.821 6.4421 15.548L4.5421 9.061C4.49636 8.87508 4.49359 8.68119 4.534 8.49405C4.57441 8.3069 4.65694 8.13143 4.77532 7.98095C4.89369 7.83047 5.04481 7.70895 5.21718 7.62561C5.38955 7.54228 5.57864 7.49932 5.7701 7.5H18.9801C19.1719 7.49866 19.3614 7.54116 19.5343 7.62424C19.7071 7.70732 19.8587 7.82878 19.9775 7.97937C20.0962 8.12996 20.179 8.30569 20.2195 8.49314C20.26 8.68059 20.2571 8.87482 20.2111 9.061L19.9001 10.116"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16.4999 7.5L15.6709 3.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 7.5L9.828 3.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.135 23.25L23.235 22.128C23.301 21.4017 23.1001 20.6762 22.67 20.0873C22.2399 19.4983 21.6099 19.0862 20.898 18.928L16.726 18V12C16.726 11.6022 16.5679 11.2206 16.2866 10.9393C16.0053 10.658 15.6238 10.5 15.226 10.5C14.8282 10.5 14.4466 10.658 14.1653 10.9393C13.884 11.2206 13.726 11.6022 13.726 12V21.75L12.026 20.472C11.731 20.2504 11.3659 20.1428 10.9979 20.1688C10.6298 20.1949 10.2836 20.3528 10.0227 20.6137C9.7618 20.8746 9.60383 21.2209 9.5778 21.5889C9.55176 21.9569 9.65942 22.322 9.88098 22.617L10.355 23.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h2>
+              Custom colors:
+            </h2>
+            <div
+              class="emotion-2"
+            >
+              <div
+                class="emotion-0"
+              >
+                <span
+                  style="color: rgb(242, 88, 62);"
+                >
+                  #F2583E
+                </span>
+              </div>
+              <div
+                class="emotion-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  color="#F2583E"
                   data-testid="icon-EcommerceIcon"
                   fill="none"
                   fill-rule="evenodd"
@@ -34424,9 +34541,9 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(232, 153, 206);"
+                  style="color: rgb(33, 190, 222);"
                 >
-                  #e899ce
+                  #21BEDE
                 </span>
               </div>
               <div
@@ -34434,69 +34551,7 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#e899ce"
-                  data-testid="icon-EcommerceIcon"
-                  fill="none"
-                  fill-rule="evenodd"
-                  height="3em"
-                  preserveAspectRatio="xMidYMid meet"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  style="vertical-align: middle;"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                >
-                  <path
-                    d="M3.75 5.25001C3.74961 4.96756 3.80495 4.6878 3.91286 4.42677C4.02076 4.16574 4.17912 3.92857 4.37884 3.72885C4.57857 3.52912 4.81574 3.37077 5.07677 3.26286C5.33779 3.15496 5.61755 3.09961 5.9 3.10001"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M0.75 4.687C0.75 3.64284 1.16479 2.64145 1.90312 1.90312C2.64145 1.16479 3.64284 0.75 4.687 0.75"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.5001 16.5H7.6731C7.39125 16.5008 7.11717 16.4077 6.89422 16.2353C6.67127 16.0628 6.51217 15.821 6.4421 15.548L4.5421 9.061C4.49636 8.87508 4.49359 8.68119 4.534 8.49405C4.57441 8.3069 4.65694 8.13143 4.77532 7.98095C4.89369 7.83047 5.04481 7.70895 5.21718 7.62561C5.38955 7.54228 5.57864 7.49932 5.7701 7.5H18.9801C19.1719 7.49866 19.3614 7.54116 19.5343 7.62424C19.7071 7.70732 19.8587 7.82878 19.9775 7.97937C20.0962 8.12996 20.179 8.30569 20.2195 8.49314C20.26 8.68059 20.2571 8.87482 20.2111 9.061L19.9001 10.116"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M16.4999 7.5L15.6709 3.75"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M9 7.5L9.828 3.75"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M23.135 23.25L23.235 22.128C23.301 21.4017 23.1001 20.6762 22.67 20.0873C22.2399 19.4983 21.6099 19.0862 20.898 18.928L16.726 18V12C16.726 11.6022 16.5679 11.2206 16.2866 10.9393C16.0053 10.658 15.6238 10.5 15.226 10.5C14.8282 10.5 14.4466 10.658 14.1653 10.9393C13.884 11.2206 13.726 11.6022 13.726 12V21.75L12.026 20.472C11.731 20.2504 11.3659 20.1428 10.9979 20.1688C10.6298 20.1949 10.2836 20.3528 10.0227 20.6137C9.7618 20.8746 9.60383 21.2209 9.5778 21.5889C9.55176 21.9569 9.65942 22.322 9.88098 22.617L10.355 23.25"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              <div
-                class="emotion-0"
-              >
-                <span
-                  style="color: rgb(184, 0, 0);"
-                >
-                  #b80000
-                </span>
-              </div>
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  aria-hidden="true"
-                  color="#b80000"
+                  color="#21BEDE"
                   data-testid="icon-EcommerceIcon"
                   fill="none"
                   fill-rule="evenodd"
@@ -34601,7 +34656,7 @@ exports[`Storyshots icons/Single icons EcommerceIcon 1`] = `
 `;
 
 exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
-.emotion-46 {
+.emotion-48 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -34619,7 +34674,7 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
   padding: 20px;
 }
 
-.emotion-45 {
+.emotion-47 {
   margin: 1rem 0;
 }
 
@@ -34666,6 +34721,14 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
   justify-content: space-around;
 }
 
+.emotion-34 {
+  color: var(--theme-ui-colors-gatsby,#663399);
+}
+
+.emotion-38 {
+  color: var(--theme-ui-colors-green-50,#37b635);
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -34673,10 +34736,10 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
     <div>
       <div>
         <div
-          class="emotion-46"
+          class="emotion-48"
         >
           <div
-            class="emotion-45"
+            class="emotion-47"
           >
             <h1>
               &lt;EllipsisIcon /&gt;
@@ -35382,7 +35445,7 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
               </div>
             </div>
             <h2>
-              Color:
+              Theme color:
             </h2>
             <div
               class="emotion-2"
@@ -35393,7 +35456,7 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
                 <span
                   style="color: rgb(102, 51, 153);"
                 >
-                  #663399
+                  gatsby
                 </span>
               </div>
               <div
@@ -35401,7 +35464,7 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#663399"
+                  class="emotion-34"
                   data-testid="icon-EllipsisIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -35458,9 +35521,9 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(255, 178, 56);"
+                  style="color: rgb(55, 182, 53);"
                 >
-                  #ffb238
+                  green.50
                 </span>
               </div>
               <div
@@ -35468,7 +35531,77 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#ffb238"
+                  class="emotion-38"
+                  data-testid="icon-EllipsisIcon"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  height="3em"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="none"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <filter
+                    height="100%"
+                    id="EllipsisIcon__filter"
+                    width="100%"
+                    x="0"
+                    y="0"
+                  >
+                    <fecomponenttransfer>
+                      <fefunca
+                        slope="0.1"
+                        type="linear"
+                      />
+                    </fecomponenttransfer>
+                  </filter>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    style="filter: url(#EllipsisIcon__filter);"
+                  />
+                  <circle
+                    cx="6.5"
+                    cy="12"
+                    r="2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="2"
+                  />
+                  <circle
+                    cx="17.5"
+                    cy="12"
+                    r="2"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h2>
+              Custom colors:
+            </h2>
+            <div
+              class="emotion-2"
+            >
+              <div
+                class="emotion-0"
+              >
+                <span
+                  style="color: rgb(242, 88, 62);"
+                >
+                  #F2583E
+                </span>
+              </div>
+              <div
+                class="emotion-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  color="#F2583E"
                   data-testid="icon-EllipsisIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -35525,9 +35658,9 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(232, 153, 206);"
+                  style="color: rgb(33, 190, 222);"
                 >
-                  #e899ce
+                  #21BEDE
                 </span>
               </div>
               <div
@@ -35535,74 +35668,7 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#e899ce"
-                  data-testid="icon-EllipsisIcon"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  height="3em"
-                  preserveAspectRatio="xMidYMid meet"
-                  stroke="none"
-                  stroke-width="1"
-                  style="vertical-align: middle;"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                >
-                  <filter
-                    height="100%"
-                    id="EllipsisIcon__filter"
-                    width="100%"
-                    x="0"
-                    y="0"
-                  >
-                    <fecomponenttransfer>
-                      <fefunca
-                        slope="0.1"
-                        type="linear"
-                      />
-                    </fecomponenttransfer>
-                  </filter>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    style="filter: url(#EllipsisIcon__filter);"
-                  />
-                  <circle
-                    cx="6.5"
-                    cy="12"
-                    r="2"
-                  />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="2"
-                  />
-                  <circle
-                    cx="17.5"
-                    cy="12"
-                    r="2"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              <div
-                class="emotion-0"
-              >
-                <span
-                  style="color: rgb(184, 0, 0);"
-                >
-                  #b80000
-                </span>
-              </div>
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  aria-hidden="true"
-                  color="#b80000"
+                  color="#21BEDE"
                   data-testid="icon-EllipsisIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -35717,7 +35783,7 @@ exports[`Storyshots icons/Single icons EllipsisIcon 1`] = `
 `;
 
 exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
-.emotion-46 {
+.emotion-48 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -35735,7 +35801,7 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
   padding: 20px;
 }
 
-.emotion-45 {
+.emotion-47 {
   margin: 1rem 0;
 }
 
@@ -35782,6 +35848,14 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
   justify-content: space-around;
 }
 
+.emotion-34 {
+  color: var(--theme-ui-colors-gatsby,#663399);
+}
+
+.emotion-38 {
+  color: var(--theme-ui-colors-green-50,#37b635);
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -35789,10 +35863,10 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
     <div>
       <div>
         <div
-          class="emotion-46"
+          class="emotion-48"
         >
           <div
-            class="emotion-45"
+            class="emotion-47"
           >
             <h1>
               &lt;InProgressIcon /&gt;
@@ -37268,7 +37342,7 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
               </div>
             </div>
             <h2>
-              Color:
+              Theme color:
             </h2>
             <div
               class="emotion-2"
@@ -37279,7 +37353,7 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
                 <span
                   style="color: rgb(102, 51, 153);"
                 >
-                  #663399
+                  gatsby
                 </span>
               </div>
               <div
@@ -37287,7 +37361,7 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#663399"
+                  class="emotion-34"
                   data-testid="icon-InProgressIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -37414,9 +37488,9 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(255, 178, 56);"
+                  style="color: rgb(55, 182, 53);"
                 >
-                  #ffb238
+                  green.50
                 </span>
               </div>
               <div
@@ -37424,7 +37498,147 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#ffb238"
+                  class="emotion-38"
+                  data-testid="icon-InProgressIcon"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  height="3em"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="none"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <mask
+                    height="20"
+                    id="InProgressIcon__mask--0"
+                    mask-type="alpha"
+                    maskUnits="userSpaceOnUse"
+                    width="20"
+                    x="2"
+                    y="2"
+                  >
+                    <mask
+                      height="10"
+                      id="InProgressIcon__mask--1"
+                      maskUnits="userSpaceOnUse"
+                      width="20"
+                      x="2"
+                      y="12"
+                    >
+                      <path
+                        d="M12 22C17.5229 22 22 17.5229 22 12L2.00003 12C2.00003 17.5229 6.47718 22 12 22Z"
+                        fill="#232129"
+                      />
+                    </mask>
+                    <g
+                      mask="url(#InProgressIcon__mask--1)"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M11.9996 22C17.5224 22 21.9995 17.5228 21.9995 12C21.9995 6.47714 17.5224 2 11.9996 2C6.47672 2 1.99957 6.47714 1.99957 12C1.99957 17.5228 6.47672 22 11.9996 22ZM11.9994 19.9999C16.4177 19.9999 19.9994 16.4182 19.9994 11.9999C19.9994 7.58166 16.4177 3.99994 11.9994 3.99994C7.58111 3.99994 3.99939 7.58166 3.99939 11.9999C3.99939 16.4182 7.58111 19.9999 11.9994 19.9999Z"
+                        fill="#2DE3DA"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <mask
+                      height="20"
+                      id="InProgressIcon__mask--2"
+                      maskUnits="userSpaceOnUse"
+                      width="20"
+                      x="2"
+                      y="2"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M12 22C17.5228 22 22 17.5229 22 12C22 6.47718 17.5228 2.00003 12 2.00003C6.47714 2.00003 2 6.47718 2 12C2 17.5229 6.47714 22 12 22ZM11.9998 20C16.4181 20 19.9998 16.4182 19.9998 12C19.9998 7.58169 16.4181 3.99997 11.9998 3.99997C7.58154 3.99997 3.99982 7.58169 3.99982 12C3.99982 16.4182 7.58154 20 11.9998 20Z"
+                        fill="#2DE3DA"
+                        fill-rule="evenodd"
+                      />
+                    </mask>
+                    <g
+                      mask="url(#InProgressIcon__mask--2)"
+                    >
+                      <path
+                        d="M12 2.00003C6.47714 2.00003 2 6.47718 2 12L22 12C22 6.47718 17.5228 2.00003 12 2.00003Z"
+                        fill="url(#InProgressIcon__linear)"
+                      />
+                    </g>
+                  </mask>
+                  <g
+                    mask="url(#InProgressIcon__mask--0)"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      fill="currentColor"
+                      r="9.99998"
+                      style="filter: url(#InProgressIcon__filter);"
+                    />
+                  </g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    fill="currentColor"
+                    r="4"
+                  />
+                  <defs>
+                    <lineargradient
+                      gradientUnits="userSpaceOnUse"
+                      id="InProgressIcon__linear"
+                      x1="5.74999"
+                      x2="18.25"
+                      y1="12"
+                      y2="12"
+                    >
+                      <stop
+                        stop-color="#663399"
+                        stop-opacity="0"
+                      />
+                      <stop
+                        offset="1"
+                      />
+                    </lineargradient>
+                    <filter
+                      height="100%"
+                      id="InProgressIcon__filter"
+                      width="100%"
+                      x="0"
+                      y="0"
+                    >
+                      <fecomponenttransfer>
+                        <fefunca
+                          slope="0.3"
+                          type="linear"
+                        />
+                      </fecomponenttransfer>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <h2>
+              Custom colors:
+            </h2>
+            <div
+              class="emotion-2"
+            >
+              <div
+                class="emotion-0"
+              >
+                <span
+                  style="color: rgb(242, 88, 62);"
+                >
+                  #F2583E
+                </span>
+              </div>
+              <div
+                class="emotion-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  color="#F2583E"
                   data-testid="icon-InProgressIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -37551,9 +37765,9 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(232, 153, 206);"
+                  style="color: rgb(33, 190, 222);"
                 >
-                  #e899ce
+                  #21BEDE
                 </span>
               </div>
               <div
@@ -37561,144 +37775,7 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#e899ce"
-                  data-testid="icon-InProgressIcon"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  height="3em"
-                  preserveAspectRatio="xMidYMid meet"
-                  stroke="none"
-                  stroke-width="1"
-                  style="vertical-align: middle;"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                >
-                  <mask
-                    height="20"
-                    id="InProgressIcon__mask--0"
-                    mask-type="alpha"
-                    maskUnits="userSpaceOnUse"
-                    width="20"
-                    x="2"
-                    y="2"
-                  >
-                    <mask
-                      height="10"
-                      id="InProgressIcon__mask--1"
-                      maskUnits="userSpaceOnUse"
-                      width="20"
-                      x="2"
-                      y="12"
-                    >
-                      <path
-                        d="M12 22C17.5229 22 22 17.5229 22 12L2.00003 12C2.00003 17.5229 6.47718 22 12 22Z"
-                        fill="#232129"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#InProgressIcon__mask--1)"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M11.9996 22C17.5224 22 21.9995 17.5228 21.9995 12C21.9995 6.47714 17.5224 2 11.9996 2C6.47672 2 1.99957 6.47714 1.99957 12C1.99957 17.5228 6.47672 22 11.9996 22ZM11.9994 19.9999C16.4177 19.9999 19.9994 16.4182 19.9994 11.9999C19.9994 7.58166 16.4177 3.99994 11.9994 3.99994C7.58111 3.99994 3.99939 7.58166 3.99939 11.9999C3.99939 16.4182 7.58111 19.9999 11.9994 19.9999Z"
-                        fill="#2DE3DA"
-                        fill-rule="evenodd"
-                      />
-                    </g>
-                    <mask
-                      height="20"
-                      id="InProgressIcon__mask--2"
-                      maskUnits="userSpaceOnUse"
-                      width="20"
-                      x="2"
-                      y="2"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M12 22C17.5228 22 22 17.5229 22 12C22 6.47718 17.5228 2.00003 12 2.00003C6.47714 2.00003 2 6.47718 2 12C2 17.5229 6.47714 22 12 22ZM11.9998 20C16.4181 20 19.9998 16.4182 19.9998 12C19.9998 7.58169 16.4181 3.99997 11.9998 3.99997C7.58154 3.99997 3.99982 7.58169 3.99982 12C3.99982 16.4182 7.58154 20 11.9998 20Z"
-                        fill="#2DE3DA"
-                        fill-rule="evenodd"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#InProgressIcon__mask--2)"
-                    >
-                      <path
-                        d="M12 2.00003C6.47714 2.00003 2 6.47718 2 12L22 12C22 6.47718 17.5228 2.00003 12 2.00003Z"
-                        fill="url(#InProgressIcon__linear)"
-                      />
-                    </g>
-                  </mask>
-                  <g
-                    mask="url(#InProgressIcon__mask--0)"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      fill="currentColor"
-                      r="9.99998"
-                      style="filter: url(#InProgressIcon__filter);"
-                    />
-                  </g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    fill="currentColor"
-                    r="4"
-                  />
-                  <defs>
-                    <lineargradient
-                      gradientUnits="userSpaceOnUse"
-                      id="InProgressIcon__linear"
-                      x1="5.74999"
-                      x2="18.25"
-                      y1="12"
-                      y2="12"
-                    >
-                      <stop
-                        stop-color="#663399"
-                        stop-opacity="0"
-                      />
-                      <stop
-                        offset="1"
-                      />
-                    </lineargradient>
-                    <filter
-                      height="100%"
-                      id="InProgressIcon__filter"
-                      width="100%"
-                      x="0"
-                      y="0"
-                    >
-                      <fecomponenttransfer>
-                        <fefunca
-                          slope="0.3"
-                          type="linear"
-                        />
-                      </fecomponenttransfer>
-                    </filter>
-                  </defs>
-                </svg>
-              </div>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              <div
-                class="emotion-0"
-              >
-                <span
-                  style="color: rgb(184, 0, 0);"
-                >
-                  #b80000
-                </span>
-              </div>
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  aria-hidden="true"
-                  color="#b80000"
+                  color="#21BEDE"
                   data-testid="icon-InProgressIcon"
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -37953,7 +38030,7 @@ exports[`Storyshots icons/Single icons InProgressIcon 1`] = `
 `;
 
 exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
-.emotion-46 {
+.emotion-48 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -37971,7 +38048,7 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
   padding: 20px;
 }
 
-.emotion-45 {
+.emotion-47 {
   margin: 1rem 0;
 }
 
@@ -38018,6 +38095,14 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
   justify-content: space-around;
 }
 
+.emotion-34 {
+  color: var(--theme-ui-colors-gatsby,#663399);
+}
+
+.emotion-38 {
+  color: var(--theme-ui-colors-green-50,#37b635);
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -38025,10 +38110,10 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
     <div>
       <div>
         <div
-          class="emotion-46"
+          class="emotion-48"
         >
           <div
-            class="emotion-45"
+            class="emotion-47"
           >
             <h1>
               &lt;PortfolioIcon /&gt;
@@ -38789,7 +38874,7 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
               </div>
             </div>
             <h2>
-              Color:
+              Theme color:
             </h2>
             <div
               class="emotion-2"
@@ -38800,7 +38885,7 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
                 <span
                   style="color: rgb(102, 51, 153);"
                 >
-                  #663399
+                  gatsby
                 </span>
               </div>
               <div
@@ -38808,7 +38893,7 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#663399"
+                  class="emotion-34"
                   data-testid="icon-PortfolioIcon"
                   fill="none"
                   fill-rule="evenodd"
@@ -38870,9 +38955,9 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(255, 178, 56);"
+                  style="color: rgb(55, 182, 53);"
                 >
-                  #ffb238
+                  green.50
                 </span>
               </div>
               <div
@@ -38880,7 +38965,82 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#ffb238"
+                  class="emotion-38"
+                  data-testid="icon-PortfolioIcon"
+                  fill="none"
+                  fill-rule="evenodd"
+                  height="3em"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="currentColor"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <path
+                    d="M6.43308 15.749C6.06531 14.8383 5.92674 13.8512 6.02954 12.8744C6.13233 11.8976 6.47335 10.961 7.02265 10.1468C7.57196 9.33253 8.31275 8.66561 9.17999 8.20454C10.0472 7.74347 11.0144 7.50235 11.9966 7.50235C12.9788 7.50235 13.9459 7.74347 14.8132 8.20454C15.6804 8.66561 16.4212 9.33253 16.9705 10.1468C17.5198 10.961 17.8608 11.8976 17.9636 12.8744C18.0664 13.8512 17.9279 14.8383 17.5601 15.749"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.1551 7.78601L11.8461 10.048C11.9643 10.2056 12.0503 10.3849 12.0992 10.5757C12.1481 10.7666 12.1589 10.9651 12.131 11.1601C12.1032 11.3551 12.0372 11.5428 11.9368 11.7123C11.8364 11.8817 11.7037 12.0298 11.5461 12.148L9.74609 13.498V14.248C9.74609 14.6458 9.58806 15.0274 9.30675 15.3087C9.02545 15.59 8.64392 15.748 8.24609 15.748"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.629 11.427L15.323 12.587C15.0175 12.7396 14.7732 12.9918 14.6305 13.302C14.4878 13.6121 14.4551 13.9618 14.538 14.293L14.91 15.749"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.74609 2.24799V0.747986"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.2461 2.24799V0.747986"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.5 18.748C7.5 19.1458 7.65804 19.5273 7.93934 19.8086C8.22064 20.09 8.60218 20.248 9 20.248H15C15.3978 20.248 15.7794 20.09 16.0607 19.8086C16.342 19.5273 16.5 19.1458 16.5 18.748"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22.2461 15.748H1.74609C1.19381 15.748 0.746094 16.1957 0.746094 16.748V22.248C0.746094 22.8003 1.19381 23.248 1.74609 23.248H22.2461C22.7984 23.248 23.2461 22.8003 23.2461 22.248V16.748C23.2461 16.1957 22.7984 15.748 22.2461 15.748Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 15.748V3.74799C3 3.35016 3.15804 2.96863 3.43934 2.68733C3.72064 2.40602 4.10218 2.24799 4.5 2.24799H19.5C19.8978 2.24799 20.2794 2.40602 20.5607 2.68733C20.842 2.96863 21 3.35016 21 3.74799V15.748"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h2>
+              Custom colors:
+            </h2>
+            <div
+              class="emotion-2"
+            >
+              <div
+                class="emotion-0"
+              >
+                <span
+                  style="color: rgb(242, 88, 62);"
+                >
+                  #F2583E
+                </span>
+              </div>
+              <div
+                class="emotion-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  color="#F2583E"
                   data-testid="icon-PortfolioIcon"
                   fill="none"
                   fill-rule="evenodd"
@@ -38942,9 +39102,9 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
                 class="emotion-0"
               >
                 <span
-                  style="color: rgb(232, 153, 206);"
+                  style="color: rgb(33, 190, 222);"
                 >
-                  #e899ce
+                  #21BEDE
                 </span>
               </div>
               <div
@@ -38952,79 +39112,7 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  color="#e899ce"
-                  data-testid="icon-PortfolioIcon"
-                  fill="none"
-                  fill-rule="evenodd"
-                  height="3em"
-                  preserveAspectRatio="xMidYMid meet"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  style="vertical-align: middle;"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                >
-                  <path
-                    d="M6.43308 15.749C6.06531 14.8383 5.92674 13.8512 6.02954 12.8744C6.13233 11.8976 6.47335 10.961 7.02265 10.1468C7.57196 9.33253 8.31275 8.66561 9.17999 8.20454C10.0472 7.74347 11.0144 7.50235 11.9966 7.50235C12.9788 7.50235 13.9459 7.74347 14.8132 8.20454C15.6804 8.66561 16.4212 9.33253 16.9705 10.1468C17.5198 10.961 17.8608 11.8976 17.9636 12.8744C18.0664 13.8512 17.9279 14.8383 17.5601 15.749"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.1551 7.78601L11.8461 10.048C11.9643 10.2056 12.0503 10.3849 12.0992 10.5757C12.1481 10.7666 12.1589 10.9651 12.131 11.1601C12.1032 11.3551 12.0372 11.5428 11.9368 11.7123C11.8364 11.8817 11.7037 12.0298 11.5461 12.148L9.74609 13.498V14.248C9.74609 14.6458 9.58806 15.0274 9.30675 15.3087C9.02545 15.59 8.64392 15.748 8.24609 15.748"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.629 11.427L15.323 12.587C15.0175 12.7396 14.7732 12.9918 14.6305 13.302C14.4878 13.6121 14.4551 13.9618 14.538 14.293L14.91 15.749"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M6.74609 2.24799V0.747986"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.2461 2.24799V0.747986"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M7.5 18.748C7.5 19.1458 7.65804 19.5273 7.93934 19.8086C8.22064 20.09 8.60218 20.248 9 20.248H15C15.3978 20.248 15.7794 20.09 16.0607 19.8086C16.342 19.5273 16.5 19.1458 16.5 18.748"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M22.2461 15.748H1.74609C1.19381 15.748 0.746094 16.1957 0.746094 16.748V22.248C0.746094 22.8003 1.19381 23.248 1.74609 23.248H22.2461C22.7984 23.248 23.2461 22.8003 23.2461 22.248V16.748C23.2461 16.1957 22.7984 15.748 22.2461 15.748Z"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M3 15.748V3.74799C3 3.35016 3.15804 2.96863 3.43934 2.68733C3.72064 2.40602 4.10218 2.24799 4.5 2.24799H19.5C19.8978 2.24799 20.2794 2.40602 20.5607 2.68733C20.842 2.96863 21 3.35016 21 3.74799V15.748"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              <div
-                class="emotion-0"
-              >
-                <span
-                  style="color: rgb(184, 0, 0);"
-                >
-                  #b80000
-                </span>
-              </div>
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  aria-hidden="true"
-                  color="#b80000"
+                  color="#21BEDE"
                   data-testid="icon-PortfolioIcon"
                   fill="none"
                   fill-rule="evenodd"
