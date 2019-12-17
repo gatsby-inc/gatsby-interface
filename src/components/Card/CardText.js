@@ -2,7 +2,8 @@ import styled from "@emotion/styled"
 
 import colors from "../../theme/colors"
 import space from "../../theme/space"
-import { breakpoints, fontFamilies } from "../../utils/presets"
+import { fontFamilies } from "../../utils/presets"
+import breakpoints from "../../theme/breakpoints"
 import fontSizes from "../../theme/fontSizes"
 
 export const CardText = styled(`p`)`

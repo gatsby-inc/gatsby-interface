@@ -1,7 +1,7 @@
 import colors from "../colors"
 import card from "./card"
 
-import { breakpoints } from "../../utils/presets"
+import breakpoints from "../../theme/breakpoints"
 import space from "../../theme/space"
 
 const base = {
