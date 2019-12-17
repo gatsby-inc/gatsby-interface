@@ -82,6 +82,7 @@ export * from "./components/CopyButton"
 export { default as colors } from "./theme/colors"
 export { default as space } from "./theme/space"
 export { default as fontSizes } from "./theme/fontSizes"
+export { default as fontWeights } from "./theme/fontWeights"
 
 export { fontFamilies } from "./utils/presets/typography"
 export { breakpoints } from "./utils/presets/breakpoints"
@@ -90,7 +91,6 @@ export { zIndices } from "./utils/presets/zIndices"
 
 export { default as cardStyles } from "./theme/styles/card"
 export { default as buttonStyles } from "./theme/styles/button"
-export { default as fontWeights } from "./theme/fontWeights"
 
 export * from "./components/Avatar"
 export * from "./components/icons"
