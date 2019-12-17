@@ -81,8 +81,9 @@ export * from "./components/CopyButton"
 
 export { default as colors } from "./theme/colors"
 export { default as space } from "./theme/space"
+export { default as fontSizes } from "./theme/fontSizes"
 
-export { fontFamilies, fontSizes } from "./utils/presets/typography"
+export { fontFamilies } from "./utils/presets/typography"
 export { breakpoints } from "./utils/presets/breakpoints"
 export { dimensions, radius } from "./utils/presets/sizes"
 export { zIndices } from "./utils/presets/zIndices"

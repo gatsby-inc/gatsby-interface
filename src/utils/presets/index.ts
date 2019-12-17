@@ -1,4 +1,4 @@
-export { fontFamilies, fontSizes } from "./typography"
+export { fontFamilies } from "./typography"
 export { breakpoints } from "./breakpoints"
 export { dimensions, radius } from "./sizes"
 export { zIndices } from "./zIndices"

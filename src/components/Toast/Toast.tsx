@@ -3,7 +3,8 @@ import React from "react"
 import Alert from "@reach/alert"
 import { keyframes, css, jsx } from "@emotion/core"
 import { MdDone, MdClose, MdWarning } from "react-icons/md"
-import { fontSizes, dimensions, radius } from "../../utils/presets"
+import { dimensions, radius } from "../../utils/presets"
+import fontSizes from "../../theme/fontSizes"
 import { ToastTone } from "./types"
 import space from "../../theme/space"
 import colors from "../../theme/colors"
@@ -22,7 +23,7 @@ const toastCss = css`
   border-radius: ${radius.default} ${radius.default} 0 0;
   color: ${colors.green[5]};
   display: flex;
-  font-size: ${fontSizes.xs};
+  font-size: ${fontSizes[1]};
   min-height: ${dimensions.toast.minHeight};
   max-width: calc(100% - (${space[7]} * 2));
   padding-left: ${space[4]};
@@ -74,10 +75,10 @@ const ToastIconByTone = {
 }
 
 export interface ToastProps {
-  message: React.ReactNode
-  onClose: () => void
-  closeButtonLabel: string
-  tone: ToastTone
+  message: React.ReactNode;
+  onClose: () => void;
+  closeButtonLabel: string;
+  tone: ToastTone;
 }
 
 export const Toast: React.FC<ToastProps> = ({

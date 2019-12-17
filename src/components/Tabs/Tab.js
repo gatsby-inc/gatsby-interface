@@ -19,7 +19,7 @@ export const baseStyles = {
   color: colors.purple[50],
   display: `inline-flex`,
   fontFamily: fontFamilies.headerFontFamily,
-  fontSize: fontSizes.m,
+  fontSize: fontSizes[3],
   fontWeight: `bold`,
   height: `3.5rem`,
   margin: `0 ${space[2]}`,
