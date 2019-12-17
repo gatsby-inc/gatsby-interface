@@ -5,13 +5,10 @@ import { Link } from "gatsby"
 
 import colors from "../../theme/colors"
 import space from "../../theme/space"
+import breakpoints from "../../theme/breakpoints"
+import fontSizes from "../../theme/fontSizes"
 
-import {
-  radius,
-  breakpoints,
-  fontFamilies,
-  fontSizes,
-} from "../../utils/presets"
+import { radius, fontFamilies } from "../../utils/presets"
 
 export const baseStyles = {
   alignItems: `center`,

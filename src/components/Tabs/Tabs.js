@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
-
 import colors from "../../theme/colors"
-
 import space from "../../theme/space"
 
 const baseStyles = {
