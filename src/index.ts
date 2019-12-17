@@ -84,9 +84,10 @@ export { default as space } from "./theme/space"
 export { default as fontSizes } from "./theme/fontSizes"
 export { default as fontWeights } from "./theme/fontWeights"
 export { default as breakpoints } from "./theme/breakpoints"
+export { default as dimensions } from "./theme/dimensions"
 
 export { fontFamilies } from "./utils/presets/typography"
-export { dimensions, radius } from "./utils/presets/sizes"
+export { radius } from "./utils/presets/sizes"
 export { zIndices } from "./utils/presets/zIndices"
 
 export { default as cardStyles } from "./theme/styles/card"
