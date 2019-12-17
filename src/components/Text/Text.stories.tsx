@@ -5,7 +5,7 @@ import { storiesOf } from "@storybook/react"
 import { StoryUtils } from "../../utils/storybook"
 import Text from "./Text"
 
-storiesOf(`core/Text`, module)
+storiesOf(`Text`, module)
   .addParameters({
     options: {
       showPanel: true,
