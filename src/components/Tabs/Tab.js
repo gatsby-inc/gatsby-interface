@@ -7,12 +7,13 @@ import colors from "../../theme/colors"
 import space from "../../theme/space"
 import breakpoints from "../../theme/breakpoints"
 import fontSizes from "../../theme/fontSizes"
+import radii from "../../theme/radii"
 
-import { radius, fontFamilies } from "../../utils/presets"
+import { fontFamilies } from "../../utils/presets"
 
 export const baseStyles = {
   alignItems: `center`,
-  borderRadius: `${radius.default} ${radius.default} 0 0`,
+  borderRadius: `${radii[2]} ${radii[2]} 0 0`,
   color: colors.purple[50],
   display: `inline-flex`,
   fontFamily: fontFamilies.headerFontFamily,

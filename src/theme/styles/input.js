@@ -1,12 +1,12 @@
 import colors from "../colors"
 
-import { radius } from "../../utils/presets"
+import radii from "../../theme/radii"
 import fontSizes from "../../theme/fontSizes"
 import space from "../../theme/space"
 
 const input = {
   border: `1px solid ${colors.grey[30]}`,
-  borderRadius: radius.default,
+  borderRadius: radii[2],
   color: colors.grey[90],
   fontSize: fontSizes[2],
   height: `2.25rem`,

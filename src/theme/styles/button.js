@@ -4,7 +4,7 @@ import fontSizes from "../fontSizes"
 import fonts from "../fonts"
 import tones from "../tones"
 
-import { radius } from "../../utils/presets"
+import radii from "../../theme/radii"
 import space from "../../theme/space"
 
 const base = props => {
@@ -13,7 +13,7 @@ const base = props => {
   return {
     alignItems: `center`,
     border: colors.grey[60],
-    borderRadius: radius.default,
+    borderRadius: radii[2],
     boxSizing: `border-box`,
     cursor: `pointer`,
     display: `inline-flex`,

@@ -15,7 +15,7 @@ import colors from "../../theme/colors"
 import fonts from "../../theme/fonts"
 import fontSizes from "../../theme/fontSizes"
 import fontWeights from "../../theme/fontWeights"
-import { radius } from "../../utils/presets"
+import radii from "../../theme/radii"
 import breakpoints from "../../theme/breakpoints"
 import space from "../../theme/space"
 import { Heading } from "../Heading"
@@ -119,7 +119,7 @@ PricingCard.Frame = ({ children, ...rest }) => {
         position: `relative`,
         width: `100%`,
         flexDirection: `column`,
-        borderRadius: radius.large,
+        borderRadius: radii[3],
 
         [`@media(min-width: ${breakpoints.tablet}px)`]: {},
       }}
@@ -216,7 +216,7 @@ PricingCard.Plan = ({ children, plan, idx, ...rest }) => {
           : `2px solid ${
               variant === `SECONDARY` ? colors.purple[90] : colors.white
             }`,
-        borderRadius: radius.large,
+        borderRadius: radii[3],
         padding: `${space[7]} ${space[7]} 0 `,
         display: visibleOnMobile === idx ? `flex` : `none`,
         position: `relative`,

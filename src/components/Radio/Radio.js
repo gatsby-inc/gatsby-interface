@@ -4,7 +4,8 @@ import styled from "@emotion/styled"
 
 import colors from "../../theme/colors"
 
-import { radius, fontFamilies } from "../../utils/presets"
+import { fontFamilies } from "../../utils/presets"
+import radii from "../../theme/radii"
 import fontSizes from "../../theme/fontSizes"
 import space from "../../theme/space"
 
@@ -121,7 +122,7 @@ const ColourfulContainer = styled(StandardContainer)`
     background: #eee;
   }
   :before {
-    border-radius: ${radius.large};
+    border-radius: ${radii[3]};
     bottom: 0;
     left: 0;
     opacity: 0;
