@@ -1,11 +1,14 @@
-import React, { Fragment, useState } from "react"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
 
 import { storiesOf } from "@storybook/react"
-import { radios, boolean } from "@storybook/addon-knobs"
+import { radios } from "@storybook/addon-knobs"
 
 import { Radio, RadioSkeleton } from "../src/components/Radio"
-import { fontFamilies, fontSizes, colors, spaces } from "../src/utils/presets"
+import fonts from "../src/theme/fonts"
+import fontSizes from "../src/theme/fontSizes"
+import colors from "../src/theme/colors"
+import space from "../src/theme/space"
 
 const Form = styled(`form`)`
   min-width: 20rem;
@@ -18,16 +21,16 @@ const CustomRadio1 = styled(Radio)`
       flex-direction: column;
 
       strong {
-        font-size: ${fontSizes.l};
+        font-size: ${fontSizes[4]};
         font-weight: 800;
-        font-family: ${fontFamilies.headerFontFamily};
+        font-family: ${fonts.header};
       }
 
       span {
         color: ${colors.grey[60]};
-        font-size: ${fontSizes.xs};
+        font-size: ${fontSizes[1]};
         margin: 0;
-        margin-top: ${spaces[`2xs`]};
+        margin-top: ${space[2]};
       }
     }
   }
@@ -36,7 +39,7 @@ const CustomRadio1 = styled(Radio)`
 const CustomRadio2 = styled(Radio)`
   label {
     &.emphasized {
-      padding: ${spaces.l} ${spaces.xl};
+      padding: ${space[7]} ${space[8]};
 
       :after,
       :before {
@@ -50,14 +53,14 @@ const CustomRadio2 = styled(Radio)`
         strong {
           font-size: ${fontSizes.l};
           font-weight: 800;
-          font-family: ${fontFamilies.headerFontFamily};
+          font-family: ${fonts.header};
         }
 
         span {
           color: ${colors.grey[60]};
-          font-size: ${fontSizes.xs};
+          font-size: ${fontSizes[1]};
           margin: 0;
-          margin-top: ${spaces[`2xs`]};
+          margin-top: ${space[2]};
         }
       }
     }
@@ -65,7 +68,7 @@ const CustomRadio2 = styled(Radio)`
   &.selected {
     label {
       &.emphasized {
-        padding: ${spaces.l} ${spaces.xl};
+        padding: ${space[7]} ${space[8]};
       }
     }
   }
