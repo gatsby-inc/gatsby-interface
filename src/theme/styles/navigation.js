@@ -84,7 +84,7 @@ styles.List = {
 
 const DropdownOpenStyles = {
   fontSize: fontSizes[1],
-  fontFamily: fonts.system.join(`,`),
+  fontFamily: fonts.system,
   right: 0,
   boxShadow: `0px 4px 16px rgba(46, 41, 51, 0.08), 0px 8px 24px rgba(71, 63, 79, 0.16)`,
   background: colors.white,
@@ -144,7 +144,7 @@ styles.ItemLink = {
       textDecoration: `none`,
       color: `inherit`,
       fontSize: fontSizes[1],
-      fontFamily: fonts.system.join(`,`),
+      fontFamily: fonts.system,
       fontWeight: `normal`,
       transition: `opacity ${transition.speed.default}`,
       WebkitFontSmoothing: `antialiased`,
@@ -179,7 +179,7 @@ styles.ItemLink = {
   },
   mobile: {
     color: colors.white,
-    fontFamily: fonts.header.join(`,`),
+    fontFamily: fonts.header,
     fontWeight: `normal`,
     transition: `opacity ${transition.speed.default}`,
     WebkitFontSmoothing: `antialiased`,

@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import { lineHeights } from "gatsby-design-tokens"
 
 import colors from "../../theme/colors"
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 import fontSizes from "../../theme/fontSizes"
 import space from "../../theme/space"
 
@@ -92,7 +92,7 @@ SidebarNav.List.propTypes = {
 
 const baseItemStyles = active => {
   return {
-    fontFamily: fontFamilies.headerFontFamily,
+    fontFamily: fonts.header,
     fontSize: fontSizes[2],
     color: active ? colors.purple[50] : colors.grey[60],
     listStyle: `none`,

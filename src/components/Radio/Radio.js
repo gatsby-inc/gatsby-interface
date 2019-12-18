@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 
 import colors from "../../theme/colors"
 
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 import radii from "../../theme/radii"
 import fontSizes from "../../theme/fontSizes"
 import space from "../../theme/space"
@@ -23,7 +23,7 @@ const Label = styled(`label`)`
   color: ${colors.grey[80]};
   cursor: pointer;
   display: flex;
-  font-family: ${fontFamilies.bodyFontFamily};
+  font-family: ${fonts.system};
   font-size: ${fontSizes[2]};
   line-height: 1;
   padding-left: calc(${INPUT_OUTER_DIA} + ${space[4]});

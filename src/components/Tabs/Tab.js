@@ -8,15 +8,14 @@ import space from "../../theme/space"
 import breakpoints from "../../theme/breakpoints"
 import fontSizes from "../../theme/fontSizes"
 import radii from "../../theme/radii"
-
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 
 export const baseStyles = {
   alignItems: `center`,
   borderRadius: `${radii[2]} ${radii[2]} 0 0`,
   color: colors.purple[50],
   display: `inline-flex`,
-  fontFamily: fontFamilies.headerFontFamily,
+  fontFamily: fonts.header,
   fontSize: fontSizes[3],
   fontWeight: `bold`,
   height: `3.5rem`,

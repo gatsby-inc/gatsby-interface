@@ -5,7 +5,7 @@ import { MdCheck, MdClose, MdRefresh } from "react-icons/md"
 
 import colors from "../../theme/colors"
 
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 import fontSizes from "../../theme/fontSizes"
 import space from "../../theme/space"
 
@@ -144,7 +144,7 @@ Indicator.propTypes = {
 const Label = ({ children, expanded = false }) => (
   <span
     css={{
-      fontFamily: fontFamilies.bodyFontFamily,
+      fontFamily: fonts.system,
       fontSize: fontSizes[3],
       paddingLeft: space[5],
       position: expanded ? `absolute` : `static`,

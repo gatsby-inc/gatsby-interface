@@ -79,16 +79,15 @@ export { BaseNavigation } from "./components/skeletons/BaseNavigation"
 
 export * from "./components/CopyButton"
 
+export { default as breakpoints } from "./theme/breakpoints"
 export { default as colors } from "./theme/colors"
-export { default as space } from "./theme/space"
+export { default as dimensions } from "./theme/dimensions"
+export { default as fonts } from "./theme/fonts"
 export { default as fontSizes } from "./theme/fontSizes"
 export { default as fontWeights } from "./theme/fontWeights"
-export { default as breakpoints } from "./theme/breakpoints"
-export { default as dimensions } from "./theme/dimensions"
-export { default as zIndices } from "./theme/zIndices"
 export { default as radii } from "./theme/radii"
-
-export { fontFamilies } from "./utils/presets/typography"
+export { default as space } from "./theme/space"
+export { default as zIndices } from "./theme/zIndices"
 
 export { default as cardStyles } from "./theme/styles/card"
 export { default as buttonStyles } from "./theme/styles/button"

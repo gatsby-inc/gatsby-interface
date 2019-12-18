@@ -7,7 +7,7 @@ import { MdHelpOutline } from "react-icons/md"
 import { ContentBox } from "../ContentBox"
 import { LinkButton } from "../LinkButton"
 import { Heading } from "../Heading"
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 import breakpoints from "../../theme/breakpoints"
 import space from "../../theme/space"
 import cardStyles from "../../theme/styles/card"
@@ -95,7 +95,7 @@ SettingsBlock.Description = ({ children, ...rest }) => (
     css={{
       color: colors.grey[50],
       fontSize: fontSizes[1],
-      fontFamily: fontFamilies.bodyFontFamily,
+      fontFamily: fonts.system,
       lineHeight: 1.4,
       margin: 0,
 

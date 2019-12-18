@@ -7,13 +7,12 @@ import {
   setAddon,
 } from "@storybook/react"
 import { addReadme } from "storybook-readme"
-
 import { withKnobs } from "@storybook/addon-knobs"
 import { withConsole } from "@storybook/addon-console"
 import { withA11y } from "@storybook/addon-a11y"
 import { action } from "@storybook/addon-actions"
 
-import { fontFamilies } from "../src/utils/presets"
+import fonts from "../src/theme/fonts"
 import "@storybook/addon-console"
 import "storybook-chromatic"
 
@@ -68,7 +67,7 @@ const withGlobal = storyFn => (
           font-size: 1rem;
         }
         body {
-          font-family: ${fontFamilies.bodyFontFamily};
+          font-family: ${fonts.system};
           height: 100vh;
           margin: 0;
           width: 100%;

@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import colors from "../../theme/colors"
 import space from "../../theme/space"
 
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 import breakpoints from "../../theme/breakpoints"
 import fontSizes from "../../theme/fontSizes"
 
@@ -11,7 +11,7 @@ export const CardTitle = styled(`h2`)`
   align-items: center;
   color: ${colors.grey[90]};
   display: flex;
-  font-family: ${fontFamilies.headerFontFamily};
+  font-family: ${fonts.header};
   font-size: ${fontSizes[4]};
   margin: ${space[3]} 0 ${space[4]};
 

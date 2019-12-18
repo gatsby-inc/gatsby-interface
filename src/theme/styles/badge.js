@@ -12,7 +12,7 @@ const TONES = [`BRAND`, `SUCCESS`, `DANGER`, `NEUTRAL`]
 const baseStyle = () => {
   return {
     borderRadius: radii[2],
-    fontFamily: fonts.header.join(`,`),
+    fontFamily: fonts.header,
     fontWeight: `bold`,
     lineHeight: 1,
   }

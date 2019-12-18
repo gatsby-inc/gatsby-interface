@@ -17,7 +17,7 @@ const base = props => {
     boxSizing: `border-box`,
     cursor: `pointer`,
     display: `inline-flex`,
-    fontFamily: fonts.header.join(`,`),
+    fontFamily: fonts.header,
     justifyContent: `center`,
     transition: `background 0.5s, border 0.5s, color 0.5s`,
     lineHeight: `1`,

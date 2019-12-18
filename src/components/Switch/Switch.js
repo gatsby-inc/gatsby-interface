@@ -27,7 +27,7 @@ function Switch({ fieldName, fieldValue, options = {}, onChange }) {
     >
       <Toggle.Wrapper
         css={{
-          fontFamily: fonts.header.join(`,`),
+          fontFamily: fonts.header,
           letterSpacing: `0.03em`,
         }}
       >

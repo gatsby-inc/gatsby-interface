@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 import colors from "../../theme/colors"
 import space from "../../theme/space"
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 import breakpoints from "../../theme/breakpoints"
 import fontSizes from "../../theme/fontSizes"
 
@@ -16,7 +16,7 @@ const TabFigure = ({ children }) => (
       borderRadius: `50%`,
       color: colors.white,
       display: `flex`,
-      fontFamily: fontFamilies.bodyFontFamily,
+      fontFamily: fonts.system,
       fontSize: fontSizes[`3xs`],
       fontWeight: `bold`,
       height: `20px`,
