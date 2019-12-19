@@ -1,12 +1,15 @@
-import { fonts as rawFonts } from "gatsby-design-tokens"
+import { fonts as rawFonts, FontToken } from "gatsby-design-tokens"
 
-const fonts = {} // Object.keys(baseFonts).map(key => baseFonts[key].join())
+export type Font = FontToken
+
+const fonts: Partial<Record<Font, string>> = {} // Object.keys(baseFonts).map(key => baseFonts[key].join())
 
 for (const prop in rawFonts) {
-  fonts[prop] = rawFonts[prop].join()
+  const font = prop as Font
+  fonts[font] = rawFonts[font].join()
 }
 
-export default fonts
+export default fonts as Record<Font, string>
 
 /*
 
