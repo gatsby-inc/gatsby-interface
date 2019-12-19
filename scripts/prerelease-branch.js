@@ -34,28 +34,38 @@ if (branch === `master` || branch === `dev`) {
 
 const normalizedBranch = branch.replace(/(\/|_)/g, "-").normalize()
 
+/**
+ * Important: we're formatting current UTC time as YYYYMMDDTHHmm
+ * with T as a separator between date and time
+ * This is because a pre-release version's identifiers must comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
+ * Identifiers must not be empty and numeric identifiers MUST NOT include leading zeroes.
+ * Using "T" prevents NPM treating something like "20191218T0139" as an incorrect identifier
+ */
 const version = `${pkg.version}-${normalizedBranch}-${moment()
   .utc()
-  .format("YYYYMMDD‑HHmm")}`
+  .format("YYYYMMDDTHHmm")}`
 const tag = normalizedBranch
 
 sh.echo(
-  chalk.cyan(`Tagging version ${chalk.bold(version)} as ${chalk.bold(tag)}`)
+  chalk.cyan(`Tagging version ${chalk.yellow(version)} as ${chalk.yellow(tag)}`)
 )
 
-if (sh.exec(`npm version ${version}`).code !== 0) {
-  // properly exit if version fails
-  sh.exit(1)
+const runCommand = command => {
+  sh.echo(chalk.cyan(`Running ${chalk.yellow(command)}`))
+
+  if (sh.exec(command).code !== 0) {
+    // properly exit if command fails
+    sh.exit(1)
+  }
 }
 
 const packageName = pkg.name
 
-if (sh.exec(`npm dist‑tag add ${packageName}@${version} ${tag}`).code !== 0) {
-  // properly exit if adding the dist‑tag fails
-  sh.exit(1)
-}
+sh.cd(sh.pwd())
 
-if (sh.exec(`npm publish ‑‑tag ${tag}`).code !== 0) {
-  // properly exit if publish fails
-  sh.exit(1)
-}
+// Bump the version
+runCommand(`npm version ${version}`)
+// Attaches distribution tag to the new version
+runCommand(`npm dist‑tag add ${packageName}@${version} ${tag}`)
+// Publishes tag to NPM
+runCommand(`npm publish ‑‑tag ${tag}`)
