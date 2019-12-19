@@ -4,26 +4,23 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import colors from "../../theme/colors"
-
-import {
-  radius,
-  spaces,
-  breakpoints,
-  fontFamilies,
-  fontSizes,
-} from "../../utils/presets"
+import space from "../../theme/space"
+import breakpoints from "../../theme/breakpoints"
+import fontSizes from "../../theme/fontSizes"
+import radii from "../../theme/radii"
+import fonts from "../../theme/fonts"
 
 export const baseStyles = {
   alignItems: `center`,
-  borderRadius: `${radius.default} ${radius.default} 0 0`,
+  borderRadius: `${radii[2]} ${radii[2]} 0 0`,
   color: colors.purple[50],
   display: `inline-flex`,
-  fontFamily: fontFamilies.headerFontFamily,
-  fontSize: fontSizes.m,
+  fontFamily: fonts.header,
+  fontSize: fontSizes[3],
   fontWeight: `bold`,
   height: `3.5rem`,
-  margin: `0 ${spaces[`2xs`]}`,
-  padding: `${spaces[`3xs`]} ${spaces.m} 0`,
+  margin: `0 ${space[2]}`,
+  padding: `${space[1]} ${space[5]} 0`,
   position: `relative`,
   zIndex: `0`,
   a: {
@@ -58,7 +55,7 @@ export const baseStyles = {
     },
   },
   [`@media (min-width: ${breakpoints.phablet}px)`]: {
-    padding: `${spaces[`3xs`]} ${spaces.l} 0`,
+    padding: `${space[1]} ${space[7]} 0`,
   },
 }
 

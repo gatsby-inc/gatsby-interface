@@ -1,9 +1,4 @@
-export const radius = {
-  default: `4px`,
-  large: `8px`,
-}
-
-export const dimensions = {
+const dimensions = {
   siteHeader: {
     height: `3.75rem`,
   },
@@ -29,3 +24,5 @@ export const dimensions = {
     indentation: `5rem`,
   },
 }
+
+export default dimensions

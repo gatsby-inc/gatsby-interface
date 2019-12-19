@@ -7,7 +7,8 @@ import { MdEdit, MdArrowForward } from "react-icons/md"
 import { ContentBox } from "../ContentBox"
 import { Button } from "../Button"
 import { Heading } from "../Heading"
-import { fontFamilies, spaces } from "../../utils/presets"
+import fonts from "../../theme/fonts"
+import space from "../../theme/space"
 import cardStyles from "../../theme/styles/card"
 import fontSizes from "../../theme/fontSizes"
 import colors from "../../theme/colors"
@@ -29,7 +30,7 @@ function SettingsCard({ children, mode = `PRESENTER`, ...rest }) {
         ...cardStyles.frame,
         ...cardStyles.space.L,
         display: `grid`,
-        gridGap: spaces.m,
+        gridGap: space[5],
         gridTemplateColumns: `1fr auto`,
         gridTemplateRows: `auto auto`,
       }}
@@ -71,12 +72,12 @@ SettingsCard.Description = ({ children, ...rest }) => (
     css={{
       color: colors.grey[50],
       fontSize: fontSizes[1],
-      fontFamily: fontFamilies.bodyFontFamily,
+      fontFamily: fonts.system,
       lineHeight: 1.4,
       margin: 0,
 
       "&:not(:last-child)": {
-        marginBottom: spaces.m,
+        marginBottom: space[5],
       },
     }}
     {...rest}
@@ -109,7 +110,7 @@ SettingsCard.Actions = ({ children }) => (
     css={{
       display: `flex`,
       justifyContent: `space-between`,
-      marginTop: spaces.m,
+      marginTop: space[5],
     }}
   >
     {children}

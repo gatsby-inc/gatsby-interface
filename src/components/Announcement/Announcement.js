@@ -19,7 +19,7 @@ function Announcement({ children }) {
         color: colors.teal[90],
         display: `flex`,
         fontSize: fontSizes[1],
-        fontFamily: fonts.system.join(`,`),
+        fontFamily: fonts.system,
         ...cardStyles.space.row,
         backgroundImage: `url(${background})`,
         backgroundPosition: `right center`,

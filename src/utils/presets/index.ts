@@ -1,6 +1,0 @@
-export { fontFamilies, fontSizes } from "./typography"
-export { spaces } from "./spaces"
-export { breakpoints } from "./breakpoints"
-export { dimensions, radius } from "./sizes"
-export { zIndices } from "./zIndices"
-export { transition } from "./transition"

@@ -15,7 +15,9 @@ import colors from "../../theme/colors"
 import fonts from "../../theme/fonts"
 import fontSizes from "../../theme/fontSizes"
 import fontWeights from "../../theme/fontWeights"
-import { spaces, breakpoints, radius } from "../../utils/presets"
+import radii from "../../theme/radii"
+import breakpoints from "../../theme/breakpoints"
+import space from "../../theme/space"
 import { Heading } from "../Heading"
 
 import { capitalizeString } from "../../utils/helpers/"
@@ -117,7 +119,7 @@ PricingCard.Frame = ({ children, ...rest }) => {
         position: `relative`,
         width: `100%`,
         flexDirection: `column`,
-        borderRadius: radius.large,
+        borderRadius: radii[3],
 
         [`@media(min-width: ${breakpoints.tablet}px)`]: {},
       }}
@@ -157,9 +159,9 @@ PricingCard.Nav = () => {
             border: `none`,
             color: visibleOnMobile === idx ? plan.color : colors.grey[70],
             cursor: `pointer`,
-            fontFamily: fonts.header.join(`,`),
+            fontFamily: fonts.header,
             fontSize: fontSizes[2],
-            padding: `${spaces.m} ${spaces.s} ${spaces.s}`,
+            padding: `${space[5]} ${space[4]} ${space[4]}`,
             position: `relative`,
 
             ":after": {
@@ -214,8 +216,8 @@ PricingCard.Plan = ({ children, plan, idx, ...rest }) => {
           : `2px solid ${
               variant === `SECONDARY` ? colors.purple[90] : colors.white
             }`,
-        borderRadius: radius.large,
-        padding: `${spaces.l} ${spaces.l} 0 `,
+        borderRadius: radii[3],
+        padding: `${space[7]} ${space[7]} 0 `,
         display: visibleOnMobile === idx ? `flex` : `none`,
         position: `relative`,
         flexDirection: `column`,
@@ -281,7 +283,7 @@ PricingCard.Icon = ({ plan, ...rest }) => {
         display: `flex`,
         height: `50px`,
         justifyContent: `center`,
-        marginBottom: spaces.xs,
+        marginBottom: space[3],
         width: `50px`,
       }}
       {...rest}
@@ -304,8 +306,8 @@ PricingCard.Intro = ({ plan }) => {
       dangerouslySetInnerHTML={{ __html: intro }}
       css={{
         textAlign: `center`,
-        fontFamily: fonts.system.join(`,`),
-        marginTop: spaces.m,
+        fontFamily: fonts.system,
+        marginTop: space[5],
         fontSize: fontSizes[1],
         color: variant === `SECONDARY` ? colors.purple[30] : colors.grey[60],
         lineHeight: 1.4,
@@ -329,8 +331,8 @@ PricingCard.PriceTag = ({ plan }) => {
   return (
     <div
       css={{
-        fontFamily: fonts.header.join(`,`),
-        marginTop: spaces.l,
+        fontFamily: fonts.header,
+        marginTop: space[7],
         lineHeight: 1,
       }}
     >
@@ -354,7 +356,7 @@ PricingCard.PriceTag = ({ plan }) => {
 
       <span
         css={{
-          fontFamily: fonts.system.join(`,`),
+          fontFamily: fonts.system,
           color: colors.grey[50],
           fontSize: fontSizes[0],
           display: `inline-block`,
@@ -382,7 +384,7 @@ PricingCard.Details = ({ plan }) => {
           fontSize: fontSizes[1],
           color: variant === `SECONDARY` ? colors.purple[30] : colors.grey[50],
           width: `100%`,
-          marginTop: spaces.l,
+          marginTop: space[7],
           display: `flex`,
           flexDirection: `column`,
           alignItems: `center`,
@@ -401,7 +403,7 @@ PricingCard.Details = ({ plan }) => {
               key={`detail${idx}`}
               css={{
                 display: `flex`,
-                margin: `${spaces.xs} 0`,
+                margin: `${space[3]} 0`,
                 position: `relative`,
                 lineHeight: 1.3,
               }}
@@ -414,7 +416,7 @@ PricingCard.Details = ({ plan }) => {
                     variant === `SECONDARY`
                       ? colors.purple[50]
                       : colors.grey[30],
-                  marginRight: spaces.xs,
+                  marginRight: space[3],
                   flexShrink: 0,
                   flexGrow: 0,
                   transform: `translateY(-.2em)`,
@@ -431,7 +433,7 @@ PricingCard.Details = ({ plan }) => {
                 }}
               />
               {item.tip && (
-                <ToggleTip tip={item.tip} css={{ marginLeft: spaces.xs }} />
+                <ToggleTip tip={item.tip} css={{ marginLeft: space[3] }} />
               )}
             </li>
           ))}
@@ -460,9 +462,9 @@ PricingCard.Cta = ({ children, plan }) => {
         display: `flex`,
         flexDirection: `column`,
         justifyContent: `flex-end`,
-        marginTop: spaces[`2xl`],
+        marginTop: space[9],
         flexGrow: 1,
-        paddingBottom: spaces[`4xl`],
+        paddingBottom: space[12],
       }}
     >
       {label && (to || onClick) && (
@@ -512,7 +514,7 @@ PricingCard.UnifiedCta = ({ children, ...rest }) => {
         display: `flex`,
         alignItems: `center`,
         justifyContent: `center`,
-        padding: `${spaces.xl} ${spaces.l} ${spaces.l}`,
+        padding: `${space[8]} ${space[7]} ${space[7]}`,
       }}
       {...rest}
     >
@@ -525,11 +527,11 @@ PricingCard.UnifiedCta = ({ children, ...rest }) => {
         <span
           dangerouslySetInnerHTML={{ __html: comment }}
           css={{
-            fontFamily: fonts.header.join(`,`),
+            fontFamily: fonts.header,
             color: colors.grey[50],
             fontSize: fontSizes[2],
             margin: 0,
-            marginTop: spaces.xs,
+            marginTop: space[3],
             textAlign: `center`,
           }}
         />

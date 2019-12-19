@@ -75,21 +75,27 @@ export { Breadcrumb } from "./components/Breadcrumb"
 export { Switch } from "./components/Switch"
 
 export { Navigation } from "./components/Navigation"
+
 export { BaseNavigation } from "./components/skeletons/BaseNavigation"
 
 export * from "./components/CopyButton"
 
+export { default as breakpoints } from "./theme/breakpoints"
 export { default as colors } from "./theme/colors"
-
-export { fontFamilies, fontSizes } from "./utils/presets/typography"
-export { spaces } from "./utils/presets/spaces"
-export { breakpoints } from "./utils/presets/breakpoints"
-export { dimensions, radius } from "./utils/presets/sizes"
-export { zIndices } from "./utils/presets/zIndices"
+export { default as dimensions } from "./theme/dimensions"
+export { default as fonts } from "./theme/fonts"
+export { default as fontSizes } from "./theme/fontSizes"
+export { default as fontWeights } from "./theme/fontWeights"
+export { default as lineHeights } from "./theme/lineHeights"
+export { default as letterSpacings } from "./theme/letterSpacings"
+export { default as radii } from "./theme/radii"
+export { default as space } from "./theme/space"
+export { default as shadows } from "./theme/shadows"
+export { default as zIndices } from "./theme/zIndices"
+export { default as transition } from "./theme/transition"
 
 export { default as cardStyles } from "./theme/styles/card"
 export { default as buttonStyles } from "./theme/styles/button"
-export { default as fontWeights } from "./theme/fontWeights"
 
 export * from "./components/Avatar"
 export * from "./components/icons"

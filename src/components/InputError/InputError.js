@@ -4,19 +4,20 @@ import PropTypes from "prop-types"
 
 import colors from "../../theme/colors"
 
-import { spaces, fontSizes } from "../../utils/presets"
+import fontSizes from "../../theme/fontSizes"
+import space from "../../theme/space"
 
 const InputError = ({ children }) => (
   <p
     css={{
       color: colors.red[60],
-      fontSize: fontSizes.xs,
+      fontSize: fontSizes[1],
       lineHeight: `1`,
       padding: `0`,
-      margin: `${spaces.xs} ${spaces[`2xs`]} 0`,
+      margin: `${space[3]} ${space[2]} 0`,
       svg: {
         color: `current-color`,
-        marginRight: spaces[`2xs`],
+        marginRight: space[2],
         verticalAlign: `text-top`,
       },
     }}

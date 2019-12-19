@@ -1,4 +1,4 @@
-import { fontSizes } from "../../utils/presets"
+import fontSizes from "../../theme/fontSizes"
 import { AvatarSize } from "./types"
 
 export const DEFAULT_SIZE: AvatarSize = "M"
@@ -22,10 +22,10 @@ export const borderSizeValues: Record<AvatarSize, number> = {
 }
 
 export const placeholderFontSizes: Record<AvatarSize, string> = {
-  XS: fontSizes["4xs"],
-  S: fontSizes["2xs"],
-  M: fontSizes["xs"],
-  L: fontSizes["m"],
-  XL: fontSizes["l"],
-  XXL: fontSizes["2xl"],
+  XS: `0.5rem`,
+  S: fontSizes[0],
+  M: fontSizes[1],
+  L: fontSizes[3],
+  XL: fontSizes[4],
+  XXL: fontSizes[6],
 }

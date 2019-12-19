@@ -7,7 +7,7 @@ import { Formik } from "formik"
 import { Toggle } from "./"
 import Debug from "../../utils/formik/Debug"
 
-import { spaces } from "../../utils/presets"
+import space from "../../theme/space"
 import fontSizes from "../../theme/fontSizes"
 import colors from "../../theme/colors"
 
@@ -121,7 +121,7 @@ storiesOf(`Toggle`, module)
           >
             <Toggle.Wrapper
               css={{
-                marginLeft: spaces.s,
+                marginLeft: space[4],
                 display: `flex`,
               }}
             >
@@ -129,7 +129,7 @@ storiesOf(`Toggle`, module)
               <Toggle.Mark />
               <Toggle.Label
                 css={{
-                  marginLeft: spaces.xs,
+                  marginLeft: space[3],
                 }}
               >
                 <strong
@@ -142,7 +142,7 @@ storiesOf(`Toggle`, module)
                 </strong>
                 <p
                   css={{
-                    margin: `${spaces[`2xs`]} 0 0 0`,
+                    margin: `${space[2]} 0 0 0`,
                     fontSize: fontSizes[1],
                     color: colors.grey[50],
                   }}

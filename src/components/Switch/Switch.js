@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
 import fonts from "../../theme/fonts"
 import hiddenStyles from "../../theme/styles/hidden"
-import { spaces } from "../../utils/presets"
+import space from "../../theme/space"
 import { Toggle } from "../Toggle"
 
 function Switch({ fieldName, fieldValue, options = {}, onChange }) {
@@ -27,11 +27,11 @@ function Switch({ fieldName, fieldValue, options = {}, onChange }) {
     >
       <Toggle.Wrapper
         css={{
-          fontFamily: fonts.header.join(`,`),
+          fontFamily: fonts.header,
           letterSpacing: `0.03em`,
         }}
       >
-        <span aria-hidden css={{ marginRight: spaces.xs }}>
+        <span aria-hidden css={{ marginRight: space[3] }}>
           {options.secondary.label}
         </span>
         <Toggle.Input />
