@@ -7,7 +7,7 @@
  */
 import sh from "shelljs"
 import chalk from "chalk"
-import moment from "moment"
+import format from "date-fns/format"
 import pkg from "../package.json"
 
 const branch = process.env.CIRCLE_BRANCH
@@ -42,9 +42,10 @@ const normalizedBranch = branch.replace(/(\/|_)/g, "-").normalize()
  * (see https://npm.community/t/npm-version-cannot-set-version-with-numeric-commit-hash/2467/2).
  * Using "T" prevents NPM treating something like "20191218T0139" as an incorrect identifier
  */
-const version = `${pkg.version}-${normalizedBranch}-${moment()
-  .utc()
-  .format("YYYYMMDDTHHmm")}`
+const version = `${pkg.version}-${normalizedBranch}-${format(
+  new Date(),
+  "YYYYMMDDTHHmm"
+)}`
 const tag = normalizedBranch
 
 sh.echo(

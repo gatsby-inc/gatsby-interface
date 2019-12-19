@@ -39,6 +39,7 @@
     "@reach/alert": "^0.1.5",
     "@reach/dialog": "^0.4.0",
     "@types/lodash.sample": "^4.2.6",
+    "date-fns": "^2.8.1",
     "filestack-react": "^3.1.0",
     "gatsby-design-tokens": "^1.0.0",
     "lodash.sample": "^4.2.1"
@@ -131,7 +132,6 @@
     "jest-dom": "^3.1.1",
     "jest-emotion": "^10.0.14",
     "lint-staged": "^8.1.0",
-    "moment": "^2.24.0",
     "path": "^0.12.7",
     "prettier": "^1.16.1",
     "prettier-eslint-cli": "^4.7.1",
