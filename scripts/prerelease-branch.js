@@ -38,7 +38,8 @@ const normalizedBranch = branch.replace(/(\/|_)/g, "-").normalize()
  * Important: we're formatting current UTC time as YYYYMMDDTHHmm
  * with T as a separator between date and time
  * This is because a pre-release version's identifiers must comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
- * Identifiers must not be empty and numeric identifiers MUST NOT include leading zeroes.
+ * Identifiers must not be empty and numeric identifiers MUST NOT include leading zeroes
+ * (see https://npm.community/t/npm-version-cannot-set-version-with-numeric-commit-hash/2467/2).
  * Using "T" prevents NPM treating something like "20191218T0139" as an incorrect identifier
  */
 const version = `${pkg.version}-${normalizedBranch}-${moment()
@@ -63,8 +64,8 @@ const packageName = pkg.name
 
 sh.cd(sh.pwd())
 
-// Bump the version
-runCommand(`npm version ${version}`)
+// Bump the version without a git tag since we're not going to push it to Git
+runCommand(`npm version ${version} --no-git-tag-version`)
 // Attaches distribution tag to the new version
 runCommand(`npm dist‑tag add ${packageName}@${version} ${tag}`)
 // Publishes tag to NPM
