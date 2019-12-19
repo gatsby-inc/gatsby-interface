@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from "theme-ui"
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
@@ -13,10 +13,7 @@ import { Theme } from "../../theme"
 
 const sizes: IconSize[] = [`xxsmall`, `xsmall`, `small`, `medium`, `large`]
 const customSizes = [`1em`, `16px`, `24px`, `32px`, `40px`, `64px`]
-const customIconColors = [
-  "#F2583E",
-  '#21BEDE'
-]
+const customIconColors = ["#F2583E", "#21BEDE"]
 
 const baseCss = css`
   display: flex;
@@ -46,9 +43,9 @@ function StoryCase({
   children,
   className,
 }: {
-  info: React.ReactNode;
-  children: React.ReactNode;
-  className?: string;
+  info: React.ReactNode
+  children: React.ReactNode
+  className?: string
 }) {
   return (
     <div css={baseCss} className={className}>
@@ -58,16 +55,25 @@ function StoryCase({
   )
 }
 
-function ThemeColorCase({ Component, getColor, colorPath }: { Component: React.ComponentType<IconProps>; colorPath: string; getColor: (themeColors: Theme['colors']) => string }) {
+function ThemeColorCase({
+  Component,
+  getColor,
+  colorLabel,
+}: {
+  Component: React.ComponentType<IconProps>
+  colorLabel: string
+  getColor: (themeColors: Theme["colors"]) => string
+}) {
   const { colors } = useTheme()
 
   const color = getColor(colors)
 
   return (
-    <StoryCase
-      info={<span style={{ color }}>{colorPath}</span>}
-    >
-      <Component sx={{ color: colorPath }} height="3em" />
+    <StoryCase info={<span style={{ color }}>{colorLabel}</span>}>
+      <Component
+        css={theme => ({ color: getColor(theme.colors) })}
+        height="3em"
+      />
     </StoryCase>
   )
 }
@@ -146,13 +152,13 @@ sortedIconComponentNames.forEach(componentName => {
           <h2>Theme color:</h2>
           <ThemeColorCase
             Component={Component}
-            colorPath="gatsby"
-            getColor={(colors) => colors.gatsby}
+            colorLabel="gatsby"
+            getColor={colors => colors.gatsby}
           />
           <ThemeColorCase
             Component={Component}
-            colorPath="green.50"
-            getColor={(colors) => colors.green[50]}
+            colorLabel="green.50"
+            getColor={colors => colors.green[50]}
           />
           <h2>Custom colors:</h2>
           {customIconColors.map(colorCase => (
