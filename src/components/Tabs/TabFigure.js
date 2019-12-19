@@ -6,7 +6,6 @@ import colors from "../../theme/colors"
 import space from "../../theme/space"
 import fonts from "../../theme/fonts"
 import breakpoints from "../../theme/breakpoints"
-import fontSizes from "../../theme/fontSizes"
 
 const TabFigure = ({ children }) => (
   <span
@@ -17,7 +16,7 @@ const TabFigure = ({ children }) => (
       color: colors.white,
       display: `flex`,
       fontFamily: fonts.system,
-      fontSize: fontSizes[`3xs`],
+      fontSize: `0.6875rem`,
       fontWeight: `bold`,
       height: `20px`,
       justifyContent: `center`,
