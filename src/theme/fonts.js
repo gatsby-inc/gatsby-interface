@@ -1,9 +1,9 @@
-import { fonts as baseFonts } from "gatsby-design-tokens"
+import { fonts as rawFonts } from "gatsby-design-tokens"
 
 const fonts = {} // Object.keys(baseFonts).map(key => baseFonts[key].join())
 
-for (const prop in baseFonts) {
-  fonts[prop] = baseFonts[prop].join()
+for (const prop in rawFonts) {
+  fonts[prop] = rawFonts[prop].join()
 }
 
 export default fonts
