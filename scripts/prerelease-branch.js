@@ -8,6 +8,7 @@
 import sh from "shelljs"
 import chalk from "chalk"
 import format from "date-fns/format"
+import addMinutes from "date-fns/addMinutes"
 import pkg from "../package.json"
 
 const branch = process.env.CIRCLE_BRANCH
@@ -35,17 +36,18 @@ if (branch === `master` || branch === `dev`) {
 const normalizedBranch = branch.replace(/(\/|_)/g, "-").normalize()
 
 /**
- * Important: we're formatting current UTC time as YYYYMMDDTHHmm
+ * Important: we're formatting current UTC time as yyyyMMdd'T'HHmm
  * with T as a separator between date and time
  * This is because a pre-release version's identifiers must comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
  * Identifiers must not be empty and numeric identifiers MUST NOT include leading zeroes
  * (see https://npm.community/t/npm-version-cannot-set-version-with-numeric-commit-hash/2467/2).
  * Using "T" prevents NPM treating something like "20191218T0139" as an incorrect identifier
  */
-const version = `${pkg.version}-${normalizedBranch}-${format(
-  new Date(),
-  "YYYYMMDDTHHmm"
-)}`
+const now = new Date()
+const utcDate = addMinutes(now, now.getTimezoneOffset())
+const formattedTime = format(utcDate, "yyyyMMdd'T'HHmm")
+
+const version = `${pkg.version}-${normalizedBranch}-${formattedTime}`
 const tag = normalizedBranch
 
 sh.echo(
