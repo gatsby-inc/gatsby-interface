@@ -66,7 +66,7 @@ sh.cd(sh.pwd())
 
 // Bump the version without a git tag since we're not going to push it to Git
 runCommand(`npm version ${version} --no-git-tag-version`)
-// Attaches distribution tag to the new version
-runCommand(`npm dist-tag add ${packageName}@${version} ${tag}`)
 // Publishes tag to NPM
 runCommand(`npm publish ‑‑tag ${tag}`)
+// Attaches distribution tag to the new version
+runCommand(`npm dist-tag add ${packageName}@${version} ${tag}`)
