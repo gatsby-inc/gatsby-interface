@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.60-Elanhant",
+  "version": "0.0.60-alpha",
   "description": "Component library for Gatsby projects",
   "source": "src/index.js",
   "files": [
