@@ -9,10 +9,9 @@ import { Link } from "../Link"
 import { Button } from "../Button"
 import { Heading } from "../Heading"
 import { Badge } from "../Badge"
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 import space from "../../theme/space"
 import fontSizes from "../../theme/fontSizes"
-import fonts from "../../theme/fonts"
 import colors from "../../theme/colors"
 import cardStyles from "../../theme/styles/card"
 import { AnchorButton } from "../AnchorButton"
@@ -176,9 +175,7 @@ function renderData(data = [], primaryStyling) {
           as="span"
           variant="LIGHT"
           css={{
-            fontFamily: primaryStyling
-              ? fonts.header.join(`,`)
-              : fontFamilies.system.join(`,`),
+            fontFamily: primaryStyling ? fonts.header : fonts.system,
             textTransform: primaryStyling ? `uppercase` : `capitalize`,
           }}
         >

@@ -4,7 +4,9 @@ import styled from "@emotion/styled"
 
 import colors from "../../theme/colors"
 
-import { radius, fontFamilies, fontSizes } from "../../utils/presets"
+import fonts from "../../theme/fonts"
+import radii from "../../theme/radii"
+import fontSizes from "../../theme/fontSizes"
 import space from "../../theme/space"
 
 import RadioSkeleton, {
@@ -21,8 +23,8 @@ const Label = styled(`label`)`
   color: ${colors.grey[80]};
   cursor: pointer;
   display: flex;
-  font-family: ${fontFamilies.bodyFontFamily};
-  font-size: ${fontSizes.s};
+  font-family: ${fonts.system};
+  font-size: ${fontSizes[2]};
   line-height: 1;
   padding-left: calc(${INPUT_OUTER_DIA} + ${space[4]});
   position: relative;
@@ -58,7 +60,7 @@ const Label = styled(`label`)`
 
   small {
     color: ${colors.grey[50]};
-    font-size: ${fontSizes.xs};
+    font-size: ${fontSizes[1]};
     line-height: 1.1;
   }
 
@@ -120,7 +122,7 @@ const ColourfulContainer = styled(StandardContainer)`
     background: #eee;
   }
   :before {
-    border-radius: ${radius.large};
+    border-radius: ${radii[3]};
     bottom: 0;
     left: 0;
     opacity: 0;

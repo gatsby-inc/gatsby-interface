@@ -2,8 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import CardSkeleton, { SkeletonStyledComponent } from "./Card.Skeleton"
-import { breakpoints } from "../../utils/presets"
 import space from "../../theme/space"
+import breakpoints from "../../theme/breakpoints"
 
 export const StyledBaseCard = styled(SkeletonStyledComponent)`
   box-shadow: 0px 1px 2px rgba(46, 41, 51, 0.08),

@@ -15,7 +15,8 @@ import colors from "../../theme/colors"
 import fonts from "../../theme/fonts"
 import fontSizes from "../../theme/fontSizes"
 import fontWeights from "../../theme/fontWeights"
-import { breakpoints, radius } from "../../utils/presets"
+import radii from "../../theme/radii"
+import breakpoints from "../../theme/breakpoints"
 import space from "../../theme/space"
 import { Heading } from "../Heading"
 
@@ -118,7 +119,7 @@ PricingCard.Frame = ({ children, ...rest }) => {
         position: `relative`,
         width: `100%`,
         flexDirection: `column`,
-        borderRadius: radius.large,
+        borderRadius: radii[3],
 
         [`@media(min-width: ${breakpoints.tablet}px)`]: {},
       }}
@@ -158,7 +159,7 @@ PricingCard.Nav = () => {
             border: `none`,
             color: visibleOnMobile === idx ? plan.color : colors.grey[70],
             cursor: `pointer`,
-            fontFamily: fonts.header.join(`,`),
+            fontFamily: fonts.header,
             fontSize: fontSizes[2],
             padding: `${space[5]} ${space[4]} ${space[4]}`,
             position: `relative`,
@@ -215,7 +216,7 @@ PricingCard.Plan = ({ children, plan, idx, ...rest }) => {
           : `2px solid ${
               variant === `SECONDARY` ? colors.purple[90] : colors.white
             }`,
-        borderRadius: radius.large,
+        borderRadius: radii[3],
         padding: `${space[7]} ${space[7]} 0 `,
         display: visibleOnMobile === idx ? `flex` : `none`,
         position: `relative`,
@@ -305,7 +306,7 @@ PricingCard.Intro = ({ plan }) => {
       dangerouslySetInnerHTML={{ __html: intro }}
       css={{
         textAlign: `center`,
-        fontFamily: fonts.system.join(`,`),
+        fontFamily: fonts.system,
         marginTop: space[5],
         fontSize: fontSizes[1],
         color: variant === `SECONDARY` ? colors.purple[30] : colors.grey[60],
@@ -330,7 +331,7 @@ PricingCard.PriceTag = ({ plan }) => {
   return (
     <div
       css={{
-        fontFamily: fonts.header.join(`,`),
+        fontFamily: fonts.header,
         marginTop: space[7],
         lineHeight: 1,
       }}
@@ -355,7 +356,7 @@ PricingCard.PriceTag = ({ plan }) => {
 
       <span
         css={{
-          fontFamily: fonts.system.join(`,`),
+          fontFamily: fonts.system,
           color: colors.grey[50],
           fontSize: fontSizes[0],
           display: `inline-block`,
@@ -526,7 +527,7 @@ PricingCard.UnifiedCta = ({ children, ...rest }) => {
         <span
           dangerouslySetInnerHTML={{ __html: comment }}
           css={{
-            fontFamily: fonts.header.join(`,`),
+            fontFamily: fonts.header,
             color: colors.grey[50],
             fontSize: fontSizes[2],
             margin: 0,

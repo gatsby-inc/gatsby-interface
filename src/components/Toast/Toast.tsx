@@ -3,10 +3,13 @@ import React from "react"
 import Alert from "@reach/alert"
 import { keyframes, css, jsx } from "@emotion/core"
 import { MdDone, MdClose, MdWarning } from "react-icons/md"
-import { fontSizes, dimensions, radius } from "../../utils/presets"
+
 import { ToastTone } from "./types"
+import fontSizes from "../../theme/fontSizes"
+import dimensions from "../../theme/dimensions"
 import space from "../../theme/space"
 import colors from "../../theme/colors"
+import radii from "../../theme/radii"
 
 const toastEntryAnimation = keyframes`
   100% {
@@ -19,10 +22,10 @@ const toastCss = css`
   animation: ${toastEntryAnimation} 0.5s 0.25s ease forwards;
   background: ${colors.grey[90]};
   border-left: 8px solid ${colors.green[50]};
-  border-radius: ${radius.default} ${radius.default} 0 0;
+  border-radius: ${radii[2]} ${radii[2]} 0 0;
   color: ${colors.green[5]};
   display: flex;
-  font-size: ${fontSizes.xs};
+  font-size: ${fontSizes[1]};
   min-height: ${dimensions.toast.minHeight};
   max-width: calc(100% - (${space[7]} * 2));
   padding-left: ${space[4]};
@@ -35,7 +38,7 @@ const toastCss = css`
   }
 
   &:not(:first-of-type) {
-    border-radius: ${radius.default};
+    border-radius: ${radii[2]};
     margin-bottom: ${space[1]};
   }
 `

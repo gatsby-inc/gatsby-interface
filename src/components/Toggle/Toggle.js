@@ -81,7 +81,7 @@ Toggle.Wrapper = ({ children, customCss, ...rest }) => {
           display: `flex`,
           color: colors.grey[90],
           cursor: `pointer`,
-          fontFamily: fonts.system.join(`,`),
+          fontFamily: fonts.system,
 
           "span:last-child": {
             order: inOnPosition === `RIGHT` ? 2 : 0,

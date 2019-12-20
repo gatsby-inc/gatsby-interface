@@ -14,6 +14,7 @@ const BaseNavigationContext = React.createContext()
 
 const BaseNavigation = ({
   items = [],
+  secondaryItems = [],
   children,
   isInverted = false,
   mobileNavMediaQuery = `@media (max-width: 1065px)`,
@@ -49,6 +50,7 @@ const BaseNavigation = ({
 
   const value = {
     items,
+    secondaryItems,
     rootChildren: children,
     isInverted,
     mobileNavMediaQuery,
@@ -138,16 +140,22 @@ BaseNavigation.Nav = ({ ...rest }) => {
 BaseNavigation.List = ({ ...rest }) => {
   const {
     items,
+    secondaryItems,
     rootChildren,
     components: { Item },
   } = BaseNavigation.useNavigationContext()
 
   return (
-    <ul css={baseStyles.list.default} {...rest}>
-      {items.length > 0 &&
-        items.map(item => <Item key={item.name} item={item} />)}
-      {rootChildren && rootChildren}
-    </ul>
+    <div css={baseStyles.list.wrapper}>
+      <ul css={[baseStyles.list.side, baseStyles.list.leftSide]} {...rest}>
+        {items.length > 0 &&
+          items.map(item => <Item key={item.name} item={item} />)}
+        <div css={baseStyles.list.spacer} />
+        {secondaryItems.length > 0 &&
+          secondaryItems.map(item => <Item key={item.name} item={item} />)}
+        {rootChildren && rootChildren}
+      </ul>
+    </div>
   )
 }
 

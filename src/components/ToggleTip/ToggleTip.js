@@ -7,7 +7,7 @@ import { MdInfo } from "react-icons/md"
 import { useEventListener } from "../../utils/hooks"
 import colors from "../../theme/colors"
 import fontSizes from "../../theme/fontSizes"
-import { radius } from "../../utils/presets"
+import radii from "../../theme/radii"
 import space from "../../theme/space"
 import { showCustomCssDeprecationMessage } from "../../utils/maintenance/deprecationMessages"
 
@@ -127,7 +127,7 @@ ToggleTip.Tip = forwardRef(
                 {
                   animation: `${tipEntry} .5s ease forwards`,
                   background: colors.grey[80],
-                  borderRadius: radius.default,
+                  borderRadius: radii[2],
                   bottom: `calc(100% + .75rem)`,
                   color: colors.white,
                   fontSize: fontSizes[1],

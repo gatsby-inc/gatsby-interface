@@ -7,7 +7,7 @@ import colors from "../../theme/colors"
 import card from "../../theme/styles/card"
 import tones from "../../theme/tones"
 import space from "../../theme/space"
-import { breakpoints } from "../../utils/presets"
+import breakpoints from "../../theme/breakpoints"
 import { NotificationTone, NotificationVariant } from "./types"
 import { ToneColors } from "../../theme/tones"
 

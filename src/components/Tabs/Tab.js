@@ -5,21 +5,18 @@ import { Link } from "gatsby"
 
 import colors from "../../theme/colors"
 import space from "../../theme/space"
-
-import {
-  radius,
-  breakpoints,
-  fontFamilies,
-  fontSizes,
-} from "../../utils/presets"
+import breakpoints from "../../theme/breakpoints"
+import fontSizes from "../../theme/fontSizes"
+import radii from "../../theme/radii"
+import fonts from "../../theme/fonts"
 
 export const baseStyles = {
   alignItems: `center`,
-  borderRadius: `${radius.default} ${radius.default} 0 0`,
+  borderRadius: `${radii[2]} ${radii[2]} 0 0`,
   color: colors.purple[50],
   display: `inline-flex`,
-  fontFamily: fontFamilies.headerFontFamily,
-  fontSize: fontSizes.m,
+  fontFamily: fonts.header,
+  fontSize: fontSizes[3],
   fontWeight: `bold`,
   height: `3.5rem`,
   margin: `0 ${space[2]}`,

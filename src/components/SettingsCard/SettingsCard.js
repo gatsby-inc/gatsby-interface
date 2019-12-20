@@ -7,7 +7,7 @@ import { MdEdit, MdArrowForward } from "react-icons/md"
 import { ContentBox } from "../ContentBox"
 import { Button } from "../Button"
 import { Heading } from "../Heading"
-import { fontFamilies } from "../../utils/presets"
+import fonts from "../../theme/fonts"
 import space from "../../theme/space"
 import cardStyles from "../../theme/styles/card"
 import fontSizes from "../../theme/fontSizes"
@@ -72,7 +72,7 @@ SettingsCard.Description = ({ children, ...rest }) => (
     css={{
       color: colors.grey[50],
       fontSize: fontSizes[1],
-      fontFamily: fontFamilies.bodyFontFamily,
+      fontFamily: fonts.system,
       lineHeight: 1.4,
       margin: 0,
 

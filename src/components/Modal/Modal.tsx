@@ -6,8 +6,8 @@ import {
   DialogContentProps,
 } from "@reach/dialog"
 import styled from "@emotion/styled"
-import { zIndices } from "../../utils/presets"
 import colors from "../../theme/colors"
+import zIndices from "../../theme/zIndices"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
 import { keyframes } from "@emotion/core"
 
@@ -34,7 +34,7 @@ const warnFade = buildFadeIn(hexToRGBA(colors.orange[50], 0.75))
 export interface ModalProps
   extends Omit<DialogOverlayProps, "ref">,
     Omit<DialogContentProps, "ref"> {
-  type?: ModalType
+  type?: ModalType;
 }
 
 const getBackgroundAnimation = (type?: ModalType) => {

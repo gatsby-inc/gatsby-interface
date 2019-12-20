@@ -104,10 +104,27 @@ const baseStyles = {
     },
   },
   list: {
-    default: {
+    wrapper: {
+      width: `100%`,
+      display: `flex`,
+      justifyContent: `space-between`,
+    },
+    spacer: {
+      flex: 1,
+    },
+    side: {
       listStyle: `none`,
       margin: 0,
       padding: 0,
+    },
+    leftSide: {
+      display: `flex`,
+      justifyContent: `flex-start`,
+      flex: 1,
+    },
+    rightSide: {
+      display: `flex`,
+      justifyContent: `flex-end`,
     },
   },
   item: isInverted => {
