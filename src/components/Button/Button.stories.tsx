@@ -30,7 +30,7 @@ import {
   showcaseIcons,
 } from "./utils/storybook-styles"
 
-storiesOf(`Button`, module)
+storiesOf(`buttons/Button`, module)
   .addParameters({
     options: {
       showPanel: true,

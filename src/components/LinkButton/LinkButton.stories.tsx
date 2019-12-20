@@ -16,7 +16,7 @@ const defaultProps: LinkButtonProps = {
   to: `/`,
 }
 
-storiesOf(`LinkButton`, module)
+storiesOf(`buttons/LinkButton`, module)
   .addParameters({
     options: {
       showPanel: true,
