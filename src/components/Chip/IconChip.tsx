@@ -17,7 +17,7 @@ const iconOffsetCss = css({
   marginRight: `0.25rem`,
 })
 
-const iconOnlyCss = css({ padding: 0, textAlign: "center" })
+const iconOnlyCss = css({ padding: 0, justifyContent: `space-around` })
 
 export type IconChipProps = ChipProps & {
   icon: React.ReactNode | null;

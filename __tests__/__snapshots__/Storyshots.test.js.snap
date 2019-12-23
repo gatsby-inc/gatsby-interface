@@ -1543,6 +1543,7 @@ exports[`Storyshots AnchorButton with icons 1`] = `
     -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
+}
 
 @keyframes animation-0 {
   33% {
@@ -2564,249 +2565,6 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
   padding: 20px;
 }
 
-.emotion-0 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-1"
-        >
-          <div
-            class="emotion-0"
-          >
-            <a
-              href="https://gatsbyjs.com"
-              rel=" noopener noreferrer"
-              target="_blank"
-            >
-              Anchor
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots BaseButton default 1`] = `
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-6 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-8 {
-  width: 100%;
-}
-
-.emotion-0 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-1"
-        >
-          <div
-            class="emotion-0"
-          >
-            <button
-              type="button"
-            >
-              Button
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots BaseButton with loading state 1`] = `
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-0 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-1"
-        >
-          <div
-            class="emotion-0"
-          >
-            <button
-              disabled=""
-              type="button"
-            >
-              <span>
-                Loading...
-              </span>
-               
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots BaseLink default 1`] = `
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-0 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-1"
-        >
-          <div
-            class="emotion-0"
-          >
-            <a
-              aria-current="page"
-              class=""
-              href="/"
-            >
-              Link
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
-.emotion-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
 .emotion-1 {
   display: none;
 }
@@ -2828,6 +2586,24 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
 }
 
 .emotion-6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
   width: 100%;
 }
 
@@ -2927,10 +2703,10 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
     <div>
       <div>
         <div
-          class="emotion-7"
+          class="emotion-9"
         >
           <div
-            class="emotion-6"
+            class="emotion-8"
           >
             <button
               aria-expanded=""
@@ -2941,7 +2717,7 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
               />
             </button>
             <nav
-              class="emotion-5"
+              class="emotion-7"
             >
               <div
                 class="emotion-6"
@@ -3613,19 +3389,6 @@ exports[`Storyshots Button legacy Buttons 1`] = `
     -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
-
-@keyframes animation-0 {
-  33% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  66% {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
 }
 
 @keyframes animation-0 {
@@ -3710,19 +3473,6 @@ exports[`Storyshots Button legacy Buttons 1`] = `
     -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
-
-@keyframes animation-0 {
-  33% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  66% {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
 }
 
 @keyframes animation-0 {
@@ -3759,7 +3509,34 @@ exports[`Storyshots Button legacy Buttons 1`] = `
     -ms-transform: scale(1);
     transform: scale(1);
   }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
   66% {
     -webkit-transform: scale(0.8);
@@ -4439,7 +4216,7 @@ exports[`Storyshots Button manually applied styles 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5891,7 +5668,77 @@ exports[`Storyshots Button variants 1`] = `
   }
 }
 
-.emotion-5 {
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5909,13 +5756,13 @@ exports[`Storyshots Button variants 1`] = `
   padding: 20px;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: grid;
   justify-items: start;
   grid-gap: 2rem;
 }
 
-.emotion-2 {
+.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5947,68 +5794,10 @@ exports[`Storyshots Button variants 1`] = `
   font-weight: bold;
 }
 
-.emotion-2[disabled],
-.emotion-2[disabled]:hover {
+.emotion-0[disabled],
+.emotion-0[disabled]:hover {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.emotion-2 svg {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin: 0 0.25rem;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-2:hover:not([disabled]) svg {
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.emotion-2:hover {
-  background: #542c85;
-  border: 1px solid #542c85;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: #635e69;
-  border-radius: 4px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
-  transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  min-height: 1.6rem;
-  padding: 0.3rem 0.5rem;
-  background: #663399;
-  border: 1px solid #663399;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.emotion-3 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
 }
 
 .emotion-0 svg {
@@ -6027,64 +5816,6 @@ exports[`Storyshots Button variants 1`] = `
 }
 
 .emotion-0:hover {
-  background: #542c85;
-  border: 1px solid #542c85;
-}
-
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: #635e69;
-  border-radius: 4px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
-  transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  min-height: 2rem;
-  padding: 0.45rem 0.75rem;
-  background: #663399;
-  border: 1px solid #663399;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.emotion-1[disabled],
-.emotion-1[disabled]:hover {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-1 svg {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin: 0 0.25rem;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-1:hover:not([disabled]) svg {
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.emotion-1:hover {
   background: #542c85;
   border: 1px solid #542c85;
 }
@@ -6611,6 +6342,351 @@ exports[`Storyshots Button with icons 1`] = `
               </svg>
               On the left
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Chip Chip 1`] = `
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div>
+            <span
+              class="emotion-0"
+            >
+              Lorem ipsum
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Chip IconChip 1`] = `
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+  padding: 0;
+  text-align: center;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-4"
+        >
+          <div>
+            <span
+              class="emotion-1"
+            >
+              <span
+                class="emotion-0"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                  />
+                </svg>
+              </span>
+            </span>
+             
+            <span
+              class="emotion-3"
+            >
+              <span
+                class="emotion-2"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-testid="icon-PortfolioIcon"
+                  fill="none"
+                  fill-rule="evenodd"
+                  height="24px"
+                  preserveAspectRatio="xMidYMid meet"
+                  stroke="currentColor"
+                  stroke-width="1"
+                  style="vertical-align: middle;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                >
+                  <path
+                    d="M6.43308 15.749C6.06531 14.8383 5.92674 13.8512 6.02954 12.8744C6.13233 11.8976 6.47335 10.961 7.02265 10.1468C7.57196 9.33253 8.31275 8.66561 9.17999 8.20454C10.0472 7.74347 11.0144 7.50235 11.9966 7.50235C12.9788 7.50235 13.9459 7.74347 14.8132 8.20454C15.6804 8.66561 16.4212 9.33253 16.9705 10.1468C17.5198 10.961 17.8608 11.8976 17.9636 12.8744C18.0664 13.8512 17.9279 14.8383 17.5601 15.749"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.1551 7.78601L11.8461 10.048C11.9643 10.2056 12.0503 10.3849 12.0992 10.5757C12.1481 10.7666 12.1589 10.9651 12.131 11.1601C12.1032 11.3551 12.0372 11.5428 11.9368 11.7123C11.8364 11.8817 11.7037 12.0298 11.5461 12.148L9.74609 13.498V14.248C9.74609 14.6458 9.58806 15.0274 9.30675 15.3087C9.02545 15.59 8.64392 15.748 8.24609 15.748"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.629 11.427L15.323 12.587C15.0175 12.7396 14.7732 12.9918 14.6305 13.302C14.4878 13.6121 14.4551 13.9618 14.538 14.293L14.91 15.749"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.74609 2.24799V0.747986"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.2461 2.24799V0.747986"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.5 18.748C7.5 19.1458 7.65804 19.5273 7.93934 19.8086C8.22064 20.09 8.60218 20.248 9 20.248H15C15.3978 20.248 15.7794 20.09 16.0607 19.8086C16.342 19.5273 16.5 19.1458 16.5 18.748"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22.2461 15.748H1.74609C1.19381 15.748 0.746094 16.1957 0.746094 16.748V22.248C0.746094 22.8003 1.19381 23.248 1.74609 23.248H22.2461C22.7984 23.248 23.2461 22.8003 23.2461 22.248V16.748C23.2461 16.1957 22.7984 15.748 22.2461 15.748Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 15.748V3.74799C3 3.35016 3.15804 2.96863 3.43934 2.68733C3.72064 2.40602 4.10218 2.24799 4.5 2.24799H19.5C19.8978 2.24799 20.2794 2.40602 20.5607 2.68733C20.842 2.96863 21 3.35016 21 3.74799V15.748"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              Lorem ipsum
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Chip anchor chip example 1`] = `
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-1 {
+  margin-right: 0.5rem;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <div>
+            <a
+              class="emotion-1"
+              href="https://google.com"
+              rel=" noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="emotion-0"
+              >
+                Google
+              </span>
+            </a>
+            <a
+              href="https://yandex.com"
+              rel=" noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="emotion-0"
+              >
+                Yandex
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -7490,7 +7566,6 @@ exports[`Storyshots Heading variants 1`] = `
   grid-gap: 2rem;
 }
 
-exports[`Storyshots File Upload Multi File Upload 1`] = `
 .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7746,113 +7821,20 @@ exports[`Storyshots IntegrationRow default usage 1`] = `
   }
 }
 
-.emotion-4 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #eee;
-  color: green;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: .9rem;
-  font-weight: normal;
-  margin-left: 2em;
-  padding: .3em .6em;
-  vertical-align: text-bottom;
-}
-
-.emotion-0 svg {
-  margin-right: 0.2em;
-}
-
-.emotion-1 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #232129;
-  line-height: 1.125;
-  font-weight: bold;
-}
-
-.emotion-2 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #232129;
-  line-height: 1.125;
-  font-weight: 800;
-}
-
-.emotion-3 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #78757a;
-  line-height: 1.125;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-5"
-        >
-          <div
-            class="emotion-4"
-          >
-            <h2
-              class="emotion-1"
-            >
-              Heading variant - PRIMARY 
-              <div
-                class="emotion-0"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                  />
-                </svg>
-                 default
-              </div>
-            </h2>
-            <h2
-              class="emotion-2"
-            >
-              Heading variant - EMPHASIZED
-            </h2>
-            <h2
-              class="emotion-3"
-            >
-              Heading variant - LIGHT
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots IntegrationRow default usage 1`] = `
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -8932,20 +8914,32 @@ exports[`Storyshots IntegrationRow with inline SVG as logo 1`] = `
   }
 }
 
-.emotion-5 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #78757a;
-  line-height: 1.125;
-  font-weight: 100;
-  text-transform: uppercase;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  text-transform: uppercase;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-7 {
-  margin-top: 0.25rem;
-  color: #232129;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
 @keyframes animation-0 {
@@ -12152,13 +12146,13 @@ exports[`Storyshots LinkButton with icons 1`] = `
   font-weight: bold;
 }
 
-.emotion-0[disabled],
-.emotion-0[disabled]:hover {
+.emotion-1[disabled],
+.emotion-1[disabled]:hover {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -12169,7 +12163,7 @@ exports[`Storyshots LinkButton with icons 1`] = `
   margin-left: -0.30em;
 }
 
-.emotion-0:hover:not([disabled]) svg {
+.emotion-1:hover:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -12651,7 +12645,6 @@ exports[`Storyshots Navigation default example 1`] = `
     -webkit-font-smoothing: antialiased;
     font-size: 1.75rem;
   }
-}
 
   .emotion-2:focus,
   .emotion-2:hover {
@@ -14088,36 +14081,39 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
     transform: scale(1);
   }
 
-.emotion-0.active {
-  background: 0 0;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-0.active:after {
-  background: #000000;
-  top: 0;
-  width: 24px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-0.active:before {
-  background: #000000;
-  top: 0;
-  width: 24px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-.emotion-0.active:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.emotion-0.active {
-  background: 0 0;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
 @keyframes animation-0 {
@@ -14912,7 +14908,6 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
     padding: 0;
     margin-bottom: 0.75rem;
   }
-}
 
   .emotion-9:after {
     content: none;
@@ -16264,519 +16259,237 @@ exports[`Storyshots Notification default 1`] = `
     transform: scale(1);
   }
 
-.emotion-11 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-1 {
-  display: none;
-}
-
-@media (max-width:1065px) {
-  .emotion-1 {
-    background: none;
-    border: 0;
-    display: block;
-    margin-left: auto;
-    margin-top: -6px;
-    padding: 0;
-    position: relative;
-    z-index: 22;
-    cursor: pointer;
-    -webkit-transition: all 250ms cubic-bezier(0.4,0,0.2,1);
-    transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-.emotion-0 {
-  width: 24px;
-  height: 3px;
-  border-radius: 2px;
-  background: #000000;
-  margin: 10px 0;
-  position: relative;
-  z-index: 1000;
-}
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-.emotion-0:before {
-  content: " ";
-  top: -7px;
-  width: 20px;
-  right: 0;
-  border-radius: 2px;
-  height: 3px;
-  background: #000000;
-  position: absolute;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
-  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
-  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
-}
-
-.emotion-0:after {
-  content: " ";
-  top: 7px;
-  width: 16px;
-  right: 0;
-  border-radius: 2px;
-  height: 3px;
-  background: #000000;
-  position: absolute;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(.68,-.55,.265,1.55);
-  -webkit-transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
-  transition: transform 250ms cubic-bezier(.68,-.55,.265,1.55);
-}
-
-.emotion-0.active {
-  background: 0 0;
-}
-
-.emotion-0.active:after {
-  background: #000000;
-  top: 0;
-  width: 24px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.emotion-0.active:before {
-  background: #000000;
-  top: 0;
-  width: 24px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.emotion-0.active:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.emotion-0.active {
-  background: 0 0;
-}
-
-.emotion-0.active:after {
-  background: #ffffff;
-  top: 0;
-  width: 24px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.emotion-0.active:before {
-  background: #ffffff;
-  top: 0;
-  width: 24px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.emotion-0.active:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.emotion-10 {
-  margin: 0 0 0 auto;
-  padding: 0 1rem;
-}
-
-@media (max-width:1065px) {
-  .emotion-10 {
-    display: none;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-@media (max-width:1065px) {
-  .emotion-10 {
-    display: none;
-    position: fixed;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    background: rgba(54,32,102,0.975);
-    padding: 5rem 3.5rem 5rem;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-align: right;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-.emotion-9 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-@media (max-width:1065px) {
-  .emotion-9 {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0 1rem;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 90rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-.emotion-8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  color: #000000;
-  padding: 0 0.75rem;
-}
-
-.emotion-8:hover > ul {
-  display: inline-block;
-  position: absolute;
-  top: 95%;
-  right: 0;
-  left: 0;
-  margin: 0;
-  padding: 0.75rem 0;
-}
-
-.emotion-8:hover > ul {
-  font-size: 0.875rem;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  left: auto;
-  right: 0;
-  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
-  background: #ffffff;
-  width: 260px;
-  border-radius: 2px;
-}
-
-.emotion-8:hover > ul:after {
-  position: absolute;
-  top: -6px;
-  right: 16px;
-  margin: 0 0 0 -6px;
-  width: 12px;
-  height: 12px;
-  content: " ";
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border-radius: 2 0 0 0;
-  background: #ffffff;
-  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
-  will-change: transform;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-}
-
-@media (max-width:1065px) {
-  .emotion-8 {
-    display: block;
-    color: #ffffff;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 
-  .emotion-8:hover > ul {
-    width: 100%;
-    color: #ffffff;
-    position: relative;
-    background: 0;
-    padding: 0;
-    margin-bottom: 0.75rem;
-  }
-
-  .emotion-8:hover > ul:after {
-    content: none;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-.emotion-2 {
-  display: block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
-  font-size: 0.875rem;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
-  -webkit-font-smoothing: antialiased;
-  line-height: calc(3.33rem);
-  position: relative;
-}
-
-.emotion-2 span {
-  position: relative;
-}
-
-.emotion-2.nav-item-active {
-  color: #663399;
-}
-
-.emotion-2.nav-item-active span:after {
-  width: 100%;
-}
-
-.emotion-2 span:after {
-  position: absolute;
-  content: " ";
-  display: block;
-  width: 0;
-  height: 1px;
-  bottom: -4px;
-  opacity: 0.2;
-  background: linear-gradient(45deg,#8a4baf,#663399);
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
-}
-
-.emotion-2:hover {
-  opacity: 0.8;
-}
-
-@media (max-width:1065px) {
-  .emotion-2 {
-    color: #ffffff;
-    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    font-weight: normal;
-    -webkit-transition: opacity 250ms;
-    transition: opacity 250ms;
-    -webkit-font-smoothing: antialiased;
-    font-size: 1.75rem;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 
-  .emotion-2:focus,
-  .emotion-2:hover {
-    color: #ffb238;
-    background: none;
-    opacity: 1;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-.emotion-4 {
-  color: #000000;
-  background: inherit;
-  margin-left: 0.125rem;
-  border: none;
-}
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-@media (max-width:1065px) {
-  .emotion-4 {
-    display: none;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-.emotion-3 {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
-}
-
-.emotion-7 {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 0.875rem;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  left: auto;
-  right: 0;
-  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
-  background: #ffffff;
-  width: 260px;
-  border-radius: 2px;
-}
-
-.emotion-7:after {
-  position: absolute;
-  top: -6px;
-  right: 16px;
-  margin: 0 0 0 -6px;
-  width: 12px;
-  height: 12px;
-  content: " ";
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border-radius: 2 0 0 0;
-  background: #ffffff;
-  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
-  will-change: transform;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-}
-
-@media (max-width:1065px) {
-  .emotion-7 {
-    display: inline-block;
-    background: 0;
-    width: 100%;
-    color: #ffffff;
-    position: relative;
-    padding: 0;
-    margin-bottom: 0.75rem;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 
-  .emotion-7:after {
-    content: none;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-.emotion-5 a {
-  color: #78757a;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  display: block;
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
-}
-
-.emotion-5 a:hover {
-  color: #232129;
-  background: rgba(255,178,56,0.1);
-}
-
-.emotion-5 a:focus-within {
-  color: #232129;
-  background: rgba(255,178,56,0.1);
-}
-
-@media (max-width:1065px) {
-  .emotion-5 a {
-    color: #ffffff;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    padding: 0;
-    margin: 0.5rem 0 0 0;
-    font-size: 0.875rem;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 
-  .emotion-5 a:hover,
-  .emotion-5 a:focus-within {
-    opacity: 1;
-    color: #ffb238;
-    background: none;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-12"
-        >
-          <div
-            class="emotion-11"
-          >
-            <button
-              aria-expanded=""
-              class="emotion-1"
-            >
-              <div
-                class=" emotion-0"
-              />
-            </button>
-            <nav
-              class="emotion-10"
-            >
-              <ul
-                class="emotion-9"
-              >
-                <li
-                  class="emotion-8"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/about/"
-                  >
-                    <span>
-                      About
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="About-dropdown"
-                    aria-expanded="false"
-                    class="emotion-4"
-                  >
-                    <span
-                      aria-hidden="true"
-                    >
-                      ∨
-                    </span>
-                    <span
-                      class="emotion-3"
-                    >
-                      About Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-7"
-                    id="About-dropdown"
-                  >
-                    <li
-                      class="emotion-5"
-                    >
-                      <a
-                        href="/contact/"
-                      >
-                        Contact
-                      </a>
-                    </li>
-                    <li
-                      class="emotion-5"
-                    >
-                      <a
-                        href="/faq/"
-                      >
-                        FAQ
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-exports[`Storyshots Notification default 1`] = `
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -23030,43 +22743,6 @@ exports[`Storyshots Radio dangerouslySetInnerHtml as label 1`] = `
                   </div>
                 </label>
               </div>
-            </div>
-            <div
-              class="emotion-5"
-            >
-              <header
-                class="emotion-2"
-              >
-                <h3
-                  class="emotion-1"
-                >
-                  Automated Integrations 
-                  <a
-                    aria-current="page"
-                    class="emotion-0"
-                    href="/"
-                  >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      stroke-width="0"
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                      />
-                    </svg>
-                  </a>
-                </h3>
-                <p
-                  class="emotion-8"
-                >
-                  Gatsby Cloud can automatically deploy each site build to one or more CDN hosts of your choice—just connect and you are good to go!
-                </p>
-              </header>
               <div
                 class=" undefined emotion-4 emotion-5"
               >
@@ -25110,18 +24786,23 @@ exports[`Storyshots SettingsCard custom EditButton 1`] = `
   color: #663399;
 }
 
-@keyframes animation-0 {
-  33% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  66% {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
+.emotion-11 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #fbfbfb;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
 }
 
 .emotion-4 {
@@ -25645,193 +25326,48 @@ exports[`Storyshots SettingsCard default usage 1`] = `
   }
 }
 
-.emotion-5 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: #635e69;
-  border-radius: 4px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
-  transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1.125rem;
-  min-height: 2.4rem;
-  padding: 0.55rem 1rem;
-  background: transparent;
-  border: 1px solid transparent;
-  color: #663399;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-1[disabled],
-.emotion-1[disabled]:hover {
-  cursor: not-allowed;
-  opacity: 0.5;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-1 svg {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin: 0 0.25rem;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-1:hover:not([disabled]) svg {
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.emotion-1:hover {
-  background: #fcfaff;
-  color: #663399;
-}
-
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #fbfbfb;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-4 {
-  background: #ffffff;
-  border-radius: 0.25rem;
-  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
-  padding: 1.5rem 2.5rem 2rem;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
-}
-
-.emotion-0 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #362066;
-  line-height: 1.125;
-  font-weight: bold;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.25rem;
-  line-height: 1;
-  min-height: 2.25rem;
-}
-
-.emotion-3 {
-  grid-column: 1 / 3;
-}
-
-.emotion-2 {
-  color: #78757a;
-  font-size: 0.875rem;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.emotion-2:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-6"
-        >
-          <div
-            class="emotion-5"
-            width="35em"
-          >
-            <div
-              class="emotion-4"
-            >
-              <h3
-                class="emotion-0"
-              >
-                Card's title
-              </h3>
-              <button
-                class="emotion-1"
-                type="button"
-              >
-                Edit
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                  />
-                </svg>
-              </button>
-              <div
-                class="emotion-3"
-              >
-                <p
-                  class="emotion-2"
-                >
-                  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots SettingsCard no secondary conent 1`] = `
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -26537,260 +26073,20 @@ exports[`Storyshots SettingsCard no secondary conent 1`] = `
   }
 }
 
-.emotion-12 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: #635e69;
-  border-radius: 4px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
-  transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1.125rem;
-  min-height: 2.4rem;
-  padding: 0.55rem 1rem;
-  background: transparent;
-  border: 1px solid transparent;
-  color: #663399;
-}
-
-.emotion-1[disabled],
-.emotion-1[disabled]:hover {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-1 svg {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin: 0 0.25rem;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-1:hover:not([disabled]) svg {
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.emotion-1:hover {
-  background: #fcfaff;
-  color: #663399;
-}
-
-.emotion-13 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #fbfbfb;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #fbfbfb;
-  color: #78757a;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 6rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.emotion-4 {
-  background: #ffffff;
-  border-radius: 0.25rem;
-  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
-  padding: 1.5rem 2.5rem 2rem;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
-}
-
-.emotion-0 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #362066;
-  line-height: 1.125;
-  font-weight: bold;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.25rem;
-  line-height: 1;
-  min-height: 2.25rem;
-}
-
-.emotion-3 {
-  grid-column: 1 / 3;
-}
-
-.emotion-2 {
-  color: #78757a;
-  font-size: 0.875rem;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.emotion-2:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-13"
-        >
-          <div
-            class="emotion-12"
-            width="35em"
-          >
-            <div
-              class="emotion-4"
-            >
-              <h3
-                class="emotion-0"
-              >
-                Card's title
-              </h3>
-              <button
-                class="emotion-1"
-                type="button"
-              >
-                Edit
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                  />
-                </svg>
-              </button>
-              <div
-                class="emotion-3"
-              >
-                <p
-                  class="emotion-2"
-                >
-                  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-                </p>
-              </div>
-            </div>
-            <div
-              class="emotion-4"
-            >
-              <h3
-                class="emotion-0"
-              >
-                Card's title
-              </h3>
-              <button
-                class="emotion-1"
-                type="button"
-              >
-                Edit
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                  />
-                </svg>
-              </button>
-              <div
-                class="emotion-3"
-              >
-                <p
-                  class="emotion-2"
-                >
-                  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-                </p>
-                <p
-                  class="emotion-2"
-                >
-                  Amaranth tatsoi tomatillo melon azuki bean garlic.
-                </p>
-                <div
-                  class="emotion-9"
-                >
-                  PRIMARY CONTENT
-                </div>
-              </div>
-            </div>
-          </div>
-           
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots SettingsCard with custom tone 1`] = `
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -27591,237 +26887,74 @@ exports[`Storyshots SettingsCard with custom tone 1`] = `
   }
 }
 
-.emotion-5 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #fbfbfb;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-4 {
-  background: #ffffff;
-  border-radius: 0.25rem;
-  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
-  padding: 1.5rem 2.5rem 2rem;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-3 {
-  grid-column: 1 / 3;
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
-.emotion-2 {
-  color: #78757a;
-  font-size: 0.875rem;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important;
-  line-height: 1.4;
-  margin: 0;
-}
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-.emotion-2:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.emotion-0 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #b80000;
-  line-height: 1.125;
-  font-weight: bold;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.25rem;
-  line-height: 1;
-  min-height: 2.25rem;
-}
-
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: #635e69;
-  border-radius: 4px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
-  transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1.125rem;
-  min-height: 2.4rem;
-  padding: 0.55rem 1rem;
-  background: transparent;
-  border: 1px solid transparent;
-  color: #da0013;
-}
-
-.emotion-1[disabled],
-.emotion-1[disabled]:hover {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-1 svg {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin: 0 0.25rem;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-1:hover:not([disabled]) svg {
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.emotion-1:hover {
-  background: #fffafa;
-  color: #da0013;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-6"
-        >
-          <div
-            class="emotion-5"
-            width="35em"
-          >
-            <div
-              class="emotion-4"
-            >
-              <h3
-                class="emotion-0"
-              >
-                Delete ite
-              </h3>
-              <button
-                class="emotion-1"
-                type="button"
-              >
-                Delete site 
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                  />
-                </svg>
-              </button>
-              <div
-                class="emotion-3"
-              >
-                <p
-                  class="emotion-2"
-                >
-                  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots SidebarNav usage example 1`] = `
-.emotion-17 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-16 {
-  padding-left: 2rem;
-}
-
-.emotion-15 {
-  padding-inline-start: 0;
-  margin: 0;
-  max-width: 8rem;
-}
-
-.emotion-1 {
-  margin-bottom: 0;
-  padding: 0.5rem 0;
-  position: relative;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
-  font-size: 1rem;
-  color: #8a4baf;
-  list-style: none;
-}
-
-.emotion-1:first-of-type {
-  padding-top: 0;
-}
-
-.emotion-1:last-of-type {
-  padding-bottom: 0;
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
 
 .emotion-5 {
