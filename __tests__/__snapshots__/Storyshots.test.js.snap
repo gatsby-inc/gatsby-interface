@@ -6378,6 +6378,7 @@ exports[`Storyshots Chip Chip 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  vertical-align: middle;
   min-width: 1.75rem;
   height: 1.75rem;
   padding: 0 0.75rem;
@@ -6441,6 +6442,7 @@ exports[`Storyshots Chip IconChip 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  vertical-align: middle;
   min-width: 1.75rem;
   height: 1.75rem;
   padding: 0 0.75rem;
@@ -6452,7 +6454,10 @@ exports[`Storyshots Chip IconChip 1`] = `
   border: 1px solid #f5f5f5;
   white-space: nowrap;
   padding: 0;
-  text-align: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
 }
 
 .emotion-0 {
@@ -6479,6 +6484,7 @@ exports[`Storyshots Chip IconChip 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  vertical-align: middle;
   min-width: 1.75rem;
   height: 1.75rem;
   padding: 0 0.75rem;
@@ -6642,6 +6648,7 @@ exports[`Storyshots Chip anchor chip example 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  vertical-align: middle;
   min-width: 1.75rem;
   height: 1.75rem;
   padding: 0 0.75rem;
