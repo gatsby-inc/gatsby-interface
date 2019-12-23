@@ -4,6 +4,8 @@ import fontWeights from "./fontWeights"
 import fontSizes, { FontSize, FontSizes } from "./fontSizes"
 import lineHeights, { LineHeightToken } from "./lineHeights"
 import letterSpacings, { LetterSpacingToken } from "./letterSpacings"
+import zIndices, { ZIndexToken, ZIndices } from "./zIndices"
+import space, { SpaceToken, Space } from "./space"
 
 /**
  * Colors
@@ -63,7 +65,25 @@ export type ThemeLetterSpacing = LetterSpacingToken
 
 type LetterSpacingScale = Record<ThemeLetterSpacing, string>
 
-const themeLetterSpacing: LetterSpacingScale = letterSpacings
+const themeLetterSpacings: LetterSpacingScale = letterSpacings
+
+/**
+ * Space
+ */
+export type ThemeSpace = SpaceToken
+
+type SpaceScale = Space
+
+const themeSpace: SpaceScale = space
+
+/**
+ * Z indices
+ */
+export type ThemeZIndex = ZIndexToken
+
+type ZIndexScale = ZIndices
+
+const themeZIndices: ZIndexScale = zIndices
 
 export type Theme = {
   colors: ColorScale;
@@ -72,6 +92,8 @@ export type Theme = {
   fontSizes: FontSizeScale;
   lineHeights: LineHeightScale;
   letterSpacings: LetterSpacingScale;
+  space: SpaceScale;
+  zIndices: ZIndexScale;
 }
 
 const defaultTheme: Theme = {
@@ -80,7 +102,9 @@ const defaultTheme: Theme = {
   fontWeights: themeFontWeights,
   fontSizes: themeFontSizes,
   lineHeights: themeLineHeights,
-  letterSpacings: themeLetterSpacing,
+  letterSpacings: themeLetterSpacings,
+  space: themeSpace,
+  zIndices: themeZIndices,
 }
 
 export function getTheme(): Theme {

@@ -10,6 +10,7 @@ import {
   ThemeFontWeight,
   ThemeLineHeight,
   ThemeLetterSpacing,
+  ThemeZIndex,
 } from "./"
 // import README from "./README.md"
 
@@ -110,6 +111,92 @@ storiesOf(`theme`, module)
 
             return (
               <LongText key={spacing} title={spacing} css={{ letterSpacing }} />
+            )
+          })}
+        </div>
+      </StoryUtils.Container>
+    )
+  })
+  .add(`space`, () => {
+    return (
+      <StoryUtils.Container>
+        <div
+          css={{
+            display: `grid`,
+            gridTemplateColumns: `1fr auto 1fr`,
+            columnGap: `1rem`,
+            rowGap: `0.5rem`,
+            fontFamily: theme.fonts.monospace,
+          }}
+        >
+          <div css={{ textAlign: `right` }}>Token</div>
+          <div>Visual size</div>
+          <div>CSS Value</div>
+          {theme.space.map((space, token) => {
+            return (
+              <React.Fragment key={space}>
+                <div css={{ textAlign: `right` }}>{token}</div>
+                <div
+                  css={{
+                    boxSizing: `border-box`,
+                    borderLeft: `2px solid ${theme.colors.red[20]}`,
+                    borderRight: `2px solid ${theme.colors.red[20]}`,
+                    width: space,
+                    height: "1em",
+                    position: `relative`,
+                    [`:before`]: {
+                      content: `" "`,
+                      position: `absolute`,
+                      top: `0.5em`,
+                      width: `100%`,
+                      height: `1px`,
+                      background: theme.colors.red[30],
+                    },
+                  }}
+                ></div>
+                <div>{space}</div>
+              </React.Fragment>
+            )
+          })}
+        </div>
+      </StoryUtils.Container>
+    )
+  })
+  .add(`z indices`, () => {
+    const zIndicesCount = Object.keys(theme.zIndices).length
+    const maxSize = `calc(${zIndicesCount} * 3rem + 10rem)`
+
+    const colorsByToken: Record<ThemeZIndex, string> = {
+      base: theme.colors.white,
+      background: theme.colors.grey[30],
+      dropdowns: theme.colors.purple[20],
+      toasts: theme.colors.green[20],
+      modals: theme.colors.orange[20],
+      a11yIndicators: theme.colors.teal[20],
+    }
+
+    return (
+      <StoryUtils.Container>
+        <div css={{ width: maxSize, height: maxSize }}>
+          {Object.keys(theme.zIndices).map((token, idx) => {
+            const zIndex = theme.zIndices[token as ThemeZIndex]
+
+            const space = `calc(${zIndicesCount - idx} * 3rem)`
+
+            return (
+              <div
+                key={token}
+                css={{
+                  zIndex,
+                  background: colorsByToken[token as ThemeZIndex],
+                  position: `fixed`,
+                  padding: `${space} ${space} 1rem 1rem`,
+                  border: `1px solid ${theme.colors.black}`,
+                  borderRadius: `4px`,
+                }}
+              >
+                <div css={{ width: `10rem` }}>{token}</div>
+              </div>
             )
           })}
         </div>
