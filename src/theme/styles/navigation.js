@@ -3,7 +3,8 @@ import fontSizes from "../fontSizes"
 import fonts from "../fonts"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
 
-import { spaces, transition } from "../../utils/presets"
+import space from "../../theme/space"
+import transition from "../../theme/transition"
 
 const styles = {}
 
@@ -37,8 +38,10 @@ styles.HamburgerIcon = {
 
 styles.Nav = {
   default: {
-    margin: `0 0 0 auto`,
-    padding: `0 ${spaces.m}`,
+    display: `flex`,
+    justifyContent: `space-between`,
+    padding: `0 ${space[5]}`,
+    width: "100%",
   },
   mobile: isMobileNavOpen => {
     return {
@@ -61,9 +64,14 @@ styles.Nav = {
 
 styles.List = {
   default: {
+    display: `flex`,
     listStyle: `none`,
+    width: `100%`,
+    alignItems: "center",
   },
   mobile: {
+    flexDirection: "column",
+    alignItems: "flex-end",
     listStyle: `none`,
     margin: `0 auto`,
     padding: `0 1rem`,
@@ -78,19 +86,17 @@ styles.List = {
 
 const DropdownOpenStyles = {
   fontSize: fontSizes[1],
-  fontFamily: fonts.system.join(`,`),
-  left: `auto`,
+  fontFamily: fonts.system,
   right: 0,
   boxShadow: `0px 4px 16px rgba(46, 41, 51, 0.08), 0px 8px 24px rgba(71, 63, 79, 0.16)`,
   background: colors.white,
-  width: 260,
+  width: 450,
   borderRadius: 2,
-  // color: colors.grey[50],
+
   ":after": {
     position: `absolute`,
     top: -6,
-    right: 16,
-    margin: `0 0 0 -6px`,
+    left: 30,
     width: 12,
     height: 12,
     content: `" "`,
@@ -118,7 +124,8 @@ const DropdownMobileStyles = {
 
 styles.Item = {
   default: {
-    padding: `0 ${spaces.s}`,
+    marginBottom: 0,
+    padding: `0 ${space[4]}`,
     "&:hover > ul": {
       ...DropdownOpenStyles,
     },
@@ -139,7 +146,7 @@ styles.ItemLink = {
       textDecoration: `none`,
       color: `inherit`,
       fontSize: fontSizes[1],
-      fontFamily: fonts.system.join(`,`),
+      fontFamily: fonts.system,
       fontWeight: `normal`,
       transition: `opacity ${transition.speed.default}`,
       WebkitFontSmoothing: `antialiased`,
@@ -174,7 +181,7 @@ styles.ItemLink = {
   },
   mobile: {
     color: colors.white,
-    fontFamily: fonts.header.join(`,`),
+    fontFamily: fonts.header,
     fontWeight: `normal`,
     transition: `opacity ${transition.speed.default}`,
     WebkitFontSmoothing: `antialiased`,
@@ -200,7 +207,7 @@ styles.Dropdown = {
 
 styles.DropdownToggle = {
   default: {
-    marginLeft: spaces[`3xs`],
+    marginLeft: space[1],
     border: `none`,
   },
   mobile: {
@@ -213,7 +220,7 @@ styles.DropdownItem = {
     a: {
       color: colors.grey[50],
       textDecoration: `none`,
-      padding: `${spaces.s} ${spaces.l}`,
+      padding: `${space[4]} ${space[7]}`,
       display: `block`,
       transition: `all ${transition.speed.default}`,
       "&:hover": {
@@ -231,7 +238,7 @@ styles.DropdownItem = {
       color: colors.white,
       textDecoration: `none`,
       padding: 0,
-      margin: `${spaces[`xs`]} 0 0 0`,
+      margin: `${space[3]} 0 0 0`,
       fontSize: fontSizes[1],
       "&:hover, &:focus-within": {
         opacity: 1,

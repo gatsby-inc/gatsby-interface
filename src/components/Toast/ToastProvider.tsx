@@ -4,7 +4,7 @@ import React from "react"
 import { Toast } from "./Toast"
 import { ToastContext } from "./ToastContext"
 import { useToastActions } from "./hooks"
-import { zIndices } from "../../utils/presets"
+import zIndices from "../../theme/zIndices"
 
 export const ToastConsumer = ToastContext.Consumer
 

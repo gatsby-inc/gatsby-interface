@@ -6,7 +6,8 @@ import { MdClose, MdArrowForward } from "react-icons/md"
 
 import styles from "../../theme/styles/notification"
 import tones from "../../theme/tones"
-import { spaces, palette } from "../../utils/presets"
+import space from "../../theme/space"
+import colors from "../../theme/colors"
 import { Link } from "../Link"
 import { Button } from "../Button"
 
@@ -83,8 +84,8 @@ function Notification({
             css={{
               padding: `0`,
               minHeight: `auto`,
-              svg: { fill: palette.grey[`400`] },
-              width: spaces.m,
+              svg: { fill: colors.grey[40] },
+              width: space[5],
             }}
             type="button"
             onClick={() => setNotificationState(!showNotificationState)}
@@ -133,7 +134,7 @@ Notification.Content = ({
         ...css,
         svg: {
           fill: tones[tone].dark,
-          marginRight: spaces.xs,
+          marginRight: space[3],
         },
       }}
       {...rest}
@@ -161,8 +162,8 @@ Notification.CloseButton = () => {
       css={{
         padding: `0`,
         minHeight: `auto`,
-        svg: { fill: palette.grey[`400`] },
-        width: spaces.m,
+        svg: { fill: colors.grey[40] },
+        width: space[5],
       }}
       type="button"
       onClick={() => setNotificationState(!showNotificationState)}

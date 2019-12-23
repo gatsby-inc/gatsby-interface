@@ -11,11 +11,11 @@ export type ButtonTone = "BRAND" | "SUCCESS" | "DANGER" | "NEUTRAL"
 export type ButtonVariant = "PRIMARY" | "SECONDARY" | "GHOST"
 
 export type ButtonStyleProps = {
-  size?: ButtonSize;
-  tone?: ButtonTone;
-  variant?: ButtonVariant;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
+  size?: ButtonSize
+  tone?: ButtonTone
+  variant?: ButtonVariant
+  leftIcon?: React.ReactNode
+  rightIcon?: React.ReactNode
 }
 
 export type ButtonProps = BaseButtonProps & ButtonStyleProps

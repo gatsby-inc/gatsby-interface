@@ -7,7 +7,7 @@ const Navigation = ({
   items,
   isInverted = false,
   mobileNavMediaQuery = `@media (max-width: 1065px)`,
-  ...rest
+  ...delegated
 }) => (
   <BaseNavigation
     items={items}
@@ -24,32 +24,26 @@ const Navigation = ({
     DropdownItem={Navigation.DropdownItem}
     DropdownToggle={Navigation.DropdownToggle}
     Button={Navigation.Button}
-    css={{
-      ...styles.Navigation.default,
-    }}
-    {...rest}
+    css={styles.Navigation.default}
+    {...delegated}
   />
 )
 
-Navigation.Hamburger = ({ ...rest }) => (
-  <BaseNavigation.Hamburger {...rest}></BaseNavigation.Hamburger>
-)
+Navigation.Hamburger = delegated => <BaseNavigation.Hamburger {...delegated} />
 
-Navigation.HamburgerIcon = ({ ...rest }) => {
+Navigation.HamburgerIcon = delegated => {
   const { isMobileNavOpen } = BaseNavigation.useNavigationContext()
 
   return (
     <BaseNavigation.HamburgerIcon
-      css={{
-        ...styles.HamburgerIcon,
-      }}
+      css={styles.HamburgerIcon}
       className={isMobileNavOpen ? `active` : ``}
-      {...rest}
-    ></BaseNavigation.HamburgerIcon>
+      {...delegated}
+    />
   )
 }
 
-Navigation.Nav = ({ ...rest }) => {
+Navigation.Nav = delegated => {
   const {
     mobileNavMediaQuery,
     isMobileNavOpen,
@@ -59,47 +53,45 @@ Navigation.Nav = ({ ...rest }) => {
     <BaseNavigation.Nav
       css={{
         ...styles.Nav.default,
-        [mobileNavMediaQuery]: {
-          ...styles.Nav.mobile(isMobileNavOpen),
-        },
+        [mobileNavMediaQuery]: styles.Nav.mobile(isMobileNavOpen),
       }}
-      {...rest}
-    ></BaseNavigation.Nav>
+      {...delegated}
+    />
   )
 }
 
-Navigation.List = ({ ...rest }) => {
+Navigation.Spacer = delegated => {
+  return <div css={{ flex: 1 }} {...delegated} />
+}
+
+Navigation.List = delegated => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
   return (
     <BaseNavigation.List
       css={{
         ...styles.List.default,
-        [mobileNavMediaQuery]: {
-          ...styles.List.mobile,
-        },
+        [mobileNavMediaQuery]: styles.List.mobile,
       }}
-      {...rest}
+      {...delegated}
     />
   )
 }
 
-Navigation.Item = ({ ...rest }) => {
+Navigation.Item = delegated => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
   return (
     <BaseNavigation.Item
       css={{
         ...styles.Item.default,
-        [mobileNavMediaQuery]: {
-          ...styles.Item.mobile,
-        },
+        [mobileNavMediaQuery]: styles.Item.mobile,
       }}
-      {...rest}
-    ></BaseNavigation.Item>
+      {...delegated}
+    />
   )
 }
-Navigation.ItemLink = ({ ...rest }) => {
+Navigation.ItemLink = delegated => {
   const {
     isInverted,
     mobileNavMediaQuery,
@@ -109,76 +101,66 @@ Navigation.ItemLink = ({ ...rest }) => {
     <BaseNavigation.ItemLink
       css={{
         ...styles.ItemLink.default(isInverted),
-        [mobileNavMediaQuery]: {
-          ...styles.ItemLink.mobile,
-        },
+        [mobileNavMediaQuery]: styles.ItemLink.mobile,
       }}
-      {...rest}
-    ></BaseNavigation.ItemLink>
+      {...delegated}
+    />
   )
 }
 
-Navigation.Dropdown = ({ ...rest }) => {
+Navigation.Dropdown = delegated => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
   return (
     <BaseNavigation.Dropdown
       css={{
         ...styles.Dropdown.default,
-        [mobileNavMediaQuery]: {
-          ...styles.Dropdown.mobile,
-        },
+        [mobileNavMediaQuery]: styles.Dropdown.mobile,
       }}
-      {...rest}
-    ></BaseNavigation.Dropdown>
+      {...delegated}
+    />
   )
 }
 
-Navigation.DropdownToggle = ({ ...rest }) => {
+Navigation.DropdownToggle = delegated => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
   return (
     <BaseNavigation.DropdownToggle
       css={{
         ...styles.DropdownToggle.default,
-        [mobileNavMediaQuery]: {
-          ...styles.DropdownToggle.mobile,
-        },
+        [mobileNavMediaQuery]: styles.DropdownToggle.mobile,
       }}
-      {...rest}
-    ></BaseNavigation.DropdownToggle>
+      {...delegated}
+    />
   )
 }
 
-Navigation.DropdownItem = ({ ...rest }) => {
+Navigation.DropdownItem = delegated => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
   return (
     <BaseNavigation.DropdownItem
       css={{
         ...styles.DropdownItem.default,
-        [mobileNavMediaQuery]: {
-          ...styles.DropdownItem.mobile,
-        },
+        [mobileNavMediaQuery]: styles.DropdownItem.mobile,
       }}
-      {...rest}
-    ></BaseNavigation.DropdownItem>
+      {...delegated}
+    />
   )
 }
 
-Navigation.Button = ({ ...rest }) => {
+Navigation.Button = delegated => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
   return (
     <BaseNavigation.LinkButton
       css={{
         ...styles.Button.default,
-        [mobileNavMediaQuery]: {
-          ...styles.Button.mobile,
-        },
+        [mobileNavMediaQuery]: styles.Button.mobile,
       }}
-      {...rest}
-    ></BaseNavigation.LinkButton>
+      {...delegated}
+    />
   )
 }
 

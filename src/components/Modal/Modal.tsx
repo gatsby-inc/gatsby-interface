@@ -6,7 +6,8 @@ import {
   DialogContentProps,
 } from "@reach/dialog"
 import styled from "@emotion/styled"
-import { palette, zIndices } from "../../utils/presets"
+import colors from "../../theme/colors"
+import zIndices from "../../theme/zIndices"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
 import { keyframes } from "@emotion/core"
 
@@ -25,10 +26,10 @@ const buildFadeIn = (color: string) =>
      }
    `
 
-const successFade = buildFadeIn(hexToRGBA(palette.green[`500`], 0.75))
-const errorFade = buildFadeIn(hexToRGBA(palette.red[`500`], 0.75))
-const infoFade = buildFadeIn(hexToRGBA(palette.purple[`500`], 0.75))
-const warnFade = buildFadeIn(hexToRGBA(palette.orange[`500`], 0.75))
+const successFade = buildFadeIn(hexToRGBA(colors.green[50], 0.75))
+const errorFade = buildFadeIn(hexToRGBA(colors.red[50], 0.75))
+const infoFade = buildFadeIn(hexToRGBA(colors.purple[50], 0.75))
+const warnFade = buildFadeIn(hexToRGBA(colors.orange[50], 0.75))
 
 export interface ModalProps
   extends Omit<DialogOverlayProps, "ref">,

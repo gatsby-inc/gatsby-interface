@@ -3,14 +3,13 @@ import React from "react"
 import Alert from "@reach/alert"
 import { keyframes, css, jsx } from "@emotion/core"
 import { MdDone, MdClose, MdWarning } from "react-icons/md"
-import {
-  fontSizes,
-  dimensions,
-  palette,
-  radius,
-  spaces,
-} from "../../utils/presets"
+
 import { ToastTone } from "./types"
+import fontSizes from "../../theme/fontSizes"
+import dimensions from "../../theme/dimensions"
+import space from "../../theme/space"
+import colors from "../../theme/colors"
+import radii from "../../theme/radii"
 
 const toastEntryAnimation = keyframes`
   100% {
@@ -21,15 +20,15 @@ const toastEntryAnimation = keyframes`
 const toastCss = css`
   align-items: center;
   animation: ${toastEntryAnimation} 0.5s 0.25s ease forwards;
-  background: ${palette.grey[900]};
-  border-left: 8px solid ${palette.green[500]};
-  border-radius: ${radius.default} ${radius.default} 0 0;
-  color: ${palette.green[50]};
+  background: ${colors.grey[90]};
+  border-left: 8px solid ${colors.green[50]};
+  border-radius: ${radii[2]} ${radii[2]} 0 0;
+  color: ${colors.green[5]};
   display: flex;
-  font-size: ${fontSizes.xs};
+  font-size: ${fontSizes[1]};
   min-height: ${dimensions.toast.minHeight};
-  max-width: calc(100% - (${spaces.l} * 2));
-  padding-left: ${spaces.s};
+  max-width: calc(100% - (${space[7]} * 2));
+  padding-left: ${space[4]};
   transform: perspective(1000px) rotateX(90deg);
   transform-origin: bottom center;
 
@@ -39,19 +38,19 @@ const toastCss = css`
   }
 
   &:not(:first-of-type) {
-    border-radius: ${radius.default};
-    margin-bottom: ${spaces[`3xs`]};
+    border-radius: ${radii[2]};
+    margin-bottom: ${space[1]};
   }
 `
 
 const messageCss = css`
   line-height: 1;
-  margin: 0 ${spaces[`2xs`]} 0 ${spaces.xs};
+  margin: 0 ${space[2]} 0 ${space[3]};
 `
 
 const statusCss = css`
   align-items: center;
-  color: ${palette.green[500]};
+  color: ${colors.green[50]};
   display: flex;
 `
 
@@ -59,7 +58,7 @@ const closeButtonCss = css`
   align-items: center;
   background: none;
   border: none;
-  color: ${palette.grey[400]};
+  color: ${colors.grey[40]};
   cursor: pointer;
   display: flex;
   height: ${dimensions.toast.minHeight};
@@ -68,8 +67,8 @@ const closeButtonCss = css`
 `
 
 const toastColorByTone = {
-  SUCCESS: palette.green[500],
-  DANGER: palette.red[600],
+  SUCCESS: colors.green[50],
+  DANGER: colors.red[60],
 }
 
 const ToastIconByTone = {

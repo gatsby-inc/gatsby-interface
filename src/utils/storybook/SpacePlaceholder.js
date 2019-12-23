@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
-import { palette } from "../presets"
+import colors from "../../theme/colors"
 
 const SpacePlaceholder = ({
   hint = `content placeholder`,
@@ -11,8 +11,8 @@ const SpacePlaceholder = ({
   <div
     css={{
       alignItems: `center`,
-      background: palette.grey[50],
-      color: palette.grey[500],
+      background: colors.grey[5],
+      color: colors.grey[50],
       display: `flex`,
       height: height,
       justifyContent: `center`,

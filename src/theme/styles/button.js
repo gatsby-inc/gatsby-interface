@@ -4,7 +4,8 @@ import fontSizes from "../fontSizes"
 import fonts from "../fonts"
 import tones from "../tones"
 
-import { radius, spaces } from "../../utils/presets"
+import radii from "../../theme/radii"
+import space from "../../theme/space"
 
 const base = props => {
   const { loading = false, leftIcon, rightIcon } = props || {}
@@ -12,11 +13,11 @@ const base = props => {
   return {
     alignItems: `center`,
     border: colors.grey[60],
-    borderRadius: radius.default,
+    borderRadius: radii[2],
     boxSizing: `border-box`,
     cursor: `pointer`,
     display: `inline-flex`,
-    fontFamily: fonts.header.join(`,`),
+    fontFamily: fonts.header,
     justifyContent: `center`,
     transition: `background 0.5s, border 0.5s, color 0.5s`,
     lineHeight: `1`,
@@ -31,7 +32,7 @@ const base = props => {
         ? `${animations.iconLoadingAnim} 1s linear infinite`
         : ``,
       flexShrink: `0`,
-      margin: `0 ${spaces[`2xs`]}`,
+      margin: `0 ${space[2]}`,
       transform: `scale(1)`,
       marginRight: rightIcon || loading ? `-0.25em` : undefined,
       marginLeft: leftIcon ? `-0.30em` : undefined,

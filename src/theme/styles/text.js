@@ -9,7 +9,7 @@ const SIZES = [`S`, `M`, `L`, `XL`]
 const baseStyle = ({ tone }) => {
   return {
     color: tones[tone].darker,
-    fontFamily: fonts.system.join(`,`),
+    fontFamily: fonts.system,
     fontWeight: `normal`,
   }
 }
@@ -51,7 +51,7 @@ const variantStyles = () => {
       margin: `0.5rem 0 0`,
     },
     EMPHASIZED_LEDE: {
-      fontFamily: fonts.header.join(`,`),
+      fontFamily: fonts.header,
       ...sizeStyles()[`2XL`],
       lineHeight: 1.3,
       margin: `1em 0 0`,

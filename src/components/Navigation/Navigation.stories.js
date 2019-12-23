@@ -46,6 +46,9 @@ const items = [
       },
     ],
   },
+]
+
+const secondaryItems = [
   {
     name: `Docs`,
     linkTo: `/docs/`,
@@ -66,7 +69,7 @@ const items2 = [
 storiesOf(`Navigation`, module)
   .add(`default example`, () => (
     <div css={{ padding: `2rem` }}>
-      <Navigation items={items} />
+      <Navigation items={items} secondaryItems={secondaryItems} />
     </div>
   ))
   .add(`inverted example`, () => (
@@ -104,6 +107,7 @@ storiesOf(`Navigation`, module)
   .add(`with item links as props and button as child`, () => (
     <div css={{ padding: `2rem` }}>
       <Navigation items={items}>
+        <Navigation.Spacer />
         <Navigation.Button linkTo="/get-started">
           Get started for free
         </Navigation.Button>

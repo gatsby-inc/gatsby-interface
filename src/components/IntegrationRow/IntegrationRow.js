@@ -9,9 +9,9 @@ import { Link } from "../Link"
 import { Button } from "../Button"
 import { Heading } from "../Heading"
 import { Badge } from "../Badge"
-import { spaces, fontFamilies } from "../../utils/presets"
-import fontSizes from "../../theme/fontSizes"
 import fonts from "../../theme/fonts"
+import space from "../../theme/space"
+import fontSizes from "../../theme/fontSizes"
 import colors from "../../theme/colors"
 import cardStyles from "../../theme/styles/card"
 import { AnchorButton } from "../AnchorButton"
@@ -38,7 +38,7 @@ function IntegrationRow({
         background: colors.white,
         borderTop: `1px solid ${colors.standardLine}`,
         display: `grid`,
-        gridGap: spaces.m,
+        gridGap: space[5],
         gridTemplateColumns: `auto auto 1fr`,
         width: `100%`,
         ...cardStyles.space[isConnected ? `activeRow` : `row`],
@@ -165,7 +165,7 @@ function renderData(data = [], primaryStyling) {
           flexDirection: primaryStyling ? `column` : `row`,
           fontSize: fontSizes[1],
           gridTemplateColumns: primaryStyling ? `0` : `0.35fr 1fr`,
-          marginTop: primaryStyling ? `inherit` : spaces.s,
+          marginTop: primaryStyling ? `inherit` : space[4],
           "&:first-of-type": {
             marginTop: primaryStyling ? `inherit` : `0`,
           },
@@ -175,9 +175,7 @@ function renderData(data = [], primaryStyling) {
           as="span"
           variant="LIGHT"
           css={{
-            fontFamily: primaryStyling
-              ? fonts.header.join(`,`)
-              : fontFamilies.system.join(`,`),
+            fontFamily: primaryStyling ? fonts.header : fonts.system,
             textTransform: primaryStyling ? `uppercase` : `capitalize`,
           }}
         >
@@ -185,7 +183,7 @@ function renderData(data = [], primaryStyling) {
         </Heading>
         <span
           css={{
-            marginTop: primaryStyling ? spaces[`2xs`] : `0`,
+            marginTop: primaryStyling ? space[2] : `0`,
             color: colors.grey[90],
           }}
         >

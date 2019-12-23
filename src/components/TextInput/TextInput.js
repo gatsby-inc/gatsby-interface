@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 
-import { spaces } from "../../utils/presets"
+import space from "../../theme/space"
 import input from "../../theme/styles/input"
 import searchInputBg from "./assets/searchInputBg.svg"
 
@@ -22,7 +22,7 @@ const TextInput = ({
       backgroundPosition: `left 0.4rem center`,
       backgroundRepeat: `no-repeat`,
       backgroundSize: `1.3rem 1.3rem`,
-      paddingLeft: spaces.xl,
+      paddingLeft: space[8],
       position: `relative`,
     },
   }

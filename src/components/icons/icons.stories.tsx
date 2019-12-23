@@ -7,16 +7,16 @@ import { color, select, withKnobs } from "@storybook/addon-knobs"
 import { css } from "@emotion/core"
 import { StoryUtils } from "../../utils/storybook"
 import * as icons from "./icons"
-import { colors as presetColors, palette } from "../../utils/presets"
+import colors from "../../theme/colors"
 import { IconSize, IconProps } from "./types"
 
 const sizes: IconSize[] = [`xxsmall`, `xsmall`, `small`, `medium`, `large`]
 const customSizes = [`1em`, `16px`, `24px`, `32px`, `40px`, `64px`]
-const colors = [
-  presetColors.gatsby,
-  presetColors.accent,
-  palette.magenta[`300`],
-  palette.red[`900`],
+const iconColors = [
+  colors.gatsby,
+  colors.accent,
+  colors.magenta[30],
+  colors.red[90],
 ]
 
 const baseCss = css`
@@ -131,7 +131,7 @@ sortedIconComponentNames.forEach(componentName => {
             </StoryCase>
           ))}
           <h2>Color:</h2>
-          {colors.map(colorCase => (
+          {iconColors.map(colorCase => (
             <StoryCase
               info={<span style={{ color: colorCase }}>{colorCase}</span>}
               key={colorCase}

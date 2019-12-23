@@ -1,31 +1,31 @@
 import colors from "../colors"
 
-import { spaces } from "../../utils/presets"
+import space from "../../theme/space"
 
 const card = {
   frame: {
     background: colors.primaryBackground,
-    borderRadius: spaces[`2xs`],
+    borderRadius: space[2],
     boxShadow: `0px 1px 2px rgba(46, 41, 51, 0.08), 0px 2px 4px rgba(71, 63, 79, 0.08)`,
   },
   space: {
     header: {
-      padding: `${spaces.l} ${spaces[`2xl`]} ${spaces.xl}`,
+      padding: `${space[7]} ${space[9]} ${space[8]}`,
     },
     row: {
-      padding: `${spaces.m} ${spaces[`2xl`]}`,
+      padding: `${space[5]} ${space[9]}`,
     },
     activeRow: {
-      padding: `${spaces.xl} ${spaces[`2xl`]} ${spaces[`2xl`]}`,
+      padding: `${space[8]} ${space[9]} ${space[9]}`,
     },
     M: {
-      padding: `${spaces.m} ${spaces[`2xl`]}`,
+      padding: `${space[5]} ${space[9]}`,
     },
     L: {
-      padding: `${spaces.l} ${spaces[`2xl`]} ${spaces.xl}`,
+      padding: `${space[7]} ${space[9]} ${space[8]}`,
     },
     XL: {
-      padding: `${spaces.xl} ${spaces[`2xl`]} ${spaces[`2xl`]}`,
+      padding: `${space[8]} ${space[9]} ${space[9]}`,
     },
   },
 }

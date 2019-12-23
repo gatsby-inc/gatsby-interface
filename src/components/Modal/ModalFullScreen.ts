@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import { keyframes } from "@emotion/core"
-import { palette } from "../../utils/presets"
+import colors from "../../theme/colors"
 
 const rotationIncoming = keyframes`
   100% {
@@ -10,7 +10,7 @@ const rotationIncoming = keyframes`
 
 export const ModalFullScreen = styled.div`
   animation: ${rotationIncoming} 0.5s 0.25s ease forwards;
-  background: ${palette.white};
+  background: ${colors.white};
   height: 100vh;
   width: 100%;
   outline: none;

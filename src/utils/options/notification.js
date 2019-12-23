@@ -3,10 +3,10 @@ import Success from "../../assets/status/Success"
 import Danger from "../../assets/status/Danger"
 import { MdWarning } from "react-icons/md"
 
-import { palette } from "../presets"
+import colors from "../../theme/colors"
 
 const Warning = styled(MdWarning)`
-  fill: ${palette.yellow[`500`]};
+  fill: ${colors.yellow[50]};
 `
 
 export const VARIANTS = [`PRIMARY`, `SECONDARY`]

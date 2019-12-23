@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 
-import { breakpoints } from "../../utils/presets"
+import breakpoints from "../../theme/breakpoints"
 
 const NumberedTabLabel = ({ children }) => (
   <span

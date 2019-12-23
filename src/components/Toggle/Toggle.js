@@ -7,7 +7,7 @@ import fonts from "../../theme/fonts"
 import colors from "../../theme/colors"
 import tones from "../../theme/tones"
 import hiddenStyles from "../../theme/styles/hidden"
-import { spaces } from "../../utils/presets"
+import space from "../../theme/space"
 import { showCustomCssDeprecationMessage } from "../../utils/maintenance/deprecationMessages"
 
 const IN_ON_POSITIONS = [`LEFT`, `RIGHT`]
@@ -81,7 +81,7 @@ Toggle.Wrapper = ({ children, customCss, ...rest }) => {
           display: `flex`,
           color: colors.grey[90],
           cursor: `pointer`,
-          fontFamily: fonts.system.join(`,`),
+          fontFamily: fonts.system,
 
           "span:last-child": {
             order: inOnPosition === `RIGHT` ? 2 : 0,
@@ -142,8 +142,8 @@ Toggle.Mark = ({ customCss, ...rest }) => {
           transition: `all .3s ease, background .5s`,
           userSelect: `none`,
           width: `48px`,
-          marginLeft: inOnPosition === `RIGHT` ? 0 : spaces.xs,
-          marginRight: inOnPosition === `LEFT` ? 0 : spaces.xs,
+          marginLeft: inOnPosition === `RIGHT` ? 0 : space[3],
+          marginRight: inOnPosition === `LEFT` ? 0 : space[3],
 
           "label:focus-within > &": {
             boxShadow: `0 0 0 3px ${colors.purple[20]}`,

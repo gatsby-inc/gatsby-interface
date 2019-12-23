@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { palette } from "../../utils/presets"
+import colors from "../../theme/colors"
 import {
   testSafeMathRandom,
   testSafeSample,
@@ -10,33 +10,33 @@ import { getLikelihoodOfBeingBlank } from "./DecorativeDots.helpers"
 import Dot, { DotProps } from "./Dot"
 
 interface DecorativeDotsProps {
-  width: number;
-  height: number;
-  dotSize: number;
-  angle?: number;
-  fadeStrength?: number;
+  width: number
+  height: number
+  dotSize: number
+  angle?: number
+  fadeStrength?: number
 }
 
 // These colors were chosen somewhat haphazardly from previous assets.
 // For now, this is not customizable, colors are meant to be semi-randomly
 // drawn from our design palette.
 const COLORS = [
-  palette.red[400],
-  palette.red[600],
-  palette.orange[400],
-  palette.orange[600],
-  palette.yellow[400],
-  palette.green[200],
-  palette.green[400],
-  palette.blue[200],
-  palette.blue[400],
-  palette.magenta[200],
-  palette.magenta[500],
-  palette.purple[400],
-  palette.purple[600],
-  palette.teal[200],
-  palette.teal[500],
-  palette.teal[700],
+  colors.red[40],
+  colors.red[60],
+  colors.orange[40],
+  colors.orange[60],
+  colors.yellow[40],
+  colors.green[20],
+  colors.green[40],
+  colors.blue[20],
+  colors.blue[40],
+  colors.magenta[20],
+  colors.magenta[50],
+  colors.purple[40],
+  colors.purple[60],
+  colors.teal[20],
+  colors.teal[50],
+  colors.teal[70],
 ]
 
 // Every circle is given a random opacity, but it's weighted so that outliers

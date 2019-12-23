@@ -1,7 +1,8 @@
 import colors from "../colors"
 import card from "./card"
 
-import { breakpoints, spaces } from "../../utils/presets"
+import breakpoints from "../../theme/breakpoints"
+import space from "../../theme/space"
 
 const base = {
   display: `flex`,
@@ -17,18 +18,18 @@ const variants = {
       alignItems: `center`,
       background: colors.white,
       borderLeft: `10px solid ${toneColors.dark}`,
-      padding: `${spaces.m} ${spaces.l} ${spaces.m} ${spaces.m}`,
+      padding: `${space[5]} ${space[7]} ${space[5]} ${space[5]}`,
       [`@media (min-width: ${breakpoints.desktop}px)`]: {
-        padding: `${spaces.m} ${spaces.l} ${spaces.m} ${spaces.m}`,
+        padding: `${space[5]} ${space[7]} ${space[5]} ${space[5]}`,
       },
     }
   },
   SECONDARY: toneColors => {
     return {
       background: toneColors.superLight,
-      padding: `${spaces.m} ${spaces.l}`,
+      padding: `${space[5]} ${space[7]}`,
       [`@media (min-width: ${breakpoints.desktop}px)`]: {
-        padding: `${spaces.l} ${spaces[`2xl`]}`,
+        padding: `${space[7]} ${space[9]}`,
       },
     }
   },

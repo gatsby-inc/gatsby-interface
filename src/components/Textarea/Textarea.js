@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 
-import { spaces } from "../../utils/presets"
+import space from "../../theme/space"
 import styles from "../../theme/styles/input"
 
 const Textarea = ({
@@ -26,7 +26,7 @@ const Textarea = ({
       display: `block`,
       minHeight: `4rem`,
       resize: `vertical`,
-      padding: `${spaces.xs} ${spaces.s}`,
+      padding: `${space[3]} ${space[4]}`,
     }}
   >
     {children}

@@ -35,6 +35,7 @@ storiesOf(`Avatar`, module)
                 medium: "M",
                 large: "L",
                 xlarge: "XL",
+                xxlarge: "XXL",
               },
               "M"
             )}
@@ -69,6 +70,7 @@ storiesOf(`Avatar`, module)
                 medium: "M",
                 large: "L",
                 xlarge: "XL",
+                xxlarge: "XXL",
               },
               "M"
             )}
