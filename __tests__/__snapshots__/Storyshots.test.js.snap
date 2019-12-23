@@ -39235,3 +39235,1675 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots theme fonts 1`] = `
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-1 {
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-2 {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.emotion-3 {
+  font-family: Georgia,Times New Roman,Times,serif;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-4"
+        >
+          <div>
+            <h4>
+              system
+            </h4>
+            <p
+              class="emotion-0"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              header
+            </h4>
+            <p
+              class="emotion-1"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              monospace
+            </h4>
+            <p
+              class="emotion-2"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              serif
+            </h4>
+            <p
+              class="emotion-3"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme fonts sizes 1`] = `
+.emotion-17 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-8 {
+  font-size: 2.25rem;
+}
+
+.emotion-0 {
+  font-size: 0.75rem;
+}
+
+.emotion-1 {
+  font-size: 0.875rem;
+}
+
+.emotion-2 {
+  font-size: 1rem;
+}
+
+.emotion-3 {
+  font-size: 1.125rem;
+}
+
+.emotion-4 {
+  font-size: 1.25rem;
+}
+
+.emotion-5 {
+  font-size: 1.5rem;
+}
+
+.emotion-6 {
+  font-size: 1.75rem;
+}
+
+.emotion-7 {
+  font-size: 2rem;
+}
+
+.emotion-9 {
+  font-size: 2.625rem;
+}
+
+.emotion-10 {
+  font-size: 3rem;
+}
+
+.emotion-11 {
+  font-size: 3.375rem;
+}
+
+.emotion-12 {
+  font-size: 3.75rem;
+}
+
+.emotion-13 {
+  font-size: 4.25rem;
+}
+
+.emotion-14 {
+  font-size: 4.75rem;
+}
+
+.emotion-15 {
+  font-size: 5.25rem;
+}
+
+.emotion-16 {
+  font-size: 5.75rem;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-17"
+        >
+          <div>
+            0
+            <p
+              class="emotion-0"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              1
+            </h4>
+            <p
+              class="emotion-1"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              2
+            </h4>
+            <p
+              class="emotion-2"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              3
+            </h4>
+            <p
+              class="emotion-3"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              4
+            </h4>
+            <p
+              class="emotion-4"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              5
+            </h4>
+            <p
+              class="emotion-5"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              6
+            </h4>
+            <p
+              class="emotion-6"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              7
+            </h4>
+            <p
+              class="emotion-7"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              8
+            </h4>
+            <p
+              class="emotion-8"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              9
+            </h4>
+            <p
+              class="emotion-9"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              10
+            </h4>
+            <p
+              class="emotion-10"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              11
+            </h4>
+            <p
+              class="emotion-11"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              12
+            </h4>
+            <p
+              class="emotion-12"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              13
+            </h4>
+            <p
+              class="emotion-13"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              14
+            </h4>
+            <p
+              class="emotion-14"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              15
+            </h4>
+            <p
+              class="emotion-15"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              16
+            </h4>
+            <p
+              class="emotion-16"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme fonts weights 1`] = `
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  font-weight: 400;
+}
+
+.emotion-1 {
+  font-weight: 700;
+}
+
+.emotion-2 {
+  font-weight: 800;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <div>
+            <h4>
+              body
+            </h4>
+            <p
+              class="emotion-0"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              heading
+            </h4>
+            <p
+              class="emotion-1"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              bold
+            </h4>
+            <p
+              class="emotion-2"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme letter spacings 1`] = `
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+}
+
+.emotion-1 {
+  -webkit-letter-spacing: 0.075em;
+  -moz-letter-spacing: 0.075em;
+  -ms-letter-spacing: 0.075em;
+  letter-spacing: 0.075em;
+}
+
+.emotion-2 {
+  -webkit-letter-spacing: -0.015em;
+  -moz-letter-spacing: -0.015em;
+  -ms-letter-spacing: -0.015em;
+  letter-spacing: -0.015em;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <div>
+            <h4>
+              normal
+            </h4>
+            <p
+              class="emotion-0"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              tracked
+            </h4>
+            <p
+              class="emotion-1"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              tight
+            </h4>
+            <p
+              class="emotion-2"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme line heights 1`] = `
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  line-height: 1.5;
+}
+
+.emotion-2 {
+  line-height: 1.25;
+}
+
+.emotion-4 {
+  line-height: 1.75;
+}
+
+.emotion-5 {
+  line-height: 1;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-6"
+        >
+          <div>
+            <h4>
+              body
+            </h4>
+            <p
+              class="emotion-0"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              default
+            </h4>
+            <p
+              class="emotion-0"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              dense
+            </h4>
+            <p
+              class="emotion-2"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              heading
+            </h4>
+            <p
+              class="emotion-2"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              loose
+            </h4>
+            <p
+              class="emotion-4"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+            <h4>
+              solid
+            </h4>
+            <p
+              class="emotion-5"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme radii 1`] = `
+.emotion-8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-7 {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.emotion-0 {
+  background-color: #8a4baf;
+  color: #ffffff;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  border-radius: 0px;
+}
+
+.emotion-1 {
+  background-color: #8a4baf;
+  color: #ffffff;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  border-radius: 2px;
+}
+
+.emotion-2 {
+  background-color: #8a4baf;
+  color: #ffffff;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  border-radius: 4px;
+}
+
+.emotion-3 {
+  background-color: #8a4baf;
+  color: #ffffff;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  border-radius: 8px;
+}
+
+.emotion-4 {
+  background-color: #8a4baf;
+  color: #ffffff;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  border-radius: 16px;
+}
+
+.emotion-5 {
+  background-color: #8a4baf;
+  color: #ffffff;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  border-radius: 9999px;
+}
+
+.emotion-6 {
+  background-color: #8a4baf;
+  color: #ffffff;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  border-radius: 100%;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <div
+            class="emotion-7"
+          >
+            <div
+              class="emotion-0"
+            >
+              <span>
+                0
+                 (
+                0px
+                )
+              </span>
+            </div>
+            <div
+              class="emotion-1"
+            >
+              <span>
+                1
+                 (
+                2px
+                )
+              </span>
+            </div>
+            <div
+              class="emotion-2"
+            >
+              <span>
+                2
+                 (
+                4px
+                )
+              </span>
+            </div>
+            <div
+              class="emotion-3"
+            >
+              <span>
+                3
+                 (
+                8px
+                )
+              </span>
+            </div>
+            <div
+              class="emotion-4"
+            >
+              <span>
+                4
+                 (
+                16px
+                )
+              </span>
+            </div>
+            <div
+              class="emotion-5"
+            >
+              <span>
+                5
+                 (
+                9999px
+                )
+              </span>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <span>
+                6
+                 (
+                100%
+                )
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme shadows 1`] = `
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-4 {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.emotion-0 {
+  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.emotion-1 {
+  box-shadow: 0px 2px 4px rgba(46,41,51,0.08),0px 4px 8px rgba(71,63,79,0.16);
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.emotion-2 {
+  box-shadow: 0px 4px 8px rgba(46,41,51,0.08),0px 8px 16px rgba(71,63,79,0.16);
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.emotion-3 {
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-5"
+        >
+          <div
+            class="emotion-4"
+          >
+            <div
+              class="emotion-0"
+            >
+              <span>
+                raised
+              </span>
+            </div>
+            <div
+              class="emotion-1"
+            >
+              <span>
+                floating
+              </span>
+            </div>
+            <div
+              class="emotion-2"
+            >
+              <span>
+                overlay
+              </span>
+            </div>
+            <div
+              class="emotion-3"
+            >
+              <span>
+                dialog
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme space 1`] = `
+.emotion-34 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-33 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.emotion-0 {
+  text-align: right;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 0rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-2:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 0.125rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-4:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 0.25rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-6:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 0.5rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-8:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 0.75rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-10:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 1rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-12:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 1.25rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-14:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-16 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 1.5rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-16:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 2rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-18:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 2.5rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-20:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 3rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-22:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 3.5rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-24:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-26 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 4rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-26:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-28 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 4.5rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-28:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 5.25rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-30:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+.emotion-32 {
+  box-sizing: border-box;
+  border-left: 2px solid #ffbab8;
+  border-right: 2px solid #ffbab8;
+  width: 6rem;
+  height: 1em;
+  position: relative;
+}
+
+.emotion-32:before {
+  content: " ";
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  height: 1px;
+  background: #ff8885;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-34"
+        >
+          <div
+            class="emotion-33"
+          >
+            <div
+              class="emotion-0"
+            >
+              Token
+            </div>
+            <div>
+              Visual size
+            </div>
+            <div>
+              CSS Value
+            </div>
+            <div
+              class="emotion-0"
+            >
+              0
+            </div>
+            <div
+              class="emotion-2"
+            />
+            <div>
+              0rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              1
+            </div>
+            <div
+              class="emotion-4"
+            />
+            <div>
+              0.125rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              2
+            </div>
+            <div
+              class="emotion-6"
+            />
+            <div>
+              0.25rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              3
+            </div>
+            <div
+              class="emotion-8"
+            />
+            <div>
+              0.5rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              4
+            </div>
+            <div
+              class="emotion-10"
+            />
+            <div>
+              0.75rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              5
+            </div>
+            <div
+              class="emotion-12"
+            />
+            <div>
+              1rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              6
+            </div>
+            <div
+              class="emotion-14"
+            />
+            <div>
+              1.25rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              7
+            </div>
+            <div
+              class="emotion-16"
+            />
+            <div>
+              1.5rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              8
+            </div>
+            <div
+              class="emotion-18"
+            />
+            <div>
+              2rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              9
+            </div>
+            <div
+              class="emotion-20"
+            />
+            <div>
+              2.5rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              10
+            </div>
+            <div
+              class="emotion-22"
+            />
+            <div>
+              3rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              11
+            </div>
+            <div
+              class="emotion-24"
+            />
+            <div>
+              3.5rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              12
+            </div>
+            <div
+              class="emotion-26"
+            />
+            <div>
+              4rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              13
+            </div>
+            <div
+              class="emotion-28"
+            />
+            <div>
+              4.5rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              14
+            </div>
+            <div
+              class="emotion-30"
+            />
+            <div>
+              5.25rem
+            </div>
+            <div
+              class="emotion-0"
+            >
+              15
+            </div>
+            <div
+              class="emotion-32"
+            />
+            <div>
+              6rem
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme z indices 1`] = `
+.emotion-13 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-12 {
+  width: calc(6 * 3rem + 10rem);
+  height: calc(6 * 3rem + 10rem);
+}
+
+.emotion-1 {
+  z-index: 0;
+  background: #d9d7e0;
+  position: fixed;
+  padding: calc(6 * 3rem) calc(6 * 3rem) 1rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.emotion-0 {
+  width: 10rem;
+}
+
+.emotion-3 {
+  z-index: 1;
+  background: #ffffff;
+  position: fixed;
+  padding: calc(5 * 3rem) calc(5 * 3rem) 1rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.emotion-5 {
+  z-index: 10;
+  background: #f1defa;
+  position: fixed;
+  padding: calc(4 * 3rem) calc(4 * 3rem) 1rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.emotion-7 {
+  z-index: 100;
+  background: #a1da9e;
+  position: fixed;
+  padding: calc(3 * 3rem) calc(3 * 3rem) 1rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  z-index: 1000;
+  background: #ffedbf;
+  position: fixed;
+  padding: calc(2 * 3rem) calc(2 * 3rem) 1rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.emotion-11 {
+  z-index: 10000;
+  background: #ccfffc;
+  position: fixed;
+  padding: calc(1 * 3rem) calc(1 * 3rem) 1rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-13"
+        >
+          <div
+            class="emotion-12"
+          >
+            <div
+              class="emotion-1"
+            >
+              <div
+                class="emotion-0"
+              >
+                background
+              </div>
+            </div>
+            <div
+              class="emotion-3"
+            >
+              <div
+                class="emotion-0"
+              >
+                base
+              </div>
+            </div>
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-0"
+              >
+                dropdowns
+              </div>
+            </div>
+            <div
+              class="emotion-7"
+            >
+              <div
+                class="emotion-0"
+              >
+                toasts
+              </div>
+            </div>
+            <div
+              class="emotion-9"
+            >
+              <div
+                class="emotion-0"
+              >
+                modals
+              </div>
+            </div>
+            <div
+              class="emotion-11"
+            >
+              <div
+                class="emotion-0"
+              >
+                a11yIndicators
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
