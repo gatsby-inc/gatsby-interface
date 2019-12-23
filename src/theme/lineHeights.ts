@@ -1,5 +1,7 @@
-export { lineHeights as default, LineHeightToken } from "gatsby-design-tokens"
+import { LineHeightToken as DesignLineHeightToken } from "gatsby-design-tokens"
+export { lineHeights as default } from "gatsby-design-tokens"
 
+export type LineHeightToken = DesignLineHeightToken
 /*
 
   lineHeights = {

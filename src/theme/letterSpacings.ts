@@ -1,7 +1,7 @@
-export {
-  letterSpacings as default,
-  LetterSpacingToken,
-} from "gatsby-design-tokens"
+import { LetterSpacingToken as DesignLetterSpacingToken } from "gatsby-design-tokens"
+export { letterSpacings as default } from "gatsby-design-tokens"
+
+export type LetterSpacingToken = DesignLetterSpacingToken
 
 /*
 
