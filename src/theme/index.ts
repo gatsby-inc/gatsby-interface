@@ -6,6 +6,8 @@ import lineHeights, { LineHeightToken } from "./lineHeights"
 import letterSpacings, { LetterSpacingToken } from "./letterSpacings"
 import zIndices, { ZIndexToken, ZIndices } from "./zIndices"
 import space, { SpaceToken, Space } from "./space"
+import radii, { RadiusToken, Radii } from "./radii"
+import shadows, { ShadowToken } from "./shadows"
 
 /**
  * Colors
@@ -77,6 +79,24 @@ type SpaceScale = Space
 const themeSpace: SpaceScale = space
 
 /**
+ * Radii
+ */
+export type ThemeRadius = RadiusToken
+
+type RadiusScale = Radii
+
+const themeRadii: RadiusScale = radii
+
+/**
+ * Shadows
+ */
+export type ThemeShadow = ShadowToken
+
+type ShadowScale = Record<ThemeShadow, string>
+
+const themeShadows: ShadowScale = shadows
+
+/**
  * Z indices
  */
 export type ThemeZIndex = ZIndexToken
@@ -86,14 +106,16 @@ type ZIndexScale = ZIndices
 const themeZIndices: ZIndexScale = zIndices
 
 export type Theme = {
-  colors: ColorScale;
-  fonts: FontScale;
-  fontWeights: FontWeightScale;
-  fontSizes: FontSizeScale;
-  lineHeights: LineHeightScale;
-  letterSpacings: LetterSpacingScale;
-  space: SpaceScale;
-  zIndices: ZIndexScale;
+  colors: Readonly<ColorScale>;
+  fonts: Readonly<FontScale>;
+  fontWeights: Readonly<FontWeightScale>;
+  fontSizes: Readonly<FontSizeScale>;
+  lineHeights: Readonly<LineHeightScale>;
+  letterSpacings: Readonly<LetterSpacingScale>;
+  space: Readonly<SpaceScale>;
+  radii: Readonly<RadiusScale>;
+  shadows: Readonly<ShadowScale>;
+  zIndices: Readonly<ZIndexScale>;
 }
 
 const defaultTheme: Theme = {
@@ -104,6 +126,8 @@ const defaultTheme: Theme = {
   lineHeights: themeLineHeights,
   letterSpacings: themeLetterSpacings,
   space: themeSpace,
+  radii: themeRadii,
+  shadows: themeShadows,
   zIndices: themeZIndices,
 }
 

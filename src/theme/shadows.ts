@@ -1,4 +1,4 @@
-export { shadows as default } from "gatsby-design-tokens"
+export { shadows as default, ShadowToken } from "gatsby-design-tokens"
 
 /*
 

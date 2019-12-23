@@ -4,14 +4,7 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 
 import { StoryUtils } from "../utils/storybook"
-import {
-  getTheme,
-  ThemeFont,
-  ThemeFontWeight,
-  ThemeLineHeight,
-  ThemeLetterSpacing,
-  ThemeZIndex,
-} from "./"
+import { getTheme, ThemeLineHeight, ThemeZIndex } from "./"
 // import README from "./README.md"
 
 const theme = getTheme()
@@ -49,10 +42,8 @@ storiesOf(`theme`, module)
     return (
       <StoryUtils.Container>
         <div>
-          {Object.keys(theme.fonts).map(font => {
-            const fontFamily = theme.fonts[font as ThemeFont]
-
-            return <LongText key={font} title={font} css={{ fontFamily }} />
+          {Object.entries(theme.fonts).map(([token, fontFamily]) => {
+            return <LongText key={token} title={token} css={{ fontFamily }} />
           })}
         </div>
       </StoryUtils.Container>
@@ -75,10 +66,8 @@ storiesOf(`theme`, module)
     return (
       <StoryUtils.Container>
         <div>
-          {Object.keys(theme.fontWeights).map(weight => {
-            const fontWeight = theme.fontWeights[weight as ThemeFontWeight]
-
-            return <LongText key={weight} title={weight} css={{ fontWeight }} />
+          {Object.entries(theme.fontWeights).map(([token, fontWeight]) => {
+            return <LongText key={token} title={token} css={{ fontWeight }} />
           })}
         </div>
       </StoryUtils.Container>
@@ -105,14 +94,13 @@ storiesOf(`theme`, module)
     return (
       <StoryUtils.Container>
         <div>
-          {Object.keys(theme.letterSpacings).map(spacing => {
-            const letterSpacing =
-              theme.letterSpacings[spacing as ThemeLetterSpacing]
-
-            return (
-              <LongText key={spacing} title={spacing} css={{ letterSpacing }} />
-            )
-          })}
+          {Object.entries(theme.letterSpacings).map(
+            ([token, letterSpacing]) => {
+              return (
+                <LongText key={token} title={token} css={{ letterSpacing }} />
+              )
+            }
+          )}
         </div>
       </StoryUtils.Container>
     )
@@ -162,6 +150,62 @@ storiesOf(`theme`, module)
       </StoryUtils.Container>
     )
   })
+  .add(`radii`, () => {
+    return (
+      <StoryUtils.Container>
+        <div css={{ display: `grid`, gridGap: `1rem` }}>
+          {theme.radii.map((radius, token) => {
+            return (
+              <div
+                key={radius}
+                css={{
+                  backgroundColor: theme.colors.purple[50],
+                  color: theme.colors.white,
+                  width: `6rem`,
+                  height: `6rem`,
+                  textAlign: `center`,
+                  display: `flex`,
+                  alignItems: `center`,
+                  justifyContent: `space-around`,
+                  borderRadius: radius,
+                }}
+              >
+                <span>
+                  {token} ({radius})
+                </span>
+              </div>
+            )
+          })}
+        </div>
+      </StoryUtils.Container>
+    )
+  })
+  .add(`shadows`, () => {
+    return (
+      <StoryUtils.Container>
+        <div css={{ display: `grid`, gridGap: `1rem` }}>
+          {Object.entries(theme.shadows).map(([token, shadow]) => {
+            return (
+              <div
+                key={token}
+                css={{
+                  boxShadow: shadow,
+                  width: `6rem`,
+                  height: `6rem`,
+                  textAlign: `center`,
+                  display: `flex`,
+                  alignItems: `center`,
+                  justifyContent: `space-around`,
+                }}
+              >
+                <span>{token}</span>
+              </div>
+            )
+          })}
+        </div>
+      </StoryUtils.Container>
+    )
+  })
   .add(`z indices`, () => {
     const zIndicesCount = Object.keys(theme.zIndices).length
     const maxSize = `calc(${zIndicesCount} * 3rem + 10rem)`
@@ -178,9 +222,7 @@ storiesOf(`theme`, module)
     return (
       <StoryUtils.Container>
         <div css={{ width: maxSize, height: maxSize }}>
-          {Object.keys(theme.zIndices).map((token, idx) => {
-            const zIndex = theme.zIndices[token as ThemeZIndex]
-
+          {Object.entries(theme.zIndices).map(([token, zIndex], idx) => {
             const space = `calc(${zIndicesCount - idx} * 3rem)`
 
             return (
