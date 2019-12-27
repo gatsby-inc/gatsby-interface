@@ -41,13 +41,28 @@ jobs:
           name: Test
           command: yarn test
 
-      - run:
+      - run: # TODO remove this since we have a "prepublish" script now?
           name: Build rollup
           command: yarn build
 
       - persist_to_workspace:
           root: ~/repo
           paths: .
+  # This job publishes as prerelease version tagged with a normalized branch name, e.g. gatsby-interface@Elanhant-avatar-component
+  branch-prerelease:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: ~/repo
+
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Run branch prerelease script
+          command: npm run release:branch
   # This job publishes as prerelease version, available as gatsby-interface@next
   prerelease:
     <<: *defaults
@@ -66,9 +81,6 @@ jobs:
           command: |
             git config user.email aleksei+CircleCI@gatsbyjs.com
             git config user.name "Circle CI"
-      - run:
-          name: Build package
-          command: yarn build
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
@@ -114,6 +126,17 @@ workflows:
   test:
     jobs:
       - is-green
+  run-branch-prerelease:
+    jobs:
+      - is-green
+      - branch-prerelease:
+          requires:
+            - is-green
+          filters:
+            branches:
+              ignore:
+                - master
+                - dev
   run-prerelease:
     jobs:
       - is-green

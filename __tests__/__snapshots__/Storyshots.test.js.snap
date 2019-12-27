@@ -2547,7 +2547,7 @@ exports[`Storyshots BaseLink default 1`] = `
 `;
 
 exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
-.emotion-7 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2587,6 +2587,24 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
 
 .emotion-6 {
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 {
+  width: 100%;
 }
 
 .emotion-0 {
@@ -2656,15 +2674,26 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-5 {
+  .emotion-7 {
     display: none;
   }
 }
 
-.emotion-4 {
+.emotion-5 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div>
@@ -2674,10 +2703,10 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
     <div>
       <div>
         <div
-          class="emotion-7"
+          class="emotion-9"
         >
           <div
-            class="emotion-6"
+            class="emotion-8"
           >
             <button
               aria-expanded=""
@@ -2688,20 +2717,27 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
               />
             </button>
             <nav
-              class="emotion-5"
+              class="emotion-7"
             >
-              <ul
-                class="emotion-4"
+              <div
+                class="emotion-6"
               >
-                <button
-                  aria-expanded=""
-                  class="emotion-1"
+                <ul
+                  class="emotion-5"
                 >
                   <div
-                    class=" emotion-0"
+                    class="emotion-2"
                   />
-                </button>
-              </ul>
+                  <button
+                    aria-expanded=""
+                    class="emotion-1"
+                  >
+                    <div
+                      class=" emotion-0"
+                    />
+                  </button>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -2712,7 +2748,7 @@ exports[`Storyshots BaseNavigation BaseNavigation.Hamburger 1`] = `
 `;
 
 exports[`Storyshots BaseNavigation usage example 1`] = `
-.emotion-11 {
+.emotion-13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2750,6 +2786,18 @@ exports[`Storyshots BaseNavigation usage example 1`] = `
   }
 }
 
+.emotion-10 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .emotion-2 {
   position: absolute !important;
   height: 1px;
@@ -2760,7 +2808,13 @@ exports[`Storyshots BaseNavigation usage example 1`] = `
   white-space: nowrap;
 }
 
-.emotion-10 {
+.emotion-8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-12 {
   width: 100%;
 }
 
@@ -2831,15 +2885,26 @@ exports[`Storyshots BaseNavigation usage example 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-9 {
+  .emotion-11 {
     display: none;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .emotion-5 {
@@ -2879,10 +2944,10 @@ exports[`Storyshots BaseNavigation usage example 1`] = `
     <div>
       <div>
         <div
-          class="emotion-11"
+          class="emotion-13"
         >
           <div
-            class="emotion-10"
+            class="emotion-12"
           >
             <button
               aria-expanded=""
@@ -2893,80 +2958,87 @@ exports[`Storyshots BaseNavigation usage example 1`] = `
               />
             </button>
             <nav
-              class="emotion-9"
+              class="emotion-11"
             >
-              <ul
-                class="emotion-8"
+              <div
+                class="emotion-10"
               >
-                <li
-                  class="emotion-5"
+                <ul
+                  class="emotion-9"
                 >
-                  <a
-                    href="/alpha"
+                  <li
+                    class="emotion-5"
                   >
-                    <span>
-                      Alpha
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="Alpha-dropdown"
-                    aria-expanded="false"
-                    class="emotion-3"
-                  >
-                    <span
-                      aria-hidden="true"
+                    <a
+                      href="/alpha"
                     >
-                      ∨
-                    </span>
-                    <span
-                      class="emotion-2"
+                      <span>
+                        Alpha
+                      </span>
+                    </a>
+                    <button
+                      aria-controls="Alpha-dropdown"
+                      aria-expanded="false"
+                      class="emotion-3"
                     >
-                      Alpha Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-4"
-                    id="Alpha-dropdown"
-                  >
-                    <li>
-                      <a
-                        href="/alpha/delta"
+                      <span
+                        aria-hidden="true"
                       >
-                        Delta
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/alpha/echo"
+                        ∨
+                      </span>
+                      <span
+                        class="emotion-2"
                       >
-                        Echo
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  class="emotion-5"
-                >
-                  <a
-                    href="/bravo"
+                        Alpha Menu
+                      </span>
+                    </button>
+                    <ul
+                      class="emotion-4"
+                      id="Alpha-dropdown"
+                    >
+                      <li>
+                        <a
+                          href="/alpha/delta"
+                        >
+                          Delta
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/alpha/echo"
+                        >
+                          Echo
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="emotion-5"
                   >
-                    <span>
-                      Bravo
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-5"
-                >
-                  <a
-                    href="/charlie"
+                    <a
+                      href="/bravo"
+                    >
+                      <span>
+                        Bravo
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-5"
                   >
-                    <span>
-                      Charlie
-                    </span>
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      href="/charlie"
+                    >
+                      <span>
+                        Charlie
+                      </span>
+                    </a>
+                  </li>
+                  <div
+                    class="emotion-8"
+                  />
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -11877,11 +11949,11 @@ exports[`Storyshots Modal Panel 1`] = `
 `;
 
 exports[`Storyshots Navigation default example 1`] = `
-.emotion-29 {
+.emotion-31 {
   padding: 2rem;
 }
 
-.emotion-28 {
+.emotion-30 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -12003,7 +12075,7 @@ exports[`Storyshots Navigation default example 1`] = `
   transform: scale(1.2);
 }
 
-.emotion-27 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12017,13 +12089,13 @@ exports[`Storyshots Navigation default example 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-27 {
+  .emotion-29 {
     display: none;
   }
 }
 
 @media (max-width:1065px) {
-  .emotion-27 {
+  .emotion-29 {
     display: none;
     position: fixed;
     overflow-y: auto;
@@ -12043,10 +12115,33 @@ exports[`Storyshots Navigation default example 1`] = `
   }
 }
 
-.emotion-26 {
+.emotion-28 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-27 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12060,7 +12155,14 @@ exports[`Storyshots Navigation default example 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-26 {
+  .emotion-27 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
     list-style: none;
     margin: 0 auto;
     padding: 0 1rem;
@@ -12319,6 +12421,12 @@ exports[`Storyshots Navigation default example 1`] = `
   }
 }
 
+.emotion-22 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -12326,10 +12434,10 @@ exports[`Storyshots Navigation default example 1`] = `
     <div>
       <div>
         <div
-          class="emotion-29"
+          class="emotion-31"
         >
           <div
-            class="emotion-28"
+            class="emotion-30"
           >
             <button
               aria-expanded=""
@@ -12340,174 +12448,181 @@ exports[`Storyshots Navigation default example 1`] = `
               />
             </button>
             <nav
-              class="emotion-27"
+              class="emotion-29"
             >
-              <ul
-                class="emotion-26"
+              <div
+                class="emotion-28"
               >
-                <li
-                  class="emotion-3"
+                <ul
+                  class="emotion-27"
                 >
-                  <a
-                    class="emotion-2"
-                    href="/why-gatsby/"
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      Why Gatsby?
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/how-it-works/"
-                  >
-                    <span>
-                      How It Works
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="How It Works-dropdown"
-                    aria-expanded="false"
-                    class="emotion-6"
-                  >
-                    <span
-                      aria-hidden="true"
+                    <a
+                      class="emotion-2"
+                      href="/why-gatsby/"
                     >
-                      ∨
-                    </span>
-                    <span
-                      class="emotion-5"
-                    >
-                      How It Works Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-9"
-                    id="How It Works-dropdown"
+                      <span>
+                        Why Gatsby?
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
                   >
-                    <li
-                      class="emotion-7"
+                    <a
+                      class="emotion-2"
+                      href="/how-it-works/"
                     >
-                      <a
-                        href="/how-it-works/bring-data-from-anywhere/"
+                      <span>
+                        How It Works
+                      </span>
+                    </a>
+                    <button
+                      aria-controls="How It Works-dropdown"
+                      aria-expanded="false"
+                      class="emotion-6"
+                    >
+                      <span
+                        aria-hidden="true"
                       >
-                        Bring Data From Anywhere
-                      </a>
-                    </li>
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/write-modern-apps/"
+                        ∨
+                      </span>
+                      <span
+                        class="emotion-5"
                       >
-                        Write Modern Apps
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/integrations/"
-                  >
-                    <span>
-                      Integrations
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/about-us/"
-                  >
-                    <span>
-                      About Us
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/resources/"
-                  >
-                    <span>
-                      Resources
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="Resources-dropdown"
-                    aria-expanded="false"
-                    class="emotion-6"
-                  >
-                    <span
-                      aria-hidden="true"
+                        How It Works Menu
+                      </span>
+                    </button>
+                    <ul
+                      class="emotion-9"
+                      id="How It Works-dropdown"
                     >
-                      ∨
-                    </span>
-                    <span
-                      class="emotion-5"
-                    >
-                      Resources Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-9"
-                    id="Resources-dropdown"
-                  >
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/resources/gatsby-days/"
+                      <li
+                        class="emotion-7"
                       >
-                        Gatsby Days
-                      </a>
-                    </li>
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/resources/webinars/"
+                        <a
+                          href="/how-it-works/bring-data-from-anywhere/"
+                        >
+                          Bring Data From Anywhere
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-7"
                       >
-                        Webinars
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/docs/"
+                        <a
+                          href="/write-modern-apps/"
+                        >
+                          Write Modern Apps
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      Docs
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/contact-us/"
+                    <a
+                      class="emotion-2"
+                      href="/integrations/"
+                    >
+                      <span>
+                        Integrations
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      Contact Us
-                    </span>
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      class="emotion-2"
+                      href="/about-us/"
+                    >
+                      <span>
+                        About Us
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
+                  >
+                    <a
+                      class="emotion-2"
+                      href="/resources/"
+                    >
+                      <span>
+                        Resources
+                      </span>
+                    </a>
+                    <button
+                      aria-controls="Resources-dropdown"
+                      aria-expanded="false"
+                      class="emotion-6"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        ∨
+                      </span>
+                      <span
+                        class="emotion-5"
+                      >
+                        Resources Menu
+                      </span>
+                    </button>
+                    <ul
+                      class="emotion-9"
+                      id="Resources-dropdown"
+                    >
+                      <li
+                        class="emotion-7"
+                      >
+                        <a
+                          href="/resources/gatsby-days/"
+                        >
+                          Gatsby Days
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-7"
+                      >
+                        <a
+                          href="/resources/webinars/"
+                        >
+                          Webinars
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <div
+                    class="emotion-22"
+                  />
+                  <li
+                    class="emotion-3"
+                  >
+                    <a
+                      class="emotion-2"
+                      href="/docs/"
+                    >
+                      <span>
+                        Docs
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
+                  >
+                    <a
+                      class="emotion-2"
+                      href="/contact-us/"
+                    >
+                      <span>
+                        Contact Us
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -12518,7 +12633,7 @@ exports[`Storyshots Navigation default example 1`] = `
 `;
 
 exports[`Storyshots Navigation inverted example 1`] = `
-.emotion-28 {
+.emotion-26 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -12546,7 +12661,7 @@ exports[`Storyshots Navigation inverted example 1`] = `
   }
 }
 
-.emotion-27 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12560,13 +12675,13 @@ exports[`Storyshots Navigation inverted example 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-27 {
+  .emotion-25 {
     display: none;
   }
 }
 
 @media (max-width:1065px) {
-  .emotion-27 {
+  .emotion-25 {
     display: none;
     position: fixed;
     overflow-y: auto;
@@ -12586,10 +12701,33 @@ exports[`Storyshots Navigation inverted example 1`] = `
   }
 }
 
-.emotion-26 {
+.emotion-24 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-23 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12603,7 +12741,14 @@ exports[`Storyshots Navigation inverted example 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-26 {
+  .emotion-23 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
     list-style: none;
     margin: 0 auto;
     padding: 0 1rem;
@@ -12715,7 +12860,13 @@ exports[`Storyshots Navigation inverted example 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-22 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-27 {
   height: 100vh;
   background: #362066;
   padding: 2rem;
@@ -12969,10 +13120,10 @@ exports[`Storyshots Navigation inverted example 1`] = `
     <div>
       <div>
         <div
-          class="emotion-29"
+          class="emotion-27"
         >
           <div
-            class="emotion-28"
+            class="emotion-26"
           >
             <button
               aria-expanded=""
@@ -12983,174 +13134,157 @@ exports[`Storyshots Navigation inverted example 1`] = `
               />
             </button>
             <nav
-              class="emotion-27"
+              class="emotion-25"
             >
-              <ul
-                class="emotion-26"
+              <div
+                class="emotion-24"
               >
-                <li
-                  class="emotion-3"
+                <ul
+                  class="emotion-23"
                 >
-                  <a
-                    class="emotion-2"
-                    href="/why-gatsby/"
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      Why Gatsby?
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/how-it-works/"
-                  >
-                    <span>
-                      How It Works
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="How It Works-dropdown"
-                    aria-expanded="false"
-                    class="emotion-6"
-                  >
-                    <span
-                      aria-hidden="true"
+                    <a
+                      class="emotion-2"
+                      href="/why-gatsby/"
                     >
-                      ∨
-                    </span>
-                    <span
-                      class="emotion-5"
-                    >
-                      How It Works Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-9"
-                    id="How It Works-dropdown"
+                      <span>
+                        Why Gatsby?
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
                   >
-                    <li
-                      class="emotion-7"
+                    <a
+                      class="emotion-2"
+                      href="/how-it-works/"
                     >
-                      <a
-                        href="/how-it-works/bring-data-from-anywhere/"
+                      <span>
+                        How It Works
+                      </span>
+                    </a>
+                    <button
+                      aria-controls="How It Works-dropdown"
+                      aria-expanded="false"
+                      class="emotion-6"
+                    >
+                      <span
+                        aria-hidden="true"
                       >
-                        Bring Data From Anywhere
-                      </a>
-                    </li>
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/write-modern-apps/"
+                        ∨
+                      </span>
+                      <span
+                        class="emotion-5"
                       >
-                        Write Modern Apps
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/integrations/"
-                  >
-                    <span>
-                      Integrations
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/about-us/"
-                  >
-                    <span>
-                      About Us
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/resources/"
-                  >
-                    <span>
-                      Resources
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="Resources-dropdown"
-                    aria-expanded="false"
-                    class="emotion-6"
-                  >
-                    <span
-                      aria-hidden="true"
+                        How It Works Menu
+                      </span>
+                    </button>
+                    <ul
+                      class="emotion-9"
+                      id="How It Works-dropdown"
                     >
-                      ∨
-                    </span>
-                    <span
-                      class="emotion-5"
-                    >
-                      Resources Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-9"
-                    id="Resources-dropdown"
-                  >
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/resources/gatsby-days/"
+                      <li
+                        class="emotion-7"
                       >
-                        Gatsby Days
-                      </a>
-                    </li>
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/resources/webinars/"
+                        <a
+                          href="/how-it-works/bring-data-from-anywhere/"
+                        >
+                          Bring Data From Anywhere
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-7"
                       >
-                        Webinars
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/docs/"
+                        <a
+                          href="/write-modern-apps/"
+                        >
+                          Write Modern Apps
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      Docs
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/contact-us/"
+                    <a
+                      class="emotion-2"
+                      href="/integrations/"
+                    >
+                      <span>
+                        Integrations
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      Contact Us
-                    </span>
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      class="emotion-2"
+                      href="/about-us/"
+                    >
+                      <span>
+                        About Us
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
+                  >
+                    <a
+                      class="emotion-2"
+                      href="/resources/"
+                    >
+                      <span>
+                        Resources
+                      </span>
+                    </a>
+                    <button
+                      aria-controls="Resources-dropdown"
+                      aria-expanded="false"
+                      class="emotion-6"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        ∨
+                      </span>
+                      <span
+                        class="emotion-5"
+                      >
+                        Resources Menu
+                      </span>
+                    </button>
+                    <ul
+                      class="emotion-9"
+                      id="Resources-dropdown"
+                    >
+                      <li
+                        class="emotion-7"
+                      >
+                        <a
+                          href="/resources/gatsby-days/"
+                        >
+                          Gatsby Days
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-7"
+                      >
+                        <a
+                          href="/resources/webinars/"
+                        >
+                          Webinars
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <div
+                    class="emotion-22"
+                  />
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -13161,11 +13295,11 @@ exports[`Storyshots Navigation inverted example 1`] = `
 `;
 
 exports[`Storyshots Navigation with item links as children 1`] = `
-.emotion-9 {
+.emotion-11 {
   padding: 2rem;
 }
 
-.emotion-8 {
+.emotion-10 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -13287,7 +13421,7 @@ exports[`Storyshots Navigation with item links as children 1`] = `
   transform: scale(1.2);
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13301,13 +13435,13 @@ exports[`Storyshots Navigation with item links as children 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-7 {
+  .emotion-9 {
     display: none;
   }
 }
 
 @media (max-width:1065px) {
-  .emotion-7 {
+  .emotion-9 {
     display: none;
     position: fixed;
     overflow-y: auto;
@@ -13327,10 +13461,33 @@ exports[`Storyshots Navigation with item links as children 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-7 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13344,7 +13501,14 @@ exports[`Storyshots Navigation with item links as children 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-6 {
+  .emotion-7 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
     list-style: none;
     margin: 0 auto;
     padding: 0 1rem;
@@ -13357,7 +13521,7 @@ exports[`Storyshots Navigation with item links as children 1`] = `
   }
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -13368,7 +13532,7 @@ exports[`Storyshots Navigation with item links as children 1`] = `
   padding: 0 0.75rem;
 }
 
-.emotion-3:hover > ul {
+.emotion-4:hover > ul {
   display: inline-block;
   position: absolute;
   top: 95%;
@@ -13377,7 +13541,7 @@ exports[`Storyshots Navigation with item links as children 1`] = `
   padding: 0.75rem 0;
 }
 
-.emotion-3:hover > ul {
+.emotion-4:hover > ul {
   font-size: 0.875rem;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   right: 0;
@@ -13387,7 +13551,7 @@ exports[`Storyshots Navigation with item links as children 1`] = `
   border-radius: 2px;
 }
 
-.emotion-3:hover > ul:after {
+.emotion-4:hover > ul:after {
   position: absolute;
   top: -6px;
   left: 30px;
@@ -13409,12 +13573,12 @@ exports[`Storyshots Navigation with item links as children 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-3 {
+  .emotion-4 {
     display: block;
     color: #ffffff;
   }
 
-  .emotion-3:hover > ul {
+  .emotion-4:hover > ul {
     width: 100%;
     color: #ffffff;
     position: relative;
@@ -13423,12 +13587,12 @@ exports[`Storyshots Navigation with item links as children 1`] = `
     margin-bottom: 0.75rem;
   }
 
-  .emotion-3:hover > ul:after {
+  .emotion-4:hover > ul:after {
     content: none;
   }
 }
 
-.emotion-2 {
+.emotion-3 {
   display: block;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -13443,19 +13607,19 @@ exports[`Storyshots Navigation with item links as children 1`] = `
   position: relative;
 }
 
-.emotion-2 span {
+.emotion-3 span {
   position: relative;
 }
 
-.emotion-2.nav-item-active {
+.emotion-3.nav-item-active {
   color: #663399;
 }
 
-.emotion-2.nav-item-active span:after {
+.emotion-3.nav-item-active span:after {
   width: 100%;
 }
 
-.emotion-2 span:after {
+.emotion-3 span:after {
   position: absolute;
   content: " ";
   display: block;
@@ -13468,12 +13632,12 @@ exports[`Storyshots Navigation with item links as children 1`] = `
   transition: all 250ms;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   opacity: 0.8;
 }
 
 @media (max-width:1065px) {
-  .emotion-2 {
+  .emotion-3 {
     color: #ffffff;
     font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     font-weight: normal;
@@ -13483,12 +13647,18 @@ exports[`Storyshots Navigation with item links as children 1`] = `
     font-size: 1.75rem;
   }
 
-  .emotion-2:focus,
-  .emotion-2:hover {
+  .emotion-3:focus,
+  .emotion-3:hover {
     color: #ffb238;
     background: none;
     opacity: 1;
   }
+}
+
+.emotion-2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div>
@@ -13498,10 +13668,10 @@ exports[`Storyshots Navigation with item links as children 1`] = `
     <div>
       <div>
         <div
-          class="emotion-9"
+          class="emotion-11"
         >
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <button
               aria-expanded=""
@@ -13512,36 +13682,43 @@ exports[`Storyshots Navigation with item links as children 1`] = `
               />
             </button>
             <nav
-              class="emotion-7"
+              class="emotion-9"
             >
-              <ul
-                class="emotion-6"
+              <div
+                class="emotion-8"
               >
-                <li
-                  class="emotion-3"
+                <ul
+                  class="emotion-7"
                 >
-                  <a
+                  <div
                     class="emotion-2"
-                    href="/contact/"
+                  />
+                  <li
+                    class="emotion-4"
                   >
-                    <span>
-                      Contact
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/about/"
+                    <a
+                      class="emotion-3"
+                      href="/contact/"
+                    >
+                      <span>
+                        Contact
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-4"
                   >
-                    <span>
-                      About
-                    </span>
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      class="emotion-3"
+                      href="/about/"
+                    >
+                      <span>
+                        About
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -13958,11 +14135,11 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
   }
 }
 
-.emotion-31 {
+.emotion-29 {
   padding: 2rem;
 }
 
-.emotion-30 {
+.emotion-28 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -14084,7 +14261,7 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
   transform: scale(1.2);
 }
 
-.emotion-29 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14098,13 +14275,13 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
 }
 
 @media (max-width:1065px) {
-  .emotion-29 {
+  .emotion-27 {
     display: none;
   }
 }
 
 @media (max-width:1065px) {
-  .emotion-29 {
+  .emotion-27 {
     display: none;
     position: fixed;
     overflow-y: auto;
@@ -14124,10 +14301,33 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
   }
 }
 
-.emotion-28 {
+.emotion-26 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-25 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14141,7 +14341,14 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
 }
 
 @media (max-width:1065px) {
-  .emotion-28 {
+  .emotion-25 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
     list-style: none;
     margin: 0 auto;
     padding: 0 1rem;
@@ -14400,13 +14607,13 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
   }
 }
 
-.emotion-26 {
+.emotion-22 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.emotion-27 {
+.emotion-24 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -14444,13 +14651,13 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
   margin-left: .5rem;
 }
 
-.emotion-27[disabled],
-.emotion-27[disabled]:hover {
+.emotion-24[disabled],
+.emotion-24[disabled]:hover {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.emotion-27 svg {
+.emotion-24 svg {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -14460,30 +14667,30 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
   transform: scale(1);
 }
 
-.emotion-27:hover:not([disabled]) svg {
+.emotion-24:hover:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
 
-.emotion-27:hover {
+.emotion-24:hover {
   background: #542c85;
   border: 1px solid #542c85;
 }
 
-.emotion-27:focus {
+.emotion-24:focus {
   background: #542c85;
   border: 0;
   color: #ffffff;
 }
 
-.emotion-27:hover:not([disabled]) {
+.emotion-24:hover:not([disabled]) {
   background: #542c85;
   border: 0;
   color: #ffffff;
 }
 
 @media (max-width:1065px) {
-  .emotion-27 {
+  .emotion-24 {
     margin-top: .5rem;
   }
 }
@@ -14495,10 +14702,10 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
     <div>
       <div>
         <div
-          class="emotion-31"
+          class="emotion-29"
         >
           <div
-            class="emotion-30"
+            class="emotion-28"
           >
             <button
               aria-expanded=""
@@ -14509,197 +14716,180 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
               />
             </button>
             <nav
-              class="emotion-29"
+              class="emotion-27"
             >
-              <ul
-                class="emotion-28"
+              <div
+                class="emotion-26"
               >
-                <li
-                  class="emotion-3"
+                <ul
+                  class="emotion-25"
                 >
-                  <a
-                    class="emotion-2"
-                    href="/why-gatsby/"
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      Why Gatsby?
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/how-it-works/"
-                  >
-                    <span>
-                      How It Works
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="How It Works-dropdown"
-                    aria-expanded="false"
-                    class="emotion-6"
-                  >
-                    <span
-                      aria-hidden="true"
+                    <a
+                      class="emotion-2"
+                      href="/why-gatsby/"
                     >
-                      ∨
-                    </span>
-                    <span
-                      class="emotion-5"
-                    >
-                      How It Works Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-9"
-                    id="How It Works-dropdown"
+                      <span>
+                        Why Gatsby?
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
                   >
-                    <li
-                      class="emotion-7"
+                    <a
+                      class="emotion-2"
+                      href="/how-it-works/"
                     >
-                      <a
-                        href="/how-it-works/bring-data-from-anywhere/"
+                      <span>
+                        How It Works
+                      </span>
+                    </a>
+                    <button
+                      aria-controls="How It Works-dropdown"
+                      aria-expanded="false"
+                      class="emotion-6"
+                    >
+                      <span
+                        aria-hidden="true"
                       >
-                        Bring Data From Anywhere
-                      </a>
-                    </li>
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/write-modern-apps/"
+                        ∨
+                      </span>
+                      <span
+                        class="emotion-5"
                       >
-                        Write Modern Apps
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/integrations/"
-                  >
-                    <span>
-                      Integrations
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/about-us/"
-                  >
-                    <span>
-                      About Us
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/resources/"
-                  >
-                    <span>
-                      Resources
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="Resources-dropdown"
-                    aria-expanded="false"
-                    class="emotion-6"
-                  >
-                    <span
-                      aria-hidden="true"
+                        How It Works Menu
+                      </span>
+                    </button>
+                    <ul
+                      class="emotion-9"
+                      id="How It Works-dropdown"
                     >
-                      ∨
-                    </span>
-                    <span
-                      class="emotion-5"
-                    >
-                      Resources Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-9"
-                    id="Resources-dropdown"
-                  >
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/resources/gatsby-days/"
+                      <li
+                        class="emotion-7"
                       >
-                        Gatsby Days
-                      </a>
-                    </li>
-                    <li
-                      class="emotion-7"
-                    >
-                      <a
-                        href="/resources/webinars/"
+                        <a
+                          href="/how-it-works/bring-data-from-anywhere/"
+                        >
+                          Bring Data From Anywhere
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-7"
                       >
-                        Webinars
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  class="emotion-3"
-                >
+                        <a
+                          href="/write-modern-apps/"
+                        >
+                          Write Modern Apps
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="emotion-3"
+                  >
+                    <a
+                      class="emotion-2"
+                      href="/integrations/"
+                    >
+                      <span>
+                        Integrations
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
+                  >
+                    <a
+                      class="emotion-2"
+                      href="/about-us/"
+                    >
+                      <span>
+                        About Us
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-3"
+                  >
+                    <a
+                      class="emotion-2"
+                      href="/resources/"
+                    >
+                      <span>
+                        Resources
+                      </span>
+                    </a>
+                    <button
+                      aria-controls="Resources-dropdown"
+                      aria-expanded="false"
+                      class="emotion-6"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        ∨
+                      </span>
+                      <span
+                        class="emotion-5"
+                      >
+                        Resources Menu
+                      </span>
+                    </button>
+                    <ul
+                      class="emotion-9"
+                      id="Resources-dropdown"
+                    >
+                      <li
+                        class="emotion-7"
+                      >
+                        <a
+                          href="/resources/gatsby-days/"
+                        >
+                          Gatsby Days
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-7"
+                      >
+                        <a
+                          href="/resources/webinars/"
+                        >
+                          Webinars
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <div
+                    class="emotion-22"
+                  />
+                  <div
+                    class="emotion-22"
+                  />
                   <a
-                    class="emotion-2"
-                    href="/docs/"
+                    class="emotion-24"
+                    href="/get-started"
                   >
-                    <span>
-                      Docs
-                    </span>
+                    Get started for free
+                     
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                      />
+                    </svg>
                   </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/contact-us/"
-                  >
-                    <span>
-                      Contact Us
-                    </span>
-                  </a>
-                </li>
-                <div
-                  class="emotion-26"
-                />
-                <a
-                  class="emotion-27"
-                  href="/get-started"
-                >
-                  Get started for free
-                   
-                  <svg
-                    fill="currentColor"
-                    height="1em"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
-                    />
-                  </svg>
-                </a>
-              </ul>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -14710,11 +14900,11 @@ exports[`Storyshots Navigation with item links as props and button as child 1`] 
 `;
 
 exports[`Storyshots Navigation with item links as props and children 1`] = `
-.emotion-9 {
+.emotion-11 {
   padding: 2rem;
 }
 
-.emotion-8 {
+.emotion-10 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -14836,7 +15026,7 @@ exports[`Storyshots Navigation with item links as props and children 1`] = `
   transform: scale(1.2);
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14850,13 +15040,13 @@ exports[`Storyshots Navigation with item links as props and children 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-7 {
+  .emotion-9 {
     display: none;
   }
 }
 
 @media (max-width:1065px) {
-  .emotion-7 {
+  .emotion-9 {
     display: none;
     position: fixed;
     overflow-y: auto;
@@ -14876,10 +15066,33 @@ exports[`Storyshots Navigation with item links as props and children 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-7 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14893,7 +15106,14 @@ exports[`Storyshots Navigation with item links as props and children 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-6 {
+  .emotion-7 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
     list-style: none;
     margin: 0 auto;
     padding: 0 1rem;
@@ -15040,6 +15260,12 @@ exports[`Storyshots Navigation with item links as props and children 1`] = `
   }
 }
 
+.emotion-4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 <div>
   <div
     class="storybook-readme-story"
@@ -15047,10 +15273,10 @@ exports[`Storyshots Navigation with item links as props and children 1`] = `
     <div>
       <div>
         <div
-          class="emotion-9"
+          class="emotion-11"
         >
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <button
               aria-expanded=""
@@ -15061,36 +15287,43 @@ exports[`Storyshots Navigation with item links as props and children 1`] = `
               />
             </button>
             <nav
-              class="emotion-7"
+              class="emotion-9"
             >
-              <ul
-                class="emotion-6"
+              <div
+                class="emotion-8"
               >
-                <li
-                  class="emotion-3"
+                <ul
+                  class="emotion-7"
                 >
-                  <a
-                    class="emotion-2"
-                    href="/about/"
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      About
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-3"
-                >
-                  <a
-                    class="emotion-2"
-                    href="/contact/"
+                    <a
+                      class="emotion-2"
+                      href="/about/"
+                    >
+                      <span>
+                        About
+                      </span>
+                    </a>
+                  </li>
+                  <div
+                    class="emotion-4"
+                  />
+                  <li
+                    class="emotion-3"
                   >
-                    <span>
-                      Contact
-                    </span>
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      class="emotion-2"
+                      href="/contact/"
+                    >
+                      <span>
+                        Contact
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -15101,11 +15334,11 @@ exports[`Storyshots Navigation with item links as props and children 1`] = `
 `;
 
 exports[`Storyshots Navigation with nested item links as children 1`] = `
-.emotion-12 {
+.emotion-14 {
   padding: 2rem;
 }
 
-.emotion-11 {
+.emotion-13 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15227,7 +15460,7 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
   transform: scale(1.2);
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15241,13 +15474,13 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-10 {
+  .emotion-12 {
     display: none;
   }
 }
 
 @media (max-width:1065px) {
-  .emotion-10 {
+  .emotion-12 {
     display: none;
     position: fixed;
     overflow-y: auto;
@@ -15267,10 +15500,33 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
   }
 }
 
-.emotion-9 {
+.emotion-11 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-10 {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15284,7 +15540,14 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
 }
 
 @media (max-width:1065px) {
-  .emotion-9 {
+  .emotion-10 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
     list-style: none;
     margin: 0 auto;
     padding: 0 1rem;
@@ -15297,7 +15560,7 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -15308,7 +15571,7 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
   padding: 0 0.75rem;
 }
 
-.emotion-8:hover > ul {
+.emotion-9:hover > ul {
   display: inline-block;
   position: absolute;
   top: 95%;
@@ -15317,7 +15580,7 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
   padding: 0.75rem 0;
 }
 
-.emotion-8:hover > ul {
+.emotion-9:hover > ul {
   font-size: 0.875rem;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   right: 0;
@@ -15327,7 +15590,148 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
   border-radius: 2px;
 }
 
-.emotion-8:hover > ul:after {
+.emotion-9:hover > ul:after {
+  position: absolute;
+  top: -6px;
+  left: 30px;
+  width: 12px;
+  height: 12px;
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 2 0 0 0;
+  background: #ffffff;
+  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width:1065px) {
+  .emotion-9 {
+    display: block;
+    color: #ffffff;
+  }
+
+  .emotion-9:hover > ul {
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    background: 0;
+    padding: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-9:hover > ul:after {
+    content: none;
+  }
+}
+
+.emotion-3 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  -webkit-font-smoothing: antialiased;
+  line-height: calc(3.33rem);
+  position: relative;
+}
+
+.emotion-3 span {
+  position: relative;
+}
+
+.emotion-3.nav-item-active {
+  color: #663399;
+}
+
+.emotion-3.nav-item-active span:after {
+  width: 100%;
+}
+
+.emotion-3 span:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  opacity: 0.2;
+  background: linear-gradient(45deg,#8a4baf,#663399);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.emotion-3:hover {
+  opacity: 0.8;
+}
+
+@media (max-width:1065px) {
+  .emotion-3 {
+    color: #ffffff;
+    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: normal;
+    -webkit-transition: opacity 250ms;
+    transition: opacity 250ms;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.75rem;
+  }
+
+  .emotion-3:focus,
+  .emotion-3:hover {
+    color: #ffb238;
+    background: none;
+    opacity: 1;
+  }
+}
+
+.emotion-5 {
+  color: #000000;
+  background: inherit;
+  margin-left: 0.125rem;
+  border: none;
+}
+
+@media (max-width:1065px) {
+  .emotion-5 {
+    display: none;
+  }
+}
+
+.emotion-4 {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+.emotion-8 {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  right: 0;
+  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
+  background: #ffffff;
+  width: 450px;
+  border-radius: 2px;
+}
+
+.emotion-8:after {
   position: absolute;
   top: -6px;
   left: 30px;
@@ -15350,147 +15754,6 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
 
 @media (max-width:1065px) {
   .emotion-8 {
-    display: block;
-    color: #ffffff;
-  }
-
-  .emotion-8:hover > ul {
-    width: 100%;
-    color: #ffffff;
-    position: relative;
-    background: 0;
-    padding: 0;
-    margin-bottom: 0.75rem;
-  }
-
-  .emotion-8:hover > ul:after {
-    content: none;
-  }
-}
-
-.emotion-2 {
-  display: block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
-  font-size: 0.875rem;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
-  -webkit-font-smoothing: antialiased;
-  line-height: calc(3.33rem);
-  position: relative;
-}
-
-.emotion-2 span {
-  position: relative;
-}
-
-.emotion-2.nav-item-active {
-  color: #663399;
-}
-
-.emotion-2.nav-item-active span:after {
-  width: 100%;
-}
-
-.emotion-2 span:after {
-  position: absolute;
-  content: " ";
-  display: block;
-  width: 0;
-  height: 1px;
-  bottom: -4px;
-  opacity: 0.2;
-  background: linear-gradient(45deg,#8a4baf,#663399);
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
-}
-
-.emotion-2:hover {
-  opacity: 0.8;
-}
-
-@media (max-width:1065px) {
-  .emotion-2 {
-    color: #ffffff;
-    font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    font-weight: normal;
-    -webkit-transition: opacity 250ms;
-    transition: opacity 250ms;
-    -webkit-font-smoothing: antialiased;
-    font-size: 1.75rem;
-  }
-
-  .emotion-2:focus,
-  .emotion-2:hover {
-    color: #ffb238;
-    background: none;
-    opacity: 1;
-  }
-}
-
-.emotion-4 {
-  color: #000000;
-  background: inherit;
-  margin-left: 0.125rem;
-  border: none;
-}
-
-@media (max-width:1065px) {
-  .emotion-4 {
-    display: none;
-  }
-}
-
-.emotion-3 {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
-}
-
-.emotion-7 {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 0.875rem;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  right: 0;
-  box-shadow: 0px 4px 16px rgba(46,41,51,0.08),0px 8px 24px rgba(71,63,79,0.16);
-  background: #ffffff;
-  width: 450px;
-  border-radius: 2px;
-}
-
-.emotion-7:after {
-  position: absolute;
-  top: -6px;
-  left: 30px;
-  width: 12px;
-  height: 12px;
-  content: " ";
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border-radius: 2 0 0 0;
-  background: #ffffff;
-  box-shadow: -3px -3px 10px rgba(138,75,175,0.1);
-  will-change: transform;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-}
-
-@media (max-width:1065px) {
-  .emotion-7 {
     display: inline-block;
     background: 0;
     width: 100%;
@@ -15500,12 +15763,12 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
     margin-bottom: 0.75rem;
   }
 
-  .emotion-7:after {
+  .emotion-8:after {
     content: none;
   }
 }
 
-.emotion-5 a {
+.emotion-6 a {
   color: #78757a;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -15515,18 +15778,18 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
   transition: all 250ms;
 }
 
-.emotion-5 a:hover {
+.emotion-6 a:hover {
   color: #232129;
   background: rgba(255,178,56,0.1);
 }
 
-.emotion-5 a:focus-within {
+.emotion-6 a:focus-within {
   color: #232129;
   background: rgba(255,178,56,0.1);
 }
 
 @media (max-width:1065px) {
-  .emotion-5 a {
+  .emotion-6 a {
     color: #ffffff;
     -webkit-text-decoration: none;
     text-decoration: none;
@@ -15535,12 +15798,18 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
     font-size: 0.875rem;
   }
 
-  .emotion-5 a:hover,
-  .emotion-5 a:focus-within {
+  .emotion-6 a:hover,
+  .emotion-6 a:focus-within {
     opacity: 1;
     color: #ffb238;
     background: none;
   }
+}
+
+.emotion-2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div>
@@ -15550,10 +15819,10 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
     <div>
       <div>
         <div
-          class="emotion-12"
+          class="emotion-14"
         >
           <div
-            class="emotion-11"
+            class="emotion-13"
           >
             <button
               aria-expanded=""
@@ -15564,63 +15833,70 @@ exports[`Storyshots Navigation with nested item links as children 1`] = `
               />
             </button>
             <nav
-              class="emotion-10"
+              class="emotion-12"
             >
-              <ul
-                class="emotion-9"
+              <div
+                class="emotion-11"
               >
-                <li
-                  class="emotion-8"
+                <ul
+                  class="emotion-10"
                 >
-                  <a
+                  <div
                     class="emotion-2"
-                    href="/about/"
+                  />
+                  <li
+                    class="emotion-9"
                   >
-                    <span>
-                      About
-                    </span>
-                  </a>
-                  <button
-                    aria-controls="About-dropdown"
-                    aria-expanded="false"
-                    class="emotion-4"
-                  >
-                    <span
-                      aria-hidden="true"
-                    >
-                      ∨
-                    </span>
-                    <span
+                    <a
                       class="emotion-3"
+                      href="/about/"
                     >
-                      About Menu
-                    </span>
-                  </button>
-                  <ul
-                    class="emotion-7"
-                    id="About-dropdown"
-                  >
-                    <li
+                      <span>
+                        About
+                      </span>
+                    </a>
+                    <button
+                      aria-controls="About-dropdown"
+                      aria-expanded="false"
                       class="emotion-5"
                     >
-                      <a
-                        href="/contact/"
+                      <span
+                        aria-hidden="true"
                       >
-                        Contact
-                      </a>
-                    </li>
-                    <li
-                      class="emotion-5"
+                        ∨
+                      </span>
+                      <span
+                        class="emotion-4"
+                      >
+                        About Menu
+                      </span>
+                    </button>
+                    <ul
+                      class="emotion-8"
+                      id="About-dropdown"
                     >
-                      <a
-                        href="/faq/"
+                      <li
+                        class="emotion-6"
                       >
-                        FAQ
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                        <a
+                          href="/contact/"
+                        >
+                          Contact
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-6"
+                      >
+                        <a
+                          href="/faq/"
+                        >
+                          FAQ
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>

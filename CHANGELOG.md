@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.62](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.61...v0.0.62) (2019-12-20)
+
+
+### Bug Fixes
+
+* allow items on both sides for Navigation + mobile fixes ([21a1c4b](https://github.com/gatsby-inc/gatsby-interface/commit/21a1c4be9230005a111c28e6ceff4997d51ee87d))
+
 ### [0.0.61](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.60...v0.0.61) (2019-12-19)
 
 ### [0.0.60](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.59...v0.0.60) (2019-12-17)

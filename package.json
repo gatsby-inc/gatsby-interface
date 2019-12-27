@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.61",
+  "version": "0.0.62",
   "description": "Component library for Gatsby projects",
   "source": "src/index.js",
   "files": [
@@ -28,7 +28,9 @@
     "lint:all": "yarn lint src",
     "chromatic": "chromatic test",
     "scaffold:icon": "babel-node --presets @babel/env scripts/scaffold-icon/scaffold-icon.js",
-    "release": "standard-version"
+    "prepublish": "yarn build",
+    "release": "standard-version",
+    "release:branch": "babel-node --presets @babel/env scripts/prerelease-branch.js"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +40,7 @@
     "@reach/alert": "^0.1.5",
     "@reach/dialog": "^0.4.0",
     "@types/lodash.sample": "^4.2.6",
+    "date-fns": "^2.8.1",
     "filestack-react": "^3.1.0",
     "gatsby-design-tokens": "^1.0.0",
     "lodash.sample": "^4.2.1",
@@ -151,6 +154,7 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-url": "^1.4.0",
+    "shelljs": "^0.8.3",
     "standard-version": "^7.0.1",
     "storybook-chromatic": "^2.1.1",
     "storybook-host": "^5.1.0",
