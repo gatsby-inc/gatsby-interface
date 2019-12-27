@@ -1,10 +1,11 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core"
+import { jsx, css } from "@emotion/core"
 import React from "react"
 import { storiesOf } from "@storybook/react"
 
 import { StoryUtils } from "../utils/storybook"
-import { getTheme, ThemeLineHeight, ThemeZIndex } from "./"
+import { getTheme, ThemeLineHeight, ThemeZIndex, ThemeMediaQuery } from "./"
+import { number } from "@storybook/addon-knobs"
 // import README from "./README.md"
 
 const theme = getTheme()
@@ -241,6 +242,174 @@ storiesOf(`theme`, module)
               </div>
             )
           })}
+        </div>
+      </StoryUtils.Container>
+    )
+  })
+  .add(`media queries`, () => {
+    const colorsByMediaQuery: Record<ThemeMediaQuery, string> = {
+      mobile: theme.colors.green[50],
+      phablet: theme.colors.orange[50],
+      tablet: theme.colors.magenta[50],
+      desktop: theme.colors.purple[50],
+      hd: theme.colors.blue[50],
+    }
+
+    function MediaQueryCase() {
+      const mediaCss = Object.entries(theme.mediaQueries).reduce(
+        (memo, [token, mediaQuery]) => {
+          return {
+            ...memo,
+            [mediaQuery]: {
+              backgroundColor: colorsByMediaQuery[token as ThemeMediaQuery],
+            },
+          }
+        },
+        {}
+      )
+
+      const [media, setMedia] = React.useState<string>("")
+
+      React.useEffect(() => {
+        const getQuery = (token: ThemeMediaQuery) => {
+          return `(min-width: ${theme.mediaBreakpoints[token]}px)`
+        }
+
+        const listener = () => {
+          let matchedMedia = false
+          Object.keys(theme.mediaQueries).forEach(token => {
+            const query = getQuery(token as ThemeMediaQuery)
+
+            if (window.matchMedia && window.matchMedia(query).matches) {
+              matchedMedia = true
+              setMedia(token)
+            }
+          })
+          if (!matchedMedia) {
+            setMedia(``)
+          }
+        }
+
+        /**
+         * using "resize" event instead of window.matchMedia(query).addEventListener
+         * since the latter seems to be throttled by browser,
+         * and we want immediate feedback for the purpose of this story
+         */
+        window.addEventListener(`resize`, listener)
+        listener()
+
+        return () => {
+          window.removeEventListener(`resize`, listener)
+        }
+      }, [])
+
+      return (
+        <div>
+          <p>Resize the window to see media queries in action</p>
+          <div
+            css={[
+              {
+                color: theme.colors.white,
+                textAlign: `center`,
+                display: `flex`,
+                alignItems: `center`,
+                justifyContent: `space-around`,
+                padding: theme.space[5],
+                backgroundColor: theme.colors.grey[50],
+              },
+              mediaCss,
+            ]}
+          >
+            <span>
+              Media: <strong>{media || "no media"}</strong>
+            </span>
+          </div>
+        </div>
+      )
+    }
+
+    return (
+      <StoryUtils.Container>
+        <MediaQueryCase />
+      </StoryUtils.Container>
+    )
+  })
+  .add(`transitions`, () => {
+    const curveSpeed = number(`Curve speed (ms)`, 500)
+    const baseCss = css({
+      boxShadow: theme.shadows.raised,
+      color: theme.colors.white,
+      height: `6rem`,
+      textAlign: `center`,
+      display: `flex`,
+      alignItems: `center`,
+      justifyContent: `space-around`,
+      padding: `0 ${theme.space[4]}`,
+      position: "relative",
+      zIndex: 1,
+      "&:hover": {
+        transform: `scale(2)`,
+        zIndex: 2,
+      },
+    })
+    const colors = [
+      theme.colors.green[50],
+      theme.colors.blue[50],
+      theme.colors.purple[50],
+      theme.colors.magenta[50],
+      theme.colors.orange[50],
+      theme.colors.teal[50],
+    ]
+
+    return (
+      <StoryUtils.Container>
+        <div css={{ display: `grid`, gridGap: `1rem`, textAlign: `center` }}>
+          <h4>
+            Curve <br />
+            <small>Hover on a card to start a transition</small>
+          </h4>
+          {Object.entries(theme.transitions.curve).map(
+            ([token, curve], idx) => {
+              return (
+                <div
+                  key={token}
+                  css={[
+                    baseCss,
+                    {
+                      backgroundColor: colors[idx % colors.length],
+                      transition: `all ${curveSpeed}ms ${curve}`,
+                    },
+                  ]}
+                >
+                  {token}
+                </div>
+              )
+            }
+          )}
+          <h4>
+            Speed <br />
+            <small>Hover on a card to start a transition</small>
+          </h4>
+          {Object.entries(theme.transitions.speed)
+            .sort(([_tokenA, speedA], [_tokenB, speedB]) => {
+              return parseInt(speedA) - parseInt(speedB)
+            })
+            .map(([token, speed], idx) => {
+              return (
+                <div
+                  key={token}
+                  css={[
+                    baseCss,
+                    {
+                      backgroundColor: colors[idx % colors.length],
+                      transition: `all ${speed} linear`,
+                    },
+                  ]}
+                >
+                  {token}
+                </div>
+              )
+            })}
         </div>
       </StoryUtils.Container>
     )

@@ -39816,6 +39816,105 @@ exports[`Storyshots theme line heights 1`] = `
 </div>
 `;
 
+exports[`Storyshots theme media queries 1`] = `
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  color: #ffffff;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: #78757a;
+}
+
+@media (min-width:360px) {
+  .emotion-0 {
+    background-color: #37b635;
+  }
+}
+
+@media (min-width:550px) {
+  .emotion-0 {
+    background-color: #ffb238;
+  }
+}
+
+@media (min-width:750px) {
+  .emotion-0 {
+    background-color: #bc027f;
+  }
+}
+
+@media (min-width:1000px) {
+  .emotion-0 {
+    background-color: #8a4baf;
+  }
+}
+
+@media (min-width:1300px) {
+  .emotion-0 {
+    background-color: #0d96f2;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div>
+            <p>
+              Resize the window to see media queries in action
+            </p>
+            <div
+              class="emotion-0"
+            >
+              <span>
+                Media: 
+                <strong>
+                  no media
+                </strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots theme radii 1`] = `
 .emotion-8 {
   -webkit-align-items: center;
@@ -40743,6 +40842,324 @@ exports[`Storyshots theme space 1`] = `
             />
             <div>
               6rem
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots theme transitions 1`] = `
+.emotion-8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-7 {
+  display: grid;
+  grid-gap: 1rem;
+  text-align: center;
+}
+
+.emotion-0 {
+  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+  color: #ffffff;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 1;
+  background-color: #37b635;
+  -webkit-transition: all 500ms cubic-bezier(0.4,0,0.2,1);
+  transition: all 500ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-0:hover {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  z-index: 2;
+}
+
+.emotion-1 {
+  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+  color: #ffffff;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 1;
+  background-color: #0d96f2;
+  -webkit-transition: all 500ms cubic-bezier(0.4,0,1,1);
+  transition: all 500ms cubic-bezier(0.4,0,1,1);
+}
+
+.emotion-1:hover {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  z-index: 2;
+}
+
+.emotion-2 {
+  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+  color: #ffffff;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 1;
+  background-color: #37b635;
+  -webkit-transition: all 50ms linear;
+  transition: all 50ms linear;
+}
+
+.emotion-2:hover {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  z-index: 2;
+}
+
+.emotion-3 {
+  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+  color: #ffffff;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 1;
+  background-color: #0d96f2;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+}
+
+.emotion-3:hover {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  z-index: 2;
+}
+
+.emotion-4 {
+  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+  color: #ffffff;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 1;
+  background-color: #8a4baf;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.emotion-4:hover {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  z-index: 2;
+}
+
+.emotion-5 {
+  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+  color: #ffffff;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 1;
+  background-color: #bc027f;
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+}
+
+.emotion-5:hover {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  z-index: 2;
+}
+
+.emotion-6 {
+  box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
+  color: #ffffff;
+  height: 6rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 1;
+  background-color: #ffb238;
+  -webkit-transition: all 1000ms linear;
+  transition: all 1000ms linear;
+}
+
+.emotion-6:hover {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  z-index: 2;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <div
+            class="emotion-7"
+          >
+            <h4>
+              Curve 
+              <br />
+              <small>
+                Hover on a card to start a transition
+              </small>
+            </h4>
+            <div
+              class="emotion-0"
+            >
+              default
+            </div>
+            <div
+              class="emotion-1"
+            >
+              fastOutLinearIn
+            </div>
+            <h4>
+              Speed 
+              <br />
+              <small>
+                Hover on a card to start a transition
+              </small>
+            </h4>
+            <div
+              class="emotion-2"
+            >
+              blink
+            </div>
+            <div
+              class="emotion-3"
+            >
+              fast
+            </div>
+            <div
+              class="emotion-4"
+            >
+              default
+            </div>
+            <div
+              class="emotion-5"
+            >
+              slow
+            </div>
+            <div
+              class="emotion-6"
+            >
+              snail
             </div>
           </div>
         </div>

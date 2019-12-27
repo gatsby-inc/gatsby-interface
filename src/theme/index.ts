@@ -8,6 +8,13 @@ import zIndices, { ZIndexToken, ZIndices } from "./zIndices"
 import space, { SpaceToken, Space } from "./space"
 import radii, { RadiusToken, Radii } from "./radii"
 import shadows, { ShadowToken } from "./shadows"
+import breakpoints, {
+  BreakpointToken,
+  Breakpoints,
+  BreakpointsList,
+  breakpointsList,
+} from "./breakpoints"
+import transitions, { Transitions } from "./transition"
 
 /**
  * Colors
@@ -105,6 +112,46 @@ type ZIndexScale = ZIndices
 
 const themeZIndices: ZIndexScale = zIndices
 
+/**
+ * Breakpoints
+ */
+export type ThemeBreakpoint = BreakpointToken
+
+type BreakpointScale = BreakpointsList
+
+const themeBreakpoints: BreakpointScale = breakpointsList
+
+/**
+ * Media breakpoints
+ */
+export type ThemeMediaBreakpoint = BreakpointToken
+
+type MediaBreakpointScale = Breakpoints
+
+const themeMediaBreakpoints: MediaBreakpointScale = breakpoints
+
+/**
+ * Media queries
+ */
+export type ThemeMediaQuery = BreakpointToken
+
+type MediaQueryScale = Record<ThemeMediaQuery, string>
+
+const themeMediaQueries: MediaQueryScale = Object.entries(breakpoints).reduce(
+  (memo, [breakpoint, widthInPx]) => {
+    return {
+      ...memo,
+      [breakpoint]: `@media (min-width: ${widthInPx}px)`,
+    }
+  },
+  {}
+) as MediaQueryScale
+
+/**
+ * Transitions
+ */
+const themeTransitions = transitions
+
 export type Theme = {
   colors: Readonly<ColorScale>;
   fonts: Readonly<FontScale>;
@@ -116,6 +163,10 @@ export type Theme = {
   radii: Readonly<RadiusScale>;
   shadows: Readonly<ShadowScale>;
   zIndices: Readonly<ZIndexScale>;
+  breakpoints: Readonly<BreakpointScale>;
+  mediaBreakpoints: Readonly<MediaBreakpointScale>;
+  mediaQueries: Readonly<MediaQueryScale>;
+  transitions: Readonly<Transitions>;
 }
 
 const defaultTheme: Theme = {
@@ -129,6 +180,10 @@ const defaultTheme: Theme = {
   radii: themeRadii,
   shadows: themeShadows,
   zIndices: themeZIndices,
+  breakpoints: themeBreakpoints,
+  mediaBreakpoints: themeMediaBreakpoints,
+  mediaQueries: themeMediaQueries,
+  transitions: themeTransitions,
 }
 
 export function getTheme(): Theme {
