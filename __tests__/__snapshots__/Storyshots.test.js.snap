@@ -27547,6 +27547,113 @@ exports[`Storyshots TextInput Default 1`] = `
 </div>
 `;
 
+exports[`Storyshots ThemeProvider accessing theme in a css prop 1`] = `
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-1 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-0 {
+  text-transform: uppercase;
+  background-color: var(--theme-ui-colors-gatsby,#663399);
+  color: var(--theme-ui-colors-white,#ffffff);
+  padding: 1rem;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-2"
+        >
+          <div
+            class="emotion-1"
+          >
+            <div
+              class="emotion-0"
+            >
+              Lorem ipsum
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ThemeProvider useTheme 1`] = `
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-0 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-1"
+        >
+          <div
+            class="emotion-0"
+          >
+            <div
+              style="background-color: rgb(89, 193, 86); color: rgb(255, 255, 255); padding: 1rem;"
+            >
+              Lorem ipsum
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Toast Default 1`] = `
 @keyframes animation-0 {
   33% {
