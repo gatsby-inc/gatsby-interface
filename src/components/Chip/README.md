@@ -12,4 +12,8 @@ function Component() {
 
 #### Props
 
-`Chip` accepts all the props supported by `<span />` HTML element
+`Chip` accepts all the props supported by `<span />` HTML element as well as the following:
+
+| Prop | Type                      | Default value | Description                                                        |
+| ---- | ------------------------- | ------------- | ------------------------------------------------------------------ |
+| icon | `React.ReactNode`, `null` | `null`        | An icon node to be displayed inside the chip before the chip label |

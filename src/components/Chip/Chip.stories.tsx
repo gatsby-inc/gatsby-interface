@@ -8,7 +8,6 @@ import README from "./README.md"
 import Chip from "./Chip"
 import { BaseAnchorProps, BaseAnchor } from "../BaseAnchor"
 import colors from "../../theme/colors"
-import IconChip from "./IconChip"
 import { PortfolioIcon } from "../icons"
 import { MdArrowForward } from "react-icons/md"
 
@@ -21,7 +20,7 @@ storiesOf(`Chip`, module)
       sidebar: README,
     },
   })
-  .add(`Chip`, () => {
+  .add(`default`, () => {
     return (
       <StoryUtils.Container>
         <div>
@@ -30,13 +29,13 @@ storiesOf(`Chip`, module)
       </StoryUtils.Container>
     )
   })
-  .add(`IconChip`, () => {
+  .add(`w/ icon`, () => {
     return (
       <StoryUtils.Container>
         <div>
-          <IconChip icon={<MdArrowForward />} />
+          <Chip icon={<MdArrowForward />} />
           {` `}
-          <IconChip icon={<PortfolioIcon />}>Lorem ipsum</IconChip>
+          <Chip icon={<PortfolioIcon />}>Lorem ipsum</Chip>
         </div>
       </StoryUtils.Container>
     )

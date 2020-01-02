@@ -1,31 +1,33 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import React from "react"
 import { css } from "@emotion/core"
-import colors from "../../theme/colors"
-import fontSizes from "../../theme/fontSizes"
+import BaseChip, { BaseChipProps } from "./BaseChip"
 
-const HEIGHT = `1.75rem`
-const BORDER_WIDTH = `1px`
-const BACKGROUND_COLOR = colors.grey["10"]
-
-const baseCss = css({
-  display: `inline-flex`,
+const iconCss = css({
+  display: "inline-flex",
   alignItems: `center`,
   verticalAlign: `middle`,
-  minWidth: HEIGHT,
-  height: HEIGHT,
-  padding: `0 0.75rem`,
-  backgroundColor: BACKGROUND_COLOR,
-  borderRadius: `0.75rem`,
-  fontSize: fontSizes[0],
-  lineHeight: `calc(${HEIGHT} - 2 * ${BORDER_WIDTH})`,
-  color: colors.blackFade["70"],
-  border: `${BORDER_WIDTH} solid ${BACKGROUND_COLOR}`,
-  whiteSpace: `nowrap`,
+  height: `0.875rem`,
+  width: `0.875rem`,
+  fontSize: `0.875rem`,
 })
 
-export type ChipProps = Omit<JSX.IntrinsicElements["span"], "ref">
+const iconOffsetCss = css({
+  marginRight: `0.25rem`,
+})
 
-export default function Chip({ ...props }: ChipProps) {
-  return <span css={baseCss} {...props} />
+const iconOnlyCss = css({ padding: 0, justifyContent: `space-around` })
+
+export type ChipProps = BaseChipProps & {
+  icon?: React.ReactNode | null;
+}
+
+export default function Chip({ icon = null, children, ...props }: ChipProps) {
+  return (
+    <BaseChip css={!children && iconOnlyCss} {...props}>
+      {icon && <span css={[iconCss, children && iconOffsetCss]}>{icon}</span>}
+      {children}
+    </BaseChip>
+  )
 }
