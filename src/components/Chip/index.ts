@@ -1,8 +1,8 @@
 import { ChipProps as ChipPropsDefinition } from "./Chip"
-import { IconChipProps as IconChipPropsDefinition } from "./IconChip"
+import { BaseChipProps as BaseChipPropsDefinition } from "./BaseChip"
 
 export type ChipProps = ChipPropsDefinition
-export type IconChipProps = IconChipPropsDefinition
+export type BaseChipProps = BaseChipPropsDefinition
 
 export { default as Chip } from "./Chip"
-export { default as IconChip } from "./IconChip"
+export { default as BaseChip } from "./BaseChip"
