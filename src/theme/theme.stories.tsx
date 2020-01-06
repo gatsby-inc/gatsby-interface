@@ -6,7 +6,7 @@ import { storiesOf } from "@storybook/react"
 import { StoryUtils } from "../utils/storybook"
 import { getTheme, ThemeLineHeight, ThemeZIndex, ThemeMediaQuery } from "./"
 import { number } from "@storybook/addon-knobs"
-// import README from "./README.md"
+import README from "./README.md"
 
 const theme = getTheme()
 
@@ -36,7 +36,7 @@ storiesOf(`theme`, module)
       showPanel: true,
     },
     readme: {
-      // sidebar: README,
+      sidebar: README,
     },
   })
   .add(`fonts`, () => {

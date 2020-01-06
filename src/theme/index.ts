@@ -57,15 +57,11 @@ const themeFontSizes: FontSizes = fontSizes
 /**
  * Line heights
  */
-export type ThemeLineHeight = LineHeightToken | "body" | "heading"
+export type ThemeLineHeight = LineHeightToken
 
 type LineHeightScale = Record<ThemeLineHeight, number>
 
-const themeLineHeights: LineHeightScale = {
-  ...lineHeights,
-  body: lineHeights.default,
-  heading: lineHeights.dense,
-}
+const themeLineHeights: LineHeightScale = lineHeights
 
 /**
  * Letter spacings
