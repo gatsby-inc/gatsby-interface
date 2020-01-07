@@ -40099,7 +40099,7 @@ exports[`Storyshots theme letter spacings 1`] = `
 `;
 
 exports[`Storyshots theme line heights 1`] = `
-.emotion-6 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -40121,15 +40121,15 @@ exports[`Storyshots theme line heights 1`] = `
   line-height: 1.5;
 }
 
-.emotion-2 {
+.emotion-1 {
   line-height: 1.25;
 }
 
-.emotion-4 {
+.emotion-2 {
   line-height: 1.75;
 }
 
-.emotion-5 {
+.emotion-3 {
   line-height: 1;
 }
 
@@ -40140,17 +40140,9 @@ exports[`Storyshots theme line heights 1`] = `
     <div>
       <div>
         <div
-          class="emotion-6"
+          class="emotion-4"
         >
           <div>
-            <h4>
-              body
-            </h4>
-            <p
-              class="emotion-0"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
-            </p>
             <h4>
               default
             </h4>
@@ -40163,15 +40155,7 @@ exports[`Storyshots theme line heights 1`] = `
               dense
             </h4>
             <p
-              class="emotion-2"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
-            </p>
-            <h4>
-              heading
-            </h4>
-            <p
-              class="emotion-2"
+              class="emotion-1"
             >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
             </p>
@@ -40179,7 +40163,7 @@ exports[`Storyshots theme line heights 1`] = `
               loose
             </h4>
             <p
-              class="emotion-4"
+              class="emotion-2"
             >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
             </p>
@@ -40187,7 +40171,7 @@ exports[`Storyshots theme line heights 1`] = `
               solid
             </h4>
             <p
-              class="emotion-5"
+              class="emotion-3"
             >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ut expedita quidem in animi sint nostrum laboriosam corrupti voluptas totam explicabo, molestiae blanditiis voluptatem libero alias id? Ratione, ab dolore!
             </p>
