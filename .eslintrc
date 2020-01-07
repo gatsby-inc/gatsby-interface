@@ -1,7 +1,10 @@
 {
   "extends": [
     "react-app",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
   ],
   "globals": {
     "__PATH_PREFIX__": true,
