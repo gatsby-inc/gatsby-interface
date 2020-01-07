@@ -10,10 +10,21 @@ const breakpoints: Breakpoints = {
   hd: 1300,
 }
 
-export type BreakpointsList = [number, number, number, number, number]
+/**
+ * ThemeUI expects "breakpoints" scale to consist of
+ * strings representing each breakpoint with a CSS length unit INCLUDED
+ * ordered in mobile-first order
+ *
+ * Hence we need to extract values from our "breakpoints" object,
+ * sort them in ascending order and append "px" unit
+ */
+export type BreakpointsList = [string, string, string, string, string]
 
-export const breakpointsList = Object.values(
-  breakpoints
-).sort() as BreakpointsList
+const breakpointsInPixels = Object.values(breakpoints)
+breakpointsInPixels.sort((a, b) => a - b)
+
+export const breakpointsList = breakpointsInPixels.map(
+  breakpoint => `${breakpoint}px`
+) as BreakpointsList
 
 export default breakpoints
