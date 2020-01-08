@@ -62,7 +62,7 @@ export function showcaseVariants<P>(
 export function showcaseSizes<P>(
   Component: React.ComponentType<P>,
   defaultProps: P
-): Parameters<Story["add"]> {
+): Parameters<StoryApi["add"]> {
   return [
     `sizes`,
     () => {
@@ -98,7 +98,7 @@ export function showcaseSizes<P>(
 export function showcaseTones<P>(
   Component: React.ComponentType<P>,
   defaultProps: P
-): Parameters<Story["add"]> {
+): Parameters<StoryApi["add"]> {
   return [
     `tones`,
     () => {
@@ -135,7 +135,7 @@ export function showcaseCustomStyles<P>(
   Component: React.ComponentType<P>,
   defaultProps: P,
   readme?: string
-): Parameters<Story["add"]> {
+): Parameters<StoryApi["add"]> {
   return [
     `override/extend styles`,
     () => (
@@ -173,7 +173,7 @@ export function showcaseIcons<P>(
   Component: React.ComponentType<P>,
   defaultProps: P,
   readme?: string
-): Parameters<Story["add"]> {
+): Parameters<StoryApi["add"]> {
   return [
     `with icons`,
     () => (
