@@ -39971,6 +39971,3789 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
 </div>
 `;
 
+exports[`Storyshots theme colors 1`] = `
+.emotion-426 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-425 {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.emotion-423 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 0.75rem;
+}
+
+.emotion-0 {
+  color: var(--theme-ui-colors-grey-90,#232129);
+  background-color: var(--theme-ui-colors-grey-20,#f0f0f2);
+  padding: 0.125rem 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-1 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffb238;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-4 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #000000;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-7 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(35,33,41,0.1);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-10 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(35,33,41,0.3);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-13 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(35,33,41,0.5);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-16 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(35,33,41,0.6);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-19 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(35,33,41,0.7);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-22 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(35,33,41,0.85);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-25 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f5fcff;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-28 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #dbf0ff;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-31 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #90cdf9;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-34 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #63b8f6;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-37 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #3fa9f5;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-40 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #0d96f2;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-43 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #0e8de6;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-46 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #047bd3;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-49 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #006ac1;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-52 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #004ca3;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-55 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #4a9c59;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-58 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fdfaf6;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-61 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fbf2e9;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-64 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #faede5;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-67 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #6f8f39;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-70 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #a2466c;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-73 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #e0d7d1;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-76 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #538eb6;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-79 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f1beb6;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-82 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #53450e;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-85 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #d88489;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-88 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #e45c5c;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-91 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f4d1c6;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-94 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #b3568b;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-97 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #4084a1;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-100 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #866c5b;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-103 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #663399;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-106 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f7fdf7;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-109 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #def5dc;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-112 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #a1da9e;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-115 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #79cd75;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-118 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #59c156;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-121 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #37b635;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-124 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #2ca72c;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-127 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #1d9520;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-130 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #088413;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-133 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #006500;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-136 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fbfbfb;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-139 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f5f5f5;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-142 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f0f0f2;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-145 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #d9d7e0;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-148 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #b7b5bd;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-151 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #78757a;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-154 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #635e69;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-157 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #48434f;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-160 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #36313d;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-163 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #232129;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-169 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffd280;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-172 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffedbf;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-175 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f1defa;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-178 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #8a4baf;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-181 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #d9bae8;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-190 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fffafd;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-193 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffe6f6;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-196 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f2c4e3;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-199 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #e899ce;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-202 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #d459ab;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-205 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #bc027f;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-208 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #a6026a;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-211 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #940159;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-214 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #7d0e59;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-217 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #690147;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-220 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fffcf7;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-223 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fff4db;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-229 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffe4a1;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-238 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fb8400;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-241 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f67300;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-244 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #e65800;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-247 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #db3a00;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-250 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffffff;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-253 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fcfaff;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-256 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f6edfa;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-265 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #b17acc;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-274 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #542c85;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-277 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #452475;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-280 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #362066;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-283 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fffafa;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-286 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fde7e7;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-289 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffbab8;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-292 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ff8885;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-295 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ff5a54;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-298 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fa2915;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-301 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ec1818;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-304 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #da0013;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-307 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ce0009;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-310 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #b80000;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-319 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #f7ffff;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-322 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #dcfffd;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-325 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ccfffc;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-328 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #a6fffa;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-331 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #73fff7;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-334 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #05f7f4;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-337 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #2de3da;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-340 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #00bdb6;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-343 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #10a39e;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-346 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #008577;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-376 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(255,255,255,0.1);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-379 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(255,255,255,0.3);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-382 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(255,255,255,0.5);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-385 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(255,255,255,0.6);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-388 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(255,255,255,0.7);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-391 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: rgba(255,255,255,0.85);
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-394 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fffdf7;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-397 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fff5bf;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-400 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fff2a8;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-403 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffeb99;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-406 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #ffdf37;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-409 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fed038;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-412 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #fec21e;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-415 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #e3a617;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-418 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #bf9141;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+.emotion-421 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid var(--theme-ui-colors-grey-40,#b7b5bd);
+  background-color: #8a6534;
+  margin-right: 0.25rem;
+  border-radius: 2px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-426"
+        >
+          <div
+            class="emotion-425"
+          >
+            <h1>
+              colors
+            </h1>
+            <p>
+              Token names are sorted alphabetically
+            </p>
+            <div
+              class="emotion-423 emotion-424"
+            >
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  accent
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-1"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffb238
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  black
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-4"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #000000
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blackFade[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-7"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(35, 33, 41, 0.1)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blackFade[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-10"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(35, 33, 41, 0.3)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blackFade[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-13"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(35, 33, 41, 0.5)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blackFade[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-16"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(35, 33, 41, 0.6)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blackFade[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-19"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(35, 33, 41, 0.7)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blackFade[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-22"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(35, 33, 41, 0.85)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-25"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f5fcff
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-28"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #dbf0ff
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-31"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #90cdf9
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-34"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #63b8f6
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-37"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #3fa9f5
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-40"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #0d96f2
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-43"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #0e8de6
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-46"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #047bd3
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-49"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #006ac1
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  blue[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-52"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #004ca3
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.add
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-55"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #4a9c59
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.bg
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-58"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fdfaf6
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.bgInline
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-61"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fbf2e9
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.border
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-64"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #faede5
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.comment
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-67"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #6f8f39
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.cssString
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-70"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #a2466c
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.invisibles
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-73"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #e0d7d1
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.keyword
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-76"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #538eb6
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.lineHighlightBorder
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-79"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f1beb6
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.punctuation
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-82"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #53450e
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.regex
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-85"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #d88489
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.remove
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-88"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #e45c5c
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.scrollbarThumb
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-91"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f4d1c6
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.selector
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-94"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #b3568b
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.tag
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-97"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #4084a1
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  code.text
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-100"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #866c5b
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  gatsby
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-103"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #663399
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-106"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f7fdf7
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-109"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #def5dc
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-112"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #a1da9e
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-115"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #79cd75
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-118"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #59c156
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-121"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #37b635
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-124"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #2ca72c
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-127"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #1d9520
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-130"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #088413
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  green[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-133"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #006500
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-136"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fbfbfb
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-139"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f5f5f5
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-142"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f0f0f2
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-145"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #d9d7e0
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-148"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #b7b5bd
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-151"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #78757a
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-154"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #635e69
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-157"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #48434f
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-160"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #36313d
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  grey[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-163"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #232129
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  input.border
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-145"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #d9d7e0
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  input.focusBorder
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-169"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffd280
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  input.focusBoxShadow
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-172"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffedbf
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  lavender
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-175"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f1defa
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  lilac
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-178"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #8a4baf
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  link.border
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-181"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #d9bae8
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  link.color
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-178"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #8a4baf
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  link.hoverBorder
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-178"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #8a4baf
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-190"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fffafd
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-193"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffe6f6
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-196"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f2c4e3
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-199"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #e899ce
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-202"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #d459ab
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-205"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #bc027f
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-208"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #a6026a
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-211"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #940159
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-214"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #7d0e59
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  magenta[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-217"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #690147
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-220"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fffcf7
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-223"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fff4db
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-172"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffedbf
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-229"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffe4a1
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-169"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffd280
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-1"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffb238
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-238"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fb8400
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-241"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f67300
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-244"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #e65800
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  orange[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-247"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #db3a00
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  primaryBackground
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-250"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffffff
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-253"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fcfaff
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-256"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f6edfa
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-175"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f1defa
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-181"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #d9bae8
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-265"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #b17acc
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-178"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #8a4baf
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-103"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #663399
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-274"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #542c85
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-277"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #452475
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  purple[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-280"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #362066
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-283"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fffafa
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-286"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fde7e7
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-289"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffbab8
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-292"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ff8885
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-295"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ff5a54
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-298"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fa2915
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-301"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ec1818
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-304"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #da0013
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-307"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ce0009
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  red[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-310"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #b80000
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  secondaryBackground
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-136"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fbfbfb
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  standardLine
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-142"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f0f0f2
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-319"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f7ffff
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-322"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #dcfffd
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-325"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ccfffc
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-328"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #a6fffa
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-331"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #73fff7
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-334"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #05f7f4
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-337"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #2de3da
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-340"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #00bdb6
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-343"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #10a39e
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  teal[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-346"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #008577
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  text.header
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-4"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #000000
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  text.placeholder
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-148"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #b7b5bd
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  text.primary
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-160"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #36313d
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  text.secondary
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-151"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #78757a
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  ui.background
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-136"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fbfbfb
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  ui.border.subtle
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-142"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #f0f0f2
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  ui.hover
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-253"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fcfaff
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  warning
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-304"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #da0013
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  white
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-250"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffffff
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  whiteFade[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-376"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(255, 255, 255, 0.1)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  whiteFade[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-379"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(255, 255, 255, 0.3)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  whiteFade[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-382"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(255, 255, 255, 0.5)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  whiteFade[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-385"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(255, 255, 255, 0.6)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  whiteFade[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-388"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(255, 255, 255, 0.7)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  whiteFade[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-391"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  rgba(255, 255, 255, 0.85)
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[5]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-394"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fffdf7
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[10]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-397"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fff5bf
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[20]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-400"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fff2a8
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[30]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-403"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffeb99
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[40]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-406"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #ffdf37
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[50]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-409"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fed038
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[60]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-412"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #fec21e
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[70]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-415"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #e3a617
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[80]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-418"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #bf9141
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-0"
+                >
+                  yellow[90]
+                </span>
+              </div>
+              <div>
+                <span
+                  class="emotion-421"
+                />
+                <span
+                  class="emotion-0"
+                >
+                  #8a6534
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots theme fonts 1`] = `
 .emotion-4 {
   -webkit-align-items: center;

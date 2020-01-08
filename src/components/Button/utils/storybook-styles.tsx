@@ -8,7 +8,7 @@ import { radios } from "@storybook/addon-knobs"
 
 import { StoryUtils } from "../../../utils/storybook"
 import colors from "../../../theme/colors"
-import { Story } from "@storybook/react"
+import { StoryApi } from "@storybook/addons"
 import { ButtonSize, ButtonTone, ButtonVariant } from "../Button"
 
 function enumToOptions<T extends string>(
@@ -30,7 +30,7 @@ const BUTTON_VARIANT_OPTIONS = BUTTON_VARIANTS.reduce(enumToOptions, {})
 export function showcaseVariants<P>(
   Component: React.ComponentType<P>,
   defaultProps: P
-): Parameters<Story["add"]> {
+): Parameters<StoryApi["add"]> {
   return [
     `variants`,
     () => {
