@@ -115,28 +115,35 @@ declare module "gatsby-design-tokens" {
     number
   ]
 
-  type Breakpoint = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
+  /**
+   * Token types
+   */
+  export type BreakpointToken = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
+  export type FontToken = "system" | "header" | "monospace" | "serif"
+  export type LineHeightToken = "solid" | "dense" | "default" | "loose"
+  export type LetterSpacingToken = "normal" | "tracked" | "tight"
+  export type ShadowToken = "raised" | "floating" | "overlay" | "dialog"
+  export type ZIndexToken =
+    | "widget"
+    | "navigation"
+    | "banner"
+    | "modal"
+    | "sidebar"
+    | "floatingActionButton"
+    | "skipLink"
+  export type SpaceToken = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 
   export const borders: [0, string, string]
-  export const breakpoints: Record<Breakpoint, string | number>
+  export const breakpoints: Record<BreakpointToken, string | number>
   export const colors: Colors
-  export const fonts: Record<
-    "system" | "header" | "monospace" | "serif",
-    string[]
-  >
+  export const fonts: Record<FontToken, string[]>
   export const fontSizes: FontSizes
   export const fontWeights: [number, number, number]
-  export const letterSpacings: Record<"normal" | "tracked" | "tight", string>
-  export const lineHeights: Record<
-    "solid" | "dense" | "default" | "loose",
-    number
-  >
-  export const mediaQueries: Record<Breakpoint, string>
+  export const letterSpacings: Record<LetterSpacingToken, string>
+  export const lineHeights: Record<LineHeightToken, number>
+  export const mediaQueries: Record<BreakpointToken, string>
   export const radii: [number, number, number, number, number, number, string]
-  export const shadows: Record<
-    "raised" | "floating" | "overlay" | "dialog",
-    string
-  >
+  export const shadows: Record<ShadowToken, string>
   export const sizes: {
     headerHeight: string
     bannerHeight: string
@@ -159,14 +166,5 @@ declare module "gatsby-design-tokens" {
       slow: string
     }
   }
-  export const zIndices: Record<
-    | "widget"
-    | "navigation"
-    | "banner"
-    | "modal"
-    | "sidebar"
-    | "floatingActionButton"
-    | "skipLink",
-    number
-  >
+  export const zIndices: Record<ZIndexToken, number>
 }

@@ -1,6 +1,31 @@
-import { fontSizes as baseFontSizes } from "gatsby-design-tokens"
+import {
+  fontSizes as baseFontSizes,
+  FontSizes as TokenFontSize,
+} from "gatsby-design-tokens"
+import { MapToString } from "./types"
 
-const fontSizes = baseFontSizes.map(item => `${item / 16}rem`)
+export type FontSize =
+  | 0
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | 12
+  | 13
+  | 14
+  | 15
+  | 16
+
+export type FontSizes = MapToString<TokenFontSize>
+// TODO We should probably support base font sizes other 16px
+const fontSizes = baseFontSizes.map(item => `${item / 16}rem`) as FontSizes
 
 export default fontSizes
 

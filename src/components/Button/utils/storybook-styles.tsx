@@ -8,8 +8,9 @@ import { radios } from "@storybook/addon-knobs"
 
 import { StoryUtils } from "../../../utils/storybook"
 import colors from "../../../theme/colors"
-import { Story } from "@storybook/react"
+import { StoryApi } from "@storybook/addons"
 import { ButtonSize, ButtonTone, ButtonVariant } from "../Button"
+import { StoryFnReactReturnType } from "@storybook/react/dist/client/preview/types"
 
 function enumToOptions<T extends string>(
   memo: { [k: string]: string },
@@ -27,10 +28,12 @@ const BUTTON_TONE_OPTIONS = BUTTON_TONES.reduce(enumToOptions, {})
 const BUTTON_VARIANTS: ButtonVariant[] = [`PRIMARY`, `SECONDARY`, `GHOST`]
 const BUTTON_VARIANT_OPTIONS = BUTTON_VARIANTS.reduce(enumToOptions, {})
 
+type ShowcaseReturn = Parameters<StoryApi<StoryFnReactReturnType>["add"]>
+
 export function showcaseVariants<P>(
   Component: React.ComponentType<P>,
   defaultProps: P
-): Parameters<Story["add"]> {
+): ShowcaseReturn {
   return [
     `variants`,
     () => {
@@ -62,7 +65,7 @@ export function showcaseVariants<P>(
 export function showcaseSizes<P>(
   Component: React.ComponentType<P>,
   defaultProps: P
-): Parameters<Story["add"]> {
+): ShowcaseReturn {
   return [
     `sizes`,
     () => {
@@ -98,7 +101,7 @@ export function showcaseSizes<P>(
 export function showcaseTones<P>(
   Component: React.ComponentType<P>,
   defaultProps: P
-): Parameters<Story["add"]> {
+): ShowcaseReturn {
   return [
     `tones`,
     () => {
@@ -135,7 +138,7 @@ export function showcaseCustomStyles<P>(
   Component: React.ComponentType<P>,
   defaultProps: P,
   readme?: string
-): Parameters<Story["add"]> {
+): ShowcaseReturn {
   return [
     `override/extend styles`,
     () => (
@@ -173,7 +176,7 @@ export function showcaseIcons<P>(
   Component: React.ComponentType<P>,
   defaultProps: P,
   readme?: string
-): Parameters<Story["add"]> {
+): ShowcaseReturn {
   return [
     `with icons`,
     () => (
