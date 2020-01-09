@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core"
+import { jsx } from "theme-ui"
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
@@ -7,17 +7,13 @@ import { color, select, withKnobs } from "@storybook/addon-knobs"
 import { css } from "@emotion/core"
 import { StoryUtils } from "../../utils/storybook"
 import * as icons from "./icons"
-import colors from "../../theme/colors"
 import { IconSize, IconProps } from "./types"
+import { useTheme } from "../ThemeProvider"
+import { Theme } from "../../theme"
 
 const sizes: IconSize[] = [`xxsmall`, `xsmall`, `small`, `medium`, `large`]
 const customSizes = [`1em`, `16px`, `24px`, `32px`, `40px`, `64px`]
-const iconColors = [
-  colors.gatsby,
-  colors.accent,
-  colors.magenta[30],
-  colors.red[90],
-]
+const customIconColors = ["#F2583E", "#21BEDE"]
 
 const baseCss = css`
   display: flex;
@@ -56,6 +52,29 @@ function StoryCase({
       <div css={storyCaseInfoCss}>{info}</div>
       <div css={storyCaseDisplayCss}>{children}</div>
     </div>
+  )
+}
+
+function ThemeColorCase({
+  Component,
+  getColor,
+  colorLabel,
+}: {
+  Component: React.ComponentType<IconProps>
+  colorLabel: string
+  getColor: (themeColors: Theme["colors"]) => string
+}) {
+  const { colors } = useTheme()
+
+  const color = getColor(colors)
+
+  return (
+    <StoryCase info={<span style={{ color }}>{colorLabel}</span>}>
+      <Component
+        css={theme => ({ color: getColor(theme.colors) })}
+        height="3em"
+      />
+    </StoryCase>
   )
 }
 
@@ -130,8 +149,19 @@ sortedIconComponentNames.forEach(componentName => {
               <Component height={size} width={size} />
             </StoryCase>
           ))}
-          <h2>Color:</h2>
-          {iconColors.map(colorCase => (
+          <h2>Theme color:</h2>
+          <ThemeColorCase
+            Component={Component}
+            colorLabel="gatsby"
+            getColor={colors => colors.gatsby}
+          />
+          <ThemeColorCase
+            Component={Component}
+            colorLabel="green.50"
+            getColor={colors => colors.green[50]}
+          />
+          <h2>Custom colors:</h2>
+          {customIconColors.map(colorCase => (
             <StoryCase
               info={<span style={{ color: colorCase }}>{colorCase}</span>}
               key={colorCase}
