@@ -16,11 +16,11 @@ import { PropsOf } from "../../utils/types"
 import { Link } from "../Link"
 
 export type NotificationContextValue = {
-  onDismiss?: () => void;
+  onDismiss?: () => void
 }
 
 const NotificationContext = React.createContext<NotificationContextValue>({
-  onDismiss: () => {},
+  onDismiss: () => undefined,
 })
 
 const baseCss = css({
@@ -33,17 +33,17 @@ const baseCss = css({
 type AllowedAs = "section" | "div"
 
 export type NotificationProps = Omit<PropsOf<AllowedAs>, "ref"> & {
-  children?: React.ReactNode;
-  as?: AllowedAs;
-  variant?: NotificationVariant;
-  tone?: NotificationTone;
-  content?: React.ReactNode;
-  contentAs?: NotificationContentProps["as"];
-  linkUrl?: string;
-  linkText?: React.ReactNode;
-  isOpened?: boolean;
-  onDismissButtonClick?: () => void;
-  showDismissButton?: boolean;
+  children?: React.ReactNode
+  as?: AllowedAs
+  variant?: NotificationVariant
+  tone?: NotificationTone
+  content?: React.ReactNode
+  contentAs?: NotificationContentProps["as"]
+  linkUrl?: string
+  linkText?: React.ReactNode
+  isOpened?: boolean
+  onDismissButtonClick?: () => void
+  showDismissButton?: boolean
 }
 
 export default function Notification({
@@ -78,7 +78,7 @@ export default function Notification({
           </Notification.Content>
         )}
 
-        {linkUrl && (
+        {linkUrl && linkText && (
           <Notification.Link to={linkUrl}>
             {linkText && (
               <Fragment>
@@ -101,8 +101,8 @@ export type NotificationContentProps = Omit<
   PropsOf<AllowedContentAs>,
   "ref"
 > & {
-  as?: AllowedContentAs;
-  tone?: NotificationTone;
+  as?: AllowedContentAs
+  tone?: NotificationTone
 }
 
 function NotificationContent({
