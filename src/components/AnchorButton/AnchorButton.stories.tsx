@@ -14,7 +14,7 @@ import {
   showcaseIcons,
 } from "../Button/utils/storybook-styles"
 
-storiesOf(`AnchorButton`, module)
+storiesOf(`buttons/AnchorButton`, module)
   .addParameters({
     options: {
       showPanel: true,
