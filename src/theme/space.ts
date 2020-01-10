@@ -1,4 +1,8 @@
-import { space as baseSpace } from "gatsby-design-tokens"
+import {
+  space as baseSpace,
+  SpaceToken as DesignSpaceToken,
+} from "gatsby-design-tokens"
+import { MapToString } from "./types"
 
 /* 
   Our previous 'spaces' tokens
@@ -29,10 +33,33 @@ import { space as baseSpace } from "gatsby-design-tokens"
 
 */
 
+export type SpaceToken = DesignSpaceToken | 13 | 14 | 15
+export type PxSpace = [
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number
+]
+
+export type Space = MapToString<PxSpace>
+
 const [first, ...rest] = baseSpace
 const expandedSpace = [first, 2, ...rest, 84, 96]
 
-const space = expandedSpace.map(item => `${item / 16}rem`)
+const space: Space = expandedSpace.map(item => `${item / 16}rem`) as Space
 
 /* 
   We dynamicaly change (increase) root base font-size value,

@@ -1,5 +1,7 @@
+import { ShadowToken as DesignShadowToken } from "gatsby-design-tokens"
 export { shadows as default } from "gatsby-design-tokens"
 
+export type ShadowToken = DesignShadowToken
 /*
 
   shadows =  {

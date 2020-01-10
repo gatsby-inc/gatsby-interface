@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.67](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.66...v0.0.67) (2020-01-09)
+
+### Bug Fixes
+
+- correctly transform breakpoints scale for ThemeUI ([#187](https://github.com/gatsby-inc/gatsby-interface/issues/187)) ([2ce3482](https://github.com/gatsby-inc/gatsby-interface/commit/2ce34825435e1073ac420cadeda268ab2d761a6f))
+
+### [0.0.66](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.65...v0.0.66) (2020-01-09)
+
+### [0.0.65](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.64...v0.0.65) (2020-01-07)
+
+### Features
+
+- ThemeProvider ([#177](https://github.com/gatsby-inc/gatsby-interface/issues/177)) ([8f2896b](https://github.com/gatsby-inc/gatsby-interface/commit/8f2896b31e349229ce33f3ee53cfc0473055de8a))
+
+### [0.0.64](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.63...v0.0.64) (2020-01-03)
+
+### Features
+
+- Chip component ([#179](https://github.com/gatsby-inc/gatsby-interface/issues/179)) ([fa3c544](https://github.com/gatsby-inc/gatsby-interface/commit/fa3c5443e17c16788e9d02df7c17992d76dc1108))
+
+### [0.0.63](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.62...v0.0.63) (2020-01-02)
+
 ### [0.0.62](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.61...v0.0.62) (2019-12-20)
 
 ### Bug Fixes
