@@ -7,21 +7,15 @@ import { useTransition, animated } from "react-spring"
 import { Notification, NotificationTone, NotificationProps } from "."
 import { StoryUtils } from "../../utils/storybook"
 import { Button } from "../Button"
+import { radioKnobOptions } from "../../utils/storybook/knobs"
 
-const NOTIFICATION_TONES: NotificationTone[] = [
+const NOTIFICATION_TONES = radioKnobOptions<NotificationTone>([
   `BRAND`,
   `SUCCESS`,
   `DANGER`,
   `WARNING`,
   `NEUTRAL`,
-]
-const tonesOptions = NOTIFICATION_TONES.reduce(
-  (memo, tone) => ({
-    ...memo,
-    [tone]: tone,
-  }),
-  {}
-)
+])
 
 function ControlledNotification(props: NotificationProps) {
   const [isOpened, setIsOpened] = React.useState<boolean>(true)
@@ -54,7 +48,7 @@ storiesOf(`Notification`, module)
         }}
       >
         <Notification
-          tone={radios(`tone`, tonesOptions, `BRAND`)}
+          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
           content={`Notification variant 'PRIMARY'`}
           linkUrl="/"
           linkText="Link"
@@ -63,7 +57,7 @@ storiesOf(`Notification`, module)
           css={{ marginTop: `1rem` }}
           as="section"
           variant="SECONDARY"
-          tone={radios(`tone`, tonesOptions, `BRAND`)}
+          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
           content={`Notification variant 'SECONDARY'`}
         />
       </div>
@@ -82,7 +76,7 @@ storiesOf(`Notification`, module)
       >
         <ControlledNotification
           css={{ marginTop: `1rem` }}
-          tone={radios(`tone`, tonesOptions, `BRAND`)}
+          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
           content={`Notification variant 'PRIMARY' with close`}
         />
       </div>
@@ -130,7 +124,7 @@ storiesOf(`Notification`, module)
         <div css={{ maxWidth: "400px", width: "100%", minHeight: "300px" }}>
           <AnimatedNotification
             css={{ marginTop: `1rem` }}
-            tone={radios(`tone`, tonesOptions, `BRAND`)}
+            tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
             content={`Notification variant 'PRIMARY' with close`}
           />
         </div>
