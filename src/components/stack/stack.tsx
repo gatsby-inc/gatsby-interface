@@ -2,7 +2,7 @@ import { Interpolation } from "@emotion/serialize"
 import { Theme, ThemeSpace, ThemeMediaBreakpoint } from "../../theme"
 
 export type StackGap = ThemeSpace | string
-export type ResponsiveStackGap = Record<ThemeMediaBreakpoint, StackGap>
+export type ResponsiveStackGap = Partial<Record<ThemeMediaBreakpoint, StackGap>>
 
 export type StackAlign = `justify` | `center` | `left` | `right`
 export type StackAlignCSS = `justify` | `center` | `flex-start` | `flex-end`

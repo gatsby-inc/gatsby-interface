@@ -39971,6 +39971,664 @@ exports[`Storyshots icons/Single icons PortfolioIcon 1`] = `
 </div>
 `;
 
+exports[`Storyshots layout helpers/cluster gap as space token 1`] = `
+.emotion-19 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-18 {
+  width: 30rem;
+}
+
+.emotion-18 > * {
+  margin-bottom: 2.5rem;
+}
+
+.emotion-0 {
+  text-align: center;
+}
+
+.emotion-5 {
+  border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: calc(1rem / 2 * -1);
+  margin-top: calc(1rem / 2 * -1);
+  margin-bottom: calc(1rem / 2 * -1);
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-20,#f0f0f2);
+  padding: 0.5rem 0.75rem;
+  margin: calc(1rem / 2);
+  margin-top: calc(1rem / 2);
+  margin-bottom: calc(1rem / 2);
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-19"
+        >
+          <div
+            class="emotion-18"
+          >
+            <p
+              class="emotion-0"
+            >
+              Gap value = 5 (based on the 'space' design-token)
+            </p>
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-4"
+              >
+                <div
+                  class="emotion-1"
+                >
+                  One
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Two
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Three
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-4"
+              >
+                <div
+                  class="emotion-1"
+                >
+                  One
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Two
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Three
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Four
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Five
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Six
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Seven
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Eight
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Nine
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Ten
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots layout helpers/cluster gap as string value 1`] = `
+.emotion-19 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-18 {
+  width: 30rem;
+}
+
+.emotion-18 > * {
+  margin-bottom: 2.5rem;
+}
+
+.emotion-0 {
+  text-align: center;
+}
+
+.emotion-5 {
+  border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: calc(1rem / 2 * -1);
+  margin-top: calc(1rem / 2 * -1);
+  margin-bottom: calc(1rem / 2 * -1);
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-20,#f0f0f2);
+  padding: 0.5rem 0.75rem;
+  margin: calc(1rem / 2);
+  margin-top: calc(1rem / 2);
+  margin-bottom: calc(1rem / 2);
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-19"
+        >
+          <div
+            class="emotion-18"
+          >
+            <p
+              class="emotion-0"
+            >
+              Gap value = 1rem (based on the 'space' design-token)
+            </p>
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-4"
+              >
+                <div
+                  class="emotion-1"
+                >
+                  One
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Two
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Three
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-4"
+              >
+                <div
+                  class="emotion-1"
+                >
+                  One
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Two
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Three
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Four
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Five
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Six
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Seven
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Eight
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Nine
+                </div>
+                <div
+                  class="emotion-1"
+                >
+                  Ten
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots layout helpers/stack gap as space token 1`] = `
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-5 {
+  width: 30rem;
+}
+
+.emotion-5 > * {
+  margin-bottom: 2.5rem;
+}
+
+.emotion-0 {
+  text-align: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: justify;
+  -webkit-box-align: justify;
+  -ms-flex-align: justify;
+  align-items: justify;
+  border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-20,#f0f0f2);
+  padding: 0.5rem 0.75rem;
+  margin-top: 1rem;
+}
+
+.emotion-1:first-child {
+  margin-top: 0;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-6"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-0"
+            >
+              Gap value = 5 (based on the 'space' design-token)
+            </p>
+            <div
+              class="emotion-4"
+            >
+              <div
+                class="emotion-1"
+              >
+                What is Lorem Ipsum?
+              </div>
+              <div
+                class="emotion-1"
+              >
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              </div>
+              <div
+                class="emotion-1"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots layout helpers/stack gap as string value 1`] = `
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-5 {
+  width: 30rem;
+}
+
+.emotion-5 > * {
+  margin-bottom: 2.5rem;
+}
+
+.emotion-0 {
+  text-align: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: justify;
+  -webkit-box-align: justify;
+  -ms-flex-align: justify;
+  align-items: justify;
+  border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-20,#f0f0f2);
+  padding: 0.5rem 0.75rem;
+  margin-top: 1rem;
+}
+
+.emotion-1:first-child {
+  margin-top: 0;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-6"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-0"
+            >
+              Gap value = 1rem (set as string value)
+            </p>
+            <div
+              class="emotion-4"
+            >
+              <div
+                class="emotion-1"
+              >
+                What is Lorem Ipsum?
+              </div>
+              <div
+                class="emotion-1"
+              >
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              </div>
+              <div
+                class="emotion-1"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots layout helpers/stack with responsiveGap 1`] = `
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-5 {
+  width: 30rem;
+}
+
+.emotion-5 > * {
+  margin-bottom: 2.5rem;
+}
+
+.emotion-0 {
+  text-align: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: justify;
+  -webkit-box-align: justify;
+  -ms-flex-align: justify;
+  align-items: justify;
+  border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-20,#f0f0f2);
+  padding: 0.5rem 0.75rem;
+  margin-top: 0rem;
+}
+
+.emotion-1:first-child {
+  margin-top: 0;
+}
+
+@media (min-width:550px) {
+  .emotion-1 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width:750px) {
+  .emotion-1 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:1000px) {
+  .emotion-1 {
+    margin-top: 3rem;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-6"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-0"
+            >
+              gap = 0, responsiveGap = { phablet: 3, tablet: 7, desktop: 10 }
+            </p>
+            <div
+              class="emotion-4"
+            >
+              <div
+                class="emotion-1"
+              >
+                What is Lorem Ipsum?
+              </div>
+              <div
+                class="emotion-1"
+              >
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              </div>
+              <div
+                class="emotion-1"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots theme colors 1`] = `
 .emotion-426 {
   -webkit-align-items: center;
