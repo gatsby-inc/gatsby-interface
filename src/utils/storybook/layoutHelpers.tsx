@@ -12,12 +12,19 @@ export const Container: React.FC<{ description: string }> = ({
   description,
 }) => {
   return (
-    <div>
+    <div
+      css={(t: Theme) => ({
+        width: `30rem`,
+
+        "& > *": {
+          marginBottom: t.space[9],
+        },
+      })}
+    >
       <p
-        css={(t: Theme) => ({
+        css={{
           textAlign: `center`,
-          marginBottom: t.space[5],
-        })}
+        }}
       >
         {description}
       </p>

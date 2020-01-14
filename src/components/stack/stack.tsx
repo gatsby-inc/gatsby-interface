@@ -1,9 +1,7 @@
 import { Interpolation } from "@emotion/serialize"
-import space, { SpaceToken } from "../../theme/space"
-import { getTheme } from "../../theme"
+import { Theme, ThemeSpace } from "../../theme"
 
-export type StackGap = SpaceToken | string
-export type StackAlign = `justify` | `center` | `left` | `right`
+export type StackGap = ThemeSpace | string
 export type ResponsiveStackGap = {
   mobile?: StackGap
   phablet?: StackGap
@@ -11,12 +9,21 @@ export type ResponsiveStackGap = {
   desktop?: StackGap
   hd?: StackGap
 }
+
+export type StackAlign = `justify` | `center` | `left` | `right`
 export type StackAlignCSS = `justify` | `center` | `flex-start` | `flex-end`
+const ALIGN_TO_CSS_ALIGN: Record<StackAlign, StackAlignCSS> = {
+  justify: `justify`,
+  center: `center`,
+  right: `flex-end`,
+  left: `flex-start`,
+}
 
 export type GetStackStylesParams = {
   gap?: StackGap
   align?: StackAlign
   responsiveGap?: ResponsiveStackGap
+  theme?: Theme
 }
 
 export type GetStackStylesReturn = {
@@ -24,9 +31,9 @@ export type GetStackStylesReturn = {
   stackItemCss: Interpolation
 }
 
-function getGapVal(gap: StackGap): string {
-  if (space[gap as SpaceToken]) {
-    return space[gap as SpaceToken]
+function getGapVal(gap: StackGap, t?: Theme): string {
+  if (t && t.space[gap as ThemeSpace]) {
+    return t.space[gap as ThemeSpace]
   }
 
   return gap as string
@@ -35,34 +42,34 @@ function getGapVal(gap: StackGap): string {
 export function getStackStyles(
   params?: GetStackStylesParams
 ): GetStackStylesReturn {
-  const { gap = 0, responsiveGap = {} } = params || {}
+  const { gap = 0, responsiveGap = {}, align = `justify`, theme: t } =
+    params || {}
 
-  const gapVal: string = typeof gap === `string` ? gap : space[gap]
-  const t = getTheme()
+  let responsiveGapCss = {}
 
-  const responsiveGapCss: object = Object.entries(t.mediaQueries).reduce<
-    object
-  >((acc, entry) => {
-    if (responsiveGap[entry[0]]) {
-      acc[entry[1]] = {
-        marginTop: getGapVal(responsiveGap[entry[0]]),
-      }
-    }
+  if (t && t.mediaQueries) {
+    responsiveGapCss = Object.entries(t.mediaQueries).reduce<object>(
+      (acc, entry) => {
+        if (responsiveGap[entry[0]]) {
+          acc[entry[1]] = {
+            marginTop: getGapVal(responsiveGap[entry[0]], t),
+          }
+        }
 
-    return acc
-  }, {})
-
-  //  console.log(responsiveGapCss)
+        return acc
+      },
+      {}
+    )
+  }
 
   const stackCss: Interpolation = {
     display: `flex`,
     flexDirection: `column`,
-    alignItems:
-      params && params.align ? translateAlignToCss(params.align) : `justify`,
+    alignItems: ALIGN_TO_CSS_ALIGN[align || `justify`],
   }
 
   const stackItemCss: Interpolation = {
-    marginTop: gapVal,
+    marginTop: getGapVal(gap, t),
 
     "&:first-child": {
       marginTop: 0,
@@ -75,16 +82,4 @@ export function getStackStyles(
     stackCss,
     stackItemCss,
   }
-}
-
-function translateAlignToCss(val: StackAlign): StackAlignCSS {
-  const VAL_TO_CSSVAL: {
-    [key: string]: StackAlignCSS
-  } = {
-    justify: `justify`,
-    center: `center`,
-    right: `flex-end`,
-    left: `flex-start`,
-  }
-  return VAL_TO_CSSVAL[val]
 }

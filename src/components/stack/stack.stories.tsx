@@ -8,6 +8,7 @@ import { StoryUtils } from "../../utils/storybook"
 import { getStackStyles, StackAlign, StackGap } from "./stack"
 import { enumToOptions } from "../../utils/helpers"
 import { Theme } from "../../theme"
+import { useTheme, ThemeProvider } from "../ThemeProvider"
 import {
   borderUtilCss,
   Container,
@@ -27,73 +28,125 @@ storiesOf(`layout helpers/stack`, module)
     },
   })
   .add(`gap as space token`, () => {
-    const gap = number(`gap (based on 'space' token)`, 5, {
-      range: true,
-      min: 0,
-      max: 15,
-      step: 1,
-    })
+    function TestComponent() {
+      const gap = number(`gap (based on 'space' token)`, 5, {
+        range: true,
+        min: 0,
+        max: 15,
+        step: 1,
+      })
 
-    const align: StackAlign = radios(`align`, STACK_ALIGN_OPTIONS, `justify`)
+      const align: StackAlign = radios(`align`, STACK_ALIGN_OPTIONS, `justify`)
 
-    function numberAsStackGap(gap: number): StackGap {
-      return gap as StackGap
+      function numberAsStackGap(gap: number): StackGap {
+        return gap as StackGap
+      }
+
+      const { stackCss, stackItemCss } = getStackStyles({
+        gap: numberAsStackGap(gap),
+        align: align,
+        theme: useTheme(),
+      })
+
+      return (
+        <StoryUtils.Container>
+          <Container
+            description={`Gap value = ${gap} (based on the 'space' design-token)`}
+          >
+            <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
+              <Item css={stackItemCss}>What is Lorem Ipsum?</Item>
+              <Item css={stackItemCss}>
+                It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+              </Item>
+              <Item css={stackItemCss}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </Item>
+            </div>
+          </Container>
+        </StoryUtils.Container>
+      )
     }
 
-    const { stackCss, stackItemCss } = getStackStyles({
-      gap: numberAsStackGap(0),
-      responsiveGap: {
-        phablet: numberAsStackGap(5),
-        tablet: numberAsStackGap(9),
-      },
-      align: align,
-    })
-
     return (
-      <StoryUtils.Container>
-        <Container
-          description={`Gap value = ${gap} (based on the 'space' design-token)`}
-        >
-          <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
-            <Item css={stackItemCss}>What is Lorem Ipsum?</Item>
-            <Item css={stackItemCss}>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </Item>
-            <Item css={stackItemCss}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </Item>
-          </div>
-        </Container>
-      </StoryUtils.Container>
+      <ThemeProvider>
+        <TestComponent />
+      </ThemeProvider>
     )
   })
   .add(`gap as string value`, () => {
-    const align: StackAlign = radios(`align`, STACK_ALIGN_OPTIONS, `justify`)
+    function TestComponent() {
+      const align: StackAlign = radios(`align`, STACK_ALIGN_OPTIONS, `justify`)
 
-    const gap = text(`string gap (need units e.g. '3px')`, `1rem`)
+      const gap = text(`string gap (need units e.g. '3px')`, `1rem`)
 
-    const { stackCss, stackItemCss } = getStackStyles({
-      gap: gap,
-      align: align,
-    })
+      const { stackCss, stackItemCss } = getStackStyles({
+        gap: gap,
+        align: align,
+      })
+
+      return (
+        <StoryUtils.Container>
+          <Container description={`Gap value = ${gap} (set as string value)`}>
+            <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
+              <Item css={stackItemCss}>What is Lorem Ipsum?</Item>
+              <Item css={stackItemCss}>
+                It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+              </Item>
+              <Item css={stackItemCss}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </Item>
+            </div>
+          </Container>
+        </StoryUtils.Container>
+      )
+    }
 
     return (
-      <StoryUtils.Container>
-        <Container description={`Gap value = ${gap} (set as string value)`}>
-          <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
-            <Item css={stackItemCss}>What is Lorem Ipsum?</Item>
-            <Item css={stackItemCss}>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </Item>
-            <Item css={stackItemCss}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </Item>
-          </div>
-        </Container>
-      </StoryUtils.Container>
+      <ThemeProvider>
+        <TestComponent />
+      </ThemeProvider>
+    )
+  })
+  .add(`with responsiveGap`, () => {
+    function TestComponent() {
+      const { stackCss, stackItemCss } = getStackStyles({
+        gap: 0,
+        responsiveGap: {
+          phablet: 3,
+          tablet: 7,
+          desktop: 10,
+        },
+        theme: useTheme(),
+      })
+
+      return (
+        <StoryUtils.Container>
+          <Container
+            description={`gap = 0, responsiveGap = { phablet: 3, tablet: 7, desktop: 10 }`}
+          >
+            <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
+              <Item css={stackItemCss}>What is Lorem Ipsum?</Item>
+              <Item css={stackItemCss}>
+                It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+              </Item>
+              <Item css={stackItemCss}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </Item>
+            </div>
+          </Container>
+        </StoryUtils.Container>
+      )
+    }
+
+    return (
+      <ThemeProvider>
+        <TestComponent />
+      </ThemeProvider>
     )
   })
