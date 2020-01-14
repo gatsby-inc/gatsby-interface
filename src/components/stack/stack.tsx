@@ -1,14 +1,8 @@
 import { Interpolation } from "@emotion/serialize"
-import { Theme, ThemeSpace } from "../../theme"
+import { Theme, ThemeSpace, ThemeMediaBreakpoint } from "../../theme"
 
 export type StackGap = ThemeSpace | string
-export type ResponsiveStackGap = {
-  mobile?: StackGap
-  phablet?: StackGap
-  tablet?: StackGap
-  desktop?: StackGap
-  hd?: StackGap
-}
+export type ResponsiveStackGap = Partial<Record<ThemeMediaBreakpoint, StackGap>>
 
 export type StackAlign = `justify` | `center` | `left` | `right`
 export type StackAlignCSS = `justify` | `center` | `flex-start` | `flex-end`
@@ -48,18 +42,19 @@ export function getStackStyles(
   let responsiveGapCss = {}
 
   if (t && t.mediaQueries) {
-    responsiveGapCss = Object.entries(t.mediaQueries).reduce<object>(
-      (acc, entry) => {
-        if (responsiveGap[entry[0]]) {
-          acc[entry[1]] = {
-            marginTop: getGapVal(responsiveGap[entry[0]], t),
-          }
-        }
+    responsiveGapCss = Object.entries(responsiveGap).reduce<
+      Record<string, Interpolation>
+    >((acc, [breakpoint, gap]) => {
+      const mediaQuery = t.mediaQueries[breakpoint as ThemeMediaBreakpoint]
 
-        return acc
-      },
-      {}
-    )
+      if (mediaQuery && gap !== undefined && gap !== null) {
+        acc[mediaQuery] = {
+          marginTop: getGapVal(gap as StackGap, t),
+        }
+      }
+
+      return acc
+    }, {})
   }
 
   const stackCss: Interpolation = {
