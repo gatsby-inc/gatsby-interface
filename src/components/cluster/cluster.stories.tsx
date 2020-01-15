@@ -145,3 +145,53 @@ storiesOf(`layout helpers/cluster`, module)
       </ThemeProvider>
     )
   })
+  .add(`with responsiveGaps`, () => {
+    function TestComponent() {
+      const { clusterCss, clusterItemCss } = getClusterStyles({
+        gap: 0,
+        verticalGap: 0,
+        responsiveGaps: {
+          phablet: { gap: 4, verticalGap: 2 },
+          desktop: { gap: 8, verticalGap: 4 },
+        },
+        theme: useTheme(),
+      })
+
+      return (
+        <StoryUtils.Container>
+          <Container
+            description={`Gap value =  (based on the 'space' design-token)`}
+          >
+            <div css={borderUtilCss}>
+              <div css={clusterCss}>
+                <Item css={clusterItemCss}>One</Item>
+                <Item css={clusterItemCss}>Two</Item>
+                <Item css={clusterItemCss}>Three</Item>
+              </div>
+            </div>
+
+            <div css={borderUtilCss}>
+              <div css={clusterCss}>
+                <Item css={clusterItemCss}>One</Item>
+                <Item css={clusterItemCss}>Two</Item>
+                <Item css={clusterItemCss}>Three</Item>
+                <Item css={clusterItemCss}>Four</Item>
+                <Item css={clusterItemCss}>Five</Item>
+                <Item css={clusterItemCss}>Six</Item>
+                <Item css={clusterItemCss}>Seven</Item>
+                <Item css={clusterItemCss}>Eight</Item>
+                <Item css={clusterItemCss}>Nine</Item>
+                <Item css={clusterItemCss}>Ten</Item>
+              </div>
+            </div>
+          </Container>
+        </StoryUtils.Container>
+      )
+    }
+
+    return (
+      <ThemeProvider>
+        <TestComponent />
+      </ThemeProvider>
+    )
+  })

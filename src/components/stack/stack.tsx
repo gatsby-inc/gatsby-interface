@@ -15,8 +15,8 @@ const ALIGN_TO_CSS_ALIGN: Record<StackAlign, StackAlignCSS> = {
 
 export type GetStackStylesParams = {
   gap?: StackGap
-  align?: StackAlign
   responsiveGap?: ResponsiveStackGap
+  align?: StackAlign
   theme?: Theme
 }
 
