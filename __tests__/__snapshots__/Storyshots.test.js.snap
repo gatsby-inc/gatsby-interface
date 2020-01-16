@@ -21092,13 +21092,16 @@ label:focus-within > .emotion-2 {
   "isSubmitting": false,
   "isValidating": false,
   "submitCount": 0,
-  "dirty": false,
-  "isValid": false,
   "initialValues": {
     "subInterval": "MONTHLY"
   },
+  "initialErrors": {},
+  "initialTouched": {},
+  "isValid": true,
+  "dirty": false,
+  "validateOnBlur": true,
   "validateOnChange": true,
-  "validateOnBlur": true
+  "validateOnMount": false
 }
               </pre>
             </div>
@@ -21712,6 +21715,292 @@ exports[`Storyshots Text with children 1`] = `
             </p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tabs Numbered tabs 1`] = `
+.emotion-6 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+.emotion-6:after {
+  border-bottom: 1px solid #f0f0f2;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+  color: #b7b5bd;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-size: 1.125rem;
+  font-weight: bold;
+  height: 3.5rem;
+  margin: 0 0.25rem;
+  padding: 0.125rem 1rem 0;
+  position: relative;
+  z-index: 0;
+  background: #fbfbfb;
+  border: 1px solid #f0f0f2;
+}
+
+.emotion-2 a {
+  color: #b17acc;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2.active {
+  background: #ffffff;
+  border-bottom-color: #fbfbfb;
+  color: #232129;
+  z-index: 2;
+}
+
+@media (min-width:550px) {
+  .emotion-2 {
+    padding: 0.125rem 1.5rem 0;
+  }
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #d9d7e0;
+  border-radius: 50%;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-size: 0.6875rem;
+  font-weight: bold;
+  height: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  width: 20px;
+}
+
+.active .emotion-0 {
+  background: #b17acc;
+  margin-right: 0.75rem;
+}
+
+.done .emotion-0 {
+  background: #d9bae8;
+}
+
+@media (min-width:750px) {
+  .emotion-0 {
+    margin-right: 0.75rem;
+  }
+}
+
+.emotion-1 {
+  display: none;
+}
+
+.active .emotion-1 {
+  display: inline;
+}
+
+.emotion-1.desktop {
+  display: none;
+}
+
+@media (min-width:750px) {
+  .emotion-1 {
+    display: inline;
+  }
+
+  .emotion-1.desktop {
+    display: inline;
+  }
+
+  .emotion-1.mobile {
+    display: none;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <ul
+          class="emotion-6"
+        >
+          <li
+            class="done emotion-2"
+          >
+            <span
+              class="emotion-0"
+            >
+              1
+            </span>
+            <span
+              class="emotion-1"
+            >
+              NumberedDoneTab
+            </span>
+          </li>
+          <li
+            class="active emotion-2"
+          >
+            <span
+              class="emotion-0"
+            >
+              2
+            </span>
+            <span
+              class="emotion-1"
+            >
+              NumberedActiveTab
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tabs Tabs 1`] = `
+.emotion-2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+  color: #8a4baf;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-size: 1.125rem;
+  font-weight: bold;
+  height: 3.5rem;
+  margin: 0 0.25rem;
+  padding: 0.125rem 1rem 0;
+  position: relative;
+  z-index: 0;
+  border: 1px solid #f0f0f2;
+}
+
+.emotion-0 a {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 a:active {
+  color: inherit;
+}
+
+.emotion-0.active {
+  background: #fbfbfb;
+  border-bottom-color: #fbfbfb;
+  color: #232129;
+}
+
+@media (min-width:550px) {
+  .emotion-0 {
+    padding: 0.125rem 1.5rem 0;
+  }
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <ul
+          class="emotion-2"
+        >
+          <li
+            class="active emotion-0"
+          >
+            ActiveTab
+          </li>
+          <li
+            class="emotion-0"
+          >
+            <a
+              aria-current="page"
+              class=""
+              href="/"
+            >
+              InactiveTab
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -23190,14 +23479,17 @@ label:focus-within > .emotion-1 {
   "isSubmitting": false,
   "isValidating": false,
   "submitCount": 0,
-  "dirty": false,
-  "isValid": false,
   "initialValues": {
     "subscriptionInterval": false,
     "automaticalRenew": false
   },
+  "initialErrors": {},
+  "initialTouched": {},
+  "isValid": true,
+  "dirty": false,
+  "validateOnBlur": true,
   "validateOnChange": true,
-  "validateOnBlur": true
+  "validateOnMount": false
 }
               </pre>
             </div>
@@ -41259,7 +41551,7 @@ exports[`Storyshots layout helpers/cluster gap as space token 1`] = `
 }
 
 .emotion-18 > * {
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .emotion-0 {
@@ -41429,7 +41721,7 @@ exports[`Storyshots layout helpers/cluster gap as string value 1`] = `
 }
 
 .emotion-18 > * {
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .emotion-0 {
@@ -41599,7 +41891,7 @@ exports[`Storyshots layout helpers/cluster with responsiveGaps 1`] = `
 }
 
 .emotion-18 > * {
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .emotion-0 {
@@ -41777,6 +42069,165 @@ exports[`Storyshots layout helpers/cluster with responsiveGaps 1`] = `
 </div>
 `;
 
+exports[`Storyshots layout helpers/stack directions 1`] = `
+.emotion-12 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-11 {
+  width: 30rem;
+}
+
+.emotion-11 > * {
+  margin-top: 2.5rem;
+}
+
+.emotion-0 {
+  text-align: center;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-20,#f0f0f2);
+  padding: 0.5rem 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.emotion-1:first-child {
+  margin-top: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  overflow: auto;
+  border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
+}
+
+.emotion-6 {
+  background: var(--theme-ui-colors-grey-20,#f0f0f2);
+  padding: 0.5rem 0.75rem;
+  margin-left: 1.25rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.emotion-6:first-child {
+  margin-left: 0;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-12"
+        >
+          <div
+            class="emotion-11"
+          >
+            <p
+              class="emotion-0"
+            >
+              direction = 'column' (default value) and direction = 'row'
+            </p>
+            <div
+              class="emotion-5"
+            >
+              <div
+                class="emotion-1"
+              >
+                One
+              </div>
+              <div
+                class="emotion-1"
+              >
+                Two
+              </div>
+              <div
+                class="emotion-1"
+              >
+                Three
+              </div>
+              <div
+                class="emotion-1"
+              >
+                Four
+              </div>
+            </div>
+            <div
+              class="emotion-10"
+            >
+              <div
+                class="emotion-6"
+              >
+                One
+              </div>
+              <div
+                class="emotion-6"
+              >
+                Two
+              </div>
+              <div
+                class="emotion-6"
+              >
+                Three
+              </div>
+              <div
+                class="emotion-6"
+              >
+                Four
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots layout helpers/stack gap as space token 1`] = `
 .emotion-6 {
   -webkit-align-items: center;
@@ -41801,7 +42252,7 @@ exports[`Storyshots layout helpers/stack gap as space token 1`] = `
 }
 
 .emotion-5 > * {
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .emotion-0 {
@@ -41816,10 +42267,10 @@ exports[`Storyshots layout helpers/stack gap as space token 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: justify;
-  -webkit-box-align: justify;
-  -ms-flex-align: justify;
-  align-items: justify;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
 }
 
@@ -41861,12 +42312,12 @@ exports[`Storyshots layout helpers/stack gap as space token 1`] = `
               <div
                 class="emotion-1"
               >
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                It has survived not only five centuries
               </div>
               <div
                 class="emotion-1"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum is simply dummy
               </div>
             </div>
           </div>
@@ -41901,7 +42352,7 @@ exports[`Storyshots layout helpers/stack gap as string value 1`] = `
 }
 
 .emotion-5 > * {
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .emotion-0 {
@@ -41916,10 +42367,10 @@ exports[`Storyshots layout helpers/stack gap as string value 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: justify;
-  -webkit-box-align: justify;
-  -ms-flex-align: justify;
-  align-items: justify;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
 }
 
@@ -41961,12 +42412,12 @@ exports[`Storyshots layout helpers/stack gap as string value 1`] = `
               <div
                 class="emotion-1"
               >
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                It has survived not only five centuries
               </div>
               <div
                 class="emotion-1"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum is simply dummy industry.
               </div>
             </div>
           </div>
@@ -42001,7 +42452,7 @@ exports[`Storyshots layout helpers/stack with responsiveGap 1`] = `
 }
 
 .emotion-5 > * {
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .emotion-0 {
@@ -42016,10 +42467,10 @@ exports[`Storyshots layout helpers/stack with responsiveGap 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: justify;
-  -webkit-box-align: justify;
-  -ms-flex-align: justify;
-  align-items: justify;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   border: 2px solid var(--theme-ui-colors-red-50,#fa2915);
 }
 
@@ -42079,12 +42530,12 @@ exports[`Storyshots layout helpers/stack with responsiveGap 1`] = `
               <div
                 class="emotion-1"
               >
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                It has survived not only five centuries
               </div>
               <div
                 class="emotion-1"
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum is simply dummy industry.
               </div>
             </div>
           </div>
