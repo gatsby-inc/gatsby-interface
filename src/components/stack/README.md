@@ -35,7 +35,7 @@ import { getStackStyles } from 'gatsby-interface'
 
 const { stackCss, stackItemCss } = getStackStyles({
     gap: `20px`, // gap set as a string type value must always contain unit symbol postfix
-    lign: `center`
+    align: `center`
   })
 
 <div css={stackCss}>
@@ -52,6 +52,21 @@ const { stackCss, stackItemCss } = getStackStyles({
     gap: 2,
     responsiveGap: { tablet: 3, desktop: 4 }
     align: `center`
+  })
+
+<div css={stackCss}>
+  <div css={stackItemCss}>one</div>
+  <div css={stackItemCss}>two</div>
+  <div css={stackItemCss}>three</div>
+</div>
+```
+
+```javascript
+import { getStackStyles } from 'gatsby-interface'
+
+const { stackCss, stackItemCss } = getStackStyles({
+    gap: 2,
+    direction: `row`
   })
 
 <div css={stackCss}>
