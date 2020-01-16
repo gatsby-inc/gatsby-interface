@@ -8,8 +8,9 @@ However we do not provide a `Stack` component. We provide a `getStackStyles` lay
 - as a param accepts an object with optional `gap`, `align` and `theme` properties
   - `gap?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | string` (default value 0)
   - `responsiveGap?:` an object with `breakpoint` token value as `key`s and `gap` as `value`s
-  - `align?: 'justify' | 'center' | 'left' | 'right'` (default value `left`)
-  - `theme?`: `Theme`
+  - `align?: 'stretch' | 'center' | 'left' | 'right'` (default value `left`)
+  - `direction?: 'column' | 'row'` (default value `column`)
+  - `theme?: Theme`
 - returns an object with `stackCss` and `stackItemCss` properties
 
 If we set the `gap` value as a type `number` between 0 and 15, `gap` will be based on `space` design token values.

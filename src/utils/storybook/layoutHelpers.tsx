@@ -17,7 +17,7 @@ export const Container: React.FC<{ description: string }> = ({
         width: `30rem`,
 
         "& > *": {
-          marginBottom: t.space[9],
+          marginTop: t.space[9],
         },
       })}
     >

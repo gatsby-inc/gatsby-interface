@@ -15,7 +15,7 @@ import {
   Item,
 } from "../../utils/storybook/layoutHelpers"
 
-const STACK_ALIGNS: StackAlign[] = [`justify`, `center`, `left`, `right`]
+const STACK_ALIGNS: StackAlign[] = [`stretch`, `center`, `left`, `right`]
 const STACK_ALIGN_OPTIONS = STACK_ALIGNS.reduce(enumToOptions, {})
 
 storiesOf(`layout helpers/stack`, module)
@@ -36,7 +36,7 @@ storiesOf(`layout helpers/stack`, module)
         step: 1,
       })
 
-      const align: StackAlign = radios(`align`, STACK_ALIGN_OPTIONS, `justify`)
+      const align: StackAlign = radios(`align`, STACK_ALIGN_OPTIONS, `stretch`)
 
       function numberAsStackGap(gap: number): StackGap {
         return gap as StackGap
@@ -56,13 +56,9 @@ storiesOf(`layout helpers/stack`, module)
             <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
               <Item css={stackItemCss}>What is Lorem Ipsum?</Item>
               <Item css={stackItemCss}>
-                It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+                It has survived not only five centuries
               </Item>
-              <Item css={stackItemCss}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </Item>
+              <Item css={stackItemCss}>Lorem Ipsum is simply dummy</Item>
             </div>
           </Container>
         </StoryUtils.Container>
@@ -77,7 +73,7 @@ storiesOf(`layout helpers/stack`, module)
   })
   .add(`gap as string value`, () => {
     function TestComponent() {
-      const align: StackAlign = radios(`align`, STACK_ALIGN_OPTIONS, `justify`)
+      const align: StackAlign = radios(`align`, STACK_ALIGN_OPTIONS, `stretch`)
 
       const gap = text(`string gap (need units e.g. '3px')`, `1rem`)
 
@@ -92,12 +88,10 @@ storiesOf(`layout helpers/stack`, module)
             <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
               <Item css={stackItemCss}>What is Lorem Ipsum?</Item>
               <Item css={stackItemCss}>
-                It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+                It has survived not only five centuries
               </Item>
               <Item css={stackItemCss}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Lorem Ipsum is simply dummy industry.
               </Item>
             </div>
           </Container>
@@ -131,12 +125,63 @@ storiesOf(`layout helpers/stack`, module)
             <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
               <Item css={stackItemCss}>What is Lorem Ipsum?</Item>
               <Item css={stackItemCss}>
-                It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+                It has survived not only five centuries
               </Item>
               <Item css={stackItemCss}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Lorem Ipsum is simply dummy industry.
+              </Item>
+            </div>
+          </Container>
+        </StoryUtils.Container>
+      )
+    }
+
+    return (
+      <ThemeProvider>
+        <TestComponent />
+      </ThemeProvider>
+    )
+  })
+  .add(`directions`, () => {
+    function TestComponent() {
+      const { stackCss, stackItemCss } = getStackStyles({
+        gap: 6,
+        theme: useTheme(),
+      })
+
+      const {
+        stackCss: horizontalStackCss,
+        stackItemCss: horizontalStackItemCss,
+      } = getStackStyles({
+        gap: 6,
+        direction: `row`,
+        theme: useTheme(),
+      })
+
+      return (
+        <StoryUtils.Container>
+          <Container
+            description={`direction = 'column' (default value) and direction = 'row'`}
+          >
+            <div css={(t: Theme) => [stackCss, borderUtilCss(t)]}>
+              <Item css={stackItemCss}>One</Item>
+              <Item css={stackItemCss}>Two</Item>
+              <Item css={stackItemCss}>Three</Item>
+              <Item css={stackItemCss}>Four</Item>
+            </div>
+
+            <div css={(t: Theme) => [horizontalStackCss, borderUtilCss(t)]}>
+              <Item css={[horizontalStackItemCss, { width: `200px` }]}>
+                One
+              </Item>
+              <Item css={[horizontalStackItemCss, { width: `200px` }]}>
+                Two
+              </Item>
+              <Item css={[horizontalStackItemCss, { width: `200px` }]}>
+                Three
+              </Item>
+              <Item css={[horizontalStackItemCss, { width: `200px` }]}>
+                Four
               </Item>
             </div>
           </Container>
