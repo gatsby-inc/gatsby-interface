@@ -58,7 +58,8 @@ export function getStackStyles(
 
       if (mediaQuery && gap !== undefined && gap !== null) {
         acc[mediaQuery] = {
-          marginTop: getGapVal(gap as StackGap, t),
+          marginTop: !isHorizontal ? getGapVal(gap, t) : undefined,
+          marginLeft: isHorizontal ? getGapVal(gap, t) : undefined,
         }
       }
 
