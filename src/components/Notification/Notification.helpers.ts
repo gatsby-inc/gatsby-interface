@@ -7,7 +7,6 @@ import { cardFrameCss } from "../../stylesheets/card"
 
 const Warning = styled(MdWarning)(({ theme }) => ({
   color: (theme as Theme).colors.yellow[50],
-  fontSize: (theme as Theme).fontSizes[4],
 }))
 
 export const iconByTone: Record<

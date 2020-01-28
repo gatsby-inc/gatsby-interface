@@ -44,6 +44,7 @@ export type NotificationProps = Omit<PropsOf<AllowedAs>, "ref"> & {
   isOpened?: boolean
   onDismissButtonClick?: () => void
   showDismissButton?: boolean
+  Icon?: React.ComponentType<any>
 }
 
 export default function Notification({
@@ -59,12 +60,14 @@ export default function Notification({
   isOpened = true,
   onDismissButtonClick,
   showDismissButton = !!onDismissButtonClick,
+  Icon: CustomIcon,
   ...rest
 }: NotificationProps) {
   if (!isOpened) {
     return null
   }
-  const Icon = content && iconByTone[tone]
+  const PresetIcon = content && iconByTone[tone]
+  const Icon = CustomIcon || PresetIcon
 
   return (
     <NotificationContext.Provider value={{ onDismiss: onDismissButtonClick }}>
@@ -77,7 +80,14 @@ export default function Notification({
       >
         {content && (
           <Notification.Content tone={tone} as={contentAs}>
-            {Icon && <Icon css={theme => ({ marginRight: theme.space[3] })} />}
+            {Icon && (
+              <Icon
+                css={theme => ({
+                  marginRight: theme.space[3],
+                  fontSize: theme.fontSizes[4],
+                })}
+              />
+            )}
             {content}
           </Notification.Content>
         )}

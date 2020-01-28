@@ -4,10 +4,21 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 import { radios } from "@storybook/addon-knobs"
 import { useTransition, animated } from "react-spring"
-import { Notification, NotificationTone, NotificationProps } from "."
+import {
+  Notification,
+  NotificationTone,
+  NotificationProps,
+  NotificationVariant,
+} from "."
 import { StoryUtils } from "../../utils/storybook"
 import { Button } from "../Button"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
+import { MdCloud } from "react-icons/md"
+
+const NOTIFICATION_VARIANTS = radioKnobOptions<NotificationVariant>([
+  `PRIMARY`,
+  `SECONDARY`,
+])
 
 const NOTIFICATION_TONES = radioKnobOptions<NotificationTone>([
   `BRAND`,
@@ -78,6 +89,26 @@ storiesOf(`Notification`, module)
           css={{ marginTop: `1rem` }}
           tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
           content={`Notification variant 'PRIMARY' with close`}
+        />
+      </div>
+    </StoryUtils.Container>
+  ))
+  .add(`custom icon`, () => (
+    <StoryUtils.Container>
+      <div
+        css={{
+          display: `flex`,
+          flexDirection: `column`,
+          alignItems: `flex-start`,
+          width: `500px`,
+          "& > button": { margin: `20px` },
+        }}
+      >
+        <Notification
+          variant={radios(`variant`, NOTIFICATION_VARIANTS, `PRIMARY`)}
+          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
+          content={`Notification with custom icon`}
+          Icon={MdCloud}
         />
       </div>
     </StoryUtils.Container>
