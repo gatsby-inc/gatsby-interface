@@ -117,7 +117,10 @@ function NotificationContent({
       css={theme => ({
         display: `flex`,
         alignItems: `center`,
-        color: theme.tones[tone].dark,
+        color:
+          tone === `WARNING`
+            ? theme.tones[`NEUTRAL`].superDark
+            : theme.tones[tone].dark,
       })}
       {...rest}
     />
