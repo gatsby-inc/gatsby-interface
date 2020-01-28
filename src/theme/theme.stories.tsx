@@ -69,6 +69,17 @@ storiesOf(`theme`, module)
     getStoryParameters(`colors`)
   )
   .add(
+    `tones`,
+    () => {
+      return (
+        <StoryUtils.Container>
+          <ThemeDocs theme={theme} scale="tones" />
+        </StoryUtils.Container>
+      )
+    },
+    getStoryParameters(`tones`)
+  )
+  .add(
     `fonts`,
     () => {
       return (

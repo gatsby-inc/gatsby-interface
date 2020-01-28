@@ -1,11 +1,8 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core"
+import { jsx } from "@emotion/core"
 import React, { Fragment } from "react"
 import { MdClose, MdArrowForward } from "react-icons/md"
 
-import tones from "../../theme/tones"
-import space from "../../theme/space"
-import colors from "../../theme/colors"
 import { Button } from "../Button"
 import { NotificationVariant, NotificationTone } from "./types"
 import {
@@ -14,6 +11,7 @@ import {
 } from "./Notification.helpers"
 import { PropsOf } from "../../utils/types"
 import { Link } from "../Link"
+import { CustomCss } from "../../theme"
 
 export type NotificationContextValue = {
   onDismiss?: () => void
@@ -23,11 +21,12 @@ const NotificationContext = React.createContext<NotificationContextValue>({
   onDismiss: () => undefined,
 })
 
-const baseCss = css({
+const baseCss: CustomCss = theme => ({
   display: `flex`,
   justifyContent: `space-between`,
-  flexWrap: `wrap`,
+  flexWrap: `nowrap`,
   width: `100%`,
+  fontSize: theme.fontSizes[1],
 })
 
 type AllowedAs = "section" | "div"
@@ -68,12 +67,15 @@ export default function Notification({
   return (
     <NotificationContext.Provider value={{ onDismiss: onDismissButtonClick }}>
       <Component
-        css={[baseCss, getNotificationVariantStyles(variant, tone)]}
+        css={theme => [
+          baseCss(theme),
+          getNotificationVariantStyles(variant, tone)(theme),
+        ]}
         {...rest}
       >
         {content && (
           <Notification.Content tone={tone} as={contentAs}>
-            {Icon && <Icon css={{ marginRight: space[3] }} />}
+            {Icon && <Icon css={theme => ({ marginRight: theme.space[3] })} />}
             {content}
           </Notification.Content>
         )}
@@ -112,11 +114,11 @@ function NotificationContent({
 }: NotificationContentProps) {
   return (
     <Component
-      css={{
+      css={theme => ({
         display: `flex`,
         alignItems: `center`,
-        color: tones[tone].dark,
-      }}
+        color: theme.tones[tone].dark,
+      })}
       {...rest}
     />
   )
@@ -128,12 +130,13 @@ function NotificationDismissButton() {
 
   return (
     <Button
-      css={{
+      css={theme => ({
         padding: `0`,
         minHeight: `auto`,
-        color: colors.grey[40],
-        width: space[5],
-      }}
+        color: theme.colors.grey[40],
+        width: theme.space[5],
+        marginLeft: theme.space[5],
+      })}
       type="button"
       onClick={onDismiss}
       variant="GHOST"

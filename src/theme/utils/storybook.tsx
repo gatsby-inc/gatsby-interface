@@ -119,7 +119,7 @@ function TokenValue({
 }) {
   return (
     <React.Fragment>
-      {scaleName === `colors` && typeof value === `string` && (
+      {[`colors`, `tones`].includes(scaleName) && typeof value === `string` && (
         <ColorDisplay color={value} />
       )}
       <Code>{typeof value === `string` ? value : JSON.stringify(value)}</Code>

@@ -1,19 +1,14 @@
-import { Interpolation } from "@emotion/core"
 import styled from "@emotion/styled"
 import { Success, Danger } from "../../assets"
 import { MdWarning } from "react-icons/md"
-
-import colors from "../../theme/colors"
-import card from "../../theme/styles/card"
-import tones from "../../theme/tones"
-import space from "../../theme/space"
-import breakpoints from "../../theme/breakpoints"
 import { NotificationTone, NotificationVariant } from "./types"
-import { ToneColors } from "../../theme/tones"
+import { Theme, CustomCss } from "../../theme"
+import { cardFrameCss } from "../../stylesheets/card"
 
-const Warning = styled(MdWarning)`
-  fill: ${colors.yellow[50]};
-`
+const Warning = styled(MdWarning)(({ theme }) => ({
+  color: (theme as Theme).colors.yellow[50],
+  fontSize: (theme as Theme).fontSizes[4],
+}))
 
 export const iconByTone: Record<
   NotificationTone,
@@ -26,29 +21,31 @@ export const iconByTone: Record<
   NEUTRAL: null,
 }
 
-type GetVariantStylesFn = (toneColors: ToneColors) => Interpolation
+type GetVariantStylesFn = (tone: NotificationTone) => CustomCss
 
 const variants: Record<NotificationVariant, GetVariantStylesFn> = {
-  PRIMARY: toneColors => {
-    return {
-      ...card.frame,
-      alignItems: `center`,
-      background: colors.white,
-      borderLeft: `10px solid ${toneColors.dark}`,
-      padding: `${space[5]} ${space[7]} ${space[5]} ${space[5]}`,
-      [`@media (min-width: ${breakpoints.desktop}px)`]: {
-        padding: `${space[5]} ${space[7]} ${space[5]} ${space[5]}`,
+  PRIMARY: tone => {
+    return theme => [
+      cardFrameCss(theme),
+      {
+        alignItems: `center`,
+        background: theme.colors.white,
+        borderLeft: `10px solid ${theme.tones[tone].dark}`,
+        padding: `${theme.space[5]} ${theme.space[7]} ${theme.space[5]} ${theme.space[5]}`,
+        [theme.mediaQueries.desktop]: {
+          padding: `${theme.space[5]} ${theme.space[7]} ${theme.space[5]} ${theme.space[5]}`,
+        },
       },
-    }
+    ]
   },
-  SECONDARY: toneColors => {
-    return {
-      background: toneColors.superLight,
-      padding: `${space[5]} ${space[7]}`,
-      [`@media (min-width: ${breakpoints.desktop}px)`]: {
-        padding: `${space[7]} ${space[9]}`,
+  SECONDARY: tone => {
+    return theme => ({
+      background: theme.tones[tone].superLight,
+      padding: `${theme.space[5]} ${theme.space[7]}`,
+      [theme.mediaQueries.desktop]: {
+        padding: `${theme.space[7]} ${theme.space[9]}`,
       },
-    }
+    })
   },
 }
 
@@ -56,5 +53,5 @@ export function getNotificationVariantStyles(
   variant: NotificationVariant,
   tone: NotificationTone
 ) {
-  return variants[variant](tones[tone])
+  return variants[variant](tone)
 }
