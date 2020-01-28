@@ -40,6 +40,7 @@ export type NotificationProps = Omit<PropsOf<AllowedAs>, "ref"> & {
   contentAs?: NotificationContentProps["as"]
   linkUrl?: string
   linkText?: React.ReactNode
+  onLinkClick?: React.MouseEventHandler<HTMLAnchorElement>
   isOpened?: boolean
   onDismissButtonClick?: () => void
   showDismissButton?: boolean
@@ -54,6 +55,7 @@ export default function Notification({
   contentAs = `span`,
   linkUrl,
   linkText,
+  onLinkClick,
   isOpened = true,
   onDismissButtonClick,
   showDismissButton = !!onDismissButtonClick,
@@ -81,7 +83,7 @@ export default function Notification({
         )}
 
         {linkUrl && linkText && (
-          <Notification.Link to={linkUrl}>
+          <Notification.Link to={linkUrl} onClick={onLinkClick}>
             {linkText && (
               <Fragment>
                 {linkText} <MdArrowForward />
