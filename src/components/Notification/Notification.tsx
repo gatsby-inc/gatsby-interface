@@ -67,6 +67,7 @@ export default function Notification({
     return null
   }
   const PresetIcon = content && iconByTone[tone]
+  // TODO apply icon color based on tone
   const Icon = CustomIcon || PresetIcon
 
   return (
@@ -85,6 +86,7 @@ export default function Notification({
                 css={theme => ({
                   marginRight: theme.space[3],
                   fontSize: theme.fontSizes[4],
+                  color: theme.tones[tone].dark,
                 })}
               />
             )}
