@@ -27,7 +27,6 @@ const variants: Record<NotificationVariant, GetVariantStylesFn> = {
     return theme => [
       cardFrameCss(theme),
       {
-        alignItems: `center`,
         background: theme.colors.white,
         borderLeft: `10px solid ${theme.tones[tone].dark}`,
         padding: `${theme.space[5]} ${theme.space[7]} ${theme.space[5]} ${theme.space[5]}`,

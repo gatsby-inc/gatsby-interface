@@ -11,7 +11,7 @@ import {
 } from "./Notification.helpers"
 import { PropsOf } from "../../utils/types"
 import { Link } from "../Link"
-import { CustomCss } from "../../theme"
+import { CustomCss, Theme } from "../../theme"
 
 export type NotificationContextValue = {
   onDismiss?: () => void
@@ -23,6 +23,7 @@ const NotificationContext = React.createContext<NotificationContextValue>({
 
 const baseCss: CustomCss = theme => ({
   display: `flex`,
+  alignItems: `flex-start`,
   justifyContent: `space-between`,
   flexWrap: `nowrap`,
   width: `100%`,
@@ -87,6 +88,7 @@ export default function Notification({
                   marginRight: theme.space[3],
                   fontSize: theme.fontSizes[4],
                   color: theme.tones[tone].dark,
+                  flexShrink: 0,
                 })}
               />
             )}
@@ -128,9 +130,10 @@ function NotificationContent({
 }: NotificationContentProps) {
   return (
     <Component
-      css={theme => ({
+      css={(theme: Theme) => ({
         display: `flex`,
-        alignItems: `center`,
+        alignItems: `flex-start`,
+        lineHeight: theme.lineHeights.default,
         color:
           tone === `WARNING`
             ? theme.tones[`NEUTRAL`].superDark

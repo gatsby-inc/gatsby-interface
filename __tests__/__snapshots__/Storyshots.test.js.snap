@@ -8808,10 +8808,11 @@ exports[`Storyshots Notification animated with react-spring 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  line-height: 1.5;
   color: #663399;
 }
 
@@ -8820,6 +8821,10 @@ exports[`Storyshots Notification animated with react-spring 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -8832,10 +8837,6 @@ exports[`Storyshots Notification animated with react-spring 1`] = `
   background: var(--theme-ui-colors-primaryBackground,#ffffff);
   border-radius: 0.25rem;
   box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background: var(--theme-ui-colors-white,#ffffff);
   border-left: 10px solid #663399;
   padding: 1rem 1.5rem 1rem 1rem;
@@ -9072,6 +9073,10 @@ exports[`Storyshots Notification custom icon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -9084,10 +9089,6 @@ exports[`Storyshots Notification custom icon 1`] = `
   background: var(--theme-ui-colors-primaryBackground,#ffffff);
   border-radius: 0.25rem;
   box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background: var(--theme-ui-colors-white,#ffffff);
   border-left: 10px solid #663399;
   padding: 1rem 1.5rem 1rem 1rem;
@@ -9104,10 +9105,11 @@ exports[`Storyshots Notification custom icon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  line-height: 1.5;
   color: #663399;
 }
 
@@ -9115,6 +9117,9 @@ exports[`Storyshots Notification custom icon 1`] = `
   margin-right: 0.5rem;
   font-size: 1.25rem;
   color: #663399;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 <div>
@@ -9224,6 +9229,10 @@ exports[`Storyshots Notification default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -9236,10 +9245,6 @@ exports[`Storyshots Notification default 1`] = `
   background: var(--theme-ui-colors-primaryBackground,#ffffff);
   border-radius: 0.25rem;
   box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background: var(--theme-ui-colors-white,#ffffff);
   border-left: 10px solid #663399;
   padding: 1rem 1.5rem 1rem 1rem;
@@ -9256,10 +9261,11 @@ exports[`Storyshots Notification default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  line-height: 1.5;
   color: #663399;
 }
 
@@ -9268,6 +9274,10 @@ exports[`Storyshots Notification default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -9868,10 +9878,11 @@ exports[`Storyshots Notification dismissable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  line-height: 1.5;
   color: #663399;
 }
 
@@ -9880,6 +9891,10 @@ exports[`Storyshots Notification dismissable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -9892,10 +9907,6 @@ exports[`Storyshots Notification dismissable 1`] = `
   background: var(--theme-ui-colors-primaryBackground,#ffffff);
   border-radius: 0.25rem;
   box-shadow: 0px 1px 2px rgba(46,41,51,0.08),0px 2px 4px rgba(71,63,79,0.08);
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background: var(--theme-ui-colors-white,#ffffff);
   border-left: 10px solid #663399;
   padding: 1rem 1.5rem 1rem 1rem;
