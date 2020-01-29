@@ -21563,7 +21563,7 @@ exports[`Storyshots Text variants 1`] = `
   line-height: 1.5;
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   line-height: 1.25;
-  margin: 1em 0 0;
+  margin: 1rem 0 0;
 }
 
 .emotion-7 {
@@ -21576,7 +21576,7 @@ exports[`Storyshots Text variants 1`] = `
   line-height: 1.5;
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   line-height: 1.25;
-  margin: 1em 0 0;
+  margin: 1rem 0 0;
 }
 
 <div>
