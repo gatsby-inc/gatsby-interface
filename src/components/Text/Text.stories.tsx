@@ -14,7 +14,6 @@ storiesOf(`Text`, module)
   .add(`rendered 'as'`, () => (
     <StoryUtils.Container>
       <StoryUtils.Stack>
-        <Text>Text rendered by default as &lt;p&gt; tag</Text>
         <Text as={`span`}>Text rendered as &lt;span&gt; tag</Text>
       </StoryUtils.Stack>
     </StoryUtils.Container>

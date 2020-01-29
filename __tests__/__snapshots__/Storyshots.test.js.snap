@@ -403,7 +403,7 @@ exports[`Storyshots Badge shortcut usage 1`] = `
 `;
 
 exports[`Storyshots Badge variants 1`] = `
-.emotion-5 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -421,7 +421,7 @@ exports[`Storyshots Badge variants 1`] = `
   padding: 20px;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: grid;
   justify-items: start;
   grid-gap: 2rem;
@@ -443,7 +443,7 @@ exports[`Storyshots Badge variants 1`] = `
   text-transform: uppercase;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -477,26 +477,44 @@ exports[`Storyshots Badge variants 1`] = `
   margin-left: 0.25rem;
 }
 
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #eee;
-  color: green;
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: .9rem;
-  font-weight: normal;
-  margin-left: 2em;
-  padding: .3em .6em;
-  vertical-align: text-bottom;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+  margin-left: 2rem;
+  vertical-align: middle;
 }
 
-.emotion-2 svg {
-  margin-right: 0.2em;
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
 }
 
 <div>
@@ -506,10 +524,10 @@ exports[`Storyshots Badge variants 1`] = `
     <div>
       <div>
         <div
-          class="emotion-5"
+          class="emotion-6"
         >
           <div
-            class="emotion-4"
+            class="emotion-5"
           >
             <span
               class="emotion-0"
@@ -517,7 +535,7 @@ exports[`Storyshots Badge variants 1`] = `
               New
             </span>
             <div
-              class="emotion-3"
+              class="emotion-4"
             >
               <span
                 class="emotion-1"
@@ -537,24 +555,28 @@ exports[`Storyshots Badge variants 1`] = `
                   />
                 </svg>
               </span>
-              <div
-                class="emotion-2"
+              <span
+                class="emotion-3"
               >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="emotion-2"
                 >
-                  <path
-                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                  />
-                </svg>
-                 default
-              </div>
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                    />
+                  </svg>
+                </span>
+                Default
+              </span>
             </div>
           </div>
         </div>
@@ -1492,6 +1514,22 @@ exports[`Storyshots Chip w/ icon 1`] = `
   padding: 20px;
 }
 
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
 .emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1554,22 +1592,6 @@ exports[`Storyshots Chip w/ icon 1`] = `
   height: 0.875rem;
   width: 0.875rem;
   font-size: 0.875rem;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: middle;
-  height: 0.875rem;
-  width: 0.875rem;
-  font-size: 0.875rem;
-  margin-right: 0.25rem;
 }
 
 <div>
@@ -2262,7 +2284,7 @@ exports[`Storyshots File Upload Single File Upload 1`] = `
 `;
 
 exports[`Storyshots Heading redered 'as' 1`] = `
-.emotion-8 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2280,32 +2302,50 @@ exports[`Storyshots Heading redered 'as' 1`] = `
   padding: 20px;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: grid;
   justify-items: start;
   grid-gap: 2rem;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #eee;
-  color: green;
+.emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: .9rem;
-  font-weight: normal;
-  margin-left: 2em;
-  padding: .3em .6em;
-  vertical-align: text-bottom;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+  margin-left: 2rem;
+  vertical-align: middle;
 }
 
-.emotion-1 svg {
-  margin-right: 0.2em;
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 {
@@ -2323,10 +2363,10 @@ exports[`Storyshots Heading redered 'as' 1`] = `
     <div>
       <div>
         <div
-          class="emotion-8"
+          class="emotion-9"
         >
           <div
-            class="emotion-7"
+            class="emotion-8"
           >
             <h1
               class="emotion-0"
@@ -2337,24 +2377,28 @@ exports[`Storyshots Heading redered 'as' 1`] = `
               class="emotion-0"
             >
               Heading rendered as &lt;h2&gt; tag 
-              <div
-                class="emotion-1"
+              <span
+                class="emotion-2"
               >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="emotion-1"
                 >
-                  <path
-                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                  />
-                </svg>
-                 default
-              </div>
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                    />
+                  </svg>
+                </span>
+                Default
+              </span>
             </h2>
             <h3
               class="emotion-0"
@@ -2385,6 +2429,165 @@ exports[`Storyshots Heading redered 'as' 1`] = `
 `;
 
 exports[`Storyshots Heading tones 1`] = `
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-6 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+  margin-left: 2rem;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.emotion-2 {
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  margin: 0;
+  color: #232129;
+  line-height: 1.125;
+  font-weight: bold;
+}
+
+.emotion-3 {
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  margin: 0;
+  color: #362066;
+  line-height: 1.125;
+  font-weight: bold;
+}
+
+.emotion-4 {
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  margin: 0;
+  color: #b80000;
+  line-height: 1.125;
+  font-weight: bold;
+}
+
+.emotion-5 {
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  margin: 0;
+  color: #006500;
+  line-height: 1.125;
+  font-weight: bold;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-7"
+        >
+          <div
+            class="emotion-6"
+          >
+            <h2
+              class="emotion-2"
+            >
+              Heading tone - NEUTRAL 
+              <span
+                class="emotion-1"
+              >
+                <span
+                  class="emotion-0"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                    />
+                  </svg>
+                </span>
+                Default
+              </span>
+            </h2>
+            <h2
+              class="emotion-3"
+            >
+              Heading tone - BRAND
+            </h2>
+            <h2
+              class="emotion-4"
+            >
+              Heading tone - DANGER
+            </h2>
+            <h2
+              class="emotion-5"
+            >
+              Heading tone - SUCCESS
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Heading variants 1`] = `
 .emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2409,174 +2612,55 @@ exports[`Storyshots Heading tones 1`] = `
   grid-gap: 2rem;
 }
 
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #eee;
-  color: green;
+.emotion-1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: .9rem;
-  font-weight: normal;
-  margin-left: 2em;
-  padding: .3em .6em;
-  vertical-align: text-bottom;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+  margin-left: 2rem;
+  vertical-align: middle;
 }
 
-.emotion-0 svg {
-  margin-right: 0.2em;
-}
-
-.emotion-1 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #232129;
-  line-height: 1.125;
-  font-weight: bold;
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-2 {
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   margin: 0;
-  color: #362066;
+  color: #232129;
   line-height: 1.125;
   font-weight: bold;
 }
 
 .emotion-3 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #b80000;
-  line-height: 1.125;
-  font-weight: bold;
-}
-
-.emotion-4 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #006500;
-  line-height: 1.125;
-  font-weight: bold;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-6"
-        >
-          <div
-            class="emotion-5"
-          >
-            <h2
-              class="emotion-1"
-            >
-              Heading tone - NEUTRAL 
-              <div
-                class="emotion-0"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                  />
-                </svg>
-                 default
-              </div>
-            </h2>
-            <h2
-              class="emotion-2"
-            >
-              Heading tone - BRAND
-            </h2>
-            <h2
-              class="emotion-3"
-            >
-              Heading tone - DANGER
-            </h2>
-            <h2
-              class="emotion-4"
-            >
-              Heading tone - SUCCESS
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Heading variants 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-4 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #eee;
-  color: green;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: .9rem;
-  font-weight: normal;
-  margin-left: 2em;
-  padding: .3em .6em;
-  vertical-align: text-bottom;
-}
-
-.emotion-0 svg {
-  margin-right: 0.2em;
-}
-
-.emotion-1 {
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
-  color: #232129;
-  line-height: 1.125;
-  font-weight: bold;
-}
-
-.emotion-2 {
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   margin: 0;
   color: #232129;
@@ -2584,7 +2668,7 @@ exports[`Storyshots Heading variants 1`] = `
   font-weight: 800;
 }
 
-.emotion-3 {
+.emotion-4 {
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   margin: 0;
   color: #78757a;
@@ -2600,41 +2684,45 @@ exports[`Storyshots Heading variants 1`] = `
     <div>
       <div>
         <div
-          class="emotion-5"
+          class="emotion-6"
         >
           <div
-            class="emotion-4"
+            class="emotion-5"
           >
             <h2
-              class="emotion-1"
+              class="emotion-2"
             >
               Heading variant - PRIMARY 
-              <div
-                class="emotion-0"
+              <span
+                class="emotion-1"
               >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="emotion-0"
                 >
-                  <path
-                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                  />
-                </svg>
-                 default
-              </div>
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                    />
+                  </svg>
+                </span>
+                Default
+              </span>
             </h2>
             <h2
-              class="emotion-2"
+              class="emotion-3"
             >
               Heading variant - EMPHASIZED
             </h2>
             <h2
-              class="emotion-3"
+              class="emotion-4"
             >
               Heading variant - LIGHT
             </h2>
@@ -21022,6 +21110,614 @@ label:focus-within > .emotion-2 {
 </div>
 `;
 
+exports[`Storyshots Text rendered 'as' 1`] = `
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-1 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-0 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-2"
+        >
+          <div
+            class="emotion-1"
+          >
+            <span
+              class="emotion-0"
+            >
+              Text rendered as &lt;span&gt; tag
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Text sizes 1`] = `
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-6 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+  margin-left: 2rem;
+  vertical-align: middle;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.emotion-3 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.emotion-0 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.emotion-4 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.emotion-5 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-7"
+        >
+          <div
+            class="emotion-6"
+          >
+            <p
+              class="emotion-0"
+            >
+              Text size - S. 
+            </p>
+            <p
+              class="emotion-3"
+            >
+              Text size - M 
+              <span
+                class="emotion-2"
+              >
+                <span
+                  class="emotion-1"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                    />
+                  </svg>
+                </span>
+                Default
+              </span>
+            </p>
+            <p
+              class="emotion-4"
+            >
+              Text size - L
+            </p>
+            <p
+              class="emotion-5"
+            >
+              Text size - XL
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Text tones 1`] = `
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-4 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+  margin-left: 2rem;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.emotion-2 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.emotion-3 {
+  color: #542c85;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-5"
+        >
+          <div
+            class="emotion-4"
+          >
+            <p
+              class="emotion-2"
+            >
+              Text tone - NEUTRAL 
+              <span
+                class="emotion-1"
+              >
+                <span
+                  class="emotion-0"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                    />
+                  </svg>
+                </span>
+                Default
+              </span>
+            </p>
+            <p
+              class="emotion-3"
+            >
+              Text tone - BRAND
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Text variants 1`] = `
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-8 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  line-height: calc(1.75rem - 2 * 1px);
+  color: rgba(35,33,41,0.7);
+  border: 1px solid #f5f5f5;
+  white-space: nowrap;
+  margin-left: 2rem;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 0.875rem;
+  width: 0.875rem;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.emotion-2 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.emotion-3 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.emotion-5 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 0;
+}
+
+.emotion-6 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  line-height: 1.25;
+  margin: 1em 0 0;
+}
+
+.emotion-7 {
+  color: #542c85;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  line-height: 1.25;
+  margin: 1em 0 0;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-9"
+        >
+          <div
+            class="emotion-8"
+          >
+            <p
+              class="emotion-2"
+            >
+              Text variant - PRIMARY 
+              <span
+                class="emotion-1"
+              >
+                <span
+                  class="emotion-0"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                    />
+                  </svg>
+                </span>
+                Default
+              </span>
+            </p>
+            <p
+              class="emotion-3"
+            >
+              Text variant - EMPHASIZED
+            </p>
+            <p
+              class="emotion-2"
+            >
+              Text variant - ERROR
+            </p>
+            <p
+              class="emotion-5"
+            >
+              Text variant - LEDE: Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho shooberino.
+            </p>
+            <p
+              class="emotion-6"
+            >
+              Text variant - EMPHASIZED_LEDE: Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho shooberino.
+            </p>
+            <p
+              class="emotion-7"
+            >
+              Text variant - EMPHASIZED_LEDE with BRAND tone: Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho shooberino.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Text with children 1`] = `
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-2 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-0 {
+  color: #635e69;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-3"
+        >
+          <div
+            class="emotion-2"
+          >
+            <p
+              class="emotion-0"
+            >
+              <span>
+                Wrapped with a &lt;span&gt; tag
+              </span>
+            </p>
+            <p
+              class="emotion-0"
+            >
+              <strong>
+                Wrapped with a &lt;strong&gt; tag
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots TextInput Default 1`] = `
 .emotion-1 {
   -webkit-align-items: center;
@@ -30690,542 +31386,6 @@ exports[`Storyshots buttons/LinkButton with icons 1`] = `
               </svg>
               On the left
             </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots core/Text rendered 'as' 1`] = `
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-2 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-3"
-        >
-          <div
-            class="emotion-2"
-          >
-            <p
-              class="emotion-0"
-            >
-              Text rendered by default as &lt;p&gt; tag
-            </p>
-            <span
-              class="emotion-0"
-            >
-              Text rendered as &lt;span&gt; tag
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots core/Text sizes 1`] = `
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-5 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #eee;
-  color: green;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: .9rem;
-  font-weight: normal;
-  margin-left: 2em;
-  padding: .3em .6em;
-  vertical-align: text-bottom;
-}
-
-.emotion-1 svg {
-  margin-right: 0.2em;
-}
-
-.emotion-2 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.emotion-0 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-.emotion-3 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1.125rem;
-  line-height: 1.5;
-}
-
-.emotion-4 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-6"
-        >
-          <div
-            class="emotion-5"
-          >
-            <p
-              class="emotion-0"
-            >
-              Text size - S. 
-            </p>
-            <p
-              class="emotion-2"
-            >
-              Text size - M 
-              <div
-                class="emotion-1"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                  />
-                </svg>
-                 default
-              </div>
-            </p>
-            <p
-              class="emotion-3"
-            >
-              Text size - L
-            </p>
-            <p
-              class="emotion-4"
-            >
-              Text size - XL
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots core/Text tones 1`] = `
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-3 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #eee;
-  color: green;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: .9rem;
-  font-weight: normal;
-  margin-left: 2em;
-  padding: .3em .6em;
-  vertical-align: text-bottom;
-}
-
-.emotion-0 svg {
-  margin-right: 0.2em;
-}
-
-.emotion-1 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.emotion-2 {
-  color: #542c85;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-4"
-        >
-          <div
-            class="emotion-3"
-          >
-            <p
-              class="emotion-1"
-            >
-              Text tone - NEUTRAL 
-              <div
-                class="emotion-0"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                  />
-                </svg>
-                 default
-              </div>
-            </p>
-            <p
-              class="emotion-2"
-            >
-              Text tone - BRAND
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots core/Text variants 1`] = `
-.emotion-8 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-7 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #eee;
-  color: green;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: .9rem;
-  font-weight: normal;
-  margin-left: 2em;
-  padding: .3em .6em;
-  vertical-align: text-bottom;
-}
-
-.emotion-0 svg {
-  margin-right: 0.2em;
-}
-
-.emotion-1 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.emotion-2 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: bold;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.emotion-4 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1.125rem;
-  line-height: 1.5;
-  margin: 0.5rem 0 0;
-}
-
-.emotion-5 {
-  color: #635e69;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 1.3;
-  margin: 1em 0 0;
-}
-
-.emotion-6 {
-  color: #542c85;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 1.3;
-  margin: 1em 0 0;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-8"
-        >
-          <div
-            class="emotion-7"
-          >
-            <p
-              class="emotion-1"
-            >
-              Text variant - PRIMARY 
-              <div
-                class="emotion-0"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                  />
-                </svg>
-                 default
-              </div>
-            </p>
-            <p
-              class="emotion-2"
-            >
-              Text variant - EMPHASIZED
-            </p>
-            <p
-              class="emotion-1"
-            >
-              Text variant - ERROR
-            </p>
-            <p
-              class="emotion-4"
-            >
-              Text variant - LEDE: Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho shooberino.
-            </p>
-            <p
-              class="emotion-5"
-            >
-              Text variant - EMPHASIZED_LEDE: Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho shooberino.
-            </p>
-            <p
-              class="emotion-6"
-            >
-              Text variant - EMPHASIZED_LEDE with BRAND tone: Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho shooberino.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots core/Text with children 1`] = `
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-2 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  color: #635e69;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-3"
-        >
-          <div
-            class="emotion-2"
-          >
-            <p
-              class="emotion-0"
-            >
-              <span>
-                Wrapped with a &lt;span&gt; tag
-              </span>
-            </p>
-            <p
-              class="emotion-0"
-            >
-              <strong>
-                Wrapped with a &lt;strong&gt; tag
-              </strong>
-            </p>
           </div>
         </div>
       </div>

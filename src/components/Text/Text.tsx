@@ -19,7 +19,11 @@ function Text({
 }: TextProps) {
   return (
     <BaseText
-      css={[baseStyle(tone), sizeStyles()[size], variantStyles()[variant]]}
+      css={theme => [
+        baseStyle(tone)(theme),
+        sizeStyles[size](theme),
+        variantStyles[variant](theme),
+      ]}
       {...rest}
     />
   )

@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core"
 
 import { MdInfoOutline } from "react-icons/md"
 import colors from "../../theme/colors"
+import { Chip } from "../../components/Chip"
 
 const StoryUtils = {}
 
@@ -68,25 +69,12 @@ StoryUtils.Content = ({
 )
 
 StoryUtils.Default = () => (
-  <div
-    css={{
-      alignItems: `center`,
-      background: `#eee`,
-      color: `green`,
-      display: `inline-flex`,
-      fontSize: `.9rem`,
-      fontWeight: `normal`,
-      marginLeft: `2em`,
-      padding: `.3em .6em`,
-      verticalAlign: `text-bottom`,
-
-      svg: {
-        marginRight: `0.2em`,
-      },
-    }}
+  <Chip
+    icon={<MdInfoOutline />}
+    css={theme => ({ marginLeft: theme.space[8], verticalAlign: `middle` })}
   >
-    <MdInfoOutline /> default
-  </div>
+    Default
+  </Chip>
 )
 
 export default StoryUtils
