@@ -48,7 +48,7 @@ export const variantStyles: Record<TextVariant, CustomCss> = {
     {
       fontFamily: theme.fonts.header,
       lineHeight: theme.lineHeights.dense,
-      margin: `1em 0 0`,
+      margin: `${theme.space[5]} 0 0`,
     },
   ],
   ERROR: () => ({}),
