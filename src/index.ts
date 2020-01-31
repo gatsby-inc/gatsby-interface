@@ -93,7 +93,7 @@ export { default as zIndices } from "./theme/zIndices"
 export { default as transition } from "./theme/transition"
 
 export { default as cardStyles } from "./theme/styles/card"
-export { default as buttonStyles } from "./theme/styles/button"
+export * from "./theme/styles/button"
 
 export * from "./components/Avatar"
 export * from "./components/BaseAnchor"

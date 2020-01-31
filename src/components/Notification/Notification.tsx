@@ -11,7 +11,7 @@ import {
 } from "./Notification.helpers"
 import { PropsOf } from "../../utils/types"
 import { Link } from "../Link"
-import { CustomCss, Theme } from "../../theme"
+import { ThemeCss, Theme } from "../../theme"
 
 export type NotificationContextValue = {
   onDismiss?: () => void
@@ -21,7 +21,7 @@ const NotificationContext = React.createContext<NotificationContextValue>({
   onDismiss: () => undefined,
 })
 
-const baseCss: CustomCss = theme => ({
+const baseCss: ThemeCss = theme => ({
   display: `flex`,
   alignItems: `flex-start`,
   justifyContent: `space-between`,

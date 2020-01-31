@@ -1,8 +1,11 @@
 import React from "react"
-import { render, fireEvent } from "@testing-library/react"
+import { fireEvent } from "@testing-library/react"
 import "jest-dom/extend-expect"
 
 import { CopyButton } from "../index"
+import { renderWithTheme } from "../../../utils/testing"
+
+const render = renderWithTheme
 
 const clipboard = () => {
   let buffer: string | undefined = undefined
@@ -31,7 +34,7 @@ afterAll(() => {
   window.navigator.clipboard = oldClipboard
 })
 
-describe(`<PrimaryButton>`, () => {
+describe(`<CopyButton>`, () => {
   it(`renders unchanged`, async () => {
     const { container } = render(<CopyButton content="test" />)
 

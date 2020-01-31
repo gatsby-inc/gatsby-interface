@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import { Success, Danger } from "../../assets"
 import { MdWarning } from "react-icons/md"
 import { NotificationTone, NotificationVariant } from "./types"
-import { Theme, CustomCss } from "../../theme"
+import { Theme, ThemeCss } from "../../theme"
 import { cardFrameCss } from "../../stylesheets/card"
 
 const Warning = styled(MdWarning)(({ theme }) => ({
@@ -20,7 +20,7 @@ export const iconByTone: Record<
   NEUTRAL: null,
 }
 
-type GetVariantStylesFn = (tone: NotificationTone) => CustomCss
+type GetVariantStylesFn = (tone: NotificationTone) => ThemeCss
 
 const variants: Record<NotificationVariant, GetVariantStylesFn> = {
   PRIMARY: tone => {

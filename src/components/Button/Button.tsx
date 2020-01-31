@@ -1,14 +1,16 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core"
+import { jsx, InterpolationWithTheme } from "@emotion/core"
 import React from "react"
 import { MdRefresh } from "react-icons/md"
 
 import { BaseButton, BaseButtonProps } from "../BaseButton"
-import styles from "../../theme/styles/button"
-
-export type ButtonSize = "XL" | "L" | "M" | "S"
-export type ButtonTone = "BRAND" | "SUCCESS" | "DANGER" | "NEUTRAL"
-export type ButtonVariant = "PRIMARY" | "SECONDARY" | "GHOST"
+import {
+  getButtonCss,
+  ButtonVariant,
+  ButtonTone,
+  ButtonSize,
+} from "../../theme/styles/button"
+import { Theme } from "../../theme"
 
 export type ButtonStyleProps = {
   size?: ButtonSize
@@ -32,15 +34,18 @@ export function getButtonStyles({
   children: React.ReactNode
   loading?: boolean
 } & ButtonStyleProps): {
-  css: ReturnType<typeof css>
+  css: InterpolationWithTheme<Theme>
   children: React.ReactNode
 } {
   return {
-    css: [
-      styles.base({ loading, leftIcon, rightIcon }),
-      styles.sizes[size],
-      styles.variants[variant]({ tone }),
-    ] as any,
+    css: getButtonCss({
+      size,
+      variant,
+      tone,
+      loading,
+      leftIcon,
+      rightIcon,
+    }),
     children:
       leftIcon || rightIcon ? (
         <React.Fragment>

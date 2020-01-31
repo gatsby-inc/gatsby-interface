@@ -1,9 +1,11 @@
 import React from "react"
+import { PropsOf } from "../../utils/types"
 
 export type BaseButtonProps = Omit<JSX.IntrinsicElements["button"], "ref"> & {
-  loading?: boolean;
-  loadingLabel?: React.ReactNode;
-  LoadingIcon?: React.ComponentType<any>; // TODO replace any with something more strict
+  loading?: boolean
+  loadingLabel?: React.ReactNode
+  LoadingIcon?: React.ComponentType<any> // TODO replace any with something more strict
+  ButtonComponent?: React.ComponentType<PropsOf<"button">>
 }
 
 export const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
@@ -15,11 +17,12 @@ export const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
       loadingLabel = `Loading`,
       LoadingIcon,
       type = `button`,
+      ButtonComponent = `button`,
       ...rest
     } = props
 
     return (
-      <button
+      <ButtonComponent
         disabled={loading ? true : disabled}
         type={type}
         {...rest}
@@ -34,7 +37,7 @@ export const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
         ) : (
           children
         )}
-      </button>
+      </ButtonComponent>
     )
   }
 )

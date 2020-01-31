@@ -20,7 +20,7 @@ import README_ICONS from "./README_ICONS.md"
 import customStyling from "./README_customStyling.md"
 import README_MANUAL_STYLING from "./README_MANUAL_STYLING.md"
 import README_LEGACY from "./README_LEGACY.md"
-import styles from "../../theme/styles/button"
+import { getButtonCss } from "../../theme/styles/button"
 import { StoryUtils } from "../../utils/storybook"
 import {
   showcaseVariants,
@@ -29,6 +29,7 @@ import {
   showcaseCustomStyles,
   showcaseIcons,
 } from "./utils/storybook-styles"
+import { MdCloud } from "react-icons/md"
 
 storiesOf(`buttons/Button`, module)
   .addParameters({
@@ -62,17 +63,34 @@ storiesOf(`buttons/Button`, module)
     </StoryUtils.Container>
   ))
   .add(
+    `custom button component`,
+    () => {
+      function CustomButton(props: JSX.IntrinsicElements["button"]) {
+        return <button {...props} onClick={action("click custom component")} />
+      }
+
+      return (
+        <StoryUtils.Container>
+          <StoryUtils.Stack>
+            <Button ButtonComponent={CustomButton} rightIcon={<MdCloud />}>
+              Custom component
+            </Button>
+          </StoryUtils.Stack>
+        </StoryUtils.Container>
+      )
+    },
+    {
+      readme: {
+        sidebar: README_MANUAL_STYLING,
+      },
+    }
+  )
+  .add(
     `manually applied styles`,
     () => (
       <StoryUtils.Container>
         <StoryUtils.Stack>
-          <button
-            css={[
-              styles.base(),
-              styles.sizes.L,
-              styles.variants.PRIMARY({ tone: `BRAND` }),
-            ]}
-          >
+          <button css={getButtonCss({ size: `L`, tone: `BRAND` })}>
             I'm a &lt;button&gt; but I look like the &lt;Button&gt;
           </button>
         </StoryUtils.Stack>

@@ -1,7 +1,9 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { renderWithTheme } from "../src/utils/testing"
 
 import { PrimaryButton } from "../src/components/Button"
+
+const render = renderWithTheme
 
 describe(`<PrimaryButton>`, () => {
   test(`renders unchanged`, async () => {

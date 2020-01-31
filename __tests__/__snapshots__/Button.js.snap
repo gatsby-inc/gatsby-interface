@@ -20,7 +20,7 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -35,16 +35,16 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: #663399;
+  border: 1px solid #663399;
+  color: var(--theme-ui-colors-white,#ffffff);
+  font-weight: bold;
   font-size: 1.125rem;
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
-  background: #663399;
-  border: 1px solid #663399;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 .emotion-0[disabled],
@@ -63,7 +63,8 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
   transform: scale(1);
 }
 
-.emotion-0:hover:not([disabled]) svg {
+.emotion-0:hover:not([disabled]) svg,
+.emotion-0:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }

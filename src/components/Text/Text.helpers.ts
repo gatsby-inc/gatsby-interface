@@ -1,7 +1,7 @@
 import { TextTone, TextSize, TextVariant } from "./types"
-import { CustomCss } from "../../theme"
+import { ThemeCss } from "../../theme"
 
-export const baseStyle = (tone: TextTone): CustomCss => {
+export const baseStyle = (tone: TextTone): ThemeCss => {
   return theme => ({
     color: theme.tones[tone].darker,
     fontFamily: theme.fonts.system,
@@ -9,7 +9,7 @@ export const baseStyle = (tone: TextTone): CustomCss => {
   })
 }
 
-export const sizeStyles: Record<TextSize, CustomCss> = {
+export const sizeStyles: Record<TextSize, ThemeCss> = {
   S: theme => ({
     fontSize: theme.fontSizes[1],
     lineHeight: theme.lineHeights.default,
@@ -32,7 +32,7 @@ export const sizeStyles: Record<TextSize, CustomCss> = {
   }),
 }
 
-export const variantStyles: Record<TextVariant, CustomCss> = {
+export const variantStyles: Record<TextVariant, ThemeCss> = {
   PRIMARY: () => ({}),
   EMPHASIZED: () => ({
     fontWeight: `bold`,

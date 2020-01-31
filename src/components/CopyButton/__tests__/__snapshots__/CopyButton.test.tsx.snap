@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PrimaryButton> renders unchanged 1`] = `
+exports[`<CopyButton> renders unchanged 1`] = `
 @keyframes animation-0 {
   33% {
     -webkit-transform: scale(1);
@@ -20,7 +20,7 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -35,15 +35,15 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
-  min-height: 1.6rem;
-  padding: 0.3rem 0.5rem;
   background: transparent;
   border: 1px solid #f1defa;
   color: #663399;
+  font-size: 0.875rem;
+  min-height: 1.6rem;
+  padding: 0.3rem 0.5rem;
 }
 
 .emotion-0[disabled],
@@ -62,7 +62,8 @@ exports[`<PrimaryButton> renders unchanged 1`] = `
   transform: scale(1);
 }
 
-.emotion-0:hover:not([disabled]) svg {
+.emotion-0:hover:not([disabled]) svg,
+.emotion-0:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }

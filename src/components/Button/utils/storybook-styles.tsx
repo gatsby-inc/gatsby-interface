@@ -7,9 +7,12 @@ import { MdArrowForward } from "react-icons/md"
 import { radios } from "@storybook/addon-knobs"
 
 import { StoryUtils } from "../../../utils/storybook"
-import colors from "../../../theme/colors"
 import { StoryApi } from "@storybook/addons"
-import { ButtonSize, ButtonTone, ButtonVariant } from "../Button"
+import {
+  ButtonSize,
+  ButtonTone,
+  ButtonVariant,
+} from "../../../theme/styles/button"
 import { StoryFnReactReturnType } from "@storybook/react/dist/client/preview/types"
 
 function enumToOptions<T extends string>(
@@ -85,7 +88,7 @@ export function showcaseSizes<P>(
           size={size}
           ref={undefined}
         >
-          variant&nbsp;<React.Fragment>'{variant}'</React.Fragment>
+          size&nbsp;<React.Fragment>'{size}'</React.Fragment>
         </Component>
       )
 
@@ -121,7 +124,7 @@ export function showcaseTones<P>(
           size={size}
           ref={undefined}
         >
-          variant&nbsp;<React.Fragment>'{variant}'</React.Fragment>
+          tone&nbsp;<React.Fragment>'{tone}'</React.Fragment>
         </Component>
       )
 
@@ -147,15 +150,15 @@ export function showcaseCustomStyles<P>(
           <Component
             {...defaultProps}
             onClick={action(`Button was clicked`)}
-            css={{
-              color: colors.purple[60],
-              background: colors.yellow[60],
-              borderColor: colors.yellow[60],
+            css={theme => ({
+              color: theme.colors.purple[60],
+              background: theme.colors.yellow[60],
+              borderColor: theme.colors.yellow[60],
 
               "&:hover:not([disabled])": {
-                color: colors.white,
+                color: theme.colors.white,
               },
-            }}
+            })}
           >
             Button with custom style
           </Component>

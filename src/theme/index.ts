@@ -17,7 +17,7 @@ import breakpoints, {
 import transitions, { Transitions } from "./transition"
 import { AtomTone } from "./types"
 import { ToneColors } from "./tones"
-import { Interpolation } from "@emotion/core"
+import { Interpolation, InterpolationWithTheme } from "@emotion/core"
 
 /**
  * Colors
@@ -239,4 +239,5 @@ export function getTheme(): Theme {
   return defaultTheme
 }
 
-export type CustomCss = (theme: Theme) => Interpolation
+export type CustomCss = InterpolationWithTheme<Theme>
+export type ThemeCss = (theme: Theme) => Interpolation
