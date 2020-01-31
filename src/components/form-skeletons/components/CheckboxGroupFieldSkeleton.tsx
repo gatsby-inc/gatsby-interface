@@ -2,7 +2,7 @@ import React from "react"
 import FormFieldSkeleton from "./FormFieldSkeleton"
 import FormGroupFieldSkeleton, {
   FormGroupFieldSkeletonProps,
-  FormGroupOptionProps,
+  FormGroupFieldSkeletonOptionProps,
 } from "./FormGroupFieldSkeleton"
 
 function CheckboxGroupFieldSkeleton(props: FormGroupFieldSkeletonProps) {
@@ -13,7 +13,7 @@ CheckboxGroupFieldSkeleton.Label = FormGroupFieldSkeleton.Label
 CheckboxGroupFieldSkeleton.Label.displayName = `CheckboxGroupFieldSkeleton.Label`
 
 export type CheckboxGroupFieldSkeletonOptionProps = Omit<
-  FormGroupOptionProps,
+  FormGroupFieldSkeletonOptionProps,
   "type" | "ref"
 >
 

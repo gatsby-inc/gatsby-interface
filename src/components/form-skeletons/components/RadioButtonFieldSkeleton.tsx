@@ -2,7 +2,7 @@ import React from "react"
 import FormFieldSkeleton from "./FormFieldSkeleton"
 import FormGroupFieldSkeleton, {
   FormGroupFieldSkeletonProps,
-  FormGroupOptionProps,
+  FormGroupFieldSkeletonOptionProps,
 } from "./FormGroupFieldSkeleton"
 
 function RadioButtonFieldSkeleton(props: FormGroupFieldSkeletonProps) {
@@ -13,7 +13,7 @@ RadioButtonFieldSkeleton.Label = FormGroupFieldSkeleton.Label
 RadioButtonFieldSkeleton.Label.displayName = `RadioButtonFieldSkeleton.Label`
 
 export type RadioButtonFieldSkeletonOptionProps = Omit<
-  FormGroupOptionProps,
+  FormGroupFieldSkeletonOptionProps,
   "type" | "ref"
 >
 

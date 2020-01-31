@@ -35,17 +35,17 @@ const FormGroupFieldSkeletonLabel: React.FC<
   FormGroupFieldSkeletonLabelProps
 > = props => <legend {...props} />
 
-export type FormGroupOptionProps = Omit<
+export type FormGroupFieldSkeletonOptionProps = Omit<
   OmitControlProps<JSX.IntrinsicElements["input"]>,
   "value" | "name"
 > & {
-  name: string; // Force require "name" attribute
-  value: string; // Force require "value" attribute
+  name: string // Force require "name" attribute
+  value: string // Force require "value" attribute
 }
 
-const GroupFieldOption = React.forwardRef<
+const FormGroupFielSkeletonOption = React.forwardRef<
   HTMLInputElement,
-  FormGroupOptionProps
+  FormGroupFieldSkeletonOptionProps
 >((props, ref) => {
   const { id, hasError, meta } = FormFieldSkeleton.useFormFieldSkeleton()
 
@@ -64,14 +64,13 @@ const GroupFieldOption = React.forwardRef<
   )
 })
 
-type GroupFieldOptionLabelProps = FormFieldSkeletonLabelProps & {
-  optionValue: string;
+export type FormGroupFieldSkeletonOptionLabelProps = FormFieldSkeletonLabelProps & {
+  optionValue: string
 }
 
-const GroupFieldOptionLabel: React.FC<GroupFieldOptionLabelProps> = ({
-  optionValue,
-  ...rest
-}) => {
+const FormGroupFieldSkeletonOptionLabel: React.FC<
+  FormGroupFieldSkeletonOptionLabelProps
+> = ({ optionValue, ...rest }) => {
   const { id } = FormFieldSkeleton.useFormFieldSkeleton()
 
   return <label htmlFor={getGroupOptionId(id, optionValue)} {...rest} />
@@ -79,9 +78,9 @@ const GroupFieldOptionLabel: React.FC<GroupFieldOptionLabelProps> = ({
 
 FormGroupFieldSkeleton.Label = FormGroupFieldSkeletonLabel
 FormGroupFieldSkeleton.Label.displayName = `FormGroupFieldSkeleton.Label`
-FormGroupFieldSkeleton.Option = GroupFieldOption
+FormGroupFieldSkeleton.Option = FormGroupFielSkeletonOption
 FormGroupFieldSkeleton.Option.displayName = `FormGroupFieldSkeleton.Option`
-FormGroupFieldSkeleton.OptionLabel = GroupFieldOptionLabel
+FormGroupFieldSkeleton.OptionLabel = FormGroupFieldSkeletonOptionLabel
 FormGroupFieldSkeleton.OptionLabel.displayName = `FormGroupFieldSkeleton.OptionLabel`
 
 export default FormGroupFieldSkeleton

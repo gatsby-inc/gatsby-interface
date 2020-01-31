@@ -2,14 +2,14 @@ import React from "react"
 import { getHintId, getErrorId } from "../utils"
 
 export type FormFieldSkeletonContextValue = {
-  id: string;
-  hasHint?: boolean;
-  hasError?: boolean;
+  id: string
+  hasHint?: boolean
+  hasError?: boolean
   meta: {
-    hintId?: string;
-    errorId?: string;
-    controlDescribedBy?: string;
-  };
+    hintId?: string
+    errorId?: string
+    controlDescribedBy?: string
+  }
 }
 
 const FormFieldSkeletonContext = React.createContext<
@@ -26,10 +26,10 @@ const FormFieldSkeletonContext = React.createContext<
 })
 
 export type FormFieldSkeletonProps = {
-  id: string;
-  hasHint?: boolean;
-  hasError?: boolean;
-  children?: React.ReactNode;
+  id: string
+  hasHint?: boolean
+  hasError?: boolean
+  children?: React.ReactNode
 }
 
 function FormFieldSkeletonProvider({
@@ -118,7 +118,7 @@ const FormFieldSkeletonError: React.FC<FormFieldSkeletonErrorProps> = ({
   )
 }
 
-function FormFieldSkeleton(props: FormFieldSkeletonProps) {
+export function FormFieldSkeleton(props: FormFieldSkeletonProps) {
   return <FormFieldSkeletonProvider {...props} />
 }
 

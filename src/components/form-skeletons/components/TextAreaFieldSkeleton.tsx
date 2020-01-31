@@ -7,7 +7,7 @@ function TextAreaFieldSkeleton(props: FormFieldSkeletonProps) {
   return <FormFieldSkeleton {...props} />
 }
 
-type TextAreaFieldSkeletonControlProps = OmitControlProps<
+export type TextAreaFieldSkeletonControlProps = OmitControlProps<
   JSX.IntrinsicElements["textarea"]
 >
 

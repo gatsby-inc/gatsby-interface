@@ -40,6 +40,7 @@
     "@reach/alert": "^0.1.5",
     "@reach/dialog": "^0.4.0",
     "@types/lodash.sample": "^4.2.6",
+    "case": "^1.6.2",
     "date-fns": "^2.8.1",
     "filestack-react": "^3.1.0",
     "gatsby-design-tokens": "^1.0.0",
@@ -50,11 +51,13 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "filestack-react": "^3.1.0",
+    "formik": "^2.0.8",
     "gatsby": "2.6.0",
     "prop-types": "^15.6.1",
     "react": "16.8.1",
     "react-dom": "16.8.1",
-    "react-icons": "^3.2.1"
+    "react-icons": "^3.2.1",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -102,6 +105,7 @@
     "@types/theme-ui": "^0.2.6",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
+    "@types/yup": "^0.26.26",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^10.0.14",
@@ -126,8 +130,8 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.12.4",
     "filestack-react": "^3.1.0",
-    "formik": "^1.5.8",
     "fs": "^0.0.1-security",
+    "formik": "^2.0.8",
     "gatsby": "2.6.0",
     "husky": "^1.3.1",
     "jest": "^24.9.0",
@@ -165,6 +169,7 @@
     "stylelint-processor-styled-components": "^1.5.1",
     "typescript": "3.6.2",
     "unfetch": "^3.1.1",
+    "yup": "^0.27.0",
     "watch": "^1.0.2"
   },
   "husky": {
