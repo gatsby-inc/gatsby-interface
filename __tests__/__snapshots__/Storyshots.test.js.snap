@@ -37456,6 +37456,20 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   }
 }
 
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-1 {
   50% {
     opacity: .5;
@@ -37569,7 +37583,7 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -37584,16 +37598,16 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: #663399;
+  border: 1px solid #663399;
+  color: var(--theme-ui-colors-white,#ffffff);
+  font-weight: bold;
   font-size: 1.125rem;
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
-  background: #663399;
-  border: 1px solid #663399;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 .emotion-60[disabled],
@@ -37610,10 +37624,11 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  margin-right: -0.25em;
+  margin-right: -0.25rem;
 }
 
-.emotion-60:hover:not([disabled]) svg {
+.emotion-60:hover:not([disabled]) svg,
+.emotion-60:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -37628,7 +37643,7 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -37643,15 +37658,15 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1.125rem;
-  min-height: 2.4rem;
-  padding: 0.55rem 1rem;
   background: transparent;
   border: 1px solid #f0f0f2;
   color: #78757a;
+  font-size: 1.125rem;
+  min-height: 2.4rem;
+  padding: 0.55rem 1rem;
 }
 
 .emotion-59[disabled],
@@ -37670,7 +37685,8 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   transform: scale(1);
 }
 
-.emotion-59:hover:not([disabled]) svg {
+.emotion-59:hover:not([disabled]) svg,
+.emotion-59:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -38398,7 +38414,7 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -38413,15 +38429,15 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
-  min-height: 1.6rem;
-  padding: 0.3rem 0.5rem;
   background: transparent;
   border: 1px solid transparent;
   color: #78757a;
+  font-size: 0.875rem;
+  min-height: 1.6rem;
+  padding: 0.3rem 0.5rem;
   margin-top: 2rem;
   width: 100%;
 }
@@ -38442,7 +38458,8 @@ exports[`Storyshots form/Formik usage examples with connected fields 1`] = `
   transform: scale(1);
 }
 
-.emotion-62:hover:not([disabled]) svg {
+.emotion-62:hover:not([disabled]) svg,
+.emotion-62:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -39486,6 +39503,20 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   }
 }
 
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-1 {
   50% {
     opacity: .5;
@@ -39599,7 +39630,7 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -39614,16 +39645,16 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: #663399;
+  border: 1px solid #663399;
+  color: var(--theme-ui-colors-white,#ffffff);
+  font-weight: bold;
   font-size: 1.125rem;
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
-  background: #663399;
-  border: 1px solid #663399;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 .emotion-57[disabled],
@@ -39640,10 +39671,11 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  margin-right: -0.25em;
+  margin-right: -0.25rem;
 }
 
-.emotion-57:hover:not([disabled]) svg {
+.emotion-57:hover:not([disabled]) svg,
+.emotion-57:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -39658,7 +39690,7 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -39673,15 +39705,15 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1.125rem;
-  min-height: 2.4rem;
-  padding: 0.55rem 1rem;
   background: transparent;
   border: 1px solid #f0f0f2;
   color: #78757a;
+  font-size: 1.125rem;
+  min-height: 2.4rem;
+  padding: 0.55rem 1rem;
 }
 
 .emotion-56[disabled],
@@ -39700,7 +39732,8 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   transform: scale(1);
 }
 
-.emotion-56:hover:not([disabled]) svg {
+.emotion-56:hover:not([disabled]) svg,
+.emotion-56:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -40369,7 +40402,7 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -40384,15 +40417,15 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
-  min-height: 1.6rem;
-  padding: 0.3rem 0.5rem;
   background: transparent;
   border: 1px solid transparent;
   color: #78757a;
+  font-size: 0.875rem;
+  min-height: 1.6rem;
+  padding: 0.3rem 0.5rem;
   margin-top: 2rem;
   width: 100%;
 }
@@ -40413,7 +40446,8 @@ exports[`Storyshots form/Formik usage examples with explicit children 1`] = `
   transform: scale(1);
 }
 
-.emotion-59:hover:not([disabled]) svg {
+.emotion-59:hover:not([disabled]) svg,
+.emotion-59:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -41443,6 +41477,20 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   }
 }
 
+@keyframes animation-0 {
+  33% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  66% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 @keyframes animation-1 {
   50% {
     opacity: .5;
@@ -41556,7 +41604,7 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -41571,16 +41619,16 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: #663399;
+  border: 1px solid #663399;
+  color: var(--theme-ui-colors-white,#ffffff);
+  font-weight: bold;
   font-size: 1.125rem;
   min-height: 2.4rem;
   padding: 0.55rem 1rem;
-  background: #663399;
-  border: 1px solid #663399;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 .emotion-60[disabled],
@@ -41597,10 +41645,11 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  margin-right: -0.25em;
+  margin-right: -0.25rem;
 }
 
-.emotion-60:hover:not([disabled]) svg {
+.emotion-60:hover:not([disabled]) svg,
+.emotion-60:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -41615,7 +41664,7 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -41630,15 +41679,15 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1.125rem;
-  min-height: 2.4rem;
-  padding: 0.55rem 1rem;
   background: transparent;
   border: 1px solid #f0f0f2;
   color: #78757a;
+  font-size: 1.125rem;
+  min-height: 2.4rem;
+  padding: 0.55rem 1rem;
 }
 
 .emotion-59[disabled],
@@ -41657,7 +41706,8 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   transform: scale(1);
 }
 
-.emotion-59:hover:not([disabled]) svg {
+.emotion-59:hover:not([disabled]) svg,
+.emotion-59:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -42385,7 +42435,7 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: #635e69;
+  border: var(--theme-ui-colors-grey-60,#635e69);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -42400,15 +42450,15 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   justify-content: center;
   -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
   transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1;
+  line-height: 1.25;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
-  min-height: 1.6rem;
-  padding: 0.3rem 0.5rem;
   background: transparent;
   border: 1px solid transparent;
   color: #78757a;
+  font-size: 0.875rem;
+  min-height: 1.6rem;
+  padding: 0.3rem 0.5rem;
   margin-top: 2rem;
   width: 100%;
 }
@@ -42429,7 +42479,8 @@ exports[`Storyshots form/Formik usage examples with field blocks 1`] = `
   transform: scale(1);
 }
 
-.emotion-62:hover:not([disabled]) svg {
+.emotion-62:hover:not([disabled]) svg,
+.emotion-62:focus:not([disabled]) svg {
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
