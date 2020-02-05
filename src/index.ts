@@ -58,8 +58,6 @@ export { Announcement } from "./components/Announcement"
 
 export { Badge } from "./components/Badge"
 
-export { Breadcrumb } from "./components/Breadcrumb"
-
 export { Switch } from "./components/Switch"
 
 export { Navigation } from "./components/Navigation"
@@ -121,3 +119,4 @@ export * from "./components/Notification"
 export * from "./components/ThemeProvider"
 export * from "./theme"
 export * from "./components/Text"
+export * from "./components/Breadcrumb"

@@ -1448,7 +1448,7 @@ exports[`Storyshots BaseNavigation usage example 1`] = `
 `;
 
 exports[`Storyshots Breadcrumb default 1`] = `
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1466,7 +1466,10 @@ exports[`Storyshots Breadcrumb default 1`] = `
   padding: 20px;
 }
 
-.emotion-3 {
+.emotion-4 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1476,33 +1479,18 @@ exports[`Storyshots Breadcrumb default 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #8a4baf;
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--theme-ui-colors-purple-50,#8a4baf);
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   font-size: 1.125rem;
-  margin-right: 0.75rem;
-}
-
-.emotion-1:last-of-type {
-  margin-right: 0;
-}
-
-.emotion-1:last-of-type svg {
-  display: none;
-}
-
-.emotion-1 svg {
-  fill: #8a4baf;
-  margin-left: 0.75rem;
-  vertical-align: middle;
 }
 
 .emotion-0 {
@@ -1511,33 +1499,26 @@ exports[`Storyshots Breadcrumb default 1`] = `
   color: inherit;
 }
 
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #232129;
+.emotion-1 {
+  color: var(--theme-ui-colors-grey-90,#232129);
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  vertical-align: middle;
+}
+
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--theme-ui-colors-purple-50,#8a4baf);
   font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   font-size: 1.125rem;
-  margin-right: 0.75rem;
-}
-
-.emotion-2:last-of-type {
-  margin-right: 0;
-}
-
-.emotion-2:last-of-type svg {
-  display: none;
-}
-
-.emotion-2 svg {
-  fill: #232129;
-  margin-left: 0.75rem;
-  vertical-align: middle;
+  color: var(--theme-ui-colors-grey-90,#232129);
 }
 
 <div>
@@ -1547,51 +1528,43 @@ exports[`Storyshots Breadcrumb default 1`] = `
     <div>
       <div>
         <div
-          class="emotion-4"
+          class="emotion-5"
         >
           <nav
             aria-label="breadcrumb"
-            class="emotion-3"
           >
-            <div
-              class="emotion-1"
+            <ol
+              class="emotion-4"
             >
-              <a
-                aria-current="page"
-                class="emotion-0"
-                href="/"
+              <li
+                class="emotion-2"
               >
-                Breadcrumb 1
-              </a>
-              <svg
-                fill="none"
-                height="9"
-                viewBox="0 0 6 9"
-                width="6"
+                <a
+                  aria-current="page"
+                  class="emotion-0"
+                  href="/"
+                >
+                  Breadcrumb 1
+                </a>
+                <svg
+                  class="emotion-1"
+                  fill="none"
+                  height="9"
+                  viewBox="0 0 6 9"
+                  width="6"
+                >
+                  <path
+                    d="M6 4.5L1.5 8.39711L1.5 0.602886L6 4.5Z"
+                    fill="#7F7C82"
+                  />
+                </svg>
+              </li>
+              <li
+                class="emotion-3"
               >
-                <path
-                  d="M6 4.5L1.5 8.39711L1.5 0.602886L6 4.5Z"
-                  fill="#7F7C82"
-                />
-              </svg>
-            </div>
-            <div
-              class="emotion-2"
-            >
-              Breadcrumb 2
-               
-              <svg
-                fill="none"
-                height="9"
-                viewBox="0 0 6 9"
-                width="6"
-              >
-                <path
-                  d="M6 4.5L1.5 8.39711L1.5 0.602886L6 4.5Z"
-                  fill="#7F7C82"
-                />
-              </svg>
-            </div>
+                Breadcrumb 2
+              </li>
+            </ol>
           </nav>
         </div>
       </div>
