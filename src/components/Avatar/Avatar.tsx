@@ -1,9 +1,11 @@
 /** @jsx jsx */
+import React from "react"
 import { jsx } from "@emotion/core"
 import { css } from "@emotion/core"
 import AvatarSkeleton from "./AvatarSkeleton"
 import { AvatarSize } from "./types"
-import { DEFAULT_SIZE } from "./constants"
+import { DEFAULT_SIZE, placeholderFontSizes } from "./constants"
+import { fitText } from "./Avatar.helpers"
 
 const imageCss = css({
   objectFit: "cover",
@@ -13,14 +15,24 @@ const imageCss = css({
   margin: 0,
 })
 
+const maxFallbackTextWidth: Record<AvatarSize, number> = {
+  XS: 0.9,
+  S: 0.9,
+  M: 0.9,
+  L: 0.8,
+  XL: 0.8,
+  XXL: 0.8,
+}
+
 export type AvatarProps = {
-  src: string;
-  label: string;
-  fallback?: React.ReactNode;
-  size?: AvatarSize;
-  borderColor?: string | null;
-  className?: string;
-  style?: React.CSSProperties;
+  src: string
+  label: string
+  fallback?: React.ReactNode
+  size?: AvatarSize
+  borderColor?: string | null
+  fitTextFallback?: boolean
+  className?: string
+  style?: React.CSSProperties
 }
 
 export default function Avatar({
@@ -32,6 +44,12 @@ export default function Avatar({
   className,
   style,
 }: AvatarProps) {
+  const textFitter = fitText<HTMLSpanElement>({
+    maxWidth: maxFallbackTextWidth[size],
+    minFontSizeInRem: parseFloat(placeholderFontSizes.XS),
+    maxFontSizeInRem: parseFloat(placeholderFontSizes[size]),
+  })
+
   return (
     <AvatarSkeleton
       size={size}
@@ -43,7 +61,9 @@ export default function Avatar({
       {src ? (
         <img css={imageCss} src={src} alt={label} />
       ) : (
-        <span aria-label={label}>{fallback}</span>
+        <span aria-label={label} ref={textFitter}>
+          {fallback}
+        </span>
       )}
     </AvatarSkeleton>
   )

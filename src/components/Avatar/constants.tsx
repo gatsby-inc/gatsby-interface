@@ -25,7 +25,7 @@ export const placeholderFontSizes: Record<AvatarSize, string> = {
   XS: `0.5rem`,
   S: fontSizes[0],
   M: fontSizes[1],
-  L: fontSizes[3],
-  XL: fontSizes[4],
-  XXL: fontSizes[6],
+  L: fontSizes[4],
+  XL: fontSizes[6],
+  XXL: fontSizes[12],
 }
