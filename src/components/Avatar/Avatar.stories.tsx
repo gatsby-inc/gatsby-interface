@@ -7,6 +7,7 @@ import { StoryUtils } from "../../utils/storybook"
 import README from "./README.md"
 import Avatar from "./Avatar"
 import AvatarsGroup from "./AvatarsGroup"
+import { AvatarSize } from "./index"
 
 storiesOf(`Avatar`, module)
   .addParameters({
@@ -40,6 +41,24 @@ storiesOf(`Avatar`, module)
               "M"
             )}
           />
+        </div>
+      </StoryUtils.Container>
+    )
+  })
+  .add(`Avatar fallback text fit`, () => {
+    const sizes: AvatarSize[] = ["XS", "S", "M", "L", "XL", "XXL"]
+    return (
+      <StoryUtils.Container>
+        <div>
+          {sizes.map(size => (
+            <Avatar
+              key={size}
+              src=""
+              label={`Avatar of size ${size}`}
+              fallback={text("fallback text", "A")}
+              size={size}
+            />
+          ))}
         </div>
       </StoryUtils.Container>
     )

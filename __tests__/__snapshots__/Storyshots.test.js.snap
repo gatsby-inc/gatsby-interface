@@ -153,6 +153,259 @@ exports[`Storyshots Avatar Avatar 1`] = `
 </div>
 `;
 
+exports[`Storyshots Avatar Avatar fallback text fit 1`] = `
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-2 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 32px;
+  height: 32px;
+  font-size: 0.875rem;
+}
+
+.emotion-0 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 20px;
+  height: 20px;
+  font-size: 0.5rem;
+}
+
+.emotion-1 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 24px;
+  height: 24px;
+  font-size: 0.75rem;
+}
+
+.emotion-3 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+}
+
+.emotion-4 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 64px;
+  height: 64px;
+  font-size: 1.75rem;
+}
+
+.emotion-5 {
+  background: #f0f0f2;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #635e69;
+  width: 128px;
+  height: 128px;
+  font-size: 3.75rem;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-6"
+        >
+          <div>
+            <span
+              class="emotion-0"
+              title="Avatar of size XS"
+            >
+              <span
+                aria-label="Avatar of size XS"
+                style="font-size: 0.5px;"
+              >
+                A
+              </span>
+            </span>
+            <span
+              class="emotion-1"
+              title="Avatar of size S"
+            >
+              <span
+                aria-label="Avatar of size S"
+                style="font-size: 0.625px;"
+              >
+                A
+              </span>
+            </span>
+            <span
+              class="emotion-2"
+              title="Avatar of size M"
+            >
+              <span
+                aria-label="Avatar of size M"
+                style="font-size: 0.6875px;"
+              >
+                A
+              </span>
+            </span>
+            <span
+              class="emotion-3"
+              title="Avatar of size L"
+            >
+              <span
+                aria-label="Avatar of size L"
+                style="font-size: 0.875px;"
+              >
+                A
+              </span>
+            </span>
+            <span
+              class="emotion-4"
+              title="Avatar of size XL"
+            >
+              <span
+                aria-label="Avatar of size XL"
+                style="font-size: 1.125px;"
+              >
+                A
+              </span>
+            </span>
+            <span
+              class="emotion-5"
+              title="Avatar of size XXL"
+            >
+              <span
+                aria-label="Avatar of size XXL"
+                style="font-size: 3.4375px;"
+              >
+                A
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Avatar AvatarsGroup 1`] = `
 .emotion-7 {
   -webkit-align-items: center;
