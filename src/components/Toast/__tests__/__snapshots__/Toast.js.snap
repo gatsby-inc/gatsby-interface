@@ -1,158 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toast renders unchanged 1`] = `
-@keyframes animation-0 {
-  100% {
-    -webkit-transform: perspective(1000px) rotateX(0);
-    -ms-transform: perspective(1000px) rotateX(0);
-    transform: perspective(1000px) rotateX(0);
-  }
-}
-
-@keyframes animation-0 {
-  100% {
-    -webkit-transform: perspective(1000px) rotateX(0);
-    -ms-transform: perspective(1000px) rotateX(0);
-    transform: perspective(1000px) rotateX(0);
-  }
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-animation: animation-0 0.5s 0.25s ease forwards;
-  animation: animation-0 0.5s 0.25s ease forwards;
-  background: #232129;
-  border-left: 8px solid #37b635;
-  border-radius: 4px 4px 0 0;
-  color: #f7fdf7;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.875rem;
-  min-height: 3rem;
-  max-width: calc(100% - (1.5rem * 2));
-  padding-left: 0.75rem;
-  -webkit-transform: perspective(1000px) rotateX(90deg);
-  -ms-transform: perspective(1000px) rotateX(90deg);
-  transform: perspective(1000px) rotateX(90deg);
-  -webkit-transform-origin: bottom center;
-  -ms-transform-origin: bottom center;
-  transform-origin: bottom center;
-  border-left-color: #37b635;
-}
-
-.emotion-3 svg {
-  height: auto;
-  width: calc(3rem * 0.4);
-}
-
-.emotion-3:not(:first-of-type) {
-  border-radius: 4px;
-  margin-bottom: 0.125rem;
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #37b635;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #37b635;
-}
-
-.emotion-1 {
-  line-height: 1;
-  margin: 0 0.25rem 0 0.5rem;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: none;
-  border: none;
-  color: #b7b5bd;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 3rem;
-}
-
-.emotion-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-animation: animation-0 0.5s 0.25s ease forwards;
-  animation: animation-0 0.5s 0.25s ease forwards;
-  background: #232129;
-  border-left: 8px solid #37b635;
-  border-radius: 4px 4px 0 0;
-  color: #f7fdf7;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.875rem;
-  min-height: 3rem;
-  max-width: calc(100% - (1.5rem * 2));
-  padding-left: 0.75rem;
-  -webkit-transform: perspective(1000px) rotateX(90deg);
-  -ms-transform: perspective(1000px) rotateX(90deg);
-  transform: perspective(1000px) rotateX(90deg);
-  -webkit-transform-origin: bottom center;
-  -ms-transform-origin: bottom center;
-  transform-origin: bottom center;
-  border-left-color: #ec1818;
-}
-
-.emotion-7 svg {
-  height: auto;
-  width: calc(3rem * 0.4);
-}
-
-.emotion-7:not(:first-of-type) {
-  border-radius: 4px;
-  margin-bottom: 0.125rem;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #37b635;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #ec1818;
-}
-
 <div>
   <div
-    class="emotion-3"
+    class="css-1vrmuo-toastCss-Toast-Toast"
     data-reach-alert="true"
     data-testid="toast"
   >
     <span
-      class="emotion-0"
+      class="css-1xgu85j-statusCss-Toast-Toast"
     >
       <svg
         fill="currentColor"
@@ -169,13 +25,13 @@ exports[`Toast renders unchanged 1`] = `
       </svg>
     </span>
     <div
-      class="emotion-1"
+      class="css-52u8ar-messageCss"
     >
       Lorem ipsum
     </div>
     <button
       aria-label="close"
-      class="emotion-2"
+      class="css-kpz6xb-closeButtonCss"
       type="button"
     >
       <svg
@@ -194,12 +50,12 @@ exports[`Toast renders unchanged 1`] = `
     </button>
   </div>
   <div
-    class="emotion-7"
+    class="css-6pmm94-toastCss-Toast-Toast"
     data-reach-alert="true"
     data-testid="toast"
   >
     <span
-      class="emotion-4"
+      class="css-1dpvdm-statusCss-Toast-Toast"
     >
       <svg
         fill="currentColor"
@@ -216,13 +72,13 @@ exports[`Toast renders unchanged 1`] = `
       </svg>
     </span>
     <div
-      class="emotion-1"
+      class="css-52u8ar-messageCss"
     >
       Lorem ipsum
     </div>
     <button
       aria-label="close"
-      class="emotion-2"
+      class="css-kpz6xb-closeButtonCss"
       type="button"
     >
       <svg

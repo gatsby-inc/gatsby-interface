@@ -1,82 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PrimaryButton> renders unchanged 1`] = `
-@keyframes animation-0 {
-  33% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  66% {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-}
-
-.emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: var(--theme-ui-colors-grey-60,#635e69);
-  border-radius: 4px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-family: Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background 0.5s,border 0.5s,color 0.5s;
-  transition: background 0.5s,border 0.5s,color 0.5s;
-  line-height: 1.25;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background: #663399;
-  border: 1px solid #663399;
-  color: var(--theme-ui-colors-white,#ffffff);
-  font-weight: bold;
-  font-size: 1.125rem;
-  min-height: 2.4rem;
-  padding: 0.55rem 1rem;
-}
-
-.emotion-0[disabled],
-.emotion-0[disabled]:hover {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-0 svg {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin: 0 0.25rem;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-0:hover:not([disabled]) svg,
-.emotion-0:focus:not([disabled]) svg {
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.emotion-0:hover {
-  background: #542c85;
-  border: 1px solid #542c85;
-}
-
 <div>
   <button
-    class="emotion-0"
+    class="css-3464z0"
     type="button"
   >
     Click me!

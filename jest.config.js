@@ -20,5 +20,4 @@ module.exports = {
   testURL: `http://localhost`,
   setupFiles: [`<rootDir>/jest-setup.js`],
   setupFilesAfterEnv: [`<rootDir>/setup-test-env.js`],
-  snapshotSerializers: ["jest-emotion"],
 }
