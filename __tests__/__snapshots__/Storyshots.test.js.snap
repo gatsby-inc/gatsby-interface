@@ -17475,6 +17475,1158 @@ exports[`Storyshots Toast Default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Toggle ToggleCheckbox (controlled) 1`] = `
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-3 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-0:checked + span {
+  background: #8a4baf;
+}
+
+.emotion-0:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-0:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-0:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-right: 0.5rem;
+}
+
+.emotion-1:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-1:active:after {
+  width: 24px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-4"
+        >
+          <div
+            class="emotion-3"
+          >
+            <label
+              class="emotion-2"
+              for="toggleCheckbox--controlled"
+            >
+              <input
+                class="emotion-0"
+                id="toggleCheckbox--controlled"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              Controlled value: false
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle ToggleCheckbox 1`] = `
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-3 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-0:checked + span {
+  background: #8a4baf;
+}
+
+.emotion-0:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-0:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-0:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-right: 0.5rem;
+}
+
+.emotion-1:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-1:active:after {
+  width: 24px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-4"
+        >
+          <div
+            class="emotion-3"
+          >
+            <label
+              class="emotion-2"
+              for="toggleCheckbox"
+            >
+              <input
+                class="emotion-0"
+                id="toggleCheckbox"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              Behaves like a checkbox
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle ToggleCheckbox label position 1`] = `
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-6 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-0:checked + span {
+  background: #8a4baf;
+}
+
+.emotion-0:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-0:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-0:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-right: 0.5rem;
+}
+
+.emotion-1:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-1:active:after {
+  width: 24px;
+}
+
+.emotion-4 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.emotion-4:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-4:active:after {
+  width: 24px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-7"
+        >
+          <div
+            class="emotion-6"
+          >
+            <label
+              class="emotion-2"
+              for="toggleCheckbox--position-end"
+            >
+              <input
+                class="emotion-0"
+                id="toggleCheckbox--position-end"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              Label after toggle
+            </label>
+            <label
+              class="emotion-2"
+              for="toggleCheckbox--position-start"
+            >
+              <input
+                class="emotion-0"
+                id="toggleCheckbox--position-start"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-4"
+              />
+              Label before toggle
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle ToggleCheckbox with rich label 1`] = `
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-4 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-0:checked + span {
+  background: #8a4baf;
+}
+
+.emotion-0:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-0:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-0:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-right: 0.5rem;
+}
+
+.emotion-1:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-1:active:after {
+  width: 24px;
+}
+
+.emotion-2 {
+  color: var(--theme-ui-colors-grey-50,#78757a);
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-5"
+        >
+          <div
+            class="emotion-4"
+          >
+            <label
+              class="emotion-3"
+              for="toggleCheckbox"
+            >
+              <input
+                class="emotion-0"
+                id="toggleCheckbox"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              <div>
+                This is a rich label
+                <br />
+                <small
+                  class="emotion-2"
+                >
+                  Some styled text
+                </small>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle ToggleSwitch 1`] = `
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-6 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5:focus-within > span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-2 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-2:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-2:active:after {
+  width: 24px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-7"
+        >
+          <div
+            class="emotion-6"
+          >
+            <div
+              class="emotion-5"
+              id="toggleSwitch"
+            >
+              <input
+                checked=""
+                class="emotion-0"
+                id="toggleSwitch__off"
+                name="toggleSwitch"
+                type="radio"
+                value="off"
+              />
+              <label
+                class="emotion-1"
+                for="toggleSwitch__off"
+              >
+                Yearly
+              </label>
+              <span
+                aria-hidden="true"
+                class="emotion-2"
+              />
+              <input
+                class="emotion-0"
+                id="toggleSwitch__on"
+                name="toggleSwitch"
+                type="radio"
+                value="on"
+              />
+              <label
+                class="emotion-1"
+                for="toggleSwitch__on"
+              >
+                Monthly
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle ToggleSwitch with accessible description/label 1`] = `
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-6 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5:focus-within > span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-2 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-2:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-2:active:after {
+  width: 24px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-7"
+        >
+          <div
+            class="emotion-6"
+          >
+            <div>
+              <p
+                id="toggleSwitch__description"
+              >
+                Billing Period
+              </p>
+              <div
+                class="emotion-5"
+                id="toggleSwitch"
+              >
+                <input
+                  aria-describedby="toggleSwitch__description"
+                  checked=""
+                  class="emotion-0"
+                  id="toggleSwitch__off"
+                  name="toggleSwitch"
+                  type="radio"
+                  value="off"
+                />
+                <label
+                  class="emotion-1"
+                  for="toggleSwitch__off"
+                >
+                  Yearly
+                </label>
+                <span
+                  aria-hidden="true"
+                  class="emotion-2"
+                />
+                <input
+                  aria-describedby="toggleSwitch__description"
+                  class="emotion-0"
+                  id="toggleSwitch__on"
+                  name="toggleSwitch"
+                  type="radio"
+                  value="on"
+                />
+                <label
+                  class="emotion-1"
+                  for="toggleSwitch__on"
+                >
+                  Monthly
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle ToggleSwitch with rich labels 1`] = `
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-8 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-7:focus-within > span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-3 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-3:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-3:active:after {
+  width: 24px;
+}
+
+.emotion-1 {
+  color: var(--theme-ui-colors-grey-50,#78757a);
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-9"
+        >
+          <div
+            class="emotion-8"
+          >
+            <div
+              class="emotion-7"
+              id="toggleSwitch"
+            >
+              <input
+                checked=""
+                class="emotion-0"
+                id="toggleSwitch__off"
+                name="toggleSwitch"
+                type="radio"
+                value="off"
+              />
+              <label
+                class="emotion-2"
+                for="toggleSwitch__off"
+              >
+                <div>
+                  OFF
+                  <br />
+                  <small
+                    class="emotion-1"
+                  >
+                    This is a rich label
+                  </small>
+                </div>
+              </label>
+              <span
+                aria-hidden="true"
+                class="emotion-3"
+              />
+              <input
+                class="emotion-0"
+                id="toggleSwitch__on"
+                name="toggleSwitch"
+                type="radio"
+                value="on"
+              />
+              <label
+                class="emotion-2"
+                for="toggleSwitch__on"
+              >
+                <div>
+                  ON
+                  <br />
+                  <small
+                    class="emotion-1"
+                  >
+                    This is a rich label
+                  </small>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Toggle before or after label 1`] = `
 .emotion-7 {
   -webkit-align-items: center;
@@ -18040,40 +19192,46 @@ label:focus-within > .emotion-1 {
         <div
           class="emotion-7"
         >
-          <form
+          <div
             class="emotion-6"
           >
-            <label
-              class="emotion-2"
-              for="subscriptionInterval"
-            >
-              <input
-                class="emotion-0"
-                id="subscriptionInterval"
-                name="subscriptionInterval"
-                type="checkbox"
-                value="true"
-              />
-              <span
-                aria-hidden="true"
-                class="emotion-1"
-              />
-              <span>
-                Yearly payment
-              </span>
-            </label>
             <div
-              class="emotion-5"
+              class="emotion-7"
             >
-              <div
-                class="emotion-3"
+              <form
+                class="emotion-6"
               >
-                Formik State
-              </div>
-              <pre
-                class="emotion-4"
-              >
-                {
+                <label
+                  class="emotion-2"
+                  for="subscriptionInterval"
+                >
+                  <input
+                    class="emotion-0"
+                    id="subscriptionInterval"
+                    name="subscriptionInterval"
+                    type="checkbox"
+                    value="true"
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="emotion-1"
+                  />
+                  <span>
+                    Yearly payment
+                  </span>
+                </label>
+                <div
+                  class="emotion-5"
+                >
+                  <div
+                    class="emotion-3"
+                  >
+                    Formik State
+                  </div>
+                  <pre
+                    class="emotion-4"
+                  >
+                    {
   "values": {
     "subscriptionInterval": false,
     "automaticalRenew": false
@@ -18095,9 +19253,11 @@ label:focus-within > .emotion-1 {
   "validateOnChange": true,
   "validateOnMount": false
 }
-              </pre>
+                  </pre>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
@@ -18238,36 +19398,44 @@ label:focus-within > .emotion-1 {
           <div
             class="emotion-6"
           >
-            <label
-              class="emotion-5"
-              for="subInterval"
+            <div
+              class="emotion-7"
             >
-              <input
-                class="emotion-0"
-                id="subInterval"
-                name="subInterval"
-                type="checkbox"
-                value="true"
-              />
-              <span
-                aria-hidden="true"
-                class="emotion-1"
-              />
-              <span
-                class="emotion-4"
+              <div
+                class="emotion-6"
               >
-                <strong
-                  class="emotion-2"
+                <label
+                  class="emotion-5"
+                  for="subInterval"
                 >
-                  Yearly payment
-                </strong>
-                <p
-                  class="emotion-3"
-                >
-                  This is label with HTML
-                </p>
-              </span>
-            </label>
+                  <input
+                    class="emotion-0"
+                    id="subInterval"
+                    name="subInterval"
+                    type="checkbox"
+                    value="true"
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="emotion-1"
+                  />
+                  <span
+                    class="emotion-4"
+                  >
+                    <strong
+                      class="emotion-2"
+                    >
+                      Yearly payment
+                    </strong>
+                    <p
+                      class="emotion-3"
+                    >
+                      This is label with HTML
+                    </p>
+                  </span>
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       </div>

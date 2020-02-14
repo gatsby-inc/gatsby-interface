@@ -16,5 +16,6 @@ export * from "./components/Modal"
 export * from "./components/ThemeProvider"
 export * from "./theme"
 export * from "./components/Text"
+export * from "./components/Toggle"
 
 export * from "./theme/styles/button"
