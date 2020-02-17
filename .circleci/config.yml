@@ -1,12 +1,26 @@
 # This configuration is partially based on the CircleCI blog post on publishing NPM packages
 # https://circleci.com/blog/publishing-npm-packages-using-circleci-2-0/
-version: 2
+version: 2.1
 
 # Default configuration that can be shared between jobs
 defaults: &defaults
   working_directory: ~/repo
   docker:
     - image: circleci/node:10
+
+commands:
+  install-puppeteer-deps:
+    description: Installs dependencies for Puppeteer
+    steps:
+      - run:
+          name: Install Headless Chrome dependencies
+          command: |
+            sudo apt-get install -yq \
+            gconf-service libasound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
+            libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
+            libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
+            libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
+            fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
 
 jobs:
   # This job checks that the code is good to go (e.g. to be merged or released)
@@ -20,6 +34,9 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies- # fallback to using the latest cache if no exact match is found
 
+      - run:
+          name: Install Dependencies for Puppeteer
+          command: install-puppeteer-deps
       - run:
           name: Install yarn
           command: |
@@ -123,12 +140,14 @@ jobs:
 
 workflows:
   version: 2
-  test:
-    jobs:
-      - is-green
   run-branch-prerelease:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              ignore:
+                - master
+                - dev
       - branch-prerelease:
           requires:
             - is-green
@@ -139,7 +158,10 @@ workflows:
                 - dev
   run-prerelease:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              only: dev
       - prerelease:
           requires:
             - is-green
@@ -148,7 +170,10 @@ workflows:
               only: dev
   run-release:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              only: master
       - release:
           requires:
             - is-green
