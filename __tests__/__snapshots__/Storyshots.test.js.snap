@@ -1500,7 +1500,7 @@ exports[`Storyshots Breadcrumb default 1`] = `
 }
 
 .emotion-1 {
-  color: var(--theme-ui-colors-grey-90,#232129);
+  color: var(--theme-ui-colors-grey-60,#635e69);
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   vertical-align: middle;
@@ -1548,14 +1548,13 @@ exports[`Storyshots Breadcrumb default 1`] = `
                 </a>
                 <svg
                   class="emotion-1"
-                  fill="none"
+                  fill="currentColor"
                   height="9"
                   viewBox="0 0 6 9"
                   width="6"
                 >
                   <path
                     d="M6 4.5L1.5 8.39711L1.5 0.602886L6 4.5Z"
-                    fill="#7F7C82"
                   />
                 </svg>
               </li>

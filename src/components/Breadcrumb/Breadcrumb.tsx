@@ -82,7 +82,7 @@ function BreadcrumbItem({
 BreadcrumbItem.displayName = `Breadcrumb.Item`
 
 const breadcrumbArrowCss: ThemeCss = theme => ({
-  color: theme.colors.grey[90],
+  color: theme.colors.grey[60],
   marginRight: theme.space[4],
   marginLeft: theme.space[4],
   verticalAlign: `middle`,
@@ -94,11 +94,11 @@ function BreadcrumbArrow(props: JSX.IntrinsicElements["svg"]) {
       width="6"
       height="9"
       viewBox="0 0 6 9"
-      fill="none"
+      fill="currentColor"
       css={breadcrumbArrowCss}
       {...props}
     >
-      <path d="M6 4.5L1.5 8.39711L1.5 0.602886L6 4.5Z" fill="#7F7C82" />
+      <path d="M6 4.5L1.5 8.39711L1.5 0.602886L6 4.5Z" />
     </svg>
   )
 }
