@@ -53,6 +53,10 @@ jobs:
           command: yarn type-check
 
       - run:
+          name: Build Storybook
+          command: yarn build-storybook
+
+      - run:
           name: Test
           command: yarn test
 
