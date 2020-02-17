@@ -29,8 +29,6 @@ export { SettingsBlock } from "./components/SettingsBlock"
 
 export { SettingsCard } from "./components/SettingsCard"
 
-export { IntegrationRow } from "./components/IntegrationRow"
-
 export { Link } from "./components/Link"
 
 export {
