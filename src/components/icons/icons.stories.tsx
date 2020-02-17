@@ -9,11 +9,11 @@ import { StoryUtils } from "../../utils/storybook"
 import * as icons from "./icons"
 import { IconSize, IconProps } from "./types"
 import { useTheme } from "../ThemeProvider"
-import { Theme } from "../../theme"
+import { Theme, ThemeCss } from "../../theme"
 
 const sizes: IconSize[] = [`xxsmall`, `xsmall`, `small`, `medium`, `large`]
 const customSizes = [`1em`, `16px`, `24px`, `32px`, `40px`, `64px`]
-const customIconColors = ["#F2583E", "#21BEDE"]
+const customIconColors = ["#cc2408", "#046b80"]
 
 const baseCss = css`
   display: flex;
@@ -22,11 +22,12 @@ const baseCss = css`
   margin-bottom: 1rem;
 `
 
-const storyCaseInfoCss = css`
+const storyCaseInfoCss: ThemeCss = theme => css`
   line-height: 1.5;
   padding: 0.5rem 0.75rem;
   font-family: monospace;
   flex-grow: 1;
+  font-size: ${theme.fontSizes[3]};
 `
 
 const storyCaseDisplayCss = css`
@@ -157,8 +158,8 @@ sortedIconComponentNames.forEach(componentName => {
           />
           <ThemeColorCase
             Component={Component}
-            colorLabel="green.50"
-            getColor={colors => colors.green[50]}
+            colorLabel="green.90"
+            getColor={colors => colors.green[90]}
           />
           <h2>Custom colors:</h2>
           {customIconColors.map(colorCase => (

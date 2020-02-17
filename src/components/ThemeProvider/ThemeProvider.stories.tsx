@@ -51,7 +51,7 @@ storiesOf(`ThemeProvider`, module)
           <StoryUtils.Stack>
             <div
               style={{
-                backgroundColor: theme.colors.green[40],
+                backgroundColor: theme.colors.green[80],
                 color: theme.colors.white,
                 padding: theme.space[5],
               }}

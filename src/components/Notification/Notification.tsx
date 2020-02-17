@@ -45,6 +45,7 @@ export type NotificationProps = Omit<PropsOf<AllowedAs>, "ref"> & {
   isOpened?: boolean
   onDismissButtonClick?: () => void
   showDismissButton?: boolean
+  dismissButtonLabel?: string
   Icon?: React.ComponentType<any>
 }
 
@@ -61,6 +62,7 @@ export default function Notification({
   isOpened = true,
   onDismissButtonClick,
   showDismissButton = !!onDismissButtonClick,
+  dismissButtonLabel,
   Icon: CustomIcon,
   ...rest
 }: NotificationProps) {
@@ -106,7 +108,9 @@ export default function Notification({
           </Notification.Link>
         )}
 
-        {showDismissButton && <Notification.DismissButton />}
+        {showDismissButton && (
+          <Notification.DismissButton label={dismissButtonLabel} />
+        )}
         {children}
       </Component>
     </NotificationContext.Provider>
@@ -145,7 +149,7 @@ function NotificationContent({
 }
 NotificationContent.displayName = `Notification.Content`
 
-function NotificationDismissButton() {
+function NotificationDismissButton({ label = `Close` }: { label?: string }) {
   const { onDismiss } = Notification.useNotificationContext()
 
   return (
@@ -160,6 +164,7 @@ function NotificationDismissButton() {
       type="button"
       onClick={onDismiss}
       variant="GHOST"
+      aria-label={label}
     >
       <MdClose />
     </Button>

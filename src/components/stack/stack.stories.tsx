@@ -170,7 +170,10 @@ storiesOf(`layout helpers/stack`, module)
               <Item css={stackItemCss}>Four</Item>
             </div>
 
-            <div css={(t: Theme) => [horizontalStackCss, borderUtilCss(t)]}>
+            <div
+              tabIndex={0}
+              css={(t: Theme) => [horizontalStackCss, borderUtilCss(t)]}
+            >
               <Item css={[horizontalStackItemCss, { width: `200px` }]}>
                 One
               </Item>
