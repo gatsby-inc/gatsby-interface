@@ -34,9 +34,7 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies- # fallback to using the latest cache if no exact match is found
 
-      - run:
-          name: Install Dependencies for Puppeteer
-          command: install-puppeteer-deps
+      - install-puppeteer-deps
       - run:
           name: Install yarn
           command: |
