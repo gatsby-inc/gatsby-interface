@@ -2,35 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.72](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.71...v0.0.72) (2020-02-07)
-
+### [0.0.74](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.73...v0.0.74) (2020-02-17)
 
 ### Features
 
-* remove deprecated components ([#198](https://github.com/gatsby-inc/gatsby-interface/issues/198)) ([930f469](https://github.com/gatsby-inc/gatsby-interface/commit/930f469673e751d9f6278c4e925f3f64f992f117))
+- Breadcrumb component in TypeScript ([#201](https://github.com/gatsby-inc/gatsby-interface/issues/201)) ([71b478b](https://github.com/gatsby-inc/gatsby-interface/commit/71b478b6818c4cd267e58b869496070141badb45))
+
+### [0.0.73](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.72...v0.0.73) (2020-02-07)
+
+### Features
+
+- fit fallback text to Avatar size ([#199](https://github.com/gatsby-inc/gatsby-interface/issues/199)) ([15a3b5d](https://github.com/gatsby-inc/gatsby-interface/commit/15a3b5da51bb1f0669eba7c82cf25835191898d4))
+
+### [0.0.72](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.71...v0.0.72) (2020-02-07)
+
+### Features
+
+- remove deprecated components ([#198](https://github.com/gatsby-inc/gatsby-interface/issues/198)) ([930f469](https://github.com/gatsby-inc/gatsby-interface/commit/930f469673e751d9f6278c4e925f3f64f992f117))
 
 ### [0.0.71](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.70...v0.0.71) (2020-01-31)
 
-
 ### Features
 
-* use theme provider for Button styles ([#196](https://github.com/gatsby-inc/gatsby-interface/issues/196)) ([590e978](https://github.com/gatsby-inc/gatsby-interface/commit/590e97812dd6c76b5b6d59fed3fb2ea710a42b5c))
+- use theme provider for Button styles ([#196](https://github.com/gatsby-inc/gatsby-interface/issues/196)) ([590e978](https://github.com/gatsby-inc/gatsby-interface/commit/590e97812dd6c76b5b6d59fed3fb2ea710a42b5c))
 
 ### [0.0.70](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.69...v0.0.70) (2020-01-31)
 
 ### [0.0.69](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.68...v0.0.69) (2020-01-30)
 
-
 ### Features
 
-* Migrate Text component to TypeScript ([#195](https://github.com/gatsby-inc/gatsby-interface/issues/195)) ([42555f2](https://github.com/gatsby-inc/gatsby-interface/commit/42555f249022f04a4da1306a773801a5d15dc86f))
+- Migrate Text component to TypeScript ([#195](https://github.com/gatsby-inc/gatsby-interface/issues/195)) ([42555f2](https://github.com/gatsby-inc/gatsby-interface/commit/42555f249022f04a4da1306a773801a5d15dc86f))
 
 ### [0.0.68](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.67...v0.0.68) (2020-01-29)
 
-
 ### Features
 
-* Notification and Link components migrated to TS ([#169](https://github.com/gatsby-inc/gatsby-interface/issues/169)) ([27cc867](https://github.com/gatsby-inc/gatsby-interface/commit/27cc86749e3a89d664407b1928f7b1ea003fe1da))
+- Notification and Link components migrated to TS ([#169](https://github.com/gatsby-inc/gatsby-interface/issues/169)) ([27cc867](https://github.com/gatsby-inc/gatsby-interface/commit/27cc86749e3a89d664407b1928f7b1ea003fe1da))
 
 ### [0.0.67](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.66...v0.0.67) (2020-01-09)
 

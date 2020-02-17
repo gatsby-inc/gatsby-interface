@@ -29,8 +29,6 @@ export { SettingsBlock } from "./components/SettingsBlock"
 
 export { SettingsCard } from "./components/SettingsCard"
 
-export { IntegrationRow } from "./components/IntegrationRow"
-
 export { Link } from "./components/Link"
 
 export {
@@ -57,8 +55,6 @@ export { Heading } from "./components/Heading"
 export { Announcement } from "./components/Announcement"
 
 export { Badge } from "./components/Badge"
-
-export { Breadcrumb } from "./components/Breadcrumb"
 
 export { Switch } from "./components/Switch"
 
@@ -122,3 +118,4 @@ export * from "./components/ThemeProvider"
 export * from "./theme"
 export * from "./components/Text"
 export * from "./components/Toggle"
+export * from "./components/Breadcrumb"
