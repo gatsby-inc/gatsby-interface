@@ -65,9 +65,7 @@ const withGlobal = storyFn => (
           font-size: 1rem;
         }
         body {
-          font-family: ${process.env.STORYBOOK_CI
-            ? `Arial, Helvetica, sans-serif`
-            : fonts.system};
+          font-family: ${process.env.STORYBOOK_CI ? `Arial` : fonts.system};
           height: 100vh;
           margin: 0;
           width: 100%;

@@ -7,10 +7,10 @@ import { Theme } from "../src/theme"
 const customTheme: Partial<Theme> = process.env.STORYBOOK_CI
   ? {
       fonts: {
-        header: `Arial, Helvetica, sans-serif`,
-        monospace: `"Courier New", Courier, monospace`,
-        serif: `Georgia,Times New Roman,Times,serif`,
-        system: `Arial, Helvetica, sans-serif`,
+        header: `Arial`,
+        monospace: `Courier New`,
+        serif: `Times New Roman`,
+        system: `Arial`,
       },
     }
   : {}
