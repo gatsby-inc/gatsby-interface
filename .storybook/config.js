@@ -1,11 +1,6 @@
 import React, { Fragment } from "react"
 import { Global, css } from "@emotion/core"
-import {
-  configure,
-  addDecorator,
-  addParameters,
-  setAddon,
-} from "@storybook/react"
+import { configure, addDecorator, addParameters } from "@storybook/react"
 import { addReadme } from "storybook-readme"
 import { withKnobs } from "@storybook/addon-knobs"
 import { withConsole } from "@storybook/addon-console"
@@ -32,8 +27,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 global.___loader = {
-  enqueue: () => {},
-  hovering: () => {},
+  enqueue: () => undefined,
+  hovering: () => undefined,
 }
 
 const viewports = {
@@ -70,7 +65,9 @@ const withGlobal = storyFn => (
           font-size: 1rem;
         }
         body {
-          font-family: ${fonts.system};
+          font-family: ${process.env.STORYBOOK_CI
+            ? `Arial, Helvetica, sans-serif`
+            : fonts.system};
           height: 100vh;
           margin: 0;
           width: 100%;

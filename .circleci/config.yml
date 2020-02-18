@@ -54,7 +54,7 @@ jobs:
 
       - run:
           name: Build Storybook
-          command: yarn build-storybook
+          command: STORYBOOK_CI=1 yarn build-storybook
 
       - run:
           name: Test
