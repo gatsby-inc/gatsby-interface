@@ -8,4 +8,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./__tests__:/src/__tests__
+      - ./.storybook:/src/.storybook
+      - ./src:/src/src
     entrypoint: ["./scripts/storyshots_entrypoint.sh"]
