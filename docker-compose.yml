@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  storyshots:
+    environment:
+      - UPDATE=${UPDATE}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./__tests__:/src/__tests__
+    entrypoint: ["./scripts/storyshots_entrypoint.sh"]
