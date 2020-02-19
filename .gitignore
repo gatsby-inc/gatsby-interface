@@ -10,3 +10,4 @@ package-lock.json
 assets/fonts/*
 !assets/fonts/inter-web
 .idea
+storybook-static
