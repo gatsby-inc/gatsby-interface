@@ -31,7 +31,7 @@ const storiesWithWaitTime = {
   Modal: ["Card", "Panel", "Fullscreen"],
   Notification: ["animated with react-spring"],
   "form/RadioButtonField": ["Hint and Error placement"],
-  "form/FormField": [`Error & Hint`],
+  "form/FormField": [`Error & Hint`, "Shared components"],
 }
 
 function getScreenshotWaitTime({ kind, story }) {
