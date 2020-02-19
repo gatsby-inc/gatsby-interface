@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === "test") {
   require(`babel-plugin-require-context-hook/register`)()
 } else {
   try {
-    require("../assets/fonts/inter-web/inter.css")
     require("../assets/fonts/futura-pt/Webfonts/futurapt_book_macroman/stylesheet.css")
     require("../assets/fonts/futura-pt/Webfonts/futurapt_bookitalic_macroman/stylesheet.css")
     require("../assets/fonts/futura-pt/Webfonts/futurapt_demi_macroman/stylesheet.css")
@@ -66,7 +65,7 @@ const withGlobal = storyFn => (
           font-size: 1rem;
         }
         body {
-          font-family: ${process.env.STORYBOOK_CI ? `Inter` : fonts.system};
+          font-family: ${fonts.system};
           height: 100vh;
           margin: 0;
           width: 100%;

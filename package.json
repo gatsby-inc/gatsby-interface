@@ -13,8 +13,8 @@
   "scripts": {
     "test": "jest --testPathIgnorePatterns='AccessiblityStoryshots.test.js'",
     "test:watch": "jest --watch",
-    "test:a11y": "jest --testPathPattern='AccessiblityStoryshots.test.js'",
-    "test:visual-regression": "jest --testPathPattern='ImageStoryshots.test.js'",
+    "test:a11y": "jest __tests__/AccessiblityStoryshots.test.js",
+    "test:storyshots": "jest __tests__/ImageStoryshots.test.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "tsc": "tsc",
@@ -30,9 +30,11 @@
     "lint:all": "yarn lint src .storybook",
     "chromatic": "chromatic test",
     "scaffold:icon": "babel-node --presets @babel/env scripts/scaffold-icon/scaffold-icon.js",
-    "prepublish": "yarn build",
+    "prepublish": "node scripts/skip.js || yarn build",
     "release": "standard-version",
-    "release:branch": "babel-node --presets @babel/env scripts/prerelease-branch.js"
+    "release:branch": "babel-node --presets @babel/env scripts/prerelease-branch.js",
+    "storyshots": "docker-compose up",
+    "storyshots:update": "export UPDATE=-u && docker-compose up && unset UPDATE"
   },
   "author": "",
   "license": "ISC",

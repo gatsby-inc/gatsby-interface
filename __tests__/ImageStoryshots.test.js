@@ -2,11 +2,7 @@ import initStoryshots from "@storybook/addon-storyshots"
 import { imageSnapshot } from "@storybook/addon-storyshots-puppeteer"
 import { getDefaultPuppeteerConfig } from "../.storybook/storyshotsConfig"
 
-const baseMatchOptions = {
-  // dumpDiffToConsole: true,
-  failureThreshold: 0.2,
-  failureThresholdType: "percent",
-}
+const baseMatchOptions = {}
 
 /**
  * Use this function to customize jest-image-snapshot options for a story
