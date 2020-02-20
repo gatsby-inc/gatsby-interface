@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots - Introduction Welcome to Gatsby Inteface 1`] = `
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div
+        class="markdown-body"
+      >
+        <p>
+          test-file-stub
+        </p>
+        
+
+      </div>
+    </div>
+    <div>
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Announcement default usage 1`] = `
 .emotion-2 {
   -webkit-align-items: center;
@@ -2971,29 +2994,6 @@ exports[`Storyshots Heading variants 1`] = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Introduction/ Welcome to Gatsby Inteface 1`] = `
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div
-        class="markdown-body"
-      >
-        <p>
-          test-file-stub
-        </p>
-        
-
-      </div>
-    </div>
-    <div>
-      <div />
     </div>
   </div>
 </div>
@@ -15359,153 +15359,7 @@ exports[`Storyshots Toast Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle ToggleCheckbox (controlled) 1`] = `
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-3 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: var(--theme-ui-colors-grey-90,#232129);
-  cursor: pointer;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-}
-
-.emotion-0 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-}
-
-.emotion-0:checked + span {
-  background: #8a4baf;
-}
-
-.emotion-0:checked + span:after {
-  left: calc(100% - 18px);
-}
-
-.emotion-0:checked + span:active:after {
-  left: calc(100% - 24px);
-}
-
-.emotion-0:focus + span {
-  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
-  outline: 0;
-}
-
-.emotion-1 {
-  background: var(--theme-ui-colors-grey-30,#d9d7e0);
-  border-radius: 9999px;
-  cursor: pointer;
-  display: inline-block;
-  height: 24px;
-  padding: 3px;
-  -webkit-transition: all .3s ease,background .5s;
-  transition: all .3s ease,background .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 48px;
-  margin-right: 0.5rem;
-}
-
-.emotion-1:after {
-  background: var(--theme-ui-colors-white,#ffffff);
-  position: relative;
-  display: block;
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-radius: 9999px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-  left: 0;
-}
-
-.emotion-1:active:after {
-  width: 24px;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-4"
-        >
-          <div
-            class="emotion-3"
-          >
-            <label
-              class="emotion-2"
-              for="toggleCheckbox--controlled"
-            >
-              <input
-                class="emotion-0"
-                id="toggleCheckbox--controlled"
-                type="checkbox"
-                value="true"
-              />
-              <span
-                aria-hidden="true"
-                class="emotion-1"
-              />
-              Controlled value: false
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Toggle ToggleCheckbox 1`] = `
+exports[`Storyshots ToggleCheckbox Basic 1`] = `
 .emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -15651,7 +15505,153 @@ exports[`Storyshots Toggle ToggleCheckbox 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle ToggleCheckbox label position 1`] = `
+exports[`Storyshots ToggleCheckbox Controlled 1`] = `
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-3 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-0:checked + span {
+  background: #8a4baf;
+}
+
+.emotion-0:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-0:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-0:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-right: 0.5rem;
+}
+
+.emotion-1:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-1:active:after {
+  width: 24px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-4"
+        >
+          <div
+            class="emotion-3"
+          >
+            <label
+              class="emotion-2"
+              for="toggleCheckbox"
+            >
+              <input
+                class="emotion-0"
+                id="toggleCheckbox"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              Controlled value: false
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ToggleCheckbox Label Positions 1`] = `
 .emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -15812,11 +15812,11 @@ exports[`Storyshots Toggle ToggleCheckbox label position 1`] = `
           >
             <label
               class="emotion-2"
-              for="toggleCheckbox--position-end"
+              for="labelPosition--end"
             >
               <input
                 class="emotion-0"
-                id="toggleCheckbox--position-end"
+                id="labelPosition--end"
                 type="checkbox"
                 value="true"
               />
@@ -15824,15 +15824,15 @@ exports[`Storyshots Toggle ToggleCheckbox label position 1`] = `
                 aria-hidden="true"
                 class="emotion-1"
               />
-              Label after toggle
+              Label position: end
             </label>
             <label
               class="emotion-2"
-              for="toggleCheckbox--position-start"
+              for="labelPosition--start"
             >
               <input
                 class="emotion-0"
-                id="toggleCheckbox--position-start"
+                id="labelPosition--start"
                 type="checkbox"
                 value="true"
               />
@@ -15840,7 +15840,7 @@ exports[`Storyshots Toggle ToggleCheckbox label position 1`] = `
                 aria-hidden="true"
                 class="emotion-4"
               />
-              Label before toggle
+              Label position: start
             </label>
           </div>
         </div>
@@ -15850,7 +15850,484 @@ exports[`Storyshots Toggle ToggleCheckbox label position 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle ToggleCheckbox with rich label 1`] = `
+exports[`Storyshots ToggleCheckbox Sandbox 1`] = `
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-3 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-0:checked + span {
+  background: #8a4baf;
+}
+
+.emotion-0:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-0:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-0:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-right: 0.5rem;
+}
+
+.emotion-1:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-1:active:after {
+  width: 24px;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-4"
+        >
+          <div
+            class="emotion-3"
+          >
+            <label
+              class="emotion-2"
+              for="toggleCheckbox"
+            >
+              <input
+                class="emotion-0"
+                id="toggleCheckbox"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              Subscribe
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ToggleCheckbox Tones 1`] = `
+.emotion-16 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-15 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-0:checked + span {
+  background: #8a4baf;
+}
+
+.emotion-0:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-0:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-0:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-1 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-right: 0.5rem;
+}
+
+.emotion-1:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-1:active:after {
+  width: 24px;
+}
+
+.emotion-3 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-3:checked + span {
+  background: #37b635;
+}
+
+.emotion-3:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-3:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-3:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-6 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-6:checked + span {
+  background: #fa2915;
+}
+
+.emotion-6:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-6:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-6:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-9 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-9:checked + span {
+  background: #ffdf37;
+}
+
+.emotion-9:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-9:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-9:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-12 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-12:checked + span {
+  background: #b7b5bd;
+}
+
+.emotion-12:checked + span:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-12:checked + span:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-12:focus + span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-16"
+        >
+          <div
+            class="emotion-15"
+          >
+            <label
+              class="emotion-2"
+              for="tone--BRAND"
+            >
+              <input
+                checked=""
+                class="emotion-0"
+                id="tone--BRAND"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              BRAND tone
+            </label>
+            <label
+              class="emotion-2"
+              for="tone--SUCCESS"
+            >
+              <input
+                checked=""
+                class="emotion-3"
+                id="tone--SUCCESS"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              SUCCESS tone
+            </label>
+            <label
+              class="emotion-2"
+              for="tone--DANGER"
+            >
+              <input
+                checked=""
+                class="emotion-6"
+                id="tone--DANGER"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              DANGER tone
+            </label>
+            <label
+              class="emotion-2"
+              for="tone--WARNING"
+            >
+              <input
+                checked=""
+                class="emotion-9"
+                id="tone--WARNING"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              WARNING tone
+            </label>
+            <label
+              class="emotion-2"
+              for="tone--NEUTRAL"
+            >
+              <input
+                checked=""
+                class="emotion-12"
+                id="tone--NEUTRAL"
+                type="checkbox"
+                value="true"
+              />
+              <span
+                aria-hidden="true"
+                class="emotion-1"
+              />
+              NEUTRAL tone
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ToggleCheckbox With Rich Label 1`] = `
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -16008,7 +16485,7 @@ exports[`Storyshots Toggle ToggleCheckbox with rich label 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle ToggleSwitch 1`] = `
+exports[`Storyshots ToggleSwitch Basic 1`] = `
 .emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -16166,7 +16643,724 @@ exports[`Storyshots Toggle ToggleSwitch 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle ToggleSwitch with accessible description/label 1`] = `
+exports[`Storyshots ToggleSwitch Sandbox 1`] = `
+.emotion-8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-7 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5:focus-within > span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-2 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-2:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-2:active:after {
+  width: 24px;
+}
+
+.emotion-6 {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  padding: 0.5rem;
+  background: var(--theme-ui-colors-grey-10,#f5f5f5);
+  font-size: 0.875rem;
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-8"
+        >
+          <div
+            class="emotion-7"
+          >
+            <div
+              class="emotion-5"
+              id="toggleSwitch"
+            >
+              <input
+                checked=""
+                class="emotion-0"
+                id="toggleSwitch__off"
+                name="toggleSwitch"
+                type="radio"
+                value="yearly"
+              />
+              <label
+                class="emotion-1"
+                for="toggleSwitch__off"
+              >
+                Yearly
+              </label>
+              <span
+                aria-hidden="true"
+                class="emotion-2"
+              />
+              <input
+                class="emotion-0"
+                id="toggleSwitch__on"
+                name="toggleSwitch"
+                type="radio"
+                value="monthly"
+              />
+              <label
+                class="emotion-1"
+                for="toggleSwitch__on"
+              >
+                Monthly
+              </label>
+            </div>
+            <p
+              class="emotion-6"
+            >
+              {"value":"yearly"}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ToggleSwitch Tones 1`] = `
+.emotion-36 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.emotion-35 {
+  display: grid;
+  justify-items: start;
+  grid-gap: 2rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6:focus-within > span {
+  box-shadow: 0 0 0 3px var(--theme-ui-colors-blue-30,#63b8f6);
+  outline: 0;
+}
+
+.emotion-1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--theme-ui-colors-grey-90,#232129);
+  cursor: pointer;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.emotion-0 {
+  margin-bottom: 0.25rem;
+  font-weight: 800;
+}
+
+.emotion-3 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background: #8a4baf;
+}
+
+.emotion-3:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-3:active:after {
+  width: 24px;
+}
+
+.emotion-3:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-3:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-10 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background: #37b635;
+}
+
+.emotion-10:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-10:active:after {
+  width: 24px;
+}
+
+.emotion-10:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-10:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-17 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background: #fa2915;
+}
+
+.emotion-17:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-17:active:after {
+  width: 24px;
+}
+
+.emotion-17:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-17:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-24 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background: #ffdf37;
+}
+
+.emotion-24:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-24:active:after {
+  width: 24px;
+}
+
+.emotion-24:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-24:active:after {
+  left: calc(100% - 24px);
+}
+
+.emotion-31 {
+  background: var(--theme-ui-colors-grey-30,#d9d7e0);
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  padding: 3px;
+  -webkit-transition: all .3s ease,background .5s;
+  transition: all .3s ease,background .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 48px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background: #b7b5bd;
+}
+
+.emotion-31:after {
+  background: var(--theme-ui-colors-white,#ffffff);
+  position: relative;
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  left: 0;
+}
+
+.emotion-31:active:after {
+  width: 24px;
+}
+
+.emotion-31:after {
+  left: calc(100% - 18px);
+}
+
+.emotion-31:active:after {
+  left: calc(100% - 24px);
+}
+
+<div>
+  <div
+    class="storybook-readme-story"
+  >
+    <div>
+      <div>
+        <div
+          class="emotion-36"
+        >
+          <div
+            class="emotion-35"
+          >
+            <div>
+              <p
+                class="emotion-0"
+                id="toggleSwitchLabel--BRAND"
+              >
+                BRAND
+                :
+              </p>
+              <div
+                class="emotion-6"
+                id="tone--BRAND"
+              >
+                <input
+                  aria-describedby="toggleSwitchLabel--BRAND"
+                  class="emotion-1"
+                  id="tone--BRAND__off"
+                  name="tone--BRAND"
+                  type="radio"
+                  value="off"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--BRAND__off"
+                >
+                  Yearly
+                </label>
+                <span
+                  aria-hidden="true"
+                  class="emotion-3"
+                />
+                <input
+                  aria-describedby="toggleSwitchLabel--BRAND"
+                  checked=""
+                  class="emotion-1"
+                  id="tone--BRAND__on"
+                  name="tone--BRAND"
+                  type="radio"
+                  value="on"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--BRAND__on"
+                >
+                  Monthly
+                </label>
+              </div>
+            </div>
+            <div>
+              <p
+                class="emotion-0"
+                id="toggleSwitchLabel--SUCCESS"
+              >
+                SUCCESS
+                :
+              </p>
+              <div
+                class="emotion-6"
+                id="tone--SUCCESS"
+              >
+                <input
+                  aria-describedby="toggleSwitchLabel--SUCCESS"
+                  class="emotion-1"
+                  id="tone--SUCCESS__off"
+                  name="tone--SUCCESS"
+                  type="radio"
+                  value="off"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--SUCCESS__off"
+                >
+                  Yearly
+                </label>
+                <span
+                  aria-hidden="true"
+                  class="emotion-10"
+                />
+                <input
+                  aria-describedby="toggleSwitchLabel--SUCCESS"
+                  checked=""
+                  class="emotion-1"
+                  id="tone--SUCCESS__on"
+                  name="tone--SUCCESS"
+                  type="radio"
+                  value="on"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--SUCCESS__on"
+                >
+                  Monthly
+                </label>
+              </div>
+            </div>
+            <div>
+              <p
+                class="emotion-0"
+                id="toggleSwitchLabel--DANGER"
+              >
+                DANGER
+                :
+              </p>
+              <div
+                class="emotion-6"
+                id="tone--DANGER"
+              >
+                <input
+                  aria-describedby="toggleSwitchLabel--DANGER"
+                  class="emotion-1"
+                  id="tone--DANGER__off"
+                  name="tone--DANGER"
+                  type="radio"
+                  value="off"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--DANGER__off"
+                >
+                  Yearly
+                </label>
+                <span
+                  aria-hidden="true"
+                  class="emotion-17"
+                />
+                <input
+                  aria-describedby="toggleSwitchLabel--DANGER"
+                  checked=""
+                  class="emotion-1"
+                  id="tone--DANGER__on"
+                  name="tone--DANGER"
+                  type="radio"
+                  value="on"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--DANGER__on"
+                >
+                  Monthly
+                </label>
+              </div>
+            </div>
+            <div>
+              <p
+                class="emotion-0"
+                id="toggleSwitchLabel--WARNING"
+              >
+                WARNING
+                :
+              </p>
+              <div
+                class="emotion-6"
+                id="tone--WARNING"
+              >
+                <input
+                  aria-describedby="toggleSwitchLabel--WARNING"
+                  class="emotion-1"
+                  id="tone--WARNING__off"
+                  name="tone--WARNING"
+                  type="radio"
+                  value="off"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--WARNING__off"
+                >
+                  Yearly
+                </label>
+                <span
+                  aria-hidden="true"
+                  class="emotion-24"
+                />
+                <input
+                  aria-describedby="toggleSwitchLabel--WARNING"
+                  checked=""
+                  class="emotion-1"
+                  id="tone--WARNING__on"
+                  name="tone--WARNING"
+                  type="radio"
+                  value="on"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--WARNING__on"
+                >
+                  Monthly
+                </label>
+              </div>
+            </div>
+            <div>
+              <p
+                class="emotion-0"
+                id="toggleSwitchLabel--NEUTRAL"
+              >
+                NEUTRAL
+                :
+              </p>
+              <div
+                class="emotion-6"
+                id="tone--NEUTRAL"
+              >
+                <input
+                  aria-describedby="toggleSwitchLabel--NEUTRAL"
+                  class="emotion-1"
+                  id="tone--NEUTRAL__off"
+                  name="tone--NEUTRAL"
+                  type="radio"
+                  value="off"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--NEUTRAL__off"
+                >
+                  Yearly
+                </label>
+                <span
+                  aria-hidden="true"
+                  class="emotion-31"
+                />
+                <input
+                  aria-describedby="toggleSwitchLabel--NEUTRAL"
+                  checked=""
+                  class="emotion-1"
+                  id="tone--NEUTRAL__on"
+                  name="tone--NEUTRAL"
+                  type="radio"
+                  value="on"
+                />
+                <label
+                  class="emotion-2"
+                  for="tone--NEUTRAL__on"
+                >
+                  Monthly
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ToggleSwitch With Accessible Field Label 1`] = `
 .emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -16282,16 +17476,16 @@ exports[`Storyshots Toggle ToggleSwitch with accessible description/label 1`] = 
           >
             <div>
               <p
-                id="toggleSwitch__description"
+                id="toggleSwitchLabel"
               >
-                Billing Period
+                Billing period:
               </p>
               <div
                 class="emotion-5"
                 id="toggleSwitch"
               >
                 <input
-                  aria-describedby="toggleSwitch__description"
+                  aria-describedby="toggleSwitchLabel"
                   checked=""
                   class="emotion-0"
                   id="toggleSwitch__off"
@@ -16310,7 +17504,7 @@ exports[`Storyshots Toggle ToggleSwitch with accessible description/label 1`] = 
                   class="emotion-2"
                 />
                 <input
-                  aria-describedby="toggleSwitch__description"
+                  aria-describedby="toggleSwitchLabel"
                   class="emotion-0"
                   id="toggleSwitch__on"
                   name="toggleSwitch"
@@ -16333,7 +17527,7 @@ exports[`Storyshots Toggle ToggleSwitch with accessible description/label 1`] = 
 </div>
 `;
 
-exports[`Storyshots Toggle ToggleSwitch with rich labels 1`] = `
+exports[`Storyshots ToggleSwitch With Rich Labels 1`] = `
 .emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -16502,823 +17696,6 @@ exports[`Storyshots Toggle ToggleSwitch with rich labels 1`] = `
                   </small>
                 </div>
               </label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Toggle before or after label 1`] = `
-.emotion-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-6 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #232129;
-  cursor: pointer;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-}
-
-.emotion-2 span:last-child {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
-.emotion-1 {
-  background: #8a4baf;
-  border-radius: 999px;
-  cursor: pointer;
-  display: inline-block;
-  height: 24px;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  padding: 3px;
-  -webkit-transition: all .3s ease,background .5s;
-  transition: all .3s ease,background .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 48px;
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-label:focus-within > .emotion-1 {
-  box-shadow: 0 0 0 3px #f1defa;
-  outline: 0;
-}
-
-.emotion-1:after {
-  background: #ffffff;
-  left: 24px;
-  position: relative;
-  display: block;
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
-.emotion-1:active:after {
-  left: 18px;
-  width: 24px;
-}
-
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #232129;
-  cursor: pointer;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-}
-
-.emotion-5 span:last-child {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-}
-
-.emotion-4 {
-  background: #8a4baf;
-  border-radius: 999px;
-  cursor: pointer;
-  display: inline-block;
-  height: 24px;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  padding: 3px;
-  -webkit-transition: all .3s ease,background .5s;
-  transition: all .3s ease,background .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 48px;
-  margin-left: 0.5rem;
-  margin-right: 0;
-}
-
-label:focus-within > .emotion-4 {
-  box-shadow: 0 0 0 3px #f1defa;
-  outline: 0;
-}
-
-.emotion-4:after {
-  background: #ffffff;
-  left: 0;
-  position: relative;
-  display: block;
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
-.emotion-4:active:after {
-  left: 0;
-  width: 24px;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-7"
-        >
-          <div
-            class="emotion-6"
-          >
-            <label
-              class="emotion-2"
-              for="subInterval"
-            >
-              <input
-                checked=""
-                class="emotion-0"
-                id="subInterval"
-                name="subInterval"
-                type="checkbox"
-                value="true"
-              />
-              <span
-                aria-hidden="true"
-                class="emotion-1"
-              />
-              <span>
-                Yearly payment
-              </span>
-            </label>
-            <label
-              class="emotion-5"
-              for="renew"
-            >
-              <input
-                checked=""
-                class="emotion-0"
-                id="renew"
-                name="renew"
-                type="checkbox"
-                value="true"
-              />
-              <span
-                aria-hidden="true"
-                class="emotion-4"
-              />
-              <span>
-                Automaticaly renew
-              </span>
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Toggle shortcut usage 1`] = `
-.emotion-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-6 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-}
-
-.emotion-4 {
-  background: #d9d7e0;
-  border-radius: 999px;
-  cursor: pointer;
-  display: inline-block;
-  height: 24px;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  padding: 3px;
-  -webkit-transition: all .3s ease,background .5s;
-  transition: all .3s ease,background .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 48px;
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-label:focus-within > .emotion-4 {
-  box-shadow: 0 0 0 3px #f1defa;
-  outline: 0;
-}
-
-.emotion-4:after {
-  background: #ffffff;
-  left: 0;
-  position: relative;
-  display: block;
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
-.emotion-4:active:after {
-  left: 0;
-  width: 24px;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #232129;
-  cursor: pointer;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-}
-
-.emotion-2 span:last-child {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
-.emotion-1 {
-  background: #8a4baf;
-  border-radius: 999px;
-  cursor: pointer;
-  display: inline-block;
-  height: 24px;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  padding: 3px;
-  -webkit-transition: all .3s ease,background .5s;
-  transition: all .3s ease,background .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 48px;
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-label:focus-within > .emotion-1 {
-  box-shadow: 0 0 0 3px #f1defa;
-  outline: 0;
-}
-
-.emotion-1:after {
-  background: #ffffff;
-  left: 24px;
-  position: relative;
-  display: block;
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
-.emotion-1:active:after {
-  left: 18px;
-  width: 24px;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-7"
-        >
-          <div
-            class="emotion-6"
-          >
-            <label
-              class="emotion-2"
-              for="subInterval"
-            >
-              <input
-                checked=""
-                class="emotion-0"
-                id="subInterval"
-                name="subInterval"
-                type="checkbox"
-                value="true"
-              />
-              <span
-                aria-hidden="true"
-                class="emotion-1"
-              />
-              <span>
-                Yearly payment
-              </span>
-            </label>
-            <label
-              class="emotion-2"
-              for="renew"
-            >
-              <input
-                class="emotion-0"
-                id="renew"
-                name="renew"
-                type="checkbox"
-                value="true"
-              />
-              <span
-                aria-hidden="true"
-                class="emotion-4"
-              />
-              <span>
-                Automaticaly renew
-              </span>
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Toggle with Formik 1`] = `
-.emotion-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-6 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-}
-
-.emotion-1 {
-  background: #d9d7e0;
-  border-radius: 999px;
-  cursor: pointer;
-  display: inline-block;
-  height: 24px;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  padding: 3px;
-  -webkit-transition: all .3s ease,background .5s;
-  transition: all .3s ease,background .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 48px;
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-label:focus-within > .emotion-1 {
-  box-shadow: 0 0 0 3px #f1defa;
-  outline: 0;
-}
-
-.emotion-1:after {
-  background: #ffffff;
-  left: 0;
-  position: relative;
-  display: block;
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
-.emotion-1:active:after {
-  left: 0;
-  width: 24px;
-}
-
-.emotion-5 {
-  margin: 3rem 0;
-  border-radius: 4px;
-  background: #f6f8fa;
-  box-shadow: 0 0 1px #eee inset;
-}
-
-.emotion-3 {
-  text-transform: uppercase;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  font-weight: 500;
-  padding: .5rem;
-  background: #555;
-  color: #fff;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
-  letter-spacing: 1px;
-}
-
-.emotion-4 {
-  padding: .25rem .5rem;
-  overflow-x: scroll;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #232129;
-  cursor: pointer;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-}
-
-.emotion-2 span:last-child {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-7"
-        >
-          <div
-            class="emotion-6"
-          >
-            <div
-              class="emotion-7"
-            >
-              <form
-                class="emotion-6"
-              >
-                <label
-                  class="emotion-2"
-                  for="subscriptionInterval"
-                >
-                  <input
-                    class="emotion-0"
-                    id="subscriptionInterval"
-                    name="subscriptionInterval"
-                    type="checkbox"
-                    value="true"
-                  />
-                  <span
-                    aria-hidden="true"
-                    class="emotion-1"
-                  />
-                  <span>
-                    Yearly payment
-                  </span>
-                </label>
-                <div
-                  class="emotion-5"
-                >
-                  <div
-                    class="emotion-3"
-                  >
-                    Formik State
-                  </div>
-                  <pre
-                    class="emotion-4"
-                  >
-                    {
-  "values": {
-    "subscriptionInterval": false,
-    "automaticalRenew": false
-  },
-  "errors": {},
-  "touched": {},
-  "isSubmitting": false,
-  "isValidating": false,
-  "submitCount": 0,
-  "initialValues": {
-    "subscriptionInterval": false,
-    "automaticalRenew": false
-  },
-  "initialErrors": {},
-  "initialTouched": {},
-  "isValid": true,
-  "dirty": false,
-  "validateOnBlur": true,
-  "validateOnChange": true,
-  "validateOnMount": false
-}
-                  </pre>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Toggle with a rich label 1`] = `
-.emotion-7 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-
-.emotion-6 {
-  display: grid;
-  justify-items: start;
-  grid-gap: 2rem;
-}
-
-.emotion-0 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-}
-
-.emotion-1 {
-  background: #d9d7e0;
-  border-radius: 999px;
-  cursor: pointer;
-  display: inline-block;
-  height: 24px;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  padding: 3px;
-  -webkit-transition: all .3s ease,background .5s;
-  transition: all .3s ease,background .5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 48px;
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-label:focus-within > .emotion-1 {
-  box-shadow: 0 0 0 3px #f1defa;
-  outline: 0;
-}
-
-.emotion-1:after {
-  background: #ffffff;
-  left: 0;
-  position: relative;
-  display: block;
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
-.emotion-1:active:after {
-  left: 0;
-  width: 24px;
-}
-
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #232129;
-  cursor: pointer;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin-left: 0.75rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-5 span:last-child {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
-.emotion-4 {
-  margin-left: 0.5rem;
-}
-
-.emotion-2 {
-  margin: 0;
-  color: #78757a;
-}
-
-.emotion-3 {
-  margin: 0.25rem 0 0 0;
-  font-size: 0.875rem;
-  color: #78757a;
-}
-
-<div>
-  <div
-    class="storybook-readme-story"
-  >
-    <div>
-      <div>
-        <div
-          class="emotion-7"
-        >
-          <div
-            class="emotion-6"
-          >
-            <div
-              class="emotion-7"
-            >
-              <div
-                class="emotion-6"
-              >
-                <label
-                  class="emotion-5"
-                  for="subInterval"
-                >
-                  <input
-                    class="emotion-0"
-                    id="subInterval"
-                    name="subInterval"
-                    type="checkbox"
-                    value="true"
-                  />
-                  <span
-                    aria-hidden="true"
-                    class="emotion-1"
-                  />
-                  <span
-                    class="emotion-4"
-                  >
-                    <strong
-                      class="emotion-2"
-                    >
-                      Yearly payment
-                    </strong>
-                    <p
-                      class="emotion-3"
-                    >
-                      This is label with HTML
-                    </p>
-                  </span>
-                </label>
-              </div>
             </div>
           </div>
         </div>

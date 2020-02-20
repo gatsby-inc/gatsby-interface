@@ -96,7 +96,9 @@ addDecorator((storyFn, context) => withConsole()(storyFn)(context))
 
 addDecorator(withA11y)
 
-addDecorator(Story => <Story />)
+if (process.env.NODE_ENV === `test`) {
+  addDecorator(Story => <Story />)
+}
 
 addParameters({
   options: {
@@ -107,20 +109,15 @@ addParameters({
 })
 
 //const req = require.context("../__stories__", true, /\.stories\.js$/)
-const req = require.context(
-  "../src/components/../",
-  true,
-  /\.stories\.(js|tsx)$/
-)
 
 require("../__stories__/Welcome.stories")
-
-function loadStories() {
-  req.keys().forEach(filename => req(filename))
-}
 
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
 
-configure(loadStories, module)
+configure(require.context(
+  "../src/components/../",
+  true,
+  /\.stories\.(js|tsx)$/
+), module)

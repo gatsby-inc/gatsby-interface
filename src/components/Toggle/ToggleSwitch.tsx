@@ -96,6 +96,7 @@ export default function ToggleSwitch({
         }
       }}
       onKeyPress={e => {
+        console.log({ key: e.key })
         if (e.key !== " ") {
           return
         }

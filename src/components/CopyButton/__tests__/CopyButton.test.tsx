@@ -1,7 +1,5 @@
 import React from "react"
 import { fireEvent } from "@testing-library/react"
-import "jest-dom/extend-expect"
-
 import { CopyButton } from "../index"
 import { renderWithTheme } from "../../../utils/testing"
 
