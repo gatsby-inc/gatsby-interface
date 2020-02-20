@@ -96,6 +96,8 @@ addDecorator((storyFn, context) => withConsole()(storyFn)(context))
 
 addDecorator(withA11y)
 
+// Storybook now has first-class support for hooks, but Storyshots for some reason still fails
+// so we only transform stories to React elements in test environment
 if (process.env.NODE_ENV === `test`) {
   addDecorator(Story => <Story />)
 }
