@@ -34,9 +34,28 @@ export default function ToggleSwitch({
   style,
   ...rest
 }: ToggleSwitchProps) {
+  const inputOnRef = React.useRef<HTMLInputElement>(null)
+  const inputOffRef = React.useRef<HTMLInputElement>(null)
   const optionOnId = `${id}__on`
   const optionOffId = `${id}__off`
   const isOn = value === valueOn
+
+  const toggle = () => {
+    const inputOn = inputOnRef.current
+    const inputOff = inputOffRef.current
+
+    if (!inputOn || !inputOff) {
+      return
+    }
+
+    if (isOn) {
+      inputOff.focus()
+      inputOff.click()
+    } else {
+      inputOn.focus()
+      inputOn.click()
+    }
+  }
 
   return (
     <div
@@ -46,11 +65,42 @@ export default function ToggleSwitch({
       css={theme => ({
         display: `flex`,
         alignItems: `center`,
-        // We can rely on ""> span" here since we have full control over direct children
+        // We can rely on "> ToggleGutter.tagName" here since we have full control over direct children
         [`&:focus-within > ${ToggleGutter.tagName}`]: ToggleGutter.getFocusCss(
           theme
         ),
       })}
+      onClick={e => {
+        if (!inputOnRef.current || !inputOffRef.current) {
+          return
+        }
+        const target = e.target as HTMLElement
+
+        if (target.tagName === `LABEL`) {
+          const inputOn = inputOnRef.current
+          const inputOff = inputOffRef.current
+          const labelFor = (target as HTMLLabelElement).htmlFor
+
+          if (labelFor === optionOnId && isOn) {
+            e.preventDefault()
+            inputOff.focus()
+            inputOff.click()
+          }
+          if (labelFor === optionOffId && !isOn) {
+            e.preventDefault()
+            inputOn.focus()
+            inputOn.click()
+          }
+        } else if (target.tagName === ToggleGutter.tagName.toUpperCase()) {
+          toggle()
+        }
+      }}
+      onKeyPress={e => {
+        if (e.key !== " ") {
+          return
+        }
+        toggle()
+      }}
     >
       <input
         type="radio"
@@ -59,6 +109,7 @@ export default function ToggleSwitch({
         value={valueOff}
         checked={!isOn}
         css={visuallyHiddenCss}
+        ref={inputOffRef}
         {...rest}
       />
       <label htmlFor={optionOffId} css={toggleLabelCss}>
@@ -77,6 +128,7 @@ export default function ToggleSwitch({
         value={valueOn}
         checked={isOn}
         css={visuallyHiddenCss}
+        ref={inputOnRef}
         {...rest}
       />
       <label htmlFor={optionOnId} css={toggleLabelCss}>
