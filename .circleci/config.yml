@@ -123,9 +123,6 @@ jobs:
 
 workflows:
   version: 2
-  test:
-    jobs:
-      - is-green
   run-branch-prerelease:
     jobs:
       - is-green:
