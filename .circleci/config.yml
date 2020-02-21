@@ -128,7 +128,12 @@ workflows:
       - is-green
   run-branch-prerelease:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              ignore:
+                - master
+                - dev
       - branch-prerelease:
           requires:
             - is-green
@@ -139,7 +144,10 @@ workflows:
                 - dev
   run-prerelease:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              only: dev
       - prerelease:
           requires:
             - is-green
@@ -148,7 +156,10 @@ workflows:
               only: dev
   run-release:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              only: master
       - release:
           requires:
             - is-green
