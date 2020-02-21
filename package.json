@@ -27,6 +27,7 @@
     "lint": "eslint -c .eslintrc --max-warnings=0 --fix --color --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
     "lint:all": "yarn lint src .storybook",
     "chromatic": "chromatic test",
+    "chromatic:ci": "babel-node --presets @babel/env scripts/run-chromatic.js",
     "scaffold:icon": "babel-node --presets @babel/env scripts/scaffold-icon/scaffold-icon.js",
     "prepublish": "yarn build",
     "release": "standard-version",
