@@ -137,12 +137,12 @@ exports[`Storyshots Avatar Avatar 1`] = `
           <div>
             <span
               class="emotion-1"
-              title="A cute kitten"
+              title="John Doe"
             >
               <img
-                alt="A cute kitten"
+                alt="John Doe"
                 class="emotion-0"
-                src="https://placekitten.com/200/300"
+                src="https://picsum.photos/id/1005/200/200"
               />
             </span>
           </div>
@@ -540,12 +540,12 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
               <span
                 class="emotion-1"
                 style="z-index: 3;"
-                title="A cute kitten"
+                title="John Doe"
               >
                 <img
-                  alt="A cute kitten"
+                  alt="John Doe"
                   class="emotion-0"
-                  src="https://placekitten.com/200/300"
+                  src="https://picsum.photos/id/1005/200/200"
                 />
               </span>
               <span
@@ -563,12 +563,12 @@ exports[`Storyshots Avatar AvatarsGroup 1`] = `
               <span
                 class="emotion-2"
                 style="z-index: 1;"
-                title="A random picture of Praha"
+                title="Jane Doe"
               >
                 <img
-                  alt="A random picture of Praha"
+                  alt="Jane Doe"
                   class="emotion-0"
-                  src="https://loremflickr.com/g/320/240/praha"
+                  src="https://picsum.photos/id/1025/200/200"
                 />
               </span>
               <span
