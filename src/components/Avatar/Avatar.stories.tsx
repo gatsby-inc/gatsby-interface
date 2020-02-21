@@ -9,6 +9,9 @@ import Avatar from "./Avatar"
 import AvatarsGroup from "./AvatarsGroup"
 import { AvatarSize } from "./index"
 
+const IMG_URL_1 = `https://picsum.photos/id/1005/200/200`
+const IMG_URL_2 = `https://picsum.photos/id/1025/200/200`
+
 storiesOf(`Avatar`, module)
   .addParameters({
     options: {
@@ -25,8 +28,8 @@ storiesOf(`Avatar`, module)
       <StoryUtils.Container>
         <div>
           <Avatar
-            src={"https://placekitten.com/200/300"}
-            label={text("label", "A cute kitten")}
+            src={IMG_URL_1}
+            label={text("label", "John Doe")}
             borderColor={bordered ? borderColor : null}
             size={radios(
               "size",
@@ -71,13 +74,13 @@ storiesOf(`Avatar`, module)
           <AvatarsGroup
             avatars={[
               {
-                src: `https://placekitten.com/200/300`,
-                label: `A cute kitten`,
+                src: IMG_URL_1,
+                label: `John Doe`,
               },
               { src: ``, label: `John Doe`, fallback: "JD" },
               {
-                src: `https://loremflickr.com/g/320/240/praha`,
-                label: `A random picture of Praha`,
+                src: IMG_URL_2,
+                label: `Jane Doe`,
               },
             ]}
             borderColor={borderColor}
