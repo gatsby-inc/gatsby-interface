@@ -1,12 +1,8 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
-import { action } from "@storybook/addon-actions"
 import { StoryUtils } from "../../utils/storybook"
 import { SettingsBlock } from "./"
 import { Announcement } from "../Announcement"
-import { IntegrationRow } from "../IntegrationRow"
-import netlifyLogo from "../../assets/netlifyLogo.svg"
-import contentfulLogo from "../../assets/contentfulLogo.png"
 
 storiesOf(`SettingsBlock`, module)
   .add(`default usage`, () => (
@@ -73,35 +69,6 @@ storiesOf(`SettingsBlock`, module)
       </StoryUtils.Stack>
     </StoryUtils.Container>
   ))
-  .add(`with items`, () => (
-    <StoryUtils.Container secondaryBg={true}>
-      <StoryUtils.Stack width={`35em`}>
-        <SettingsBlock
-          title="Automated Integrations"
-          doclink="/"
-          description=" Gatsby Cloud can automatically deploy each site build to one or more
-              CDN hosts of your choice—just connect and you are good to go!"
-        >
-          <SettingsBlock.Content>
-            <IntegrationRow
-              title="Contentful"
-              logoUrl={contentfulLogo}
-              onClick={action("onClick")}
-              isConnected={false}
-              details={null}
-            />
-            <IntegrationRow
-              title="Netlify"
-              logoUrl={netlifyLogo}
-              onClick={action("onClick")}
-              isConnected={false}
-              details={null}
-            />
-          </SettingsBlock.Content>
-        </SettingsBlock>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
-  ))
   .add(`with Announcement`, () => (
     <StoryUtils.Container secondaryBg={true}>
       <StoryUtils.Stack width={`35em`}>
@@ -112,20 +79,6 @@ storiesOf(`SettingsBlock`, module)
               CDN hosts of your choice—just connect and you are good to go!"
         >
           <SettingsBlock.Content>
-            <IntegrationRow
-              title="Contentful"
-              logoUrl={contentfulLogo}
-              onClick={action("onClick")}
-              isConnected={false}
-              details={null}
-            />
-            <IntegrationRow
-              title="Netlify"
-              logoUrl={netlifyLogo}
-              onClick={action("onClick")}
-              isConnected={false}
-              details={null}
-            />
             <Announcement>
               We are working on adding more integrations all the time—watch your
               inbox!

@@ -41,9 +41,9 @@ jobs:
           name: Test
           command: yarn test
 
-      - run: # TODO remove this since we have a "prepublish" script now?
-          name: Build rollup
-          command: yarn build
+      - run:
+          name: Chromatic
+          command: yarn chromatic:ci
 
       - persist_to_workspace:
           root: ~/repo
@@ -123,12 +123,14 @@ jobs:
 
 workflows:
   version: 2
-  test:
-    jobs:
-      - is-green
   run-branch-prerelease:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              ignore:
+                - master
+                - dev
       - branch-prerelease:
           requires:
             - is-green
@@ -139,7 +141,10 @@ workflows:
                 - dev
   run-prerelease:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              only: dev
       - prerelease:
           requires:
             - is-green
@@ -148,7 +153,10 @@ workflows:
               only: dev
   run-release:
     jobs:
-      - is-green
+      - is-green:
+          filters:
+            branches:
+              only: master
       - release:
           requires:
             - is-green
