@@ -1,11 +1,6 @@
 import React, { Fragment } from "react"
 import { Global, css } from "@emotion/core"
-import {
-  configure,
-  addDecorator,
-  addParameters,
-  setAddon,
-} from "@storybook/react"
+import { configure, addDecorator, addParameters } from "@storybook/react"
 import { addReadme } from "storybook-readme"
 import { withKnobs } from "@storybook/addon-knobs"
 import { withConsole } from "@storybook/addon-console"
@@ -15,11 +10,12 @@ import withTheme from "./withTheme"
 
 import fonts from "../src/theme/fonts"
 import "@storybook/addon-console"
-import "storybook-chromatic"
 
 if (process.env.NODE_ENV === "test") {
   require(`babel-plugin-require-context-hook/register`)()
-} else {
+}
+
+if (!process.env.STORYBOOK_CHROMATIC) {
   try {
     require("../assets/fonts/futura-pt/Webfonts/futurapt_book_macroman/stylesheet.css")
     require("../assets/fonts/futura-pt/Webfonts/futurapt_bookitalic_macroman/stylesheet.css")
@@ -32,8 +28,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 global.___loader = {
-  enqueue: () => {},
-  hovering: () => {},
+  enqueue: () => undefined,
+  hovering: () => undefined,
 }
 
 const viewports = {
