@@ -16,6 +16,8 @@ storiesOf(`DecorativeDots`, module)
       sidebar: README,
       includePropTables: [DecorativeDots],
     },
+    // TODO leverage isChromatic and testSafeSample/testSafeMathRandom instead of ignoring the story
+    chromatic: { disable: true },
   })
   .add(`Default`, () => (
     <StoryUtils.Container>
