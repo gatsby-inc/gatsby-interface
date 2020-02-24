@@ -3,12 +3,12 @@
 exports[`Toast renders unchanged 1`] = `
 <div>
   <div
-    class="css-1vrmuo-toastCss-Toast-Toast"
+    class="css-yvg9p2-toastCss-Toast-Toast"
     data-reach-alert="true"
     data-testid="toast"
   >
     <span
-      class="css-1xgu85j-statusCss-Toast-Toast"
+      class="css-4vwahu-statusCss-Toast-Toast"
     >
       <svg
         fill="currentColor"
@@ -50,12 +50,12 @@ exports[`Toast renders unchanged 1`] = `
     </button>
   </div>
   <div
-    class="css-6pmm94-toastCss-Toast-Toast"
+    class="css-sh595r-toastCss-Toast-Toast"
     data-reach-alert="true"
     data-testid="toast"
   >
     <span
-      class="css-1dpvdm-statusCss-Toast-Toast"
+      class="css-xc25m7-statusCss-Toast-Toast"
     >
       <svg
         fill="currentColor"

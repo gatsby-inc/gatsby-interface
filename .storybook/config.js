@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "test") {
   require(`babel-plugin-require-context-hook/register`)()
 }
 
-if (!process.env.STORYBOOK_CHROMATIC) {
+if (!process.env.STORYBOOK_CHROMATIC && process.env.NODE_ENV !== "test") {
   try {
     require("../assets/fonts/futura-pt/Webfonts/futurapt_book_macroman/stylesheet.css")
     require("../assets/fonts/futura-pt/Webfonts/futurapt_bookitalic_macroman/stylesheet.css")

@@ -419,6 +419,7 @@ storiesOf(`theme`, module)
     () => {
       const curveSpeed = number(`Curve speed (ms)`, 500)
       const baseCss = css({
+        fontSize: theme.fontSizes[3],
         boxShadow: theme.shadows.raised,
         color: theme.colors.white,
         height: `6rem`,
@@ -435,12 +436,12 @@ storiesOf(`theme`, module)
         },
       })
       const colors = [
-        theme.colors.green[50],
-        theme.colors.blue[50],
-        theme.colors.purple[50],
-        theme.colors.magenta[50],
-        theme.colors.orange[50],
-        theme.colors.teal[50],
+        theme.colors.green[90],
+        theme.colors.blue[90],
+        theme.colors.purple[70],
+        theme.colors.magenta[70],
+        theme.colors.orange[90],
+        theme.colors.teal[70],
       ]
 
       return (
