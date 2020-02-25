@@ -14,6 +14,7 @@ import { StoryUtils } from "../../utils/storybook"
 import { Button } from "../Button"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
 import { MdCloud } from "react-icons/md"
+import isChromatic from "storybook-chromatic/isChromatic"
 
 const NOTIFICATION_VARIANTS = radioKnobOptions<NotificationVariant>([
   `PRIMARY`,
@@ -119,11 +120,18 @@ storiesOf(`Notification`, module)
     function AnimatedNotification(props: NotificationProps) {
       const [isOpened, setIsOpened] = React.useState<boolean>(true)
 
-      const transitions = useTransition(isOpened, null, {
-        from: { opacity: 0, transform: "translate3d(0, -40px, 0)" },
-        enter: { opacity: 1, transform: "translate3d(0, 0, 0)" },
-        leave: { opacity: 0, transform: "translate3d(0, 40px, 0)" },
-      })
+      // disable animations for Chromatic
+      const transitions = useTransition(
+        isOpened,
+        null,
+        isChromatic()
+          ? {}
+          : {
+              from: { opacity: 0, transform: "translate3d(0, -40px, 0)" },
+              enter: { opacity: 1, transform: "translate3d(0, 0, 0)" },
+              leave: { opacity: 0, transform: "translate3d(0, 40px, 0)" },
+            }
+      )
 
       return (
         <React.Fragment>
