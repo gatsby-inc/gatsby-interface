@@ -15,7 +15,6 @@ module.exports = {
   testPathIgnorePatterns: [
     `node_modules`,
     `.cache`,
-    `cypress`,
     // We're ignoring a11y storyshots since those require storybook to be built/opened
     // use "yarn test:a11y" to run these
     `AccessiblityStoryshots.test.js`,
