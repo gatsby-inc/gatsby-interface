@@ -15,6 +15,7 @@ export * from "./components/Notification"
 export * from "./components/Modal"
 export * from "./components/ThemeProvider"
 export * from "./components/Text"
+export * from "./components/Toggle"
 export * from "./components/Breadcrumb"
 
 export * from "./theme"

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.77](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.76...v0.0.77) (2020-02-25)
+
+### Features
+
+- ToggleSwitch and ToggleCheckbox components ([#204](https://github.com/gatsby-inc/gatsby-interface/issues/204)) ([a0a4cd1](https://github.com/gatsby-inc/gatsby-interface/commit/a0a4cd1fec66b426da6aa48addcc55fd08040e8f))
+
 ### [0.0.76](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.75...v0.0.76) (2020-02-24)
 
 ### [0.0.75](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.74...v0.0.75) (2020-02-24)

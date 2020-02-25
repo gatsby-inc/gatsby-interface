@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import fonts from "../../theme/fonts"
 import hiddenStyles from "../../theme/styles/hidden"
 import space from "../../theme/space"
-import { Toggle } from "../Toggle"
+import Toggle from "../Toggle/Toggle"
 
 function Switch({ fieldName, fieldValue, options = {}, onChange }) {
   const onToggleChange = e => {
