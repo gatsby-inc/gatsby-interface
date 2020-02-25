@@ -114,3 +114,13 @@ storiesOf(`Navigation`, module)
       </Navigation>
     </div>
   ))
+  .add(`with external button link as child`, () => (
+    <div css={{ padding: `2rem` }}>
+      <Navigation items={items}>
+        <Navigation.Spacer />
+        <Navigation.Button linkTo="https://www.bing.com/">
+          Search it up
+        </Navigation.Button>
+      </Navigation>
+    </div>
+  ))

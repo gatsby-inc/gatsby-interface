@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import { MdArrowForward } from "react-icons/md"
 
 import { LinkButton } from "../../LinkButton"
+import { AnchorButton } from "../../AnchorButton"
 import { visuallyHidden } from "../../../utils/helpers"
 import useOnClickOutside from "../../../utils/hooks/useOnClickOutside"
 
@@ -296,6 +297,27 @@ BaseNavigation.LinkButton = ({
     >
       {children} {icon && <MdArrowForward />}
     </LinkButton>
+  )
+}
+
+BaseNavigation.AnchorButton = ({
+  linkTo,
+  icon = true,
+  size = `M`,
+  children,
+  ...rest
+}) => {
+  const { isInverted } = BaseNavigation.useNavigationContext()
+
+  return (
+    <AnchorButton
+      to={linkTo}
+      size={size}
+      css={baseStyles.button(isInverted)}
+      {...rest}
+    >
+      {children} {icon && <MdArrowForward />}
+    </AnchorButton>
   )
 }
 
