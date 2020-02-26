@@ -293,9 +293,10 @@ BaseNavigation.LinkButton = ({
       to={linkTo}
       size={size}
       css={baseStyles.button(isInverted)}
+      rightIcon={icon ? <MdArrowForward /> : undefined}
       {...rest}
     >
-      {children} {icon && <MdArrowForward />}
+      {children}
     </LinkButton>
   )
 }
@@ -314,9 +315,10 @@ BaseNavigation.AnchorButton = ({
       to={linkTo}
       size={size}
       css={baseStyles.button(isInverted)}
+      rightIcon={icon ? <MdArrowForward /> : undefined}
       {...rest}
     >
-      {children} {icon && <MdArrowForward />}
+      {children}
     </AnchorButton>
   )
 }
