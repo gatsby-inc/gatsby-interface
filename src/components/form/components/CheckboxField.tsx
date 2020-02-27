@@ -145,14 +145,26 @@ export function CheckboxFieldError({
   children,
   ...props
 }: CheckboxFieldErrorProps) {
-  const styledProps = useStyledFieldError(children)
+  const { css, ...styledProps } = useStyledFieldError(children)
 
-  return <CheckboxFieldSkeletonError {...props} {...styledProps} />
+  return (
+    <CheckboxFieldSkeletonError
+      {...props}
+      {...styledProps}
+      css={(theme: Theme) => [css(theme), sharedStyles(theme)]}
+    />
+  )
 }
 
 export type CheckboxFieldHintProps = CheckboxFieldSkeletonHintProps
 export function CheckboxFieldHint(props: CheckboxFieldHintProps) {
-  const styledProps = useStyledFieldHint()
+  const { css, ...styledProps } = useStyledFieldHint()
 
-  return <CheckboxFieldSkeletonHint {...props} {...styledProps} />
+  return (
+    <CheckboxFieldSkeletonHint
+      {...props}
+      {...styledProps}
+      css={(theme: Theme) => [css(theme), sharedStyles(theme)]}
+    />
+  )
 }
