@@ -16,7 +16,14 @@ import {
 } from "../components/InputField"
 import TextAreaField from "../components/TextAreaField"
 import SelectField from "../components/SelectField"
-import CheckboxField from "../components/CheckboxField"
+import {
+  CheckboxField,
+  CheckboxFieldWrapper,
+  CheckboxFieldControl,
+  CheckboxFieldLabel,
+  CheckboxFieldHint,
+  CheckboxFieldError,
+} from "../components/CheckboxField"
 import CheckboxGroupField from "../components/CheckboxGroupField"
 import RadioButtonField from "../components/RadioButtonField"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
@@ -166,19 +173,19 @@ storiesOf(`form/FormField`, module)
           </RadioButtonField>
 
           <CheckboxField id="example-1f" hasError={!!error} hasHint={!!hint}>
-            <CheckboxField.Wrapper>
-              <CheckboxField.Control
+            <CheckboxFieldWrapper>
+              <CheckboxFieldControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <CheckboxField.Label size={`S`}>
+              <CheckboxFieldLabel size={`S`}>
                 I have read and agree with the <a href="/">Terms</a> and{" "}
                 <a href="/">Privacy Policy</a>. Lorem Ipsum is simply dummy text
                 of the printing and typesetting industry.
-              </CheckboxField.Label>
+              </CheckboxFieldLabel>
 
-              <CheckboxField.Hint>{hint}</CheckboxField.Hint>
-              <CheckboxField.Error>{error}</CheckboxField.Error>
-            </CheckboxField.Wrapper>
+              <CheckboxFieldHint>{hint}</CheckboxFieldHint>
+              <CheckboxFieldError>{error}</CheckboxFieldError>
+            </CheckboxFieldWrapper>
           </CheckboxField>
         </Wrapper>
       </StoryUtils.Container>

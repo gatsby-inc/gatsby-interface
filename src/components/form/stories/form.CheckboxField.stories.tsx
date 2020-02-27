@@ -7,8 +7,15 @@ import { text, radios, boolean } from "@storybook/addon-knobs"
 import { StoryUtils } from "../../../utils/storybook"
 import README from "../README_CHECKBOX_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import CheckboxField from "../components/CheckboxField"
-import CheckboxFieldBlock from "../components/CheckboxFieldBlock"
+import {
+  CheckboxField,
+  CheckboxFieldWrapper,
+  CheckboxFieldControl,
+  CheckboxFieldLabel,
+  CheckboxFieldHint,
+  CheckboxFieldError,
+} from "../components/CheckboxField"
+import { CheckboxFieldBlock } from "../components/CheckboxFieldBlock"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { enumToOptions } from "../../../utils/helpers"
 import { Wrapper } from "./stories.utils"
@@ -39,21 +46,21 @@ storiesOf(`form`, module)
             hasError={!!error}
             hasHint={true}
           >
-            <CheckboxField.Wrapper>
-              <CheckboxField.Control
+            <CheckboxFieldWrapper>
+              <CheckboxFieldControl
                 onChange={e => action(`Change`)(e.target.value)}
                 required={required}
               />
-              <CheckboxField.Label size={size} isRequired={required}>
+              <CheckboxFieldLabel size={size} isRequired={required}>
                 Builds enabled
-              </CheckboxField.Label>
-              <CheckboxField.Hint>
+              </CheckboxFieldLabel>
+              <CheckboxFieldHint>
                 {hint
                   ? hint
                   : `This field is built with 'CheckboxField' and subcomponents placed explicitly as its children`}
-              </CheckboxField.Hint>
-              <CheckboxField.Error>{error}</CheckboxField.Error>
-            </CheckboxField.Wrapper>
+              </CheckboxFieldHint>
+              <CheckboxFieldError>{error}</CheckboxFieldError>
+            </CheckboxFieldWrapper>
           </CheckboxField>
 
           <CheckboxFieldBlock

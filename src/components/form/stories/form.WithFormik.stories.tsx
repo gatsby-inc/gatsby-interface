@@ -21,9 +21,15 @@ import TextAreaConnectedField from "../components/TextAreaConnectedField"
 import SelectField from "../components/SelectField"
 import SelectFieldBlock from "../components/SelectFieldBlock"
 import SelectConnectedField from "../components/SelectConnectedField"
-import CheckboxField from "../components/CheckboxField"
-import CheckboxFieldBlock from "../components/CheckboxFieldBlock"
-import CheckboxConnectedField from "../components/CheckboxConnectedField"
+import {
+  CheckboxField,
+  CheckboxFieldWrapper,
+  CheckboxFieldControl,
+  CheckboxFieldLabel,
+  CheckboxFieldError,
+} from "../components/CheckboxField"
+import { CheckboxFieldBlock } from "../components/CheckboxFieldBlock"
+import { CheckboxConnectedField } from "../components/CheckboxConnectedField"
 import CheckboxGroupField from "../components/CheckboxGroupField"
 import CheckboxGroupFieldBlock from "../components/CheckboxGroupFieldBlock"
 import CheckboxGroupConnectedField from "../components/CheckboxGroupConnectedField"
@@ -353,25 +359,25 @@ storiesOf(`form/Formik usage examples`, module)
                     id="agreementField"
                     hasError={!!(touched.agreement && errors.agreement)}
                   >
-                    <CheckboxField.Wrapper css={stackItemCss}>
-                      <CheckboxField.Control
+                    <CheckboxFieldWrapper css={stackItemCss}>
+                      <CheckboxFieldControl
                         name="agreement"
                         value={+values.agreement}
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
-                      <CheckboxField.Label size={`S`}>
+                      <CheckboxFieldLabel size={`S`}>
                         I have read and agree with the <a href="/">Terms</a> and{" "}
                         <a href="/">Privacy Policy</a>. Lorem Ipsum is simply
                         dummy text of the printing and typesetting industry.
-                      </CheckboxField.Label>
+                      </CheckboxFieldLabel>
 
-                      <CheckboxField.Error>
+                      <CheckboxFieldError>
                         {touched.agreement && errors.agreement
                           ? errors.agreement
                           : ``}
-                      </CheckboxField.Error>
-                    </CheckboxField.Wrapper>
+                      </CheckboxFieldError>
+                    </CheckboxFieldWrapper>
                   </CheckboxField>
 
                   <Actions isSubmitting={isSubmitting} css={stackItemCss} />
