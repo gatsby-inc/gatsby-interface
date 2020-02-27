@@ -2,7 +2,15 @@
 import { jsx } from "@emotion/core"
 import React, { ReactNode } from "react"
 
-import InputField, { InputFieldControlProps } from "./InputField"
+import {
+  InputField,
+  InputFieldControlProps,
+  InputFieldWrapper,
+  InputFieldLabel,
+  InputFieldControl,
+  InputFieldHint,
+  InputFieldError,
+} from "./InputField"
 import { FormFieldLabelSize } from "./FormField.helpers"
 import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
 
@@ -15,7 +23,7 @@ export type InputFieldBlockProps = {
   validationMode?: ErrorValidationMode
 } & InputFieldControlProps
 
-const InputFieldBlock = React.forwardRef<
+export const InputFieldBlock = React.forwardRef<
   HTMLInputElement,
   InputFieldBlockProps
 >((props, ref) => {
@@ -32,18 +40,16 @@ const InputFieldBlock = React.forwardRef<
 
   return (
     <InputField id={id} hasError={!!error} hasHint={!!hint}>
-      <InputField.Wrapper className={className}>
-        <InputField.Label size={labelSize} isRequired={!!rest.required}>
+      <InputFieldWrapper className={className}>
+        <InputFieldLabel size={labelSize} isRequired={!!rest.required}>
           {label}
-        </InputField.Label>
-        <InputField.Control ref={ref} {...rest} />
-        <InputField.Hint>{hint}</InputField.Hint>
-        <InputField.Error validationMode={validationMode}>
+        </InputFieldLabel>
+        <InputFieldControl ref={ref} {...rest} />
+        <InputFieldHint>{hint}</InputFieldHint>
+        <InputFieldError validationMode={validationMode}>
           {error}
-        </InputField.Error>
-      </InputField.Wrapper>
+        </InputFieldError>
+      </InputFieldWrapper>
     </InputField>
   )
 })
-
-export default InputFieldBlock

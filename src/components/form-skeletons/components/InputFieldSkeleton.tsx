@@ -1,9 +1,20 @@
 import React from "react"
-import FormFieldSkeleton, { FormFieldSkeletonProps } from "./FormFieldSkeleton"
+import {
+  FormFieldSkeleton,
+  FormFieldSkeletonProps,
+  useFormFieldSkeleton,
+  FormFieldSkeletonLabel,
+  FormFieldSkeletonLabelProps,
+  FormFieldSkeletonHintProps,
+  FormFieldSkeletonHint,
+  FormFieldSkeletonErrorProps,
+  FormFieldSkeletonError,
+} from "./FormFieldSkeleton"
 import { getFinalAriaDescribedBy } from "../utils"
 import { OmitControlProps } from "../sharedTypes"
 
-function InputFieldSkeleton(props: FormFieldSkeletonProps) {
+export type InputFieldSkeletonProps = FormFieldSkeletonProps
+export function InputFieldSkeleton(props: InputFieldSkeletonProps) {
   return <FormFieldSkeleton {...props} />
 }
 
@@ -11,11 +22,11 @@ export type InputFieldSkeletonControlProps = OmitControlProps<
   JSX.IntrinsicElements["input"]
 >
 
-InputFieldSkeleton.Control = React.forwardRef<
+export const InputFieldSkeletonControl = React.forwardRef<
   HTMLInputElement,
   InputFieldSkeletonControlProps
->((props, ref) => {
-  const { id, hasError, meta } = FormFieldSkeleton.useFormFieldSkeleton()
+>(function InputFieldSkeletonControl(props, ref) {
+  const { id, hasError, meta } = useFormFieldSkeleton()
 
   return (
     <input
@@ -30,13 +41,18 @@ InputFieldSkeleton.Control = React.forwardRef<
     />
   )
 })
-InputFieldSkeleton.Control.displayName = `InputFieldSkeleton.Control`
 
-InputFieldSkeleton.Label = FormFieldSkeleton.Label
-InputFieldSkeleton.Label.displayName = `InputFieldSkeleton.Label`
-InputFieldSkeleton.Hint = FormFieldSkeleton.Hint
-InputFieldSkeleton.Hint.displayName = `InputFieldSkeleton.Hint`
-InputFieldSkeleton.Error = FormFieldSkeleton.Error
-InputFieldSkeleton.Error.displayName = `InputFieldSkeleton.Hint`
+export type InputFieldSkeletonLabelProps = FormFieldSkeletonLabelProps
+export function InputFieldSkeletonLabel(props: FormFieldSkeletonLabelProps) {
+  return <FormFieldSkeletonLabel {...props} />
+}
 
-export default InputFieldSkeleton
+export type InputFieldSkeletonHintProps = FormFieldSkeletonHintProps
+export function InputFieldSkeletonHint(props: FormFieldSkeletonHintProps) {
+  return <FormFieldSkeletonHint {...props} />
+}
+
+export type InputFieldSkeletonErrorProps = FormFieldSkeletonErrorProps
+export function InputFieldSkeletonError(props: FormFieldSkeletonErrorProps) {
+  return <FormFieldSkeletonError {...props} />
+}

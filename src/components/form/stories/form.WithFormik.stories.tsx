@@ -5,10 +5,17 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 import README from "../README_FORMIK.md"
 import { StoryUtils } from "../../../utils/storybook"
-import InputField from "../components/InputField"
+import {
+  InputField,
+  InputFieldWrapper,
+  InputFieldControl,
+  InputFieldLabel,
+  InputFieldError,
+  InputFieldHint,
+} from "../components/InputField"
 import TextAreaField from "../components/TextAreaField"
-import InputFieldBlock from "../components/InputFieldBlock"
-import InputConnectedField from "../components/InputConnectedField"
+import { InputFieldBlock } from "../components/InputFieldBlock"
+import { InputConnectedField } from "../components/InputConnectedField"
 import TextAreaFieldBlock from "../components/TextAreaFieldBlock"
 import TextAreaConnectedField from "../components/TextAreaConnectedField"
 import SelectField from "../components/SelectField"
@@ -204,25 +211,23 @@ storiesOf(`form/Formik usage examples`, module)
                     hasError={!!(touched.title && errors.title)}
                     hasHint={true}
                   >
-                    <InputField.Wrapper css={stackItemCss}>
-                      <InputField.Label isRequired={true}>
-                        Title
-                      </InputField.Label>
-                      <InputField.Control
+                    <InputFieldWrapper css={stackItemCss}>
+                      <InputFieldLabel isRequired={true}>Title</InputFieldLabel>
+                      <InputFieldControl
                         name="title"
                         value={values.title}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         required
                       />
-                      <InputField.Hint>
+                      <InputFieldHint>
                         At least {TITLE_MIN_LENGTH} and not more than{" "}
                         {TITLE_MAX_LENGTH} characters
-                      </InputField.Hint>
-                      <InputField.Error>
+                      </InputFieldHint>
+                      <InputFieldError>
                         {touched.title && errors.title ? errors.title : ``}
-                      </InputField.Error>
-                    </InputField.Wrapper>
+                      </InputFieldError>
+                    </InputFieldWrapper>
                   </InputField>
 
                   <TextAreaField

@@ -2,59 +2,85 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
+import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import {
-  FormFieldSkeleton,
-  FormFieldSkeletonProps,
-} from "../../form-skeletons/components/FormFieldSkeleton"
-import { FormField, getFieldStackStyles } from "./FormField"
+  getFieldStackStyles,
+  FormFieldStack,
+  FormFieldLabelProps,
+  FormFieldStackProps,
+  useStyledFieldHint,
+  useStyledFieldError,
+  useStyledFieldLabel,
+} from "./FormField"
 import { getInputStyles } from "./FormField.helpers"
-import InputFieldSkeleton, {
+import {
+  InputFieldSkeleton,
   InputFieldSkeletonControlProps,
+  InputFieldSkeletonControl,
+  InputFieldSkeletonHintProps,
+  InputFieldSkeletonHint,
+  InputFieldSkeletonErrorProps,
+  InputFieldSkeletonError,
+  InputFieldSkeletonLabel,
+  InputFieldSkeletonProps,
 } from "../../form-skeletons/components/InputFieldSkeleton"
 import { Theme } from "../../../theme"
 
-function InputField(props: FormFieldSkeletonProps) {
+export function InputField(props: InputFieldSkeletonProps) {
   return <InputFieldSkeleton {...props}></InputFieldSkeleton>
 }
 
 export type InputFieldControlProps = Omit<InputFieldSkeletonControlProps, "ref">
 
-const Control = React.forwardRef<HTMLInputElement, InputFieldControlProps>(
-  (props, ref) => {
-    const { hasError } = FormFieldSkeleton.useFormFieldSkeleton()
+export const InputFieldControl = React.forwardRef<
+  HTMLInputElement,
+  InputFieldControlProps
+>(function InputFieldControl(props, ref) {
+  const { hasError } = useFormFieldSkeleton()
 
-    const placeholder =
-      props.placeholder && props.disabled
-        ? `The field is disabled`
-        : props.placeholder
+  const placeholder =
+    props.placeholder && props.disabled
+      ? `The field is disabled`
+      : props.placeholder
 
-    return (
-      <InputFieldSkeleton.Control
-        ref={ref}
-        css={(theme: Theme) => [
-          getFieldStackStyles(`item`, theme),
-          getInputStyles(theme, hasError),
-        ]}
-        {...props}
-        placeholder={placeholder}
-      />
-    )
-  }
-)
+  return (
+    <InputFieldSkeletonControl
+      ref={ref}
+      css={(theme: Theme) => [
+        getFieldStackStyles(`item`, theme),
+        getInputStyles(theme, hasError),
+      ]}
+      {...props}
+      placeholder={placeholder}
+    />
+  )
+})
 
-InputField.Control = Control
-InputField.Control.displayName = `InputField.Control`
+export type InputFieldWrapperProps = FormFieldStackProps
+export const InputFieldWrapper = FormFieldStack
 
-InputField.Wrapper = FormField.Stack
-InputField.Wrapper.displayName = `InputField.StackWrapper`
+export type InputFieldLabelProps = FormFieldLabelProps
+export function InputFieldLabel({
+  children,
+  size,
+  isRequired,
+  ...props
+}: InputFieldLabelProps) {
+  const styledProps = useStyledFieldLabel(children, { size, isRequired })
 
-InputField.Label = FormField.Label
-InputField.Label.displayName = `InputField.Label`
+  return <InputFieldSkeletonLabel {...props} {...styledProps} />
+}
 
-InputField.Hint = FormField.Hint
-InputField.Hint.displayName = `InputField.Hint`
+export type InputFieldErrorProps = InputFieldSkeletonErrorProps
+export function InputFieldError({ children, ...props }: InputFieldErrorProps) {
+  const styledProps = useStyledFieldError(children)
 
-InputField.Error = FormField.Error
-InputField.Error.displayName = `InputField.Hint`
+  return <InputFieldSkeletonError {...props} {...styledProps} />
+}
 
-export default InputField
+export type InputFieldHintProps = InputFieldSkeletonHintProps
+export function InputFieldHint(props: InputFieldHintProps) {
+  const styledProps = useStyledFieldHint()
+
+  return <InputFieldSkeletonHint {...props} {...styledProps} />
+}

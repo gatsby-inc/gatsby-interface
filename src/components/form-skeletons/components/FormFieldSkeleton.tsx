@@ -70,7 +70,9 @@ export type FormFieldSkeletonLabelProps = Omit<
   "ref" | "htmlFor"
 >
 
-const FormFieldSkeletonLabel: React.FC<FormFieldSkeletonLabelProps> = props => {
+export const FormFieldSkeletonLabel: React.FC<
+  FormFieldSkeletonLabelProps
+> = props => {
   const { id } = useFormFieldSkeleton()
 
   return <label htmlFor={id} {...props} />
@@ -81,7 +83,7 @@ export type FormFieldSkeletonHintProps = Omit<
   "ref" | "id"
 >
 
-const FormFieldSkeletonHint: React.FC<FormFieldSkeletonHintProps> = ({
+export const FormFieldSkeletonHint: React.FC<FormFieldSkeletonHintProps> = ({
   children,
   ...rest
 }) => {
@@ -100,7 +102,7 @@ export type FormFieldSkeletonErrorProps = Omit<
   "ref" | "id"
 > & { validationMode?: ErrorValidationMode }
 
-const FormFieldSkeletonError: React.FC<FormFieldSkeletonErrorProps> = ({
+export const FormFieldSkeletonError: React.FC<FormFieldSkeletonErrorProps> = ({
   children,
   validationMode,
   ...rest
@@ -122,6 +124,7 @@ export function FormFieldSkeleton(props: FormFieldSkeletonProps) {
   return <FormFieldSkeletonProvider {...props} />
 }
 
+// TODO remove these one all form skeletons have their static properties removed
 FormFieldSkeleton.displayName = `FormFieldSkeleton`
 FormFieldSkeleton.Label = FormFieldSkeletonLabel
 FormFieldSkeleton.Label.displayName = `FormFieldSkeleton.Label`
@@ -133,7 +136,7 @@ FormFieldSkeleton.useFormFieldSkeleton = useFormFieldSkeleton
 
 export default FormFieldSkeleton
 
-function useFormFieldSkeleton() {
+export function useFormFieldSkeleton() {
   return React.useContext(FormFieldSkeletonContext)
 }
 

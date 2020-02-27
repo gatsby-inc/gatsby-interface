@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { getIn, useFormikContext } from "formik"
-import InputFieldBlock from "./InputFieldBlock"
+import { InputFieldBlock } from "./InputFieldBlock"
 import Case from "case"
 import { InputFieldBlockProps } from "./InputFieldBlock"
 
@@ -11,7 +11,9 @@ export type InputConnectedFieldProps = {
   label?: React.ReactNode
 } & Omit<InputFieldBlockProps, "id" | "label">
 
-const InputConnectedField: React.FC<InputConnectedFieldProps> = props => {
+export const InputConnectedField: React.FC<
+  InputConnectedFieldProps
+> = props => {
   const id = `${props.name}Field`
   const label = Case.sentence(props.name)
   const {
@@ -37,5 +39,3 @@ const InputConnectedField: React.FC<InputConnectedFieldProps> = props => {
     />
   )
 }
-
-export default InputConnectedField

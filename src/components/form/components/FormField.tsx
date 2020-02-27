@@ -4,13 +4,16 @@ import React from "react"
 
 import { MdError } from "react-icons/md"
 import { getStackStyles } from "../../stack"
-import { useTheme } from "../../ThemeProvider"
 import { Theme } from "../../../theme"
 import {
   FormFieldSkeletonProps,
   FormFieldSkeleton,
   FormFieldSkeletonLabelProps,
   FormFieldSkeletonHintProps,
+  FormFieldSkeletonLabel,
+  useFormFieldSkeleton,
+  FormFieldSkeletonHint,
+  FormFieldSkeletonError,
   FormFieldSkeletonErrorProps,
 } from "../../form-skeletons/components/FormFieldSkeleton"
 
@@ -41,20 +44,20 @@ export type FormFieldWrapperProps = Pick<
   "className" | "style"
 >
 
-export const FieldWrapper: React.FC<FormFieldWrapperProps> = props => {
+export const FormFieldWrapper: React.FC<FormFieldWrapperProps> = props => {
   return <div {...props} />
 }
 
-FormField.Wrapper = FieldWrapper
+FormField.Wrapper = FormFieldWrapper
 FormField.Wrapper.displayName = `FormField.Wrapper`
 
-export const FieldStack: React.FC<FormFieldWrapperProps> = props => {
-  const t = useTheme()
+export type FormFieldStackProps = FormFieldWrapperProps
 
-  return <div css={getFieldStackStyles(`stack`, t)} {...props} />
+export const FormFieldStack: React.FC<FormFieldStackProps> = props => {
+  return <div css={theme => getFieldStackStyles(`stack`, theme)} {...props} />
 }
 
-FormField.Stack = FieldStack
+FormField.Stack = FormFieldStack
 FormField.Stack.displayName = `FormField.FieldStack`
 
 export type FormFieldLabelProps = FormFieldSkeletonLabelProps & {
@@ -62,57 +65,74 @@ export type FormFieldLabelProps = FormFieldSkeletonLabelProps & {
   size?: FormFieldLabelSize
 }
 
-const Label: React.FC<FormFieldLabelProps> = ({
+export const FormFieldLabel: React.FC<FormFieldLabelProps> = ({
   children,
   isRequired,
   size = `M`,
   ...rest
 }) => {
-  const t = useTheme()
+  const styledProps = useStyledFieldLabel(children, { size, isRequired })
 
-  return (
-    <FormFieldSkeleton.Label
-      css={(theme: Theme) => [
-        getLabelFontSize(size, theme),
-        getLabelStyles(theme),
-        getFieldStackStyles(`item`, t),
-      ]}
-      {...rest}
-    >
-      {children} {isRequired && <RequiredFlag />}
-    </FormFieldSkeleton.Label>
-  )
+  return <FormFieldSkeletonLabel {...styledProps} {...rest} />
 }
 
-FormField.Label = Label
+FormField.Label = FormFieldLabel
 FormField.Label.displayName = `FormField.Label`
+
+export function useStyledFieldLabel(
+  label?: React.ReactNode,
+  {
+    size = `M`,
+    isRequired = false,
+  }: { size?: FormFieldLabelSize; isRequired?: boolean } = {}
+) {
+  return {
+    css: (theme: Theme) => [
+      getLabelFontSize(size, theme),
+      getLabelStyles(theme),
+      getFieldStackStyles(`item`, theme),
+    ],
+    children: (
+      <React.Fragment>
+        {label} {isRequired && <RequiredFlag />}
+      </React.Fragment>
+    ),
+  }
+}
 
 export type FormFieldHintProps = FormFieldSkeletonHintProps
 
-const FormFieldHint: React.FC<FormFieldHintProps> = ({ children, ...rest }) => {
-  const { hasHint } = FormFieldSkeleton.useFormFieldSkeleton()
-  const t = useTheme()
+export const FormFieldHint: React.FC<FormFieldHintProps> = ({
+  children,
+  ...rest
+}) => {
+  const styledProps = useStyledFieldHint()
 
   return (
-    <FormFieldSkeleton.Hint
-      css={[
-        getDescriptionStyles(t),
-        getFieldStackStyles(`item`, t),
-        {
-          "&&": {
-            marginTop: !hasHint ? 0 : undefined,
-          },
-        },
-      ]}
-      {...rest}
-    >
+    <FormFieldSkeletonHint {...styledProps} {...rest}>
       {children}
-    </FormFieldSkeleton.Hint>
+    </FormFieldSkeletonHint>
   )
 }
 
 FormField.Hint = FormFieldHint
 FormField.Hint.displayName = `FormField.Hint`
+
+export function useStyledFieldHint() {
+  const { hasHint } = useFormFieldSkeleton()
+
+  return {
+    css: (theme: Theme) => [
+      getDescriptionStyles(theme),
+      getFieldStackStyles(`item`, theme),
+      {
+        "&&": {
+          marginTop: !hasHint ? 0 : undefined,
+        },
+      },
+    ],
+  }
+}
 
 const errorEntry = keyframes`
   50% {
@@ -135,46 +155,45 @@ export const FormFieldError: React.FC<FormFieldErrorProps> = ({
   children,
   ...rest
 }) => {
-  const { hasError, hasHint } = FormFieldSkeleton.useFormFieldSkeleton()
+  const styledProps = useStyledFieldError(children)
 
-  return (
-    <FormFieldSkeleton.Error
-      css={(theme: Theme) => [
-        getDescriptionStyles(theme),
-        getFieldStackStyles(`item`, theme),
-        {
-          animation: `${errorEntry} .25s ease forwards`,
-          color: theme.colors.red[70],
-          opacity: 0,
-          // marginTop: !hasError ? 0 : hasHint ? `${space[1]}` : undefined,
+  return <FormFieldSkeletonError {...styledProps} {...rest} />
+}
 
-          "&&": {
-            marginTop: !hasError
-              ? 0
-              : hasHint
-              ? `${theme.space[1]}`
-              : undefined,
-          },
+FormField.Error = FormFieldError
+FormField.Error.displayName = `FormField.Error`
 
-          svg: {
+export function useStyledFieldError(error?: React.ReactNode) {
+  const { hasError, hasHint } = useFormFieldSkeleton()
+
+  return {
+    css: (theme: Theme) => [
+      getDescriptionStyles(theme),
+      getFieldStackStyles(`item`, theme),
+      {
+        animation: `${errorEntry} .25s ease forwards`,
+        color: theme.colors.red[70],
+        opacity: 0,
+
+        "&&": {
+          marginTop: !hasError ? 0 : hasHint ? `${theme.space[1]}` : undefined,
+        },
+      },
+    ],
+    children: (
+      <React.Fragment>
+        <MdError
+          css={(theme: Theme) => ({
             animation: `${errorIconEntry} .25s ease-out forwards`,
             height: `1em`,
             marginRight: theme.space[1],
             transform: `translateY(-0.1em) scale(0)`,
             verticalAlign: `middle`,
             width: `1em`,
-          },
-        },
-      ]}
-      {...rest}
-    >
-      <MdError />
-      {children}
-    </FormFieldSkeleton.Error>
-  )
+          })}
+        />
+        {error}
+      </React.Fragment>
+    ),
+  }
 }
-
-FormField.Error = FormFieldError
-FormField.Error.displayName = `FormField.Error`
-
-export default FormField

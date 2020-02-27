@@ -8,8 +8,15 @@ import { text, radios, boolean } from "@storybook/addon-knobs"
 import { StoryUtils } from "../../../utils/storybook"
 import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import InputField from "../components/InputField"
-import InputFieldBlock from "../components/InputFieldBlock"
+import {
+  InputField,
+  InputFieldWrapper,
+  InputFieldLabel,
+  InputFieldControl,
+  InputFieldHint,
+  InputFieldError,
+} from "../components/InputField"
+import { InputFieldBlock } from "../components/InputFieldBlock"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { enumToOptions } from "../../../utils/helpers"
 import { Wrapper } from "./stories.utils"
@@ -43,23 +50,23 @@ storiesOf(`form`, module)
       <StoryUtils.Container>
         <Wrapper>
           <InputField id="example-1a" hasError={!!error} hasHint={true}>
-            <InputField.Wrapper>
-              <InputField.Label size={size} isRequired={required}>
+            <InputFieldWrapper>
+              <InputFieldLabel size={size} isRequired={required}>
                 First name
-              </InputField.Label>
-              <InputField.Control
+              </InputFieldLabel>
+              <InputFieldControl
                 onChange={e => action(`Change`)(e.target.value)}
                 placeholder={placeholder}
                 disabled={disabled}
                 required={required}
               />
-              <InputField.Hint>
+              <InputFieldHint>
                 {hint
                   ? hint
                   : ` This field is built with 'InputField' and subcomponents placed  explicitly as its children`}
-              </InputField.Hint>
-              <InputField.Error>{error}</InputField.Error>
-            </InputField.Wrapper>
+              </InputFieldHint>
+              <InputFieldError>{error}</InputFieldError>
+            </InputFieldWrapper>
           </InputField>
 
           <InputFieldBlock

@@ -1,8 +1,6 @@
-export { default as InputField } from "./components/InputField"
-export { default as InputFieldBlock } from "./components/InputFieldBlock"
-export {
-  default as InputConnectedField,
-} from "./components/InputConnectedField"
+export * from "./components/InputField"
+export * from "./components/InputFieldBlock"
+export * from "./components/InputConnectedField"
 
 export { default as TextAreaField } from "./components/TextAreaField"
 export { default as TextAreaFieldBlock } from "./components/TextAreaFieldBlock"

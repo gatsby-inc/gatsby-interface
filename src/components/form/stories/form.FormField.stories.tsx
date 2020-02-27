@@ -6,7 +6,14 @@ import { text, radios } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
 import README from "../README_FORM_FIELD.md"
 import { StoryUtils } from "../../../utils/storybook"
-import InputField from "../components/InputField"
+import {
+  InputField,
+  InputFieldWrapper,
+  InputFieldLabel,
+  InputFieldControl,
+  InputFieldHint,
+  InputFieldError,
+} from "../components/InputField"
 import TextAreaField from "../components/TextAreaField"
 import SelectField from "../components/SelectField"
 import CheckboxField from "../components/CheckboxField"
@@ -75,14 +82,14 @@ storiesOf(`form/FormField`, module)
       <StoryUtils.Container>
         <Wrapper>
           <InputField id="example-1a" hasError={!!error} hasHint={!!hint}>
-            <InputField.Wrapper>
-              <InputField.Label size={size}>Title</InputField.Label>
-              <InputField.Control
+            <InputFieldWrapper>
+              <InputFieldLabel size={size}>Title</InputFieldLabel>
+              <InputFieldControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <InputField.Hint>{hint}</InputField.Hint>
-              <InputField.Error>{error}</InputField.Error>
-            </InputField.Wrapper>
+              <InputFieldHint>{hint}</InputFieldHint>
+              <InputFieldError>{error}</InputFieldError>
+            </InputFieldWrapper>
           </InputField>
 
           <TextAreaField id="example-1b" hasError={!!error} hasHint={!!hint}>
@@ -183,24 +190,24 @@ storiesOf(`form/FormField`, module)
       <StoryUtils.Container>
         <Wrapper>
           <InputField id="example-2a" hasError={false} hasHint={false}>
-            <InputField.Wrapper>
-              <InputField.Label size="L">Label size L</InputField.Label>
-              <InputField.Control />
-            </InputField.Wrapper>
+            <InputFieldWrapper>
+              <InputFieldLabel size="L">Label size L</InputFieldLabel>
+              <InputFieldControl />
+            </InputFieldWrapper>
           </InputField>
           <InputField id="example-2b" hasError={false} hasHint={false}>
-            <InputField.Wrapper>
-              <InputField.Label size="M">
+            <InputFieldWrapper>
+              <InputFieldLabel size="M">
                 Label size M (default value)
-              </InputField.Label>
-              <InputField.Control />
-            </InputField.Wrapper>
+              </InputFieldLabel>
+              <InputFieldControl />
+            </InputFieldWrapper>
           </InputField>
           <InputField id="example-2" hasError={false} hasHint={false}>
-            <InputField.Wrapper>
-              <InputField.Label size="S">Label size S</InputField.Label>
-              <InputField.Control />
-            </InputField.Wrapper>
+            <InputFieldWrapper>
+              <InputFieldLabel size="S">Label size S</InputFieldLabel>
+              <InputFieldControl />
+            </InputFieldWrapper>
           </InputField>
         </Wrapper>
       </StoryUtils.Container>
@@ -212,10 +219,10 @@ storiesOf(`form/FormField`, module)
       <StoryUtils.Container>
         <Wrapper>
           <InputField id="example-3a">
-            <InputField.Wrapper>
-              <InputField.Label isRequired={true}>First name</InputField.Label>
-              <InputField.Control required />
-            </InputField.Wrapper>
+            <InputFieldWrapper>
+              <InputFieldLabel isRequired={true}>First name</InputFieldLabel>
+              <InputFieldControl required />
+            </InputFieldWrapper>
           </InputField>
 
           <TextAreaField id="example-3b">
@@ -247,12 +254,12 @@ storiesOf(`form/FormField`, module)
           </RadioButtonField>
 
           <InputField id="example-3d">
-            <InputField.Wrapper>
-              <InputField.Label isRequired={true}>
+            <InputFieldWrapper>
+              <InputFieldLabel isRequired={true}>
                 Give us your <strong>name</strong>
-              </InputField.Label>
-              <InputField.Control required />
-            </InputField.Wrapper>
+              </InputFieldLabel>
+              <InputFieldControl required />
+            </InputFieldWrapper>
           </InputField>
         </Wrapper>
       </StoryUtils.Container>
@@ -264,62 +271,62 @@ storiesOf(`form/FormField`, module)
       <StoryUtils.Container>
         <Wrapper>
           <InputField id="example-4a" hasError={true}>
-            <InputField.Wrapper>
-              <InputField.Label>First name</InputField.Label>
-              <InputField.Control />
-              <InputField.Hint></InputField.Hint>
-              <InputField.Error>Short error message.</InputField.Error>
-            </InputField.Wrapper>
+            <InputFieldWrapper>
+              <InputFieldLabel>First name</InputFieldLabel>
+              <InputFieldControl />
+              <InputFieldHint></InputFieldHint>
+              <InputFieldError>Short error message.</InputFieldError>
+            </InputFieldWrapper>
           </InputField>
 
           <InputField id="example-4b" hasError={true}>
-            <InputField.Wrapper>
-              <InputField.Label>First name</InputField.Label>
-              <InputField.Control />
-              <InputField.Hint></InputField.Hint>
-              <InputField.Error>
+            <InputFieldWrapper>
+              <InputFieldLabel>First name</InputFieldLabel>
+              <InputFieldControl />
+              <InputFieldHint></InputFieldHint>
+              <InputFieldError>
                 Long error message ... ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.
-              </InputField.Error>
-            </InputField.Wrapper>
+              </InputFieldError>
+            </InputFieldWrapper>
           </InputField>
 
           <InputField id="example-4c" hasHint={true}>
-            <InputField.Wrapper>
-              <InputField.Label>First name</InputField.Label>
-              <InputField.Control />
-              <InputField.Hint>Short hint.</InputField.Hint>
-              <InputField.Error></InputField.Error>
-            </InputField.Wrapper>
+            <InputFieldWrapper>
+              <InputFieldLabel>First name</InputFieldLabel>
+              <InputFieldControl />
+              <InputFieldHint>Short hint.</InputFieldHint>
+              <InputFieldError></InputFieldError>
+            </InputFieldWrapper>
           </InputField>
 
           <InputField id="example-4d" hasHint={true}>
-            <InputField.Wrapper>
-              <InputField.Label>First name</InputField.Label>
-              <InputField.Control />
-              <InputField.Hint>
+            <InputFieldWrapper>
+              <InputFieldLabel>First name</InputFieldLabel>
+              <InputFieldControl />
+              <InputFieldHint>
                 Long hint ... excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </InputField.Hint>
-              <InputField.Error></InputField.Error>
-            </InputField.Wrapper>
+              </InputFieldHint>
+              <InputFieldError></InputFieldError>
+            </InputFieldWrapper>
           </InputField>
 
           <InputField id="example-4e" hasHint={true} hasError={true}>
-            <InputField.Wrapper>
-              <InputField.Label>First name</InputField.Label>
-              <InputField.Control />
-              <InputField.Hint>
+            <InputFieldWrapper>
+              <InputFieldLabel>First name</InputFieldLabel>
+              <InputFieldControl />
+              <InputFieldHint>
                 Long hint ... excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </InputField.Hint>
-              <InputField.Error>
+              </InputFieldHint>
+              <InputFieldError>
                 Long error message ... ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.
-              </InputField.Error>
-            </InputField.Wrapper>
+              </InputFieldError>
+            </InputFieldWrapper>
           </InputField>
         </Wrapper>
       </StoryUtils.Container>

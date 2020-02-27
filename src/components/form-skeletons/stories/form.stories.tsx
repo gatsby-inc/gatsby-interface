@@ -6,7 +6,13 @@ import { text } from "@storybook/addon-knobs"
 import { StoryUtils } from "../../../utils/storybook"
 import README from "../README.md"
 import { action } from "@storybook/addon-actions"
-import InputFieldSkeleton from "../components/InputFieldSkeleton"
+import {
+  InputFieldSkeleton,
+  InputFieldSkeletonLabel,
+  InputFieldSkeletonControl,
+  InputFieldSkeletonError,
+  InputFieldSkeletonHint,
+} from "../components/InputFieldSkeleton"
 import SingleCheckboxFieldSkeleton from "../components/SingleCheckboxFieldSkeleton"
 import TextAreaFieldSkeleton from "../components/TextAreaFieldSkeleton"
 import CheckboxGroupFieldSkeleton from "../components/CheckboxGroupFieldSkeleton"
@@ -53,12 +59,12 @@ storiesOf(`form-skeletons`, module)
             hasHint={!!hint}
           >
             <div>
-              <InputFieldSkeleton.Label>Input</InputFieldSkeleton.Label>
-              <InputFieldSkeleton.Control
+              <InputFieldSkeletonLabel>Input</InputFieldSkeletonLabel>
+              <InputFieldSkeletonControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <InputFieldSkeleton.Error>{error}</InputFieldSkeleton.Error>
-              <InputFieldSkeleton.Hint>{hint}</InputFieldSkeleton.Hint>
+              <InputFieldSkeletonError>{error}</InputFieldSkeletonError>
+              <InputFieldSkeletonHint>{hint}</InputFieldSkeletonHint>
             </div>
           </InputFieldSkeleton>
           <br />
