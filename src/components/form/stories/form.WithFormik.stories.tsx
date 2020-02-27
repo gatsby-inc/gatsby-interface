@@ -13,11 +13,18 @@ import {
   InputFieldError,
   InputFieldHint,
 } from "../components/InputField"
-import TextAreaField from "../components/TextAreaField"
+import {
+  TextAreaField,
+  TextAreaFieldWrapper,
+  TextAreaFieldLabel,
+  TextAreaFieldControl,
+  TextAreaFieldHint,
+  TextAreaFieldError,
+} from "../components/TextAreaField"
 import { InputFieldBlock } from "../components/InputFieldBlock"
 import { InputConnectedField } from "../components/InputConnectedField"
-import TextAreaFieldBlock from "../components/TextAreaFieldBlock"
-import TextAreaConnectedField from "../components/TextAreaConnectedField"
+import { TextAreaFieldBlock } from "../components/TextAreaFieldBlock"
+import { TextAreaConnectedField } from "../components/TextAreaConnectedField"
 import SelectField from "../components/SelectField"
 import SelectFieldBlock from "../components/SelectFieldBlock"
 import SelectConnectedField from "../components/SelectConnectedField"
@@ -235,21 +242,21 @@ storiesOf(`form/Formik usage examples`, module)
                     hasError={!!(touched.description && errors.description)}
                     hasHint={true}
                   >
-                    <TextAreaField.Wrapper css={stackItemCss}>
-                      <TextAreaField.Label>Description</TextAreaField.Label>
-                      <TextAreaField.Control
+                    <TextAreaFieldWrapper css={stackItemCss}>
+                      <TextAreaFieldLabel>Description</TextAreaFieldLabel>
+                      <TextAreaFieldControl
                         name="description"
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.description}
                       />
-                      <TextAreaField.Hint>{`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}</TextAreaField.Hint>
-                      <TextAreaField.Error>
+                      <TextAreaFieldHint>{`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}</TextAreaFieldHint>
+                      <TextAreaFieldError>
                         {touched.description && errors.description
                           ? errors.description
                           : ``}
-                      </TextAreaField.Error>
-                    </TextAreaField.Wrapper>
+                      </TextAreaFieldError>
+                    </TextAreaFieldWrapper>
                   </TextAreaField>
 
                   <SelectField

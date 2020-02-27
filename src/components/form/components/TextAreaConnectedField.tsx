@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { getIn, useFormikContext } from "formik"
-import TextAreaFieldBlock from "./TextAreaFieldBlock"
+import { TextAreaFieldBlock } from "./TextAreaFieldBlock"
 import Case from "case"
 import { TextAreaFieldBlockProps } from "./TextAreaFieldBlock"
 
@@ -11,7 +11,9 @@ export type TextAreaConnectedFieldProps = {
   label?: React.ReactNode
 } & Omit<TextAreaFieldBlockProps, "id" | "label">
 
-const TextAreaConnectedField: React.FC<TextAreaConnectedFieldProps> = props => {
+export const TextAreaConnectedField: React.FC<
+  TextAreaConnectedFieldProps
+> = props => {
   const id = `${props.name}Field`
   const label = Case.sentence(props.name)
   const {
@@ -37,5 +39,3 @@ const TextAreaConnectedField: React.FC<TextAreaConnectedFieldProps> = props => {
     />
   )
 }
-
-export default TextAreaConnectedField

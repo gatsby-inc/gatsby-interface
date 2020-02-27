@@ -26,7 +26,8 @@ import {
 } from "../../form-skeletons/components/InputFieldSkeleton"
 import { Theme } from "../../../theme"
 
-export function InputField(props: InputFieldSkeletonProps) {
+export type InputFieldProps = InputFieldSkeletonProps
+export function InputField(props: InputFieldProps) {
   return <InputFieldSkeleton {...props}></InputFieldSkeleton>
 }
 

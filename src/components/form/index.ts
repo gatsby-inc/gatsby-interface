@@ -2,11 +2,9 @@ export * from "./components/InputField"
 export * from "./components/InputFieldBlock"
 export * from "./components/InputConnectedField"
 
-export { default as TextAreaField } from "./components/TextAreaField"
-export { default as TextAreaFieldBlock } from "./components/TextAreaFieldBlock"
-export {
-  default as TextAreaConnectedField,
-} from "./components/TextAreaConnectedField"
+export * from "./components/TextAreaField"
+export * from "./components/TextAreaFieldBlock"
+export * from "./components/TextAreaConnectedField"
 
 export { default as SelectField } from "./components/SelectField"
 export { default as SelectFieldBlock } from "./components/SelectFieldBlock"

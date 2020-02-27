@@ -1,9 +1,19 @@
 import React from "react"
-import FormFieldSkeleton, { FormFieldSkeletonProps } from "./FormFieldSkeleton"
+import FormFieldSkeleton, {
+  FormFieldSkeletonProps,
+  useFormFieldSkeleton,
+  FormFieldSkeletonLabelProps,
+  FormFieldSkeletonLabel,
+  FormFieldSkeletonHintProps,
+  FormFieldSkeletonHint,
+  FormFieldSkeletonErrorProps,
+  FormFieldSkeletonError,
+} from "./FormFieldSkeleton"
 import { getFinalAriaDescribedBy } from "../utils"
 import { OmitControlProps } from "../sharedTypes"
 
-function TextAreaFieldSkeleton(props: FormFieldSkeletonProps) {
+export type TextAreaFieldSkeletonProps = FormFieldSkeletonProps
+export function TextAreaFieldSkeleton(props: TextAreaFieldSkeletonProps) {
   return <FormFieldSkeleton {...props} />
 }
 
@@ -11,11 +21,11 @@ export type TextAreaFieldSkeletonControlProps = OmitControlProps<
   JSX.IntrinsicElements["textarea"]
 >
 
-TextAreaFieldSkeleton.Control = React.forwardRef<
+export const TextAreaFieldSkeletonControl = React.forwardRef<
   HTMLTextAreaElement,
   TextAreaFieldSkeletonControlProps
->((props, ref) => {
-  const { id, hasError, meta } = FormFieldSkeleton.useFormFieldSkeleton()
+>(function TextAreaFieldSkeletonControl(props, ref) {
+  const { id, hasError, meta } = useFormFieldSkeleton()
 
   return (
     <textarea
@@ -30,13 +40,24 @@ TextAreaFieldSkeleton.Control = React.forwardRef<
     />
   )
 })
-TextAreaFieldSkeleton.Control.displayName = `TextAreaFieldSkeleton.Control`
 
-TextAreaFieldSkeleton.Label = FormFieldSkeleton.Label
-TextAreaFieldSkeleton.Label.displayName = `TextAreaFieldSkeleton.Label`
-TextAreaFieldSkeleton.Hint = FormFieldSkeleton.Hint
-TextAreaFieldSkeleton.Hint.displayName = `TextAreaFieldSkeleton.Hint`
-TextAreaFieldSkeleton.Error = FormFieldSkeleton.Error
-TextAreaFieldSkeleton.Error.displayName = `TextAreaFieldSkeleton.Hint`
+export type TextAreaFieldSkeletonLabelProps = FormFieldSkeletonLabelProps
+export function TextAreaFieldSkeletonLabel(
+  props: TextAreaFieldSkeletonLabelProps
+) {
+  return <FormFieldSkeletonLabel {...props} />
+}
 
-export default TextAreaFieldSkeleton
+export type TextAreaFieldSkeletonHintProps = FormFieldSkeletonHintProps
+export function TextAreaFieldSkeletonHint(
+  props: TextAreaFieldSkeletonHintProps
+) {
+  return <FormFieldSkeletonHint {...props} />
+}
+
+export type TextAreaFieldSkeletonErrorProps = FormFieldSkeletonErrorProps
+export function TextAreaFieldSkeletonError(
+  props: TextAreaFieldSkeletonErrorProps
+) {
+  return <FormFieldSkeletonError {...props} />
+}

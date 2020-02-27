@@ -7,8 +7,15 @@ import { text, radios, boolean } from "@storybook/addon-knobs"
 import { StoryUtils } from "../../../utils/storybook"
 import README from "../README_TEXTAREA_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import TextAreaField from "../components/TextAreaField"
-import TextAreaFieldBlock from "../components/TextAreaFieldBlock"
+import {
+  TextAreaField,
+  TextAreaFieldWrapper,
+  TextAreaFieldLabel,
+  TextAreaFieldControl,
+  TextAreaFieldHint,
+  TextAreaFieldError,
+} from "../components/TextAreaField"
+import { TextAreaFieldBlock } from "../components/TextAreaFieldBlock"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { enumToOptions } from "../../../utils/helpers"
 import colors from "../../../theme/colors"
@@ -42,23 +49,23 @@ storiesOf(`form`, module)
       <StoryUtils.Container>
         <Wrapper>
           <TextAreaField id="example-1a" hasError={!!error} hasHint={true}>
-            <TextAreaField.Wrapper>
-              <TextAreaField.Label size={size} isRequired={required}>
+            <TextAreaFieldWrapper>
+              <TextAreaFieldLabel size={size} isRequired={required}>
                 Comment
-              </TextAreaField.Label>
-              <TextAreaField.Control
+              </TextAreaFieldLabel>
+              <TextAreaFieldControl
                 onChange={e => action(`Change`)(e.target.value)}
                 placeholder={placeholder}
                 disabled={disabled}
                 required={required}
               />
-              <TextAreaField.Hint>
+              <TextAreaFieldHint>
                 {hint
                   ? hint
                   : `This field is built with 'TextAreaField' and subcomponents placed explicitly as its children`}
-              </TextAreaField.Hint>
-              <TextAreaField.Error>{error}</TextAreaField.Error>
-            </TextAreaField.Wrapper>
+              </TextAreaFieldHint>
+              <TextAreaFieldError>{error}</TextAreaFieldError>
+            </TextAreaFieldWrapper>
           </TextAreaField>
 
           <TextAreaFieldBlock
