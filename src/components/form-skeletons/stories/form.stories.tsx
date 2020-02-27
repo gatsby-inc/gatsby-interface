@@ -17,7 +17,13 @@ import SingleCheckboxFieldSkeleton from "../components/SingleCheckboxFieldSkelet
 import TextAreaFieldSkeleton from "../components/TextAreaFieldSkeleton"
 import CheckboxGroupFieldSkeleton from "../components/CheckboxGroupFieldSkeleton"
 import RadioButtonFieldSkeleton from "../components/RadioButtonFieldSkeleton"
-import SelectFieldSkeleton from "../components/SelectFieldSkeleton"
+import {
+  SelectFieldSkeleton,
+  SelectFieldSkeletonLabel,
+  SelectFieldSkeletonControl,
+  SelectFieldSkeletonError,
+  SelectFieldSkeletonHint,
+} from "../components/SelectFieldSkeleton"
 
 storiesOf(`form-skeletons`, module)
   .addParameters({
@@ -91,13 +97,13 @@ storiesOf(`form-skeletons`, module)
             hasHint={!!hint}
           >
             <div>
-              <SelectFieldSkeleton.Label>Select</SelectFieldSkeleton.Label>
-              <SelectFieldSkeleton.Control
+              <SelectFieldSkeletonLabel>Select</SelectFieldSkeletonLabel>
+              <SelectFieldSkeletonControl
                 options={options}
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <SelectFieldSkeleton.Error>{error}</SelectFieldSkeleton.Error>
-              <SelectFieldSkeleton.Hint>{hint}</SelectFieldSkeleton.Hint>
+              <SelectFieldSkeletonError>{error}</SelectFieldSkeletonError>
+              <SelectFieldSkeletonHint>{hint}</SelectFieldSkeletonHint>
             </div>
           </SelectFieldSkeleton>
           <br />

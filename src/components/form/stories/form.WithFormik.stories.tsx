@@ -18,9 +18,15 @@ import { InputFieldBlock } from "../components/InputFieldBlock"
 import { InputConnectedField } from "../components/InputConnectedField"
 import TextAreaFieldBlock from "../components/TextAreaFieldBlock"
 import TextAreaConnectedField from "../components/TextAreaConnectedField"
-import SelectField from "../components/SelectField"
-import SelectFieldBlock from "../components/SelectFieldBlock"
-import SelectConnectedField from "../components/SelectConnectedField"
+import {
+  SelectField,
+  SelectFieldWrapper,
+  SelectFieldLabel,
+  SelectFieldControl,
+  SelectFieldError,
+} from "../components/SelectField"
+import { SelectFieldBlock } from "../components/SelectFieldBlock"
+import { SelectConnectedField } from "../components/SelectConnectedField"
 import CheckboxField from "../components/CheckboxField"
 import CheckboxFieldBlock from "../components/CheckboxFieldBlock"
 import CheckboxConnectedField from "../components/CheckboxConnectedField"
@@ -256,21 +262,21 @@ storiesOf(`form/Formik usage examples`, module)
                     id="authorField"
                     hasError={!!(touched.author && errors.author)}
                   >
-                    <SelectField.Wrapper css={stackItemCss}>
-                      <SelectField.Label isRequired={true}>
+                    <SelectFieldWrapper css={stackItemCss}>
+                      <SelectFieldLabel isRequired={true}>
                         Author
-                      </SelectField.Label>
-                      <SelectField.Control
+                      </SelectFieldLabel>
+                      <SelectFieldControl
                         name="author"
                         options={authors}
                         value={values.author}
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
-                      <SelectField.Error>
+                      <SelectFieldError>
                         {touched.author && errors.author ? errors.author : ``}
-                      </SelectField.Error>
-                    </SelectField.Wrapper>
+                      </SelectFieldError>
+                    </SelectFieldWrapper>
                   </SelectField>
 
                   <RadioButtonField

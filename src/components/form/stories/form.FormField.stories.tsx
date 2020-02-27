@@ -15,7 +15,14 @@ import {
   InputFieldError,
 } from "../components/InputField"
 import TextAreaField from "../components/TextAreaField"
-import SelectField from "../components/SelectField"
+import {
+  SelectField,
+  SelectFieldWrapper,
+  SelectFieldLabel,
+  SelectFieldControl,
+  SelectFieldHint,
+  SelectFieldError,
+} from "../components/SelectField"
 import CheckboxField from "../components/CheckboxField"
 import CheckboxGroupField from "../components/CheckboxGroupField"
 import RadioButtonField from "../components/RadioButtonField"
@@ -104,15 +111,15 @@ storiesOf(`form/FormField`, module)
           </TextAreaField>
 
           <SelectField id="example-1c" hasError={!!error} hasHint={!!hint}>
-            <SelectField.Wrapper>
-              <SelectField.Label size={size}>Author</SelectField.Label>
-              <SelectField.Control
+            <SelectFieldWrapper>
+              <SelectFieldLabel size={size}>Author</SelectFieldLabel>
+              <SelectFieldControl
                 options={authors}
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <SelectField.Hint>{hint}</SelectField.Hint>
-              <SelectField.Error>{error}</SelectField.Error>
-            </SelectField.Wrapper>
+              <SelectFieldHint>{hint}</SelectFieldHint>
+              <SelectFieldError>{error}</SelectFieldError>
+            </SelectFieldWrapper>
           </SelectField>
 
           <CheckboxGroupField
