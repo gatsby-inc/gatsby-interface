@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { AtomTone } from "../../theme/types"
-import { Theme } from "../../theme"
+import { Theme, ThemeCss } from "../../theme"
 
 export type ToggleGutterProps = JSX.IntrinsicElements["span"]
 
@@ -45,14 +45,16 @@ export default function ToggleGutter(props: ToggleGutterProps) {
   )
 }
 
-ToggleGutter.tagName = "span"
+export const ToggleGutterTagName = "span"
 
-ToggleGutter.getFocusCss = (theme: Theme) => ({
+export const toggleGutterFocusCss: ThemeCss = (theme: Theme) => ({
   boxShadow: `0 0 0 3px ${theme.colors.blue[30]}`,
   outline: `0`,
 })
 
-ToggleGutter.getCheckedCss = (theme: Theme, tone: AtomTone = `BRAND`) => ({
+export const toggleGutterCheckedCss = (
+  tone: AtomTone = `BRAND`
+): ThemeCss => theme => ({
   background: theme.tones[tone].medium,
   ":after": {
     left: `calc(100% - 18px)`,
