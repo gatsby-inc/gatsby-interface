@@ -2,9 +2,11 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 import { useFormikContext, getIn } from "formik"
-import CheckboxGroupFieldBlock from "./CheckboxGroupFieldBlock"
+import {
+  CheckboxGroupFieldBlock,
+  CheckboxGroupFieldBlockProps,
+} from "./CheckboxGroupFieldBlock"
 import Case from "case"
-import { CheckboxGroupFieldBlockProps } from "./CheckboxGroupFieldBlock"
 
 export type CheckboxGroupConnectedFieldProps = {
   name: string
@@ -13,7 +15,7 @@ export type CheckboxGroupConnectedFieldProps = {
   value?: any[]
 } & Omit<CheckboxGroupFieldBlockProps, "id" | "label" | "value">
 
-const CheckboxGroupConnectedField: React.FC<
+export const CheckboxGroupConnectedField: React.FC<
   CheckboxGroupConnectedFieldProps
 > = props => {
   const id = `${props.name}Field`
@@ -54,5 +56,3 @@ const CheckboxGroupConnectedField: React.FC<
     />
   )
 }
-
-export default CheckboxGroupConnectedField

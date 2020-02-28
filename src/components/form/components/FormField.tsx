@@ -39,10 +39,7 @@ export function FormField(props: FormFieldSkeletonProps) {
   return <FormFieldSkeleton {...props} />
 }
 
-export type FormFieldWrapperProps = Pick<
-  JSX.IntrinsicElements["div"],
-  "className" | "style"
->
+export type FormFieldWrapperProps = Omit<JSX.IntrinsicElements["div"], "ref">
 
 export const FormFieldWrapper: React.FC<FormFieldWrapperProps> = props => {
   return <div {...props} />

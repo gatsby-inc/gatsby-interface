@@ -21,7 +21,14 @@ import {
   TextAreaFieldSkeletonError,
   TextAreaFieldSkeletonHint,
 } from "../components/TextAreaFieldSkeleton"
-import CheckboxGroupFieldSkeleton from "../components/CheckboxGroupFieldSkeleton"
+import {
+  CheckboxGroupFieldSkeleton,
+  CheckboxGroupFieldSkeletonLabel,
+  CheckboxGroupFieldSkeletonOption,
+  CheckboxGroupFieldSkeletonOptionLabel,
+  CheckboxGroupFieldSkeletonError,
+  CheckboxGroupFieldSkeletonHint,
+} from "../components/CheckboxGroupFieldSkeleton"
 import RadioButtonFieldSkeleton from "../components/RadioButtonFieldSkeleton"
 import SelectFieldSkeleton from "../components/SelectFieldSkeleton"
 
@@ -127,26 +134,26 @@ storiesOf(`form-skeletons`, module)
             hasError={!!error}
             hasHint={!!hint}
           >
-            <CheckboxGroupFieldSkeleton.Label>
+            <CheckboxGroupFieldSkeletonLabel>
               Checkbox group
-            </CheckboxGroupFieldSkeleton.Label>
+            </CheckboxGroupFieldSkeletonLabel>
             {options.map(({ label, value }) => (
               <React.Fragment key={value}>
-                <CheckboxGroupFieldSkeleton.Option
+                <CheckboxGroupFieldSkeletonOption
                   value={value}
                   name="checkbox-group"
                 />
-                <CheckboxGroupFieldSkeleton.OptionLabel optionValue={value}>
+                <CheckboxGroupFieldSkeletonOptionLabel optionValue={value}>
                   {label}
-                </CheckboxGroupFieldSkeleton.OptionLabel>
+                </CheckboxGroupFieldSkeletonOptionLabel>
               </React.Fragment>
             ))}
-            <CheckboxGroupFieldSkeleton.Error>
+            <CheckboxGroupFieldSkeletonError>
               {error}
-            </CheckboxGroupFieldSkeleton.Error>
-            <CheckboxGroupFieldSkeleton.Hint>
+            </CheckboxGroupFieldSkeletonError>
+            <CheckboxGroupFieldSkeletonHint>
               {hint}
-            </CheckboxGroupFieldSkeleton.Hint>
+            </CheckboxGroupFieldSkeletonHint>
           </CheckboxGroupFieldSkeleton>
           <br />
           <RadioButtonFieldSkeleton

@@ -18,13 +18,9 @@ export {
   default as CheckboxConnectedField,
 } from "./components/CheckboxConnectedField"
 
-export { default as CheckboxGroupField } from "./components/CheckboxGroupField"
-export {
-  default as CheckboxGroupFieldBlock,
-} from "./components/CheckboxGroupFieldBlock"
-export {
-  default as CheckboxGroupConnectedField,
-} from "./components/CheckboxGroupConnectedField"
+export * from "./components/CheckboxGroupField"
+export * from "./components/CheckboxGroupFieldBlock"
+export * from "./components/CheckboxGroupConnectedField"
 
 export { default as RadioButtonField } from "./components/RadioButtonField"
 export {

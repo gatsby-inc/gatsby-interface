@@ -2,7 +2,16 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import CheckboxGroupField from "./CheckboxGroupField"
+import {
+  CheckboxGroupField,
+  CheckboxGroupFieldLabel,
+  CheckboxGroupFieldOptions,
+  CheckboxGroupFieldOptionWrapper,
+  CheckboxGroupFieldOption,
+  CheckboxGroupFieldOptionLabel,
+  CheckboxGroupFieldHint,
+  CheckboxGroupFieldError,
+} from "./CheckboxGroupField"
 import { FormGroupFieldOptionProps } from "./FormGroupField"
 import { FormFieldLabelSize } from "./FormField.helpers"
 import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
@@ -19,7 +28,9 @@ export type CheckboxGroupFieldBlockProps = {
   value: any[]
 } & Omit<FormGroupFieldOptionProps, "value">
 
-const CheckboxGroupFieldBlock = (props: CheckboxGroupFieldBlockProps) => {
+export const CheckboxGroupFieldBlock = (
+  props: CheckboxGroupFieldBlockProps
+) => {
   const {
     id,
     label,
@@ -42,29 +53,27 @@ const CheckboxGroupFieldBlock = (props: CheckboxGroupFieldBlockProps) => {
       layout={layout}
       className={className}
     >
-      <CheckboxGroupField.Label size={labelSize} isRequired={!!rest.required}>
+      <CheckboxGroupFieldLabel size={labelSize} isRequired={!!rest.required}>
         {label}
-      </CheckboxGroupField.Label>
-      <CheckboxGroupField.Options>
+      </CheckboxGroupFieldLabel>
+      <CheckboxGroupFieldOptions>
         {options.map(({ label, value }) => (
-          <CheckboxGroupField.OptionWrapper key={value}>
-            <CheckboxGroupField.Option
+          <CheckboxGroupFieldOptionWrapper key={value}>
+            <CheckboxGroupFieldOption
               value={value}
               checked={fieldValue.includes(value)}
               {...rest}
             />
-            <CheckboxGroupField.OptionLabel optionValue={value}>
+            <CheckboxGroupFieldOptionLabel optionValue={value}>
               {label}
-            </CheckboxGroupField.OptionLabel>
-          </CheckboxGroupField.OptionWrapper>
+            </CheckboxGroupFieldOptionLabel>
+          </CheckboxGroupFieldOptionWrapper>
         ))}
-      </CheckboxGroupField.Options>
-      <CheckboxGroupField.Hint>{hint}</CheckboxGroupField.Hint>
-      <CheckboxGroupField.Error validationMode={validationMode}>
+      </CheckboxGroupFieldOptions>
+      <CheckboxGroupFieldHint>{hint}</CheckboxGroupFieldHint>
+      <CheckboxGroupFieldError validationMode={validationMode}>
         {error}
-      </CheckboxGroupField.Error>
+      </CheckboxGroupFieldError>
     </CheckboxGroupField>
   )
 }
-
-export default CheckboxGroupFieldBlock
