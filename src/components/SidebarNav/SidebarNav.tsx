@@ -20,12 +20,10 @@ export type SidebarNavVariant = `DEFAULT` | `FULL`
 
 export type SidebarNavProps = JSX.IntrinsicElements["nav"] & {
   options?: SidebarNavOption[]
-  children?: React.ReactNode
   variant?: SidebarNavVariant
 }
 
 export default function SidebarNav({
-  children,
   options,
   variant,
   ...rest
@@ -38,14 +36,12 @@ export default function SidebarNav({
       })}
       {...rest}
     >
-      {options ? (
-        <SidebarNav.List variant={variant}>
+      {options && (
+        <SidebarNavList variant={variant}>
           {options.map(option => {
-            return <SidebarNav.ListItem key={option.to} {...option} />
+            return <SidebarNavListItem key={option.to} {...option} />
           })}
-        </SidebarNav.List>
-      ) : (
-        children
+        </SidebarNavList>
       )}
     </nav>
   )
@@ -70,9 +66,6 @@ function SidebarNavList({ variant = `DEFAULT`, ...rest }: SidebarNavListProps) {
     />
   )
 }
-
-SidebarNavList.displayName = `SidebarNav.List`
-SidebarNav.List = SidebarNavList
 
 const baseNavItemCss: ThemeCss = theme => ({
   fontFamily: theme.fonts.header,
@@ -135,7 +128,7 @@ function SidebarNavListItem({
       {...rest}
     >
       {subItems && active && (
-        <SidebarNav.List
+        <SidebarNavList
           css={(theme: Theme) => ({
             paddingTop: theme.space[5],
             paddingBottom: theme.space[3],
@@ -158,14 +151,17 @@ function SidebarNavListItem({
               {...subItem}
             />
           ))}
-        </SidebarNav.List>
+        </SidebarNavList>
       )}
     </SidebarBaseItem>
   )
 }
 
-SidebarNavListItem.displayName = `SidebarNav.ListItem`
-SidebarNav.ListItem = SidebarNavListItem
+const itemLinkCss: ThemeCss = theme => ({
+  color: `inherit`,
+  lineHeight: theme.lineHeights.dense,
+  textDecoration: `none`,
+})
 
 type SidebarBaseItemProps = Omit<JSX.IntrinsicElements["li"], "onClick"> &
   SidebarNavItem & {
@@ -193,11 +189,7 @@ function SidebarBaseItem({
         <Link
           to={to}
           onClick={onClick}
-          css={(theme: Theme) => ({
-            color: `inherit`,
-            lineHeight: theme.lineHeights.dense,
-            textDecoration: `none`,
-          })}
+          css={itemLinkCss}
           aria-current={current}
         >
           {label}
