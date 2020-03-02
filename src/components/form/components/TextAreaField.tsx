@@ -3,17 +3,33 @@ import { jsx } from "@emotion/core"
 import React from "react"
 
 import {
-  FormFieldSkeleton,
   FormFieldSkeletonProps,
+  useFormFieldSkeleton,
 } from "../../form-skeletons/components/FormFieldSkeleton"
-import { FormField, getFieldStackStyles } from "./FormField"
+import {
+  getFieldStackStyles,
+  FormFieldStack,
+  FormFieldStackProps,
+  FormFieldLabelProps,
+  useStyledFieldLabel,
+  useStyledFieldError,
+  useStyledFieldHint,
+} from "./FormField"
 import { getInputStyles } from "./FormField.helpers"
-import TextAreaFieldSkeleton, {
+import {
+  TextAreaFieldSkeleton,
   TextAreaFieldSkeletonControlProps,
+  TextAreaFieldSkeletonControl,
+  TextAreaFieldSkeletonLabel,
+  TextAreaFieldSkeletonErrorProps,
+  TextAreaFieldSkeletonError,
+  TextAreaFieldSkeletonHintProps,
+  TextAreaFieldSkeletonHint,
 } from "../../form-skeletons/components/TextAreaFieldSkeleton"
 import { Theme } from "../../../theme"
 
-function TextAreaField(props: FormFieldSkeletonProps) {
+export type TextAreaFieldProps = FormFieldSkeletonProps
+export function TextAreaField(props: FormFieldSkeletonProps) {
   return <TextAreaFieldSkeleton {...props}></TextAreaFieldSkeleton>
 }
 
@@ -22,11 +38,11 @@ export type TextAreaFieldControlProps = Omit<
   "ref"
 >
 
-const Control = React.forwardRef<
+export const TextAreaFieldControl = React.forwardRef<
   HTMLTextAreaElement,
   TextAreaFieldControlProps
->((props, ref) => {
-  const { hasError } = FormFieldSkeleton.useFormFieldSkeleton()
+>(function TextAreaFieldControl(props, ref) {
+  const { hasError } = useFormFieldSkeleton()
 
   const placeholder =
     props.placeholder && props.disabled
@@ -34,7 +50,7 @@ const Control = React.forwardRef<
       : props.placeholder
 
   return (
-    <TextAreaFieldSkeleton.Control
+    <TextAreaFieldSkeletonControl
       ref={ref}
       css={(theme: Theme) => [
         getInputStyles(theme, hasError),
@@ -52,19 +68,34 @@ const Control = React.forwardRef<
   )
 })
 
-TextAreaField.Control = Control
-TextAreaField.Control.displayName = `TextAreaField.Control`
+export type TextAreaFieldWrapperProps = FormFieldStackProps
+export const TextAreaFieldWrapper = FormFieldStack
 
-TextAreaField.Wrapper = FormField.Stack
-TextAreaField.Wrapper.displayName = `TextAreaField.StackWrapper`
+export type TextAreaFieldLabelProps = FormFieldLabelProps
+export function TextAreaFieldLabel({
+  children,
+  size,
+  isRequired,
+  ...props
+}: TextAreaFieldLabelProps) {
+  const styledProps = useStyledFieldLabel(children, { size, isRequired })
 
-TextAreaField.Label = FormField.Label
-TextAreaField.Label.displayName = `TextAreaField.Label`
+  return <TextAreaFieldSkeletonLabel {...props} {...styledProps} />
+}
 
-TextAreaField.Hint = FormField.Hint
-TextAreaField.Hint.displayName = `TextAreaField.Hint`
+export type TextAreaFieldErrorProps = TextAreaFieldSkeletonErrorProps
+export function TextAreaFieldError({
+  children,
+  ...props
+}: TextAreaFieldErrorProps) {
+  const styledProps = useStyledFieldError(children)
 
-TextAreaField.Error = FormField.Error
-TextAreaField.Error.displayName = `TextAreaField.Hint`
+  return <TextAreaFieldSkeletonError {...props} {...styledProps} />
+}
 
-export default TextAreaField
+export type TextAreaFieldHintProps = TextAreaFieldSkeletonHintProps
+export function TextAreaFieldHint(props: TextAreaFieldHintProps) {
+  const styledProps = useStyledFieldHint()
+
+  return <TextAreaFieldSkeletonHint {...props} {...styledProps} />
+}

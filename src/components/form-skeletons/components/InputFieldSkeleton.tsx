@@ -43,16 +43,16 @@ export const InputFieldSkeletonControl = React.forwardRef<
 })
 
 export type InputFieldSkeletonLabelProps = FormFieldSkeletonLabelProps
-export function InputFieldSkeletonLabel(props: FormFieldSkeletonLabelProps) {
+export function InputFieldSkeletonLabel(props: InputFieldSkeletonLabelProps) {
   return <FormFieldSkeletonLabel {...props} />
 }
 
 export type InputFieldSkeletonHintProps = FormFieldSkeletonHintProps
-export function InputFieldSkeletonHint(props: FormFieldSkeletonHintProps) {
+export function InputFieldSkeletonHint(props: InputFieldSkeletonHintProps) {
   return <FormFieldSkeletonHint {...props} />
 }
 
 export type InputFieldSkeletonErrorProps = FormFieldSkeletonErrorProps
-export function InputFieldSkeletonError(props: FormFieldSkeletonErrorProps) {
+export function InputFieldSkeletonError(props: InputFieldSkeletonErrorProps) {
   return <FormFieldSkeletonError {...props} />
 }

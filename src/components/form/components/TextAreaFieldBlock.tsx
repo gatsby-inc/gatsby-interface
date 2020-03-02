@@ -2,7 +2,15 @@
 import { jsx } from "@emotion/core"
 import React, { ReactNode } from "react"
 
-import TextAreaField, { TextAreaFieldControlProps } from "./TextAreaField"
+import {
+  TextAreaField,
+  TextAreaFieldControlProps,
+  TextAreaFieldWrapper,
+  TextAreaFieldLabel,
+  TextAreaFieldControl,
+  TextAreaFieldHint,
+  TextAreaFieldError,
+} from "./TextAreaField"
 import { FormFieldLabelSize } from "./FormField.helpers"
 import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
 
@@ -15,10 +23,10 @@ export type TextAreaFieldBlockProps = {
   validationMode?: ErrorValidationMode
 } & TextAreaFieldControlProps
 
-const TextAreaFieldBlock = React.forwardRef<
+export const TextAreaFieldBlock = React.forwardRef<
   HTMLTextAreaElement,
   TextAreaFieldBlockProps
->((props, ref) => {
+>(function TextAreaFieldBlock(props, ref) {
   const {
     id,
     label,
@@ -32,18 +40,16 @@ const TextAreaFieldBlock = React.forwardRef<
 
   return (
     <TextAreaField id={id} hasError={!!error} hasHint={!!hint}>
-      <TextAreaField.Wrapper className={className}>
-        <TextAreaField.Label size={labelSize} isRequired={!!rest.required}>
+      <TextAreaFieldWrapper className={className}>
+        <TextAreaFieldLabel size={labelSize} isRequired={!!rest.required}>
           {label}
-        </TextAreaField.Label>
-        <TextAreaField.Control ref={ref} {...rest} />
-        <TextAreaField.Hint>{hint}</TextAreaField.Hint>
-        <TextAreaField.Error validationMode={validationMode}>
+        </TextAreaFieldLabel>
+        <TextAreaFieldControl ref={ref} {...rest} />
+        <TextAreaFieldHint>{hint}</TextAreaFieldHint>
+        <TextAreaFieldError validationMode={validationMode}>
           {error}
-        </TextAreaField.Error>
-      </TextAreaField.Wrapper>
+        </TextAreaFieldError>
+      </TextAreaFieldWrapper>
     </TextAreaField>
   )
 })
-
-export default TextAreaFieldBlock

@@ -14,7 +14,13 @@ import {
   InputFieldSkeletonHint,
 } from "../components/InputFieldSkeleton"
 import SingleCheckboxFieldSkeleton from "../components/SingleCheckboxFieldSkeleton"
-import TextAreaFieldSkeleton from "../components/TextAreaFieldSkeleton"
+import {
+  TextAreaFieldSkeleton,
+  TextAreaFieldSkeletonLabel,
+  TextAreaFieldSkeletonControl,
+  TextAreaFieldSkeletonError,
+  TextAreaFieldSkeletonHint,
+} from "../components/TextAreaFieldSkeleton"
 import CheckboxGroupFieldSkeleton from "../components/CheckboxGroupFieldSkeleton"
 import RadioButtonFieldSkeleton from "../components/RadioButtonFieldSkeleton"
 import {
@@ -80,14 +86,12 @@ storiesOf(`form-skeletons`, module)
             hasHint={!!hint}
           >
             <div>
-              <TextAreaFieldSkeleton.Label>
-                Text Area
-              </TextAreaFieldSkeleton.Label>
-              <TextAreaFieldSkeleton.Control
+              <TextAreaFieldSkeletonLabel>Text Area</TextAreaFieldSkeletonLabel>
+              <TextAreaFieldSkeletonControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <TextAreaFieldSkeleton.Error>{error}</TextAreaFieldSkeleton.Error>
-              <TextAreaFieldSkeleton.Hint>{hint}</TextAreaFieldSkeleton.Hint>
+              <TextAreaFieldSkeletonError>{error}</TextAreaFieldSkeletonError>
+              <TextAreaFieldSkeletonHint>{hint}</TextAreaFieldSkeletonHint>
             </div>
           </TextAreaFieldSkeleton>
           <br />
