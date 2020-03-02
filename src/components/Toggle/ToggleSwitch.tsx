@@ -4,7 +4,11 @@ import React from "react"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
 import { AtomTone } from "../../theme/types"
 import { Theme } from "../../theme"
-import ToggleGutter from "./ToggleGutter"
+import ToggleGutter, {
+  ToggleGutterTagName,
+  toggleGutterCheckedCss,
+  toggleGutterFocusCss,
+} from "./ToggleGutter"
 import { toggleLabelCss } from "./Toggle.styles"
 
 export type ToggleSwitchProps = Omit<
@@ -62,14 +66,17 @@ export default function ToggleSwitch({
       id={id}
       className={className}
       style={style}
-      css={theme => ({
-        display: `flex`,
-        alignItems: `center`,
-        // We can rely on "> ToggleGutter.tagName" here since we have full control over direct children
-        [`&:focus-within > ${ToggleGutter.tagName}`]: ToggleGutter.getFocusCss(
-          theme
-        ),
-      })}
+      css={theme => [
+        {
+          display: `flex`,
+          alignItems: `center`,
+          // We can rely on "> ToggleGutterTagName" here since we have full control over direct children
+          [`&:focus-within > ${ToggleGutterTagName}`]: toggleGutterFocusCss(
+            theme
+          ),
+        },
+        toggleLabelCss(theme),
+      ]}
       onClick={e => {
         if (!inputOnRef.current || !inputOffRef.current) {
           return
@@ -91,12 +98,11 @@ export default function ToggleSwitch({
             inputOn.focus()
             inputOn.click()
           }
-        } else if (target.tagName === ToggleGutter.tagName.toUpperCase()) {
+        } else if (target.tagName === ToggleGutterTagName.toUpperCase()) {
           toggle()
         }
       }}
       onKeyPress={e => {
-        console.log({ key: e.key })
         if (e.key !== " ") {
           return
         }
@@ -113,13 +119,11 @@ export default function ToggleSwitch({
         ref={inputOffRef}
         {...rest}
       />
-      <label htmlFor={optionOffId} css={toggleLabelCss}>
-        {labelOff}
-      </label>
+      <label htmlFor={optionOffId}>{labelOff}</label>
       <ToggleGutter
         css={(theme: Theme) => [
           { marginLeft: theme.space[3], marginRight: theme.space[3] },
-          isOn && ToggleGutter.getCheckedCss(theme, tone),
+          isOn && toggleGutterCheckedCss(tone)(theme),
         ]}
       />
       <input
@@ -132,9 +136,7 @@ export default function ToggleSwitch({
         ref={inputOnRef}
         {...rest}
       />
-      <label htmlFor={optionOnId} css={toggleLabelCss}>
-        {labelOn}
-      </label>
+      <label htmlFor={optionOnId}>{labelOn}</label>
     </div>
   )
 }

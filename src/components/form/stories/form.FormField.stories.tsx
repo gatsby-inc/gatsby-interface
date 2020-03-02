@@ -14,8 +14,22 @@ import {
   InputFieldHint,
   InputFieldError,
 } from "../components/InputField"
-import TextAreaField from "../components/TextAreaField"
-import SelectField from "../components/SelectField"
+import {
+  TextAreaField,
+  TextAreaFieldWrapper,
+  TextAreaFieldLabel,
+  TextAreaFieldControl,
+  TextAreaFieldHint,
+  TextAreaFieldError,
+} from "../components/TextAreaField"
+import {
+  SelectField,
+  SelectFieldWrapper,
+  SelectFieldLabel,
+  SelectFieldControl,
+  SelectFieldHint,
+  SelectFieldError,
+} from "../components/SelectField"
 import {
   CheckboxField,
   CheckboxFieldWrapper,
@@ -100,26 +114,26 @@ storiesOf(`form/FormField`, module)
           </InputField>
 
           <TextAreaField id="example-1b" hasError={!!error} hasHint={!!hint}>
-            <TextAreaField.Wrapper>
-              <TextAreaField.Label size={size}>Description</TextAreaField.Label>
-              <TextAreaField.Control
+            <TextAreaFieldWrapper>
+              <TextAreaFieldLabel size={size}>Description</TextAreaFieldLabel>
+              <TextAreaFieldControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <TextAreaField.Hint>{hint}</TextAreaField.Hint>
-              <TextAreaField.Error>{error}</TextAreaField.Error>
-            </TextAreaField.Wrapper>
+              <TextAreaFieldHint>{hint}</TextAreaFieldHint>
+              <TextAreaFieldError>{error}</TextAreaFieldError>
+            </TextAreaFieldWrapper>
           </TextAreaField>
 
           <SelectField id="example-1c" hasError={!!error} hasHint={!!hint}>
-            <SelectField.Wrapper>
-              <SelectField.Label size={size}>Author</SelectField.Label>
-              <SelectField.Control
+            <SelectFieldWrapper>
+              <SelectFieldLabel size={size}>Author</SelectFieldLabel>
+              <SelectFieldControl
                 options={authors}
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <SelectField.Hint>{hint}</SelectField.Hint>
-              <SelectField.Error>{error}</SelectField.Error>
-            </SelectField.Wrapper>
+              <SelectFieldHint>{hint}</SelectFieldHint>
+              <SelectFieldError>{error}</SelectFieldError>
+            </SelectFieldWrapper>
           </SelectField>
 
           <CheckboxGroupField
@@ -233,12 +247,12 @@ storiesOf(`form/FormField`, module)
           </InputField>
 
           <TextAreaField id="example-3b">
-            <TextAreaField.Wrapper>
-              <TextAreaField.Label isRequired={true}>
+            <TextAreaFieldWrapper>
+              <TextAreaFieldLabel isRequired={true}>
                 Description
-              </TextAreaField.Label>
-              <TextAreaField.Control required />
-            </TextAreaField.Wrapper>
+              </TextAreaFieldLabel>
+              <TextAreaFieldControl required />
+            </TextAreaFieldWrapper>
           </TextAreaField>
 
           <RadioButtonField id="example-3c">

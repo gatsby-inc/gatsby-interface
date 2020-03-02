@@ -14,16 +14,28 @@ import {
   InputFieldSkeletonHint,
 } from "../components/InputFieldSkeleton"
 import {
+  TextAreaFieldSkeleton,
+  TextAreaFieldSkeletonLabel,
+  TextAreaFieldSkeletonControl,
+  TextAreaFieldSkeletonError,
+  TextAreaFieldSkeletonHint,
+} from "../components/TextAreaFieldSkeleton"
+import {
+  SelectFieldSkeleton,
+  SelectFieldSkeletonLabel,
+  SelectFieldSkeletonControl,
+  SelectFieldSkeletonError,
+  SelectFieldSkeletonHint,
+} from "../components/SelectFieldSkeleton"
+import {
   CheckboxFieldSkeleton,
   CheckboxFieldSkeletonControl,
   CheckboxFieldSkeletonLabel,
   CheckboxFieldSkeletonError,
   CheckboxFieldSkeletonHint,
 } from "../components/CheckboxFieldSkeleton"
-import TextAreaFieldSkeleton from "../components/TextAreaFieldSkeleton"
 import CheckboxGroupFieldSkeleton from "../components/CheckboxGroupFieldSkeleton"
 import RadioButtonFieldSkeleton from "../components/RadioButtonFieldSkeleton"
-import SelectFieldSkeleton from "../components/SelectFieldSkeleton"
 
 storiesOf(`form-skeletons`, module)
   .addParameters({
@@ -80,14 +92,12 @@ storiesOf(`form-skeletons`, module)
             hasHint={!!hint}
           >
             <div>
-              <TextAreaFieldSkeleton.Label>
-                Text Area
-              </TextAreaFieldSkeleton.Label>
-              <TextAreaFieldSkeleton.Control
+              <TextAreaFieldSkeletonLabel>Text Area</TextAreaFieldSkeletonLabel>
+              <TextAreaFieldSkeletonControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <TextAreaFieldSkeleton.Error>{error}</TextAreaFieldSkeleton.Error>
-              <TextAreaFieldSkeleton.Hint>{hint}</TextAreaFieldSkeleton.Hint>
+              <TextAreaFieldSkeletonError>{error}</TextAreaFieldSkeletonError>
+              <TextAreaFieldSkeletonHint>{hint}</TextAreaFieldSkeletonHint>
             </div>
           </TextAreaFieldSkeleton>
           <br />
@@ -97,13 +107,13 @@ storiesOf(`form-skeletons`, module)
             hasHint={!!hint}
           >
             <div>
-              <SelectFieldSkeleton.Label>Select</SelectFieldSkeleton.Label>
-              <SelectFieldSkeleton.Control
+              <SelectFieldSkeletonLabel>Select</SelectFieldSkeletonLabel>
+              <SelectFieldSkeletonControl
                 options={options}
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <SelectFieldSkeleton.Error>{error}</SelectFieldSkeleton.Error>
-              <SelectFieldSkeleton.Hint>{hint}</SelectFieldSkeleton.Hint>
+              <SelectFieldSkeletonError>{error}</SelectFieldSkeletonError>
+              <SelectFieldSkeletonHint>{hint}</SelectFieldSkeletonHint>
             </div>
           </SelectFieldSkeleton>
           <br />

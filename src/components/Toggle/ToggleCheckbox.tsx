@@ -4,7 +4,11 @@ import React from "react"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
 import { AtomTone } from "../../theme/types"
 import { Theme } from "../../theme"
-import ToggleGutter from "./ToggleGutter"
+import ToggleGutter, {
+  ToggleGutterTagName,
+  toggleGutterCheckedCss,
+  toggleGutterFocusCss,
+} from "./ToggleGutter"
 import { toggleLabelCss } from "./Toggle.styles"
 
 type BaseToggleProps = Omit<JSX.IntrinsicElements["input"], "ref" | "type"> & {
@@ -22,13 +26,10 @@ const BaseToggle = React.forwardRef<HTMLInputElement, BaseToggleProps>(
           css={(theme: Theme) => [
             visuallyHiddenCss,
             {
-              [`&:checked + ${ToggleGutter.tagName}`]: ToggleGutter.getCheckedCss(
-                theme,
+              [`&:checked + ${ToggleGutterTagName}`]: toggleGutterCheckedCss(
                 tone
-              ),
-              [`&:focus + ${ToggleGutter.tagName}`]: ToggleGutter.getFocusCss(
-                theme
-              ),
+              )(theme),
+              [`&:focus + ${ToggleGutterTagName}`]: toggleGutterFocusCss(theme),
             },
           ]}
           {...rest}

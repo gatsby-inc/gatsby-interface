@@ -7,8 +7,15 @@ import { text, radios, boolean } from "@storybook/addon-knobs"
 import { StoryUtils } from "../../../utils/storybook"
 import README from "../README_SELECT_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import SelectField from "../components/SelectField"
-import SelectFieldBlock from "../components/SelectFieldBlock"
+import {
+  SelectField,
+  SelectFieldWrapper,
+  SelectFieldLabel,
+  SelectFieldControl,
+  SelectFieldHint,
+  SelectFieldError,
+} from "../components/SelectField"
+import { SelectFieldBlock } from "../components/SelectFieldBlock"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { enumToOptions } from "../../../utils/helpers"
 import { Wrapper } from "./stories.utils"
@@ -61,23 +68,23 @@ storiesOf(`form`, module)
       <StoryUtils.Container>
         <Wrapper>
           <SelectField id="example-1a" hasError={!!error} hasHint={true}>
-            <SelectField.Wrapper>
-              <SelectField.Label isRequired={required} size={size}>
+            <SelectFieldWrapper>
+              <SelectFieldLabel isRequired={required} size={size}>
                 Author
-              </SelectField.Label>
-              <SelectField.Control
+              </SelectFieldLabel>
+              <SelectFieldControl
                 options={options}
                 onChange={e => action(`Change`)(e.target.value)}
                 disabled={disabled}
                 required={required}
               />
-              <SelectField.Hint>
+              <SelectFieldHint>
                 {hint
                   ? hint
                   : `This field is built with 'SelectField' and subcomponents placed explicitly as its children`}
-              </SelectField.Hint>
-              <SelectField.Error>{error}</SelectField.Error>
-            </SelectField.Wrapper>
+              </SelectFieldHint>
+              <SelectFieldError>{error}</SelectFieldError>
+            </SelectFieldWrapper>
           </SelectField>
 
           <SelectFieldBlock

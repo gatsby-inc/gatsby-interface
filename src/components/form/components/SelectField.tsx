@@ -3,17 +3,33 @@ import { jsx } from "@emotion/core"
 import React from "react"
 
 import {
-  FormFieldSkeleton,
   FormFieldSkeletonProps,
+  useFormFieldSkeleton,
 } from "../../form-skeletons/components/FormFieldSkeleton"
-import { FormField, getFieldStackStyles } from "./FormField"
+import {
+  getFieldStackStyles,
+  FormFieldStackProps,
+  FormFieldStack,
+  FormFieldLabelProps,
+  useStyledFieldLabel,
+  useStyledFieldError,
+  useStyledFieldHint,
+} from "./FormField"
 import { getInputStyles } from "./FormField.helpers"
-import SelectFieldSkeleton, {
+import {
+  SelectFieldSkeleton,
   SelectFieldSkeletonControlProps,
+  SelectFieldSkeletonControl,
+  SelectFieldSkeletonLabel,
+  SelectFieldSkeletonErrorProps,
+  SelectFieldSkeletonError,
+  SelectFieldSkeletonHintProps,
+  SelectFieldSkeletonHint,
 } from "../../form-skeletons/components/SelectFieldSkeleton"
 import { Theme } from "../../../theme"
 
-function SelectField(props: FormFieldSkeletonProps) {
+export type SelectFieldProps = FormFieldSkeletonProps
+export function SelectField(props: FormFieldSkeletonProps) {
   return <SelectFieldSkeleton {...props}></SelectFieldSkeleton>
 }
 
@@ -22,42 +38,58 @@ export type SelectFieldControlProps = Omit<
   "ref"
 >
 
-const Control = React.forwardRef<HTMLSelectElement, SelectFieldControlProps>(
-  (props, ref) => {
-    const { hasError } = FormFieldSkeleton.useFormFieldSkeleton()
+export const SelectFieldControl = React.forwardRef<
+  HTMLSelectElement,
+  SelectFieldControlProps
+>(function SelectFieldControl(props, ref) {
+  const { hasError } = useFormFieldSkeleton()
 
-    return (
-      <SelectFieldSkeleton.Control
-        ref={ref}
-        css={(theme: Theme) => [
-          getFieldStackStyles(`item`, theme),
-          getInputStyles(theme, hasError),
-          {
-            padding: `0 ${theme.space[3]}`,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg stroke='currentColor' fill='currentColor' stroke-width='0' viewBox='0 0 24 24' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'%3E%3C/path%3E%3C/svg%3E")`,
-            backgroundRepeat: `no-repeat`,
-            backgroundPosition: `right ${theme.space[3]} top 50%, 0 0`,
-          },
-        ]}
-        {...props}
-      />
-    )
-  }
-)
+  return (
+    <SelectFieldSkeletonControl
+      ref={ref}
+      css={(theme: Theme) => [
+        getFieldStackStyles(`item`, theme),
+        getInputStyles(theme, hasError),
+        {
+          padding: `0 ${theme.space[3]}`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg stroke='currentColor' fill='currentColor' stroke-width='0' viewBox='0 0 24 24' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'%3E%3C/path%3E%3C/svg%3E")`,
+          backgroundRepeat: `no-repeat`,
+          backgroundPosition: `right ${theme.space[3]} top 50%, 0 0`,
+        },
+      ]}
+      {...props}
+    />
+  )
+})
 
-SelectField.Control = Control
-SelectField.Control.displayName = `SelectField.Control`
+export type SelectFieldWrapperProps = FormFieldStackProps
+export const SelectFieldWrapper = FormFieldStack
 
-SelectField.Wrapper = FormField.Stack
-SelectField.Wrapper.displayName = `SelectField.StackWrapper`
+export type SelectFieldLabelProps = FormFieldLabelProps
+export function SelectFieldLabel({
+  children,
+  size,
+  isRequired,
+  ...props
+}: SelectFieldLabelProps) {
+  const styledProps = useStyledFieldLabel(children, { size, isRequired })
 
-SelectField.Label = FormField.Label
-SelectField.Label.displayName = `SelectField.Label`
+  return <SelectFieldSkeletonLabel {...props} {...styledProps} />
+}
 
-SelectField.Hint = FormField.Hint
-SelectField.Hint.displayName = `SelectField.Hint`
+export type SelectFieldErrorProps = SelectFieldSkeletonErrorProps
+export function SelectFieldError({
+  children,
+  ...props
+}: SelectFieldErrorProps) {
+  const styledProps = useStyledFieldError(children)
 
-SelectField.Error = FormField.Error
-SelectField.Error.displayName = `SelectField.Hint`
+  return <SelectFieldSkeletonError {...props} {...styledProps} />
+}
 
-export default SelectField
+export type SelectFieldHintProps = SelectFieldSkeletonHintProps
+export function SelectFieldHint(props: SelectFieldHintProps) {
+  const styledProps = useStyledFieldHint()
+
+  return <SelectFieldSkeletonHint {...props} {...styledProps} />
+}
