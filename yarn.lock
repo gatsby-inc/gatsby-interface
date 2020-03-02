@@ -3495,6 +3495,13 @@
     "@reach/component-component" "^0.1.3"
     "@reach/visually-hidden" "^0.1.4"
 
+"@reach/auto-id@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/auto-id/-/auto-id-0.8.5.tgz#940500d4c93624852efa5ecbed29c5d7015eb6e9"
+  integrity sha512-FmyoQ5Mvw+WXLd3JOlDmHDQKqhTiZ+BwtEq9HW6pgzYMztq1wr5itv4lrSDqOYa/hJfNrkBC8iCtaIKcykuYnQ==
+  dependencies:
+    tslib "^1.10.0"
+
 "@reach/component-component@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.1.3.tgz#5d156319572dc38995b246f81878bc2577c517e5"
@@ -3518,12 +3525,33 @@
     react-focus-lock "^2.2.0"
     react-remove-scroll "^2.1.1"
 
+"@reach/observe-rect@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/@reach/observe-rect/-/observe-rect-1.0.5.tgz#28bf3c5c35da7fef72cd124af4ac32308d0c3f15"
+  integrity sha512-EQLHhquzwAh2TFtMJU0PXJRmhpOrAhzApgoI4Lwn72J7ygrMk3Ys3a3i8KDnV0TetbwAxn4XSHi4pE8sPWUYLg==
+
 "@reach/portal@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.4.0.tgz#c11e4714cb51fd4eac8dfdf26e25f5c77318c7ac"
   integrity sha512-pIleAmXipuH4398Drs0Dr8btv+US8I0kgieXdH3I+XcliFbKtANjxFt8k9xgnNgYBSrp+f6l68fOWlmJ5q2FKg==
   dependencies:
     "@reach/component-component" "^0.4.0"
+
+"@reach/portal@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/portal/-/portal-0.8.5.tgz#586e8686e9ba34368b1df3fc9a84c3ef923dd2d3"
+  integrity sha512-YRQgItjxw6DznndN4T3YS6Ikuq+FPZg8fekXeM1feuQSnMlAtEAyYVaMhpAKSD65+Yc9Zu0Utfxp5ji+wO+FLg==
+  dependencies:
+    tslib "^1.10.0"
+
+"@reach/rect@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.npmjs.org/@reach/rect/-/rect-0.8.2.tgz#4e51ef1b734f26a42c3cdfa8d812a11b8017d3ef"
+  integrity sha512-6vrGm/9Cjw5ygbzccJdmrERqLxmaR2dATzkOvmsnTuR54BH/UgUjUYMxy/pVCmHZacNMTZRqOJwAyJQBOdCD4w==
+  dependencies:
+    "@reach/observe-rect" "^1.0.5"
+    prop-types "^15.7.2"
+    tslib "^1.10.0"
 
 "@reach/router@^1.1.1", "@reach/router@^1.2.1":
   version "1.2.1"
@@ -3536,15 +3564,43 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
+"@reach/tooltip@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/tooltip/-/tooltip-0.8.5.tgz#e774415dcafc2b32476b729ebec825d118598ae2"
+  integrity sha512-TWRHyBSvxx2cUI2s7NvgU+b+re+N5rjoCir/A/WMpUej0Q3FBWvpuGZvP+HI0AKA55y5NULQsWCyEpcxohfMGA==
+  dependencies:
+    "@reach/auto-id" "^0.8.5"
+    "@reach/portal" "^0.8.5"
+    "@reach/rect" "^0.8.2"
+    "@reach/utils" "^0.8.5"
+    "@reach/visually-hidden" "^0.8.2"
+    prop-types "^15.7.2"
+    tslib "^1.10.0"
+
 "@reach/utils@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.4.0.tgz#444f3b7384fc0adbe6f3787adb68befd42969b72"
   integrity sha512-GBvIj0kTQIZpH5YnBmlq80qssJvF7NCf8/GgatNv+dQtBJflbC0qjXmVext9HQN+tajRXxmsGol3LK9SbEAWGw==
 
+"@reach/utils@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/utils/-/utils-0.8.5.tgz#6675d6f81054c8dce1b9d535280b0e3c5174fe7d"
+  integrity sha512-nc84exIqBa+EohJPBFjePQP88dBAP4l+tChxwWszzZ+R6tTtSgOg40WyQ5EjPYJFbltnbZIbASHefcEBrFxqng==
+  dependencies:
+    tslib "^1.10.0"
+    warning "^4.0.3"
+
 "@reach/visually-hidden@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.1.4.tgz#0dc4ecedf523004337214187db70a46183bd945b"
   integrity sha512-QHbzXjflSlCvDd6vJwdwx16mSB+vUCCQMiU/wK/CgVNPibtpEiIbisyxkpZc55DyDFNUIqP91rSUsNae+ogGDQ==
+
+"@reach/visually-hidden@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.npmjs.org/@reach/visually-hidden/-/visually-hidden-0.8.2.tgz#2b58a2c69ab1c41838b8fef8a1d7370106a6d69c"
+  integrity sha512-U9KdaC1/YzskqAARqSc/ikOdZRbRkAUixwKIFbTsooUCXK+yAE08ikEoKSmCwDuGXxn7vgCit1ur4i994Ohzdw==
+  dependencies:
+    tslib "^1.10.0"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -5013,7 +5069,7 @@
 
 "@types/reach__alert@^0.1.1":
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@types/reach__alert/-/reach__alert-0.1.1.tgz#5c9fbde74c14688f8a0d5ebe7d4d7164b3a1db2f"
+  resolved "https://registry.npmjs.org/@types/reach__alert/-/reach__alert-0.1.1.tgz#5c9fbde74c14688f8a0d5ebe7d4d7164b3a1db2f"
   integrity sha512-BFo1BgQWacu5xHuQW5jyWSSgQpPqMTSrrPfxoB+I6eUYa49Puss57/ZIeZguFR4+Dm8BrGfnBXSX4o2sLlYALg==
   dependencies:
     "@types/react" "*"
