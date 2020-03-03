@@ -3495,6 +3495,28 @@
     "@reach/component-component" "^0.1.3"
     "@reach/visually-hidden" "^0.1.4"
 
+"@reach/auto-id@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/auto-id/-/auto-id-0.8.5.tgz#940500d4c93624852efa5ecbed29c5d7015eb6e9"
+  integrity sha512-FmyoQ5Mvw+WXLd3JOlDmHDQKqhTiZ+BwtEq9HW6pgzYMztq1wr5itv4lrSDqOYa/hJfNrkBC8iCtaIKcykuYnQ==
+  dependencies:
+    tslib "^1.10.0"
+
+"@reach/combobox@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/combobox/-/combobox-0.8.5.tgz#dd51efd29515679942bd37e899424f2979d6d1d5"
+  integrity sha512-5052DH9KH/Xr2OLEgT/zg6Od1loZgUy6qEpoU9TuxUJDJ9p/0oiTJLBzj3+MneFP1hJgHqXfo5QRUhFEsrdyVA==
+  dependencies:
+    "@reach/auto-id" "^0.8.5"
+    "@reach/descendants" "^0.8.5"
+    "@reach/popover" "^0.8.5"
+    "@reach/portal" "^0.8.5"
+    "@reach/utils" "^0.8.5"
+    escape-regexp "0.0.1"
+    highlight-words-core "1.2.2"
+    prop-types "^15.7.2"
+    tslib "^1.10.0"
+
 "@reach/component-component@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.1.3.tgz#5d156319572dc38995b246f81878bc2577c517e5"
@@ -3507,6 +3529,14 @@
   dependencies:
     prop-types "^15.7.2"
 
+"@reach/descendants@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/descendants/-/descendants-0.8.5.tgz#084b2410bd13be4a76ac663d5957a54325301df0"
+  integrity sha512-L1zGSeOtpK8m/SA/CyJsKBnk+z+kvraEJUq1u/apkw1n47j1Byu40nA7TwKvUxuZtEVaK1CdsGFRGeyHRfU/kg==
+  dependencies:
+    "@reach/utils" "^0.8.5"
+    tslib "^1.10.0"
+
 "@reach/dialog@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.4.0.tgz#3b61d5d75a69fef6e46f4a9cdfcfefd695e71fb0"
@@ -3518,12 +3548,44 @@
     react-focus-lock "^2.2.0"
     react-remove-scroll "^2.1.1"
 
+"@reach/observe-rect@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/@reach/observe-rect/-/observe-rect-1.0.5.tgz#28bf3c5c35da7fef72cd124af4ac32308d0c3f15"
+  integrity sha512-EQLHhquzwAh2TFtMJU0PXJRmhpOrAhzApgoI4Lwn72J7ygrMk3Ys3a3i8KDnV0TetbwAxn4XSHi4pE8sPWUYLg==
+
+"@reach/popover@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/popover/-/popover-0.8.5.tgz#0e64b89585655d5e4290fc5a41f8e62f5f617889"
+  integrity sha512-6s+DJGvuK9ZimQQP9/JFhWSdQAIafte7kwIPeNmQUQNf51RYHYRX30xyhAqcuuogXjEr+tRDWVOfEBXEmtt4RA==
+  dependencies:
+    "@reach/portal" "^0.8.5"
+    "@reach/rect" "^0.8.2"
+    "@reach/utils" "^0.8.5"
+    tabbable "^4.0.0"
+    tslib "^1.10.0"
+
 "@reach/portal@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.4.0.tgz#c11e4714cb51fd4eac8dfdf26e25f5c77318c7ac"
   integrity sha512-pIleAmXipuH4398Drs0Dr8btv+US8I0kgieXdH3I+XcliFbKtANjxFt8k9xgnNgYBSrp+f6l68fOWlmJ5q2FKg==
   dependencies:
     "@reach/component-component" "^0.4.0"
+
+"@reach/portal@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/portal/-/portal-0.8.5.tgz#586e8686e9ba34368b1df3fc9a84c3ef923dd2d3"
+  integrity sha512-YRQgItjxw6DznndN4T3YS6Ikuq+FPZg8fekXeM1feuQSnMlAtEAyYVaMhpAKSD65+Yc9Zu0Utfxp5ji+wO+FLg==
+  dependencies:
+    tslib "^1.10.0"
+
+"@reach/rect@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.npmjs.org/@reach/rect/-/rect-0.8.2.tgz#4e51ef1b734f26a42c3cdfa8d812a11b8017d3ef"
+  integrity sha512-6vrGm/9Cjw5ygbzccJdmrERqLxmaR2dATzkOvmsnTuR54BH/UgUjUYMxy/pVCmHZacNMTZRqOJwAyJQBOdCD4w==
+  dependencies:
+    "@reach/observe-rect" "^1.0.5"
+    prop-types "^15.7.2"
+    tslib "^1.10.0"
 
 "@reach/router@^1.1.1", "@reach/router@^1.2.1":
   version "1.2.1"
@@ -3540,6 +3602,14 @@
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.4.0.tgz#444f3b7384fc0adbe6f3787adb68befd42969b72"
   integrity sha512-GBvIj0kTQIZpH5YnBmlq80qssJvF7NCf8/GgatNv+dQtBJflbC0qjXmVext9HQN+tajRXxmsGol3LK9SbEAWGw==
+
+"@reach/utils@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/utils/-/utils-0.8.5.tgz#6675d6f81054c8dce1b9d535280b0e3c5174fe7d"
+  integrity sha512-nc84exIqBa+EohJPBFjePQP88dBAP4l+tChxwWszzZ+R6tTtSgOg40WyQ5EjPYJFbltnbZIbASHefcEBrFxqng==
+  dependencies:
+    tslib "^1.10.0"
+    warning "^4.0.3"
 
 "@reach/visually-hidden@^0.1.4":
   version "0.1.4"
@@ -9900,6 +9970,11 @@ escape-html@^1.0.3, escape-html@~1.0.3:
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
 
+escape-regexp@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/escape-regexp/-/escape-regexp-0.0.1.tgz#f44bda12d45bbdf9cb7f862ee7e4827b3dd32254"
+  integrity sha1-9EvaEtRbvfnLf4Yu5+SCez3TIlQ=
+
 escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.4, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
@@ -12293,6 +12368,11 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
+
+highlight-words-core@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/highlight-words-core/-/highlight-words-core-1.2.2.tgz#1eff6d7d9f0a22f155042a00791237791b1eeaaa"
+  integrity sha512-BXUKIkUuh6cmmxzi5OIbUJxrG8OAk2MqoL1DtO3Wo9D2faJg2ph5ntyuQeLqaHJmzER6H5tllCDA9ZnNe9BVGg==
 
 highlight.js@~9.12.0:
   version "9.12.0"
@@ -21453,6 +21533,11 @@ synchronous-promise@^2.0.6:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.9.tgz#b83db98e9e7ae826bf9c8261fd8ac859126c780a"
   integrity sha512-LO95GIW16x69LuND1nuuwM4pjgFGupg7pZ/4lU86AmchPKrhk0o2tpMU2unXRrqo81iAFe1YJ0nAGEVwsrZAgg==
+
+tabbable@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/tabbable/-/tabbable-4.0.0.tgz#5bff1d1135df1482cf0f0206434f15eadbeb9261"
+  integrity sha512-H1XoH1URcBOa/rZZWxLxHCtOdVUEev+9vo5YdYhC9tCY4wnybX+VQrCYuy9ubkg69fCBxCONJOSLGfw0DWMffQ==
 
 table@^5.0.0, table@^5.2.3:
   version "5.4.6"

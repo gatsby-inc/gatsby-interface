@@ -40,6 +40,7 @@
     "@loadable/component": "^5.10.2",
     "@mdx-js/react": "^1.5.2",
     "@reach/alert": "^0.1.5",
+    "@reach/combobox": "^0.8.5",
     "@reach/dialog": "^0.4.0",
     "@types/lodash.sample": "^4.2.6",
     "case": "^1.6.2",

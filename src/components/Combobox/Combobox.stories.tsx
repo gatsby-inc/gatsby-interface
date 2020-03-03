@@ -1,0 +1,161 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
+import React from "react"
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxPopover,
+  ComboboxList,
+  ComboboxOption,
+} from "./"
+import { DecoratorFn } from "@storybook/react"
+import { StoryUtils } from "../../utils/storybook"
+import { Theme } from "../../theme"
+import { ComboboxOptionProps } from "./Combobox"
+import { boolean } from "@storybook/addon-knobs"
+
+export default {
+  title: `Combobox`,
+  decorators: [
+    story => (
+      <StoryUtils.Container>
+        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
+      </StoryUtils.Container>
+    ),
+  ] as DecoratorFn[],
+}
+
+const options: ComboboxOptionProps[] = [
+  {
+    value: `Apple`,
+  },
+  {
+    value: `Banana`,
+  },
+  {
+    value: `Orange`,
+  },
+  {
+    value: `Pineapple`,
+  },
+  {
+    value: `Kiwi`,
+  },
+]
+
+export const Basic = () => {
+  return (
+    <div>
+      <h4 id="demo">Basic, fixed List Combobox</h4>
+      <Combobox>
+        <ComboboxInput aria-labelledby="demo" />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby="demo">
+            {options.map(({ value }) => {
+              return <ComboboxOption key={value} value={value} />
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  )
+}
+
+export const Sandbox = () => {
+  return (
+    <div>
+      <h4 id="demo">Sandbox</h4>
+      <Combobox>
+        <ComboboxInput
+          aria-labelledby="demo"
+          hasError={boolean(`hasError`, false)}
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby="demo">
+            {options.map(({ value }) => {
+              return <ComboboxOption key={value} value={value} />
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  )
+}
+
+export const WithSelect = () => {
+  const [term, setTerm] = React.useState("")
+
+  return (
+    <div css={{ maxWidth: `400px` }}>
+      <h4 id="demo">Fixed list Combobox with value selection</h4>
+      <Combobox onSelect={value => setTerm(value)}>
+        <ComboboxInput aria-labelledby="demo" />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby="demo">
+            {options.map(({ value }) => {
+              return (
+                <ComboboxOption
+                  key={value}
+                  selected={value === term}
+                  value={value}
+                />
+              )
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+      <br />
+      <div>
+        Selected value:{" "}
+        <span css={(theme: Theme) => ({ fontFamily: theme.fonts.monospace })}>
+          {JSON.stringify(term)}
+        </span>
+      </div>
+    </div>
+  )
+}
+
+export const WithDynamicItems = () => {
+  const [term, setTerm] = React.useState("")
+  const [needle, setNeedle] = React.useState("")
+  const dynamicOptions = options.filter(option =>
+    option.value.toLowerCase().includes(needle.toLowerCase())
+  )
+
+  return (
+    <div css={{ maxWidth: `400px` }}>
+      <h4 id="demo">Dynamic list Combobox</h4>
+      <Combobox
+        onSelect={value => {
+          setTerm(value)
+          setNeedle(value)
+        }}
+      >
+        <ComboboxInput
+          aria-labelledby="demo"
+          onChange={e => setNeedle(e.target.value)}
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby="demo">
+            {dynamicOptions.map(({ value }) => {
+              return (
+                <ComboboxOption
+                  key={value}
+                  selected={value === term}
+                  value={value}
+                />
+              )
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+      <br />
+      <div>
+        Selected value:{" "}
+        <span css={(theme: Theme) => ({ fontFamily: theme.fonts.monospace })}>
+          {JSON.stringify(term)}
+        </span>
+      </div>
+    </div>
+  )
+}
