@@ -35,7 +35,11 @@ export default {
       extensions,
     }),
     resolve({ extensions }),
-    commonjs(),
+    commonjs({
+      namedExports: {
+        "highlight-words-core": ["findAll"],
+      },
+    }),
     postcss({
       extensions: [`.css`],
     }),

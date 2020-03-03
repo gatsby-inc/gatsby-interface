@@ -48,7 +48,10 @@ export const Basic = () => {
     <div>
       <h4 id="demo">Basic, fixed List Combobox</h4>
       <Combobox>
-        <ComboboxInput aria-labelledby="demo" />
+        <ComboboxInput
+          aria-labelledby="demo"
+          ref={element => element && element.focus()}
+        />
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
             {options.map(({ value }) => {
