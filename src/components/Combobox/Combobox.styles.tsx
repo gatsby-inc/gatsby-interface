@@ -1,12 +1,23 @@
 import { getInputStyles } from "../form/components/FormField.helpers"
 import { ThemeCss } from "../../theme"
 
+export const comboboxCss: ThemeCss = () => ({
+  position: `relative`,
+})
+
 export const popoverCss: ThemeCss = theme => ({
+  position: `absolute`,
+  width: `100%`,
+  maxHeight: `26rem`,
+  height: `auto`,
+  overflowY: `scroll`,
   background: theme.colors.primaryBackground,
   border: `1px solid ${theme.colors.grey[10]}`,
   borderBottomLeftRadius: theme.radii[3],
   borderBottomRightRadius: theme.radii[3],
   boxShadow: `0 5px 10px 3px rgba(0, 0, 0, 0.1)`,
+  color: theme.colors.grey[90],
+  fontSize: theme.fontSizes[1],
 })
 
 export const inputCss: (hasError?: boolean) => ThemeCss = (
@@ -29,32 +40,36 @@ export const listCss: ThemeCss = () => ({
   userSelect: `none`,
 })
 
-export const optionCss: ThemeCss = theme => ({
-  alignItems: `center`,
-  cursor: `pointer`,
-  display: `flex`,
-  color: theme.colors.grey[90],
-  flexWrap: `wrap`,
-  fontSize: theme.fontSizes[1],
-  padding: `${theme.space[4]} ${theme.space[5]}`,
-  margin: 0,
-  overflow: `hidden`,
-  position: `relative`,
-  textDecoration: `none`,
-  "&[data-highlighted]": {
-    background: theme.colors.purple[5],
-    color: theme.colors.purple[50],
-    outline: `none`,
+export const optionCss: (highlightMatches?: boolean) => ThemeCss = (
+  highlightMatches = true
+) => theme => [
+  {
+    cursor: `pointer`,
+    padding: `${theme.space[4]} ${theme.space[5]}`,
+    margin: 0,
+    overflow: `hidden`,
+    position: `relative`,
+    textDecoration: `none`,
+    "&:hover": {
+      background: theme.colors.purple[10],
+    },
+    "&[data-highlighted]": {
+      background: theme.colors.purple[10],
+      color: theme.colors.purple[50],
+      outline: `none`,
+    },
   },
-  "[data-suggested-value]": {
-    fontWeight: theme.fontWeights.body,
+  highlightMatches && {
+    "[data-suggested-value]": {
+      fontWeight: theme.fontWeights.body,
+    },
+    "[data-user-value]": {
+      color: theme.colors.purple[60],
+      fontWeight: theme.fontWeights.bold,
+      textDecoration: `underline`,
+    },
   },
-  "[data-user-value]": {
-    color: theme.colors.purple[60],
-    fontWeight: theme.fontWeights.bold,
-    textDecoration: `underline`,
-  },
-})
+]
 
 export const selectedOptionIconCss: ThemeCss = theme => ({
   transition: `0.5s`,

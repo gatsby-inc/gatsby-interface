@@ -76,7 +76,13 @@ export const Sandbox = () => {
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
             {options.map(({ value }) => {
-              return <ComboboxOption key={value} value={value} />
+              return (
+                <ComboboxOption
+                  key={value}
+                  value={value}
+                  highlightMatches={boolean("Highlight matches", true)}
+                />
+              )
             })}
           </ComboboxList>
         </ComboboxPopover>

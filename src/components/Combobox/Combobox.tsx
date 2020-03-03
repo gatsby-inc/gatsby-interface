@@ -17,6 +17,7 @@ import {
 import { PopoverProps } from "@reach/popover"
 import { MdDone } from "react-icons/md"
 import {
+  comboboxCss,
   inputCss,
   popoverCss,
   listCss,
@@ -30,7 +31,7 @@ export type ComboboxProps = import("@reach/utils").PropsWithAs<
 >
 
 export function Combobox(props: ComboboxProps) {
-  return <ReachCombobox openOnFocus {...props} />
+  return <ReachCombobox openOnFocus css={comboboxCss} {...props} />
 }
 
 export type ComboboxInputProps = import("@reach/utils").PropsWithAs<
@@ -89,6 +90,7 @@ export type ComboboxOptionProps = import("@reach/utils").PropsWithAs<
   ReachComboboxOptionProps & {
     selected?: boolean
     selectedAriaLabel?: string
+    highlightMatches?: boolean
   }
 >
 
@@ -99,13 +101,18 @@ export const ComboboxOption = React.forwardRef<
   {
     selected,
     selectedAriaLabel = "currently selected:",
+    highlightMatches,
     children,
     ...delegated
   },
   ref
 ) {
   return (
-    <ReachComboboxOption ref={ref} css={optionCss} {...delegated}>
+    <ReachComboboxOption
+      ref={ref}
+      css={optionCss(highlightMatches)}
+      {...delegated}
+    >
       {selected && (
         <MdDone css={selectedOptionIconCss} aria-label={selectedAriaLabel} />
       )}
