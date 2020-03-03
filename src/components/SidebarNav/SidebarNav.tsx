@@ -83,7 +83,7 @@ const baseNavItemCss: ThemeCss = theme => ({
 
 const baseNavItemActiveCss: ThemeCss = theme => ({
   color: theme.colors.purple[50],
-  fontWeight: theme.fontWeights.bold,
+  fontWeight: `bold`,
 })
 
 const navItemIconCss: ThemeCss = theme => ({
