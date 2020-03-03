@@ -1,12 +1,13 @@
 import React from "react"
 
-export default () => (
+export default props => (
   <svg
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <circle cx="12" cy="4" r="1" transform="rotate(90 12 4)" fill="#B17ACC" />
     <circle cx="12" cy="12" r="4" transform="rotate(45 12 12)" fill="#8954A8" />

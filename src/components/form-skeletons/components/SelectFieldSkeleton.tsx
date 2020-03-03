@@ -1,28 +1,38 @@
 import React from "react"
-import FormFieldSkeleton, { FormFieldSkeletonProps } from "./FormFieldSkeleton"
+import FormFieldSkeleton, {
+  FormFieldSkeletonProps,
+  useFormFieldSkeleton,
+  FormFieldSkeletonLabelProps,
+  FormFieldSkeletonLabel,
+  FormFieldSkeletonHintProps,
+  FormFieldSkeletonHint,
+  FormFieldSkeletonErrorProps,
+  FormFieldSkeletonError,
+} from "./FormFieldSkeleton"
 import { getFinalAriaDescribedBy } from "../utils"
 import { OmitControlProps } from "../sharedTypes"
 
-function SelectFieldSkeleton(props: FormFieldSkeletonProps) {
+export type SelectFieldSkeletonProps = FormFieldSkeletonProps
+export function SelectFieldSkeleton(props: FormFieldSkeletonProps) {
   return <FormFieldSkeleton {...props} />
 }
 
 export type SelectFieldSkeletonControlOption = {
-  value: string;
-  label: string;
+  value: string
+  label: string
 }
 
 export type SelectFieldSkeletonControlProps = OmitControlProps<
   JSX.IntrinsicElements["select"]
 > & {
-  options: SelectFieldSkeletonControlOption[];
+  options: SelectFieldSkeletonControlOption[]
 }
 
-SelectFieldSkeleton.Control = React.forwardRef<
+export const SelectFieldSkeletonControl = React.forwardRef<
   HTMLSelectElement,
   SelectFieldSkeletonControlProps
->(({ options, ...rest }, ref) => {
-  const { id, hasError, meta } = FormFieldSkeleton.useFormFieldSkeleton()
+>(function SelectFieldSkeletonControl({ options, ...rest }, ref) {
+  const { id, hasError, meta } = useFormFieldSkeleton()
 
   return (
     <select
@@ -39,16 +49,6 @@ SelectFieldSkeleton.Control = React.forwardRef<
     </select>
   )
 })
-SelectFieldSkeleton.Control.displayName = `SelectFieldSkeleton.Control`
-
-SelectFieldSkeleton.Label = FormFieldSkeleton.Label
-SelectFieldSkeleton.Label.displayName = `SelectFieldSkeleton.Label`
-SelectFieldSkeleton.Hint = FormFieldSkeleton.Hint
-SelectFieldSkeleton.Hint.displayName = `SelectFieldSkeleton.Hint`
-SelectFieldSkeleton.Error = FormFieldSkeleton.Error
-SelectFieldSkeleton.Error.displayName = `SelectFieldSkeleton.Hint`
-
-export default SelectFieldSkeleton
 
 function renderOption({ label, value }: SelectFieldSkeletonControlOption) {
   return (
@@ -56,4 +56,19 @@ function renderOption({ label, value }: SelectFieldSkeletonControlOption) {
       {label}
     </option>
   )
+}
+
+export type SelectFieldSkeletonLabelProps = FormFieldSkeletonLabelProps
+export function SelectFieldSkeletonLabel(props: SelectFieldSkeletonLabelProps) {
+  return <FormFieldSkeletonLabel {...props} />
+}
+
+export type SelectFieldSkeletonHintProps = FormFieldSkeletonHintProps
+export function SelectFieldSkeletonHint(props: SelectFieldSkeletonHintProps) {
+  return <FormFieldSkeletonHint {...props} />
+}
+
+export type SelectFieldSkeletonErrorProps = FormFieldSkeletonErrorProps
+export function SelectFieldSkeletonError(props: SelectFieldSkeletonErrorProps) {
+  return <FormFieldSkeletonError {...props} />
 }

@@ -13,6 +13,8 @@ import {
   InputFieldError,
   InputFieldHint,
 } from "../components/InputField"
+import { InputFieldBlock } from "../components/InputFieldBlock"
+import { InputConnectedField } from "../components/InputConnectedField"
 import {
   TextAreaField,
   TextAreaFieldWrapper,
@@ -21,16 +23,26 @@ import {
   TextAreaFieldHint,
   TextAreaFieldError,
 } from "../components/TextAreaField"
-import { InputFieldBlock } from "../components/InputFieldBlock"
-import { InputConnectedField } from "../components/InputConnectedField"
 import { TextAreaFieldBlock } from "../components/TextAreaFieldBlock"
 import { TextAreaConnectedField } from "../components/TextAreaConnectedField"
-import SelectField from "../components/SelectField"
-import SelectFieldBlock from "../components/SelectFieldBlock"
-import SelectConnectedField from "../components/SelectConnectedField"
-import CheckboxField from "../components/CheckboxField"
-import CheckboxFieldBlock from "../components/CheckboxFieldBlock"
-import CheckboxConnectedField from "../components/CheckboxConnectedField"
+import {
+  SelectField,
+  SelectFieldWrapper,
+  SelectFieldLabel,
+  SelectFieldControl,
+  SelectFieldError,
+} from "../components/SelectField"
+import { SelectFieldBlock } from "../components/SelectFieldBlock"
+import { SelectConnectedField } from "../components/SelectConnectedField"
+import {
+  CheckboxField,
+  CheckboxFieldWrapper,
+  CheckboxFieldControl,
+  CheckboxFieldLabel,
+  CheckboxFieldError,
+} from "../components/CheckboxField"
+import { CheckboxFieldBlock } from "../components/CheckboxFieldBlock"
+import { CheckboxConnectedField } from "../components/CheckboxConnectedField"
 import {
   CheckboxGroupField,
   CheckboxGroupFieldLabel,
@@ -272,21 +284,21 @@ storiesOf(`form/Formik usage examples`, module)
                     id="authorField"
                     hasError={!!(touched.author && errors.author)}
                   >
-                    <SelectField.Wrapper css={stackItemCss}>
-                      <SelectField.Label isRequired={true}>
+                    <SelectFieldWrapper css={stackItemCss}>
+                      <SelectFieldLabel isRequired={true}>
                         Author
-                      </SelectField.Label>
-                      <SelectField.Control
+                      </SelectFieldLabel>
+                      <SelectFieldControl
                         name="author"
                         options={authors}
                         value={values.author}
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
-                      <SelectField.Error>
+                      <SelectFieldError>
                         {touched.author && errors.author ? errors.author : ``}
-                      </SelectField.Error>
-                    </SelectField.Wrapper>
+                      </SelectFieldError>
+                    </SelectFieldWrapper>
                   </SelectField>
 
                   <RadioButtonField
@@ -369,25 +381,25 @@ storiesOf(`form/Formik usage examples`, module)
                     id="agreementField"
                     hasError={!!(touched.agreement && errors.agreement)}
                   >
-                    <CheckboxField.Wrapper css={stackItemCss}>
-                      <CheckboxField.Control
+                    <CheckboxFieldWrapper css={stackItemCss}>
+                      <CheckboxFieldControl
                         name="agreement"
                         value={+values.agreement}
                         onChange={handleChange}
                         onBlur={handleBlur}
                       />
-                      <CheckboxField.Label size={`S`}>
+                      <CheckboxFieldLabel size={`S`}>
                         I have read and agree with the <a href="/">Terms</a> and{" "}
                         <a href="/">Privacy Policy</a>. Lorem Ipsum is simply
                         dummy text of the printing and typesetting industry.
-                      </CheckboxField.Label>
+                      </CheckboxFieldLabel>
 
-                      <CheckboxField.Error>
+                      <CheckboxFieldError>
                         {touched.agreement && errors.agreement
                           ? errors.agreement
                           : ``}
-                      </CheckboxField.Error>
-                    </CheckboxField.Wrapper>
+                      </CheckboxFieldError>
+                    </CheckboxFieldWrapper>
                   </CheckboxField>
 
                   <Actions isSubmitting={isSubmitting} css={stackItemCss} />

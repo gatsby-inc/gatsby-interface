@@ -22,8 +22,22 @@ import {
   TextAreaFieldHint,
   TextAreaFieldError,
 } from "../components/TextAreaField"
-import SelectField from "../components/SelectField"
-import CheckboxField from "../components/CheckboxField"
+import {
+  SelectField,
+  SelectFieldWrapper,
+  SelectFieldLabel,
+  SelectFieldControl,
+  SelectFieldHint,
+  SelectFieldError,
+} from "../components/SelectField"
+import {
+  CheckboxField,
+  CheckboxFieldWrapper,
+  CheckboxFieldControl,
+  CheckboxFieldLabel,
+  CheckboxFieldHint,
+  CheckboxFieldError,
+} from "../components/CheckboxField"
 import {
   CheckboxGroupField,
   CheckboxGroupFieldLabel,
@@ -120,15 +134,15 @@ storiesOf(`form/FormField`, module)
           </TextAreaField>
 
           <SelectField id="example-1c" hasError={!!error} hasHint={!!hint}>
-            <SelectField.Wrapper>
-              <SelectField.Label size={size}>Author</SelectField.Label>
-              <SelectField.Control
+            <SelectFieldWrapper>
+              <SelectFieldLabel size={size}>Author</SelectFieldLabel>
+              <SelectFieldControl
                 options={authors}
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <SelectField.Hint>{hint}</SelectField.Hint>
-              <SelectField.Error>{error}</SelectField.Error>
-            </SelectField.Wrapper>
+              <SelectFieldHint>{hint}</SelectFieldHint>
+              <SelectFieldError>{error}</SelectFieldError>
+            </SelectFieldWrapper>
           </SelectField>
 
           <CheckboxGroupField
@@ -180,19 +194,19 @@ storiesOf(`form/FormField`, module)
           </RadioButtonField>
 
           <CheckboxField id="example-1f" hasError={!!error} hasHint={!!hint}>
-            <CheckboxField.Wrapper>
-              <CheckboxField.Control
+            <CheckboxFieldWrapper>
+              <CheckboxFieldControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <CheckboxField.Label size={`S`}>
+              <CheckboxFieldLabel size={`S`}>
                 I have read and agree with the <a href="/">Terms</a> and{" "}
                 <a href="/">Privacy Policy</a>. Lorem Ipsum is simply dummy text
                 of the printing and typesetting industry.
-              </CheckboxField.Label>
+              </CheckboxFieldLabel>
 
-              <CheckboxField.Hint>{hint}</CheckboxField.Hint>
-              <CheckboxField.Error>{error}</CheckboxField.Error>
-            </CheckboxField.Wrapper>
+              <CheckboxFieldHint>{hint}</CheckboxFieldHint>
+              <CheckboxFieldError>{error}</CheckboxFieldError>
+            </CheckboxFieldWrapper>
           </CheckboxField>
         </Wrapper>
       </StoryUtils.Container>

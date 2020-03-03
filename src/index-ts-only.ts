@@ -17,6 +17,7 @@ export * from "./components/ThemeProvider"
 export * from "./components/Text"
 export * from "./components/Toggle"
 export * from "./components/Breadcrumb"
+export * from "./components/SidebarNav"
 
 export * from "./theme"
 export * from "./theme/styles/button"

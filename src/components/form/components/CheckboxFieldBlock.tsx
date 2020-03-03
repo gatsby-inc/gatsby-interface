@@ -2,7 +2,15 @@
 import { jsx } from "@emotion/core"
 import React, { ReactNode } from "react"
 
-import CheckboxField, { CheckboxFieldControlProps } from "./CheckboxField"
+import {
+  CheckboxField,
+  CheckboxFieldControlProps,
+  CheckboxFieldWrapper,
+  CheckboxFieldControl,
+  CheckboxFieldLabel,
+  CheckboxFieldHint,
+  CheckboxFieldError,
+} from "./CheckboxField"
 import { FormFieldLabelSize } from "./FormField.helpers"
 import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
 
@@ -15,10 +23,10 @@ export type CheckboxFieldBlockProps = {
   validationMode?: ErrorValidationMode
 } & CheckboxFieldControlProps
 
-const CheckboxFieldBlock = React.forwardRef<
+export const CheckboxFieldBlock = React.forwardRef<
   HTMLInputElement,
   CheckboxFieldBlockProps
->((props, ref) => {
+>(function CheckboxFieldBlock(props, ref) {
   const {
     id,
     label,
@@ -32,18 +40,16 @@ const CheckboxFieldBlock = React.forwardRef<
 
   return (
     <CheckboxField id={id} hasError={!!error} hasHint={!!hint}>
-      <CheckboxField.Wrapper className={className}>
-        <CheckboxField.Control ref={ref} {...rest} />
-        <CheckboxField.Label size={labelSize} isRequired={!!rest.required}>
+      <CheckboxFieldWrapper className={className}>
+        <CheckboxFieldControl ref={ref} {...rest} />
+        <CheckboxFieldLabel size={labelSize} isRequired={!!rest.required}>
           {label}
-        </CheckboxField.Label>
-        <CheckboxField.Hint>{hint}</CheckboxField.Hint>
-        <CheckboxField.Error validationMode={validationMode}>
+        </CheckboxFieldLabel>
+        <CheckboxFieldHint>{hint}</CheckboxFieldHint>
+        <CheckboxFieldError validationMode={validationMode}>
           {error}
-        </CheckboxField.Error>
-      </CheckboxField.Wrapper>
+        </CheckboxFieldError>
+      </CheckboxFieldWrapper>
     </CheckboxField>
   )
 })
-
-export default CheckboxFieldBlock
