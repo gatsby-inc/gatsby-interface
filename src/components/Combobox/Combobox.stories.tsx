@@ -41,6 +41,21 @@ const options: ComboboxOptionProps[] = [
   {
     value: `Kiwi`,
   },
+  {
+    value: `Melon`,
+  },
+  {
+    value: `Pear`,
+  },
+  {
+    value: `Apricot`,
+  },
+  {
+    value: `Plum`,
+  },
+  {
+    value: `Grapefruit`,
+  },
 ]
 
 export const Basic = () => {

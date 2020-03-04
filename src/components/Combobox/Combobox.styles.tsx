@@ -36,7 +36,7 @@ export const listCss: ThemeCss = () => ({
   margin: 0,
   padding: 0,
   userSelect: `none`,
-  maxHeight: `10rem`,
+  maxHeight: `18rem`,
   height: `auto`,
   overflowY: `scroll`,
 })
