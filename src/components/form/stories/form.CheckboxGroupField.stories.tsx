@@ -7,8 +7,17 @@ import { text } from "@storybook/addon-knobs"
 
 import { StoryUtils } from "../../../utils/storybook"
 import README from "../README_CHECKBOX_GROUP_FIELD.md"
-import CheckboxGroupField from "../components/CheckboxGroupField"
-import CheckboxGroupFieldBlock from "../components/CheckboxGroupFieldBlock"
+import {
+  CheckboxGroupField,
+  CheckboxGroupFieldLabel,
+  CheckboxGroupFieldOptions,
+  CheckboxGroupFieldOptionWrapper,
+  CheckboxGroupFieldOption,
+  CheckboxGroupFieldHint,
+  CheckboxGroupFieldError,
+  CheckboxGroupFieldOptionLabel,
+} from "../components/CheckboxGroupField"
+import { CheckboxGroupFieldBlock } from "../components/CheckboxGroupFieldBlock"
 import { Wrapper } from "./stories.utils"
 
 storiesOf(`form`, module)
@@ -76,21 +85,21 @@ storiesOf(`form`, module)
             hasHint={!!hint}
             layout="horizontal"
           >
-            <CheckboxGroupField.Label isRequired={true}>
+            <CheckboxGroupFieldLabel isRequired={true}>
               Tags ('horizontal' layout)
-            </CheckboxGroupField.Label>
-            <CheckboxGroupField.Options>
+            </CheckboxGroupFieldLabel>
+            <CheckboxGroupFieldOptions>
               {options.map(({ label, value }) => (
-                <CheckboxGroupField.OptionWrapper key={value}>
-                  <CheckboxGroupField.Option value={value} name="tags" />
-                  <CheckboxGroupField.OptionLabel optionValue={value}>
+                <CheckboxGroupFieldOptionWrapper key={value}>
+                  <CheckboxGroupFieldOption value={value} name="tags" />
+                  <CheckboxGroupFieldOptionLabel optionValue={value}>
                     {label}
-                  </CheckboxGroupField.OptionLabel>
-                </CheckboxGroupField.OptionWrapper>
+                  </CheckboxGroupFieldOptionLabel>
+                </CheckboxGroupFieldOptionWrapper>
               ))}
-            </CheckboxGroupField.Options>
-            <CheckboxGroupField.Hint>{hint}</CheckboxGroupField.Hint>
-            <CheckboxGroupField.Error>{error}</CheckboxGroupField.Error>
+            </CheckboxGroupFieldOptions>
+            <CheckboxGroupFieldHint>{hint}</CheckboxGroupFieldHint>
+            <CheckboxGroupFieldError>{error}</CheckboxGroupFieldError>
           </CheckboxGroupField>
         </Wrapper>
       </StoryUtils.Container>

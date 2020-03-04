@@ -1,6 +1,7 @@
 import React from "react"
 import FormFieldSkeleton from "./FormFieldSkeleton"
-import FormGroupFieldSkeleton, {
+import {
+  FormGroupFieldSkeleton,
   FormGroupFieldSkeletonProps,
   FormGroupFieldSkeletonOptionProps,
 } from "./FormGroupFieldSkeleton"

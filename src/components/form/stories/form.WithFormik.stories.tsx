@@ -43,9 +43,18 @@ import {
 } from "../components/CheckboxField"
 import { CheckboxFieldBlock } from "../components/CheckboxFieldBlock"
 import { CheckboxConnectedField } from "../components/CheckboxConnectedField"
-import CheckboxGroupField from "../components/CheckboxGroupField"
-import CheckboxGroupFieldBlock from "../components/CheckboxGroupFieldBlock"
-import CheckboxGroupConnectedField from "../components/CheckboxGroupConnectedField"
+import {
+  CheckboxGroupField,
+  CheckboxGroupFieldLabel,
+  CheckboxGroupFieldOptions,
+  CheckboxGroupFieldOptionWrapper,
+  CheckboxGroupFieldOption,
+  CheckboxGroupFieldOptionLabel,
+  CheckboxGroupFieldHint,
+  CheckboxGroupFieldError,
+} from "../components/CheckboxGroupField"
+import { CheckboxGroupFieldBlock } from "../components/CheckboxGroupFieldBlock"
+import { CheckboxGroupConnectedField } from "../components/CheckboxGroupConnectedField"
 import RadioButtonField from "../components/RadioButtonField"
 import RadioButtonFieldBlock from "../components/RadioButtonFieldBlock"
 import RadioButtonConnectedField from "../components/RadioButtonConnectedField"
@@ -330,13 +339,13 @@ storiesOf(`form/Formik usage examples`, module)
                     layout="horizontal"
                     css={stackItemCss}
                   >
-                    <CheckboxGroupField.Label isRequired={true}>
+                    <CheckboxGroupFieldLabel isRequired={true}>
                       Tags
-                    </CheckboxGroupField.Label>
-                    <CheckboxGroupField.Options>
+                    </CheckboxGroupFieldLabel>
+                    <CheckboxGroupFieldOptions>
                       {tags.map(({ label, value }) => (
-                        <CheckboxGroupField.OptionWrapper key={value}>
-                          <CheckboxGroupField.Option
+                        <CheckboxGroupFieldOptionWrapper key={value}>
+                          <CheckboxGroupFieldOption
                             value={value}
                             name="tags"
                             onChange={e => {
@@ -354,18 +363,18 @@ storiesOf(`form/Formik usage examples`, module)
                             onBlur={handleBlur}
                           />
 
-                          <CheckboxGroupField.OptionLabel optionValue={value}>
+                          <CheckboxGroupFieldOptionLabel optionValue={value}>
                             {label}
-                          </CheckboxGroupField.OptionLabel>
-                        </CheckboxGroupField.OptionWrapper>
+                          </CheckboxGroupFieldOptionLabel>
+                        </CheckboxGroupFieldOptionWrapper>
                       ))}
-                    </CheckboxGroupField.Options>
-                    <CheckboxGroupField.Hint>
+                    </CheckboxGroupFieldOptions>
+                    <CheckboxGroupFieldHint>
                       Check at least {TAGS_MIN_LENGTH} tags
-                    </CheckboxGroupField.Hint>
-                    <CheckboxGroupField.Error>
+                    </CheckboxGroupFieldHint>
+                    <CheckboxGroupFieldError>
                       {touched.tags && errors.tags ? errors.tags : ``}
-                    </CheckboxGroupField.Error>
+                    </CheckboxGroupFieldError>
                   </CheckboxGroupField>
 
                   <CheckboxField

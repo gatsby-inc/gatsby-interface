@@ -1,7 +1,9 @@
 import React from "react"
-import FormFieldSkeleton, {
+import {
+  FormFieldSkeleton,
   FormFieldSkeletonProps,
   FormFieldSkeletonLabelProps,
+  useFormFieldSkeleton,
 } from "./FormFieldSkeleton"
 import { getFinalAriaDescribedBy } from "../utils"
 import { OmitControlProps } from "../sharedTypes"
@@ -9,7 +11,7 @@ import { OmitControlProps } from "../sharedTypes"
 export type FormGroupFieldSkeletonProps = FormFieldSkeletonProps &
   Pick<JSX.IntrinsicElements["fieldset"], "className" | "style">
 
-function FormGroupFieldSkeleton({
+export function FormGroupFieldSkeleton({
   id,
   hasError,
   hasHint,
@@ -31,7 +33,7 @@ export type FormGroupFieldSkeletonLabelProps = Omit<
   "ref"
 >
 
-const FormGroupFieldSkeletonLabel: React.FC<
+export const FormGroupFieldSkeletonLabel: React.FC<
   FormGroupFieldSkeletonLabelProps
 > = props => <legend {...props} />
 
@@ -43,11 +45,11 @@ export type FormGroupFieldSkeletonOptionProps = Omit<
   value: string // Force require "value" attribute
 }
 
-const FormGroupFielSkeletonOption = React.forwardRef<
+export const FormGroupFieldSkeletonOption = React.forwardRef<
   HTMLInputElement,
   FormGroupFieldSkeletonOptionProps
->((props, ref) => {
-  const { id, hasError, meta } = FormFieldSkeleton.useFormFieldSkeleton()
+>(function FormGroupFieldSkeletonOption(props, ref) {
+  const { id, hasError, meta } = useFormFieldSkeleton()
 
   // We have to set aria-describedby for EACH option (see https://russmaxdesign.github.io/accessible-error-fieldset/)
   return (
@@ -68,7 +70,7 @@ export type FormGroupFieldSkeletonOptionLabelProps = FormFieldSkeletonLabelProps
   optionValue: string
 }
 
-const FormGroupFieldSkeletonOptionLabel: React.FC<
+export const FormGroupFieldSkeletonOptionLabel: React.FC<
   FormGroupFieldSkeletonOptionLabelProps
 > = ({ optionValue, ...rest }) => {
   const { id } = FormFieldSkeleton.useFormFieldSkeleton()
@@ -76,14 +78,13 @@ const FormGroupFieldSkeletonOptionLabel: React.FC<
   return <label htmlFor={getGroupOptionId(id, optionValue)} {...rest} />
 }
 
+// TODO remove these one all form skeletons have their static properties removed
 FormGroupFieldSkeleton.Label = FormGroupFieldSkeletonLabel
 FormGroupFieldSkeleton.Label.displayName = `FormGroupFieldSkeleton.Label`
-FormGroupFieldSkeleton.Option = FormGroupFielSkeletonOption
+FormGroupFieldSkeleton.Option = FormGroupFieldSkeletonOption
 FormGroupFieldSkeleton.Option.displayName = `FormGroupFieldSkeleton.Option`
 FormGroupFieldSkeleton.OptionLabel = FormGroupFieldSkeletonOptionLabel
 FormGroupFieldSkeleton.OptionLabel.displayName = `FormGroupFieldSkeleton.OptionLabel`
-
-export default FormGroupFieldSkeleton
 
 function getGroupOptionId(fieldId: string, optionValue: string) {
   return `${fieldId}__option--${optionValue}`

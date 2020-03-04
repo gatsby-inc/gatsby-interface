@@ -1,34 +1,64 @@
 import React from "react"
-import FormFieldSkeleton from "./FormFieldSkeleton"
-import FormGroupFieldSkeleton, {
+import {
+  FormFieldSkeletonHintProps,
+  FormFieldSkeletonHint,
+  FormFieldSkeletonErrorProps,
+  FormFieldSkeletonError,
+} from "./FormFieldSkeleton"
+import {
+  FormGroupFieldSkeleton,
   FormGroupFieldSkeletonProps,
+  FormGroupFieldSkeletonLabel,
+  FormGroupFieldSkeletonLabelProps,
+  FormGroupFieldSkeletonOption,
   FormGroupFieldSkeletonOptionProps,
+  FormGroupFieldSkeletonOptionLabel,
+  FormGroupFieldSkeletonOptionLabelProps,
 } from "./FormGroupFieldSkeleton"
 
-function CheckboxGroupFieldSkeleton(props: FormGroupFieldSkeletonProps) {
+export type CheckboxGroupFieldSkeletonProps = FormGroupFieldSkeletonProps
+export function CheckboxGroupFieldSkeleton(
+  props: CheckboxGroupFieldSkeletonProps
+) {
   return <FormGroupFieldSkeleton {...props} />
 }
 
-CheckboxGroupFieldSkeleton.Label = FormGroupFieldSkeleton.Label
-CheckboxGroupFieldSkeleton.Label.displayName = `CheckboxGroupFieldSkeleton.Label`
+export type CheckboxGroupFieldSkeletonLabelProps = FormGroupFieldSkeletonLabelProps
+export function CheckboxGroupFieldSkeletonLabel(
+  props: CheckboxGroupFieldSkeletonLabelProps
+) {
+  return <FormGroupFieldSkeletonLabel {...props} />
+}
+
+export type CheckboxGroupFieldSkeletonHintProps = FormFieldSkeletonHintProps
+export function CheckboxGroupFieldSkeletonHint(
+  props: CheckboxGroupFieldSkeletonHintProps
+) {
+  return <FormFieldSkeletonHint {...props} />
+}
+
+export type CheckboxGroupFieldSkeletonErrorProps = FormFieldSkeletonErrorProps
+export function CheckboxGroupFieldSkeletonError(
+  props: CheckboxGroupFieldSkeletonErrorProps
+) {
+  return <FormFieldSkeletonError {...props} />
+}
 
 export type CheckboxGroupFieldSkeletonOptionProps = Omit<
   FormGroupFieldSkeletonOptionProps,
   "type" | "ref"
 >
 
-CheckboxGroupFieldSkeleton.Option = React.forwardRef<
+export const CheckboxGroupFieldSkeletonOption = React.forwardRef<
   HTMLInputElement,
   CheckboxGroupFieldSkeletonOptionProps
->((props, ref) => (
-  <FormGroupFieldSkeleton.Option ref={ref} type="checkbox" {...props} />
-))
+>(function CheckboxGroupFieldSkeletonOption(props, ref) {
+  return <FormGroupFieldSkeletonOption ref={ref} type="checkbox" {...props} />
+})
 
-CheckboxGroupFieldSkeleton.OptionLabel = FormGroupFieldSkeleton.OptionLabel
-CheckboxGroupFieldSkeleton.OptionLabel.displayName = `CheckboxGroupFieldSkeleton.OptionLabel`
-CheckboxGroupFieldSkeleton.Hint = FormFieldSkeleton.Hint
-CheckboxGroupFieldSkeleton.Hint.displayName = `CheckboxGroupFieldSkeleton.Hint`
-CheckboxGroupFieldSkeleton.Error = FormFieldSkeleton.Error
-CheckboxGroupFieldSkeleton.Error.displayName = `CheckboxGroupFieldSkeleton.Error`
-
-export default CheckboxGroupFieldSkeleton
+export type CheckboxGroupFieldSkeletonOptionLabelProps = FormGroupFieldSkeletonOptionLabelProps
+export function CheckboxGroupFieldSkeletonOptionLabel(
+  props: CheckboxGroupFieldSkeletonOptionLabelProps
+) {
+  return <FormGroupFieldSkeletonOptionLabel {...props} />
+}

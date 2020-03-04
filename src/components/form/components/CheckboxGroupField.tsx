@@ -2,25 +2,46 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 import { getFocusStyles } from "./FormField.helpers"
-import { FormGroupFieldSkeletonOptionProps } from "../../form-skeletons/components/FormGroupFieldSkeleton"
+import {
+  CheckboxGroupFieldSkeletonOptionProps,
+  CheckboxGroupFieldSkeletonOptionLabelProps,
+  CheckboxGroupFieldSkeletonOption,
+  CheckboxGroupFieldSkeletonOptionLabel,
+  CheckboxGroupFieldSkeletonLabel,
+  CheckboxGroupFieldSkeletonHintProps,
+  CheckboxGroupFieldSkeletonHint,
+  CheckboxGroupFieldSkeletonErrorProps,
+  CheckboxGroupFieldSkeletonError,
+} from "../../form-skeletons/components/CheckboxGroupFieldSkeleton"
 import FormGroupField, {
   FormGroupFieldProps,
+  FormGroupFieldLabelProps,
+  useStyledGroupFieldLabel,
+  useStyledGroupFieldHint,
+  useStyledGroupFieldError,
+  FormGroupFieldOptionsProps,
+  FormGroupFieldOptions,
+  FormGroupFieldOptionWrapperProps,
+  FormGroupFieldOptionWrapper,
+  useStyledGroupFieldOptionLabel,
   FormGroupFieldOptionLabelProps,
 } from "./FormGroupField"
 import { Theme } from "../../../theme"
 import FormFieldSkeleton from "../../form-skeletons/components/FormFieldSkeleton"
 import { INPUT_WIDTH, INPUT_VERTICAL_OFFSET_CALC } from "./FormGroupField"
 
-function CheckboxGroupField(props: Omit<FormGroupFieldProps, "variant">) {
+export type CheckboxGroupFieldProps = Omit<FormGroupFieldProps, "variant">
+export function CheckboxGroupField(props: CheckboxGroupFieldProps) {
   return <FormGroupField {...props} />
 }
 
-const Option = React.forwardRef<
+export type CheckboxGroupFieldOptionProps = CheckboxGroupFieldSkeletonOptionProps
+export const CheckboxGroupFieldOption = React.forwardRef<
   HTMLInputElement,
-  FormGroupFieldSkeletonOptionProps
->((props, ref) => {
+  CheckboxGroupFieldOptionProps
+>(function CheckboxGroupFieldOption(props, ref) {
   return (
-    <FormGroupField.Option
+    <CheckboxGroupFieldSkeletonOption
       ref={ref}
       css={(theme: Theme) => [
         {
@@ -28,9 +49,7 @@ const Option = React.forwardRef<
           left: `-9999px`,
           opacity: 1,
 
-          "&:focus + label::before": {
-            ...getFocusStyles(theme),
-          },
+          "&:focus + label::before": getFocusStyles(theme),
 
           "&:checked + label::before": {
             backgroundColor: theme.colors.purple[60],
@@ -40,60 +59,85 @@ const Option = React.forwardRef<
           },
         },
       ]}
-      type="checkbox"
       {...props}
     />
   )
 })
 
-const OptionLabel: React.FC<FormGroupFieldOptionLabelProps> = props => {
+export type CheckboxGroupFieldOptionLabelProps = CheckboxGroupFieldSkeletonOptionLabelProps &
+  FormGroupFieldOptionLabelProps
+export const CheckboxGroupFieldOptionLabel: React.FC<
+  CheckboxGroupFieldOptionLabelProps
+> = ({ size, ...rest }) => {
   const { hasError } = FormFieldSkeleton.useFormFieldSkeleton()
+  const { css, ...styledProps } = useStyledGroupFieldOptionLabel({ size })
 
   return (
-    <FormGroupField.OptionLabel
-      css={(theme: Theme) => ({
-        "&:before": {
-          backgroundColor: theme.colors.white,
-          border: hasError
-            ? `1px solid ${theme.colors.red[60]}`
-            : `2px solid ${theme.colors.grey[30]}`,
-          borderRadius: `3px`,
-          content: `""`,
-          display: `block`,
-          height: INPUT_WIDTH,
-          marginRight: theme.space[3],
-          position: `absolute`,
-          top: 0,
-          left: 0,
-          transition: `border-color 0.15s ease-in-out, background 0.15s ease-in-out`,
-          transform: `translate(0, calc(${INPUT_VERTICAL_OFFSET_CALC}))`,
-          width: INPUT_WIDTH,
+    <CheckboxGroupFieldSkeletonOptionLabel
+      css={(theme: Theme) => [
+        css(theme),
+        {
+          "&:before": {
+            backgroundColor: theme.colors.white,
+            border: hasError
+              ? `1px solid ${theme.colors.red[60]}`
+              : `2px solid ${theme.colors.grey[30]}`,
+            borderRadius: `3px`,
+            content: `""`,
+            display: `block`,
+            height: INPUT_WIDTH,
+            marginRight: theme.space[3],
+            position: `absolute`,
+            top: 0,
+            left: 0,
+            transition: `border-color 0.15s ease-in-out, background 0.15s ease-in-out`,
+            transform: `translate(0, calc(${INPUT_VERTICAL_OFFSET_CALC}))`,
+            width: INPUT_WIDTH,
+          },
         },
-      })}
-      {...props}
+      ]}
+      {...rest}
+      {...styledProps}
     />
   )
 }
 
-CheckboxGroupField.Label = FormGroupField.Label
-CheckboxGroupField.Label.displayName = `CheckboxGroupField.Label`
+export type CheckboxGroupFieldLabelProps = FormGroupFieldLabelProps
+export function CheckboxGroupFieldLabel({
+  children,
+  size,
+  isRequired,
+  ...props
+}: CheckboxGroupFieldLabelProps) {
+  const styledProps = useStyledGroupFieldLabel(children, { size, isRequired })
 
-CheckboxGroupField.Option = Option
-CheckboxGroupField.Option.displayName = `CheckboxGroupField.Option`
+  return <CheckboxGroupFieldSkeletonLabel {...props} {...styledProps} />
+}
 
-CheckboxGroupField.OptionLabel = OptionLabel
-CheckboxGroupField.OptionLabel.displayName = `CheckboxGroupField.OptionLabel`
+export type CheckboxGroupFieldHintProps = CheckboxGroupFieldSkeletonHintProps
+export function CheckboxGroupFieldHint(props: CheckboxGroupFieldHintProps) {
+  const styledProps = useStyledGroupFieldHint()
 
-CheckboxGroupField.OptionWrapper = FormGroupField.OptionWrapper
-CheckboxGroupField.OptionWrapper.displayName = `RadioButtonField.OptionWrapper`
+  return <CheckboxGroupFieldSkeletonHint {...props} {...styledProps} />
+}
 
-CheckboxGroupField.Options = FormGroupField.Options
-CheckboxGroupField.Options.displayName = `CheckboxGroupField.Options`
+export type CheckboxGroupFieldErrorProps = CheckboxGroupFieldSkeletonErrorProps
+export function CheckboxGroupFieldError(props: CheckboxGroupFieldErrorProps) {
+  const styledProps = useStyledGroupFieldError(props.children)
 
-CheckboxGroupField.Hint = FormGroupField.Hint
-CheckboxGroupField.Hint.displayName = `CheckboxGroupField.Hint`
+  return <CheckboxGroupFieldSkeletonError {...props} {...styledProps} />
+}
 
-CheckboxGroupField.Error = FormGroupField.Error
-CheckboxGroupField.Error.displayName = `CheckboxGroupField.Error`
+export type CheckboxGroupFieldOptionsProps = FormGroupFieldOptionsProps
+export function CheckboxGroupFieldOptions(
+  props: CheckboxGroupFieldOptionsProps
+) {
+  return <FormGroupFieldOptions {...props} />
+}
 
-export default CheckboxGroupField
+export type CheckboxGroupFieldOptionWrapperProps = FormGroupFieldOptionWrapperProps
+export function CheckboxGroupFieldOptionWrapper(
+  props: CheckboxGroupFieldOptionWrapperProps
+) {
+  return <FormGroupFieldOptionWrapper {...props} />
+}
