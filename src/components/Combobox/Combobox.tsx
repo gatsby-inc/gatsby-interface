@@ -101,7 +101,8 @@ export const ComboboxOption = React.forwardRef<
   {
     selected,
     selectedAriaLabel = "currently selected:",
-    highlightMatches,
+    highlightMatches = true,
+    value,
     children,
     ...delegated
   },
@@ -110,13 +111,14 @@ export const ComboboxOption = React.forwardRef<
   return (
     <ReachComboboxOption
       ref={ref}
+      value={value}
       css={optionCss(highlightMatches)}
       {...delegated}
     >
       {selected && (
         <MdDone css={selectedOptionIconCss} aria-label={selectedAriaLabel} />
       )}
-      {children || <ComboboxOptionText />}
+      {children || (highlightMatches ? <ComboboxOptionText /> : value)}
     </ReachComboboxOption>
   )
 })

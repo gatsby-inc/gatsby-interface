@@ -7,6 +7,7 @@ export const comboboxCss: ThemeCss = () => ({
 
 export const popoverCss: ThemeCss = theme => ({
   position: `absolute`,
+  zIndex: 1000,
   width: `100%`,
   maxHeight: `26rem`,
   height: `auto`,
@@ -40,9 +41,9 @@ export const listCss: ThemeCss = () => ({
   userSelect: `none`,
 })
 
-export const optionCss: (highlightMatches?: boolean) => ThemeCss = (
-  highlightMatches = true
-) => theme => [
+export const optionCss: (
+  highlightMatches: boolean
+) => ThemeCss = highlightMatches => theme => [
   {
     cursor: `pointer`,
     padding: `${theme.space[4]} ${theme.space[5]}`,
