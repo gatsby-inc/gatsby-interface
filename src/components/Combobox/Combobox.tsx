@@ -15,6 +15,7 @@ import {
   ComboboxOptionText as ReachComboboxOptionText,
 } from "@reach/combobox"
 import { PopoverProps } from "@reach/popover"
+import { PropsWithAs } from "@reach/utils"
 import { MdDone } from "react-icons/md"
 import {
   comboboxCss,
@@ -25,16 +26,33 @@ import {
   selectedOptionIconCss,
 } from "./Combobox.styles"
 
-export type ComboboxProps = import("@reach/utils").PropsWithAs<
-  "div",
-  ReachComboboxProps
->
-
-export function Combobox(props: ComboboxProps) {
-  return <ReachCombobox openOnFocus css={comboboxCss} {...props} />
+type ComboboxContextValue = {
+  listRef: React.RefObject<HTMLUListElement>
 }
 
-export type ComboboxInputProps = import("@reach/utils").PropsWithAs<
+const ComboboxContext = React.createContext<ComboboxContextValue>({
+  listRef: {
+    current: null,
+  },
+})
+
+function useComboboxContext(): ComboboxContextValue {
+  return React.useContext(ComboboxContext)
+}
+
+export type ComboboxProps = PropsWithAs<"div", ReachComboboxProps>
+
+export function Combobox(props: ComboboxProps) {
+  const listRef = React.useRef<HTMLUListElement>(null)
+
+  return (
+    <ComboboxContext.Provider value={{ listRef }}>
+      <ReachCombobox openOnFocus css={comboboxCss} {...props} />
+    </ComboboxContext.Provider>
+  )
+}
+
+export type ComboboxInputProps = PropsWithAs<
   "input",
   ReachComboboxInputProps & {
     hasError?: boolean
@@ -45,17 +63,58 @@ export const ComboboxInput = React.forwardRef<
   HTMLInputElement,
   ComboboxInputProps
 >(function ComboboxInput({ hasError, ...delegated }, ref) {
+  const { listRef } = useComboboxContext()
+
+  /**
+   * This handler allows to scroll list of options along with keyboard navigation
+   *
+   * This solution has been suggested in one of the replies:
+   * https://github.com/reach/reach-ui/issues/357#issuecomment-575849548
+   */
+  const onKeyDown: React.KeyboardEventHandler<HTMLInputElement> = event => {
+    if (event.isDefaultPrevented()) {
+      return
+    }
+
+    const container = listRef.current
+    if (!container) {
+      return
+    }
+
+    // According to the original Github comment, using "requestAnimationFrame" makes
+    // scrolling work when navigating from last item to first item and vice versa
+    window.requestAnimationFrame(() => {
+      const element = container.querySelector(
+        "[aria-selected=true]"
+      ) as HTMLLIElement
+
+      if (!element) {
+        return
+      }
+
+      const top = element.offsetTop - container.scrollTop
+      const bottom =
+        container.scrollTop +
+        container.clientHeight -
+        (element.offsetTop + element.clientHeight)
+
+      if (bottom < 0) container.scrollTop -= bottom
+      if (top < 0) container.scrollTop += top
+    })
+  }
+
   return (
     <ReachComboboxInput
       ref={ref}
       selectOnClick
+      onKeyDown={onKeyDown}
       css={inputCss(hasError)}
       {...delegated}
     />
   )
 })
 
-export type ComboboxPopoverProps = import("@reach/utils").PropsWithAs<
+export type ComboboxPopoverProps = PropsWithAs<
   "div",
   ReachComboboxPopoverProps &
     Partial<PopoverProps> &
@@ -76,16 +135,21 @@ export const ComboboxPopover = React.forwardRef<
   )
 })
 
-export type ComboboxListProps = import("@reach/utils").PropsWithAs<
-  "ul",
-  ReachComboboxListProps
->
+export type ComboboxListProps = PropsWithAs<"ul", ReachComboboxListProps>
 
 export function ComboboxList(props: ComboboxListProps) {
-  return <ReachComboboxList persistSelection css={listCss} {...props} />
+  const { listRef } = useComboboxContext()
+  return (
+    <ReachComboboxList
+      ref={listRef}
+      persistSelection
+      css={listCss}
+      {...props}
+    />
+  )
 }
 
-export type ComboboxOptionProps = import("@reach/utils").PropsWithAs<
+export type ComboboxOptionProps = PropsWithAs<
   "li",
   ReachComboboxOptionProps & {
     selected?: boolean

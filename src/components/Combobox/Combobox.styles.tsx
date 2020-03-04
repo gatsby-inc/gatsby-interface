@@ -9,9 +9,6 @@ export const popoverCss: ThemeCss = theme => ({
   position: `absolute`,
   zIndex: 1000,
   width: `100%`,
-  maxHeight: `26rem`,
-  height: `auto`,
-  overflowY: `scroll`,
   background: theme.colors.primaryBackground,
   border: `1px solid ${theme.colors.grey[10]}`,
   borderBottomLeftRadius: theme.radii[3],
@@ -39,6 +36,9 @@ export const listCss: ThemeCss = () => ({
   margin: 0,
   padding: 0,
   userSelect: `none`,
+  maxHeight: `10rem`,
+  height: `auto`,
+  overflowY: `scroll`,
 })
 
 export const optionCss: (
