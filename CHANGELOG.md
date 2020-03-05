@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.88](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.87...v0.0.88) (2020-03-05)
+
+### Features
+
+- Tooltip component ([#219](https://github.com/gatsby-inc/gatsby-interface/issues/219)) ([d4aa83a](https://github.com/gatsby-inc/gatsby-interface/commit/d4aa83a7cc98ebe4d15709cc2775cc5e779032ec))
+
 ### [0.0.87](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.86...v0.0.87) (2020-03-03)
 
 ### Bug Fixes

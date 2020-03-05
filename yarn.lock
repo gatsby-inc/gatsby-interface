@@ -3598,6 +3598,19 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
+"@reach/tooltip@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.npmjs.org/@reach/tooltip/-/tooltip-0.8.5.tgz#e774415dcafc2b32476b729ebec825d118598ae2"
+  integrity sha512-TWRHyBSvxx2cUI2s7NvgU+b+re+N5rjoCir/A/WMpUej0Q3FBWvpuGZvP+HI0AKA55y5NULQsWCyEpcxohfMGA==
+  dependencies:
+    "@reach/auto-id" "^0.8.5"
+    "@reach/portal" "^0.8.5"
+    "@reach/rect" "^0.8.2"
+    "@reach/utils" "^0.8.5"
+    "@reach/visually-hidden" "^0.8.2"
+    prop-types "^15.7.2"
+    tslib "^1.10.0"
+
 "@reach/utils@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.4.0.tgz#444f3b7384fc0adbe6f3787adb68befd42969b72"
@@ -3615,6 +3628,13 @@
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.1.4.tgz#0dc4ecedf523004337214187db70a46183bd945b"
   integrity sha512-QHbzXjflSlCvDd6vJwdwx16mSB+vUCCQMiU/wK/CgVNPibtpEiIbisyxkpZc55DyDFNUIqP91rSUsNae+ogGDQ==
+
+"@reach/visually-hidden@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.npmjs.org/@reach/visually-hidden/-/visually-hidden-0.8.2.tgz#2b58a2c69ab1c41838b8fef8a1d7370106a6d69c"
+  integrity sha512-U9KdaC1/YzskqAARqSc/ikOdZRbRkAUixwKIFbTsooUCXK+yAE08ikEoKSmCwDuGXxn7vgCit1ur4i994Ohzdw==
+  dependencies:
+    tslib "^1.10.0"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -5083,7 +5103,7 @@
 
 "@types/reach__alert@^0.1.1":
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@types/reach__alert/-/reach__alert-0.1.1.tgz#5c9fbde74c14688f8a0d5ebe7d4d7164b3a1db2f"
+  resolved "https://registry.npmjs.org/@types/reach__alert/-/reach__alert-0.1.1.tgz#5c9fbde74c14688f8a0d5ebe7d4d7164b3a1db2f"
   integrity sha512-BFo1BgQWacu5xHuQW5jyWSSgQpPqMTSrrPfxoB+I6eUYa49Puss57/ZIeZguFR4+Dm8BrGfnBXSX4o2sLlYALg==
   dependencies:
     "@types/react" "*"

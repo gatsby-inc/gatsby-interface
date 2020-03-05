@@ -8,7 +8,7 @@ module.exports = {
     "^.+\\.(j|t)sx?$": `<rootDir>/jest-preprocess.js`,
   },
   moduleNameMapper: {
-    ".+(prismCodeThemes|reach\\/dialog).+\\.(css|styl|less|sass|scss)$": `<rootDir>/__mocks__/styleMock.js`,
+    ".+(prismCodeThemes|reach\\/(dialog|tooltip)).+\\.(css|styl|less|sass|scss)$": `<rootDir>/__mocks__/styleMock.js`,
     ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,
     ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|md)$": `<rootDir>/__mocks__/fileMock.js`,
   },
