@@ -22,9 +22,32 @@ import {
   TextAreaFieldHint,
   TextAreaFieldError,
 } from "../components/TextAreaField"
-import SelectField from "../components/SelectField"
-import CheckboxField from "../components/CheckboxField"
-import CheckboxGroupField from "../components/CheckboxGroupField"
+import {
+  SelectField,
+  SelectFieldWrapper,
+  SelectFieldLabel,
+  SelectFieldControl,
+  SelectFieldHint,
+  SelectFieldError,
+} from "../components/SelectField"
+import {
+  CheckboxField,
+  CheckboxFieldWrapper,
+  CheckboxFieldControl,
+  CheckboxFieldLabel,
+  CheckboxFieldHint,
+  CheckboxFieldError,
+} from "../components/CheckboxField"
+import {
+  CheckboxGroupField,
+  CheckboxGroupFieldLabel,
+  CheckboxGroupFieldOptions,
+  CheckboxGroupFieldOptionWrapper,
+  CheckboxGroupFieldOption,
+  CheckboxGroupFieldOptionLabel,
+  CheckboxGroupFieldHint,
+  CheckboxGroupFieldError,
+} from "../components/CheckboxGroupField"
 import RadioButtonField from "../components/RadioButtonField"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { enumToOptions } from "../../../utils/helpers"
@@ -111,15 +134,15 @@ storiesOf(`form/FormField`, module)
           </TextAreaField>
 
           <SelectField id="example-1c" hasError={!!error} hasHint={!!hint}>
-            <SelectField.Wrapper>
-              <SelectField.Label size={size}>Author</SelectField.Label>
-              <SelectField.Control
+            <SelectFieldWrapper>
+              <SelectFieldLabel size={size}>Author</SelectFieldLabel>
+              <SelectFieldControl
                 options={authors}
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <SelectField.Hint>{hint}</SelectField.Hint>
-              <SelectField.Error>{error}</SelectField.Error>
-            </SelectField.Wrapper>
+              <SelectFieldHint>{hint}</SelectFieldHint>
+              <SelectFieldError>{error}</SelectFieldError>
+            </SelectFieldWrapper>
           </SelectField>
 
           <CheckboxGroupField
@@ -128,27 +151,25 @@ storiesOf(`form/FormField`, module)
             hasHint={!!hint}
             layout="horizontal"
           >
-            <CheckboxGroupField.Label size={size}>
-              Tags
-            </CheckboxGroupField.Label>
-            <CheckboxGroupField.Options>
+            <CheckboxGroupFieldLabel size={size}>Tags</CheckboxGroupFieldLabel>
+            <CheckboxGroupFieldOptions>
               {tags.map(({ label, value }) => (
-                <CheckboxGroupField.OptionWrapper key={value}>
-                  <CheckboxGroupField.Option
+                <CheckboxGroupFieldOptionWrapper key={value}>
+                  <CheckboxGroupFieldOption
                     value={value}
                     name="checkbox-group"
                   />
-                  <CheckboxGroupField.OptionLabel
+                  <CheckboxGroupFieldOptionLabel
                     size={size}
                     optionValue={value}
                   >
                     {label}
-                  </CheckboxGroupField.OptionLabel>
-                </CheckboxGroupField.OptionWrapper>
+                  </CheckboxGroupFieldOptionLabel>
+                </CheckboxGroupFieldOptionWrapper>
               ))}
-            </CheckboxGroupField.Options>
-            <CheckboxGroupField.Hint>{hint}</CheckboxGroupField.Hint>
-            <CheckboxGroupField.Error>{error}</CheckboxGroupField.Error>
+            </CheckboxGroupFieldOptions>
+            <CheckboxGroupFieldHint>{hint}</CheckboxGroupFieldHint>
+            <CheckboxGroupFieldError>{error}</CheckboxGroupFieldError>
           </CheckboxGroupField>
 
           <RadioButtonField id="example-1e" hasError={!!error} hasHint={!!hint}>
@@ -173,19 +194,19 @@ storiesOf(`form/FormField`, module)
           </RadioButtonField>
 
           <CheckboxField id="example-1f" hasError={!!error} hasHint={!!hint}>
-            <CheckboxField.Wrapper>
-              <CheckboxField.Control
+            <CheckboxFieldWrapper>
+              <CheckboxFieldControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <CheckboxField.Label size={`S`}>
+              <CheckboxFieldLabel size={`S`}>
                 I have read and agree with the <a href="/">Terms</a> and{" "}
                 <a href="/">Privacy Policy</a>. Lorem Ipsum is simply dummy text
                 of the printing and typesetting industry.
-              </CheckboxField.Label>
+              </CheckboxFieldLabel>
 
-              <CheckboxField.Hint>{hint}</CheckboxField.Hint>
-              <CheckboxField.Error>{error}</CheckboxField.Error>
-            </CheckboxField.Wrapper>
+              <CheckboxFieldHint>{hint}</CheckboxFieldHint>
+              <CheckboxFieldError>{error}</CheckboxFieldError>
+            </CheckboxFieldWrapper>
           </CheckboxField>
         </Wrapper>
       </StoryUtils.Container>

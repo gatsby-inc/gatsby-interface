@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { useFormikContext, getIn } from "formik"
-import CheckboxFieldBlock from "./CheckboxFieldBlock"
+import { CheckboxFieldBlock } from "./CheckboxFieldBlock"
 import Case from "case"
 import { CheckboxFieldBlockProps } from "./CheckboxFieldBlock"
 
@@ -11,7 +11,9 @@ export type CheckboxConnectedFieldProps = {
   label?: React.ReactNode
 } & Omit<CheckboxFieldBlockProps, "id" | "label">
 
-const CheckboxConnectedField: React.FC<CheckboxConnectedFieldProps> = props => {
+export const CheckboxConnectedField: React.FC<
+  CheckboxConnectedFieldProps
+> = props => {
   const id = `${props.name}Field`
   const label = Case.sentence(props.name)
   const {
@@ -37,5 +39,3 @@ const CheckboxConnectedField: React.FC<CheckboxConnectedFieldProps> = props => {
     />
   )
 }
-
-export default CheckboxConnectedField

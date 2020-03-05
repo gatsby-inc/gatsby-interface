@@ -13,7 +13,6 @@ import {
   InputFieldSkeletonError,
   InputFieldSkeletonHint,
 } from "../components/InputFieldSkeleton"
-import SingleCheckboxFieldSkeleton from "../components/SingleCheckboxFieldSkeleton"
 import {
   TextAreaFieldSkeleton,
   TextAreaFieldSkeletonLabel,
@@ -21,9 +20,29 @@ import {
   TextAreaFieldSkeletonError,
   TextAreaFieldSkeletonHint,
 } from "../components/TextAreaFieldSkeleton"
-import CheckboxGroupFieldSkeleton from "../components/CheckboxGroupFieldSkeleton"
+import {
+  SelectFieldSkeleton,
+  SelectFieldSkeletonLabel,
+  SelectFieldSkeletonControl,
+  SelectFieldSkeletonError,
+  SelectFieldSkeletonHint,
+} from "../components/SelectFieldSkeleton"
+import {
+  CheckboxFieldSkeleton,
+  CheckboxFieldSkeletonControl,
+  CheckboxFieldSkeletonLabel,
+  CheckboxFieldSkeletonError,
+  CheckboxFieldSkeletonHint,
+} from "../components/CheckboxFieldSkeleton"
+import {
+  CheckboxGroupFieldSkeleton,
+  CheckboxGroupFieldSkeletonLabel,
+  CheckboxGroupFieldSkeletonOption,
+  CheckboxGroupFieldSkeletonOptionLabel,
+  CheckboxGroupFieldSkeletonError,
+  CheckboxGroupFieldSkeletonHint,
+} from "../components/CheckboxGroupFieldSkeleton"
 import RadioButtonFieldSkeleton from "../components/RadioButtonFieldSkeleton"
-import SelectFieldSkeleton from "../components/SelectFieldSkeleton"
 
 storiesOf(`form-skeletons`, module)
   .addParameters({
@@ -95,58 +114,54 @@ storiesOf(`form-skeletons`, module)
             hasHint={!!hint}
           >
             <div>
-              <SelectFieldSkeleton.Label>Select</SelectFieldSkeleton.Label>
-              <SelectFieldSkeleton.Control
+              <SelectFieldSkeletonLabel>Select</SelectFieldSkeletonLabel>
+              <SelectFieldSkeletonControl
                 options={options}
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <SelectFieldSkeleton.Error>{error}</SelectFieldSkeleton.Error>
-              <SelectFieldSkeleton.Hint>{hint}</SelectFieldSkeleton.Hint>
+              <SelectFieldSkeletonError>{error}</SelectFieldSkeletonError>
+              <SelectFieldSkeletonHint>{hint}</SelectFieldSkeletonHint>
             </div>
           </SelectFieldSkeleton>
           <br />
-          <SingleCheckboxFieldSkeleton id="checkbox-example">
+          <CheckboxFieldSkeleton id="checkbox-example">
             <div>
-              <SingleCheckboxFieldSkeleton.Control
+              <CheckboxFieldSkeletonControl
                 onChange={e => action(`Change`)(e.target.value)}
               />
-              <SingleCheckboxFieldSkeleton.Label>
+              <CheckboxFieldSkeletonLabel>
                 Single checkbox
-              </SingleCheckboxFieldSkeleton.Label>
-              <SingleCheckboxFieldSkeleton.Error>
-                {error}
-              </SingleCheckboxFieldSkeleton.Error>
-              <SingleCheckboxFieldSkeleton.Hint>
-                {hint}
-              </SingleCheckboxFieldSkeleton.Hint>
+              </CheckboxFieldSkeletonLabel>
+              <CheckboxFieldSkeletonError>{error}</CheckboxFieldSkeletonError>
+              <CheckboxFieldSkeletonHint>{hint}</CheckboxFieldSkeletonHint>
             </div>
-          </SingleCheckboxFieldSkeleton>
+          </CheckboxFieldSkeleton>
           <br />
           <CheckboxGroupFieldSkeleton
             id="checkbox-group-example"
             hasError={!!error}
             hasHint={!!hint}
           >
-            <CheckboxGroupFieldSkeleton.Label>
+            <CheckboxGroupFieldSkeletonLabel>
               Checkbox group
-            </CheckboxGroupFieldSkeleton.Label>
+            </CheckboxGroupFieldSkeletonLabel>
             {options.map(({ label, value }) => (
               <React.Fragment key={value}>
-                <CheckboxGroupFieldSkeleton.Option
+                <CheckboxGroupFieldSkeletonOption
                   value={value}
                   name="checkbox-group"
                 />
-                <CheckboxGroupFieldSkeleton.OptionLabel optionValue={value}>
+                <CheckboxGroupFieldSkeletonOptionLabel optionValue={value}>
                   {label}
-                </CheckboxGroupFieldSkeleton.OptionLabel>
+                </CheckboxGroupFieldSkeletonOptionLabel>
               </React.Fragment>
             ))}
-            <CheckboxGroupFieldSkeleton.Error>
+            <CheckboxGroupFieldSkeletonError>
               {error}
-            </CheckboxGroupFieldSkeleton.Error>
-            <CheckboxGroupFieldSkeleton.Hint>
+            </CheckboxGroupFieldSkeletonError>
+            <CheckboxGroupFieldSkeletonHint>
               {hint}
-            </CheckboxGroupFieldSkeleton.Hint>
+            </CheckboxGroupFieldSkeletonHint>
           </CheckboxGroupFieldSkeleton>
           <br />
           <RadioButtonFieldSkeleton

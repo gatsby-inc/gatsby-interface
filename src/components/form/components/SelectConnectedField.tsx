@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { getIn, useFormikContext } from "formik"
-import SelectFieldBlock from "./SelectFieldBlock"
+import { SelectFieldBlock } from "./SelectFieldBlock"
 import Case from "case"
 import { SelectFieldBlockProps } from "./SelectFieldBlock"
 
@@ -11,7 +11,9 @@ export type SelectConnectedFieldProps = {
   label?: React.ReactNode
 } & Omit<SelectFieldBlockProps, "id" | "label">
 
-const SelectConnectedField: React.FC<SelectConnectedFieldProps> = props => {
+export const SelectConnectedField: React.FC<
+  SelectConnectedFieldProps
+> = props => {
   const id = `${props.name}Field`
   const label = Case.sentence(props.name)
   const {
@@ -37,5 +39,3 @@ const SelectConnectedField: React.FC<SelectConnectedFieldProps> = props => {
     />
   )
 }
-
-export default SelectConnectedField
