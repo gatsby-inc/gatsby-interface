@@ -101,6 +101,7 @@ BaseNavigation.Hamburger = ({ ...rest }) => {
         [mobileNavMediaQuery]: baseStyles.hamburger.mobile,
       }}
       {...rest}
+      aria-label={`${isMobileNavOpen ? "Close" : "Open"} the menu`}
     >
       <HamburgerIcon />
     </button>
