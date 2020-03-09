@@ -12,19 +12,14 @@ import pkg from "./package.json"
 const extensions = [`.js`, `.jsx`, `.ts`, `.tsx`]
 
 export default {
-  input: `src/index.ts`,
-  output: [
-    {
-      file: pkg.main,
-      format: `cjs`,
-      sourcemap: true,
-    },
-    {
-      file: pkg.module,
-      format: `es`,
-      sourcemap: true,
-    },
-  ],
+  input: pkg.source,
+  preserveModules: true,
+  output: {
+    dir: pkg.files[0],
+    format: "esm",
+    entryFileNames: `[name].[format].js`,
+    sourcemap: true,
+  },
   plugins: [
     external(),
     svg({
