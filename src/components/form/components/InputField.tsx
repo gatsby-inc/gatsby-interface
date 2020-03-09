@@ -6,11 +6,11 @@ import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldS
 import {
   getFieldStackStyles,
   FormFieldStack,
-  FormFieldLabelProps,
   FormFieldStackProps,
   useStyledFieldHint,
   useStyledFieldError,
   useStyledFieldLabel,
+  WithStyledFieldLabel,
 } from "./FormField"
 import { getInputStyles } from "./FormField.helpers"
 import {
@@ -23,6 +23,7 @@ import {
   InputFieldSkeletonError,
   InputFieldSkeletonLabel,
   InputFieldSkeletonProps,
+  InputFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/InputFieldSkeleton"
 import { Theme } from "../../../theme"
 
@@ -60,7 +61,9 @@ export const InputFieldControl = React.forwardRef<
 export type InputFieldWrapperProps = FormFieldStackProps
 export const InputFieldWrapper = FormFieldStack
 
-export type InputFieldLabelProps = FormFieldLabelProps
+export type InputFieldLabelProps = WithStyledFieldLabel<
+  InputFieldSkeletonLabelProps
+>
 export function InputFieldLabel({
   children,
   size,

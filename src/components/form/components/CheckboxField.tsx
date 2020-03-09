@@ -2,21 +2,19 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
+import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import {
-  FormFieldSkeletonProps,
-  useFormFieldSkeleton,
-} from "../../form-skeletons/components/FormFieldSkeleton"
-import {
-  FormFieldLabelProps,
   FormFieldWrapperProps,
   FormFieldWrapper,
   useStyledFieldLabel,
   useStyledFieldError,
   useStyledFieldHint,
+  WithStyledFieldLabel,
 } from "./FormField"
 import { getFocusStyles } from "./FormField.helpers"
 import {
   CheckboxFieldSkeleton,
+  CheckboxFieldSkeletonProps,
   CheckboxFieldSkeletonControlProps,
   CheckboxFieldSkeletonLabel,
   CheckboxFieldSkeletonErrorProps,
@@ -24,10 +22,11 @@ import {
   CheckboxFieldSkeletonHintProps,
   CheckboxFieldSkeletonHint,
   CheckboxFieldSkeletonControl,
+  CheckboxFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/CheckboxFieldSkeleton"
 import { Theme, ThemeCss } from "../../../theme"
 
-export type CheckboxFieldProps = FormFieldSkeletonProps
+export type CheckboxFieldProps = CheckboxFieldSkeletonProps
 export function CheckboxField(props: CheckboxFieldProps) {
   return <CheckboxFieldSkeleton {...props}></CheckboxFieldSkeleton>
 }
@@ -112,7 +111,9 @@ const labelWithErrorCss: ThemeCss = theme => ({
   },
 })
 
-export type CheckboxFieldLabelProps = FormFieldLabelProps
+export type CheckboxFieldLabelProps = WithStyledFieldLabel<
+  CheckboxFieldSkeletonLabelProps
+>
 export function CheckboxFieldLabel({
   children,
   size,

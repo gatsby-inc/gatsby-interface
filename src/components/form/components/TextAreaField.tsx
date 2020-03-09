@@ -2,22 +2,20 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import {
-  FormFieldSkeletonProps,
-  useFormFieldSkeleton,
-} from "../../form-skeletons/components/FormFieldSkeleton"
+import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import {
   getFieldStackStyles,
   FormFieldStack,
   FormFieldStackProps,
-  FormFieldLabelProps,
   useStyledFieldLabel,
   useStyledFieldError,
   useStyledFieldHint,
+  WithStyledFieldLabel,
 } from "./FormField"
 import { getInputStyles } from "./FormField.helpers"
 import {
   TextAreaFieldSkeleton,
+  TextAreaFieldSkeletonProps,
   TextAreaFieldSkeletonControlProps,
   TextAreaFieldSkeletonControl,
   TextAreaFieldSkeletonLabel,
@@ -25,11 +23,12 @@ import {
   TextAreaFieldSkeletonError,
   TextAreaFieldSkeletonHintProps,
   TextAreaFieldSkeletonHint,
+  TextAreaFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/TextAreaFieldSkeleton"
 import { Theme } from "../../../theme"
 
-export type TextAreaFieldProps = FormFieldSkeletonProps
-export function TextAreaField(props: FormFieldSkeletonProps) {
+export type TextAreaFieldProps = TextAreaFieldSkeletonProps
+export function TextAreaField(props: TextAreaFieldProps) {
   return <TextAreaFieldSkeleton {...props}></TextAreaFieldSkeleton>
 }
 
@@ -71,7 +70,9 @@ export const TextAreaFieldControl = React.forwardRef<
 export type TextAreaFieldWrapperProps = FormFieldStackProps
 export const TextAreaFieldWrapper = FormFieldStack
 
-export type TextAreaFieldLabelProps = FormFieldLabelProps
+export type TextAreaFieldLabelProps = WithStyledFieldLabel<
+  TextAreaFieldSkeletonLabelProps
+>
 export function TextAreaFieldLabel({
   children,
   size,

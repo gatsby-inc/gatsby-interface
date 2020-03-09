@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { ReactNode } from "react"
+import React from "react"
 
 import {
   CheckboxField,
@@ -11,17 +11,11 @@ import {
   CheckboxFieldHint,
   CheckboxFieldError,
 } from "./CheckboxField"
-import { FormFieldLabelSize } from "./FormField.helpers"
-import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
+import { WithFormFieldBlock } from "./FormField"
 
-export type CheckboxFieldBlockProps = {
-  id: string
-  label: ReactNode
-  labelSize?: FormFieldLabelSize
-  error?: ReactNode
-  hint?: ReactNode
-  validationMode?: ErrorValidationMode
-} & CheckboxFieldControlProps
+export type CheckboxFieldBlockProps = WithFormFieldBlock<
+  CheckboxFieldControlProps
+>
 
 export const CheckboxFieldBlock = React.forwardRef<
   HTMLInputElement,

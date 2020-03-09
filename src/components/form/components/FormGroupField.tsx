@@ -3,19 +3,8 @@ import { jsx } from "@emotion/core"
 import React from "react"
 
 import {
-  FormGroupFieldSkeleton,
-  FormGroupFieldSkeletonProps,
-  FormGroupFieldSkeletonLabelProps,
-  FormGroupFieldSkeletonOptionProps,
-  FormGroupFieldSkeletonOptionLabelProps,
-  FormGroupFieldSkeletonOptionLabel,
-} from "../../form-skeletons/components/FormGroupFieldSkeleton"
-
-import {
-  FormField,
+  FormFieldWrapper,
   FormFieldWrapperProps,
-  FormFieldErrorProps,
-  FormFieldHintProps,
   useStyledFieldLabel,
   useStyledFieldHint,
   useStyledFieldError,
@@ -67,7 +56,9 @@ export type FormGroupFieldProviderProps = {
   gap?: StackGap
 }
 
-function FormGroupFieldProvider({
+// TODO we can probably do away with context for layout and variant
+// they can be replaced with passing props since in most cases we're going to use *Block or *ConnectedField components
+export function FormGroupFieldProvider({
   layout,
   variant,
   children,
@@ -86,29 +77,14 @@ function FormGroupFieldProvider({
   )
 }
 
-export type FormGroupFieldProps = FormGroupFieldProviderProps &
-  FormGroupFieldSkeletonProps
+export type WithFormGroupField<T> = Omit<T, keyof FormGroupFieldProviderProps> &
+  FormGroupFieldProviderProps
 
-export function FormGroupField({
-  variant,
-  layout,
-  ...rest
-}: FormGroupFieldProps) {
-  return (
-    <FormGroupFieldProvider variant={variant} layout={layout}>
-      <FormGroupFieldSkeleton
-        css={[
-          {
-            padding: 0,
-            margin: 0,
-            border: 0,
-          },
-        ]}
-        {...rest}
-      />
-    </FormGroupFieldProvider>
-  )
-}
+export const formGroupFieldCss: ThemeCss = () => ({
+  padding: 0,
+  margin: 0,
+  border: 0,
+})
 
 export function useStyledGroupFieldLabel(
   ...args: Parameters<typeof useStyledFieldLabel>
@@ -129,22 +105,6 @@ export function useStyledGroupFieldLabel(
   }
 }
 
-export type FormGroupFieldLabelProps = {
-  isRequired?: boolean
-  size?: FormFieldLabelSize
-} & FormGroupFieldSkeletonLabelProps
-
-const Label: React.FC<FormGroupFieldLabelProps> = ({
-  children,
-  isRequired,
-  size = `M`,
-  ...rest
-}) => {
-  const styledProps = useStyledGroupFieldLabel(children, { size, isRequired })
-
-  return <FormGroupFieldSkeleton.Label {...rest} {...styledProps} />
-}
-
 export function useStyledGroupFieldHint(
   ...args: Parameters<typeof useStyledFieldHint>
 ) {
@@ -157,12 +117,6 @@ export function useStyledGroupFieldHint(
     ],
     ...baseStyledProps,
   }
-}
-
-const FormGroupFieldHint: React.FC<FormFieldHintProps> = props => {
-  const styledProps = useStyledGroupFieldHint()
-
-  return <FormField.Hint {...props} {...styledProps} />
 }
 
 export function useStyledGroupFieldError(
@@ -179,14 +133,9 @@ export function useStyledGroupFieldError(
   }
 }
 
-const FormGroupFieldError: React.FC<FormFieldErrorProps> = props => {
-  const styledProps = useStyledGroupFieldError(props.children)
-
-  return <FormField.Error {...props} {...styledProps} />
-}
-
 const horizontalOptionsCss: ThemeCss = theme =>
   getGroupFieldStackStyles(`item`, theme)
+
 const verticalOptionsCss: ThemeCss = theme => [
   getGroupFieldStackStyles(`item`, theme),
   getGroupFieldStackStyles(`stack`, theme),
@@ -199,7 +148,7 @@ export type FormGroupFieldOptionsProps = Omit<
 export const FormGroupFieldOptions: React.FC<
   FormGroupFieldOptionsProps
 > = props => {
-  const { layout } = FormGroupField.useFormGroupField()
+  const { layout } = useFormGroupField()
   const isHorizontal = layout === `horizontal`
 
   return isHorizontal ? (
@@ -214,25 +163,16 @@ export const FormGroupFieldOptions: React.FC<
   )
 }
 
-export type FormGroupFieldOptionProps = Omit<
-  FormGroupFieldSkeletonOptionProps,
-  "ref"
->
-
-const Option: React.FC<FormGroupFieldOptionProps> = props => (
-  <FormGroupFieldSkeleton.Option {...props} />
-)
-
 export type FormGroupFieldOptionLabelProps = {
   size?: FormFieldLabelSize
-} & FormGroupFieldSkeletonOptionLabelProps
+}
 
 export function useStyledGroupFieldOptionLabel({
   size = `L`,
 }: {
   size?: FormFieldLabelSize
 }): { css: ThemeCss } {
-  const { layout } = FormGroupField.useFormGroupField()
+  const { layout } = useFormGroupField()
   const isHorizontal = layout === `horizontal`
 
   return {
@@ -252,24 +192,15 @@ export function useStyledGroupFieldOptionLabel({
   }
 }
 
-const OptionLabel: React.FC<FormGroupFieldOptionLabelProps> = ({
-  size = `L`,
-  ...rest
-}) => {
-  const styledProps = useStyledGroupFieldOptionLabel({ size })
-
-  return <FormGroupFieldSkeletonOptionLabel {...rest} {...styledProps} />
-}
-
 export type FormGroupFieldOptionWrapperProps = FormFieldWrapperProps
 export const FormGroupFieldOptionWrapper: React.FC<
   FormGroupFieldOptionWrapperProps
 > = props => {
-  const { layout } = FormGroupField.useFormGroupField()
+  const { layout } = useFormGroupField()
   const isHorizontal = layout === `horizontal`
 
   return (
-    <FormField.Wrapper
+    <FormFieldWrapper
       css={(theme: Theme) => [
         isHorizontal
           ? getGroupFieldClusterStyles(`item`, theme)
@@ -283,28 +214,3 @@ export const FormGroupFieldOptionWrapper: React.FC<
 export function useFormGroupField() {
   return React.useContext(FormGroupFieldContext)
 }
-
-FormGroupField.Label = Label
-FormGroupField.Label.displayName = `FormGroupField.Label`
-
-FormGroupField.Options = FormGroupFieldOptions
-FormGroupField.Options.displayName = `FormGroupField.Options`
-
-FormGroupField.Option = Option
-FormGroupField.Option.displayName = `FormGroupField.Option`
-
-FormGroupField.OptionLabel = OptionLabel
-FormGroupField.OptionLabel.displayName = `FormGroupField.OptionLabel`
-
-FormGroupField.OptionWrapper = FormGroupFieldOptionWrapper
-FormGroupField.OptionWrapper.displayName = `FormGroupField.OptionWrapper`
-
-FormGroupField.Hint = FormGroupFieldHint
-FormGroupField.Hint.displayName = `FormGroupField.Hint`
-
-FormGroupField.Error = FormGroupFieldError
-FormGroupField.Error.displayName = `FormGroupField.Error`
-
-FormGroupField.useFormGroupField = useFormGroupField
-
-export default FormGroupField
