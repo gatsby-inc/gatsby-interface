@@ -10,6 +10,7 @@
   "module": "dist/index.esm.js",
   "jsnext:main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "test": "jest",
     "test:a11y": "jest __tests__/AccessiblityStoryshots.test.js --testPathIgnorePatterns=[]",
