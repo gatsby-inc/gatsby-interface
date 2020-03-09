@@ -95,7 +95,7 @@ BaseNavigation.Hamburger = ({ ...rest }) => {
       onClick={() => {
         setIsMobileNavOpen(!isMobileNavOpen)
       }}
-      aria-expanded={isMobileNavOpen ? `active` : ``}
+      aria-expanded={isMobileNavOpen}
       css={{
         ...baseStyles.hamburger.default,
         [mobileNavMediaQuery]: baseStyles.hamburger.mobile,
