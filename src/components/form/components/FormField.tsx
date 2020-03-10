@@ -28,13 +28,7 @@ export function getFieldStackStyles(type: `stack` | `item`, theme: Theme) {
   return type === `item` ? stackItemCss : stackCss
 }
 
-export type FormFieldWrapperProps = Omit<JSX.IntrinsicElements["div"], "ref">
-
-export const FormFieldWrapper: React.FC<FormFieldWrapperProps> = props => {
-  return <div {...props} />
-}
-
-export type FormFieldStackProps = FormFieldWrapperProps
+export type FormFieldStackProps = Omit<JSX.IntrinsicElements["div"], "ref">
 
 export const FormFieldStack: React.FC<FormFieldStackProps> = props => {
   return <div css={theme => getFieldStackStyles(`stack`, theme)} {...props} />

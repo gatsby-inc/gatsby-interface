@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { getIn, useFormikContext } from "formik"
-import Case from "case"
 import {
   RadioButtonFieldBlock,
   RadioButtonFieldBlockProps,
 } from "./RadioButtonFieldBlock"
+import { useConnectedField } from "../hooks/useConnectedField"
 
 export type RadioButtonConnectedFieldProps = {
   name: string
@@ -16,28 +15,7 @@ export type RadioButtonConnectedFieldProps = {
 export const RadioButtonConnectedField: React.FC<
   RadioButtonConnectedFieldProps
 > = props => {
-  const id = `${props.name}Field`
-  const label = Case.sentence(props.name)
-  const {
-    values,
-    errors,
-    touched,
-    handleBlur,
-    handleChange,
-  } = useFormikContext()
-  const error = getIn(errors, props.name)
-  const isTouched = getIn(touched, props.name)
-  const value = getIn(values, props.name)
+  const [connectedProps] = useConnectedField(props.name)
 
-  return (
-    <RadioButtonFieldBlock
-      id={id}
-      label={label}
-      error={isTouched && error}
-      value={value}
-      onBlur={handleBlur}
-      onChange={handleChange}
-      {...props}
-    />
-  )
+  return <RadioButtonFieldBlock {...connectedProps} {...props} />
 }

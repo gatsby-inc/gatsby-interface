@@ -4,8 +4,6 @@ import React from "react"
 
 import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import {
-  FormFieldWrapperProps,
-  FormFieldWrapper,
   useStyledFieldLabel,
   useStyledFieldError,
   useStyledFieldHint,
@@ -74,8 +72,13 @@ const sharedStyles: ThemeCss = theme => ({
   paddingLeft: `calc(${CHECKBOX_WIDTH} + ${theme.space[4]})`,
 })
 
-export type CheckboxFieldWrapperProps = FormFieldWrapperProps
-export const CheckboxFieldWrapper = FormFieldWrapper
+export type CheckboxFieldWrapperProps = Omit<
+  JSX.IntrinsicElements["div"],
+  "ref"
+>
+export function CheckboxFieldWrapper(props: CheckboxFieldWrapperProps) {
+  return <div {...props} />
+}
 
 const labelCss: ThemeCss = theme => ({
   cursor: `pointer`,

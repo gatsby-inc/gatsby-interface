@@ -3,8 +3,6 @@ import { jsx } from "@emotion/core"
 import React from "react"
 
 import {
-  FormFieldWrapper,
-  FormFieldWrapperProps,
   useStyledFieldLabel,
   useStyledFieldHint,
   useStyledFieldError,
@@ -192,7 +190,10 @@ export function useStyledGroupFieldOptionLabel({
   }
 }
 
-export type FormGroupFieldOptionWrapperProps = FormFieldWrapperProps
+export type FormGroupFieldOptionWrapperProps = Omit<
+  JSX.IntrinsicElements["div"],
+  "ref"
+>
 export const FormGroupFieldOptionWrapper: React.FC<
   FormGroupFieldOptionWrapperProps
 > = props => {
@@ -200,7 +201,7 @@ export const FormGroupFieldOptionWrapper: React.FC<
   const isHorizontal = layout === `horizontal`
 
   return (
-    <FormFieldWrapper
+    <div
       css={(theme: Theme) => [
         isHorizontal
           ? getGroupFieldClusterStyles(`item`, theme)
