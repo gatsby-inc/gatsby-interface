@@ -27,8 +27,6 @@ export { LinkButton } from "./components/LinkButton"
 
 export { SettingsBlock } from "./components/SettingsBlock"
 
-export { SettingsCard } from "./components/SettingsCard"
-
 export { Link } from "./components/Link"
 
 export {
