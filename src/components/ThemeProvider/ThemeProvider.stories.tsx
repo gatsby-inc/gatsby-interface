@@ -3,7 +3,7 @@ import { jsx, Interpolation } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
 import { StoryUtils } from "../../utils/storybook"
 import { css } from "@emotion/core"
-import { Theme } from "../../theme"
+import { Theme, getTheme } from "../../theme"
 import { useTheme, ThemeProvider } from "."
 
 const textCss: Interpolation = {
@@ -65,6 +65,39 @@ storiesOf(`ThemeProvider`, module)
 
     return (
       <ThemeProvider>
+        <TestComponent />
+      </ThemeProvider>
+    )
+  })
+  .add("ThemeProvider custom theme props", () => {
+    function TestComponent() {
+      return (
+        <StoryUtils.Container>
+          <StoryUtils.Stack>
+            <div
+              css={(theme: Theme) =>
+                css(textCss, {
+                  backgroundColor: theme.colors.gatsby,
+                  color: theme.colors.white,
+                  padding: theme.space[5],
+                })
+              }
+            >
+              Lorem ipsum
+            </div>
+          </StoryUtils.Stack>
+        </StoryUtils.Container>
+      )
+    }
+
+    const defaultTheme = getTheme()
+    const otherTheme = {
+      ...defaultTheme,
+      colors: { ...defaultTheme.colors, gatsby: "red" },
+    }
+
+    return (
+      <ThemeProvider theme={otherTheme}>
         <TestComponent />
       </ThemeProvider>
     )
