@@ -4,7 +4,6 @@ import { jsx } from "@emotion/core"
 import { storiesOf } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
-import README from "../README_FORM_FIELD.md"
 import { StoryUtils } from "../../../utils/storybook"
 import {
   InputField,
@@ -103,9 +102,6 @@ storiesOf(`form/FormField`, module)
   .addParameters({
     options: {
       showPanel: true,
-    },
-    readme: {
-      sidebar: README,
     },
   })
   .add(`Shared components`, () => {
