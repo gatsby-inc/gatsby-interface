@@ -69,7 +69,7 @@ storiesOf(`ThemeProvider`, module)
       </ThemeProvider>
     )
   })
-  .add("ThemeProvider custom theme props", () => {
+  .add("ThemeProvider custom theme prop of type Theme", () => {
     function TestComponent() {
       return (
         <StoryUtils.Container>
@@ -98,6 +98,38 @@ storiesOf(`ThemeProvider`, module)
 
     return (
       <ThemeProvider theme={otherTheme}>
+        <TestComponent />
+      </ThemeProvider>
+    )
+  })
+  .add("ThemeProvider custom theme prop of type function", () => {
+    function TestComponent() {
+      return (
+        <StoryUtils.Container>
+          <StoryUtils.Stack>
+            <div
+              css={(theme: Theme) =>
+                css(textCss, {
+                  backgroundColor: theme.colors.gatsby,
+                  color: theme.colors.white,
+                  padding: theme.space[5],
+                })
+              }
+            >
+              Lorem ipsum
+            </div>
+          </StoryUtils.Stack>
+        </StoryUtils.Container>
+      )
+    }
+
+    const getNewTheme = (defaultTheme: Theme) => ({
+      ...defaultTheme,
+      colors: { ...defaultTheme.colors, gatsby: "yellow" },
+    })
+
+    return (
+      <ThemeProvider theme={getNewTheme}>
         <TestComponent />
       </ThemeProvider>
     )

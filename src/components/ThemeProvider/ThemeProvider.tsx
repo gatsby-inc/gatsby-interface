@@ -4,11 +4,19 @@ import { getTheme, Theme } from "../../theme"
 
 export type ThemeProviderProps = {
   children?: React.ReactNode
-  theme?: Theme
+  theme?: Theme | ((baseTheme: Theme) => Theme)
 }
 
 export default function ThemeProvider({ children, theme }: ThemeProviderProps) {
-  const themeValue = React.useMemo(() => theme || getTheme(), [theme, getTheme])
+  const themeValue = React.useMemo(() => {
+    const baseTheme = getTheme()
+
+    if (typeof theme === "function") {
+      return theme(baseTheme)
+    }
+
+    return theme || baseTheme
+  }, [theme, getTheme])
 
   return <ThemeUiProvider<Theme> theme={themeValue}>{children}</ThemeUiProvider>
 }
