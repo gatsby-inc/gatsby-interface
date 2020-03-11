@@ -31,7 +31,7 @@ const breadcrumbItemCss: ThemeCss = theme => ({
   display: `flex`,
   alignItems: `center`,
   color: theme.colors.purple[50],
-  fontFamily: theme.fonts.header,
+  fontFamily: theme.fonts.heading,
   fontSize: theme.fontSizes[3],
 })
 

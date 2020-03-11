@@ -1,11 +1,15 @@
+import { FontWeightToken as DesignFontWeightToken } from "gatsby-design-tokens"
 export { fontWeights as default } from "gatsby-design-tokens"
 
+export type FontWeightToken = DesignFontWeightToken
 /*
 
 fontWeights = {
-  0: "400"
-  1: "700"
-  2: "800"
+  body: 400,
+  semiBold: 600,
+  bold: 700,
+  extraBold: 800,
+  heading: 700,
 }
 
 */

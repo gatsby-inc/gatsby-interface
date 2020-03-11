@@ -47,7 +47,7 @@
     "case": "^1.6.2",
     "date-fns": "^2.8.1",
     "filestack-react": "^3.1.0",
-    "gatsby-design-tokens": "^1.0.0",
+    "gatsby-design-tokens": "^2.0.2",
     "lodash.sample": "^4.2.1",
     "theme-ui": "^0.2.49"
   },
