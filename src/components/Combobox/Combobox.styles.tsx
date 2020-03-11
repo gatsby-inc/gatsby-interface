@@ -31,6 +31,34 @@ export const inputCss: (hasError?: boolean) => ThemeCss = (
   },
 ]
 
+export const inputWithSelectedValueCss: ThemeCss = theme => ({
+  "&:focus + span": {
+    fontSize: theme.fontSizes[0],
+    transform: `translate3d(0, 0, 0)`,
+    backgroundColor: theme.colors.white,
+    color: theme.colors.purple[70],
+    opacity: 1,
+  },
+})
+
+export const selectedValueCss: ThemeCss = theme => ({
+  fontSize: theme.fontSizes[2],
+  lineHeight: theme.lineHeights.solid,
+  position: `absolute`,
+  zIndex: 2,
+  color: theme.colors.grey[90],
+  top: `calc(-${theme.fontSizes[0]} / 2)`,
+  left: theme.space[5],
+  maxWidth: `calc(100% - ${theme.space[5]} - ${theme.space[8]})`,
+  overflow: `hidden`,
+  textOverflow: `ellipsis`,
+  whiteSpace: "nowrap",
+  padding: `0 ${theme.space[2]}`,
+  opacity: 0,
+  transform: `translate3d(0.8rem, 1.1rem, 0)`,
+  transition: `all ${theme.transitions.curve.default} ${theme.transitions.speed.default}`,
+})
+
 export const listCss: ThemeCss = () => ({
   listStyle: `none`,
   margin: 0,
