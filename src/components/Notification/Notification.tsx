@@ -12,6 +12,7 @@ import {
 import { PropsOf } from "../../utils/types"
 import { Link } from "../Link"
 import { ThemeCss, Theme } from "../../theme"
+import { Card, CardProps } from "../Card"
 
 export type NotificationContextValue = {
   onDismiss?: () => void
@@ -30,11 +31,8 @@ const baseCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
 })
 
-type AllowedAs = "section" | "div"
-
-export type NotificationProps = Omit<PropsOf<AllowedAs>, "ref"> & {
+export type NotificationProps = Omit<PropsOf<CardProps>, "ref"> & {
   children?: React.ReactNode
-  as?: AllowedAs
   variant?: NotificationVariant
   tone?: NotificationTone
   content?: React.ReactNode
@@ -51,7 +49,6 @@ export type NotificationProps = Omit<PropsOf<AllowedAs>, "ref"> & {
 
 export default function Notification({
   children,
-  as: Component = `div`,
   tone = `BRAND`,
   variant = `PRIMARY`,
   content,
@@ -75,11 +72,12 @@ export default function Notification({
 
   return (
     <NotificationContext.Provider value={{ onDismiss: onDismissButtonClick }}>
-      <Component
+      <Card
         css={theme => [
           baseCss(theme),
           getNotificationVariantStyles(variant, tone)(theme),
         ]}
+        standalone={variant === `PRIMARY`}
         {...rest}
       >
         {content && (
@@ -112,7 +110,7 @@ export default function Notification({
           <Notification.DismissButton label={dismissButtonLabel} />
         )}
         {children}
-      </Component>
+      </Card>
     </NotificationContext.Provider>
   )
 }

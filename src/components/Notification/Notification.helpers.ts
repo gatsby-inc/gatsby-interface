@@ -3,7 +3,6 @@ import { Success, Danger } from "../../assets"
 import { MdWarning } from "react-icons/md"
 import { NotificationTone, NotificationVariant } from "./types"
 import { Theme, ThemeCss } from "../../theme"
-import { cardFrameCss } from "../../stylesheets/card"
 
 const Warning = styled(MdWarning)(({ theme }) => ({
   color: (theme as Theme).colors.yellow[50],
@@ -25,14 +24,12 @@ type GetVariantStylesFn = (tone: NotificationTone) => ThemeCss
 const variants: Record<NotificationVariant, GetVariantStylesFn> = {
   PRIMARY: tone => {
     return theme => [
-      cardFrameCss(theme),
       {
         background: theme.colors.white,
         borderLeft: `10px solid ${theme.tones[tone].dark}`,
-        padding: `${theme.space[5]} ${theme.space[7]} ${theme.space[5]} ${theme.space[5]}`,
-        [theme.mediaQueries.desktop]: {
-          padding: `${theme.space[5]} ${theme.space[7]} ${theme.space[5]} ${theme.space[5]}`,
-        },
+        paddingTop: theme.space[5],
+        paddingLeft: theme.space[5],
+        paddingRight: theme.space[7],
       },
     ]
   },
