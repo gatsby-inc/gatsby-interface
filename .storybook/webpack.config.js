@@ -1,5 +1,5 @@
 // prettier-ignore
-module.exports = async ({ config, mode }) => {
+module.exports = async ({ config }) => {
   // console.dir(config.plugins, { depth: null }) || config;
 
   // Transpile Gatsby module because Gastby includes un-transpiled ES6 code.
