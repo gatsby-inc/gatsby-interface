@@ -12,7 +12,9 @@ import { Toast } from "../Toast"
 describe(`Toast`, () => {
   const baseProps = {
     message: `Lorem ipsum`,
-    onClose: () => {},
+    onClose: () => {
+      // do nothing.
+    },
     closeButtonLabel: "close",
     tone: `SUCCESS`,
     id: 0,
