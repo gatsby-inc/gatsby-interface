@@ -6,7 +6,7 @@ Most of design tokens values used in `gatsby-interface` are imported from the `g
 
 ## colors
 
-Imported from `gatsby-interface-tokens` and extended with three named values (legacy values used in Cloud, take a look at comment inside the object)
+Imported from `gatsby-interface-tokens` and extended with three named values (legacy values used in Cloud, take a look at comment inside the object):
 
 ```javascript
 colors = {
@@ -203,7 +203,7 @@ colors = {
 
 ## space
 
-Imported from `gatsby-interface-tokens` and extended (added three additional values) and transformed to `rem` values (the original values are `number` implicit `px`)
+Imported from `gatsby-interface-tokens` and extended (added three additional values):
 
 ```javascript
  space = [
