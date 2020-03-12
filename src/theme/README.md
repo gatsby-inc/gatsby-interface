@@ -58,7 +58,7 @@ Alternatively, you can just use [mediaQueries](#mediaQueries) scale to avoid wri
 ```jsx
 <div
   css={theme => ({
-    fontWeight: theme.fontWeights[3],
+    fontWeight: theme.fontWeights.bold,
   })}
 />
 ```
