@@ -246,7 +246,7 @@ fonts = {
 
 ## fontSizes
 
-Imported from `gatsby-interface-tokens` and transformed to `rem` values (origianl values are `numbers` implicit `px`).
+Imported from `gatsby-interface-tokens` and re-exported with no changes:
 
 ```javascript
 
