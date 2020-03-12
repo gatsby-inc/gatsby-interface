@@ -328,20 +328,21 @@ shadows = {
 
 ## transition
 
-Imported from `gatsby-desing-tokens` and extended with some additional/overwritten `speed` and `curve` values
+Imported from `gatsby-desing-tokens` and re-exported with no changes.
 
 ```javascript
 transition = {
+  default: `250ms cubic-bezier(0.4, 0, 0.2, 1)`,
   curve: {
     default: `cubic-bezier(0.4, 0, 0.2, 1)`,
-    fastOutLinearIn: `cubic-bezier(0.4, 0, 1, 1)`, // extension
+    fastOutLinearIn: `cubic-bezier(0.4, 0, 1, 1)`,
   },
   speed: {
-    snail: `1000ms`, // extension
-    slow: `500ms`, // overwrite original value `350ms`
-    default: `250ms`,
+    faster: `50ms`,
     fast: `100ms`,
-    blink: `50ms`, // extension
+    default: `250ms`,
+    slow: `500ms`,
+    slower: `1000ms`,
   },
 }
 ```
