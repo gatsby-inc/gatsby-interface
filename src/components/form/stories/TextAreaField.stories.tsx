@@ -2,23 +2,22 @@
 import { jsx } from "@emotion/core"
 
 import { DecoratorFn } from "@storybook/react"
-
 import { StoryUtils } from "../../../utils/storybook"
-import README from "../README_INPUT_FIELD.md"
+import README from "../README_TEXTAREA_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import {
-  InputField,
-  InputFieldWrapper,
-  InputFieldLabel,
-  InputFieldControl,
-  InputFieldHint,
-  InputFieldError,
-} from "../components/InputField"
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
+import {
+  TextAreaField,
+  TextAreaFieldWrapper,
+  TextAreaFieldLabel,
+  TextAreaFieldControl,
+  TextAreaFieldHint,
+  TextAreaFieldError,
+} from ".."
 
 export default {
-  title: `Form — styled primitives/InputField`,
+  title: `Form — styled primitives/TextAreaField`,
   decorators: [
     story => (
       <StoryUtils.Container>
@@ -34,12 +33,12 @@ export default {
 }
 
 export const Basic = () => (
-  <InputField id="inputField">
-    <InputFieldWrapper>
-      <InputFieldLabel>Field label</InputFieldLabel>
-      <InputFieldControl onChange={e => action(`Change`)(e.target.value)} />
-    </InputFieldWrapper>
-  </InputField>
+  <TextAreaField id="TextAreaField">
+    <TextAreaFieldWrapper>
+      <TextAreaFieldLabel>Field label</TextAreaFieldLabel>
+      <TextAreaFieldControl />
+    </TextAreaFieldWrapper>
+  </TextAreaField>
 )
 
 export const Sandbox = () => {
@@ -48,26 +47,26 @@ export const Sandbox = () => {
     labelSize,
     error,
     hint,
-    disabled,
     required,
+    disabled,
   } = getFieldBlockSandboxProps()
   const placeholder = text(`Placeholder`, `This is a placeholder`)
 
   return (
-    <InputField id="inputField" hasError={!!error} hasHint={!!hint}>
-      <InputFieldWrapper>
-        <InputFieldLabel size={labelSize} isRequired={required}>
+    <TextAreaField id="TextAreaField" hasError={!!error} hasHint={true}>
+      <TextAreaFieldWrapper>
+        <TextAreaFieldLabel size={labelSize} isRequired={required}>
           {label}
-        </InputFieldLabel>
-        <InputFieldControl
+        </TextAreaFieldLabel>
+        <TextAreaFieldControl
           onChange={e => action(`Change`)(e.target.value)}
           placeholder={placeholder}
           disabled={disabled}
           required={required}
         />
-        <InputFieldHint>{hint}</InputFieldHint>
-        <InputFieldError>{error}</InputFieldError>
-      </InputFieldWrapper>
-    </InputField>
+        <TextAreaFieldHint>{hint}</TextAreaFieldHint>
+        <TextAreaFieldError>{error}</TextAreaFieldError>
+      </TextAreaFieldWrapper>
+    </TextAreaField>
   )
 }

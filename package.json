@@ -180,6 +180,9 @@
     "watch": "^1.0.2",
     "yup": "^0.27.0"
   },
+  "resolutions": {
+    "@storybook/theming": "5.3.13"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
