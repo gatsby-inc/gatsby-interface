@@ -8,10 +8,10 @@ const messageCss = css`
 `
 
 export interface MessageWithLinkProps {
-  linkLabel: React.ReactNode;
-  href?: string;
-  target: string;
-  to?: string;
+  linkLabel: React.ReactNode
+  href?: string
+  target: string
+  to?: string
 }
 
 export const MessageWithLink: React.FC<MessageWithLinkProps> = ({

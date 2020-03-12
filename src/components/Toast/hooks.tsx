@@ -47,9 +47,9 @@ export const useShowErrorAlert = () => {
 }
 
 export interface Toast {
-  id: symbol;
-  message: React.ReactNode;
-  tone: ToastTone;
+  id: symbol
+  message: React.ReactNode
+  tone: ToastTone
 }
 
 export const useToastActions = () => {

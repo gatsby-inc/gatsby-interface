@@ -2,12 +2,12 @@ import colors from "./colors"
 import { AtomTone } from "./types"
 
 export type ToneColors = {
-  superLight: string;
-  light: string;
-  medium: string;
-  dark: string;
-  darker: string;
-  superDark: string;
+  superLight: string
+  light: string
+  medium: string
+  dark: string
+  darker: string
+  superDark: string
 }
 
 const tones: Record<AtomTone, ToneColors> = {

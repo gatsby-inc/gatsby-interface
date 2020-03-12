@@ -20,7 +20,7 @@ const iconOffsetCss = css({
 const iconOnlyCss = css({ padding: 0, justifyContent: `space-around` })
 
 export type ChipProps = BaseChipProps & {
-  icon?: React.ReactNode | null;
+  icon?: React.ReactNode | null
 }
 
 export default function Chip({ icon = null, children, ...props }: ChipProps) {
