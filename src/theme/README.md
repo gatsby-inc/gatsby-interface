@@ -152,7 +152,7 @@ For more granular control refer to [breakpoints](#breakpoints) and [mediaBreakpo
 ```jsx
 <div
   css={theme => ({
-    transition: `all ${theme.transitions.speed.snail} ${theme.transitions.curve.fastOutLinearIn}`,
+    transition: `all ${theme.transitions.speed.slower} ${theme.transitions.curve.fastOutLinearIn}`,
   })}
 />
 ```
