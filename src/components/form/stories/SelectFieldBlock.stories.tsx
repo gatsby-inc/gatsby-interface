@@ -28,6 +28,7 @@ export default {
     readme: {
       sidebar: README,
     },
+    chromatic: { pauseAnimationAtEnd: true },
   },
 }
 
