@@ -1,6 +1,6 @@
 # Design tokens
 
-Most of design tokens values used in `gatsby-interface` are imported from the `gatsby-desing-tokens` package. We define `types` for them and re-export for usage in Gatsby Cloud app gatsbyjs.com pages. In some cases the values of imported tokens are extanded or overwritten.
+Most of design tokens values used in `gatsby-interface` are imported from the `gatsby-desing-tokens` package. We define `types` for them and re-export for usage in Gatsby Cloud app gatsbyjs.com pages. In some cases the values of imported tokens are extended or overwritten.
 
 # from gatsby-design-tokens
 
