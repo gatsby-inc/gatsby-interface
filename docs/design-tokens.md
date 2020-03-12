@@ -279,9 +279,11 @@ Imported from `gatsby-desing-tokens` and re-exported with no changes.
 
 ```javascript
 fontWeights = {
- 0: "400"
- 1: "700"
- 2: "800"
+  body: 400,
+  semiBold: 600,
+  bold: 700,
+  extraBold: 800,
+  heading: 700,
 }
 ```
 
