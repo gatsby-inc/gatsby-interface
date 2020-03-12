@@ -316,11 +316,11 @@ lineHeights = {
 
 ## radii
 
-Imported from `gatsby-desing-tokens` and transformed to `string` values with `px` postfix (original values are `numbers`):
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 radii = [
- 0: `0px`,
+ 0: 0,
  1: `2px`,
  2: `4px`,
  3: `8px`,
