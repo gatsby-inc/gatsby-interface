@@ -275,7 +275,7 @@ If you have to use `font-size` value smaller than `0.75rem` (`fontSizes[0]`) you
 
 ## fontWeights
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 fontWeights = {
@@ -289,7 +289,7 @@ fontWeights = {
 
 ## letterSpacings
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 letterSpacings = default {
@@ -301,7 +301,7 @@ letterSpacings = default {
 
 ## lineHeights
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 lineHeights = {
@@ -314,7 +314,7 @@ lineHeights = {
 
 ## radii
 
-Imported from `gatsby-desing-tokens` and transformed to `string` values with `px` postfix (original values are `numbers`)
+Imported from `gatsby-desing-tokens` and transformed to `string` values with `px` postfix (original values are `numbers`):
 
 ```javascript
 radii = [
@@ -330,7 +330,7 @@ radii = [
 
 ## shadows
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 shadows = {
@@ -343,7 +343,7 @@ shadows = {
 
 ## transition
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 transition = {
