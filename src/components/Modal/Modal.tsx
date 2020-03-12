@@ -1,7 +1,6 @@
 import React from "react"
 import {
   DialogOverlay,
-  DialogContent,
   DialogOverlayProps,
   DialogContentProps,
 } from "@reach/dialog"
@@ -51,26 +50,22 @@ const Overlay = styled(DialogOverlay)<Props>`
   animation: ${props => props.animation} 0.5s ease forwards;
 `
 
-const Content = styled(DialogContent)`
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  width: auto;
-`
-
 export const Modal: React.FC<ModalProps> = ({
   type,
   initialFocusRef,
   isOpen,
   onDismiss,
+  children,
   ...props
-}) => (
-  <Overlay
-    initialFocusRef={initialFocusRef}
-    isOpen={isOpen}
-    onDismiss={onDismiss}
-    animation={getBackgroundAnimation(type)}
-  >
-    <Content {...props} />
-  </Overlay>
-)
+}) => {
+  return (
+    <Overlay
+      initialFocusRef={initialFocusRef}
+      isOpen={isOpen}
+      onDismiss={onDismiss}
+      animation={getBackgroundAnimation(type)}
+    >
+      {React.cloneElement(children as any, props)}
+    </Overlay>
+  )
+}
