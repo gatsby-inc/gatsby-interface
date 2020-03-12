@@ -31,7 +31,7 @@ const baseCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
 })
 
-export type NotificationProps = Omit<PropsOf<CardProps>, "ref"> & {
+export type NotificationProps = Omit<CardProps, "ref"> & {
   children?: React.ReactNode
   variant?: NotificationVariant
   tone?: NotificationTone
