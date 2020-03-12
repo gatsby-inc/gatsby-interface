@@ -52,8 +52,6 @@ export { Heading } from "./components/Heading"
 
 export { Announcement } from "./components/Announcement"
 
-export { Badge } from "./components/Badge"
-
 export { Switch } from "./components/Switch"
 
 export { Navigation } from "./components/Navigation"
@@ -104,6 +102,7 @@ export { default as cardStyles } from "./theme/styles/card"
 export * from "./theme/styles/button"
 
 export * from "./components/Avatar"
+export * from "./components/Badge"
 export * from "./components/BaseAnchor"
 export * from "./components/Chip"
 export * from "./components/icons"
