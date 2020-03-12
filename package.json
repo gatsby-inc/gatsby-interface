@@ -6,7 +6,7 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.esm.js",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "jsnext:main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
