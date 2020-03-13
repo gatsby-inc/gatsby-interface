@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.99](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.98...v0.0.99) (2020-03-13)
+
+
+### Features
+
+* rewrite Badge in TypeScript ([#233](https://github.com/gatsby-inc/gatsby-interface/issues/233)) ([ffada76](https://github.com/gatsby-inc/gatsby-interface/commit/ffada76e58558a29ac62b1d1dcf581ec773250d4))
+
 ### [0.0.98](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.97...v0.0.98) (2020-03-12)
 
 ### [0.0.97](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.96...v0.0.97) (2020-03-12)
