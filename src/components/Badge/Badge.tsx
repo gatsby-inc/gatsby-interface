@@ -4,7 +4,7 @@ import { ThemeCss, Theme } from "../../theme"
 
 const baseCss: ThemeCss = theme => ({
   borderRadius: theme.radii[2],
-  fontFamily: theme.fonts.header,
+  fontFamily: theme.fonts.heading,
   fontWeight: `bold`,
   lineHeight: 1,
 })
