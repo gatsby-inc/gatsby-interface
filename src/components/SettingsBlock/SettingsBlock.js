@@ -49,7 +49,7 @@ SettingsBlock.Header = ({ children, ...rest }) => (
   <header
     css={{
       fontSize: fontSizes[4],
-      ...cardStyles.space.header,
+      ...cardStyles.space.heading,
     }}
     {...rest}
   >
