@@ -23,7 +23,7 @@ const CustomRadio1 = styled(Radio)`
       strong {
         font-size: ${fontSizes[4]};
         font-weight: 800;
-        font-family: ${fonts.header};
+        font-family: ${fonts.heading};
       }
 
       span {
@@ -53,7 +53,7 @@ const CustomRadio2 = styled(Radio)`
         strong {
           font-size: ${fontSizes.l};
           font-weight: 800;
-          font-family: ${fonts.header};
+          font-family: ${fonts.heading};
         }
 
         span {

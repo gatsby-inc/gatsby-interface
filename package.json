@@ -1,12 +1,12 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.95",
+  "version": "0.0.98",
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
     "dist"
   ],
-  "main": "dist/index.esm.js",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "jsnext:main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -48,7 +48,7 @@
     "case": "^1.6.2",
     "date-fns": "^2.8.1",
     "filestack-react": "^3.1.0",
-    "gatsby-design-tokens": "^1.0.0",
+    "gatsby-design-tokens": "^2.0.2",
     "lodash.sample": "^4.2.1",
     "theme-ui": "^0.2.49"
   },

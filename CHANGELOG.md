@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.98](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.97...v0.0.98) (2020-03-12)
+
+### [0.0.97](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.96...v0.0.97) (2020-03-12)
+
+### [0.0.96](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.95...v0.0.96) (2020-03-12)
+
+
+### Features
+
+* update gatsby-design-tokens ([#230](https://github.com/gatsby-inc/gatsby-interface/issues/230)) ([3615108](https://github.com/gatsby-inc/gatsby-interface/commit/36151081b3c151c8020a26e86d7015caa6b50873))
+
 ### [0.0.95](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.94...v0.0.95) (2020-03-12)
 
 ### [0.0.94](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.93...v0.0.94) (2020-03-11)

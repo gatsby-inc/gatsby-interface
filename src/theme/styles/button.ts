@@ -40,7 +40,7 @@ function getButtonBaseCss(): ThemeCss {
     boxSizing: `border-box`,
     cursor: `pointer`,
     display: `inline-flex`,
-    fontFamily: theme.fonts.header,
+    fontFamily: theme.fonts.heading,
     justifyContent: `center`,
     transition: `background 0.5s, border 0.5s, color 0.5s`,
     lineHeight: theme.lineHeights.dense,

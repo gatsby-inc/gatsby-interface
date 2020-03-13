@@ -11389,10 +11389,12 @@ gatsby-cli@^2.6.0:
     ink "^2.3.0"
     ink-spinner "^3.0.1"
 
-gatsby-design-tokens@^1.0.0:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-design-tokens/-/gatsby-design-tokens-1.0.3.tgz#98dce79c5d397adb91ed0f4219cb91c3fc578864"
-  integrity sha512-pXBM34IpqXBccgf82WdNKNOtANReftzuKu9kteJbriX822nU2nfLzeOXJsxGPUs9/npymTUHcV1ayhVkX4p/9g==
+gatsby-design-tokens@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/gatsby-design-tokens/-/gatsby-design-tokens-2.0.2.tgz#9e818127629de66237de8808929e2afa1378068f"
+  integrity sha512-CfxpOARaFju6xtd33hhrfUJXk9kWmzkFZS8swrHNLrAMsW4kzhehYcTo4583mEX5fvU1n6zp43+eVtYSViUoyw==
+  dependencies:
+    hex2rgba "^0.0.1"
 
 gatsby-link@^2.1.1:
   version "2.2.12"
@@ -12388,6 +12390,11 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
+
+hex2rgba@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/hex2rgba/-/hex2rgba-0.0.1.tgz#8701ba1c6ec02c204504158407c1c4b47a9336ed"
+  integrity sha1-hwG6HG7ALCBFBBWEB8HEtHqTNu0=
 
 highlight-words-core@1.2.2:
   version "1.2.2"

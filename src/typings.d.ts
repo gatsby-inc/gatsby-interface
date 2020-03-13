@@ -4,9 +4,9 @@ declare module "*.md" {
 }
 
 declare module "gatsby-design-tokens" {
-  type Shade = 90 | 80 | 70 | 60 | 50 | 40 | 30 | 20 | 10 | 5
+  type MapToString<T> = { [K in keyof T]: string }
 
-  type FadeShade = 80 | 70 | 60 | 50 | 30 | 10
+  type Shade = 90 | 80 | 70 | 60 | 50 | 40 | 30 | 20 | 10 | 5
 
   export type Colors = {
     purple: Record<Shade, string>
@@ -28,8 +28,8 @@ declare module "gatsby-design-tokens" {
     accent: string
     warning: string
     // semi-transparent colors
-    blackFade: Record<FadeShade, string>
-    whiteFade: Record<FadeShade, string>
+    blackFade: Record<Shade, string>
+    whiteFade: Record<Shade, string>
     // role-based tokens
     ui: {
       background: string
@@ -71,6 +71,9 @@ declare module "gatsby-design-tokens" {
       invisibles: string
       scrollbarThumb: string
       lineHighlightBorder: string
+      copyButton: string
+      lineHighlightBackground: string
+      scrollbarTrack: string
     }
   }
 
@@ -79,7 +82,7 @@ declare module "gatsby-design-tokens" {
    * This should allow TS to detect when we're trying to access a non-existing size, e.g. fontSize[18]
    */
 
-  type FontSizes = [
+  type FontSizesRaw = [
     number,
     number,
     number,
@@ -99,7 +102,10 @@ declare module "gatsby-design-tokens" {
     number
   ]
 
-  type Space = [
+  type FontSizes = MapToString<FontSizesRaw>
+  type FontSizesPx = MapToString<FontSizes>
+
+  type SpaceRaw = [
     number,
     number,
     number,
@@ -114,59 +120,69 @@ declare module "gatsby-design-tokens" {
     number,
     number
   ]
+  type Space = MapToString<SpaceRaw>
+  type SpacePx = MapToString<SpaceRaw>
 
   /**
    * Token types
    */
-  export type BreakpointToken = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
-  export type FontToken = "system" | "header" | "monospace" | "serif"
-  export type LineHeightToken = "solid" | "dense" | "default" | "loose"
+  export type BreakpointToken = "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
+  export type FontToken = "body" | "system" | "heading" | "monospace" | "serif"
+  export type FontWeightToken =
+    | "body"
+    | "semiBold"
+    | "bold"
+    | "extraBold"
+    | "heading"
+  export type LineHeightToken =
+    | "solid"
+    | "dense"
+    | "default"
+    | "loose"
+    | "heading"
+    | "body"
   export type LetterSpacingToken = "normal" | "tracked" | "tight"
   export type ShadowToken = "raised" | "floating" | "overlay" | "dialog"
-  export type ZIndexToken =
-    | "widget"
-    | "navigation"
-    | "banner"
-    | "modal"
-    | "sidebar"
-    | "floatingActionButton"
-    | "skipLink"
   export type SpaceToken = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+  export type TransitionCurve = `default` | `fastOutLinearIn`
+  export type TransitionSpeed =
+    | `faster`
+    | `fast`
+    | `default`
+    | `slow`
+    | `slower`
+  export type Transitions = {
+    default: string
+    curve: Record<TransitionCurve, string>
+    speed: Record<TransitionSpeed, string>
+  }
 
   export const borders: [0, string, string]
   export const breakpoints: Record<BreakpointToken, string | number>
+  export const breakpointsArray: [
+    string,
+    string,
+    string,
+    string,
+    string,
+    string
+  ]
   export const colors: Colors
-  export const fonts: Record<FontToken, string[]>
+  export const fonts: Record<FontToken, string>
+  export const fontsLists: Record<FontToken, string[]>
   export const fontSizes: FontSizes
-  export const fontWeights: [number, number, number]
+  export const fontSizesPx: FontSizesPx
+  export const fontSizesRaw: FontSizesRaw
+  export const fontWeights: Record<FontWeightToken, number>
   export const letterSpacings: Record<LetterSpacingToken, string>
   export const lineHeights: Record<LineHeightToken, number>
   export const mediaQueries: Record<BreakpointToken, string>
-  export const radii: [number, number, number, number, number, number, string]
+  export const radii: [number, string, string, string, string, string, string]
   export const shadows: Record<ShadowToken, string>
-  export const sizes: {
-    headerHeight: string
-    bannerHeight: string
-    sidebarUtilityHeight: string
-    pageHeadingDesktopWidth: string
-    sidebarWidth: {
-      default: number
-      large: number
-    }
-    avatar: string
-  }
   export const space: Space
-  export const transition: {
-    curve: {
-      default: string
-    }
-    speed: {
-      default: string
-      fast: string
-      slow: string
-    }
-  }
-  export const zIndices: Record<ZIndexToken, number>
+  export const spacePx: SpacePx
+  export const spaceRaw: SpaceRaw
+  export const transition: Transitions
 }
 
 declare module "storybook-chromatic/isChromatic" {

@@ -22,10 +22,10 @@ const baseCss = css`
 export type GetLabelFn = (copied: boolean) => string
 
 export type CopyButtonProps = ButtonProps & {
-  content: string;
-  getButtonLabel?: GetLabelFn;
-  getButtonTitle?: GetLabelFn;
-  delay?: number;
+  content: string
+  getButtonLabel?: GetLabelFn
+  getButtonTitle?: GetLabelFn
+  delay?: number
 }
 
 function CopyButton({

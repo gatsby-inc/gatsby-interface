@@ -1,11 +1,11 @@
 import * as React from "react"
 
 export interface DotProps {
-  x: number;
-  y: number;
-  color: string;
-  opacity: number;
-  size: number;
+  x: number
+  y: number
+  color: string
+  opacity: number
+  size: number
 }
 
 const Dot: React.FC<DotProps> = ({ x, y, color, opacity, size }) => (
