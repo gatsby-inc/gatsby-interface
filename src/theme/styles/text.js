@@ -51,7 +51,7 @@ const variantStyles = () => {
       margin: `0.5rem 0 0`,
     },
     EMPHASIZED_LEDE: {
-      fontFamily: fonts.header,
+      fontFamily: fonts.heading,
       ...sizeStyles()[`2XL`],
       lineHeight: 1.3,
       margin: `1em 0 0`,

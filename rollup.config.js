@@ -11,48 +11,56 @@ import pkg from "./package.json"
 
 const extensions = [`.js`, `.jsx`, `.ts`, `.tsx`]
 
-export default {
-  input: `src/index.ts`,
-  output: [
-    {
+const plugins = [
+  external(),
+  svg({
+    base64: true,
+  }),
+  babel({
+    exclude: `node_modules/**`,
+    extensions,
+  }),
+  resolve({ extensions }),
+  commonjs({
+    namedExports: {
+      "highlight-words-core": ["findAll"],
+    },
+  }),
+  postcss({
+    extensions: [`.css`],
+  }),
+  // TODO The following two plugins should be removed once all src is using TypeScript
+  copy({
+    targets: [
+      { src: `dist/index-ts-only.d.ts`, dest: `dist/`, rename: `index.d.ts` },
+    ],
+    hook: `buildStart`,
+  }),
+  del({
+    targets: `dist/index-ts-only.d.ts`,
+    hook: `buildEnd`,
+  }),
+]
+
+export default [
+  {
+    input: pkg.source,
+    preserveModules: true,
+    output: {
+      dir: pkg.files[0],
+      format: "esm",
+      entryFileNames: `[name].[format].js`,
+      sourcemap: true,
+    },
+    plugins,
+  },
+  {
+    input: pkg.source,
+    output: {
       file: pkg.main,
-      format: `cjs`,
+      format: "cjs",
       sourcemap: true,
     },
-    {
-      file: pkg.module,
-      format: `es`,
-      sourcemap: true,
-    },
-  ],
-  plugins: [
-    external(),
-    svg({
-      base64: true,
-    }),
-    babel({
-      exclude: `node_modules/**`,
-      extensions,
-    }),
-    resolve({ extensions }),
-    commonjs({
-      namedExports: {
-        "highlight-words-core": ["findAll"],
-      },
-    }),
-    postcss({
-      extensions: [`.css`],
-    }),
-    // TODO The following two plugins should be removed once all src is using TypeScript
-    copy({
-      targets: [
-        { src: `dist/index-ts-only.d.ts`, dest: `dist/`, rename: `index.d.ts` },
-      ],
-      hook: `buildStart`,
-    }),
-    del({
-      targets: `dist/index-ts-only.d.ts`,
-      hook: `buildEnd`,
-    }),
-  ],
-}
+    plugins,
+  },
+]

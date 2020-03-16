@@ -77,10 +77,10 @@ const ToastIconByTone = {
 }
 
 export interface ToastProps {
-  message: React.ReactNode;
-  onClose: () => void;
-  closeButtonLabel: string;
-  tone: ToastTone;
+  message: React.ReactNode
+  onClose: () => void
+  closeButtonLabel: string
+  tone: ToastTone
 }
 
 export const Toast: React.FC<ToastProps> = ({

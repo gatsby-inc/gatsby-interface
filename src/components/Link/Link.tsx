@@ -9,7 +9,7 @@ type GatsbyLinkNoRefProps = Omit<GatsbyLinkProps<any>, "ref">
 export type LinkProps = (
   | GatsbyLinkNoRefProps
   | Omit<BaseAnchorProps, "ref">) & {
-  variant?: LinkVariant;
+  variant?: LinkVariant
 }
 
 function Link(props: GatsbyLinkProps<any>): JSX.Element

@@ -3,7 +3,7 @@
 exports[`<CopyButton> renders unchanged 1`] = `
 <div>
   <button
-    class="css-1t4gxqm-baseCss"
+    class="css-ldliji-baseCss"
     title="Copy to clipboard"
     type="button"
   >

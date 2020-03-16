@@ -46,7 +46,7 @@ export const variantStyles: Record<TextVariant, ThemeCss> = {
   EMPHASIZED_LEDE: theme => [
     sizeStyles[`2XL`](theme),
     {
-      fontFamily: theme.fonts.header,
+      fontFamily: theme.fonts.heading,
       lineHeight: theme.lineHeights.dense,
       margin: `${theme.space[5]} 0 0`,
     },

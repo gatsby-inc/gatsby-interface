@@ -1,12 +1,12 @@
 # Design tokens
 
-Most of design tokens values used in `gatsby-interface` are imported from the `gatsby-desing-tokens` package. We define `types` for them and re-export for usage in Gatsby Cloud app gatsbyjs.com pages. In some cases the values of imported tokens are extanded or overwritten.
+Most of design tokens values used in `gatsby-interface` are imported from the `gatsby-desing-tokens` package. We define `types` for them and re-export for usage in Gatsby Cloud app gatsbyjs.com pages. In some cases the values of imported tokens are extended or overwritten.
 
 # from gatsby-design-tokens
 
 ## colors
 
-Imported from `gatsby-interface-tokens` and extended with three named values (legacy values used in Cloud, take a look at comment inside the object)
+Imported from `gatsby-interface-tokens` and extended with three named values (legacy values used in Cloud, take a look at comment inside the object):
 
 ```javascript
 colors = {
@@ -126,20 +126,28 @@ colors = {
   accent: "#ffb238",
   warning: "#da0013",
   blackFade: {
+    5: "rgba(35, 33, 41, 0.05)",
     10: "rgba(35, 33, 41, 0.1)",
+    20: "rgba(35, 33, 41, 0.2)",
     30: "rgba(35, 33, 41, 0.3)",
+    40: "rgba(35, 33, 41, 0.4)",
     50: "rgba(35, 33, 41, 0.5)",
     60: "rgba(35, 33, 41, 0.6)",
     70: "rgba(35, 33, 41, 0.7)",
-    80: "rgba(35, 33, 41, 0.85)",
+    80: "rgba(35, 33, 41, 0.8)",
+    90: "rgba(35, 33, 41, 0.9)",
   },
   whiteFade: {
+    5: "rgba(255, 255, 255, 0.05)",
     10: "rgba(255, 255, 255, 0.1)",
+    20: "rgba(255, 255, 255, 0.2)",
     30: "rgba(255, 255, 255, 0.3)",
+    40: "rgba(255, 255, 255, 0.4)",
     50: "rgba(255, 255, 255, 0.5)",
     60: "rgba(255, 255, 255, 0.6)",
     70: "rgba(255, 255, 255, 0.7)",
-    80: "rgba(255, 255, 255, 0.85)",
+    80: "rgba(255, 255, 255, 0.8)",
+    90: "rgba(255, 255, 255, 0.9)",
   },
   ui: {
     background: "#fbfbfb",
@@ -169,18 +177,21 @@ colors = {
     bg: "#fdfaf6",
     border: "#faede5",
     text: "#866c5b",
-    remove: "#e45c5c",
-    add: "#4a9c59",
-    selector: "#b3568b",
-    tag: "#4084a1",
-    keyword: "#538eb6",
-    comment: "#6f8f39",
+    remove: "#da0013",
+    add: "#088413",
+    selector: "#b94185",
+    tag: "#137886",
+    keyword: "#096fb3",
+    comment: "#527713",
     punctuation: "#53450e",
-    regex: "#d88489",
+    regex: "#dc0437",
     cssString: "#a2466c",
     invisibles: "#e0d7d1",
     scrollbarThumb: "#f4d1c6",
     lineHighlightBorder: "#f1beb6",
+    copyButton: "#635e69",
+    lineHighlightBackground: "#fbf0ea",
+    scrollbarTrack: "#faede5",
   },
 
   /* extensions  */
@@ -192,7 +203,7 @@ colors = {
 
 ## space
 
-Imported from `gatsby-interface-tokens` and extended (added three additional values) and transformed to `rem` values (the original values are `number` implicit `px`)
+Imported from `gatsby-interface-tokens` and extended (added three additional values):
 
 ```javascript
  space = [
@@ -217,15 +228,17 @@ Imported from `gatsby-interface-tokens` and extended (added three additional val
 
 ## fonts
 
-Imported from `gatsby-interface-tokens` and transformed to `strings` values. (the original values are `array`s)
+Imported from `gatsby-interface-tokens` and re-exported with no changes:
 
 ```javascript
 fonts = {
-  header:
+  heading:
     "Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
   monospace:
     "SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace",
   serif: "Georgia,Times New Roman,Times,serif",
+  body:
+    "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
   system:
     "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
 }
@@ -233,7 +246,7 @@ fonts = {
 
 ## fontSizes
 
-Imported from `gatsby-interface-tokens` and transformed to `rem` values (origianl values are `numbers` implicit `px`).
+Imported from `gatsby-interface-tokens` and re-exported with no changes:
 
 ```javascript
 
@@ -262,19 +275,21 @@ If you have to use `font-size` value smaller than `0.75rem` (`fontSizes[0]`) you
 
 ## fontWeights
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 fontWeights = {
- 0: "400"
- 1: "700"
- 2: "800"
+  body: 400,
+  semiBold: 600,
+  bold: 700,
+  extraBold: 800,
+  heading: 700,
 }
 ```
 
 ## letterSpacings
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 letterSpacings = default {
@@ -286,24 +301,26 @@ letterSpacings = default {
 
 ## lineHeights
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 lineHeights = {
   solid: 1,
   dense: 1.25,
+  heading: 1.25,
   default: 1.5,
+  body: 1.5,
   loose: 1.75,
 }
 ```
 
 ## radii
 
-Imported from `gatsby-desing-tokens` and transformed to `string` values with `px` postfix (original values are `numbers`)
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 radii = [
- 0: `0px`,
+ 0: 0,
  1: `2px`,
  2: `4px`,
  3: `8px`,
@@ -315,7 +332,7 @@ radii = [
 
 ## shadows
 
-Imported from `gatsby-desing-tokens` and re-exported with no changes.
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 shadows = {
@@ -328,20 +345,21 @@ shadows = {
 
 ## transition
 
-Imported from `gatsby-desing-tokens` and extended with some additional/overwritten `speed` and `curve` values
+Imported from `gatsby-desing-tokens` and re-exported with no changes:
 
 ```javascript
 transition = {
+  default: `250ms cubic-bezier(0.4, 0, 0.2, 1)`,
   curve: {
     default: `cubic-bezier(0.4, 0, 0.2, 1)`,
-    fastOutLinearIn: `cubic-bezier(0.4, 0, 1, 1)`, // extension
+    fastOutLinearIn: `cubic-bezier(0.4, 0, 1, 1)`,
   },
   speed: {
-    snail: `1000ms`, // extension
-    slow: `500ms`, // overwrite original value `350ms`
-    default: `250ms`,
+    faster: `50ms`,
     fast: `100ms`,
-    blink: `50ms`, // extension
+    default: `250ms`,
+    slow: `500ms`,
+    slower: `1000ms`,
   },
 }
 ```
