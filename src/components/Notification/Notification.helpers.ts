@@ -26,9 +26,9 @@ const variants: Record<NotificationVariant, GetVariantStylesFn> = {
     return theme => [
       {
         background: theme.colors.white,
-        borderLeft: `10px solid ${theme.tones[tone].dark}`,
+        borderLeft: `${theme.space[2]} solid ${theme.tones[tone].dark}`,
         paddingTop: theme.space[5],
-        paddingLeft: theme.space[5],
+        paddingLeft: theme.space[6],
         paddingRight: theme.space[7],
       },
     ]
