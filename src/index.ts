@@ -48,8 +48,6 @@ export { SidebarNav } from "./components/SidebarNav"
 
 export { Heading } from "./components/Heading"
 
-export { Announcement } from "./components/Announcement"
-
 export { Navigation } from "./components/Navigation"
 
 export * from "./components/CopyButton"
@@ -95,6 +93,7 @@ export { default as transition } from "./theme/transition"
 export { default as cardStyles } from "./theme/styles/card"
 export * from "./theme/styles/button"
 
+export * from "./components/Announcement"
 export * from "./components/Avatar"
 export * from "./components/Badge"
 export * from "./components/BaseAnchor"
