@@ -1,6 +1,6 @@
 import colors, { Colors } from "./colors"
 import fonts, { Font } from "./fonts"
-import fontWeights from "./fontWeights"
+import fontWeights, { FontWeightToken } from "./fontWeights"
 import fontSizes, { FontSize, FontSizes } from "./fontSizes"
 import lineHeights, { LineHeightToken } from "./lineHeights"
 import letterSpacings, { LetterSpacingToken } from "./letterSpacings"
@@ -86,15 +86,11 @@ const themeFonts: FontScale = fonts
 /**
  * Font weights
  */
-export type ThemeFontWeight = "body" | "heading" | "bold"
+export type ThemeFontWeight = FontWeightToken
 
 type FontWeightScale = Record<ThemeFontWeight, number>
 
-const themeFontWeights: FontWeightScale = {
-  body: fontWeights[0],
-  heading: fontWeights[1],
-  bold: fontWeights[2],
-}
+const themeFontWeights: FontWeightScale = fontWeights
 
 /**
  * Font sizes

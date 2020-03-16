@@ -27,8 +27,6 @@ export { LinkButton } from "./components/LinkButton"
 
 export { SettingsBlock } from "./components/SettingsBlock"
 
-export { SettingsCard } from "./components/SettingsCard"
-
 export { Link } from "./components/Link"
 
 export {
@@ -44,23 +42,13 @@ export { Tabs, Tab, TabsNav, TabFigure, TabLabel } from "./components/Tabs"
 
 export { RadioSkeleton, Radio } from "./components/Radio"
 
-export { StepsIndicator } from "./components/StepsIndicator"
-
 export { FileUpload } from "./components/FileUpload"
 
 export { SidebarNav } from "./components/SidebarNav"
 
 export { Heading } from "./components/Heading"
 
-export { Announcement } from "./components/Announcement"
-
-export { Badge } from "./components/Badge"
-
-export { Switch } from "./components/Switch"
-
 export { Navigation } from "./components/Navigation"
-
-export { BaseNavigation } from "./components/skeletons/BaseNavigation"
 
 export * from "./components/CopyButton"
 
@@ -105,8 +93,11 @@ export { default as transition } from "./theme/transition"
 export { default as cardStyles } from "./theme/styles/card"
 export * from "./theme/styles/button"
 
+export * from "./components/Announcement"
 export * from "./components/Avatar"
+export * from "./components/Badge"
 export * from "./components/BaseAnchor"
+export * from "./components/BaseNavigation"
 export * from "./components/Chip"
 export * from "./components/icons"
 export * from "./components/form-skeletons"

@@ -39,11 +39,18 @@ storiesOf(`File Upload`, module)
         <APIKeyMissing />
       ) : (
         <>
-          <FileUpload name="file" setFieldValue={() => {}} />
+          <FileUpload
+            name="file"
+            setFieldValue={() => {
+              // do nothing.
+            }}
+          />
           <hr />
           <FileUpload
             name="file"
-            setFieldValue={() => {}}
+            setFieldValue={() => {
+              // do nothing.
+            }}
             defaultFile={mockedFile}
           />
         </>
@@ -59,14 +66,18 @@ storiesOf(`File Upload`, module)
           <FileUpload
             multi={true}
             name="file"
-            setFieldValue={() => {}}
+            setFieldValue={() => {
+              // do nothing.
+            }}
             fileTypes={[`image/jpeg`]}
           />
           <hr />
           <FileUpload
             multi={true}
             name="file"
-            setFieldValue={() => {}}
+            setFieldValue={() => {
+              // do nothing.
+            }}
             fileTypes={[`image/jpeg`]}
             defaultFile={mockedFile}
           />
@@ -83,7 +94,9 @@ storiesOf(`File Upload`, module)
           <FileUpload
             multi={false}
             name="file"
-            setFieldValue={() => {}}
+            setFieldValue={() => {
+              // do nothing.
+            }}
             fileTypes={[`image/jpeg`]}
             CustomButtonComponent={({ onPick }) => (
               <button type="button" onClick={onPick}>
@@ -103,7 +116,9 @@ storiesOf(`File Upload`, module)
           <FileUpload
             multi={false}
             name="file"
-            setFieldValue={() => {}}
+            setFieldValue={() => {
+              // do nothing.
+            }}
             fileTypes={[`image/jpeg`]}
             CustomButtonComponent={({ onPick }) => (
               <button type="button" onClick={onPick}>

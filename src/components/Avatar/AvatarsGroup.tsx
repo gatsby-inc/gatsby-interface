@@ -13,13 +13,13 @@ const groupBaseCss = css({
 export type AvatarDescriptor = Pick<AvatarProps, "src" | "label" | "fallback">
 
 export type AvatarsGroupProps = {
-  avatars: AvatarDescriptor[];
-  size?: AvatarSize;
-  borderColor?: string;
-  omittedAvatarsCount?: number;
-  omittedAvatarsLabel?: string;
-  className?: string;
-  style?: React.CSSProperties;
+  avatars: AvatarDescriptor[]
+  size?: AvatarSize
+  borderColor?: string
+  omittedAvatarsCount?: number
+  omittedAvatarsLabel?: string
+  className?: string
+  style?: React.CSSProperties
 }
 
 export default function AvatarsGroup({

@@ -57,9 +57,14 @@ export type PxSpace = [
 export type Space = MapToString<PxSpace>
 
 const [first, ...rest] = baseSpace
-const expandedSpace = [first, 2, ...rest, 84, 96]
-
-const space: Space = expandedSpace.map(item => `${item / 16}rem`) as Space
+const PX_IN_REM = 16
+const space: Space = [
+  first,
+  `${2 / PX_IN_REM}rem`,
+  ...rest,
+  `${84 / PX_IN_REM}rem`,
+  `${96 / PX_IN_REM}rem`,
+] as Space
 
 /* 
   We dynamicaly change (increase) root base font-size value,
@@ -91,20 +96,3 @@ const space: Space = expandedSpace.map(item => `${item / 16}rem`) as Space
 */
 
 export default space
-
-/*
-  helper (old key to the new ones)
-  
-  "3xs": [1]
-  "2xs": `[2]
-  xs: [3]
-  s: [4]
-  m: [5],
-  l: [7],
-  xl: [8]
-  "2xl": [9]
-  "3xl": [10]
-  "4xl": [12]
-  "5xl": [15]
-
-*/

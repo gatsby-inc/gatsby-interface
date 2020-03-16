@@ -19,8 +19,8 @@ const translateRight = buildTranslation(`right`)
 export type PanelPosition = "left" | "right"
 
 export interface PanelProps {
-  position?: PanelPosition;
-  maxWidth?: string;
+  position?: PanelPosition
+  maxWidth?: string
 }
 
 export const ModalPanel = styled.div<PanelProps>`

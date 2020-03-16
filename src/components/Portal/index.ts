@@ -2,8 +2,8 @@ import { useRef, useState, useLayoutEffect } from "react"
 import { createPortal } from "react-dom"
 
 export interface PortalProps {
-  tag?: string;
-  target?: string;
+  tag?: string
+  target?: string
 }
 
 const useDOMNode = (tag?: string, isUnique?: boolean) => {
