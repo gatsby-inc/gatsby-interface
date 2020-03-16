@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.101](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.100...v0.0.101) (2020-03-16)
+
+
+### Features
+
+* rewrite Announcement in TypeScript ([#240](https://github.com/gatsby-inc/gatsby-interface/issues/240)) ([25b8b65](https://github.com/gatsby-inc/gatsby-interface/commit/25b8b65f874c44a3eee0779eaae8c4312f9140ef))
+
 ### [0.0.100](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.99...v0.0.100) (2020-03-13)
 
 
