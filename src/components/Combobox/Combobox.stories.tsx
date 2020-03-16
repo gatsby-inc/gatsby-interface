@@ -113,7 +113,7 @@ export const WithSelect = () => {
     <div css={{ maxWidth: `400px` }}>
       <h4 id="demo">Fixed list Combobox with value selection</h4>
       <Combobox onSelect={value => setTerm(value)}>
-        <ComboboxInput aria-labelledby="demo" />
+        <ComboboxInput selectedOptionLabel={term} aria-labelledby="demo" />
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
             {options.map(({ value }) => {
@@ -162,6 +162,50 @@ export const WithDynamicItems = () => {
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
             {dynamicOptions.map(({ value }) => {
+              return (
+                <ComboboxOption
+                  key={value}
+                  selected={value === term}
+                  value={value}
+                />
+              )
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+      <br />
+      <div>
+        Selected value:{" "}
+        <span css={(theme: Theme) => ({ fontFamily: theme.fonts.monospace })}>
+          {JSON.stringify(term)}
+        </span>
+      </div>
+    </div>
+  )
+}
+
+export const WithControlledInput = () => {
+  const [inputValue, setInputValue] = React.useState("")
+  const [term, setTerm] = React.useState("")
+
+  return (
+    <div css={{ maxWidth: `400px` }}>
+      <h4 id="demo">Fixed list Combobox with value selection</h4>
+      <Combobox
+        onSelect={value => {
+          setTerm(value)
+          setInputValue(value)
+        }}
+      >
+        <ComboboxInput
+          value={inputValue}
+          onChange={e => setInputValue(e.target.value)}
+          selectedOptionLabel={term}
+          aria-labelledby="demo"
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby="demo">
+            {options.map(({ value }) => {
               return (
                 <ComboboxOption
                   key={value}

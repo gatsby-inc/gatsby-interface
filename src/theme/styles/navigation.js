@@ -181,7 +181,7 @@ styles.ItemLink = {
   },
   mobile: {
     color: colors.white,
-    fontFamily: fonts.header,
+    fontFamily: fonts.heading,
     fontWeight: `normal`,
     transition: `opacity ${transition.speed.default}`,
     WebkitFontSmoothing: `antialiased`,

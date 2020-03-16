@@ -7,7 +7,7 @@ const TONES = [`BRAND`, `SUCCESS`, `DANGER`, `NEUTRAL`]
 
 const baseStyle = ({ tone }) => {
   return {
-    fontFamily: fonts.header,
+    fontFamily: fonts.heading,
     margin: `0`,
     color: tones[tone].superDark,
     lineHeight: 1.125,

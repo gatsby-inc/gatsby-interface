@@ -15,7 +15,7 @@ export const baseStyles = {
   borderRadius: `${radii[2]} ${radii[2]} 0 0`,
   color: colors.purple[50],
   display: `inline-flex`,
-  fontFamily: fonts.header,
+  fontFamily: fonts.heading,
   fontSize: fontSizes[3],
   fontWeight: `bold`,
   height: `3.5rem`,

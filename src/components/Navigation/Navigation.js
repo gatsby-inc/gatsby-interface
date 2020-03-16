@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { BaseNavigation } from "../skeletons/BaseNavigation"
+import { BaseNavigation } from "../BaseNavigation"
 import styles from "../../theme/styles/navigation"
 
 const Navigation = ({

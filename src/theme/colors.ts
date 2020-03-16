@@ -1,9 +1,12 @@
-import { colors as baseColors, Colors as DesignColors } from "gatsby-design-tokens"
+import {
+  colors as baseColors,
+  Colors as DesignColors,
+} from "gatsby-design-tokens"
 
 export type Colors = DesignColors & {
-  primaryBackground: string;
-  secondaryBackground: string;
-  standardLine: string;
+  primaryBackground: string
+  secondaryBackground: string
+  standardLine: string
 }
 
 const defaultColors = {
