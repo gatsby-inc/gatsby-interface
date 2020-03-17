@@ -16,6 +16,7 @@ import { radioKnobOptions } from "../../utils/storybook/knobs"
 import { MdSignalWifi1BarLock } from "react-icons/md"
 import isChromatic from "storybook-chromatic/isChromatic"
 import { withDesign } from "storybook-addon-designs"
+import README from "./README.md"
 
 const NOTIFICATION_VARIANTS = radioKnobOptions<NotificationVariant>([
   `PRIMARY`,
@@ -59,6 +60,9 @@ storiesOf(`Notification`, module)
   .addParameters({
     options: {
       showPanel: true,
+    },
+    readme: {
+      sidebar: README,
     },
     design: {
       type: "figma",
