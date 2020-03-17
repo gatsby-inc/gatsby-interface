@@ -35,7 +35,7 @@ const themeTones: ToneScale = {
   BRAND: {
     superLight: themeColors.purple[5],
     light: themeColors.purple[20],
-    medium: themeColors.purple[50],
+    medium: themeColors.purple[40],
     dark: themeColors.purple[60],
     darker: themeColors.purple[70],
     superDark: themeColors.purple[90],
