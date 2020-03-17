@@ -67,7 +67,6 @@ export default function Notification({
     return null
   }
   const PresetIcon = content && iconByTone[tone]
-  // TODO apply icon color based on tone
   const Icon = CustomIcon || PresetIcon
 
   return (
@@ -127,7 +126,6 @@ export type NotificationContentProps = Omit<
 
 function NotificationContent({
   as: Component = `span`,
-  tone = `BRAND`,
   ...rest
 }: NotificationContentProps) {
   return (
@@ -136,10 +134,7 @@ function NotificationContent({
         display: `flex`,
         alignItems: `flex-start`,
         lineHeight: theme.lineHeights.default,
-        color:
-          tone === `WARNING`
-            ? theme.tones[`NEUTRAL`].superDark
-            : theme.tones[tone].dark,
+        color: theme.tones[`NEUTRAL`].superDark,
       })}
       {...rest}
     />
