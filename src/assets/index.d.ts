@@ -5,4 +5,3 @@ export const Integrations: React.FC
 export const Preview: React.FC
 export const Skull: React.FC
 export const Success: React.FC
-export const Danger: React.FC
