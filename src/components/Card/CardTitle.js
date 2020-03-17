@@ -11,7 +11,7 @@ export const CardTitle = styled(`h2`)`
   align-items: center;
   color: ${colors.grey[90]};
   display: flex;
-  font-family: ${fonts.header};
+  font-family: ${fonts.heading};
   font-size: ${fontSizes[4]};
   margin: ${space[3]} 0 ${space[4]};
 

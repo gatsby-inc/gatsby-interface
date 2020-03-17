@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.103](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.102...v0.0.103) (2020-03-16)
+
+
+### Features
+
+* support displaying selected option in Combobox input ([#232](https://github.com/gatsby-inc/gatsby-interface/issues/232)) ([4e9941b](https://github.com/gatsby-inc/gatsby-interface/commit/4e9941bd3500f4b016d005daf6224cbff87a33d4))
+
+### [0.0.102](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.101...v0.0.102) (2020-03-16)
+
+
+### Features
+
+* rewrite BaseNavigation to TypeScript ([#241](https://github.com/gatsby-inc/gatsby-interface/issues/241)) ([69a74df](https://github.com/gatsby-inc/gatsby-interface/commit/69a74dfdac20225ba2467bd6ceb90bc99b7fb33a))
+
+### [0.0.101](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.100...v0.0.101) (2020-03-16)
+
+
+### Features
+
+* rewrite Announcement in TypeScript ([#240](https://github.com/gatsby-inc/gatsby-interface/issues/240)) ([25b8b65](https://github.com/gatsby-inc/gatsby-interface/commit/25b8b65f874c44a3eee0779eaae8c4312f9140ef))
+
+### [0.0.100](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.99...v0.0.100) (2020-03-13)
+
+
+### Features
+
+* remove deprecated components ([#234](https://github.com/gatsby-inc/gatsby-interface/issues/234)) ([f2e6b8d](https://github.com/gatsby-inc/gatsby-interface/commit/f2e6b8db57bf6cec7d44c2c94d5e897afa8b08f3))
+
+### [0.0.99](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.98...v0.0.99) (2020-03-13)
+
+
+### Features
+
+* rewrite Badge in TypeScript ([#233](https://github.com/gatsby-inc/gatsby-interface/issues/233)) ([ffada76](https://github.com/gatsby-inc/gatsby-interface/commit/ffada76e58558a29ac62b1d1dcf581ec773250d4))
+
 ### [0.0.98](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.97...v0.0.98) (2020-03-12)
 
 ### [0.0.97](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.96...v0.0.97) (2020-03-12)

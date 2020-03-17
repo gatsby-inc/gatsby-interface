@@ -3,6 +3,11 @@ declare module "*.md" {
   export default value
 }
 
+declare module "*.svg" {
+  const value: string
+  export default value
+}
+
 declare module "gatsby-design-tokens" {
   type MapToString<T> = { [K in keyof T]: string }
 
