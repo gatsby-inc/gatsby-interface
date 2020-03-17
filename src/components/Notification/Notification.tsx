@@ -86,7 +86,7 @@ export default function Notification({
                 css={theme => ({
                   marginRight: theme.space[3],
                   fontSize: theme.fontSizes[4],
-                  color: theme.tones[tone].dark,
+                  color: theme.tones[tone].medium,
                   flexShrink: 0,
                 })}
               />
