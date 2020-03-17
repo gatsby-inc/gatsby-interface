@@ -80,7 +80,7 @@ export default function Notification({
         {...rest}
       >
         {content && (
-          <Notification.Content tone={tone} as={contentAs}>
+          <Notification.Content as={contentAs}>
             {Icon && (
               <Icon
                 css={theme => ({
@@ -121,7 +121,6 @@ export type NotificationContentProps = Omit<
   "ref"
 > & {
   as?: AllowedContentAs
-  tone?: NotificationTone
 }
 
 function NotificationContent({
