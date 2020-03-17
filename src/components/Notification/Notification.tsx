@@ -84,7 +84,7 @@ export default function Notification({
             {Icon && (
               <Icon
                 css={theme => ({
-                  marginRight: theme.space[3],
+                  marginRight: theme.space[4],
                   fontSize: theme.fontSizes[4],
                   color: theme.tones[tone].medium,
                   flexShrink: 0,
