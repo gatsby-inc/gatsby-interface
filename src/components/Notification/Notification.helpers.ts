@@ -1,12 +1,7 @@
-import styled from "@emotion/styled"
-import { Success, Danger } from "../../assets"
-import { MdWarning } from "react-icons/md"
+import { Success } from "../../assets"
+import { MdWarning, MdError } from "react-icons/md"
 import { NotificationTone, NotificationVariant } from "./types"
-import { Theme, ThemeCss } from "../../theme"
-
-const Warning = styled(MdWarning)(({ theme }) => ({
-  color: (theme as Theme).colors.yellow[50],
-}))
+import { ThemeCss } from "../../theme"
 
 export const iconByTone: Record<
   NotificationTone,
@@ -14,8 +9,8 @@ export const iconByTone: Record<
 > = {
   BRAND: null,
   SUCCESS: Success,
-  DANGER: Danger,
-  WARNING: Warning,
+  DANGER: MdError,
+  WARNING: MdWarning,
   NEUTRAL: null,
 }
 
