@@ -13,7 +13,7 @@ import {
 import { StoryUtils } from "../../utils/storybook"
 import { Button } from "../Button"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
-import { MdCloud } from "react-icons/md"
+import { MdSignalWifi1BarLock } from "react-icons/md"
 import isChromatic from "storybook-chromatic/isChromatic"
 
 const NOTIFICATION_VARIANTS = radioKnobOptions<NotificationVariant>([
@@ -109,7 +109,7 @@ storiesOf(`Notification`, module)
           variant={radios(`variant`, NOTIFICATION_VARIANTS, `PRIMARY`)}
           tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
           content={`Notification with custom icon`}
-          Icon={MdCloud}
+          Icon={MdSignalWifi1BarLock}
         />
       </div>
     </StoryUtils.Container>
