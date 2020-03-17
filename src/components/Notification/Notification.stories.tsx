@@ -195,3 +195,25 @@ storiesOf(`Notification`, module)
       </StoryUtils.Container>
     )
   })
+  .add(`Tones & variants`, () => (
+    <StoryUtils.Container>
+      <div
+        css={{
+          display: `flex`,
+          flexDirection: `column`,
+          alignItems: `flex-start`,
+          width: `500px`,
+        }}
+      >
+        {NOTIFICATION_TONES.map(tone => (
+          <div key={tone} css={{ marginTop: `1rem`, width: "100%" }}>
+            <Notification
+              tone={tone}
+              variant={radios(`variant`, NOTIFICATION_VARIANTS, `PRIMARY`)}
+              content={`Notification tone '${tone}'`}
+            />
+          </div>
+        ))}
+      </div>
+    </StoryUtils.Container>
+  ))
