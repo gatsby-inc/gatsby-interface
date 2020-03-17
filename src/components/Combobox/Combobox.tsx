@@ -24,6 +24,8 @@ import {
   listCss,
   optionCss,
   selectedOptionIconCss,
+  selectedValueCss,
+  inputWithSelectedValueCss,
 } from "./Combobox.styles"
 
 type ComboboxContextValue = {
@@ -55,6 +57,7 @@ export function Combobox(props: ComboboxProps) {
 export type ComboboxInputProps = PropsWithAs<
   "input",
   ReachComboboxInputProps & {
+    selectedOptionLabel?: string
     hasError?: boolean
   }
 >
@@ -62,7 +65,7 @@ export type ComboboxInputProps = PropsWithAs<
 export const ComboboxInput = React.forwardRef<
   HTMLInputElement,
   ComboboxInputProps
->(function ComboboxInput({ hasError, ...delegated }, ref) {
+>(function ComboboxInput({ selectedOptionLabel, hasError, ...delegated }, ref) {
   const { listRef } = useComboboxContext()
 
   /**
@@ -103,14 +106,29 @@ export const ComboboxInput = React.forwardRef<
     })
   }
 
+  let showSelectedOptionLabel = !!selectedOptionLabel
+  if (delegated.value === selectedOptionLabel) {
+    showSelectedOptionLabel = false
+  }
+
   return (
-    <ReachComboboxInput
-      ref={ref}
-      selectOnClick
-      onKeyDown={onKeyDown}
-      css={inputCss(hasError)}
-      {...delegated}
-    />
+    <div css={{ position: "relative" }}>
+      <ReachComboboxInput
+        ref={ref}
+        selectOnClick
+        onKeyDown={onKeyDown}
+        css={theme => [
+          inputCss(hasError)(theme),
+          showSelectedOptionLabel && inputWithSelectedValueCss(theme),
+        ]}
+        {...delegated}
+      />
+      {!!selectedOptionLabel && (
+        <span aria-hidden css={selectedValueCss}>
+          {selectedOptionLabel}
+        </span>
+      )}
+    </div>
   )
 })
 
