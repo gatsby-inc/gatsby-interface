@@ -70,7 +70,7 @@ storiesOf(`Notification`, module)
         "https://www.figma.com/file/h4ixUmOo781r3sDeBAbmDc/Notifications?node-id=1%3A152",
     },
   })
-  .add(`default`, () => (
+  .add(`Basic`, () => (
     <StoryUtils.Container>
       <div
         css={{
