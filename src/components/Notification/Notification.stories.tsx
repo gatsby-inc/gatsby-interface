@@ -97,7 +97,7 @@ storiesOf(`Notification`, module)
       </div>
     </StoryUtils.Container>
   ))
-  .add(`dismissable`, () => (
+  .add(`Dismissable`, () => (
     <StoryUtils.Container>
       <div
         css={{
@@ -116,7 +116,7 @@ storiesOf(`Notification`, module)
       </div>
     </StoryUtils.Container>
   ))
-  .add(`custom icon`, () => (
+  .add(`Custom icon`, () => (
     <StoryUtils.Container>
       <div
         css={{
@@ -136,7 +136,7 @@ storiesOf(`Notification`, module)
       </div>
     </StoryUtils.Container>
   ))
-  .add(`animated with react-spring`, () => {
+  .add(`Animated with react-spring`, () => {
     const ReactSpringNotification = animated(Notification)
 
     function AnimatedNotification(props: NotificationProps) {
