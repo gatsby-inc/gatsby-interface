@@ -43,7 +43,13 @@ function ControlledNotification(props: NotificationProps) {
 
   return (
     <div>
-      <Button onClick={() => setIsOpened(true)} disabled={isOpened}>
+      <Button
+        onClick={() => setIsOpened(true)}
+        disabled={isOpened}
+        variant="SECONDARY"
+        tone="NEUTRAL"
+        size="M"
+      >
         Show notification
       </Button>
       <Notification
@@ -162,6 +168,9 @@ storiesOf(`Notification`, module)
             <Button
               css={{ marginBottom: `1rem` }}
               onClick={() => setIsOpened(!isOpened)}
+              variant="SECONDARY"
+              tone="NEUTRAL"
+              size="M"
             >
               Toggle notification
             </Button>
