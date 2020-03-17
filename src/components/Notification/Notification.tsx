@@ -153,6 +153,7 @@ function NotificationDismissButton({ label = `Close` }: { label?: string }) {
         color: theme.colors.grey[40],
         width: theme.space[5],
         marginLeft: theme.space[5],
+        fontSize: theme.fontSizes[4],
       })}
       type="button"
       onClick={onDismiss}
