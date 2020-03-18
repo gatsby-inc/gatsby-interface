@@ -1,4 +1,4 @@
-export { General, Integrations, Preview, Skull, Success } from "./assets"
+export { General, Integrations, Preview, Skull } from "./assets"
 
 export { ContentBox } from "./components/ContentBox"
 
