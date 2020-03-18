@@ -1,8 +1,8 @@
 import React from "react"
-import { StoryDecorator } from "@storybook/react"
+import { DecoratorFn } from "@storybook/react"
 import { ThemeProvider } from "../src/components/ThemeProvider"
 
-const withTheme: StoryDecorator = story => {
+const withTheme: DecoratorFn = story => {
   return <ThemeProvider>{story()}</ThemeProvider>
 }
 

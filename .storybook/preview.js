@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 import { Global, css } from "@emotion/core"
-import { configure, addDecorator, addParameters } from "@storybook/react"
+import { addParameters, addDecorator } from "@storybook/react"
 import { addReadme } from "storybook-readme"
 import { withKnobs } from "@storybook/addon-knobs"
 import { withConsole } from "@storybook/addon-console"
@@ -30,16 +30,6 @@ if (!process.env.STORYBOOK_CHROMATIC && process.env.NODE_ENV !== "test") {
 global.___loader = {
   enqueue: () => undefined,
   hovering: () => undefined,
-}
-
-const viewports = {
-  mobile360x640: {
-    name: "Mobile 360 x 640",
-    styles: {
-      width: "360px",
-      height: "640px",
-    },
-  },
 }
 
 // Gatsby internal mocking to prevent unnecessary errors in storybook testing environment
@@ -98,23 +88,24 @@ if (process.env.NODE_ENV === `test`) {
   addDecorator(Story => <Story />)
 }
 
-addParameters({
-  options: {
-    addonPanelInRight: true,
+const viewports = {
+  mobile360x640: {
+    name: "Mobile 360 x 640",
+    styles: {
+      width: "360px",
+      height: "640px",
+    },
   },
-  readme: {},
+}
+
+addParameters({
   viewport: { viewports: viewports },
 })
 
-//const req = require.context("../__stories__", true, /\.stories\.js$/)
-
-require("../__stories__/Welcome.stories")
+if (process.env.NODE_ENV === `test`) {
+  addDecorator(Story => <Story />)
+}
 
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
-
-configure(
-  require.context("../src/components/../", true, /\.stories\.(js|tsx)$/),
-  module
-)
