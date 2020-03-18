@@ -88,6 +88,8 @@ export default function Notification({
                   fontSize: theme.fontSizes[4],
                   color: theme.tones[tone].medium,
                   flexShrink: 0,
+                  width: "auto",
+                  height: "1em",
                 })}
               />
             )}

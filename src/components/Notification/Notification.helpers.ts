@@ -1,4 +1,4 @@
-import { Success } from "../../assets"
+import { SuccessIcon } from "../icons"
 import { MdWarning, MdError } from "react-icons/md"
 import { NotificationTone, NotificationVariant } from "./types"
 import { ThemeCss } from "../../theme"
@@ -8,7 +8,7 @@ export const iconByTone: Record<
   React.ComponentType<{}> | null
 > = {
   BRAND: null,
-  SUCCESS: Success,
+  SUCCESS: SuccessIcon,
   DANGER: MdError,
   WARNING: MdWarning,
   NEUTRAL: null,
