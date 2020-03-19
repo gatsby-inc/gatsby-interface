@@ -1,7 +1,6 @@
 import React from "react"
 import {
   DialogOverlay,
-  DialogContent,
   DialogOverlayProps,
   DialogContentProps,
 } from "@reach/dialog"
@@ -10,8 +9,7 @@ import colors from "../../theme/colors"
 import zIndices from "../../theme/zIndices"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
 import { keyframes } from "@emotion/core"
-
-import "@reach/dialog/styles.css"
+import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
 export type ModalType = "success" | "info" | "warn" | "error"
 
@@ -47,15 +45,15 @@ const getBackgroundAnimation = (type?: ModalType) => {
 
 type Props = DialogOverlayProps & { animation: ReturnType<typeof buildFadeIn> }
 const Overlay = styled(DialogOverlay)<Props>`
+  background: hsla(0, 0%, 0%, 0.33);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
   z-index: ${zIndices.modals};
   animation: ${props => props.animation} 0.5s ease forwards;
-`
-
-const Content = styled(DialogContent)`
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  width: auto;
 `
 
 export const Modal: React.FC<ModalProps> = ({
@@ -63,14 +61,20 @@ export const Modal: React.FC<ModalProps> = ({
   initialFocusRef,
   isOpen,
   onDismiss,
+  children,
   ...props
-}) => (
-  <Overlay
-    initialFocusRef={initialFocusRef}
-    isOpen={isOpen}
-    onDismiss={onDismiss}
-    animation={getBackgroundAnimation(type)}
-  >
-    <Content {...props} />
-  </Overlay>
-)
+}) => {
+  return (
+    <React.Fragment>
+      <DisableReachStyleCheck reachComponent="dialog" />
+      <Overlay
+        initialFocusRef={initialFocusRef}
+        isOpen={isOpen}
+        onDismiss={onDismiss}
+        animation={getBackgroundAnimation(type)}
+      >
+        {React.cloneElement(children as any, props)}
+      </Overlay>
+    </React.Fragment>
+  )
+}

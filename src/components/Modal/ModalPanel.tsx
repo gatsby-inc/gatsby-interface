@@ -1,7 +1,9 @@
+import React from "react"
 import styled from "@emotion/styled"
 import { keyframes } from "@emotion/core"
 import space from "../../theme/space"
 import colors from "../../theme/colors"
+import { Content } from "./components"
 
 const buildTranslation = (position: PanelPosition) => keyframes`
   0% {
@@ -23,7 +25,7 @@ export interface PanelProps {
   maxWidth?: string
 }
 
-export const ModalPanel = styled.div<PanelProps>`
+const AnimatedPanel = styled.div<PanelProps>`
   background: ${colors.white};
   max-width: ${props => props.maxWidth || `20%`};
   height: 100vh;
@@ -34,3 +36,13 @@ export const ModalPanel = styled.div<PanelProps>`
       props.position === `right` ? translateRight : translateLeft}
     0.5s ease forwards;
 `
+
+export const ModalPanel: React.FC<PanelProps> = ({
+  maxWidth,
+  position,
+  ...props
+}) => (
+  <AnimatedPanel position={position} maxWidth={maxWidth}>
+    <Content {...props} />
+  </AnimatedPanel>
+)
