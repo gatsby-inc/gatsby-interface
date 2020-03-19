@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.105](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.104...v0.0.105) (2020-03-18)
+
+
+### Bug Fixes
+
+* do not import Reach dialog css ([#245](https://github.com/gatsby-inc/gatsby-interface/issues/245)) ([93f2a53](https://github.com/gatsby-inc/gatsby-interface/commit/93f2a5345d63512a7f6e64ecf9e8852f93c590f7))
+
+### [0.0.104](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.103...v0.0.104) (2020-03-18)
+
+
+### Features
+
+* Fixing modal leaving when clicking on the overlay ([#231](https://github.com/gatsby-inc/gatsby-interface/issues/231)) ([15e58e0](https://github.com/gatsby-inc/gatsby-interface/commit/15e58e007871e029d6fce54cd295ba5c17a10a90))
+
 ### [0.0.103](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.102...v0.0.103) (2020-03-16)
 
 
