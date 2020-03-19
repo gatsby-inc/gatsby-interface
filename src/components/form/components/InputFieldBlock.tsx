@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { ReactNode } from "react"
+import React from "react"
 
 import {
   InputField,
@@ -11,17 +11,9 @@ import {
   InputFieldHint,
   InputFieldError,
 } from "./InputField"
-import { FormFieldLabelSize } from "./FormField.helpers"
-import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
+import { WithFormFieldBlock } from "./FormField"
 
-export type InputFieldBlockProps = {
-  id: string
-  label: ReactNode
-  labelSize?: FormFieldLabelSize
-  error?: ReactNode
-  hint?: ReactNode
-  validationMode?: ErrorValidationMode
-} & InputFieldControlProps
+export type InputFieldBlockProps = WithFormFieldBlock<InputFieldControlProps>
 
 export const InputFieldBlock = React.forwardRef<
   HTMLInputElement,

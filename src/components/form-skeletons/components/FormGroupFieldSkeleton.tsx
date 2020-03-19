@@ -73,18 +73,10 @@ export type FormGroupFieldSkeletonOptionLabelProps = FormFieldSkeletonLabelProps
 export const FormGroupFieldSkeletonOptionLabel: React.FC<
   FormGroupFieldSkeletonOptionLabelProps
 > = ({ optionValue, ...rest }) => {
-  const { id } = FormFieldSkeleton.useFormFieldSkeleton()
+  const { id } = useFormFieldSkeleton()
 
   return <label htmlFor={getGroupOptionId(id, optionValue)} {...rest} />
 }
-
-// TODO remove these one all form skeletons have their static properties removed
-FormGroupFieldSkeleton.Label = FormGroupFieldSkeletonLabel
-FormGroupFieldSkeleton.Label.displayName = `FormGroupFieldSkeleton.Label`
-FormGroupFieldSkeleton.Option = FormGroupFieldSkeletonOption
-FormGroupFieldSkeleton.Option.displayName = `FormGroupFieldSkeleton.Option`
-FormGroupFieldSkeleton.OptionLabel = FormGroupFieldSkeletonOptionLabel
-FormGroupFieldSkeleton.OptionLabel.displayName = `FormGroupFieldSkeleton.OptionLabel`
 
 function getGroupOptionId(fieldId: string, optionValue: string) {
   return `${fieldId}__option--${optionValue}`

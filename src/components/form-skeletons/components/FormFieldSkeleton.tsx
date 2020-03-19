@@ -124,18 +124,6 @@ export function FormFieldSkeleton(props: FormFieldSkeletonProps) {
   return <FormFieldSkeletonProvider {...props} />
 }
 
-// TODO remove these one all form skeletons have their static properties removed
-FormFieldSkeleton.displayName = `FormFieldSkeleton`
-FormFieldSkeleton.Label = FormFieldSkeletonLabel
-FormFieldSkeleton.Label.displayName = `FormFieldSkeleton.Label`
-FormFieldSkeleton.Hint = FormFieldSkeletonHint
-FormFieldSkeleton.Hint.displayName = `FormFieldSkeleton.Hint`
-FormFieldSkeleton.Error = FormFieldSkeletonError
-FormFieldSkeleton.Error.displayName = `FormFieldSkeleton.Error`
-FormFieldSkeleton.useFormFieldSkeleton = useFormFieldSkeleton
-
-export default FormFieldSkeleton
-
 export function useFormFieldSkeleton() {
   return React.useContext(FormFieldSkeletonContext)
 }
