@@ -4,6 +4,7 @@ import { useTransition, animated } from "react-spring"
 
 import { TooltipPosition } from "./types"
 import TooltipContent from "./TooltipContent"
+import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
 const AnimatedTooltipContent = animated(TooltipContent)
 
@@ -71,34 +72,7 @@ export default function Tooltip({
           />
         )
       })}
-      <DisableReachStyleCheck />
+      <DisableReachStyleCheck reachComponent="tooltip" />
     </React.Fragment>
   )
-}
-
-/**
- * To mark our Tooltip component as safe for tree-shaking, we have to apply global styles
- * from @reach/tooltip/styles.css locally via Emotion instead of importing them
- *
- * However, @reach/tooltip will display a warning if we do so,
- * and this is what this hack component is for.
- *
- * It MUST be a component, so that it can be rendered before/at the same time as the tooltip trigger
- */
-function DisableReachStyleCheck() {
-  React.useEffect(() => {
-    const reachCheckProperty = "--reach-tooltip"
-    const reachCheckValue = parseInt(
-      window
-        .getComputedStyle(document.body)
-        .getPropertyValue(reachCheckProperty),
-      10
-    )
-
-    if (reachCheckValue !== 1) {
-      document.body.style.setProperty(reachCheckProperty, "1")
-    }
-  }, [])
-
-  return null
 }
