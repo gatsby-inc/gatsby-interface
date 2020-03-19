@@ -1,9 +1,11 @@
+import React from "react"
 import styled from "@emotion/styled"
 import { keyframes } from "@emotion/core"
 import breakpoints from "../../theme/breakpoints"
 import space from "../../theme/space"
 import colors from "../../theme/colors"
 import radii from "../../theme/radii"
+import { Content } from "./components"
 
 const cardIncoming = keyframes`
   100% {
@@ -11,7 +13,7 @@ const cardIncoming = keyframes`
   }
 `
 
-export const ModalCard = styled.div`
+const AnimatedCard = styled.div`
   background: ${colors.white};
   border-radius: ${radii[3]};
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
@@ -31,3 +33,9 @@ export const ModalCard = styled.div`
     width: 620px;
   }
 `
+
+export const ModalCard: React.FC = props => (
+  <AnimatedCard>
+    <Content {...props}></Content>
+  </AnimatedCard>
+)

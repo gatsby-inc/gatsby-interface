@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.103",
+  "version": "0.0.107",
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
@@ -181,6 +181,9 @@
     "unfetch": "^3.1.1",
     "watch": "^1.0.2",
     "yup": "^0.27.0"
+  },
+  "resolutions": {
+    "@storybook/theming": "5.3.13"
   },
   "husky": {
     "hooks": {

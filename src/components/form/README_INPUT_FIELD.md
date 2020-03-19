@@ -4,23 +4,23 @@
 
 ```
 <InputField id="ID" hasError={!!error} hasHint={!!hint}>
-  <InputField.Wrapper>
-    <InputField.Label>Last name</InputField.Label>
-    <InputField.Control
+  <InputFieldWrapper>
+    <InputFieldLabel>Last name</InputFieldLabel>
+    <InputFieldControl
       onChange={e => {}}
     />
-    <InputField.Error>{error}</InputField.Error>
-    <InputField.Hint>{hint}</InputField.Hint>
-  </InputField.Wrapper>
+    <InputFieldError>{error}</InputFieldError>
+    <InputFieldHint>{hint}</InputFieldHint>
+  </InputFieldWrapper>
 </InputField>
 ```
 
 The only difference are:
 
-- `InputField` has an additional subcomponent `InputField.Wrapper` which role is to provide a way to style the field row as a block.
-- `InputField.Label` accepts additional props
+- `InputField` has an additional subcomponent `InputFieldWrapper` which role is to provide a way to style the field row as a block.
+- `InputFieldLabel` accepts additional props
   - `size?: ['S','M','L']` - default value `M`
-  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<label>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `InputField.Control` component.
+  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<label>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `InputFieldControl` component.
 
 ## InputFieldBlock
 

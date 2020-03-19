@@ -1,5 +1,6 @@
 import React from "react"
-import FormFieldSkeleton, {
+import {
+  FormFieldSkeleton,
   FormFieldSkeletonProps,
   useFormFieldSkeleton,
   FormFieldSkeletonLabelProps,

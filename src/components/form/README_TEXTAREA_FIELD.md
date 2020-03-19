@@ -4,23 +4,23 @@
 
 ```
 <TextAreaField id="ID" hasError={!!error} hasHint={!!hint}>
-  <TextAreaField.Wrapper>
-    <TextAreaField.Label>Last name</TextAreaField.Label>
-    <TextAreaField.Control
+  <TextAreaFieldWrapper>
+    <TextAreaFieldLabel>Last name</TextAreaFieldLabel>
+    <TextAreaFieldControl
       onChange={e => {}}
     />
-    <TextAreaField.Error>{error}</TextAreaField.Error>
-    <TextAreaField.Hint>{hint}</TextAreaField.Hint>
-  </TextAreaField.Wrapper>
+    <TextAreaFieldError>{error}</TextAreaFieldError>
+    <TextAreaFieldHint>{hint}</TextAreaFieldHint>
+  </TextAreaFieldWrapper>
 </TextAreaField>
 ```
 
 The only differences are:
 
-- `TextAreaField` has an additional subcomponent `TextAreaField.Wrapper` which role is to provide a way to style the field row as a block.
-- `TextAreaField.Label` accepts additional props
+- `TextAreaField` has an additional subcomponent `TextAreaFieldWrapper` which role is to provide a way to style the field row as a block.
+- `TextAreaFieldLabel` accepts additional props
   - `size?: ['S','M','L']` - default value `M`
-  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<label>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `TextAreaField.Control` component.
+  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<label>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `TextAreaFieldControl` component.
 
 ## TextAreaFieldBlock
 

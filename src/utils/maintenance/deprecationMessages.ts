@@ -1,6 +1,6 @@
 import showDeprecationMessage from "./showDeprecationMessage"
 
-export function showCustomCssDeprecationMessage(customCss) {
+export function showCustomCssDeprecationMessage(customCss: any) {
   if (customCss === undefined) {
     return
   }

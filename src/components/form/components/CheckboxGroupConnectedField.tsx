@@ -1,58 +1,46 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
-import { useFormikContext, getIn } from "formik"
 import {
   CheckboxGroupFieldBlock,
   CheckboxGroupFieldBlockProps,
 } from "./CheckboxGroupFieldBlock"
-import Case from "case"
+import { useConnectedField } from "../hooks/useConnectedField"
 
 export type CheckboxGroupConnectedFieldProps = {
   name: string
   id?: string
   label?: React.ReactNode
-  value?: any[]
+  value?: string[]
 } & Omit<CheckboxGroupFieldBlockProps, "id" | "label" | "value">
 
 export const CheckboxGroupConnectedField: React.FC<
   CheckboxGroupConnectedFieldProps
 > = props => {
-  const id = `${props.name}Field`
-  const label = Case.sentence(props.name)
-  const {
-    values,
-    errors,
-    touched,
-    setFieldTouched,
-    setFieldValue,
-  } = useFormikContext()
-  const error = getIn(errors, props.name)
-  const isTouched = getIn(touched, props.name)
-  const value = getIn(values, props.name) || []
+  const [connectedProps, _field, _meta, helpers] = useConnectedField<string[]>(
+    props.name
+  )
+  const value = connectedProps.value || []
 
   return (
     <CheckboxGroupFieldBlock
-      id={id}
-      label={label}
-      error={isTouched && error}
-      value={value}
+      {...connectedProps}
+      {...props}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
         const target = e.currentTarget
-        const valueArray = [...value]
+        let newValue
 
         if (target.checked) {
-          valueArray.push(target.value)
+          newValue = [...value, target.value]
         } else {
-          valueArray.splice(valueArray.indexOf(target.value), 1)
+          newValue = value.filter(optionValue => optionValue !== target.value)
         }
 
-        setFieldValue(props.name, valueArray, true)
+        helpers.setValue(newValue)
       }}
       onBlur={() => {
-        setFieldTouched(props.name, true)
+        helpers.setTouched(true)
       }}
-      {...props}
     />
   )
 }
