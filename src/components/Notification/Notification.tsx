@@ -67,7 +67,6 @@ export default function Notification({
     return null
   }
   const PresetIcon = content && iconByTone[tone]
-  // TODO apply icon color based on tone
   const Icon = CustomIcon || PresetIcon
 
   return (
@@ -81,14 +80,16 @@ export default function Notification({
         {...rest}
       >
         {content && (
-          <Notification.Content tone={tone} as={contentAs}>
+          <Notification.Content as={contentAs}>
             {Icon && (
               <Icon
                 css={theme => ({
-                  marginRight: theme.space[3],
+                  marginRight: theme.space[4],
                   fontSize: theme.fontSizes[4],
-                  color: theme.tones[tone].dark,
+                  color: theme.tones[tone].medium,
                   flexShrink: 0,
+                  width: "auto",
+                  height: "1em",
                 })}
               />
             )}
@@ -122,12 +123,10 @@ export type NotificationContentProps = Omit<
   "ref"
 > & {
   as?: AllowedContentAs
-  tone?: NotificationTone
 }
 
 function NotificationContent({
   as: Component = `span`,
-  tone = `BRAND`,
   ...rest
 }: NotificationContentProps) {
   return (
@@ -136,10 +135,7 @@ function NotificationContent({
         display: `flex`,
         alignItems: `flex-start`,
         lineHeight: theme.lineHeights.default,
-        color:
-          tone === `WARNING`
-            ? theme.tones[`NEUTRAL`].superDark
-            : theme.tones[tone].dark,
+        color: theme.tones[`NEUTRAL`].superDark,
       })}
       {...rest}
     />
@@ -158,6 +154,7 @@ function NotificationDismissButton({ label = `Close` }: { label?: string }) {
         color: theme.colors.grey[40],
         width: theme.space[5],
         marginLeft: theme.space[5],
+        fontSize: theme.fontSizes[4],
       })}
       type="button"
       onClick={onDismiss}

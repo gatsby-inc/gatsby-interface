@@ -4,37 +4,42 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 import { radios } from "@storybook/addon-knobs"
 import { useTransition, animated } from "react-spring"
-import {
-  Notification,
-  NotificationTone,
-  NotificationProps,
-  NotificationVariant,
-} from "."
+import { Notification, NotificationProps, NotificationVariant } from "."
 import { StoryUtils } from "../../utils/storybook"
 import { Button } from "../Button"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
-import { MdCloud } from "react-icons/md"
+import { MdSignalWifi1BarLock } from "react-icons/md"
 import isChromatic from "storybook-chromatic/isChromatic"
+import { withDesign } from "storybook-addon-designs"
+import README from "./README.md"
 
 const NOTIFICATION_VARIANTS = radioKnobOptions<NotificationVariant>([
   `PRIMARY`,
   `SECONDARY`,
 ])
 
-const NOTIFICATION_TONES = radioKnobOptions<NotificationTone>([
+const NOTIFICATION_TONES: NotificationProps["tone"][] = [
   `BRAND`,
   `SUCCESS`,
   `DANGER`,
   `WARNING`,
   `NEUTRAL`,
-])
+]
+
+const toggleToneOptions = radioKnobOptions(NOTIFICATION_TONES)
 
 function ControlledNotification(props: NotificationProps) {
   const [isOpened, setIsOpened] = React.useState<boolean>(true)
 
   return (
     <div>
-      <Button onClick={() => setIsOpened(true)} disabled={isOpened}>
+      <Button
+        onClick={() => setIsOpened(true)}
+        disabled={isOpened}
+        variant="SECONDARY"
+        tone="NEUTRAL"
+        size="M"
+      >
         Show notification
       </Button>
       <Notification
@@ -48,7 +53,21 @@ function ControlledNotification(props: NotificationProps) {
 }
 
 storiesOf(`Notification`, module)
-  .add(`default`, () => (
+  .addDecorator(withDesign)
+  .addParameters({
+    options: {
+      showPanel: true,
+    },
+    readme: {
+      sidebar: README,
+    },
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/h4ixUmOo781r3sDeBAbmDc/Notifications?node-id=1%3A152",
+    },
+  })
+  .add(`Basic`, () => (
     <StoryUtils.Container>
       <div
         css={{
@@ -60,7 +79,7 @@ storiesOf(`Notification`, module)
         }}
       >
         <Notification
-          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
+          tone={radios(`tone`, toggleToneOptions, `BRAND`)}
           content={`Notification variant 'PRIMARY'`}
           linkUrl="/"
           linkText="Link"
@@ -69,13 +88,13 @@ storiesOf(`Notification`, module)
           css={{ marginTop: `1rem` }}
           as="section"
           variant="SECONDARY"
-          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
+          tone={radios(`tone`, toggleToneOptions, `BRAND`)}
           content={`Notification variant 'SECONDARY'`}
         />
       </div>
     </StoryUtils.Container>
   ))
-  .add(`dismissable`, () => (
+  .add(`Dismissable`, () => (
     <StoryUtils.Container>
       <div
         css={{
@@ -88,13 +107,13 @@ storiesOf(`Notification`, module)
       >
         <ControlledNotification
           css={{ marginTop: `1rem` }}
-          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
+          tone={radios(`tone`, toggleToneOptions, `BRAND`)}
           content={`Notification variant 'PRIMARY' with close`}
         />
       </div>
     </StoryUtils.Container>
   ))
-  .add(`custom icon`, () => (
+  .add(`Custom icon`, () => (
     <StoryUtils.Container>
       <div
         css={{
@@ -107,14 +126,14 @@ storiesOf(`Notification`, module)
       >
         <Notification
           variant={radios(`variant`, NOTIFICATION_VARIANTS, `PRIMARY`)}
-          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
+          tone={radios(`tone`, toggleToneOptions, `BRAND`)}
           content={`Notification with custom icon`}
-          Icon={MdCloud}
+          Icon={MdSignalWifi1BarLock}
         />
       </div>
     </StoryUtils.Container>
   ))
-  .add(`animated with react-spring`, () => {
+  .add(`Animated with react-spring`, () => {
     const ReactSpringNotification = animated(Notification)
 
     function AnimatedNotification(props: NotificationProps) {
@@ -138,6 +157,9 @@ storiesOf(`Notification`, module)
           <Button
             css={{ marginBottom: `1rem` }}
             onClick={() => setIsOpened(!isOpened)}
+            variant="SECONDARY"
+            tone="NEUTRAL"
+            size="M"
           >
             Toggle notification
           </Button>
@@ -163,10 +185,32 @@ storiesOf(`Notification`, module)
         <div css={{ maxWidth: "400px", width: "100%", minHeight: "300px" }}>
           <AnimatedNotification
             css={{ marginTop: `1rem` }}
-            tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
+            tone={radios(`tone`, toggleToneOptions, `BRAND`)}
             content={`Notification variant 'PRIMARY' with close`}
           />
         </div>
       </StoryUtils.Container>
     )
   })
+  .add(`Tones & variants`, () => (
+    <StoryUtils.Container>
+      <div
+        css={{
+          display: `flex`,
+          flexDirection: `column`,
+          alignItems: `flex-start`,
+          width: `500px`,
+        }}
+      >
+        {NOTIFICATION_TONES.map(tone => (
+          <div key={tone} css={{ marginTop: `1rem`, width: "100%" }}>
+            <Notification
+              tone={tone}
+              variant={radios(`variant`, NOTIFICATION_VARIANTS, `PRIMARY`)}
+              content={`Notification tone '${tone}'`}
+            />
+          </div>
+        ))}
+      </div>
+    </StoryUtils.Container>
+  ))

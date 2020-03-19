@@ -168,6 +168,7 @@
     "rollup-plugin-url": "^1.4.0",
     "shelljs": "^0.8.3",
     "standard-version": "^7.0.1",
+    "storybook-addon-designs": "^5.2.0",
     "storybook-chromatic": "^3.5.2",
     "storybook-host": "^5.1.0",
     "storybook-readme": "^5.0.8",

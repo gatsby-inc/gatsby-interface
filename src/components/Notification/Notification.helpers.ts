@@ -1,21 +1,16 @@
-import styled from "@emotion/styled"
-import { Success, Danger } from "../../assets"
-import { MdWarning } from "react-icons/md"
+import { SuccessIcon } from "../icons"
+import { MdWarning, MdError } from "react-icons/md"
 import { NotificationTone, NotificationVariant } from "./types"
-import { Theme, ThemeCss } from "../../theme"
-
-const Warning = styled(MdWarning)(({ theme }) => ({
-  color: (theme as Theme).colors.yellow[50],
-}))
+import { ThemeCss } from "../../theme"
 
 export const iconByTone: Record<
   NotificationTone,
   React.ComponentType<{}> | null
 > = {
   BRAND: null,
-  SUCCESS: Success,
-  DANGER: Danger,
-  WARNING: Warning,
+  SUCCESS: SuccessIcon,
+  DANGER: MdError,
+  WARNING: MdWarning,
   NEUTRAL: null,
 }
 
@@ -26,9 +21,9 @@ const variants: Record<NotificationVariant, GetVariantStylesFn> = {
     return theme => [
       {
         background: theme.colors.white,
-        borderLeft: `10px solid ${theme.tones[tone].dark}`,
+        borderLeft: `${theme.space[2]} solid ${theme.tones[tone].medium}`,
         paddingTop: theme.space[5],
-        paddingLeft: theme.space[5],
+        paddingLeft: theme.space[6],
         paddingRight: theme.space[7],
       },
     ]
