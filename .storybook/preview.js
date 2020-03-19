@@ -1,7 +1,6 @@
 import React, { Fragment } from "react"
 import { Global, css } from "@emotion/core"
 import { addParameters, addDecorator } from "@storybook/react"
-import { addReadme } from "storybook-readme"
 import { withKnobs } from "@storybook/addon-knobs"
 import { withConsole } from "@storybook/addon-console"
 import { withA11y } from "@storybook/addon-a11y"
@@ -37,8 +36,6 @@ global.___loader = {
 global.__PATH_PREFIX__ = ""
 
 // add decorators
-
-addDecorator(addReadme)
 
 addDecorator(withKnobs)
 

@@ -5,7 +5,6 @@ module.exports = {
   ],
   addons: [
     "@storybook/addon-docs",
-    "storybook-readme/register",
     "@storybook/addon-knobs/register",
     "@storybook/addon-storysource/register",
     "@storybook/addon-actions/register",
@@ -13,6 +12,12 @@ module.exports = {
     "@storybook/addon-a11y/register",
     "@storybook/addon-viewport/register",
   ],
+  managerWebpack: async baseConfig => {
+    baseConfig.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
+    baseConfig.resolve.extensions.push(".ts", ".tsx")
+    baseConfig.module.rules.push({ test: /\.tsx?$/, use: "babel-loader" })
+    return baseConfig
+  },
   webpackFinal: async config => {
     config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
 
@@ -22,10 +27,7 @@ module.exports = {
       type: "javascript/auto",
     })
 
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      loader: require.resolve("babel-loader"),
-    })
+    config.module.rules.push({ test: /\.tsx?$/, use: "babel-loader" })
 
     config.resolve.extensions.push(".mjs", ".ts", ".tsx")
 

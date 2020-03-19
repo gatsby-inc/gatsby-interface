@@ -170,7 +170,6 @@
     "standard-version": "^7.0.1",
     "storybook-chromatic": "^3.5.2",
     "storybook-host": "^5.1.0",
-    "storybook-readme": "^5.0.8",
     "stylelint": "^9.9.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",
