@@ -1,12 +1,12 @@
 import React, { Fragment } from "react"
 import { Global, css } from "@emotion/core"
-import { addParameters, addDecorator } from "@storybook/react"
+import { addDecorator } from "@storybook/react"
 import { withKnobs } from "@storybook/addon-knobs"
 import { withConsole } from "@storybook/addon-console"
 import { withA11y } from "@storybook/addon-a11y"
 import { action } from "@storybook/addon-actions"
-import withTheme from "./withTheme"
-import { Text, Heading } from "../src"
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
+import { withTheme, docsMDXComponents } from "./theming"
 
 import fonts from "../src/theme/fonts"
 import "@storybook/addon-console"
@@ -94,33 +94,17 @@ const viewports = {
       height: "640px",
     },
   },
+  ...INITIAL_VIEWPORTS,
 }
 
-function createHeadingComponent(level) {
-  const HeadingComponent = function(props) {
-    return <Heading as={level} {...props} />
-  }
-  HeadingComponent.displayName = `Heading${level.toUpperCase()}`
-
-  return HeadingComponent
-}
-
-addParameters({
+export const parameters = {
   viewport: { viewports: viewports },
   docs: {
     // For some reason currently these overrides do not work
     // Seems that we are not alone in this: https://github.com/storybookjs/storybook/issues/9968
-    components: {
-      p: Text,
-      h1: createHeadingComponent(`h1`),
-      h2: createHeadingComponent(`h2`),
-      h3: createHeadingComponent(`h3`),
-      h4: createHeadingComponent(`h4`),
-      h5: createHeadingComponent(`h5`),
-      h6: createHeadingComponent(`h6`),
-    },
+    components: docsMDXComponents,
   },
-})
+}
 
 if (process.env.NODE_ENV === `test`) {
   addDecorator(Story => <Story />)
