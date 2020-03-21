@@ -6,7 +6,7 @@ import { withConsole } from "@storybook/addon-console"
 import { withA11y } from "@storybook/addon-a11y"
 import { action } from "@storybook/addon-actions"
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
-import { withTheme, docsMDXComponents } from "./theming"
+import { withTheme, docsMDXComponents, storybookThemeLight } from "./theming"
 
 import fonts from "../src/theme/fonts"
 import "@storybook/addon-console"
@@ -103,6 +103,7 @@ export const parameters = {
     // For some reason currently these overrides do not work
     // Seems that we are not alone in this: https://github.com/storybookjs/storybook/issues/9968
     components: docsMDXComponents,
+    theme: storybookThemeLight,
   },
 }
 
