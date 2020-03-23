@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { ReactNode } from "react"
+import React from "react"
 
 import {
   TextAreaField,
@@ -11,17 +11,11 @@ import {
   TextAreaFieldHint,
   TextAreaFieldError,
 } from "./TextAreaField"
-import { FormFieldLabelSize } from "./FormField.helpers"
-import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
+import { WithFormFieldBlock } from "./FormField"
 
-export type TextAreaFieldBlockProps = {
-  id: string
-  label: ReactNode
-  labelSize?: FormFieldLabelSize
-  error?: ReactNode
-  hint?: ReactNode
-  validationMode?: ErrorValidationMode
-} & TextAreaFieldControlProps
+export type TextAreaFieldBlockProps = WithFormFieldBlock<
+  TextAreaFieldControlProps
+>
 
 export const TextAreaFieldBlock = React.forwardRef<
   HTMLTextAreaElement,

@@ -4,6 +4,8 @@ import React from "react"
 
 import { getFocusStyles } from "./FormField.helpers"
 import {
+  RadioButtonFieldSkeleton,
+  RadioButtonFieldSkeletonProps,
   RadioButtonFieldSkeletonOptionProps,
   RadioButtonFieldSkeletonOptionLabelProps,
   RadioButtonFieldSkeletonOption,
@@ -13,11 +15,9 @@ import {
   RadioButtonFieldSkeletonHint,
   RadioButtonFieldSkeletonErrorProps,
   RadioButtonFieldSkeletonError,
+  RadioButtonFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/RadioButtonFieldSkeleton"
 import {
-  FormGroupField,
-  FormGroupFieldProps,
-  FormGroupFieldLabelProps,
   useStyledGroupFieldLabel,
   useStyledGroupFieldHint,
   useStyledGroupFieldError,
@@ -28,22 +28,35 @@ import {
   useStyledGroupFieldOptionLabel,
   FormGroupFieldOptionLabelProps,
   useFormGroupField,
+  FormGroupFieldProvider,
+  formGroupFieldCss,
+  WithFormGroupField,
 } from "./FormGroupField"
 import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import { getStackStyles } from "../../stack"
 import { Theme, ThemeCss } from "../../../theme"
 
 import { INPUT_WIDTH, INPUT_VERTICAL_OFFSET_CALC } from "./FormGroupField"
+import { WithStyledFieldLabel } from "./FormField"
 
-export type RadioButtonFieldProps = FormGroupFieldProps
-export function RadioButtonField(props: RadioButtonFieldProps) {
+export type RadioButtonFieldProps = WithFormGroupField<
+  RadioButtonFieldSkeletonProps
+>
+export function RadioButtonField({
+  variant,
+  layout,
+  ...rest
+}: RadioButtonFieldProps) {
   return (
-    <FormGroupField
-      css={(theme: Theme) => [
-        props.variant === `framed` && getStackStyles({ gap: 3, theme }),
-      ]}
-      {...props}
-    />
+    <FormGroupFieldProvider variant={variant} layout={layout}>
+      <RadioButtonFieldSkeleton
+        css={(theme: Theme) => [
+          formGroupFieldCss(theme),
+          variant === `framed` && getStackStyles({ gap: 3, theme }),
+        ]}
+        {...rest}
+      />
+    </FormGroupFieldProvider>
   )
 }
 
@@ -174,7 +187,9 @@ export const RadioButtonFieldOptionFrame: React.FC<
   )
 }
 
-export type RadioButtonFieldLabelProps = FormGroupFieldLabelProps
+export type RadioButtonFieldLabelProps = WithStyledFieldLabel<
+  RadioButtonFieldSkeletonLabelProps
+>
 export function RadioButtonFieldLabel({
   children,
   size,

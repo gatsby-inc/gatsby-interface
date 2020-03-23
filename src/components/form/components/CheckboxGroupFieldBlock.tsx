@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
 
 import {
   CheckboxGroupField,
@@ -13,20 +12,15 @@ import {
   CheckboxGroupFieldHint,
   CheckboxGroupFieldError,
 } from "./CheckboxGroupField"
-import { FormFieldLabelSize } from "./FormField.helpers"
-import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
+import { WithFormFieldBlock } from "./FormField"
 
-export type CheckboxGroupFieldBlockProps = {
-  id: string
-  label: React.ReactNode
-  labelSize?: FormFieldLabelSize
-  options: { label: string; value: any }[]
-  layout?: `horizontal` | `vertical`
-  error?: React.ReactNode
-  hint?: React.ReactNode
-  validationMode?: ErrorValidationMode
-  value: any[]
-} & Omit<CheckboxGroupFieldOptionProps, "value">
+export type CheckboxGroupFieldBlockProps = WithFormFieldBlock<
+  {
+    options: { label: string; value: any }[]
+    layout?: `horizontal` | `vertical`
+    value: any[]
+  } & Omit<CheckboxGroupFieldOptionProps, "value">
+>
 
 export const CheckboxGroupFieldBlock = (
   props: CheckboxGroupFieldBlockProps

@@ -5,9 +5,9 @@ import { MdInfoOutline } from "react-icons/md"
 import colors from "../../theme/colors"
 import { Chip } from "../../components/Chip"
 
-const StoryUtils = {}
+type StoryUtilWrapperProps = Omit<JSX.IntrinsicElements["div"], "ref">
 
-StoryUtils.Stack = ({ children, ...rest }) => (
+const StoryUtilsStack = ({ children, ...rest }: StoryUtilWrapperProps) => (
   <div
     css={{
       display: `grid`,
@@ -20,7 +20,7 @@ StoryUtils.Stack = ({ children, ...rest }) => (
   </div>
 )
 
-StoryUtils.StackItem = ({ children, ...rest }) => (
+const StoryUtilsStackItem = ({ children, ...rest }: StoryUtilWrapperProps) => (
   <div
     css={{
       alignItems: `center`,
@@ -32,7 +32,10 @@ StoryUtils.StackItem = ({ children, ...rest }) => (
   </div>
 )
 
-StoryUtils.Container = ({ children, secondaryBg = false }) => (
+const StoryUtilsContainer = ({
+  children,
+  secondaryBg = false,
+}: StoryUtilWrapperProps & { secondaryBg?: boolean }) => (
   <div
     css={{
       alignItems: `center`,
@@ -48,10 +51,14 @@ StoryUtils.Container = ({ children, secondaryBg = false }) => (
   </div>
 )
 
-StoryUtils.Content = ({
+const StoryUtilsContent = ({
   hint = `content placeholder`,
   width = `100%`,
   height = `6rem`,
+}: {
+  hint?: React.ReactNode
+  width?: string
+  height?: string
 }) => (
   <div
     css={{
@@ -68,7 +75,7 @@ StoryUtils.Content = ({
   </div>
 )
 
-StoryUtils.Default = () => (
+const StoryUtilsDefault = () => (
   <Chip
     icon={<MdInfoOutline />}
     css={theme => ({ marginLeft: theme.space[8], verticalAlign: `middle` })}
@@ -77,4 +84,10 @@ StoryUtils.Default = () => (
   </Chip>
 )
 
-export default StoryUtils
+export default {
+  Stack: StoryUtilsStack,
+  StackItem: StoryUtilsStackItem,
+  Container: StoryUtilsContainer,
+  Content: StoryUtilsContent,
+  Default: StoryUtilsDefault,
+}

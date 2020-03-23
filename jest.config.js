@@ -6,6 +6,7 @@ module.exports = {
   moduleFileExtensions: [`ts`, `tsx`, `js`, `json`],
   transform: {
     "^.+\\.(j|t)sx?$": `<rootDir>/jest-preprocess.js`,
+    "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx",
   },
   moduleNameMapper: {
     ".+(prismCodeThemes|reach\\/(dialog|tooltip)).+\\.(css|styl|less|sass|scss)$": `<rootDir>/__mocks__/styleMock.js`,

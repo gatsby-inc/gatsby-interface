@@ -2,22 +2,20 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import {
-  FormFieldSkeletonProps,
-  useFormFieldSkeleton,
-} from "../../form-skeletons/components/FormFieldSkeleton"
+import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import {
   getFieldStackStyles,
   FormFieldStackProps,
   FormFieldStack,
-  FormFieldLabelProps,
   useStyledFieldLabel,
   useStyledFieldError,
   useStyledFieldHint,
+  WithStyledFieldLabel,
 } from "./FormField"
 import { getInputStyles } from "./FormField.helpers"
 import {
   SelectFieldSkeleton,
+  SelectFieldSkeletonProps,
   SelectFieldSkeletonControlProps,
   SelectFieldSkeletonControl,
   SelectFieldSkeletonLabel,
@@ -25,11 +23,12 @@ import {
   SelectFieldSkeletonError,
   SelectFieldSkeletonHintProps,
   SelectFieldSkeletonHint,
+  SelectFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/SelectFieldSkeleton"
 import { Theme } from "../../../theme"
 
-export type SelectFieldProps = FormFieldSkeletonProps
-export function SelectField(props: FormFieldSkeletonProps) {
+export type SelectFieldProps = SelectFieldSkeletonProps
+export function SelectField(props: SelectFieldProps) {
   return <SelectFieldSkeleton {...props}></SelectFieldSkeleton>
 }
 
@@ -65,7 +64,9 @@ export const SelectFieldControl = React.forwardRef<
 export type SelectFieldWrapperProps = FormFieldStackProps
 export const SelectFieldWrapper = FormFieldStack
 
-export type SelectFieldLabelProps = FormFieldLabelProps
+export type SelectFieldLabelProps = WithStyledFieldLabel<
+  SelectFieldSkeletonLabelProps
+>
 export function SelectFieldLabel({
   children,
   size,

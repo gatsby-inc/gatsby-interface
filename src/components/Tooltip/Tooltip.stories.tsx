@@ -69,11 +69,12 @@ export const Sandbox = () => (
   </Tooltip>
 )
 
-export const Positions = POSITIONS.map(position => (
-  <Tooltip key={position} label="Tooltip text" position={position}>
-    <button>Position: {position}</button>
-  </Tooltip>
-))
+export const Positions = () =>
+  POSITIONS.map(position => (
+    <Tooltip key={position} label="Tooltip text" position={position}>
+      <button>Position: {position}</button>
+    </Tooltip>
+  ))
 
 export const WithAccessibleLabel = () => (
   <div css={{ textAlign: `center` }}>

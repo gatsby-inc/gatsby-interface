@@ -1,0 +1,49 @@
+import { Meta, Title } from '@storybook/addon-docs/blocks';
+import { MdxDocsTheme } from '../../.storybook/theming'
+import pkg from '../../package.json'
+
+export const peerDepsList = Object.keys(pkg.peerDependencies)
+    .filter(dep => ![
+        'gatsby',
+        'react',
+        'react-dom',
+        'prop-types',
+    ].includes(dep))
+    .join(' ')
+
+<Meta title="About Gatsby Interface/Usage" />
+
+<MdxDocsTheme />
+
+# How to use Gatsby Interface
+
+## Installation
+1. Initiate a new Gatsby Site
+    ```bash
+    gatsby new <my-site-name>
+    ```
+1. Install Gatsby Interface and its peer dependencies:
+    ```bash
+    cd <my-site-name>
+    ```
+    <code className="language-bash">
+    yarn add {peerDepsList}
+    </code>
+
+    **NOTE** It might be necessary to use a different version of Node: [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) is recommended to manage your Node versions:
+    ```bash
+    nvm install v11.10.1
+    nvm use v11.10.1
+    ```
+    
+
+
+## Troubleshooting
+### Module not found: Error: Can't resolve 'fs' in ...
+You need to provide resolutions for filestack-js; in your root project `package.json` add this:
+```json
+"resolutions": {
+  "filestack-js": "3.10.0"
+}
+```
+

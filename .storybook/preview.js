@@ -1,12 +1,12 @@
 import React, { Fragment } from "react"
 import { Global, css } from "@emotion/core"
-import { configure, addDecorator, addParameters } from "@storybook/react"
-import { addReadme } from "storybook-readme"
+import { addDecorator } from "@storybook/react"
 import { withKnobs } from "@storybook/addon-knobs"
 import { withConsole } from "@storybook/addon-console"
 import { withA11y } from "@storybook/addon-a11y"
 import { action } from "@storybook/addon-actions"
-import withTheme from "./withTheme"
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
+import { withTheme, docsMDXComponents, storybookThemeLight } from "./theming"
 
 import fonts from "../src/theme/fonts"
 import "@storybook/addon-console"
@@ -32,22 +32,10 @@ global.___loader = {
   hovering: () => undefined,
 }
 
-const viewports = {
-  mobile360x640: {
-    name: "Mobile 360 x 640",
-    styles: {
-      width: "360px",
-      height: "640px",
-    },
-  },
-}
-
 // Gatsby internal mocking to prevent unnecessary errors in storybook testing environment
 global.__PATH_PREFIX__ = ""
 
 // add decorators
-
-addDecorator(addReadme)
 
 addDecorator(withKnobs)
 
@@ -98,23 +86,31 @@ if (process.env.NODE_ENV === `test`) {
   addDecorator(Story => <Story />)
 }
 
-addParameters({
-  options: {
-    addonPanelInRight: true,
+const viewports = {
+  mobile360x640: {
+    name: "Mobile 360 x 640",
+    styles: {
+      width: "360px",
+      height: "640px",
+    },
   },
-  readme: {},
+  ...INITIAL_VIEWPORTS,
+}
+
+export const parameters = {
   viewport: { viewports: viewports },
-})
+  docs: {
+    // For some reason currently these overrides do not work
+    // Seems that we are not alone in this: https://github.com/storybookjs/storybook/issues/9968
+    components: docsMDXComponents,
+    theme: storybookThemeLight,
+  },
+}
 
-//const req = require.context("../__stories__", true, /\.stories\.js$/)
-
-require("../__stories__/Welcome.stories")
+if (process.env.NODE_ENV === `test`) {
+  addDecorator(Story => <Story />)
+}
 
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
-
-configure(
-  require.context("../src/components/../", true, /\.stories\.(js|tsx)$/),
-  module
-)

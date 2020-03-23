@@ -2,54 +2,61 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.105](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.104...v0.0.105) (2020-03-18)
+### [0.0.108](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.107...v0.0.108) (2020-03-23)
 
+### [0.0.107](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.106...v0.0.107) (2020-03-19)
+
+### Features
+
+- Cleanup form components ([#229](https://github.com/gatsby-inc/gatsby-interface/issues/229)) ([d0c6e16](https://github.com/gatsby-inc/gatsby-interface/commit/d0c6e169241060c78ede674cfccb2f08ad583b32))
+
+### [0.0.106](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.105...v0.0.106) (2020-03-19)
+
+### Features
+
+- rewrite utils to TypeScript ([#243](https://github.com/gatsby-inc/gatsby-interface/issues/243)) ([6142c9a](https://github.com/gatsby-inc/gatsby-interface/commit/6142c9a02667c1fa9d33af9e987d94cecaaa49d8))
+
+### [0.0.105](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.104...v0.0.105) (2020-03-18)
 
 ### Bug Fixes
 
-* do not import Reach dialog css ([#245](https://github.com/gatsby-inc/gatsby-interface/issues/245)) ([93f2a53](https://github.com/gatsby-inc/gatsby-interface/commit/93f2a5345d63512a7f6e64ecf9e8852f93c590f7))
+- do not import Reach dialog css ([#245](https://github.com/gatsby-inc/gatsby-interface/issues/245)) ([93f2a53](https://github.com/gatsby-inc/gatsby-interface/commit/93f2a5345d63512a7f6e64ecf9e8852f93c590f7))
 
 ### [0.0.104](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.103...v0.0.104) (2020-03-18)
 
-
 ### Features
 
-* Fixing modal leaving when clicking on the overlay ([#231](https://github.com/gatsby-inc/gatsby-interface/issues/231)) ([15e58e0](https://github.com/gatsby-inc/gatsby-interface/commit/15e58e007871e029d6fce54cd295ba5c17a10a90))
+- Fixing modal leaving when clicking on the overlay ([#231](https://github.com/gatsby-inc/gatsby-interface/issues/231)) ([15e58e0](https://github.com/gatsby-inc/gatsby-interface/commit/15e58e007871e029d6fce54cd295ba5c17a10a90))
 
 ### [0.0.103](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.102...v0.0.103) (2020-03-16)
 
-
 ### Features
 
-* support displaying selected option in Combobox input ([#232](https://github.com/gatsby-inc/gatsby-interface/issues/232)) ([4e9941b](https://github.com/gatsby-inc/gatsby-interface/commit/4e9941bd3500f4b016d005daf6224cbff87a33d4))
+- support displaying selected option in Combobox input ([#232](https://github.com/gatsby-inc/gatsby-interface/issues/232)) ([4e9941b](https://github.com/gatsby-inc/gatsby-interface/commit/4e9941bd3500f4b016d005daf6224cbff87a33d4))
 
 ### [0.0.102](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.101...v0.0.102) (2020-03-16)
 
-
 ### Features
 
-* rewrite BaseNavigation to TypeScript ([#241](https://github.com/gatsby-inc/gatsby-interface/issues/241)) ([69a74df](https://github.com/gatsby-inc/gatsby-interface/commit/69a74dfdac20225ba2467bd6ceb90bc99b7fb33a))
+- rewrite BaseNavigation to TypeScript ([#241](https://github.com/gatsby-inc/gatsby-interface/issues/241)) ([69a74df](https://github.com/gatsby-inc/gatsby-interface/commit/69a74dfdac20225ba2467bd6ceb90bc99b7fb33a))
 
 ### [0.0.101](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.100...v0.0.101) (2020-03-16)
 
-
 ### Features
 
-* rewrite Announcement in TypeScript ([#240](https://github.com/gatsby-inc/gatsby-interface/issues/240)) ([25b8b65](https://github.com/gatsby-inc/gatsby-interface/commit/25b8b65f874c44a3eee0779eaae8c4312f9140ef))
+- rewrite Announcement in TypeScript ([#240](https://github.com/gatsby-inc/gatsby-interface/issues/240)) ([25b8b65](https://github.com/gatsby-inc/gatsby-interface/commit/25b8b65f874c44a3eee0779eaae8c4312f9140ef))
 
 ### [0.0.100](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.99...v0.0.100) (2020-03-13)
 
-
 ### Features
 
-* remove deprecated components ([#234](https://github.com/gatsby-inc/gatsby-interface/issues/234)) ([f2e6b8d](https://github.com/gatsby-inc/gatsby-interface/commit/f2e6b8db57bf6cec7d44c2c94d5e897afa8b08f3))
+- remove deprecated components ([#234](https://github.com/gatsby-inc/gatsby-interface/issues/234)) ([f2e6b8d](https://github.com/gatsby-inc/gatsby-interface/commit/f2e6b8db57bf6cec7d44c2c94d5e897afa8b08f3))
 
 ### [0.0.99](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.98...v0.0.99) (2020-03-13)
 
-
 ### Features
 
-* rewrite Badge in TypeScript ([#233](https://github.com/gatsby-inc/gatsby-interface/issues/233)) ([ffada76](https://github.com/gatsby-inc/gatsby-interface/commit/ffada76e58558a29ac62b1d1dcf581ec773250d4))
+- rewrite Badge in TypeScript ([#233](https://github.com/gatsby-inc/gatsby-interface/issues/233)) ([ffada76](https://github.com/gatsby-inc/gatsby-interface/commit/ffada76e58558a29ac62b1d1dcf581ec773250d4))
 
 ### [0.0.98](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.97...v0.0.98) (2020-03-12)
 
@@ -57,10 +64,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.96](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.95...v0.0.96) (2020-03-12)
 
-
 ### Features
 
-* update gatsby-design-tokens ([#230](https://github.com/gatsby-inc/gatsby-interface/issues/230)) ([3615108](https://github.com/gatsby-inc/gatsby-interface/commit/36151081b3c151c8020a26e86d7015caa6b50873))
+- update gatsby-design-tokens ([#230](https://github.com/gatsby-inc/gatsby-interface/issues/230)) ([3615108](https://github.com/gatsby-inc/gatsby-interface/commit/36151081b3c151c8020a26e86d7015caa6b50873))
 
 ### [0.0.95](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.94...v0.0.95) (2020-03-12)
 
@@ -70,10 +76,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.92](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.91...v0.0.92) (2020-03-10)
 
-
 ### Bug Fixes
 
-* remove static properties from RadioButton form fields ([#225](https://github.com/gatsby-inc/gatsby-interface/issues/225)) ([a2d2ba0](https://github.com/gatsby-inc/gatsby-interface/commit/a2d2ba022851e17d79c233b8f033ee85fe0ecfca))
+- remove static properties from RadioButton form fields ([#225](https://github.com/gatsby-inc/gatsby-interface/issues/225)) ([a2d2ba0](https://github.com/gatsby-inc/gatsby-interface/commit/a2d2ba022851e17d79c233b8f033ee85fe0ecfca))
 
 ### [0.0.91](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.90...v0.0.91) (2020-03-09)
 
