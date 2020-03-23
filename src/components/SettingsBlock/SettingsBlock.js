@@ -10,17 +10,18 @@ import { Heading } from "../Heading"
 import fonts from "../../theme/fonts"
 import breakpoints from "../../theme/breakpoints"
 import space from "../../theme/space"
-import cardStyles from "../../theme/styles/card"
 import fontSizes from "../../theme/fontSizes"
 import colors from "../../theme/colors"
 
 function SettingsBlock({ children, title, description, docUrl, ...rest }) {
   return (
     <ContentBox
-      css={{
-        ...cardStyles.frame,
-        width: `100%`,
-      }}
+      css={theme => [
+        theme.cardStyles.frame,
+        {
+          width: `100%`,
+        },
+      ]}
       {...rest}
     >
       {title && (
@@ -47,10 +48,10 @@ SettingsBlock.propTypes = {
 
 SettingsBlock.Header = ({ children, ...rest }) => (
   <header
-    css={{
-      fontSize: fontSizes[4],
-      ...cardStyles.space.header,
-    }}
+    css={theme => ({
+      fontSize: theme.fontSizes[4],
+      padding: `${theme.space[7]} ${theme.space[9]} ${theme.space[8]}`,
+    })}
     {...rest}
   >
     {children}

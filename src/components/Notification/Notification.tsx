@@ -12,7 +12,6 @@ import {
 import { PropsOf } from "../../utils/types"
 import { Link } from "../Link"
 import { ThemeCss, Theme } from "../../theme"
-import { Card, CardProps } from "../Card"
 
 export type NotificationContextValue = {
   onDismiss?: () => void
@@ -29,9 +28,10 @@ const baseCss: ThemeCss = theme => ({
   flexWrap: `nowrap`,
   width: `100%`,
   fontSize: theme.fontSizes[1],
+  lineHeight: theme.lineHeights.default,
 })
 
-export type NotificationProps = Omit<CardProps, "ref"> & {
+export type NotificationProps = Omit<JSX.IntrinsicElements["div"], "ref"> & {
   children?: React.ReactNode
   variant?: NotificationVariant
   tone?: NotificationTone
@@ -68,19 +68,20 @@ export default function Notification({
   }
   const PresetIcon = content && iconByTone[tone]
   const Icon = CustomIcon || PresetIcon
+  console.log({ showDismissButton, onDismissButtonClick })
 
   return (
     <NotificationContext.Provider value={{ onDismiss: onDismissButtonClick }}>
-      <Card
-        css={theme => [
+      <div
+        css={(theme: Theme) => [
+          variant === `PRIMARY` && theme.cardStyles.frame,
           baseCss(theme),
           getNotificationVariantStyles(variant, tone)(theme),
         ]}
-        standalone={variant === `PRIMARY`}
         {...rest}
       >
         {content && (
-          <Notification.Content as={contentAs}>
+          <NotificationContent as={contentAs}>
             {Icon && (
               <Icon
                 css={theme => ({
@@ -94,24 +95,24 @@ export default function Notification({
               />
             )}
             {content}
-          </Notification.Content>
+          </NotificationContent>
         )}
 
         {linkUrl && linkText && (
-          <Notification.Link to={linkUrl} onClick={onLinkClick}>
+          <Link to={linkUrl} onClick={onLinkClick}>
             {linkText && (
               <Fragment>
                 {linkText} <MdArrowForward />
               </Fragment>
             )}
-          </Notification.Link>
+          </Link>
         )}
 
         {showDismissButton && (
-          <Notification.DismissButton label={dismissButtonLabel} />
+          <NotificationDismissButton label={dismissButtonLabel} />
         )}
         {children}
-      </Card>
+      </div>
     </NotificationContext.Provider>
   )
 }
@@ -134,17 +135,15 @@ function NotificationContent({
       css={(theme: Theme) => ({
         display: `flex`,
         alignItems: `flex-start`,
-        lineHeight: theme.lineHeights.default,
         color: theme.tones[`NEUTRAL`].superDark,
       })}
       {...rest}
     />
   )
 }
-NotificationContent.displayName = `Notification.Content`
 
 function NotificationDismissButton({ label = `Close` }: { label?: string }) {
-  const { onDismiss } = Notification.useNotificationContext()
+  const { onDismiss } = useNotificationContext()
 
   return (
     <Button
@@ -165,13 +164,8 @@ function NotificationDismissButton({ label = `Close` }: { label?: string }) {
     </Button>
   )
 }
-NotificationDismissButton.displayName = `Notification.DismissButton`
 
-Notification.Content = NotificationContent
-Notification.Link = Link
-Notification.DismissButton = NotificationDismissButton
-
-Notification.useNotificationContext = () => {
+function useNotificationContext() {
   const context = React.useContext(NotificationContext)
   if (!context) {
     throw new Error(

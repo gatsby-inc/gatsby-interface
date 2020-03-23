@@ -22,8 +22,6 @@ export { SettingsBlock } from "./components/SettingsBlock"
 
 export { Link } from "./components/Link"
 
-export * from "./components/Card"
-
 export { Tabs, Tab, TabsNav, TabFigure, TabLabel } from "./components/Tabs"
 
 export { RadioSkeleton, Radio } from "./components/Radio"
@@ -57,7 +55,6 @@ export { default as shadows } from "./theme/shadows"
 export { default as zIndices } from "./theme/zIndices"
 export { default as transition } from "./theme/transition"
 
-export { default as cardStyles } from "./theme/styles/card"
 export * from "./theme/styles/button"
 
 export * from "./components/Announcement"
