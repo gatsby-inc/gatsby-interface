@@ -6,6 +6,9 @@ import { ModalCard } from "./"
 export default {
   title: `Modal/ModalCard`,
   component: ModalCard,
+  parameters: {
+    chromatic: { delay: 550 },
+  },
 }
 
 export const Basic = () => (
