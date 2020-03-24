@@ -43,6 +43,7 @@
     "@reach/alert": "^0.1.5",
     "@reach/combobox": "^0.8.5",
     "@reach/dialog": "^0.4.0",
+    "@reach/popover": "^0.9.0",
     "@reach/tooltip": "^0.8.5",
     "@types/lodash.sample": "^4.2.6",
     "case": "^1.6.2",
@@ -93,7 +94,6 @@
     "@storybook/addon-actions": "6.0.0-alpha.27",
     "@storybook/addon-console": "^1.2.1",
     "@storybook/addon-docs": "6.0.0-alpha.27",
-    "@storybook/addon-info": "6.0.0-alpha.2",
     "@storybook/addon-knobs": "6.0.0-alpha.27",
     "@storybook/addon-links": "6.0.0-alpha.27",
     "@storybook/addon-storyshots": "6.0.0-alpha.27",
@@ -154,7 +154,6 @@
     "react-dom": "^16.8.1",
     "react-icons": "^3.2.1",
     "react-spring": "^8.0.27",
-    "react-storybook-addon-chapters": "^3.1.7",
     "react-test-renderer": "^16.8.6",
     "rollup": "^1.32.0",
     "rollup-plugin-babel": "^4.0.1",
@@ -182,7 +181,8 @@
   },
   "resolutions": {
     "**/@types/react": "*",
-    "**/@types/react-dom": "*"
+    "**/@types/react-dom": "*",
+    "filestack-js": "3.10.0"
   },
   "husky": {
     "hooks": {
