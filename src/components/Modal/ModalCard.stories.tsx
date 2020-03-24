@@ -7,7 +7,7 @@ export default {
   title: `Modal/ModalCard`,
   component: ModalCard,
   parameters: {
-    chromatic: { delay: 550 },
+    chromatic: { pauseAnimationAtEnd: true },
   },
 }
 
