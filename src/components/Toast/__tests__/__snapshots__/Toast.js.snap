@@ -3,12 +3,12 @@
 exports[`Toast renders unchanged 1`] = `
 <div>
   <div
-    class="css-16f9lki-toastCss-Toast-Toast"
+    class="css-6pdnk1-toastCss-Toast-Toast"
     data-reach-alert="true"
     data-testid="toast"
   >
     <span
-      class="css-1lmo1sf-statusCss-Toast-Toast"
+      class="css-3wzd5o-statusCss-Toast-Toast"
     >
       <svg
         fill="currentColor"
@@ -25,13 +25,13 @@ exports[`Toast renders unchanged 1`] = `
       </svg>
     </span>
     <div
-      class="css-52u8ar-messageCss"
+      class="css-1e1jz1t-messageCss"
     >
       Lorem ipsum
     </div>
     <button
       aria-label="close"
-      class="css-kpz6xb-closeButtonCss"
+      class="css-1o0uy6d-closeButtonCss"
       type="button"
     >
       <svg
@@ -50,12 +50,12 @@ exports[`Toast renders unchanged 1`] = `
     </button>
   </div>
   <div
-    class="css-1egbcvn-toastCss-Toast-Toast"
+    class="css-j6docj-toastCss-Toast-Toast"
     data-reach-alert="true"
     data-testid="toast"
   >
     <span
-      class="css-9ssdp8-statusCss-Toast-Toast"
+      class="css-18fmh0q-statusCss-Toast-Toast"
     >
       <svg
         fill="currentColor"
@@ -72,13 +72,13 @@ exports[`Toast renders unchanged 1`] = `
       </svg>
     </span>
     <div
-      class="css-52u8ar-messageCss"
+      class="css-1e1jz1t-messageCss"
     >
       Lorem ipsum
     </div>
     <button
       aria-label="close"
-      class="css-kpz6xb-closeButtonCss"
+      class="css-1o0uy6d-closeButtonCss"
       type="button"
     >
       <svg
