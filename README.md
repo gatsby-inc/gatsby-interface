@@ -4,6 +4,16 @@
 
 # Gatsby Interface
 
+<a href="https://www.npmjs.org/package/gatsby-interface">
+  <img src="https://img.shields.io/npm/v/gatsby-interface.svg" alt="Current npm package version." />
+</a>
+<a href="https://npmcharts.com/compare/gatsby-interface?minimal=true">
+  <img src="https://img.shields.io/npm/dm/gatsby-interface.svg" alt="Downloads per month on npm." />
+</a>
+<a href="https://npmcharts.com/compare/gatsby-interface?minimal=true">
+  <img src="https://img.shields.io/npm/dt/gatsby-interface.svg" alt="Total downloads on npm." />
+</a>
+
 Storybook available at [gatsby-interface.netlify.com](https://gatsby-interface.netlify.com/).
 
 ![Storybook](https://user-images.githubusercontent.com/18426780/63871208-b9aea600-c978-11e9-9107-79679b699c6f.png)
