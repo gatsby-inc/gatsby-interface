@@ -223,7 +223,7 @@ export function BaseNavigationList(props: BaseNavigationListProps) {
       <ul css={[baseStyles.list.side, baseStyles.list.leftSide]} {...props}>
         {items.length > 0 &&
           items.map(item => <Item key={item.name} item={item} />)}
-        <div css={baseStyles.list.spacer} />
+        <li role="separator" css={baseStyles.list.spacer} />
         {secondaryItems.length > 0 &&
           secondaryItems.map(item => <Item key={item.name} item={item} />)}
         {rootChildren && rootChildren}
