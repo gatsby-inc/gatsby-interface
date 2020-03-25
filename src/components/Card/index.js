@@ -1,6 +1,0 @@
-export { default as CardSkeleton } from "./Card.Skeleton"
-export { default as BaseCard } from "./BaseCard"
-export { default as Card } from "./Card"
-export { CardHeader } from "./CardHeader"
-export { CardTitle } from "./CardTitle"
-export { CardText } from "./CardText"

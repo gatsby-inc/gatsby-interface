@@ -1,99 +1,126 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
 import React, { useState } from "react"
-import { storiesOf } from "@storybook/react"
-import { Modal, ModalType } from "./Modal"
-import { withKnobs, boolean, select } from "@storybook/addon-knobs"
-import { ModalFullScreen, ModalCard, ModalPanel } from "./"
-import { PanelPosition } from "./ModalPanel"
+import { boolean, text, radios } from "@storybook/addon-knobs"
+import { action } from "@storybook/addon-actions"
+import { Modal, ModalType, ModalCard, ModalPanel } from "./"
+import { radioKnobOptions } from "../../utils/storybook"
+import { Button } from "../Button"
 
-const label = `Type`
-const options = {
-  success: `success`,
-  info: `info`,
-  warn: `warn`,
-  error: `error`,
+const TYPES: ModalType[] = ["info", "success", "warn", "error"]
+
+export default {
+  title: `Modal`,
+  component: ModalPanel,
 }
 
-storiesOf(`Modal`, module)
-  .addDecorator(withKnobs)
-  .add(`Card`, () => (
-    <Modal
-      type={select(label, options, `info`) as ModalType}
-      aria-label="Some impressive content"
-      isOpen={boolean(`Is opened?`, true)}
-      onDismiss={() => console.log(`Dismissed!`)}
-    >
-      <ModalCard>
-        <div>Hello world</div>
-      </ModalCard>
-    </Modal>
-  ))
-  .add(`Panel`, () => {
-    const positionLabel = `Position`
-    const positionOptions = {
-      left: `left`,
-      right: `right`,
-    }
+export const Basic = () => (
+  <Modal aria-label="Some impressive content" isOpen>
+    <ModalCard>Hello world</ModalCard>
+  </Modal>
+)
 
-    return (
+export const Sandbox = () => (
+  <Modal
+    aria-label={text(`aria-label`, "Some impressive content")}
+    isOpen={boolean("isOpen", true)}
+    type={radios("type", radioKnobOptions(TYPES), "info")}
+  >
+    <ModalCard>Hello world</ModalCard>
+  </Modal>
+)
+
+export const Dismissable = () => {
+  const [isOpen, setIsOpen] = React.useState<boolean>(true)
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setIsOpen(true)}>Open modal</Button>
+
       <Modal
-        type={select(label, options, `info`) as ModalType}
         aria-label="Some impressive content"
-        isOpen={boolean(`Is opened?`, true)}
-        onDismiss={() => console.log(`Dismissed!`)}
+        isOpen={isOpen}
+        onDismiss={() => setIsOpen(false)}
       >
-        <ModalPanel
-          position={
-            select(positionLabel, positionOptions, `left`) as PanelPosition
-          }
-        >
-          <div>Hello world</div>
-        </ModalPanel>
+        <ModalCard css={theme => ({ padding: theme.space[4] })}>
+          You can close this modal by one of the following:
+          <ul>
+            <li>Click on the overlay</li>
+            <li>Press ESC</li>
+            <li>Click the buton below</li>
+          </ul>
+          <Button variant="SECONDARY" onClick={() => setIsOpen(false)}>
+            Close modal
+          </Button>
+        </ModalCard>
       </Modal>
-    )
-  })
-  .add(`Fullscreen`, () => (
-    <Modal
-      type={select(label, options, `info`) as any}
-      aria-label="Some impressive content"
-      isOpen={boolean(`Is opened?`, true)}
-      onDismiss={() => console.log(`Dismissed!`)}
-    >
-      <ModalFullScreen>
-        <div>Hello world</div>
-      </ModalFullScreen>
-    </Modal>
-  ))
-  .add(`Nesting modal`, () => <NestedExample />)
+    </React.Fragment>
+  )
+}
 
-const NestedExample = () => {
+export const InitialFocus = () => {
+  const primaryButtonRef = React.useRef<HTMLButtonElement>(null)
+
+  return (
+    <React.Fragment>
+      <Modal
+        aria-label="Some impressive content"
+        initialFocusRef={primaryButtonRef}
+      >
+        <ModalCard css={theme => ({ padding: theme.space[4] })}>
+          The "Primary action" button should be focused when modal opens
+          <br />
+          <br />
+          <Button
+            variant="SECONDARY"
+            onClick={action("secondary button click")}
+          >
+            Secondary action
+          </Button>
+          <Button
+            variant="PRIMARY"
+            onClick={action("primary button click")}
+            ref={primaryButtonRef}
+          >
+            Primary action
+          </Button>
+        </ModalCard>
+      </Modal>
+    </React.Fragment>
+  )
+}
+
+export const Nested = () => {
   const [isParentOpened, setParent] = useState(false)
   const [isChildrenOpened, setChildren] = useState(false)
 
   return (
     <div>
-      <button onClick={() => setParent(true)}>Show parent</button>
+      <Button onClick={() => setParent(true)}>Show parent</Button>
       <Modal
-        type={select(label, options, `info`) as any}
         aria-label="Some impressive content"
         isOpen={isParentOpened}
-        onDismiss={() => console.log(`Dismissed!`)}
+        onDismiss={() => setParent(false)}
       >
-        <ModalFullScreen>
+        <ModalPanel>
           <div>Parent modal</div>
           <div>
-            <button onClick={() => setChildren(true)}>Show children</button>
+            <Button variant="SECONDARY" onClick={() => setChildren(true)}>
+              Show children
+            </Button>
 
             <Modal
-              aria-label="Some impressive content"
+              aria-label="Some impressive children content"
+              type="success"
               isOpen={isChildrenOpened}
-              onDismiss={() => console.log(`Dismissed!`)}
+              onDismiss={() => setChildren(false)}
             >
               <ModalCard>
                 <div>Children modal</div>
               </ModalCard>
             </Modal>
           </div>
-        </ModalFullScreen>
+        </ModalPanel>
       </Modal>
     </div>
   )

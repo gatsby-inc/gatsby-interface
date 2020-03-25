@@ -4,25 +4,25 @@
 
 ```
 <CheckboxField id="ID" hasError={!!error} hasHint={!!hint}>
-  <CheckboxField.Wrapper>
-    <CheckboxField.Control
+  <CheckboxFieldWrapper>
+    <CheckboxFieldControl
       onChange={e => {}}
     />
-    <CheckboxField.Label>Last name</CheckboxField.Label>
-    <CheckboxField.Error>{error}</CheckboxField.Error>
-    <CheckboxField.Hint>{hint}</CheckboxField.Hint>
-  </CheckboxField.Wrapper>
+    <CheckboxFieldLabel>Last name</CheckboxFieldLabel>
+    <CheckboxFieldError>{error}</CheckboxFieldError>
+    <CheckboxFieldHint>{hint}</CheckboxFieldHint>
+  </CheckboxFieldWrapper>
 </CheckboxField>
 ```
 
-**IMPORTANT!** `CheckboxField.Label` must always be placed below `CheckboxField.Control`
+**IMPORTANT!** `CheckboxFieldLabel` must always be placed below `CheckboxFieldControl`
 
 The only difference are:
 
-- `CheckboxField` has an additional subcomponent `CheckboxField.Wrapper` which role is to provide a way to style the field row as a block.
-- `CheckboxField.Label` accepts additional props
+- `CheckboxField` has an additional subcomponent `CheckboxFieldWrapper` which role is to provide a way to style the field row as a block.
+- `CheckboxFieldLabel` accepts additional props
   - `size?: ['S','M','L']` - default value `M`
-  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<label>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `CheckboxField.Control` component.
+  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<label>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `CheckboxFieldControl` component.
 
 ## CheckboxFieldBlock
 

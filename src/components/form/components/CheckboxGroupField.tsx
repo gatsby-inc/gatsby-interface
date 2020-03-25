@@ -3,6 +3,8 @@ import { jsx } from "@emotion/core"
 import React from "react"
 import { getFocusStyles } from "./FormField.helpers"
 import {
+  CheckboxGroupFieldSkeleton,
+  CheckboxGroupFieldSkeletonProps,
   CheckboxGroupFieldSkeletonOptionProps,
   CheckboxGroupFieldSkeletonOptionLabelProps,
   CheckboxGroupFieldSkeletonOption,
@@ -12,11 +14,9 @@ import {
   CheckboxGroupFieldSkeletonHint,
   CheckboxGroupFieldSkeletonErrorProps,
   CheckboxGroupFieldSkeletonError,
+  CheckboxGroupFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/CheckboxGroupFieldSkeleton"
 import {
-  FormGroupField,
-  FormGroupFieldProps,
-  FormGroupFieldLabelProps,
   useStyledGroupFieldLabel,
   useStyledGroupFieldHint,
   useStyledGroupFieldError,
@@ -26,14 +26,28 @@ import {
   FormGroupFieldOptionWrapper,
   useStyledGroupFieldOptionLabel,
   FormGroupFieldOptionLabelProps,
+  FormGroupFieldProvider,
+  WithFormGroupField,
+  formGroupFieldCss,
 } from "./FormGroupField"
 import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import { Theme } from "../../../theme"
 import { INPUT_WIDTH, INPUT_VERTICAL_OFFSET_CALC } from "./FormGroupField"
+import { WithStyledFieldLabel } from "./FormField"
 
-export type CheckboxGroupFieldProps = Omit<FormGroupFieldProps, "variant">
-export function CheckboxGroupField(props: CheckboxGroupFieldProps) {
-  return <FormGroupField {...props} />
+export type CheckboxGroupFieldProps = Omit<
+  WithFormGroupField<CheckboxGroupFieldSkeletonProps>,
+  "variant"
+>
+export function CheckboxGroupField({
+  layout,
+  ...rest
+}: CheckboxGroupFieldProps) {
+  return (
+    <FormGroupFieldProvider layout={layout}>
+      <CheckboxGroupFieldSkeleton css={formGroupFieldCss} {...rest} />
+    </FormGroupFieldProvider>
+  )
 }
 
 export type CheckboxGroupFieldOptionProps = CheckboxGroupFieldSkeletonOptionProps
@@ -103,7 +117,9 @@ export const CheckboxGroupFieldOptionLabel: React.FC<
   )
 }
 
-export type CheckboxGroupFieldLabelProps = FormGroupFieldLabelProps
+export type CheckboxGroupFieldLabelProps = WithStyledFieldLabel<
+  CheckboxGroupFieldSkeletonLabelProps
+>
 export function CheckboxGroupFieldLabel({
   children,
   size,

@@ -1,5 +1,6 @@
 import React from "react"
-import FormFieldSkeleton, {
+import {
+  FormFieldSkeleton,
   FormFieldSkeletonProps,
   FormFieldSkeletonLabelProps,
   FormFieldSkeletonHintProps,
@@ -7,12 +8,13 @@ import FormFieldSkeleton, {
   FormFieldSkeletonLabel,
   FormFieldSkeletonHint,
   FormFieldSkeletonError,
+  useFormFieldSkeleton,
 } from "./FormFieldSkeleton"
 import { getFinalAriaDescribedBy } from "../utils"
 import { OmitControlProps } from "../sharedTypes"
 
-export type CheckboxFieldSkeleton = FormFieldSkeletonProps
-export function CheckboxFieldSkeleton(props: CheckboxFieldSkeleton) {
+export type CheckboxFieldSkeletonProps = FormFieldSkeletonProps
+export function CheckboxFieldSkeleton(props: CheckboxFieldSkeletonProps) {
   return <FormFieldSkeleton {...props} />
 }
 
@@ -25,7 +27,7 @@ export const CheckboxFieldSkeletonControl = React.forwardRef<
   HTMLInputElement,
   CheckboxFieldSkeletonControlProps
 >(function CheckboxFieldSkeletonControl(props, ref) {
-  const { id, hasError, meta } = FormFieldSkeleton.useFormFieldSkeleton()
+  const { id, hasError, meta } = useFormFieldSkeleton()
 
   return (
     <input

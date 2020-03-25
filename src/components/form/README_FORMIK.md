@@ -45,22 +45,22 @@ export const validationSchema = Yup.object().shape({
         hasError={!!(touched.title && errors.title)}
         hasHint={true}
       >
-        <InputField.Wrapper>
-          <InputField.Label isRequired={true}>Title</InputField.Label>
-          <InputField.Control
+        <InputFieldWrapper>
+          <InputFieldLabel isRequired={true}>Title</InputFieldLabel>
+          <InputFieldControl
             name="title"
             value={values.title}
             onChange={handleChange}
             onBlur={handleBlur}
             required
           />
-          <InputField.Hint>
+          <InputFieldHint>
             Must be at least {TITLE_MIN_LENGTH} and not more than {TITLE_MAX_LENGTH} characters
-          </InputField.Hint>
-          <InputField.Error>
+          </InputFieldHint>
+          <InputFieldError>
             {touched.title && errors.title ? errors.title : ``}
-          </InputField.Error>
-        </InputField.Wrapper>
+          </InputFieldError>
+        </InputFieldWrapper>
       </InputField>
   ...
 ```

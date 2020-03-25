@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
 
 import {
   RadioButtonField,
@@ -13,18 +12,13 @@ import {
   RadioButtonFieldError,
   RadioButtonFieldOptionProps,
 } from "./RadioButtonField"
-import { FormFieldLabelSize } from "./FormField.helpers"
-import { ErrorValidationMode } from "../../form-skeletons/components/FormFieldSkeleton"
+import { WithFormFieldBlock } from "./FormField"
 
-export type RadioButtonFieldBlockProps = {
-  id: string
-  label: React.ReactNode
-  labelSize?: FormFieldLabelSize
-  options: { label: string; value: any }[]
-  error?: React.ReactNode
-  hint?: React.ReactNode
-  validationMode?: ErrorValidationMode
-} & RadioButtonFieldOptionProps
+export type RadioButtonFieldBlockProps = WithFormFieldBlock<
+  {
+    options: { label: string; value: any }[]
+  } & RadioButtonFieldOptionProps
+>
 
 export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
   const {

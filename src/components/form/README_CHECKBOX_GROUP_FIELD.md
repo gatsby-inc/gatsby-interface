@@ -4,38 +4,38 @@
 
 ```
  <CheckboxGroupField id="ID" hasError={!!error} hasHint={!!hint}>
-  <CheckboxGroupField.Label >
+  <CheckboxGroupFieldLabel >
     Fieldset Legend
-  </CheckboxGroupField.Label>
-  <CheckboxGroupField.Options>
+  </CheckboxGroupFieldLabel>
+  <CheckboxGroupFieldOptions>
     {options.map(({ label, value }) => (
-      <CheckboxGroupField.OptionWrapper key={value}>
-        <CheckboxGroupField.Option value={value} name="field_name" />
-        <CheckboxGroupField.OptionLabel
+      <CheckboxGroupFieldOptionWrapper key={value}>
+        <CheckboxGroupFieldOption value={value} name="field_name" />
+        <CheckboxGroupFieldOptionLabel
           optionValue={value}
         >
           {label}
-        </CheckboxGroupField.OptionLabel>
-      </CheckboxGroupField.OptionWrapper>
+        </CheckboxGroupFieldOptionLabel>
+      </CheckboxGroupFieldOptionWrapper>
     ))}
-  </CheckboxGroupField.Options>
-  <CheckboxGroupField.Hint>{hint}</CheckboxGroupField.Hint>
-  <CheckboxGroupField.Error>{error}</CheckboxGroupField.Error>
+  </CheckboxGroupFieldOptions>
+  <CheckboxGroupFieldHint>{hint}</CheckboxGroupFieldHint>
+  <CheckboxGroupFieldError>{error}</CheckboxGroupFieldError>
 </CheckboxGroupField>
 ```
 
-**IMPORTANT!** `CheckboxGroupField.OptionLabel` in the `map` callback must always be placed below `CheckboxGroupField.Option`.
+**IMPORTANT!** `CheckboxGroupFieldOptionLabel` in the `map` callback must always be placed below `CheckboxGroupFieldOption`.
 
 The **differences** between `CheckboxGroupField` and `CheckboxGroupFieldSkeleton`:
 
 - `CheckboxGroupField` accepts additional prop:
   - `layout?: ['vertical', 'horizontal']`, `vertical` is a default value
 - `CheckboxGroupField` has additional subcomponent:
-  - `CheckboxGroupField.Options` which role is to provide a way to style the list of option inputs as a block.
-- `CheckboxGroupField.Label` accepts additional props
+  - `CheckboxGroupFieldOptions` which role is to provide a way to style the list of option inputs as a block.
+- `CheckboxGroupFieldLabel` accepts additional props
   - `size?: ['S','M','L']` - default value `M`
-  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<legend>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `CheckboxGroupField.Control` component if you want to rely on the web form native validation.
-- `CheckboxGroupField.OptionLabel` accepts additional prop
+  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<legend>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `CheckboxGroupFieldControl` component if you want to rely on the web form native validation.
+- `CheckboxGroupFieldOptionLabel` accepts additional prop
   - `size?: ['S','M','L']` - default value `L`
 
 ## CheckboxGroupFieldBlock

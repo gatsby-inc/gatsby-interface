@@ -16,24 +16,24 @@ const options = [
 
 
 <SelectField id="ID" hasError={!!error} hasHint={!!hint}>
-  <SelectField.Wrapper>
-    <SelectField.Label>Comment</SelectField.Label>
-    <SelectField.Control
+  <SelectFieldWrapper>
+    <SelectFieldLabel>Comment</SelectFieldLabel>
+    <SelectFieldControl
       options={options}
       onChange={e => action(`Change`)(e.target.value)}
     />
-    <SelectField.Hint>{hint}</SelectField.Hint>
-    <SelectField.Error>{error}</SelectField.Error>
-  </SelectField.Wrapper>
+    <SelectFieldHint>{hint}</SelectFieldHint>
+    <SelectFieldError>{error}</SelectFieldError>
+  </SelectFieldWrapper>
 </SelectField>
 ```
 
 The only difference are:
 
-- `SelectField` has an additional subcomponent `SelectField.Wrapper` which role is to provide a way to style the field row as a block.
-- `SelectField.Label` accepts additional props
+- `SelectField` has an additional subcomponent `SelectFieldWrapper` which role is to provide a way to style the field row as a block.
+- `SelectFieldLabel` accepts additional props
   - `size?: ['S','M','L']` - default value `M`
-  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<label>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `SelectField.Control` component.
+  - `isRequred?: boolean` - if true a 'required' flag is render inside the `<label>` tag. It's only presentational feature, besides that you have to add a HTML `required` attribute to `SelectFieldControl` component.
 
 ## SelectFieldBlock
 

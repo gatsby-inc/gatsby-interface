@@ -35,11 +35,12 @@ export const Sandbox = () => (
   </Badge>
 )
 
-export const Variants = VARIANTS.map(variant => (
-  <Badge key={variant} variant={variant}>
-    Variant: {variant}
-  </Badge>
-))
+export const Variants = () =>
+  VARIANTS.map(variant => (
+    <Badge key={variant} variant={variant}>
+      Variant: {variant}
+    </Badge>
+  ))
 
 export const WithIcon = () => (
   <Badge>
