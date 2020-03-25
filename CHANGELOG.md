@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.112](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.111...v0.0.112) (2020-03-25)
+
+
+### Features
+
+* refactor and rewrite Card to TypeScript ([#237](https://github.com/gatsby-inc/gatsby-interface/issues/237)) ([df3f602](https://github.com/gatsby-inc/gatsby-interface/commit/df3f602d479a5a6482d297f660a89885e182bb89)), closes [#242](https://github.com/gatsby-inc/gatsby-interface/issues/242)
+
+### [0.0.111](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.110...v0.0.111) (2020-03-25)
+
+### Features
+
+- Modal style fixes and CSF stories ([#250](https://github.com/gatsby-inc/gatsby-interface/issues/250)) ([a93d5bf](https://github.com/gatsby-inc/gatsby-interface/commit/a93d5bfe33997053120a940772db1a5b7044ca6a))
+
+### [0.0.110](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.109...v0.0.110) (2020-03-25)
+
+### [0.0.109](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.108...v0.0.109) (2020-03-24)
+
 ### [0.0.108](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.107...v0.0.108) (2020-03-23)
 
 ### [0.0.107](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.106...v0.0.107) (2020-03-19)

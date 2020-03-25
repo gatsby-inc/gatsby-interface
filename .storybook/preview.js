@@ -100,8 +100,6 @@ const viewports = {
 export const parameters = {
   viewport: { viewports: viewports },
   docs: {
-    // For some reason currently these overrides do not work
-    // Seems that we are not alone in this: https://github.com/storybookjs/storybook/issues/9968
     components: docsMDXComponents,
     theme: storybookThemeLight,
   },

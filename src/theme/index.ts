@@ -35,7 +35,7 @@ const themeTones: ToneScale = {
   BRAND: {
     superLight: themeColors.purple[5],
     light: themeColors.purple[20],
-    medium: themeColors.purple[50],
+    medium: themeColors.purple[40],
     dark: themeColors.purple[60],
     darker: themeColors.purple[70],
     superDark: themeColors.purple[90],
@@ -65,12 +65,12 @@ const themeTones: ToneScale = {
     superDark: themeColors.grey[90],
   },
   WARNING: {
-    superLight: themeColors.yellow[5],
-    light: themeColors.yellow[20],
-    medium: themeColors.yellow[40],
-    dark: themeColors.yellow[50],
-    darker: themeColors.yellow[60],
-    superDark: themeColors.yellow[90],
+    superLight: themeColors.orange[5],
+    light: themeColors.orange[20],
+    medium: themeColors.orange[50],
+    dark: themeColors.orange[60],
+    darker: themeColors.orange[70],
+    superDark: themeColors.orange[90],
   },
 }
 
@@ -195,6 +195,35 @@ const themeMediaQueries: MediaQueryScale = Object.entries(breakpoints).reduce(
  */
 const themeTransitions = transitions
 
+/**
+ * Cards
+ */
+export type CardSpaceVariant = "DEFAULT" | "L" | "M"
+
+export type CardStyles = {
+  frame: Interpolation
+  space: Record<CardSpaceVariant, Interpolation>
+}
+
+const themeCardStyles: CardStyles = {
+  frame: {
+    background: colors.primaryBackground,
+    borderRadius: radii[2],
+    boxShadow: shadows.raised,
+  },
+  space: {
+    DEFAULT: {
+      padding: `${space[6]} ${space[3]} ${space[5]} ${space[7]}`,
+    },
+    M: {
+      padding: `${space[5]} ${space[9]}`,
+    },
+    L: {
+      padding: `${space[7]} ${space[9]} ${space[8]}`,
+    },
+  },
+}
+
 export type Theme = {
   colors: Readonly<ColorScale>
   tones: Readonly<ToneScale>
@@ -211,6 +240,7 @@ export type Theme = {
   mediaBreakpoints: Readonly<MediaBreakpointScale>
   mediaQueries: Readonly<MediaQueryScale>
   transitions: Readonly<Transitions>
+  cardStyles: Readonly<CardStyles>
 }
 
 const defaultTheme: Theme = {
@@ -229,6 +259,7 @@ const defaultTheme: Theme = {
   mediaBreakpoints: themeMediaBreakpoints,
   mediaQueries: themeMediaQueries,
   transitions: themeTransitions,
+  cardStyles: themeCardStyles,
 }
 
 export function getTheme(): Theme {

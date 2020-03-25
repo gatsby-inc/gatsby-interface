@@ -11,6 +11,7 @@ module.exports = {
     "@storybook/addon-links/register",
     "@storybook/addon-a11y/register",
     "@storybook/addon-viewport/register",
+    "storybook-addon-designs/register",
   ],
   managerWebpack: async baseConfig => {
     baseConfig.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]

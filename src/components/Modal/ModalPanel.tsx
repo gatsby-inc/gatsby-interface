@@ -1,11 +1,11 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
 import React from "react"
-import styled from "@emotion/styled"
 import { keyframes } from "@emotion/core"
-import space from "../../theme/space"
-import colors from "../../theme/colors"
-import { Content } from "./components"
+import { ModalContent, ModalContentProps } from "./ModalContent"
+import { ThemeCss } from "../../theme"
 
-const buildTranslation = (position: PanelPosition) => keyframes`
+const buildTranslation = (position: ModalPanelPosition) => keyframes`
   0% {
     transform: translate3d${position === `left` ? `(-100%, 0,0)` : `(100%,0,0)`}
    }
@@ -18,31 +18,42 @@ const buildTranslation = (position: PanelPosition) => keyframes`
 const translateLeft = buildTranslation(`left`)
 const translateRight = buildTranslation(`right`)
 
-export type PanelPosition = "left" | "right"
+const baseCss: ThemeCss = theme => ({
+  background: theme.colors.white,
+  height: `100vh`,
+  position: "absolute",
+  animationDuration: `0.5s`,
+  animationFillMode: `forwards`,
+  animationTimingFunction: `ease`,
+})
 
-export interface PanelProps {
-  position?: PanelPosition
+export type PanelPosition = "left" | "right"
+export type ModalPanelPosition = "left" | "right"
+
+export type ModalPanelProps = Omit<ModalContentProps, "ref"> & {
+  position?: ModalPanelPosition
   maxWidth?: string
 }
 
-const AnimatedPanel = styled.div<PanelProps>`
-  background: ${colors.white};
-  max-width: ${props => props.maxWidth || `20%`};
-  height: 100vh;
-  padding: ${space[5]};
-  position: absolute;
-  right: ${props => props.position === `right` && 0};
-  animation: ${props =>
-      props.position === `right` ? translateRight : translateLeft}
-    0.5s ease forwards;
-`
-
-export const ModalPanel: React.FC<PanelProps> = ({
-  maxWidth,
-  position,
+export const ModalPanel: React.FC<ModalPanelProps> = ({
+  maxWidth = `20%`,
+  position = `right`,
   ...props
 }) => (
-  <AnimatedPanel position={position} maxWidth={maxWidth}>
-    <Content {...props} />
-  </AnimatedPanel>
+  <ModalContent
+    css={theme => [
+      baseCss(theme),
+      { maxWidth },
+      position === `right`
+        ? {
+            right: 0,
+            animationName: translateRight,
+          }
+        : {
+            left: 0,
+            animationName: translateLeft,
+          },
+    ]}
+    {...props}
+  />
 )
