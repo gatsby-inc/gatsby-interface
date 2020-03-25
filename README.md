@@ -1,6 +1,6 @@
 # Gatsby Interface
 
-Storybook [available here](https://reverent-keller-9597e8.netlify.com/)
+Storybook available at [gatsby-interface.netlify.com](https://gatsby-interface.netlify.com/).
 
 ![Storybook](https://user-images.githubusercontent.com/18426780/63871208-b9aea600-c978-11e9-9107-79679b699c6f.png)
 
