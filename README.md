@@ -34,7 +34,7 @@ yarn add gatsby-interface
 
 ### Fonts
 
-Certain Gatsby Interface components currently require the `Futura PT` webfont. These files are git-ignored to prevent the unauthorized release of licensed assets, and are not included in this repository.
+Certain Gatsby Interface components require the `Futura PT` webfont. These files are git-ignored to prevent the unauthorized release of licensed assets, and are not included in this repository.
 
 Gatsby Inc. employees can download these fonts from our [Google Drive](https://drive.google.com/drive/u/1/folders/1DA_iNzLbd1_gvU_FWTzYK6MgLSl85L4v). Put all those folders in `src/assets/futura-pt` and you should be good to go!
 
