@@ -61,7 +61,7 @@ Navigation.Nav = delegated => {
 }
 
 Navigation.Spacer = delegated => {
-  return <div css={{ flex: 1 }} {...delegated} />
+  return <li css={{ flex: 1 }} {...delegated} role="separator" />
 }
 
 Navigation.List = delegated => {
@@ -162,16 +162,24 @@ Navigation.Button = ({ linkTo, ...delegated }) => {
 
   if (isExternal) {
     return (
-      <BaseNavigation.AnchorButton
-        href={linkTo}
-        css={cssStyles}
-        {...delegated}
-      />
+      <li>
+        <BaseNavigation.AnchorButton
+          href={linkTo}
+          css={cssStyles}
+          {...delegated}
+        />
+      </li>
     )
   }
 
   return (
-    <BaseNavigation.LinkButton linkTo={linkTo} css={cssStyles} {...delegated} />
+    <li>
+      <BaseNavigation.LinkButton
+        linkTo={linkTo}
+        css={cssStyles}
+        {...delegated}
+      />
+    </li>
   )
 }
 
