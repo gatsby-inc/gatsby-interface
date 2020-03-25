@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/npm/dt/gatsby-interface.svg" alt="Total downloads on npm." />
 </a>
 
-Storybook available at [gatsby-interface.netlify.com](https://gatsby-interface.netlify.com/).
+Storybook available at [gatsby-interface.netlify.com](https://gatsby-interface.netlify.com/):
 
 ![screenshot](https://user-images.githubusercontent.com/21834/77585971-ac916f80-6ee5-11ea-92b4-8cf24284f366.png)
 
