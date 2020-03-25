@@ -32,6 +32,12 @@ Using [Yarn](https://yarnpkg.com/):
 yarn add gatsby-interface
 ```
 
+### Fonts
+
+Certain Gatsby Interface components currently require the `Futura PT` webfont. These files are git-ignored to prevent the unauthorized release of licensed assets, and are not included in this repository.
+
+Gatsby Inc. employees can download these fonts from our [Google Drive](https://drive.google.com/drive/u/1/folders/1DA_iNzLbd1_gvU_FWTzYK6MgLSl85L4v). Put all those folders in `src/assets/futura-pt` and you should be good to go!
+
 ## Development
 
 1. Clone the repository: `git clone https://github.com/gatsby-inc/gatsby-interface.git`.
@@ -53,12 +59,6 @@ These are some patterns and best practices we use when contributing to `gatsby-i
 - Write Storybook stories for any component created: https://storybook.js.org/docs/basics/writing-stories/.
 - Typscript coming soon!
 - Unit tests coming soon!
-
-### Required assets
-
-Gatsby Interface requires the `futura PT` webfont in several different weights. These files are git-ignored, to prevent the unauthorized release of licensed assets.
-
-Gatsby Inc. employees can download these fonts from [Google Drive](https://drive.google.com/drive/u/1/folders/1DA_iNzLbd1_gvU_FWTzYK6MgLSl85L4v). Put all those folders in `src/assets/futura-pt` and you should be good to go!
 
 ### Chromatic testing
 
