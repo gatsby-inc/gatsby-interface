@@ -90,10 +90,12 @@ function scaffoldComponent(componentName, basePath, context) {
 
   libIndexFiles.forEach(indexFilePath => {
     console.log(
-      `  appending export statement to`,
-      chalk.bold(path.relative(process.cwd(), indexFilePath))
+      chalk.blue(
+        `  appending export statement to`,
+        chalk.bold(path.relative(process.cwd(), indexFilePath))
+      )
     )
-    console.log({ indexFilePath, componentDirPath })
+
     fs.appendFileSync(
       indexFilePath,
       `export * from "./${path.relative(
