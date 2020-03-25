@@ -18,9 +18,25 @@ Storybook available at [gatsby-interface.netlify.com](https://gatsby-interface.n
 
 ![Storybook](https://user-images.githubusercontent.com/18426780/63871208-b9aea600-c978-11e9-9107-79679b699c6f.png)
 
+## Installation
+
+Using [npm](https://www.npmjs.com/):
+
+```shell
+npm install gatsby-interface --save
 ```
-yarn storybook
+
+Using [Yarn](https://yarnpkg.com/):
+
+```shell
+yarn add gatsby-interface
 ```
+
+## Development
+
+1. Clone the repository: `git clone https://github.com/gatsby-inc/gatsby-interface.git`.
+2. Install dependencies: `yarn`.
+3. Run Storybook: `yarn storybook`.
 
 These are some patterns and best practices we use when contributing to `gatsby-interface`
 
