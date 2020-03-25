@@ -41,14 +41,16 @@ export const Sandbox = () => (
   </Heading>
 )
 
-export const Tones = TONES.map(tone => (
-  <Heading key={tone} tone={tone}>
-    Tone: {tone}
-  </Heading>
-))
+export const Tones = () =>
+  TONES.map(tone => (
+    <Heading key={tone} tone={tone}>
+      Tone: {tone}
+    </Heading>
+  ))
 
-export const Variants = VARIANTS.map(variant => (
-  <Heading key={variant} variant={variant}>
-    Variant: {variant}
-  </Heading>
-))
+export const Variants = () =>
+  VARIANTS.map(variant => (
+    <Heading key={variant} variant={variant}>
+      Variant: {variant}
+    </Heading>
+  ))
