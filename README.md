@@ -38,17 +38,19 @@ yarn add gatsby-interface
 2. Install dependencies: `yarn`.
 3. Run Storybook: `yarn storybook`.
 
-These are some patterns and best practices we use when contributing to `gatsby-interface`
+## Contributing
 
-- Use React hooks and functional components - https://reactjs.org/docs/hooks-intro.html
-- Use CSS props for styling - https://emotion.sh/docs/css-prop
-- Use `gatsby-design-tokens` for styling constants - https://www.gatsbyjs.org/guidelines/design-tokens/
-- Use compound components to make components more composable and flexible - https://kentcdodds.com/blog/compound-components-with-react-hooks
-- Make all PRs against the `dev` branch
-- Use `TONE` and `VARIANT` prop (when appropriate) to determine color styles and version of a component - see Button as an example
-- Make the component as generic as possible so it can be used anywhere by anything
-- In `skeletons` folder, these contain only the functionality of a component (no styles) and can be used within other components
-- Write Storybook stories for any component created - https://storybook.js.org/docs/basics/writing-stories/
+These are some patterns and best practices we use when contributing to `gatsby-interface`:
+
+- Use React hooks and functional components: https://reactjs.org/docs/hooks-intro.html.
+- Use CSS props for styling: https://emotion.sh/docs/css-prop.
+- Use `gatsby-design-tokens` for styling constants: https://www.gatsbyjs.org/guidelines/design-tokens/.
+- Use compound components to make components more composable and flexible: https://kentcdodds.com/blog/compound-components-with-react-hooks.
+- Make all PRs against the `dev` branch.
+- Use `TONE` and `VARIANT` prop (when appropriate) to definie color style and variant of a component — see e. g. `<Button>`.
+- Make the component as generic as possible so it can be used _anywhere_ by _anything_.
+- Components in the `skeletons` folder provide only the functionality, but no styles, and can be used within other components.
+- Write Storybook stories for any component created: https://storybook.js.org/docs/basics/writing-stories/.
 - Typscript coming soon!
 - Unit tests coming soon!
 
