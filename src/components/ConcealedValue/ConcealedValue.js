@@ -6,9 +6,8 @@ import PropTypes from "prop-types"
 import { Button } from "../Button"
 import { Menu, MenuList, MenuButton, MenuItem } from "@reach/menu-button"
 import { copyToClipboard } from "./utils"
-import { ReachMenuCss, ReachMenuListCss, ReachMenuItemCss } from "./utils"
-// import "@reach/menu-button/styles.css"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
+import { visuallyHiddenCss } from "../../stylesheets/a11y"
 
 const ConcealedValueContainerCss = theme => ({
   alignItems: `center`,
@@ -17,42 +16,70 @@ const ConcealedValueContainerCss = theme => ({
   padding: theme.space[2],
 })
 
-const ConcealedValueContentCss = css({
-  //   border: `thin solid green`,
-  //   backgroundColor: `green`,
+const ConcealedValueContentCss = {
   overflow: `hidden`,
   flexBasis: `100%`,
   flexGrow: 0,
+}
+
+const ConcealedValueInputCss = theme => ({
+  border: `none`,
+  marginRight: theme.space[1],
+  textOverflow: `ellipsis`,
+  fontFamily: theme.fonts.heading,
+  fontSize: theme.fontSizes[1],
+  color: theme.tones[`NEUTRAL`].dark,
+  width: `100%`,
 })
 
 const ConcealedValueActionsCss = css({
-  //   border: `thin solid purple`,
   flexBasis: `100%`,
 })
 
 const ConcealedValueMenuCss = {
-  ...ReachMenuCss,
+  // @reach/menu-button base styles
+  display: `block`,
+  position: `absolute`,
 }
 
 const ConcealedValueMenuButtonCss = theme => ({
-  marginLeft: theme.space[4],
+  marginLeft: theme.space[2],
 })
 
-const ConcealedValueMenuListCss = {
-  ...ReachMenuListCss,
-}
+const ConcealedValueMenuListCss = theme => ({
+  // @reach/menu-button base styles
+  display: `block`,
+  whiteSpace: `nowrap`,
+  //   border: `solid 1px hsla(0, 0%, 0%, 0.25)`, // avoid dupe key warning
+  background: `hsla(0, 100%, 100%, 0.99)`,
+  outline: `none`,
+  padding: `1rem 0`,
+  //   fontSize: `85%`, // avoid dupe key warning
+  // gatsby-interface style
+  color: theme.tones[`NEUTRAL`].dark,
+  border: `1px solid ${theme.tones[`NEUTRAL`].light}`,
+  borderRadius: theme.radii[2],
+  fontFamily: theme.fonts.heading,
+  fontSize: theme.fontSizes[1],
+})
 
-const ConcealedValueMenuItemCss = {
-  ...ReachMenuItemCss,
-}
-
-// X 1. show a value
-// X 2. show or hide a value based on state
-// 3. show or hide a value based on state managed via dropdown
-// 4. copy the value (accessible whether concealed or revealed)
-
-// whether concealed or revealed, copy option should be
-// shown on hover
+const ConcealedValueMenuItemCss = theme => ({
+  // @reach/menu-button base styles
+  display: `block`,
+  userSelect: `none`,
+  cursor: `pointer`,
+  color: `inherit`,
+  font: `inherit`,
+  textDecoration: `initial`,
+  padding: `5px 20px`,
+  "&[data-selected]": {
+    // background: `hsl(211, 81%, 36%)`, // avoid dupe key warning
+    // gatsby-interface style
+    background: theme.tones[`NEUTRAL`].dark,
+    color: `white`,
+    outline: `none`,
+  },
+})
 
 function ConcealedValue({ value = `default`, concealed = true, delay = 5000 }) {
   const [isCopied, setIsCopied] = useState(false)
@@ -70,11 +97,21 @@ function ConcealedValue({ value = `default`, concealed = true, delay = 5000 }) {
     <div css={ConcealedValueContainerCss}>
       <div css={ConcealedValueContentCss}>
         {isConcealed ? (
-          // return dots
-          <span>&bull; &bull; &bull; &bull; &bull; &bull;</span>
+          // classic password dots
+          <input
+            css={ConcealedValueInputCss}
+            type="text"
+            value="&bull; &bull; &bull; &bull; &bull; &bull;"
+            readonly
+          />
         ) : (
-          // return unmasked value
-          <span>{value}</span>
+          // unmasked value
+          <input
+            css={ConcealedValueInputCss}
+            type="text"
+            value={value}
+            readonly
+          />
         )}
       </div>
       <div css={ConcealedValueActionsCss}>
@@ -95,7 +132,8 @@ function ConcealedValue({ value = `default`, concealed = true, delay = 5000 }) {
             tone="NEUTRAL"
             variant="SECONDARY"
           >
-            Actions <span aria-hidden>▾</span>
+            <span css={visuallyHiddenCss}>Actions</span>{" "}
+            <span aria-hidden>▾</span>
           </Button>
           <MenuList css={ConcealedValueMenuListCss}>
             <MenuItem css={ConcealedValueMenuItemCss} onClick={copyHandler}>
@@ -124,7 +162,6 @@ function ConcealedValue({ value = `default`, concealed = true, delay = 5000 }) {
 }
 
 ConcealedValue.propTypes = {
-  // children: PropTypes.any.isRequired,
   delay: PropTypes.number,
   concealed: PropTypes.bool,
   value: PropTypes.string,

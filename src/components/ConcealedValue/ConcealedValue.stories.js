@@ -13,7 +13,7 @@ storiesOf(`ConcealedValue`, module)
 
   .add(`base concealed value component`, () => {
     return (
-      <div css={{ width: `300px` }}>
+      <div css={{ width: `500px` }}>
         <ConcealedValue value="xZCY2beK)ymCFGhdU8yLcpjWcMsYFyEVHqVvryrm2g9VPQqLMyTbo/XWmbEmtmpi" />
       </div>
     )
