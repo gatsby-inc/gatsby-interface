@@ -81,6 +81,7 @@ storiesOf(`Navigation`, module)
     <div css={{ padding: `2rem` }}>
       <Navigation items={items2}>
         <Navigation.Item item={{ name: `Contact`, linkTo: `/contact/` }} />
+        <Navigation.Button linkTo="/">Test</Navigation.Button>
       </Navigation>
     </div>
   ))

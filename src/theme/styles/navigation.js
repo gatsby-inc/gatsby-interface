@@ -6,6 +6,11 @@ import { hexToRGBA } from "../../utils/helpers/hexToRgb"
 import space from "../../theme/space"
 import transition from "../../theme/transition"
 
+const liReset = {
+  margin: 0,
+  padding: 0,
+}
+
 const styles = {}
 
 styles.Navigation = {
@@ -124,6 +129,7 @@ const DropdownMobileStyles = {
 
 styles.Item = {
   default: {
+    ...liReset,
     marginBottom: 0,
     padding: `0 ${space[4]}`,
     "&:hover > ul": {
@@ -249,8 +255,9 @@ styles.DropdownItem = {
   },
 }
 
-styles.Button = {
+styles.ButtonItem = {
   default: {
+    ...liReset,
     marginLeft: `.5rem`,
   },
   mobile: {
