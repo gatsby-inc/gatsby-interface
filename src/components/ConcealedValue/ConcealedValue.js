@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { useState } from "react"
 import { jsx } from "@emotion/core"
-import { css } from "@emotion/core"
 import PropTypes from "prop-types"
 import { Button } from "../Button"
 import { Menu, MenuList, MenuButton, MenuItem } from "@reach/menu-button"
@@ -10,30 +9,28 @@ import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleChe
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
 
 const ConcealedValueContainerCss = theme => ({
-  alignItems: `center`,
   display: `flex`,
+  alignItems: `center`,
   justifyContent: `space-between`,
   padding: theme.space[2],
+  width: `100%`,
 })
 
-const ConcealedValueContentCss = {
+const ConcealedValueContentCss = theme => ({
   overflow: `hidden`,
-  flexBasis: `100%`,
-  flexGrow: 0,
-}
+  flexGrow: 1,
+  marginRight: theme.space[4],
+})
+
+const ConcealedValueActionsCss = {}
 
 const ConcealedValueInputCss = theme => ({
   border: `none`,
-  marginRight: theme.space[1],
   textOverflow: `ellipsis`,
   fontFamily: theme.fonts.heading,
   fontSize: theme.fontSizes[1],
   color: theme.tones[`NEUTRAL`].dark,
   width: `100%`,
-})
-
-const ConcealedValueActionsCss = css({
-  flexBasis: `100%`,
 })
 
 const ConcealedValueMenuCss = {
