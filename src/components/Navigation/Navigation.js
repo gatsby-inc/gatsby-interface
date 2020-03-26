@@ -150,7 +150,7 @@ Navigation.DropdownItem = delegated => {
   )
 }
 
-Navigation.Button = ({ linkTo, ...delegated }) => {
+Navigation.Button = ({ linkTo, className, ...delegated }) => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
   const isExternal = linkTo.match(/(^http|^mailto)/i)
@@ -162,14 +162,14 @@ Navigation.Button = ({ linkTo, ...delegated }) => {
 
   if (isExternal) {
     return (
-      <li css={cssStyles}>
+      <li css={cssStyles} className={className}>
         <BaseNavigation.AnchorButton href={linkTo} {...delegated} />
       </li>
     )
   }
 
   return (
-    <li css={cssStyles}>
+    <li css={cssStyles} className={className}>
       <BaseNavigation.LinkButton linkTo={linkTo} {...delegated} />
     </li>
   )
