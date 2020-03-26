@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.114](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.113...v0.0.114) (2020-03-26)
+
+
+### Features
+
+* Heading rewritten to TypeScript ([#244](https://github.com/gatsby-inc/gatsby-interface/issues/244)) ([ce89ee3](https://github.com/gatsby-inc/gatsby-interface/commit/ce89ee3a47aa150a4e576f901512391564881536))
+
 ### [0.0.113](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.112...v0.0.113) (2020-03-25)
 
 ### [0.0.112](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.111...v0.0.112) (2020-03-25)

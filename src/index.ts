@@ -30,8 +30,6 @@ export { FileUpload } from "./components/FileUpload"
 
 export { SidebarNav } from "./components/SidebarNav"
 
-export { Heading } from "./components/Heading"
-
 export { Navigation } from "./components/Navigation"
 
 export * from "./components/CopyButton"
@@ -66,6 +64,7 @@ export * from "./components/Chip"
 export * from "./components/icons"
 export * from "./components/form-skeletons"
 export * from "./components/DecorativeDots"
+export * from "./components/Heading"
 export * from "./components/Modal"
 export * from "./components/Toast"
 export * from "./components/Notification"
