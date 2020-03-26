@@ -44,7 +44,25 @@ Gatsby Inc. employees can download these fonts from our [Google Drive](https://d
 2. Install dependencies: `yarn`.
 3. Run Storybook: `yarn storybook`.
 
-## Contributing
+### Adding a new component
+
+If you want to add a new component to `gatsby-interface`, run `yarn scaffold:component` to create stubs:
+
+```bash
+yarn scaffold:component MyNewComponent
+```
+
+This script will do the following:
+
+- Create a `MyNewComponent` directory for the component at [`./src/components`](./src/components)
+- Generate a file for the component itself, `MyNewComponent.tsx`, with stubs for props type, styles and even some variants
+- Generate a story file, `MyNewComponent.stories.tsx`, which follows the suggestions from [Component Checklist proposal](https://github.com/gatsby-inc/gatsby-interface/issues/205).
+- Generate an index file, `index.ts`, which reexports everything from the component file
+- Add export statements to library index files: [`./src/index.ts`](./src/index.ts) and [`./index-ts-only.ts`](./index-ts-only.ts).
+
+Everything that is generated should be working out of the box and be ready to shipped (though please avoid shipping the stubs 😅)
+
+### Contributing
 
 These are some patterns and best practices we use when contributing to `gatsby-interface`:
 

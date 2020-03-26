@@ -1,0 +1,45 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
+import React from 'react'
+import { ThemeCss, Theme } from "../../theme"
+
+const baseCss: ThemeCss = theme => ({
+  fontFamily: theme.fonts.body,
+  fontSize: theme.fontSizes[3],
+})
+
+const variantPrimaryCss: ThemeCss = theme => ({
+  color: theme.colors.gatsby,
+})
+
+const variantSecondaryCss: ThemeCss = theme => ({
+  color: theme.colors.grey[70],
+})
+
+const variantCss: Record<<%= COMPONENT_NAME %>Variant, ThemeCss> = {
+  PRIMARY: variantPrimaryCss,
+  SECONDARY: variantSecondaryCss,
+}
+
+export type <%= COMPONENT_NAME %>Variant = `PRIMARY` | `SECONDARY`
+
+export type <%= COMPONENT_NAME %>Props = {
+  variant?: <%= COMPONENT_NAME %>Variant;
+  children?: React.ReactNode;
+}
+
+export function <%= COMPONENT_NAME %>({
+  variant = `PRIMARY`,
+  children,
+}: <%= COMPONENT_NAME %>Props) {
+  return (
+    <div
+      css={(theme: Theme) => [
+        baseCss(theme),
+        variantCss[variant](theme),
+      ]}
+    >
+      {children}
+    </div>
+  )
+}

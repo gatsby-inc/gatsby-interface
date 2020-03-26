@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.114",
+  "version": "0.0.115",
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
@@ -30,6 +30,7 @@
     "lint:all": "yarn lint src .storybook",
     "chromatic": "STORYBOOK_CHROMATIC=1 chromatic test",
     "chromatic:ci": "STORYBOOK_CHROMATIC=1 babel-node --presets @babel/env scripts/run-chromatic.js",
+    "scaffold:component": "babel-node --presets @babel/env scripts/scaffold-component/scaffold-component.js",
     "scaffold:icon": "babel-node --presets @babel/env scripts/scaffold-icon/scaffold-icon.js",
     "prepublish": "yarn build",
     "release": "standard-version",
