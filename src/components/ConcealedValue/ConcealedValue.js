@@ -4,13 +4,47 @@ import { jsx } from "@emotion/core"
 import { css } from "@emotion/core"
 import PropTypes from "prop-types"
 import { Button } from "../Button"
-
 import { Menu, MenuList, MenuButton, MenuItem } from "@reach/menu-button"
-import "@reach/menu-button/styles.css"
+import { copyToClipboard } from "./utils"
+import { ReachMenuCss, ReachMenuListCss, ReachMenuItemCss } from "./utils"
+// import "@reach/menu-button/styles.css"
+import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
-const tempContainerCss = css({
-  border: `thin solid red`,
+const ConcealedValueContainerCss = theme => ({
+  alignItems: `center`,
+  display: `flex`,
+  justifyContent: `space-between`,
+  padding: theme.space[2],
 })
+
+const ConcealedValueContentCss = css({
+  //   border: `thin solid green`,
+  //   backgroundColor: `green`,
+  overflow: `hidden`,
+  flexBasis: `100%`,
+  flexGrow: 0,
+})
+
+const ConcealedValueActionsCss = css({
+  //   border: `thin solid purple`,
+  flexBasis: `100%`,
+})
+
+const ConcealedValueMenuCss = {
+  ...ReachMenuCss,
+}
+
+const ConcealedValueMenuButtonCss = theme => ({
+  marginLeft: theme.space[4],
+})
+
+const ConcealedValueMenuListCss = {
+  ...ReachMenuListCss,
+}
+
+const ConcealedValueMenuItemCss = {
+  ...ReachMenuItemCss,
+}
 
 // X 1. show a value
 // X 2. show or hide a value based on state
@@ -19,46 +53,72 @@ const tempContainerCss = css({
 
 // whether concealed or revealed, copy option should be
 // shown on hover
-function ConcealedValue({ value = `default`, concealed = true }) {
-  //   const [isCopied, setIsCopied] = useState(false)
+
+function ConcealedValue({ value = `default`, concealed = true, delay = 5000 }) {
+  const [isCopied, setIsCopied] = useState(false)
   const [isConcealed, setIsConcealed] = useState(concealed)
-  console.log({ isConcealed })
+
+  const copyHandler = async () => {
+    await copyToClipboard(value)
+    setIsCopied(true)
+    setTimeout(() => {
+      setIsCopied(false)
+    }, delay)
+  }
+
   return (
-    <div css={tempContainerCss}>
-      {isConcealed ? (
-        // return dots
-        <span>&bull; &bull; &bull; &bull; &bull; &bull;</span>
-      ) : (
-        // return unmasked value
-        <span>{value}</span>
-      )}
-      <Button
-        size="S"
-        tone="NEUTRAL"
-        variant="SECONDARY"
-        onClick={() => {
-          // implement copy function
-          //   setIsCopied(true)
-          //   setTimeout(() => {
-          //     setIsCopied(false)
-          //   }, delay)
-        }}
-      >
-        Copy
-      </Button>
-      <Menu>
-        <MenuButton>
-          Actions <span aria-hidden>▾</span>
-        </MenuButton>
-        <MenuList>
-          <MenuItem onSelect={() => alert("Copy")}>Copy</MenuItem>
-          {isConcealed ? (
-            <MenuItem onSelect={() => setIsConcealed(false)}>Reveal</MenuItem>
-          ) : (
-            <MenuItem onSelect={() => setIsConcealed(true)}>Conceal</MenuItem>
-          )}
-        </MenuList>
-      </Menu>
+    <div css={ConcealedValueContainerCss}>
+      <div css={ConcealedValueContentCss}>
+        {isConcealed ? (
+          // return dots
+          <span>&bull; &bull; &bull; &bull; &bull; &bull;</span>
+        ) : (
+          // return unmasked value
+          <span>{value}</span>
+        )}
+      </div>
+      <div css={ConcealedValueActionsCss}>
+        <Button
+          size="S"
+          tone="NEUTRAL"
+          variant="SECONDARY"
+          onClick={copyHandler}
+        >
+          {isCopied ? `Copied` : `Copy`}
+        </Button>
+        <DisableReachStyleCheck reachComponent="menu-button" />
+        <Menu css={ConcealedValueMenuCss}>
+          <Button
+            css={ConcealedValueMenuButtonCss}
+            ButtonComponent={MenuButton}
+            size="S"
+            tone="NEUTRAL"
+            variant="SECONDARY"
+          >
+            Actions <span aria-hidden>▾</span>
+          </Button>
+          <MenuList css={ConcealedValueMenuListCss}>
+            <MenuItem css={ConcealedValueMenuItemCss} onClick={copyHandler}>
+              Copy
+            </MenuItem>
+            {isConcealed ? (
+              <MenuItem
+                css={ConcealedValueMenuItemCss}
+                onSelect={() => setIsConcealed(false)}
+              >
+                Reveal
+              </MenuItem>
+            ) : (
+              <MenuItem
+                css={ConcealedValueMenuItemCss}
+                onSelect={() => setIsConcealed(true)}
+              >
+                Conceal
+              </MenuItem>
+            )}
+          </MenuList>
+        </Menu>
+      </div>
     </div>
   )
 }
