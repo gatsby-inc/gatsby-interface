@@ -251,6 +251,7 @@ styles.DropdownItem = {
 
 styles.Button = {
   default: {
+    margin: 0,
     marginLeft: `.5rem`,
   },
   mobile: {

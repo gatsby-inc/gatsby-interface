@@ -162,23 +162,15 @@ Navigation.Button = ({ linkTo, ...delegated }) => {
 
   if (isExternal) {
     return (
-      <li>
-        <BaseNavigation.AnchorButton
-          href={linkTo}
-          css={cssStyles}
-          {...delegated}
-        />
+      <li css={cssStyles}>
+        <BaseNavigation.AnchorButton href={linkTo} {...delegated} />
       </li>
     )
   }
 
   return (
-    <li>
-      <BaseNavigation.LinkButton
-        linkTo={linkTo}
-        css={cssStyles}
-        {...delegated}
-      />
+    <li css={cssStyles}>
+      <BaseNavigation.LinkButton linkTo={linkTo} {...delegated} />
     </li>
   )
 }
