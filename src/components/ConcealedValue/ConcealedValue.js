@@ -37,7 +37,7 @@ const ConcealedValueActionsCss = css({
 })
 
 const ConcealedValueMenuCss = {
-  // @reach/menu-button base styles
+  /* @reach/menu-button base styles */
   display: `block`,
   position: `absolute`,
 }
@@ -47,7 +47,7 @@ const ConcealedValueMenuButtonCss = theme => ({
 })
 
 const ConcealedValueMenuListCss = theme => ({
-  // @reach/menu-button base styles
+  /* @reach/menu-button base styles */
   display: `block`,
   whiteSpace: `nowrap`,
   //   border: `solid 1px hsla(0, 0%, 0%, 0.25)`, // avoid dupe key warning
@@ -64,7 +64,7 @@ const ConcealedValueMenuListCss = theme => ({
 })
 
 const ConcealedValueMenuItemCss = theme => ({
-  // @reach/menu-button base styles
+  /* @reach/menu-button base styles */
   display: `block`,
   userSelect: `none`,
   cursor: `pointer`,
@@ -74,7 +74,7 @@ const ConcealedValueMenuItemCss = theme => ({
   padding: `5px 20px`,
   "&[data-selected]": {
     // background: `hsl(211, 81%, 36%)`, // avoid dupe key warning
-    // gatsby-interface style
+    /* gatsby-interface style */
     background: theme.tones[`NEUTRAL`].dark,
     color: `white`,
     outline: `none`,
