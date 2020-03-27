@@ -17,7 +17,7 @@ import {
   ConcealedValueMenuListCss,
   ConcealedValueMenuItemCss,
 } from "./ConcealedValue.styles"
-function ConcealedValue({ value = `default`, concealed = true, delay = 5000 }) {
+function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
   const [isCopied, setIsCopied] = useState(false)
   const [isConcealed, setIsConcealed] = useState(concealed)
 
