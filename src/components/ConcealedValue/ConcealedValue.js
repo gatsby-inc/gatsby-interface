@@ -4,80 +4,19 @@ import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 import { Button } from "../Button"
 import { Menu, MenuList, MenuButton, MenuItem } from "@reach/menu-button"
-import { copyToClipboard } from "./utils"
+import copyToClipboard from "../../utils/helpers/copyToClipboard"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
-
-const ConcealedValueContainerCss = theme => ({
-  display: `flex`,
-  alignItems: `center`,
-  justifyContent: `space-between`,
-  padding: theme.space[2],
-  width: `100%`,
-})
-
-const ConcealedValueContentCss = theme => ({
-  overflow: `hidden`,
-  flexGrow: 1,
-  marginRight: theme.space[4],
-})
-
-const ConcealedValueActionsCss = {}
-
-const ConcealedValueInputCss = theme => ({
-  border: `none`,
-  textOverflow: `ellipsis`,
-  fontFamily: theme.fonts.heading,
-  fontSize: theme.fontSizes[1],
-  color: theme.tones[`NEUTRAL`].dark,
-  width: `100%`,
-})
-
-const ConcealedValueMenuCss = {
-  /* @reach/menu-button base styles */
-  display: `block`,
-  position: `absolute`,
-}
-
-const ConcealedValueMenuButtonCss = theme => ({
-  marginLeft: theme.space[2],
-})
-
-const ConcealedValueMenuListCss = theme => ({
-  /* @reach/menu-button base styles */
-  display: `block`,
-  whiteSpace: `nowrap`,
-  //   border: `solid 1px hsla(0, 0%, 0%, 0.25)`, // avoid dupe key warning
-  background: `hsla(0, 100%, 100%, 0.99)`,
-  outline: `none`,
-  padding: `1rem 0`,
-  //   fontSize: `85%`, // avoid dupe key warning
-  // gatsby-interface style
-  color: theme.tones[`NEUTRAL`].dark,
-  border: `1px solid ${theme.tones[`NEUTRAL`].light}`,
-  borderRadius: theme.radii[2],
-  fontFamily: theme.fonts.heading,
-  fontSize: theme.fontSizes[1],
-})
-
-const ConcealedValueMenuItemCss = theme => ({
-  /* @reach/menu-button base styles */
-  display: `block`,
-  userSelect: `none`,
-  cursor: `pointer`,
-  color: `inherit`,
-  font: `inherit`,
-  textDecoration: `initial`,
-  padding: `5px 20px`,
-  "&[data-selected]": {
-    // background: `hsl(211, 81%, 36%)`, // avoid dupe key warning
-    /* gatsby-interface style */
-    background: theme.tones[`NEUTRAL`].dark,
-    color: `white`,
-    outline: `none`,
-  },
-})
-
+import {
+  ConcealedValueContainerCss,
+  ConcealedValueContentCss,
+  ConcealedValueActionsCss,
+  ConcealedValueInputCss,
+  ConcealedValueMenuCss,
+  ConcealedValueMenuButtonCss,
+  ConcealedValueMenuListCss,
+  ConcealedValueMenuItemCss,
+} from "./ConcealedValue.styles"
 function ConcealedValue({ value = `default`, concealed = true, delay = 5000 }) {
   const [isCopied, setIsCopied] = useState(false)
   const [isConcealed, setIsConcealed] = useState(concealed)
