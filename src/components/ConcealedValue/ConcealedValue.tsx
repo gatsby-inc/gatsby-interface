@@ -3,7 +3,12 @@ import { useState } from "react"
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
 import { Button } from "../Button"
-import { Menu, MenuList, MenuButton, MenuItem } from "@reach/menu-button"
+import {
+  Menu as ReachMenu,
+  MenuList as ReachMenuList,
+  MenuButton as ReachMenuButton,
+  MenuItem as ReachMenuItem,
+} from "@reach/menu-button"
 import copyToClipboard from "../../utils/helpers/copyToClipboard"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
@@ -60,10 +65,10 @@ function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
           {isCopied ? `Copied` : `Copy`}
         </Button>
         <DisableReachStyleCheck reachComponent="menu-button" />
-        <Menu css={ConcealedValueMenuCss}>
+        <ReachMenu css={ConcealedValueMenuCss}>
           <Button
             css={ConcealedValueMenuButtonCss}
-            ButtonComponent={MenuButton}
+            ButtonComponent={ReachMenuButton}
             size="S"
             tone="NEUTRAL"
             variant="SECONDARY"
@@ -71,27 +76,30 @@ function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
             <span css={visuallyHiddenCss}>Actions</span>{" "}
             <span aria-hidden>▾</span>
           </Button>
-          <MenuList css={ConcealedValueMenuListCss}>
-            <MenuItem css={ConcealedValueMenuItemCss} onClick={copyHandler}>
+          <ReachMenuList css={ConcealedValueMenuListCss}>
+            <ReachMenuItem
+              css={ConcealedValueMenuItemCss}
+              onClick={copyHandler}
+            >
               Copy
-            </MenuItem>
+            </ReachMenuItem>
             {isConcealed ? (
-              <MenuItem
+              <ReachMenuItem
                 css={ConcealedValueMenuItemCss}
                 onSelect={() => setIsConcealed(false)}
               >
                 Reveal
-              </MenuItem>
+              </ReachMenuItem>
             ) : (
-              <MenuItem
+              <ReachMenuItem
                 css={ConcealedValueMenuItemCss}
                 onSelect={() => setIsConcealed(true)}
               >
                 Conceal
-              </MenuItem>
+              </ReachMenuItem>
             )}
-          </MenuList>
-        </Menu>
+          </ReachMenuList>
+        </ReachMenu>
       </div>
     </div>
   )
