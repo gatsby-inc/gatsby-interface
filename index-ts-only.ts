@@ -26,6 +26,7 @@ export * from "./src/components/SidebarNav"
 export * from "./src/components/Combobox"
 export * from "./src/components/form"
 export * from "./src/components/form-skeletons"
+export * from "./src/components/ConcealedValue"
 
 export * from "./src/theme"
 export * from "./src/theme/styles/button"

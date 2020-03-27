@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { useState } from "react"
 import { jsx } from "@emotion/core"
-import PropTypes from "prop-types"
 import {
   Menu as ReachMenu,
   MenuList as ReachMenuList,
@@ -11,19 +10,30 @@ import {
 import { Button } from "../Button"
 import copyToClipboard from "../../utils/helpers/copyToClipboard"
 import {
-  ConcealedValueContainerCss,
-  ConcealedValueContentCss,
-  ConcealedValueActionsCss,
-  ConcealedValueInputCss,
-  ConcealedValueMenuCss,
-  ConcealedValueMenuButtonCss,
-  ConcealedValueMenuListCss,
-  ConcealedValueMenuItemCss,
+  concealedValueContainerCss,
+  concealedValueContentCss,
+  concealedValueActionsCss,
+  concealedValueInputCss,
+  concealedValueMenuCss,
+  concealedValueMenuButtonCss,
+  concealedValueMenuListCss,
+  concealedValueMenuItemCss,
 } from "./ConcealedValue.styles"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
-function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
+export type ConcealedValueProps = {
+  value: string
+  ariaLabel: string
+  delay?: number
+  concealed?: boolean
+}
+export function ConcealedValue({
+  value,
+  ariaLabel,
+  concealed = true,
+  delay = 5000,
+}: ConcealedValueProps) {
   const [isCopied, setIsCopied] = useState(false)
   const [isConcealed, setIsConcealed] = useState(concealed)
 
@@ -36,27 +46,29 @@ function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
   }
 
   return (
-    <div css={ConcealedValueContainerCss}>
-      <div css={ConcealedValueContentCss}>
+    <div css={concealedValueContainerCss}>
+      <div css={concealedValueContentCss}>
         {isConcealed ? (
           // classic password dots
           <input
-            css={ConcealedValueInputCss}
+            css={concealedValueInputCss}
             type="text"
             value="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
-            readonly
+            aria-hidden={true}
+            readOnly
           />
         ) : (
           // unmasked value
           <input
-            css={ConcealedValueInputCss}
+            css={concealedValueInputCss}
             type="text"
             value={value}
-            readonly
+            aria-label={ariaLabel}
+            readOnly
           />
         )}
       </div>
-      <div css={ConcealedValueActionsCss}>
+      <div css={concealedValueActionsCss}>
         <Button
           size="S"
           tone="NEUTRAL"
@@ -66,10 +78,10 @@ function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
           {isCopied ? `Copied` : `Copy`}
         </Button>
         <DisableReachStyleCheck reachComponent="menu-button" />
-        <ReachMenu css={ConcealedValueMenuCss}>
+        <ReachMenu css={concealedValueMenuCss}>
           <Button
-            css={ConcealedValueMenuButtonCss}
-            ButtonComponent={ReachMenuButton}
+            css={concealedValueMenuButtonCss}
+            ButtonComponent={ReachMenuButton as any}
             size="S"
             tone="NEUTRAL"
             variant="SECONDARY"
@@ -77,23 +89,23 @@ function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
             <span css={visuallyHiddenCss}>Actions</span>{" "}
             <span aria-hidden>▾</span>
           </Button>
-          <ReachMenuList css={ConcealedValueMenuListCss}>
+          <ReachMenuList css={concealedValueMenuListCss}>
             <ReachMenuItem
-              css={ConcealedValueMenuItemCss}
-              onClick={copyHandler}
+              css={concealedValueMenuItemCss}
+              onSelect={copyHandler}
             >
               Copy
             </ReachMenuItem>
             {isConcealed ? (
               <ReachMenuItem
-                css={ConcealedValueMenuItemCss}
+                css={concealedValueMenuItemCss}
                 onSelect={() => setIsConcealed(false)}
               >
                 Reveal
               </ReachMenuItem>
             ) : (
               <ReachMenuItem
-                css={ConcealedValueMenuItemCss}
+                css={concealedValueMenuItemCss}
                 onSelect={() => setIsConcealed(true)}
               >
                 Conceal
@@ -105,11 +117,3 @@ function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
     </div>
   )
 }
-
-ConcealedValue.propTypes = {
-  delay: PropTypes.number,
-  concealed: PropTypes.bool,
-  value: PropTypes.string,
-}
-
-export default ConcealedValue
