@@ -2,16 +2,14 @@
 import { useState } from "react"
 import { jsx } from "@emotion/core"
 import PropTypes from "prop-types"
-import { Button } from "../Button"
 import {
   Menu as ReachMenu,
   MenuList as ReachMenuList,
   MenuButton as ReachMenuButton,
   MenuItem as ReachMenuItem,
 } from "@reach/menu-button"
+import { Button } from "../Button"
 import copyToClipboard from "../../utils/helpers/copyToClipboard"
-import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
-import { visuallyHiddenCss } from "../../stylesheets/a11y"
 import {
   ConcealedValueContainerCss,
   ConcealedValueContentCss,
@@ -22,6 +20,9 @@ import {
   ConcealedValueMenuListCss,
   ConcealedValueMenuItemCss,
 } from "./ConcealedValue.styles"
+import { visuallyHiddenCss } from "../../stylesheets/a11y"
+import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
+
 function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
   const [isCopied, setIsCopied] = useState(false)
   const [isConcealed, setIsConcealed] = useState(concealed)
