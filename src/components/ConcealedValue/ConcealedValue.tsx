@@ -43,7 +43,7 @@ function ConcealedValue({ value = ``, concealed = true, delay = 5000 }) {
           <input
             css={ConcealedValueInputCss}
             type="text"
-            value="&bull; &bull; &bull; &bull; &bull; &bull;"
+            value="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
             readonly
           />
         ) : (
