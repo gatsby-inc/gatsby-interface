@@ -6,7 +6,7 @@ import { MdArrowForward } from "react-icons/md"
 
 import { LinkButton, LinkButtonProps } from "../LinkButton"
 import { AnchorButton, AnchorButtonProps } from "../AnchorButton"
-import { BaseAnchor } from "../BaseAnchor"
+import { BaseAnchor, BaseAnchorProps } from "../BaseAnchor"
 import useOnClickOutside from "../../utils/hooks/useOnClickOutside"
 import baseStyles from "./BaseNavigation.styles"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
@@ -298,10 +298,7 @@ export type BaseNavigationItemLinkProps = Omit<GatsbyLinkProps<any>, "ref"> & {
   item: BaseNavigationItem
 }
 
-export type BaseNavigationItemAnchorProps = Omit<
-  React.HTMLProps<HTMLAnchorElement>,
-  "ref"
-> & {
+export type BaseNavigationItemAnchorProps = Omit<BaseAnchorProps, "ref"> & {
   item: BaseNavigationItem
 }
 

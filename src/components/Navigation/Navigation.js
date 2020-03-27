@@ -103,8 +103,6 @@ Navigation.ItemLink = ({ item, ...delegated }) => {
     ? BaseNavigation.ItemAnchor
     : BaseNavigation.ItemLink
 
-  console.log(Object.keys(BaseNavigation), Component)
-
   return (
     <Component
       item={item}
