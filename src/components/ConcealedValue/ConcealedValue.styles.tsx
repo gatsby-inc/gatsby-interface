@@ -1,4 +1,6 @@
-export const ConcealedValueContainerCss = theme => ({
+import { ThemeCss } from "../../theme"
+
+export const ConcealedValueContainerCss: ThemeCss = theme => ({
   display: `flex`,
   alignItems: `center`,
   justifyContent: `space-between`,
@@ -6,7 +8,7 @@ export const ConcealedValueContainerCss = theme => ({
   width: `100%`,
 })
 
-export const ConcealedValueContentCss = theme => ({
+export const ConcealedValueContentCss: ThemeCss = theme => ({
   overflow: `hidden`,
   flexGrow: 1,
   marginRight: theme.space[4],
@@ -14,7 +16,7 @@ export const ConcealedValueContentCss = theme => ({
 
 export const ConcealedValueActionsCss = {}
 
-export const ConcealedValueInputCss = theme => ({
+export const ConcealedValueInputCss: ThemeCss = theme => ({
   border: `none`,
   textOverflow: `ellipsis`,
   fontFamily: theme.fonts.heading,
@@ -29,11 +31,11 @@ export const ConcealedValueMenuCss = {
   position: `absolute`,
 }
 
-export const ConcealedValueMenuButtonCss = theme => ({
+export const ConcealedValueMenuButtonCss: ThemeCss = theme => ({
   marginLeft: theme.space[2],
 })
 
-export const ConcealedValueMenuListCss = theme => ({
+export const ConcealedValueMenuListCss: ThemeCss = theme => ({
   /* @reach/menu-button base styles */
   display: `block`,
   whiteSpace: `nowrap`,
@@ -50,7 +52,7 @@ export const ConcealedValueMenuListCss = theme => ({
   fontSize: theme.fontSizes[1],
 })
 
-export const ConcealedValueMenuItemCss = theme => ({
+export const ConcealedValueMenuItemCss: ThemeCss = theme => ({
   /* @reach/menu-button base styles */
   display: `block`,
   userSelect: `none`,
