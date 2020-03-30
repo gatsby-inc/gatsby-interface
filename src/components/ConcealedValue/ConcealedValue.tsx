@@ -1,12 +1,6 @@
 /** @jsx jsx */
 import { useState } from "react"
 import { jsx } from "@emotion/core"
-import {
-  Menu as ReachMenu,
-  MenuList as ReachMenuList,
-  MenuButton as ReachMenuButton,
-  MenuItem as ReachMenuItem,
-} from "@reach/menu-button"
 import { Button } from "../Button"
 import copyToClipboard from "../../utils/helpers/copyToClipboard"
 import {
@@ -14,13 +8,8 @@ import {
   concealedValueContentCss,
   concealedValueActionsCss,
   concealedValueInputCss,
-  concealedValueMenuCss,
-  concealedValueMenuButtonCss,
-  concealedValueMenuListCss,
-  concealedValueMenuItemCss,
+  concealedValueButtonCss,
 } from "./ConcealedValue.styles"
-import { visuallyHiddenCss } from "../../stylesheets/a11y"
-import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
 export type ConcealedValueProps = {
   value: string
@@ -45,6 +34,10 @@ export function ConcealedValue({
     }, delay)
   }
 
+  const revealHandler = () => {
+    setIsConcealed(!isConcealed)
+  }
+
   return (
     <div css={concealedValueContainerCss}>
       <div css={concealedValueContentCss}>
@@ -53,8 +46,8 @@ export function ConcealedValue({
           <input
             css={concealedValueInputCss}
             type="text"
-            value="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
-            aria-hidden={true}
+            value="&bull; &bull; &bull; &bull; &bull; &bull;"
+            aria-label={`Hidden value of ${ariaLabel}`}
             readOnly
           />
         ) : (
@@ -73,46 +66,20 @@ export function ConcealedValue({
           size="S"
           tone="NEUTRAL"
           variant="SECONDARY"
+          css={concealedValueButtonCss}
           onClick={copyHandler}
         >
           {isCopied ? `Copied` : `Copy`}
         </Button>
-        <DisableReachStyleCheck reachComponent="menu-button" />
-        <ReachMenu css={concealedValueMenuCss}>
-          <Button
-            css={concealedValueMenuButtonCss}
-            ButtonComponent={ReachMenuButton as any}
-            size="S"
-            tone="NEUTRAL"
-            variant="SECONDARY"
-          >
-            <span css={visuallyHiddenCss}>Actions</span>{" "}
-            <span aria-hidden>▾</span>
-          </Button>
-          <ReachMenuList css={concealedValueMenuListCss}>
-            <ReachMenuItem
-              css={concealedValueMenuItemCss}
-              onSelect={copyHandler}
-            >
-              Copy
-            </ReachMenuItem>
-            {isConcealed ? (
-              <ReachMenuItem
-                css={concealedValueMenuItemCss}
-                onSelect={() => setIsConcealed(false)}
-              >
-                Reveal
-              </ReachMenuItem>
-            ) : (
-              <ReachMenuItem
-                css={concealedValueMenuItemCss}
-                onSelect={() => setIsConcealed(true)}
-              >
-                Conceal
-              </ReachMenuItem>
-            )}
-          </ReachMenuList>
-        </ReachMenu>
+        <Button
+          size="S"
+          tone="NEUTRAL"
+          variant="SECONDARY"
+          css={concealedValueButtonCss}
+          onClick={revealHandler}
+        >
+          {isConcealed ? `Reveal` : `Conceal`}
+        </Button>
       </div>
     </div>
   )

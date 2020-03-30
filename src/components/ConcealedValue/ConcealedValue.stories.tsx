@@ -20,9 +20,9 @@ export const Basic = () => <ConcealedValue value="abcde" ariaLabel="value" />
 
 export const Sandbox = () => (
   <ConcealedValue
-    value={text("concealed value", "Lorem ipsum")}
-    delay={number("copy delay", 2000)}
-    concealed={boolean("initially concealed", false)}
-    ariaLabel={text("value label", "Lorem ipsum")}
+    value={text("The concealed string value:", "Lorem ipsum")}
+    delay={number("Copy delay:", 2000)}
+    concealed={boolean("Initially conceal value?", true)}
+    ariaLabel={text("Label describing the value:", "Lorem ipsum")}
   />
 )
