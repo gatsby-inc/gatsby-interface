@@ -18,8 +18,6 @@ export {
 export { AnchorButton } from "./components/AnchorButton"
 export { LinkButton } from "./components/LinkButton"
 
-export { SettingsBlock } from "./components/SettingsBlock"
-
 export { Link } from "./components/Link"
 
 export { Tabs, Tab, TabsNav, TabFigure, TabLabel } from "./components/Tabs"
