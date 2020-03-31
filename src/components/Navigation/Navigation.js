@@ -91,14 +91,21 @@ Navigation.Item = delegated => {
     />
   )
 }
-Navigation.ItemLink = delegated => {
+Navigation.ItemLink = ({ item, ...delegated }) => {
   const {
     isInverted,
     mobileNavMediaQuery,
   } = BaseNavigation.useNavigationContext()
 
+  const isExternal = getIsExternalLink(item.linkTo)
+
+  const Component = isExternal
+    ? BaseNavigation.ItemAnchor
+    : BaseNavigation.ItemLink
+
   return (
-    <BaseNavigation.ItemLink
+    <Component
+      item={item}
       css={{
         ...styles.ItemLink.default(isInverted),
         [mobileNavMediaQuery]: styles.ItemLink.mobile,
@@ -153,7 +160,7 @@ Navigation.DropdownItem = delegated => {
 Navigation.Button = ({ linkTo, ...delegated }) => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
-  const isExternal = linkTo.match(/(^http|^mailto)/i)
+  const isExternal = getIsExternalLink(linkTo)
 
   const cssStyles = {
     ...styles.ButtonItem.default,
@@ -173,6 +180,10 @@ Navigation.Button = ({ linkTo, ...delegated }) => {
       <BaseNavigation.LinkButton linkTo={linkTo} {...delegated} />
     </li>
   )
+}
+
+const getIsExternalLink = linkTo => {
+  return linkTo.match(/(^http|^mailto)/i)
 }
 
 export default Navigation

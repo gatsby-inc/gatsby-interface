@@ -6,6 +6,7 @@ import { MdArrowForward } from "react-icons/md"
 
 import { LinkButton, LinkButtonProps } from "../LinkButton"
 import { AnchorButton, AnchorButtonProps } from "../AnchorButton"
+import { BaseAnchor, BaseAnchorProps } from "../BaseAnchor"
 import useOnClickOutside from "../../utils/hooks/useOnClickOutside"
 import baseStyles from "./BaseNavigation.styles"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
@@ -26,6 +27,7 @@ export type BaseNavigationComponents = {
   List: React.ComponentType<any>
   Item: React.ComponentType<any>
   ItemLink: React.ComponentType<any>
+  ItemAnchor: React.ComponentType<any>
   Dropdown: React.ComponentType<any>
   DropdownItem: React.ComponentType<any>
   DropdownToggle: React.ComponentType<any>
@@ -72,6 +74,7 @@ export const BaseNavigation = ({
   List = BaseNavigationList,
   Item = BaseNavigationListItem,
   ItemLink = BaseNavigationItemLink,
+  ItemAnchor = BaseNavigationItemAnchor,
   Dropdown = BaseNavigationDropdown,
   DropdownItem = BaseNavigationDropdownItem,
   DropdownToggle = BaseNavigationDropdownToggle,
@@ -109,6 +112,7 @@ export const BaseNavigation = ({
       List,
       Item,
       ItemLink,
+      ItemAnchor,
       Dropdown,
       DropdownItem,
       DropdownToggle,
@@ -294,14 +298,34 @@ export type BaseNavigationItemLinkProps = Omit<GatsbyLinkProps<any>, "ref"> & {
   item: BaseNavigationItem
 }
 
+export type BaseNavigationItemAnchorProps = Omit<BaseAnchorProps, "ref"> & {
+  item: BaseNavigationItem
+}
+
+export function BaseNavigationItemAnchor({
+  item,
+  ...rest
+}: BaseNavigationItemAnchorProps) {
+  return (
+    <BaseAnchor href={item.linkTo} {...rest}>
+      {/*
+        This span is needed for the styles applied in theme/styles/navigation
+      */}
+      <span>{item.name}</span>
+    </BaseAnchor>
+  )
+}
+
+BaseNavigation.ItemAnchor = BaseNavigationItemAnchor
+
 export function BaseNavigationItemLink({
   item,
   ...rest
 }: BaseNavigationItemLinkProps) {
   return (
     <Link activeClassName="nav-item-active" to={item.linkTo} {...rest}>
-      {/* 
-        This span is needed for the styles applied in theme/styles/navigation 
+      {/*
+        This span is needed for the styles applied in theme/styles/navigation
       */}
       <span>{item.name}</span>
     </Link>

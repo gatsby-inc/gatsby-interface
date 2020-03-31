@@ -125,3 +125,11 @@ storiesOf(`Navigation`, module)
       </Navigation>
     </div>
   ))
+  .add(`with external children`, () => (
+    <Navigation
+      items={[
+        { name: `internal`, linkTo: `/test` },
+        { name: `external`, linkTo: `http://www.google.com` },
+      ]}
+    />
+  ))

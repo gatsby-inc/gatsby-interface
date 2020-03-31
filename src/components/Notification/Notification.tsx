@@ -68,7 +68,6 @@ export default function Notification({
   }
   const PresetIcon = content && iconByTone[tone]
   const Icon = CustomIcon || PresetIcon
-  console.log({ showDismissButton, onDismissButtonClick })
 
   return (
     <NotificationContext.Provider value={{ onDismiss: onDismissButtonClick }}>
