@@ -1,7 +1,5 @@
 export { General, Integrations, Preview, Skull } from "./assets"
 
-export { ContentBox } from "./components/ContentBox"
-
 export {
   Button,
   // deprecated, legacy exports
