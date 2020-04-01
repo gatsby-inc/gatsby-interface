@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.118](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.117...v0.0.118) (2020-03-31)
+
+
+### Features
+
+* Tabs rewritten to StepIndicator ([#258](https://github.com/gatsby-inc/gatsby-interface/issues/258)) ([f165021](https://github.com/gatsby-inc/gatsby-interface/commit/f16502161664cce5a411770b5e4a2d141ff26ec0))
+
 ### [0.0.117](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.116...v0.0.117) (2020-03-27)
 
 ### [0.0.116](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.115...v0.0.116) (2020-03-27)

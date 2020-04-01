@@ -18,8 +18,6 @@ export { LinkButton } from "./components/LinkButton"
 
 export { Link } from "./components/Link"
 
-export { Tabs, Tab, TabsNav, TabFigure, TabLabel } from "./components/Tabs"
-
 export { RadioSkeleton, Radio } from "./components/Radio"
 
 export { FileUpload } from "./components/FileUpload"
@@ -71,3 +69,4 @@ export * from "./components/Toggle"
 export * from "./components/Breadcrumb"
 export * from "./components/Tooltip"
 export * from "./components/Combobox"
+export * from "./components/StepIndicator"
