@@ -1,13 +1,4 @@
-export {
-  General,
-  Integrations,
-  Preview,
-  Skull,
-  Danger,
-  Success,
-} from "./assets"
-
-export { ContentBox } from "./components/ContentBox"
+export { General, Integrations, Preview, Skull } from "./assets"
 
 export {
   Button,
@@ -25,28 +16,13 @@ export {
 export { AnchorButton } from "./components/AnchorButton"
 export { LinkButton } from "./components/LinkButton"
 
-export { SettingsBlock } from "./components/SettingsBlock"
-
 export { Link } from "./components/Link"
-
-export {
-  CardSkeleton,
-  BaseCard,
-  Card,
-  CardHeader,
-  CardTitle,
-  CardText,
-} from "./components/Card"
-
-export { Tabs, Tab, TabsNav, TabFigure, TabLabel } from "./components/Tabs"
 
 export { RadioSkeleton, Radio } from "./components/Radio"
 
 export { FileUpload } from "./components/FileUpload"
 
 export { SidebarNav } from "./components/SidebarNav"
-
-export { Heading } from "./components/Heading"
 
 export { Navigation } from "./components/Navigation"
 
@@ -71,7 +47,6 @@ export { default as shadows } from "./theme/shadows"
 export { default as zIndices } from "./theme/zIndices"
 export { default as transition } from "./theme/transition"
 
-export { default as cardStyles } from "./theme/styles/card"
 export * from "./theme/styles/button"
 
 export * from "./components/Announcement"
@@ -83,6 +58,7 @@ export * from "./components/Chip"
 export * from "./components/icons"
 export * from "./components/form-skeletons"
 export * from "./components/DecorativeDots"
+export * from "./components/Heading"
 export * from "./components/Modal"
 export * from "./components/Toast"
 export * from "./components/Notification"
@@ -94,3 +70,4 @@ export * from "./components/Breadcrumb"
 export * from "./components/Tooltip"
 export * from "./components/Combobox"
 export * from "./components/ConcealedValue"
+export * from "./components/StepIndicator"

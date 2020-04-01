@@ -81,6 +81,7 @@ storiesOf(`Navigation`, module)
     <div css={{ padding: `2rem` }}>
       <Navigation items={items2}>
         <Navigation.Item item={{ name: `Contact`, linkTo: `/contact/` }} />
+        <Navigation.Button linkTo="/">Test</Navigation.Button>
       </Navigation>
     </div>
   ))
@@ -123,4 +124,12 @@ storiesOf(`Navigation`, module)
         </Navigation.Button>
       </Navigation>
     </div>
+  ))
+  .add(`with external children`, () => (
+    <Navigation
+      items={[
+        { name: `internal`, linkTo: `/test` },
+        { name: `external`, linkTo: `http://www.google.com` },
+      ]}
+    />
   ))

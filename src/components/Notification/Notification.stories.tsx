@@ -1,40 +1,107 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
-import { storiesOf } from "@storybook/react"
-import { radios } from "@storybook/addon-knobs"
+import { DecoratorFn } from "@storybook/react"
+import { radios, text, select, boolean } from "@storybook/addon-knobs"
 import { useTransition, animated } from "react-spring"
 import {
   Notification,
-  NotificationTone,
   NotificationProps,
   NotificationVariant,
+  NotificationTone,
 } from "."
 import { StoryUtils } from "../../utils/storybook"
 import { Button } from "../Button"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
-import { MdCloud } from "react-icons/md"
+import { MdSignalWifi1BarLock } from "react-icons/md"
 import isChromatic from "storybook-chromatic/isChromatic"
+import { withDesign } from "storybook-addon-designs"
+import { Text } from "../Text"
 
-const NOTIFICATION_VARIANTS = radioKnobOptions<NotificationVariant>([
-  `PRIMARY`,
-  `SECONDARY`,
-])
+const VARIANTS: NotificationVariant[] = [`PRIMARY`, `SECONDARY`]
 
-const NOTIFICATION_TONES = radioKnobOptions<NotificationTone>([
+const TONES: NotificationTone[] = [
   `BRAND`,
   `SUCCESS`,
   `DANGER`,
   `WARNING`,
   `NEUTRAL`,
-])
+]
+
+const variantOptions = radioKnobOptions(VARIANTS)
+const toneOptions = radioKnobOptions(TONES)
+
+export default {
+  title: `Notification`,
+  component: Notification,
+  decorators: [
+    story => (
+      <StoryUtils.Container>
+        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
+      </StoryUtils.Container>
+    ),
+    withDesign,
+  ] as DecoratorFn[],
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/h4ixUmOo781r3sDeBAbmDc/Notifications?node-id=1%3A152",
+    },
+  },
+}
+
+export const Basic = () => (
+  <Notification content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
+)
+
+export const Sandbox = () => (
+  <Notification
+    content={text(
+      "content",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    )}
+    variant={radios("variant", variantOptions, `PRIMARY`)}
+    tone={radios("tone", toneOptions, `BRAND`)}
+    contentAs={select("content element", ["div", "span"], "div")}
+    linkUrl={text("linkUrl", "")}
+    linkText={text("linkText", "")}
+    isOpened={boolean("isOpened", true)}
+    showDismissButton={boolean("show dismiss button", false)}
+    dismissButtonLabel={text("dismiss button label", "Close")}
+  />
+)
+
+export const Variants = () =>
+  VARIANTS.map(variant => (
+    <Notification
+      key={variant}
+      variant={variant}
+      content={`Notification variant "${variant}"`}
+    />
+  ))
+
+export const Tones = () =>
+  TONES.map(tone => (
+    <Notification
+      key={tone}
+      tone={tone}
+      content={`Notification tone "${tone}"`}
+    />
+  ))
 
 function ControlledNotification(props: NotificationProps) {
   const [isOpened, setIsOpened] = React.useState<boolean>(true)
 
   return (
     <div>
-      <Button onClick={() => setIsOpened(true)} disabled={isOpened}>
+      <Button
+        onClick={() => setIsOpened(true)}
+        disabled={isOpened}
+        variant="SECONDARY"
+        tone="NEUTRAL"
+        size="M"
+      >
         Show notification
       </Button>
       <Notification
@@ -47,126 +114,81 @@ function ControlledNotification(props: NotificationProps) {
   )
 }
 
-storiesOf(`Notification`, module)
-  .add(`default`, () => (
-    <StoryUtils.Container>
-      <div
-        css={{
-          display: `flex`,
-          flexDirection: `column`,
-          alignItems: `flex-start`,
-          width: `500px`,
-          "& > button": { margin: `20px` },
-        }}
+export const Dismissable = () => (
+  <div
+    css={{
+      display: `flex`,
+      flexDirection: `column`,
+      alignItems: `flex-start`,
+      width: `500px`,
+      "& > button": { margin: `20px` },
+    }}
+  >
+    <ControlledNotification
+      css={theme => ({ marginTop: theme.space[3] })}
+      content={`Notification with dismiss button`}
+    />
+  </div>
+)
+
+export const CustomIcon = () => (
+  <Notification
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    Icon={MdSignalWifi1BarLock}
+  />
+)
+
+const ReactSpringNotification = animated(Notification)
+
+function AnimatedNotification(props: NotificationProps) {
+  const [isOpened, setIsOpened] = React.useState<boolean>(true)
+
+  // disable animations for Chromatic
+  const transitions = useTransition(
+    isOpened,
+    null,
+    isChromatic()
+      ? {}
+      : {
+          from: { opacity: 0, transform: "translate3d(0, -40px, 0)" },
+          enter: { opacity: 1, transform: "translate3d(0, 0, 0)" },
+          leave: { opacity: 0, transform: "translate3d(0, 40px, 0)" },
+        }
+  )
+
+  return (
+    <React.Fragment>
+      <Button
+        css={{ marginBottom: `1rem` }}
+        onClick={() => setIsOpened(!isOpened)}
+        variant="SECONDARY"
+        tone="NEUTRAL"
+        size="M"
       >
-        <Notification
-          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
-          content={`Notification variant 'PRIMARY'`}
-          linkUrl="/"
-          linkText="Link"
-        />
-        <Notification
-          css={{ marginTop: `1rem` }}
-          as="section"
-          variant="SECONDARY"
-          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
-          content={`Notification variant 'SECONDARY'`}
-        />
-      </div>
-    </StoryUtils.Container>
-  ))
-  .add(`dismissable`, () => (
-    <StoryUtils.Container>
-      <div
-        css={{
-          display: `flex`,
-          flexDirection: `column`,
-          alignItems: `flex-start`,
-          width: `500px`,
-          "& > button": { margin: `20px` },
-        }}
-      >
-        <ControlledNotification
-          css={{ marginTop: `1rem` }}
-          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
-          content={`Notification variant 'PRIMARY' with close`}
-        />
-      </div>
-    </StoryUtils.Container>
-  ))
-  .add(`custom icon`, () => (
-    <StoryUtils.Container>
-      <div
-        css={{
-          display: `flex`,
-          flexDirection: `column`,
-          alignItems: `flex-start`,
-          width: `500px`,
-          "& > button": { margin: `20px` },
-        }}
-      >
-        <Notification
-          variant={radios(`variant`, NOTIFICATION_VARIANTS, `PRIMARY`)}
-          tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
-          content={`Notification with custom icon`}
-          Icon={MdCloud}
-        />
-      </div>
-    </StoryUtils.Container>
-  ))
-  .add(`animated with react-spring`, () => {
-    const ReactSpringNotification = animated(Notification)
+        Toggle notification
+      </Button>
 
-    function AnimatedNotification(props: NotificationProps) {
-      const [isOpened, setIsOpened] = React.useState<boolean>(true)
+      {transitions.map(
+        ({ item, key, props: style }) =>
+          item && (
+            <ReactSpringNotification
+              key={key}
+              style={style}
+              isOpened={true}
+              onDismissButtonClick={() => setIsOpened(false)}
+              {...props}
+            />
+          )
+      )}
+    </React.Fragment>
+  )
+}
 
-      // disable animations for Chromatic
-      const transitions = useTransition(
-        isOpened,
-        null,
-        isChromatic()
-          ? {}
-          : {
-              from: { opacity: 0, transform: "translate3d(0, -40px, 0)" },
-              enter: { opacity: 1, transform: "translate3d(0, 0, 0)" },
-              leave: { opacity: 0, transform: "translate3d(0, 40px, 0)" },
-            }
-      )
-
-      return (
-        <React.Fragment>
-          <Button
-            css={{ marginBottom: `1rem` }}
-            onClick={() => setIsOpened(!isOpened)}
-          >
-            Toggle notification
-          </Button>
-
-          {transitions.map(
-            ({ item, key, props: style }) =>
-              item && (
-                <ReactSpringNotification
-                  key={key}
-                  style={style}
-                  isOpened={true}
-                  onDismissButtonClick={() => setIsOpened(false)}
-                  {...props}
-                />
-              )
-          )}
-        </React.Fragment>
-      )
-    }
-
-    return (
-      <StoryUtils.Container>
-        <div css={{ maxWidth: "400px", width: "100%", minHeight: "300px" }}>
-          <AnimatedNotification
-            css={{ marginTop: `1rem` }}
-            tone={radios(`tone`, NOTIFICATION_TONES, `BRAND`)}
-            content={`Notification variant 'PRIMARY' with close`}
-          />
-        </div>
-      </StoryUtils.Container>
-    )
-  })
+export const Animated = () => (
+  <React.Fragment>
+    <div css={{ maxWidth: "400px", width: "100%", minHeight: "300px" }}>
+      <Text>Animated with react-spring</Text>
+      <AnimatedNotification content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
+    </div>
+  </React.Fragment>
+)

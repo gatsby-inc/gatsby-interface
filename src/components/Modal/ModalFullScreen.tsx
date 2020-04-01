@@ -1,7 +1,9 @@
-import styled from "@emotion/styled"
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
+import React from "react"
 import { keyframes } from "@emotion/core"
-import colors from "../../theme/colors"
-import { Content } from "./components"
+import { ModalContent, ModalContentProps } from "./ModalContent"
+import { ThemeCss } from "../../theme"
 
 const rotationIncoming = keyframes`
   100% {
@@ -9,15 +11,20 @@ const rotationIncoming = keyframes`
   }
 `
 
-export const ModalFullScreen = styled(Content)`
-  animation: ${rotationIncoming} 0.5s 0.25s ease forwards;
-  background: ${colors.white};
-  height: 100vh;
-  width: 100%;
-  outline: none;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
-  transform: translate(0, 150vh) scale(0.9) perspective(1000px) rotateX(-90deg);
-  transform-origin: top center;
-`
+const baseCss: ThemeCss = theme => ({
+  background: theme.colors.white,
+  height: `100vh`,
+  width: `100%`,
+  position: "relative",
+  overflowY: `auto`,
+  overflowX: `hidden`,
+  animation: `${rotationIncoming} 0.5s 0.25s ease forwards`,
+  transform: `translate(0, 150vh) scale(0.9) perspective(1000px) rotateX(-90deg)`,
+  transformOrigin: `top center`,
+})
+
+export type ModalFullScreenProps = Omit<ModalContentProps, "ref">
+
+export const ModalFullScreen: React.FC<ModalFullScreenProps> = props => (
+  <ModalContent css={baseCss} {...props} />
+)

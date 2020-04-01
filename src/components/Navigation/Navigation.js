@@ -61,7 +61,7 @@ Navigation.Nav = delegated => {
 }
 
 Navigation.Spacer = delegated => {
-  return <div css={{ flex: 1 }} {...delegated} />
+  return <li css={{ flex: 1 }} {...delegated} role="separator" />
 }
 
 Navigation.List = delegated => {
@@ -91,14 +91,21 @@ Navigation.Item = delegated => {
     />
   )
 }
-Navigation.ItemLink = delegated => {
+Navigation.ItemLink = ({ item, ...delegated }) => {
   const {
     isInverted,
     mobileNavMediaQuery,
   } = BaseNavigation.useNavigationContext()
 
+  const isExternal = getIsExternalLink(item.linkTo)
+
+  const Component = isExternal
+    ? BaseNavigation.ItemAnchor
+    : BaseNavigation.ItemLink
+
   return (
-    <BaseNavigation.ItemLink
+    <Component
+      item={item}
       css={{
         ...styles.ItemLink.default(isInverted),
         [mobileNavMediaQuery]: styles.ItemLink.mobile,
@@ -153,26 +160,30 @@ Navigation.DropdownItem = delegated => {
 Navigation.Button = ({ linkTo, ...delegated }) => {
   const { mobileNavMediaQuery } = BaseNavigation.useNavigationContext()
 
-  const isExternal = linkTo.match(/(^http|^mailto)/i)
+  const isExternal = getIsExternalLink(linkTo)
 
   const cssStyles = {
-    ...styles.Button.default,
-    [mobileNavMediaQuery]: styles.Button.mobile,
+    ...styles.ButtonItem.default,
+    [mobileNavMediaQuery]: styles.ButtonItem.mobile,
   }
 
   if (isExternal) {
     return (
-      <BaseNavigation.AnchorButton
-        href={linkTo}
-        css={cssStyles}
-        {...delegated}
-      />
+      <li css={cssStyles}>
+        <BaseNavigation.AnchorButton href={linkTo} {...delegated} />
+      </li>
     )
   }
 
   return (
-    <BaseNavigation.LinkButton linkTo={linkTo} css={cssStyles} {...delegated} />
+    <li css={cssStyles}>
+      <BaseNavigation.LinkButton linkTo={linkTo} {...delegated} />
+    </li>
   )
+}
+
+const getIsExternalLink = linkTo => {
+  return linkTo.match(/(^http|^mailto)/i)
 }
 
 export default Navigation
