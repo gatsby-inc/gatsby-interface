@@ -181,7 +181,7 @@ storiesOf(`theme`, module)
           <div
             css={{
               display: `grid`,
-              gridTemplateColumns: `1fr auto 1fr 1fr`,
+              gridTemplateColumns: `repeat(4, auto)`,
               columnGap: theme.space[10],
               rowGap: theme.space[3],
               fontFamily: theme.fonts.monospace,
