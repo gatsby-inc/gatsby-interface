@@ -40,10 +40,10 @@ function getButtonBaseCss(): ThemeCss {
     boxSizing: `border-box`,
     cursor: `pointer`,
     display: `inline-flex`,
-    fontFamily: theme.fonts.heading,
+    fontFamily: theme.fonts.body,
     justifyContent: `center`,
     transition: `background 0.5s, border 0.5s, color 0.5s`,
-    lineHeight: theme.lineHeights.dense,
+    lineHeight: theme.lineHeights.solid,
     textDecoration: `none`,
 
     "&[disabled], &[disabled]:hover": {
@@ -118,30 +118,31 @@ function getButtonSizeCss(size: ButtonSize): ThemeCss {
   return theme => {
     if (size === `S`) {
       return {
-        fontSize: theme.fontSizes[1],
-        minHeight: `1.6rem`,
-        padding: `0.3rem 0.5rem`,
+        // borderRadius: theme.radii[1],
+        fontSize: theme.fontSizes[0],
+        minHeight: theme.space[7],
+        padding: `0.25rem 0.5rem`,
       }
     }
     if (size === `M`) {
       return {
-        fontSize: theme.fontSizes[2],
-        minHeight: `2rem`,
-        padding: `0.45rem 0.75rem`,
+        fontSize: theme.fontSizes[1],
+        minHeight: theme.space[8],
+        padding: `0.25rem 0.75rem`,
       }
     }
     if (size === `L`) {
       return {
-        fontSize: theme.fontSizes[3],
-        minHeight: `2.4rem`,
-        padding: `0.55rem 1rem`,
+        fontSize: theme.fontSizes[2],
+        minHeight: theme.space[9],
+        padding: `0.25rem 1rem`,
       }
     }
     if (size === `XL`) {
       return {
-        fontSize: theme.fontSizes[5],
-        minHeight: `3.25rem`,
-        padding: `0.65rem 1.25rem`,
+        fontSize: theme.fontSizes[4],
+        minHeight: theme.space[10],
+        padding: `0.75rem 1.25rem`,
       }
     }
   }
