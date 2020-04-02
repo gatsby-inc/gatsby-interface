@@ -282,23 +282,26 @@ storiesOf(`theme`, module)
   .add(
     `z indices`,
     () => {
+      const offset = 3
+      const labelWidth = 12
       const zIndicesCount = Object.keys(theme.zIndices).length
-      const maxSize = `calc(${zIndicesCount} * 3rem + 10rem)`
+      const maxWidth = `calc(${zIndicesCount} * ${offset}rem + ${labelWidth}rem)`
+      const maxHeight = `calc(${zIndicesCount} * ${offset}rem + 2rem)`
 
       const colorsByToken: Record<ThemeZIndex, string> = {
         base: theme.colors.white,
-        background: theme.colors.grey[30],
-        dropdowns: theme.colors.purple[20],
-        toasts: theme.colors.green[20],
-        modals: theme.colors.orange[20],
-        a11yIndicators: theme.colors.teal[20],
+        background: theme.colors.grey[10],
+        dropdowns: theme.colors.yellow[10],
+        toasts: theme.colors.orange[30],
+        modals: theme.colors.red[20],
+        a11yIndicators: theme.colors.purple[30],
       }
 
       return (
         <StoryUtils.Container>
-          <div css={{ width: maxSize, height: maxSize }}>
+          <div css={{ width: maxWidth, height: maxHeight }}>
             {Object.entries(theme.zIndices).map(([token, zIndex], idx) => {
-              const space = `calc(${zIndicesCount - idx} * 3rem)`
+              const space = `calc(${zIndicesCount - idx} * ${offset}rem)`
 
               return (
                 <div
@@ -307,12 +310,32 @@ storiesOf(`theme`, module)
                     zIndex,
                     background: colorsByToken[token as ThemeZIndex],
                     position: `fixed`,
-                    padding: `${space} ${space} 1rem 1rem`,
-                    border: `1px solid ${theme.colors.black}`,
-                    borderRadius: `4px`,
+                    padding: `${space} 1rem 1rem`,
+                    border: `1px solid ${theme.colors.blackFade[50]}`,
+                    borderRadius: theme.radii[2],
+                    width: `${(zIndicesCount - idx) * offset + labelWidth}rem`,
                   }}
                 >
-                  <div css={{ width: `10rem` }}>{token}</div>
+                  <div
+                    css={{
+                      display: "flex",
+                      alignItems: "baseline",
+                      fontFamily: theme.fonts.monospace,
+                      fontSize: theme.fontSizes[1],
+                      lineHeight: theme.lineHeights.solid,
+                    }}
+                  >
+                    {token}{" "}
+                    <span
+                      css={{
+                        fontSize: theme.fontSizes[0],
+                        color: theme.colors.blackFade[70],
+                        marginLeft: "auto",
+                      }}
+                    >
+                      {zIndex}
+                    </span>
+                  </div>
                 </div>
               )
             })}
