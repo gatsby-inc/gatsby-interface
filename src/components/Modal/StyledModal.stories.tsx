@@ -36,7 +36,7 @@ export default {
     ),
   ] as DecoratorFn[],
   parameters: {
-    chromatic: { pauseAnimationAtEnd: true },
+    chromatic: { delay: 1000 },
   },
 }
 
