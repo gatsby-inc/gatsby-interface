@@ -9,8 +9,19 @@ export function hexToRGB(hex: string) {
     : null
 }
 
-export function hexToRGBA(hexColor: string, opacity: number) {
-  const rgbColor = hexToRGB(hexColor)
+export function hexToRGBA(hexColor: string, opacity: number, isCssVar = false) {
+  let hexStringToParse = hexColor
+
+  if (isCssVar) {
+    const hexMatch = hexColor.match(/#([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})/i)
+    if (hexMatch && hexMatch[0]) {
+      hexStringToParse = hexMatch[0]
+    }
+  }
+
+  console.log({ hexColor, isCssVar, hexStringToParse })
+
+  const rgbColor = hexToRGB(hexStringToParse)
   if (!rgbColor) {
     return hexColor
   }
