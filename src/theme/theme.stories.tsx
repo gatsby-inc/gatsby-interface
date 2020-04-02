@@ -17,6 +17,13 @@ import { ThemeDocs } from "./utils/storybook"
 
 const theme = getTheme()
 
+const labelStyles = {
+  color: theme.colors.grey[50],
+  fontFamily: theme.fonts.monospace,
+  fontSize: theme.fontSizes[1],
+  marginBottom: theme.space[4],
+}
+
 function LongText({
   title,
   className,
@@ -174,19 +181,21 @@ storiesOf(`theme`, module)
           <div
             css={{
               display: `grid`,
-              gridTemplateColumns: `1fr auto 1fr`,
-              columnGap: `1rem`,
-              rowGap: `0.5rem`,
+              gridTemplateColumns: `repeat(4, auto)`,
+              columnGap: theme.space[10],
+              rowGap: theme.space[3],
               fontFamily: theme.fonts.monospace,
             }}
           >
-            <div css={{ textAlign: `right` }}>Token</div>
-            <div>Visual size</div>
-            <div>CSS Value</div>
+            <div css={{ textAlign: `right`, ...labelStyles }}>Token</div>
+            <div css={{ textAlign: `right`, ...labelStyles }}>Value</div>
+            <div css={labelStyles}>Visual size</div>
+            <div css={{ textAlign: `right`, ...labelStyles }}>Pixels</div>
             {theme.space.map((space, token) => {
               return (
                 <React.Fragment key={space}>
                   <div css={{ textAlign: `right` }}>{token}</div>
+                  <div css={{ textAlign: `right` }}>{space}</div>
                   <div
                     css={{
                       boxSizing: `border-box`,
@@ -205,7 +214,9 @@ storiesOf(`theme`, module)
                       },
                     }}
                   ></div>
-                  <div>{space}</div>
+                  <div css={{ textAlign: `right` }}>
+                    {parseFloat(space) * 16}
+                  </div>
                 </React.Fragment>
               )
             })}
