@@ -174,7 +174,7 @@ storiesOf(`theme`, module)
           <div
             css={{
               display: `grid`,
-              gridTemplateColumns: `1fr auto 1fr`,
+              gridTemplateColumns: `1fr auto 1fr 1fr`,
               columnGap: `1rem`,
               rowGap: `0.5rem`,
               fontFamily: theme.fonts.monospace,
@@ -183,6 +183,7 @@ storiesOf(`theme`, module)
             <div css={{ textAlign: `right` }}>Token</div>
             <div>Visual size</div>
             <div>CSS Value</div>
+            <div>Pixels</div>
             {theme.space.map((space, token) => {
               return (
                 <React.Fragment key={space}>
@@ -206,6 +207,9 @@ storiesOf(`theme`, module)
                     }}
                   ></div>
                   <div>{space}</div>
+                  <div css={{ textAlign: `right` }}>
+                    {parseFloat(space) * 16}
+                  </div>
                 </React.Fragment>
               )
             })}
