@@ -175,8 +175,8 @@ storiesOf(`theme`, module)
             css={{
               display: `grid`,
               gridTemplateColumns: `1fr auto 1fr 1fr`,
-              columnGap: `1rem`,
-              rowGap: `0.5rem`,
+              columnGap: theme.space[10],
+              rowGap: theme.space[3],
               fontFamily: theme.fonts.monospace,
             }}
           >
