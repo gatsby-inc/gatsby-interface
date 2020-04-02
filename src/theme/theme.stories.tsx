@@ -17,6 +17,13 @@ import { ThemeDocs } from "./utils/storybook"
 
 const theme = getTheme()
 
+const labelStyles = {
+  color: theme.colors.grey[50],
+  fontFamily: theme.fonts.monospace,
+  fontSize: theme.fontSizes[1],
+  marginBottom: theme.space[4],
+}
+
 function LongText({
   title,
   className,
@@ -180,15 +187,15 @@ storiesOf(`theme`, module)
               fontFamily: theme.fonts.monospace,
             }}
           >
-            <div css={{ textAlign: `right` }}>Token</div>
-            <div>Value</div>
-            <div>Visual size</div>
-            <div>Pixels</div>
+            <div css={{ textAlign: `right`, ...labelStyles }}>Token</div>
+            <div css={{ textAlign: `right`, ...labelStyles }}>Value</div>
+            <div css={labelStyles}>Visual size</div>
+            <div css={{ textAlign: `right`, ...labelStyles }}>Pixels</div>
             {theme.space.map((space, token) => {
               return (
                 <React.Fragment key={space}>
                   <div css={{ textAlign: `right` }}>{token}</div>
-                  <div>{space}</div>
+                  <div css={{ textAlign: `right` }}>{space}</div>
                   <div
                     css={{
                       boxSizing: `border-box`,
