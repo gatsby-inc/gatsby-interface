@@ -181,13 +181,14 @@ storiesOf(`theme`, module)
             }}
           >
             <div css={{ textAlign: `right` }}>Token</div>
+            <div>Value</div>
             <div>Visual size</div>
-            <div>CSS Value</div>
             <div>Pixels</div>
             {theme.space.map((space, token) => {
               return (
                 <React.Fragment key={space}>
                   <div css={{ textAlign: `right` }}>{token}</div>
+                  <div>{space}</div>
                   <div
                     css={{
                       boxSizing: `border-box`,
@@ -206,7 +207,6 @@ storiesOf(`theme`, module)
                       },
                     }}
                   ></div>
-                  <div>{space}</div>
                   <div css={{ textAlign: `right` }}>
                     {parseFloat(space) * 16}
                   </div>
