@@ -4,6 +4,7 @@ import React from "react"
 import { Global } from "@emotion/core"
 import { DecoratorFn } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
+import isChromatic from "storybook-chromatic/isChromatic"
 import { StoryUtils, radioKnobOptions } from "../../utils/storybook"
 import {
   StyledModal,
@@ -21,9 +22,18 @@ export default {
     story => (
       <React.Fragment>
         <Global
-          styles={(theme: Theme) => ({
-            body: { background: theme.colors.grey[20] },
-          })}
+          styles={(theme: Theme) => [
+            {
+              body: { background: theme.colors.grey[20] },
+            },
+            isChromatic() && {
+              // Make animations instant so that Chromatic can take proper snapshots
+              "*, :before, :after": {
+                animationDuration: `0s !important`,
+                animationDelay: `0s !important`,
+              },
+            },
+          ]}
         />
         {story()}
       </React.Fragment>
@@ -35,9 +45,6 @@ export default {
       </StoryUtils.Container>
     ),
   ] as DecoratorFn[],
-  parameters: {
-    chromatic: { delay: 1000 },
-  },
 }
 
 const LONG_TEXT = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia recusandae nisi magni, dolore laboriosam maiores suscipit perspiciatis. Perspiciatis quod ipsum corporis officia necessitatibus, doloribus fuga culpa. Unde, molestiae repellendus.`

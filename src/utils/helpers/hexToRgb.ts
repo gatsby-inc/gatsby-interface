@@ -13,13 +13,13 @@ export function hexToRGBA(hexColor: string, opacity: number, isCssVar = false) {
   let hexStringToParse = hexColor
 
   if (isCssVar) {
+    // If the passed string is a CSS var coming from ThemeUI (e.g. "var(--theme-ui-colors-white, #ffffff)"),
+    // we can extract the HEX value and parse it
     const hexMatch = hexColor.match(/#([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})/i)
     if (hexMatch && hexMatch[0]) {
       hexStringToParse = hexMatch[0]
     }
   }
-
-  console.log({ hexColor, isCssVar, hexStringToParse })
 
   const rgbColor = hexToRGB(hexStringToParse)
   if (!rgbColor) {
