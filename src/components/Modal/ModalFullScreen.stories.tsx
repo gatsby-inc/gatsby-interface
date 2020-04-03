@@ -19,3 +19,9 @@ export const Sandbox = () => (
     <ModalFullScreen>{text("content", "Hello world")}</ModalFullScreen>
   </Modal>
 )
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}

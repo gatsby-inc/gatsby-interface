@@ -70,3 +70,9 @@ export const Sandbox = () => {
     </TextAreaField>
   )
 }
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}

@@ -35,6 +35,12 @@ export const Sandbox = () => (
   </Badge>
 )
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Variants = () =>
   VARIANTS.map(variant => (
     <Badge key={variant} variant={variant}>

@@ -71,3 +71,9 @@ export const Sandbox = () => {
     </InputField>
   )
 }
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}

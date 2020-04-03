@@ -72,6 +72,12 @@ export const Sandbox = () => (
   />
 )
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Variants = () =>
   VARIANTS.map(variant => (
     <Notification

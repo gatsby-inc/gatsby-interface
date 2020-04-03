@@ -48,6 +48,12 @@ export const Sandbox = () => {
   )
 }
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Required = () => (
   <InputFieldBlock id="inputFieldBlock" label="Field label" required />
 )

@@ -22,3 +22,9 @@ export const Sandbox = () => (
     <ModalCard>{text("content", "Hello world")}</ModalCard>
   </Modal>
 )
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}

@@ -26,3 +26,9 @@ export const Sandbox = () => (
     ariaLabel={text("Label describing the value:", "Lorem ipsum")}
   />
 )
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}

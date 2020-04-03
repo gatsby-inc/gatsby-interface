@@ -34,6 +34,12 @@ export const Sandbox = () => (
   </<%= COMPONENT_NAME %>>
 )
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+};
+
 export const Variants = () =>
   VARIANTS.map(variant => (
     <<%= COMPONENT_NAME %> key={variant} variant={variant}>
