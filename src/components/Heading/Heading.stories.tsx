@@ -41,6 +41,12 @@ export const Sandbox = () => (
   </Heading>
 )
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Tones = () =>
   TONES.map(tone => (
     <Heading key={tone} tone={tone}>

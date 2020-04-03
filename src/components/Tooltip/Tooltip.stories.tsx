@@ -69,6 +69,12 @@ export const Sandbox = () => (
   </Tooltip>
 )
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Positions = () =>
   POSITIONS.map(position => (
     <Tooltip key={position} label="Tooltip text" position={position}>

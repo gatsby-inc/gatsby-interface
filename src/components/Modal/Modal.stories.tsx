@@ -30,6 +30,12 @@ export const Sandbox = () => (
   </Modal>
 )
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Dismissable = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(true)
 

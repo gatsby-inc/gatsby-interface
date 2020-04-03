@@ -53,6 +53,12 @@ export const Sandbox = () => {
   )
 }
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Required = () => (
   <SelectFieldBlock
     id="SelectFieldBlock"

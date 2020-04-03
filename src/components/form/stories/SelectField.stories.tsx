@@ -75,3 +75,9 @@ export const Sandbox = () => {
     </SelectField>
   )
 }
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}

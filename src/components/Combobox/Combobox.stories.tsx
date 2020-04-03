@@ -106,6 +106,12 @@ export const Sandbox = () => {
   )
 }
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const WithSelect = () => {
   const [term, setTerm] = React.useState("")
 

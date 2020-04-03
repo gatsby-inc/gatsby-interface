@@ -26,3 +26,9 @@ export const Basic = () => (
 export const Sandbox = () => (
   <Announcement>{text("content", "Lorem ispum")}</Announcement>
 )
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
