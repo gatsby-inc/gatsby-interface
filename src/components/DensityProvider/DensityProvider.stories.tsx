@@ -61,6 +61,12 @@ export const Sandbox = () => (
   </DensityProvider>
 )
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Densities = () =>
   DENSITIES.map(density => (
     <DensityProvider key={density} density={density}>
