@@ -9,12 +9,16 @@ const theme = getTheme()
 
 export const storybookThemeLight = create({
   ...themes.light,
+  appBg: theme.colors.grey[5],
+  appBorderColor: theme.colors.blackFade[10],
   fontBase: theme.fonts.body,
+  textColor: theme.colors.grey[90],
   fontCode: theme.fonts.monospace,
-  colorSecondary: theme.colors.gatsby,
+  colorSecondary: theme.colors.purple[50],
   brandTitle: `Gatsby Interface`,
   barTextColor: theme.colors.grey[70],
   barSelectedColor: theme.colors.purple[50],
+  inputBorder: theme.colors.blackFade[10],
 })
 
 export const withTheme: DecoratorFn = story => {
