@@ -16,7 +16,7 @@
 
 Storybook available at [gatsby-interface.netlify.com](https://gatsby-interface.netlify.com/):
 
-![screenshot](https://user-images.githubusercontent.com/21834/78464020-9acd7a80-76e4-11ea-8ba7-0e0b720facee.png)
+![screenshot](https://user-images.githubusercontent.com/21834/78464072-36f78180-76e5-11ea-96dc-5e4911dee1f4.png)
 
 ## Installation
 
