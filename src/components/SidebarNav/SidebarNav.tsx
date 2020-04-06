@@ -129,6 +129,7 @@ function SidebarNavListItem({
                 navItemIconCss(theme),
                 active && navItemActiveIconCss(theme),
               ]}
+              size="inherit"
             />
           )}
           {label}

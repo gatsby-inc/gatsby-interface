@@ -4,7 +4,7 @@ import { IconProps } from "./types"
 
 export default function ReportsIcon(props: IconProps) {
   return (
-    <IconSkeleton {...props} height="1em" width="1em" iconName="ReportsIcon">
+    <IconSkeleton {...props} iconName="ReportsIcon">
       <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2" />
       <rect x="17" y="4" width="4.5" height="2" fill="currentColor" />
       <rect x="4.5" y="6" width="2" height="2" fill="currentColor" />

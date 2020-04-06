@@ -4,12 +4,7 @@ import { IconProps } from "./types"
 
 export default function IntegrationsIcon(props: IconProps) {
   return (
-    <IconSkeleton
-      {...props}
-      height="1em"
-      width="1em"
-      iconName="IntegrationsIcon"
-    >
+    <IconSkeleton {...props} iconName="IntegrationsIcon">
       <circle
         r="2.125"
         transform="matrix(1 0 0 -1 5.5 5.5)"

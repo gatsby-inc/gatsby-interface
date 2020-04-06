@@ -4,7 +4,7 @@ import { IconProps } from "./types"
 
 export default function BuildsIcon(props: IconProps) {
   return (
-    <IconSkeleton {...props} height="1em" width="1em" iconName="BuildsIcon">
+    <IconSkeleton {...props} iconName="BuildsIcon">
       <rect
         y="0.999935"
         width="9.54724"

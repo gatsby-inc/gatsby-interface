@@ -4,13 +4,7 @@ import { IconProps } from "./types"
 
 export default function GeneralIcon(props: IconProps) {
   return (
-    <IconSkeleton
-      {...props}
-      stroke="none"
-      height="1em"
-      width="1em"
-      iconName="GeneralIcon"
-    >
+    <IconSkeleton {...props} stroke="none" iconName="GeneralIcon">
       <path
         d="M22.6607 9.27801C20.4579 10.703 19 13.1812 19 16C19 17.3216 19.3205 18.5684 19.888 19.6668C20.4176 19.122 20.8913 18.5226 21.2997 17.8777C21.1053 17.287 21 16.6558 21 16C21 14.2276 21.7685 12.6348 22.9905 11.5364C22.9583 10.7601 22.8456 10.0046 22.6607 9.27801Z"
         fill="currentColor"

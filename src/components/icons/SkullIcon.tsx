@@ -4,13 +4,7 @@ import { IconProps } from "./types"
 
 export default function SkullIcon(props: IconProps) {
   return (
-    <IconSkeleton
-      {...props}
-      stroke="none"
-      height="1em"
-      width="1em"
-      iconName="SkullIcon"
-    >
+    <IconSkeleton {...props} stroke="none" iconName="SkullIcon">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
