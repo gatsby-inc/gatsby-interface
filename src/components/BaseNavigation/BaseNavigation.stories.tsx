@@ -72,6 +72,12 @@ export const Sandbox = () => {
   )
 }
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Inverted = () => <BaseNavigation items={items} isInverted />
 
 Inverted.story = {

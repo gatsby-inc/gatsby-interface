@@ -85,6 +85,12 @@ export const Sandbox = () => {
   )
 }
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Tones = () =>
   TOGGLE_TONES.map(tone => (
     <div key={tone}>

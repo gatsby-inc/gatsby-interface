@@ -40,6 +40,12 @@ export const Sandbox = () => (
   />
 )
 
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
 export const Variants = () =>
   SIDEBAR_NAV_VARIANTS.map(variant => (
     <React.Fragment key={variant}>

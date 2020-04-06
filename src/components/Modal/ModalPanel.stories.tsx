@@ -27,3 +27,9 @@ export const Sandbox = () => (
     </ModalPanel>
   </Modal>
 )
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
