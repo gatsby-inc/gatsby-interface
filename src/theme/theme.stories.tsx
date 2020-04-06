@@ -340,7 +340,7 @@ storiesOf(`theme`, module)
                     <span
                       css={{
                         fontSize: theme.fontSizes[0],
-                        color: theme.colors.blackFade[70],
+                        color: theme.colors.blackFade[80],
                         marginLeft: "auto",
                       }}
                     >

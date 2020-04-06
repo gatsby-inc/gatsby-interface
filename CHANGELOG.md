@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.126](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.125...v0.0.126) (2020-04-06)
+
+
+### Features
+
+* DensityProvider ([#268](https://github.com/gatsby-inc/gatsby-interface/issues/268)) ([0e00cd4](https://github.com/gatsby-inc/gatsby-interface/commit/0e00cd40a2d5d6b85e946a8eb92f30474c7a83e6))
+
 ### [0.0.125](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.124...v0.0.125) (2020-04-03)
 
 
