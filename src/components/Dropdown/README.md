@@ -1,0 +1,44 @@
+## Dropdown
+
+This components is a Dropdown an can be used as following:
+
+```jsx
+export const Basic = () => {
+  const [selected, setSelected] =
+    (React.useState < undefined) | (string > undefined)
+
+  return (
+    <Dropdown>
+      <DropdownLabel placeholder="Placeholder for the dropdown">
+        {selected}
+      </DropdownLabel>
+      <DropdownItems>
+        <DropdownItem
+          onSelect={() => setSelected("First")}
+          selected={selected === "First"}
+        >
+          First
+        </DropdownItem>
+        <DropdownItem
+          onSelect={() => setSelected("Second")}
+          selected={selected === "Second"}
+        >
+          Second
+        </DropdownItem>
+        <DropdownItem
+          onSelect={() => setSelected("Third")}
+          selected={selected === "Third"}
+        >
+          Third
+        </DropdownItem>
+        <DropdownItem
+          onSelect={() => setSelected("Fourth")}
+          selected={selected === "Fourth"}
+        >
+          Fourth
+        </DropdownItem>
+      </DropdownItems>
+    </Dropdown>
+  )
+}
+```

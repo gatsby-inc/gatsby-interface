@@ -44,6 +44,7 @@
     "@reach/alert": "^0.1.5",
     "@reach/combobox": "^0.8.5",
     "@reach/dialog": "^0.4.0",
+    "@reach/menu-button": "^0.10.0",
     "@reach/popover": "^0.9.0",
     "@reach/tooltip": "^0.8.5",
     "@types/lodash.sample": "^4.2.6",
