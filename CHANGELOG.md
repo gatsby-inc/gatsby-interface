@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.127](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.126...v0.0.127) (2020-04-06)
+
+
+### Features
+
+* realign `<SidebarNav>` ([#274](https://github.com/gatsby-inc/gatsby-interface/issues/274)) ([a66022a](https://github.com/gatsby-inc/gatsby-interface/commit/a66022a17142b573c812377441c24e86beade552)), closes [/github.com/facebook/jest/issues/9292#issuecomment-569673251](https://github.com/gatsby-inc//github.com/facebook/jest/issues/9292/issues/issuecomment-569673251) [#277](https://github.com/gatsby-inc/gatsby-interface/issues/277)
+
 ### [0.0.126](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.125...v0.0.126) (2020-04-06)
 
 

@@ -1,5 +1,3 @@
-export { General, Integrations, Preview, Skull } from "./assets"
-
 export {
   Button,
   // deprecated, legacy exports

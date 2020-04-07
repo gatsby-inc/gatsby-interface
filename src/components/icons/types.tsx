@@ -1,4 +1,10 @@
-export type IconSize = `xxsmall` | `xsmall` | `small` | `medium` | `large`
+export type IconSize =
+  | `inherit`
+  | `xxsmall`
+  | `xsmall`
+  | `small`
+  | `medium`
+  | `large`
 
 type IconSvgProps = Omit<JSX.IntrinsicElements["svg"], "ref">
 

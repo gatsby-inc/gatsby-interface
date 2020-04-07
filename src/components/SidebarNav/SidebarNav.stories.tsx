@@ -2,8 +2,15 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 import { DecoratorFn } from "@storybook/react"
+import { withDesign } from "storybook-addon-designs"
 import { StoryUtils } from "../../utils/storybook"
-import { General, Integrations, Preview, Skull } from "../../assets"
+import {
+  IntegrationsIcon,
+  BuildsIcon,
+  ReportsIcon,
+  SkullIcon,
+  GeneralIcon,
+} from "../icons"
 import {
   SidebarNav,
   SidebarNavOption,
@@ -24,7 +31,15 @@ export default {
         <StoryUtils.Stack>{story()}</StoryUtils.Stack>
       </StoryUtils.Container>
     ),
+    withDesign,
   ] as DecoratorFn[],
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/OfhYd2rjUTCeu65VGlzH1wtv/Menus?node-id=295%3A335",
+    },
+  },
 }
 
 export const Basic = () => <SidebarNavExample />
@@ -63,7 +78,7 @@ const SidebarNavExample = (props: Partial<SidebarNavProps>) => {
   const options: SidebarNavOption[] = [
     {
       label: `General`,
-      Icon: General,
+      Icon: GeneralIcon,
       onClick: () => setNav(`general`),
       active: activeNav === `general`,
       to: getPath(`#general`),
@@ -86,25 +101,64 @@ const SidebarNavExample = (props: Partial<SidebarNavProps>) => {
           active: subNav === `envVars`,
           to: getPath(`#envVars`),
         },
+        {
+          label: `Webhooks`,
+          onClick: () => setSubNav(`webhooks`),
+          active: subNav === `webhooks`,
+          to: getPath(`#webhooks`),
+        },
+        {
+          label: `Access Control`,
+          onClick: () => setSubNav(`accessControl`),
+          active: subNav === `accessControl`,
+          to: getPath(`#accessControl`),
+        },
       ],
     },
     {
+      label: `Builds`,
+      Icon: BuildsIcon,
+      onClick: () => setNav(`builds`),
+      active: activeNav === `builds`,
+      to: getPath(`#builds`),
+    },
+    {
+      label: `Reports`,
+      Icon: ReportsIcon,
+      onClick: () => setNav(`reports`),
+      active: activeNav === `reports`,
+      to: getPath(`#reports`),
+    },
+    {
       label: `Integrations`,
-      Icon: Integrations,
+      Icon: IntegrationsIcon,
       onClick: () => setNav(`integrations`),
       active: activeNav === `integrations`,
       to: getPath(`#integrations`),
-    },
-    {
-      label: `Preview`,
-      Icon: Preview,
-      onClick: () => setNav(`preview`),
-      active: activeNav === `preview`,
-      to: getPath(`#preview`),
+      subItems: [
+        {
+          label: `Automated`,
+          onClick: () => setSubNav(`automated`),
+          active: subNav === `automated`,
+          to: getPath(`#automated`),
+        },
+        {
+          label: `Manual`,
+          onClick: () => setSubNav(`manual`),
+          active: subNav === `manual`,
+          to: getPath(`#manual`),
+        },
+        {
+          label: `Hosting`,
+          onClick: () => setSubNav(`hosting`),
+          active: subNav === `hosting`,
+          to: getPath(`#hosting`),
+        },
+      ],
     },
     {
       label: `Danger Zone`,
-      Icon: Skull,
+      Icon: SkullIcon,
       onClick: () => setNav(`danger`),
       active: activeNav === `danger`,
       to: getPath(`#danger`),

@@ -11,7 +11,14 @@ import { IconSize, IconProps } from "./types"
 import { useTheme } from "../ThemeProvider"
 import { Theme, ThemeCss } from "../../theme"
 
-const sizes: IconSize[] = [`xxsmall`, `xsmall`, `small`, `medium`, `large`]
+const sizes: IconSize[] = [
+  `inherit`,
+  `xxsmall`,
+  `xsmall`,
+  `small`,
+  `medium`,
+  `large`,
+]
 const customSizes = [`1em`, `16px`, `24px`, `32px`, `40px`, `64px`]
 const customIconColors = ["#cc2408", "#046b80"]
 
