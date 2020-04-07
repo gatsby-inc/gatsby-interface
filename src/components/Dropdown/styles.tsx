@@ -1,5 +1,5 @@
 import { Theme } from "../.."
-import { keyframes } from "@emotion/core"
+import { keyframes, CSSObject } from "@emotion/core"
 
 const enter = keyframes`
 to {
@@ -57,7 +57,7 @@ export const dropdownCss = (theme: Theme) => ({
   },
 })
 
-export const dropdownLabelCss = (theme: Theme) => ({
+export const dropdownLabelCss = (theme: Theme): CSSObject => ({
   cursor: "pointer",
   display: "flex",
   alignItems: "center",
@@ -77,8 +77,8 @@ export const dropdownLabelCss = (theme: Theme) => ({
 
   /* everything behind is hard coupling between span, SVG and the label */
   span: {
-    flex: 1,
     textAlign: "left",
+    flex: 1,
   },
   svg: {
     transition: "transform .3s",
