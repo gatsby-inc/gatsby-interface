@@ -17,7 +17,7 @@ import {
 } from ".."
 
 export default {
-  title: `Form — styled primitives/TextAreaField`,
+  title: `Form/Styled Primitives/TextAreaField`,
   decorators: [
     story => (
       <StoryUtils.Container>
@@ -26,6 +26,9 @@ export default {
     ),
   ] as DecoratorFn[],
   parameters: {
+    options: {
+      showRoots: true,
+    },
     readme: {
       sidebar: README,
     },

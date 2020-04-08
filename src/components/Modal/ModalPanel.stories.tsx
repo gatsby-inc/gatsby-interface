@@ -9,6 +9,11 @@ const POSITIONS: ModalPanelPosition[] = ["left", "right"]
 export default {
   title: `Modal/ModalPanel`,
   component: ModalPanel,
+  parameters: {
+    options: {
+      showRoots: true,
+    },
+  },
 }
 
 export const Basic = () => (

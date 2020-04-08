@@ -18,7 +18,7 @@ import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
 
 export default {
-  title: `Form — styled primitives/InputField`,
+  title: `Form/Styled Primitives/InputField`,
   decorators: [
     story => (
       <StoryUtils.Container>
@@ -27,6 +27,9 @@ export default {
     ),
   ] as DecoratorFn[],
   parameters: {
+    options: {
+      showRoots: true,
+    },
     readme: {
       sidebar: README,
     },

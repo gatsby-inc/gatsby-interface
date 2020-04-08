@@ -23,6 +23,11 @@ export default {
     StyledPanelBodySection,
     StyledPanelActions,
   ],
+  parameters: {
+    options: {
+      showRoots: true,
+    },
+  },
   decorators: [
     story => (
       <React.Fragment>

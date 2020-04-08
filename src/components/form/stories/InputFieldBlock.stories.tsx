@@ -13,7 +13,7 @@ import { text } from "@storybook/addon-knobs"
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
 export default {
-  title: `Form — styled blocks/InputFieldBlock`,
+  title: `Form/Styled Blocks/InputFieldBlock`,
   decorators: [
     story => (
       <StoryUtils.Container>
@@ -22,6 +22,9 @@ export default {
     ),
   ] as DecoratorFn[],
   parameters: {
+    options: {
+      showRoots: true,
+    },
     readme: {
       sidebar: README,
     },

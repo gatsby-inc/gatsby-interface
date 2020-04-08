@@ -20,7 +20,7 @@ import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUti
 const options = getGroupFieldStoryOptions()
 
 export default {
-  title: `Form — styled primitives/SelectField`,
+  title: `Form/Styled Primitives/SelectField`,
   decorators: [
     story => (
       <StoryUtils.Container>
@@ -29,6 +29,9 @@ export default {
     ),
   ] as DecoratorFn[],
   parameters: {
+    options: {
+      showRoots: true,
+    },
     readme: {
       sidebar: README,
     },
