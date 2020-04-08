@@ -18,11 +18,11 @@ import { Button } from "../Button"
 export default {
   title: `Modal/StyledPanel`,
   component: StyledPanel,
-  subcomponents: [
+  subcomponents: {
     StyledPanelHeader,
     StyledPanelBodySection,
     StyledPanelActions,
-  ],
+  },
   decorators: [
     story => (
       <React.Fragment>

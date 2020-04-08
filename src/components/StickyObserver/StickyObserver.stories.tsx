@@ -18,12 +18,12 @@ import { LipShadowPosition } from "./StickyObserver"
 export default {
   title: `StickyObserver`,
   component: StickyObserver,
-  subcomponents: [
+  subcomponents: {
     StickyObserverProvider,
     StickyObservedContainer,
     StickyObserverSentinel,
     StickyLipShadow,
-  ],
+  },
   decorators: [
     story => (
       <StoryUtils.Container>

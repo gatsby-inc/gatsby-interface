@@ -118,7 +118,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^10.0.14",
-    "babel-plugin-react-docgen": "^2.0.2",
+    "babel-plugin-react-docgen": "^4.1.0",
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-plugin-typescript-to-proptypes": "^1.1.0",
