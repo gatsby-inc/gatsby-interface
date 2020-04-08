@@ -23,7 +23,6 @@ export function sandboxWithPropVariations<TProps>(
     possibleProps,
     possibleProps[0]
   ) as keyof PossiblePropValues<TProps>
-  console.log({ selectedProp })
   const propVariations = possiblePropValues[selectedProp]
 
   return (
