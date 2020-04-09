@@ -16,7 +16,7 @@ const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 const options = getGroupFieldStoryOptions()
 
 export default {
-  title: `Form — styled blocks/SelectFieldBlock`,
+  title: `Form/Styled Blocks/SelectFieldBlock`,
   decorators: [
     story => (
       <StoryUtils.Container>
@@ -25,6 +25,9 @@ export default {
     ),
   ] as DecoratorFn[],
   parameters: {
+    options: {
+      showRoots: true,
+    },
     readme: {
       sidebar: README,
     },

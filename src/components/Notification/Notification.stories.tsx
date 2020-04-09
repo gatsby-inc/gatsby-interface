@@ -10,7 +10,7 @@ import {
   NotificationVariant,
   NotificationTone,
 } from "."
-import { StoryUtils } from "../../utils/storybook"
+import { StoryUtils, sandboxWithPropVariations } from "../../utils/storybook"
 import { Button } from "../Button"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
 import { MdSignalWifi1BarLock } from "react-icons/md"
@@ -55,22 +55,30 @@ export const Basic = () => (
   <Notification content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
 )
 
-export const Sandbox = () => (
-  <Notification
-    content={text(
-      "content",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    )}
-    variant={radios("variant", variantOptions, `PRIMARY`)}
-    tone={radios("tone", toneOptions, `BRAND`)}
-    contentAs={select("content element", ["div", "span"], "div")}
-    linkUrl={text("linkUrl", "")}
-    linkText={text("linkText", "")}
-    isOpened={boolean("isOpened", true)}
-    showDismissButton={boolean("show dismiss button", false)}
-    dismissButtonLabel={text("dismiss button label", "Close")}
-  />
-)
+export const Sandbox = () =>
+  sandboxWithPropVariations(
+    propVariations => (
+      <Notification
+        content={text(
+          "content",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        )}
+        variant={radios("variant", variantOptions, `PRIMARY`)}
+        tone={radios("tone", toneOptions, `BRAND`)}
+        contentAs={select("content element", ["div", "span"], "div")}
+        linkUrl={text("linkUrl", "")}
+        linkText={text("linkText", "")}
+        isOpened={boolean("isOpened", true)}
+        showDismissButton={boolean("show dismiss button", false)}
+        dismissButtonLabel={text("dismiss button label", "Close")}
+        {...propVariations}
+      />
+    ),
+    {
+      variant: VARIANTS,
+      tone: TONES,
+    }
+  )
 
 Sandbox.story = {
   parameters: {

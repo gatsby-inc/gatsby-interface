@@ -111,8 +111,13 @@ const sortedIconComponentNames = Object.keys(icons)
   .filter(componentName => typeof (icons as any)[componentName] !== `boolean`)
   .sort()
 
-storiesOf(`icons`, module)
+storiesOf(`Icons`, module)
   .addDecorator(withKnobs)
+  .addParameters({
+    options: {
+      showRoots: true,
+    },
+  })
   .add(`All icons`, () => (
     <StoryUtils.Container>
       <div css={allIconsCss}>
@@ -138,51 +143,57 @@ storiesOf(`icons`, module)
   ))
 
 sortedIconComponentNames.forEach(componentName => {
-  storiesOf(`icons/Single icons`, module).add(componentName, () => {
-    const Component = (icons as any)[componentName]
+  storiesOf(`Icons/Single icons`, module)
+    .addParameters({
+      options: {
+        showRoots: true,
+      },
+    })
+    .add(componentName, () => {
+      const Component = (icons as any)[componentName]
 
-    return (
-      <StoryUtils.Container>
-        <div key={componentName} css={iconBlockCss}>
-          <h1>{`<${componentName} />`}</h1>
-          <h2>Size:</h2>
-          {sizes.map(size => (
-            <StoryCase info={size} key={size}>
-              <Component size={size} />
-            </StoryCase>
-          ))}
-          <h2>Custom size:</h2>
-          {customSizes.map(size => (
-            <StoryCase info={<CustomSizeInfo size={size} />} key={size}>
-              <Component height={size} width={size} />
-            </StoryCase>
-          ))}
-          <h2>Theme color:</h2>
-          <ThemeColorCase
-            Component={Component}
-            colorLabel="gatsby"
-            getColor={colors => colors.gatsby}
-          />
-          <ThemeColorCase
-            Component={Component}
-            colorLabel="green.90"
-            getColor={colors => colors.green[90]}
-          />
-          <h2>Custom colors:</h2>
-          {customIconColors.map(colorCase => (
-            <StoryCase
-              info={<span style={{ color: colorCase }}>{colorCase}</span>}
-              key={colorCase}
-            >
-              <Component color={colorCase} height="3em" />
-            </StoryCase>
-          ))}
-          <h2>Inline</h2>
-          <p>
-            Lorem ipsum <Component height="1em" /> foo bar
-          </p>
-        </div>
-      </StoryUtils.Container>
-    )
-  })
+      return (
+        <StoryUtils.Container>
+          <div key={componentName} css={iconBlockCss}>
+            <h1>{`<${componentName} />`}</h1>
+            <h2>Size:</h2>
+            {sizes.map(size => (
+              <StoryCase info={size} key={size}>
+                <Component size={size} />
+              </StoryCase>
+            ))}
+            <h2>Custom size:</h2>
+            {customSizes.map(size => (
+              <StoryCase info={<CustomSizeInfo size={size} />} key={size}>
+                <Component height={size} width={size} />
+              </StoryCase>
+            ))}
+            <h2>Theme color:</h2>
+            <ThemeColorCase
+              Component={Component}
+              colorLabel="gatsby"
+              getColor={colors => colors.gatsby}
+            />
+            <ThemeColorCase
+              Component={Component}
+              colorLabel="green.90"
+              getColor={colors => colors.green[90]}
+            />
+            <h2>Custom colors:</h2>
+            {customIconColors.map(colorCase => (
+              <StoryCase
+                info={<span style={{ color: colorCase }}>{colorCase}</span>}
+                key={colorCase}
+              >
+                <Component color={colorCase} height="3em" />
+              </StoryCase>
+            ))}
+            <h2>Inline</h2>
+            <p>
+              Lorem ipsum <Component height="1em" /> foo bar
+            </p>
+          </div>
+        </StoryUtils.Container>
+      )
+    })
 })
