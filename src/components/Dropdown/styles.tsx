@@ -30,26 +30,6 @@ export const dropdownCss = (theme: Theme) => ({
   "[data-selected]": {
     background: theme.colors.purple[10],
     color: theme.colors.gatsby,
-
-    svg: {
-      fill: theme.colors.purple[50],
-      transform: "scale(1.2)",
-    },
-  },
-
-  ".gatsby-dropdown-item-selected": {
-    display: "flex",
-    alignItems: "center",
-
-    span: {
-      flex: 1,
-    },
-
-    svg: {
-      fontSize: theme.fontSizes[3],
-      color: theme.colors.grey[50],
-      transition: "0.5s",
-    },
   },
 
   [theme.mediaQueries.phablet]: {

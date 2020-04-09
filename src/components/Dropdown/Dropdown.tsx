@@ -9,16 +9,16 @@ import {
   MenuButtonProps,
   MenuListProps,
   MenuItemProps,
+  MenuProps,
 } from "@reach/menu-button"
-import { MdCheck, MdKeyboardArrowDown } from "react-icons/md"
+import { MdKeyboardArrowDown } from "react-icons/md"
 import { dropdownCss, dropdownLabelCss } from "./styles"
 
-export const Dropdown: React.FC = ({ children }) => <Menu>{children}</Menu>
+export const Dropdown: React.FC<MenuProps> = props => <Menu {...props} />
 
 // Dropdown Label
-export interface DropdownLabelProps extends Omit<MenuButtonProps, "children"> {
-  children?: string
-  placeholder: string
+export type DropdownLabelProps = MenuButtonProps & {
+  placeholder: React.ReactNode
 }
 
 export const DropdownLabel: React.FC<DropdownLabelProps> = ({
@@ -36,21 +36,6 @@ export const DropdownItems: React.FC<MenuListProps> = props => {
   return <MenuList {...props} css={dropdownCss}></MenuList>
 }
 
-export interface DropdownItemProps extends MenuItemProps {
-  selected?: boolean
-}
-
-export const DropdownItem: React.FC<DropdownItemProps> = ({
-  selected,
-  children,
-  ...props
-}) => (
-  <MenuItem
-    {...props}
-    className={selected ? "gatsby-dropdown-item-selected" : undefined}
-  >
-    <span>{children}</span>
-
-    {selected ? <MdCheck /> : undefined}
-  </MenuItem>
+export const DropdownItem: React.FC<MenuItemProps> = props => (
+  <MenuItem {...props} />
 )
