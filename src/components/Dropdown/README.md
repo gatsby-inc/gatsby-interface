@@ -13,28 +13,12 @@ export const Basic = () => {
         {selected}
       </DropdownLabel>
       <DropdownItems>
-        <DropdownItem
-          onSelect={() => setSelected("First")}
-          selected={selected === "First"}
-        >
-          First
-        </DropdownItem>
-        <DropdownItem
-          onSelect={() => setSelected("Second")}
-          selected={selected === "Second"}
-        >
+        <DropdownItem onSelect={() => setSelected("First")}>First</DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Second")}>
           Second
         </DropdownItem>
-        <DropdownItem
-          onSelect={() => setSelected("Third")}
-          selected={selected === "Third"}
-        >
-          Third
-        </DropdownItem>
-        <DropdownItem
-          onSelect={() => setSelected("Fourth")}
-          selected={selected === "Fourth"}
-        >
+        <DropdownItem onSelect={() => setSelected("Third")}>Third</DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Fourth")}>
           Fourth
         </DropdownItem>
       </DropdownItems>
