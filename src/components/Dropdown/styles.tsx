@@ -1,4 +1,4 @@
-import { Theme } from "../.."
+import { Theme } from "../../theme"
 import { keyframes, CSSObject } from "@emotion/core"
 
 const enter = keyframes`
