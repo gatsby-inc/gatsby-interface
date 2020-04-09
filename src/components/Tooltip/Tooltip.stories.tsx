@@ -16,6 +16,7 @@ import {
 export default {
   title: `Tooltip`,
   parameters: {
+    layout: `padded`,
     readme: {
       sidebar: README,
     },
@@ -31,7 +32,21 @@ export default {
         }
       }, [])
 
-      return story()
+      return (
+        <div
+          css={(theme: Theme) => ({
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "100vh",
+            margin: "0px",
+            padding: theme.space[4],
+            boxSizing: "border-box",
+          })}
+        >
+          {story()}
+        </div>
+      )
     },
   ] as DecoratorFn[],
 }

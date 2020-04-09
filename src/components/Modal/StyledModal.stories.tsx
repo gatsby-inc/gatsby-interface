@@ -122,5 +122,6 @@ export const Variants = () =>
   ))
 
 Variants.story = {
+  parameters: { layout: `padded` },
   decorators: [withVariationsContainer],
 }
