@@ -5,7 +5,6 @@ import { Global } from "@emotion/core"
 import { DecoratorFn } from "@storybook/react"
 import { text } from "@storybook/addon-knobs"
 import isChromatic from "storybook-chromatic/isChromatic"
-import { StoryUtils } from "../../utils/storybook"
 import {
   StyledPanel,
   StyledPanelHeader,
@@ -49,11 +48,6 @@ export default {
       </React.Fragment>
     ),
     story => <div style={{ maxWidth: `620px` }}>{story()}</div>,
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
   ] as DecoratorFn[],
 }
 

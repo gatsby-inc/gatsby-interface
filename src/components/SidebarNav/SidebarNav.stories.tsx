@@ -3,7 +3,6 @@ import { jsx } from "@emotion/core"
 import React from "react"
 import { DecoratorFn } from "@storybook/react"
 import { withDesign } from "storybook-addon-designs"
-import { StoryUtils } from "../../utils/storybook"
 import {
   IntegrationsIcon,
   BuildsIcon,
@@ -17,7 +16,10 @@ import {
   SidebarNavProps,
   SidebarNavVariant,
 } from "./"
-import { radioKnobOptions } from "../../utils/storybook/knobs"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
 import { radios, text } from "@storybook/addon-knobs"
 
 const SIDEBAR_NAV_VARIANTS: SidebarNavVariant[] = [`DEFAULT`, `FULL`]
@@ -25,14 +27,7 @@ const SIDEBAR_NAV_VARIANTS: SidebarNavVariant[] = [`DEFAULT`, `FULL`]
 export default {
   title: `SidebarNav`,
   component: SidebarNav,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-    withDesign,
-  ] as DecoratorFn[],
+  decorators: [withDesign] as DecoratorFn[],
   parameters: {
     design: {
       type: "figma",
@@ -68,6 +63,10 @@ export const Variants = () =>
       <SidebarNavExample key={variant} variant={variant} />
     </React.Fragment>
   ))
+
+Variants.story = {
+  decorators: [withVariationsContainer],
+}
 
 const SidebarNavExample = (props: Partial<SidebarNavProps>) => {
   // The active prop should be managed by path rather than component state. This use case is for storybook only

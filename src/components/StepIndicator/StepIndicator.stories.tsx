@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { DecoratorFn } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
-import { StoryUtils } from "../../utils/storybook"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
 import { StepIndicator, StepIndicatorStep, StepIndicatorStepStatus } from "."
 
@@ -13,13 +11,6 @@ export default {
   title: `StepIndicator`,
   component: StepIndicator,
   subcomponents: [StepIndicatorStep],
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
 }
 
 export const Basic = () => (

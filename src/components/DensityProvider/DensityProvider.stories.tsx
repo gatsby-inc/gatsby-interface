@@ -1,22 +1,16 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { DecoratorFn } from "@storybook/react"
 import { radios } from "@storybook/addon-knobs"
-import { StoryUtils } from "../../utils/storybook"
-import { radioKnobOptions } from "../../utils/storybook/knobs"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
 import { DensityProvider, useDensity, Density } from "."
 import { Theme } from "../../theme"
 
 export default {
   title: `DensityProvider`,
   component: DensityProvider,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
 }
 
 function ExampleComponent() {
@@ -73,3 +67,7 @@ export const Densities = () =>
       <ExampleComponent />
     </DensityProvider>
   ))
+
+Densities.story = {
+  decorators: [withVariationsContainer],
+}

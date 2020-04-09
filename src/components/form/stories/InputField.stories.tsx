@@ -1,9 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
-import { DecoratorFn } from "@storybook/react"
-
-import { StoryUtils } from "../../../utils/storybook"
 import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
 import {
@@ -19,13 +16,6 @@ import { text } from "@storybook/addon-knobs"
 
 export default {
   title: `Form/Styled Primitives/InputField`,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
   parameters: {
     options: {
       showRoots: true,

@@ -1,26 +1,18 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
-import { DecoratorFn } from "@storybook/react"
-import { StoryUtils } from "../../../utils/storybook"
 import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
 import { InputFieldBlock } from "../components/InputFieldBlock"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
+import { withVariationsContainer } from "../../../utils/storybook"
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
 export default {
   title: `Form/Styled Blocks/InputFieldBlock`,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
   parameters: {
     options: {
       showRoots: true,
@@ -116,3 +108,7 @@ export const LabelSizes = () =>
       labelSize={labelSize}
     />
   ))
+
+LabelSizes.story = {
+  decorators: [withVariationsContainer],
+}
