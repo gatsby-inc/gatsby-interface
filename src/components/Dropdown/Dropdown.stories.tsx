@@ -38,28 +38,34 @@ export const Basic = () => {
         {selected}
       </DropdownLabel>
       <DropdownItems>
-        <DropdownItem
-          onSelect={() => setSelected("First")}
-          selected={selected === "First"}
-        >
-          First
-        </DropdownItem>
-        <DropdownItem
-          onSelect={() => setSelected("Second")}
-          selected={selected === "Second"}
-        >
+        <DropdownItem onSelect={() => setSelected("First")}>First</DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Second")}>
           Second
         </DropdownItem>
-        <DropdownItem
-          onSelect={() => setSelected("Third")}
-          selected={selected === "Third"}
-        >
-          Third
+        <DropdownItem onSelect={() => setSelected("Third")}>Third</DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Fourth")}>
+          Fourth
         </DropdownItem>
-        <DropdownItem
-          onSelect={() => setSelected("Fourth")}
-          selected={selected === "Fourth"}
-        >
+      </DropdownItems>
+    </Dropdown>
+  )
+}
+
+export const WithComponentPlaceholder = () => {
+  const [selected, setSelected] = React.useState<undefined | string>(undefined)
+
+  return (
+    <Dropdown>
+      <DropdownLabel placeholder={<p>This is a complex placeholder</p>}>
+        {selected}
+      </DropdownLabel>
+      <DropdownItems>
+        <DropdownItem onSelect={() => setSelected("First")}>First</DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Second")}>
+          Second
+        </DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Third")}>Third</DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Fourth")}>
           Fourth
         </DropdownItem>
       </DropdownItems>
@@ -89,11 +95,7 @@ export const Sandbox = () => {
       </DropdownLabel>
       <DropdownItems>
         {items.map(item => (
-          <DropdownItem
-            key={item}
-            onSelect={() => undefined}
-            selected={selected === item}
-          >
+          <DropdownItem key={item} onSelect={() => undefined}>
             {item}
           </DropdownItem>
         ))}

@@ -16,7 +16,8 @@ import { dropdownCss, dropdownLabelCss, menuItemCss } from "./styles"
 
 export const Dropdown: React.FC<MenuProps> = props => <Menu {...props} />
 
-export type DropdownLabelProps = MenuButtonProps & {
+export interface DropdownLabelProps
+  extends Omit<MenuButtonProps, "placeholder"> {
   placeholder: React.ReactNode
 }
 
