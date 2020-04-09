@@ -4,7 +4,6 @@ import React from "react"
 
 import { storiesOf } from "@storybook/react"
 import README from "../README_FORMIK.md"
-import { StoryUtils } from "../../../utils/storybook"
 import {
   InputField,
   InputFieldWrapper,
@@ -203,6 +202,7 @@ const initailValues = {
 
 storiesOf(`form/Formik usage examples`, module)
   .addParameters({
+    layout: `padded`,
     options: {
       showPanel: true,
     },
@@ -220,202 +220,198 @@ storiesOf(`form/Formik usage examples`, module)
       })
 
       return (
-        <StoryUtils.Container>
-          <Wrapper>
-            <Formik
-              validationSchema={validationSchema}
-              initialValues={initailValues}
-              onSubmit={() => {
-                setTimeout(() => {
-                  alert("Form submitted")
-                }, 1000)
-              }}
-            >
-              {({
-                values,
-                touched,
-                handleChange,
-                setFieldValue,
-                handleBlur,
-                isSubmitting,
-                handleSubmit,
-                errors,
-              }: FormikProps<MyFormValues>) => (
-                <form onSubmit={handleSubmit} noValidate css={stackCss}>
-                  <InputField
-                    id="titleField"
-                    hasError={!!(touched.title && errors.title)}
-                    hasHint={true}
-                  >
-                    <InputFieldWrapper css={stackItemCss}>
-                      <InputFieldLabel isRequired={true}>Title</InputFieldLabel>
-                      <InputFieldControl
-                        name="title"
-                        value={values.title}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        required
-                      />
-                      <InputFieldHint>
-                        At least {TITLE_MIN_LENGTH} and not more than{" "}
-                        {TITLE_MAX_LENGTH} characters
-                      </InputFieldHint>
-                      <InputFieldError>
-                        {touched.title && errors.title ? errors.title : ``}
-                      </InputFieldError>
-                    </InputFieldWrapper>
-                  </InputField>
+        <Wrapper>
+          <Formik
+            validationSchema={validationSchema}
+            initialValues={initailValues}
+            onSubmit={() => {
+              setTimeout(() => {
+                alert("Form submitted")
+              }, 1000)
+            }}
+          >
+            {({
+              values,
+              touched,
+              handleChange,
+              setFieldValue,
+              handleBlur,
+              isSubmitting,
+              handleSubmit,
+              errors,
+            }: FormikProps<MyFormValues>) => (
+              <form onSubmit={handleSubmit} noValidate css={stackCss}>
+                <InputField
+                  id="titleField"
+                  hasError={!!(touched.title && errors.title)}
+                  hasHint={true}
+                >
+                  <InputFieldWrapper css={stackItemCss}>
+                    <InputFieldLabel isRequired={true}>Title</InputFieldLabel>
+                    <InputFieldControl
+                      name="title"
+                      value={values.title}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      required
+                    />
+                    <InputFieldHint>
+                      At least {TITLE_MIN_LENGTH} and not more than{" "}
+                      {TITLE_MAX_LENGTH} characters
+                    </InputFieldHint>
+                    <InputFieldError>
+                      {touched.title && errors.title ? errors.title : ``}
+                    </InputFieldError>
+                  </InputFieldWrapper>
+                </InputField>
 
-                  <TextAreaField
-                    id="descriptionField"
-                    hasError={!!(touched.description && errors.description)}
-                    hasHint={true}
-                  >
-                    <TextAreaFieldWrapper css={stackItemCss}>
-                      <TextAreaFieldLabel>Description</TextAreaFieldLabel>
-                      <TextAreaFieldControl
-                        name="description"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.description}
-                      />
-                      <TextAreaFieldHint>{`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}</TextAreaFieldHint>
-                      <TextAreaFieldError>
-                        {touched.description && errors.description
-                          ? errors.description
-                          : ``}
-                      </TextAreaFieldError>
-                    </TextAreaFieldWrapper>
-                  </TextAreaField>
-
-                  <SelectField
-                    id="authorField"
-                    hasError={!!(touched.author && errors.author)}
-                  >
-                    <SelectFieldWrapper css={stackItemCss}>
-                      <SelectFieldLabel isRequired={true}>
-                        Author
-                      </SelectFieldLabel>
-                      <SelectFieldControl
-                        name="author"
-                        options={authors}
-                        value={values.author}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                      />
-                      <SelectFieldError>
-                        {touched.author && errors.author ? errors.author : ``}
-                      </SelectFieldError>
-                    </SelectFieldWrapper>
-                  </SelectField>
-
-                  <RadioButtonField
-                    id="categoryField"
-                    hasError={!!(touched.category && errors.category)}
-                    css={stackItemCss}
-                  >
-                    <RadioButtonFieldLabel isRequired={true}>
-                      Category
-                    </RadioButtonFieldLabel>
-                    <RadioButtonFieldOptions>
-                      {categories.map(({ label, value }) => (
-                        <RadioButtonFieldOptionWrapper key={value}>
-                          <RadioButtonFieldOption
-                            value={value}
-                            name="category"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            checked={values.category === value}
-                          />
-                          <RadioButtonFieldOptionLabel optionValue={value}>
-                            {label}
-                          </RadioButtonFieldOptionLabel>
-                        </RadioButtonFieldOptionWrapper>
-                      ))}
-                    </RadioButtonFieldOptions>
-                    <RadioButtonFieldError>
-                      {touched.category && errors.category
-                        ? errors.category
+                <TextAreaField
+                  id="descriptionField"
+                  hasError={!!(touched.description && errors.description)}
+                  hasHint={true}
+                >
+                  <TextAreaFieldWrapper css={stackItemCss}>
+                    <TextAreaFieldLabel>Description</TextAreaFieldLabel>
+                    <TextAreaFieldControl
+                      name="description"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.description}
+                    />
+                    <TextAreaFieldHint>{`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}</TextAreaFieldHint>
+                    <TextAreaFieldError>
+                      {touched.description && errors.description
+                        ? errors.description
                         : ``}
-                    </RadioButtonFieldError>
-                  </RadioButtonField>
+                    </TextAreaFieldError>
+                  </TextAreaFieldWrapper>
+                </TextAreaField>
 
-                  <CheckboxGroupField
-                    id="tagsField"
-                    hasError={!!(touched.tags && errors.tags)}
-                    hasHint={true}
-                    layout="horizontal"
-                    css={stackItemCss}
-                  >
-                    <CheckboxGroupFieldLabel isRequired={true}>
-                      Tags
-                    </CheckboxGroupFieldLabel>
-                    <CheckboxGroupFieldOptions>
-                      {tags.map(({ label, value }) => (
-                        <CheckboxGroupFieldOptionWrapper key={value}>
-                          <CheckboxGroupFieldOption
-                            value={value}
-                            name="tags"
-                            onChange={e => {
-                              const target = e.currentTarget
-                              const valueArray = [...values.tags] || []
+                <SelectField
+                  id="authorField"
+                  hasError={!!(touched.author && errors.author)}
+                >
+                  <SelectFieldWrapper css={stackItemCss}>
+                    <SelectFieldLabel isRequired={true}>
+                      Author
+                    </SelectFieldLabel>
+                    <SelectFieldControl
+                      name="author"
+                      options={authors}
+                      value={values.author}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                    />
+                    <SelectFieldError>
+                      {touched.author && errors.author ? errors.author : ``}
+                    </SelectFieldError>
+                  </SelectFieldWrapper>
+                </SelectField>
 
-                              if (target.checked) {
-                                valueArray.push(value)
-                              } else {
-                                valueArray.splice(valueArray.indexOf(value), 1)
-                              }
+                <RadioButtonField
+                  id="categoryField"
+                  hasError={!!(touched.category && errors.category)}
+                  css={stackItemCss}
+                >
+                  <RadioButtonFieldLabel isRequired={true}>
+                    Category
+                  </RadioButtonFieldLabel>
+                  <RadioButtonFieldOptions>
+                    {categories.map(({ label, value }) => (
+                      <RadioButtonFieldOptionWrapper key={value}>
+                        <RadioButtonFieldOption
+                          value={value}
+                          name="category"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          checked={values.category === value}
+                        />
+                        <RadioButtonFieldOptionLabel optionValue={value}>
+                          {label}
+                        </RadioButtonFieldOptionLabel>
+                      </RadioButtonFieldOptionWrapper>
+                    ))}
+                  </RadioButtonFieldOptions>
+                  <RadioButtonFieldError>
+                    {touched.category && errors.category ? errors.category : ``}
+                  </RadioButtonFieldError>
+                </RadioButtonField>
 
-                              setFieldValue(`tags`, valueArray)
-                            }}
-                            onBlur={handleBlur}
-                          />
+                <CheckboxGroupField
+                  id="tagsField"
+                  hasError={!!(touched.tags && errors.tags)}
+                  hasHint={true}
+                  layout="horizontal"
+                  css={stackItemCss}
+                >
+                  <CheckboxGroupFieldLabel isRequired={true}>
+                    Tags
+                  </CheckboxGroupFieldLabel>
+                  <CheckboxGroupFieldOptions>
+                    {tags.map(({ label, value }) => (
+                      <CheckboxGroupFieldOptionWrapper key={value}>
+                        <CheckboxGroupFieldOption
+                          value={value}
+                          name="tags"
+                          onChange={e => {
+                            const target = e.currentTarget
+                            const valueArray = [...values.tags] || []
 
-                          <CheckboxGroupFieldOptionLabel optionValue={value}>
-                            {label}
-                          </CheckboxGroupFieldOptionLabel>
-                        </CheckboxGroupFieldOptionWrapper>
-                      ))}
-                    </CheckboxGroupFieldOptions>
-                    <CheckboxGroupFieldHint>
-                      Check at least {TAGS_MIN_LENGTH} tags
-                    </CheckboxGroupFieldHint>
-                    <CheckboxGroupFieldError>
-                      {touched.tags && errors.tags ? errors.tags : ``}
-                    </CheckboxGroupFieldError>
-                  </CheckboxGroupField>
+                            if (target.checked) {
+                              valueArray.push(value)
+                            } else {
+                              valueArray.splice(valueArray.indexOf(value), 1)
+                            }
 
-                  <CheckboxField
-                    id="agreementField"
-                    hasError={!!(touched.agreement && errors.agreement)}
-                  >
-                    <CheckboxFieldWrapper css={stackItemCss}>
-                      <CheckboxFieldControl
-                        name="agreement"
-                        value={+values.agreement}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                      />
-                      <CheckboxFieldLabel size={`S`}>
-                        I have read and agree with the <a href="/">Terms</a> and{" "}
-                        <a href="/">Privacy Policy</a>. Lorem Ipsum is simply
-                        dummy text of the printing and typesetting industry.
-                      </CheckboxFieldLabel>
+                            setFieldValue(`tags`, valueArray)
+                          }}
+                          onBlur={handleBlur}
+                        />
 
-                      <CheckboxFieldError>
-                        {touched.agreement && errors.agreement
-                          ? errors.agreement
-                          : ``}
-                      </CheckboxFieldError>
-                    </CheckboxFieldWrapper>
-                  </CheckboxField>
+                        <CheckboxGroupFieldOptionLabel optionValue={value}>
+                          {label}
+                        </CheckboxGroupFieldOptionLabel>
+                      </CheckboxGroupFieldOptionWrapper>
+                    ))}
+                  </CheckboxGroupFieldOptions>
+                  <CheckboxGroupFieldHint>
+                    Check at least {TAGS_MIN_LENGTH} tags
+                  </CheckboxGroupFieldHint>
+                  <CheckboxGroupFieldError>
+                    {touched.tags && errors.tags ? errors.tags : ``}
+                  </CheckboxGroupFieldError>
+                </CheckboxGroupField>
 
-                  <Actions isSubmitting={isSubmitting} css={stackItemCss} />
-                </form>
-              )}
-            </Formik>
-          </Wrapper>
-        </StoryUtils.Container>
+                <CheckboxField
+                  id="agreementField"
+                  hasError={!!(touched.agreement && errors.agreement)}
+                >
+                  <CheckboxFieldWrapper css={stackItemCss}>
+                    <CheckboxFieldControl
+                      name="agreement"
+                      value={+values.agreement}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                    />
+                    <CheckboxFieldLabel size={`S`}>
+                      I have read and agree with the <a href="/">Terms</a> and{" "}
+                      <a href="/">Privacy Policy</a>. Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.
+                    </CheckboxFieldLabel>
+
+                    <CheckboxFieldError>
+                      {touched.agreement && errors.agreement
+                        ? errors.agreement
+                        : ``}
+                    </CheckboxFieldError>
+                  </CheckboxFieldWrapper>
+                </CheckboxField>
+
+                <Actions isSubmitting={isSubmitting} css={stackItemCss} />
+              </form>
+            )}
+          </Formik>
+        </Wrapper>
       )
     }
 
@@ -435,142 +431,140 @@ storiesOf(`form/Formik usage examples`, module)
       })
 
       return (
-        <StoryUtils.Container>
-          <Wrapper>
-            <Formik
-              validationSchema={validationSchema}
-              initialValues={initailValues}
-              onSubmit={() => {
-                setTimeout(() => {
-                  alert("Form submitted")
-                }, 1000)
-              }}
-            >
-              {({
-                values,
-                touched,
-                handleChange,
-                setFieldValue,
-                handleBlur,
-                setFieldTouched,
-                isSubmitting,
-                handleSubmit,
-                errors,
-              }: FormikProps<MyFormValues>) => (
-                <form onSubmit={handleSubmit} noValidate css={stackCss}>
-                  <InputFieldBlock
-                    id="titleField"
-                    label="Title"
-                    name="title"
-                    value={values.title}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={touched.title && errors.title ? errors.title : ``}
-                    hint={`At least ${TITLE_MIN_LENGTH} and not more than ${TITLE_MAX_LENGTH} characters`}
-                    required
-                    css={stackItemCss}
-                  />
+        <Wrapper>
+          <Formik
+            validationSchema={validationSchema}
+            initialValues={initailValues}
+            onSubmit={() => {
+              setTimeout(() => {
+                alert("Form submitted")
+              }, 1000)
+            }}
+          >
+            {({
+              values,
+              touched,
+              handleChange,
+              setFieldValue,
+              handleBlur,
+              setFieldTouched,
+              isSubmitting,
+              handleSubmit,
+              errors,
+            }: FormikProps<MyFormValues>) => (
+              <form onSubmit={handleSubmit} noValidate css={stackCss}>
+                <InputFieldBlock
+                  id="titleField"
+                  label="Title"
+                  name="title"
+                  value={values.title}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  error={touched.title && errors.title ? errors.title : ``}
+                  hint={`At least ${TITLE_MIN_LENGTH} and not more than ${TITLE_MAX_LENGTH} characters`}
+                  required
+                  css={stackItemCss}
+                />
 
-                  <TextAreaFieldBlock
-                    id="descriptionField"
-                    label="Description"
-                    name="description"
-                    value={values.description}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={
-                      touched.description && errors.description
-                        ? errors.description
-                        : ``
+                <TextAreaFieldBlock
+                  id="descriptionField"
+                  label="Description"
+                  name="description"
+                  value={values.description}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  error={
+                    touched.description && errors.description
+                      ? errors.description
+                      : ``
+                  }
+                  hint={`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}
+                  css={stackItemCss}
+                />
+
+                <SelectFieldBlock
+                  id="authorField"
+                  label="Author"
+                  name="author"
+                  options={authors}
+                  value={values.author}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  error={touched.author && errors.author ? errors.author : ``}
+                  required
+                  css={stackItemCss}
+                />
+
+                <RadioButtonFieldBlock
+                  id="categoryField"
+                  label="Category"
+                  name="category"
+                  value={values.category}
+                  options={categories}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  error={
+                    touched.category && errors.category ? errors.category : ``
+                  }
+                  required
+                  css={stackItemCss}
+                />
+
+                <CheckboxGroupFieldBlock
+                  id="tagsField"
+                  layout="horizontal"
+                  label="Tags"
+                  name="tags"
+                  value={values.tags}
+                  options={tags}
+                  onChange={e => {
+                    const target = e.currentTarget
+                    const valueArray = [...values.tags] || []
+
+                    if (target.checked) {
+                      valueArray.push(target.value)
+                    } else {
+                      valueArray.splice(valueArray.indexOf(target.value), 1)
                     }
-                    hint={`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}
-                    css={stackItemCss}
-                  />
 
-                  <SelectFieldBlock
-                    id="authorField"
-                    label="Author"
-                    name="author"
-                    options={authors}
-                    value={values.author}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={touched.author && errors.author ? errors.author : ``}
-                    required
-                    css={stackItemCss}
-                  />
+                    setFieldValue(`tags`, valueArray)
+                  }}
+                  onBlur={() => {
+                    setFieldTouched(`tags`, true)
+                  }}
+                  error={touched.tags && errors.tags ? errors.tags : ``}
+                  hint={`Check at least ${TAGS_MIN_LENGTH} tags`}
+                  required
+                  css={stackItemCss}
+                />
 
-                  <RadioButtonFieldBlock
-                    id="categoryField"
-                    label="Category"
-                    name="category"
-                    value={values.category}
-                    options={categories}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={
-                      touched.category && errors.category ? errors.category : ``
-                    }
-                    required
-                    css={stackItemCss}
-                  />
+                <CheckboxFieldBlock
+                  id="agreementField"
+                  label={
+                    <React.Fragment>
+                      I have read and agree with the <a href="/">Terms</a> and{" "}
+                      <a href="/">Privacy Policy</a>. Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.
+                    </React.Fragment>
+                  }
+                  labelSize="S"
+                  name="agreement"
+                  value={+values.agreement}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  error={
+                    touched.agreement && errors.agreement
+                      ? errors.agreement
+                      : ``
+                  }
+                  css={stackItemCss}
+                />
 
-                  <CheckboxGroupFieldBlock
-                    id="tagsField"
-                    layout="horizontal"
-                    label="Tags"
-                    name="tags"
-                    value={values.tags}
-                    options={tags}
-                    onChange={e => {
-                      const target = e.currentTarget
-                      const valueArray = [...values.tags] || []
-
-                      if (target.checked) {
-                        valueArray.push(target.value)
-                      } else {
-                        valueArray.splice(valueArray.indexOf(target.value), 1)
-                      }
-
-                      setFieldValue(`tags`, valueArray)
-                    }}
-                    onBlur={() => {
-                      setFieldTouched(`tags`, true)
-                    }}
-                    error={touched.tags && errors.tags ? errors.tags : ``}
-                    hint={`Check at least ${TAGS_MIN_LENGTH} tags`}
-                    required
-                    css={stackItemCss}
-                  />
-
-                  <CheckboxFieldBlock
-                    id="agreementField"
-                    label={
-                      <React.Fragment>
-                        I have read and agree with the <a href="/">Terms</a> and{" "}
-                        <a href="/">Privacy Policy</a>. Lorem Ipsum is simply
-                        dummy text of the printing and typesetting industry.
-                      </React.Fragment>
-                    }
-                    labelSize="S"
-                    name="agreement"
-                    value={+values.agreement}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={
-                      touched.agreement && errors.agreement
-                        ? errors.agreement
-                        : ``
-                    }
-                    css={stackItemCss}
-                  />
-
-                  <Actions isSubmitting={isSubmitting} css={stackItemCss} />
-                </form>
-              )}
-            </Formik>
-          </Wrapper>
-        </StoryUtils.Container>
+                <Actions isSubmitting={isSubmitting} css={stackItemCss} />
+              </form>
+            )}
+          </Formik>
+        </Wrapper>
       )
     }
 
@@ -590,74 +584,72 @@ storiesOf(`form/Formik usage examples`, module)
       })
 
       return (
-        <StoryUtils.Container>
-          <Wrapper>
-            <Formik
-              validationSchema={validationSchema}
-              initialValues={initailValues}
-              onSubmit={() => {
-                setTimeout(() => {
-                  alert("Form submitted")
-                }, 1000)
-              }}
-            >
-              {({ isSubmitting, handleSubmit }) => (
-                <form onSubmit={handleSubmit} noValidate css={stackCss}>
-                  <InputConnectedField
-                    name="title"
-                    hint={`At least ${TITLE_MIN_LENGTH} and not more than ${TITLE_MAX_LENGTH} characters`}
-                    required
-                    css={stackItemCss}
-                  />
+        <Wrapper>
+          <Formik
+            validationSchema={validationSchema}
+            initialValues={initailValues}
+            onSubmit={() => {
+              setTimeout(() => {
+                alert("Form submitted")
+              }, 1000)
+            }}
+          >
+            {({ isSubmitting, handleSubmit }) => (
+              <form onSubmit={handleSubmit} noValidate css={stackCss}>
+                <InputConnectedField
+                  name="title"
+                  hint={`At least ${TITLE_MIN_LENGTH} and not more than ${TITLE_MAX_LENGTH} characters`}
+                  required
+                  css={stackItemCss}
+                />
 
-                  <TextAreaConnectedField
-                    name="description"
-                    hint={`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}
-                    css={stackItemCss}
-                  />
+                <TextAreaConnectedField
+                  name="description"
+                  hint={`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}
+                  css={stackItemCss}
+                />
 
-                  <SelectConnectedField
-                    name="author"
-                    options={authors}
-                    required
-                    css={stackItemCss}
-                  />
+                <SelectConnectedField
+                  name="author"
+                  options={authors}
+                  required
+                  css={stackItemCss}
+                />
 
-                  <RadioButtonConnectedField
-                    name="category"
-                    options={categories}
-                    required
-                    css={stackItemCss}
-                  />
+                <RadioButtonConnectedField
+                  name="category"
+                  options={categories}
+                  required
+                  css={stackItemCss}
+                />
 
-                  <CheckboxGroupConnectedField
-                    name="tags"
-                    options={tags}
-                    layout="horizontal"
-                    hint={`Check at least ${TAGS_MIN_LENGTH} tags`}
-                    required
-                    css={stackItemCss}
-                  />
+                <CheckboxGroupConnectedField
+                  name="tags"
+                  options={tags}
+                  layout="horizontal"
+                  hint={`Check at least ${TAGS_MIN_LENGTH} tags`}
+                  required
+                  css={stackItemCss}
+                />
 
-                  <CheckboxConnectedField
-                    name="agreement"
-                    label={
-                      <React.Fragment>
-                        I have read and agree with the <a href="/">Terms</a> and{" "}
-                        <a href="/">Privacy Policy</a>. Lorem Ipsum is simply
-                        dummy text of the printing and typesetting industry.
-                      </React.Fragment>
-                    }
-                    labelSize="S"
-                    css={stackItemCss}
-                  />
+                <CheckboxConnectedField
+                  name="agreement"
+                  label={
+                    <React.Fragment>
+                      I have read and agree with the <a href="/">Terms</a> and{" "}
+                      <a href="/">Privacy Policy</a>. Lorem Ipsum is simply
+                      dummy text of the printing and typesetting industry.
+                    </React.Fragment>
+                  }
+                  labelSize="S"
+                  css={stackItemCss}
+                />
 
-                  <Actions isSubmitting={isSubmitting} css={stackItemCss} />
-                </form>
-              )}
-            </Formik>
-          </Wrapper>
-        </StoryUtils.Container>
+                <Actions isSubmitting={isSubmitting} css={stackItemCss} />
+              </form>
+            )}
+          </Formik>
+        </Wrapper>
       )
     }
 
