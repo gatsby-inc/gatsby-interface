@@ -12,11 +12,10 @@ import {
   MenuProps,
 } from "@reach/menu-button"
 import { MdKeyboardArrowDown } from "react-icons/md"
-import { dropdownCss, dropdownLabelCss } from "./styles"
+import { dropdownCss, dropdownLabelCss, menuItemCss } from "./styles"
 
 export const Dropdown: React.FC<MenuProps> = props => <Menu {...props} />
 
-// Dropdown Label
 export type DropdownLabelProps = MenuButtonProps & {
   placeholder: React.ReactNode
 }
@@ -31,11 +30,10 @@ export const DropdownLabel: React.FC<DropdownLabelProps> = ({
   </MenuButton>
 )
 
-// DropdownItems
-export const DropdownItems: React.FC<MenuListProps> = props => {
-  return <MenuList {...props} css={dropdownCss}></MenuList>
-}
+export const DropdownItems: React.FC<MenuListProps> = props => (
+  <MenuList {...props} css={dropdownCss}></MenuList>
+)
 
 export const DropdownItem: React.FC<MenuItemProps> = props => (
-  <MenuItem {...props} />
+  <MenuItem {...props} css={menuItemCss} />
 )
