@@ -10,7 +10,7 @@ const STATUSES: StepIndicatorStepStatus[] = ["DEFAULT", "ACTIVE", "DONE"]
 export default {
   title: `StepIndicator`,
   component: StepIndicator,
-  subcomponents: [StepIndicatorStep],
+  subcomponents: { StepIndicatorStep },
 }
 
 export const Basic = () => (

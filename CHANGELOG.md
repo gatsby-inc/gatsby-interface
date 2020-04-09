@@ -2,33 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.128](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.127...v0.0.128) (2020-04-07)
+### [0.0.129](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.128...v0.0.129) (2020-04-09)
 
+### [0.0.128](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.127...v0.0.128) (2020-04-07)
 
 ### Features
 
-* StickyObserver, StyledPanel and StyledModalActions components ([#276](https://github.com/gatsby-inc/gatsby-interface/issues/276)) ([37cbd43](https://github.com/gatsby-inc/gatsby-interface/commit/37cbd43add10c365925f205f2f9c332bcfb98691))
+- StickyObserver, StyledPanel and StyledModalActions components ([#276](https://github.com/gatsby-inc/gatsby-interface/issues/276)) ([37cbd43](https://github.com/gatsby-inc/gatsby-interface/commit/37cbd43add10c365925f205f2f9c332bcfb98691))
 
 ### [0.0.127](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.126...v0.0.127) (2020-04-06)
 
-
 ### Features
 
-* realign `<SidebarNav>` ([#274](https://github.com/gatsby-inc/gatsby-interface/issues/274)) ([a66022a](https://github.com/gatsby-inc/gatsby-interface/commit/a66022a17142b573c812377441c24e86beade552)), closes [/github.com/facebook/jest/issues/9292#issuecomment-569673251](https://github.com/gatsby-inc//github.com/facebook/jest/issues/9292/issues/issuecomment-569673251) [#277](https://github.com/gatsby-inc/gatsby-interface/issues/277)
+- realign `<SidebarNav>` ([#274](https://github.com/gatsby-inc/gatsby-interface/issues/274)) ([a66022a](https://github.com/gatsby-inc/gatsby-interface/commit/a66022a17142b573c812377441c24e86beade552)), closes [/github.com/facebook/jest/issues/9292#issuecomment-569673251](https://github.com/gatsby-inc//github.com/facebook/jest/issues/9292/issues/issuecomment-569673251) [#277](https://github.com/gatsby-inc/gatsby-interface/issues/277)
 
 ### [0.0.126](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.125...v0.0.126) (2020-04-06)
 
-
 ### Features
 
-* DensityProvider ([#268](https://github.com/gatsby-inc/gatsby-interface/issues/268)) ([0e00cd4](https://github.com/gatsby-inc/gatsby-interface/commit/0e00cd40a2d5d6b85e946a8eb92f30474c7a83e6))
+- DensityProvider ([#268](https://github.com/gatsby-inc/gatsby-interface/issues/268)) ([0e00cd4](https://github.com/gatsby-inc/gatsby-interface/commit/0e00cd40a2d5d6b85e946a8eb92f30474c7a83e6))
 
 ### [0.0.125](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.124...v0.0.125) (2020-04-03)
 
-
 ### Features
 
-* StyledModal component ([#266](https://github.com/gatsby-inc/gatsby-interface/issues/266)) ([373e440](https://github.com/gatsby-inc/gatsby-interface/commit/373e4407d3b5d3b0e15f5d210e1232ad332185a9))
+- StyledModal component ([#266](https://github.com/gatsby-inc/gatsby-interface/issues/266)) ([373e440](https://github.com/gatsby-inc/gatsby-interface/commit/373e4407d3b5d3b0e15f5d210e1232ad332185a9))
 
 ### [0.0.124](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.123...v0.0.124) (2020-04-03)
 
@@ -38,10 +36,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.121](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.120...v0.0.121) (2020-04-01)
 
-
 ### Features
 
-* Add ConcealedValue component ([#256](https://github.com/gatsby-inc/gatsby-interface/issues/256)) ([84f3d36](https://github.com/gatsby-inc/gatsby-interface/commit/84f3d36366d990e0d90777273b17b8fe25660a25))
+- Add ConcealedValue component ([#256](https://github.com/gatsby-inc/gatsby-interface/issues/256)) ([84f3d36](https://github.com/gatsby-inc/gatsby-interface/commit/84f3d36366d990e0d90777273b17b8fe25660a25))
 
 ### [0.0.120](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.119...v0.0.120) (2020-04-01)
 

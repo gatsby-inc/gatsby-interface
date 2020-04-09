@@ -16,12 +16,12 @@ import { LipShadowPosition } from "./StickyObserver"
 export default {
   title: `StickyObserver`,
   component: StickyObserver,
-  subcomponents: [
+  subcomponents: {
     StickyObserverProvider,
     StickyObservedContainer,
     StickyObserverSentinel,
     StickyLipShadow,
-  ],
+  },
 }
 
 function ScrollableContent({ blocksCount = 5 }: { blocksCount?: number }) {

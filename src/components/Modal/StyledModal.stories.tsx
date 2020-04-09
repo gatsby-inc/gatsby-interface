@@ -22,7 +22,7 @@ import { Button } from "../Button"
 export default {
   title: `Modal/StyledModal`,
   component: StyledModal,
-  subcomponents: [StyledModalHeader, StyledModalBody, StyledModalActions],
+  subcomponents: { StyledModalHeader, StyledModalBody, StyledModalActions },
   parameters: {
     options: {
       showRoots: true,
