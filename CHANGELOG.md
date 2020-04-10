@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.131](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.130...v0.0.131) (2020-04-10)
+
+
+### Features
+
+* Form updates for radio button block and connected single input blocks ([#283](https://github.com/gatsby-inc/gatsby-interface/issues/283)) ([695ff12](https://github.com/gatsby-inc/gatsby-interface/commit/695ff126f4ff82526fad2230ceaa1b6660b2170f))
+
 ### [0.0.130](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.129...v0.0.130) (2020-04-09)
 
 ### [0.0.129](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.128...v0.0.129) (2020-04-09)
