@@ -5,19 +5,23 @@ import {
   RadioButtonField,
   RadioButtonFieldLabel,
   RadioButtonFieldOptions,
-  RadioButtonFieldOptionWrapper,
-  RadioButtonFieldOption,
-  RadioButtonFieldOptionLabel,
   RadioButtonFieldHint,
   RadioButtonFieldError,
-  RadioButtonFieldOptionProps,
+  RadioButtonFieldOptionItem,
+  RadioButtonFieldOptionItemProps,
 } from "./RadioButtonField"
 import { WithFormFieldBlock } from "./FormField"
+import { RadioButtonFieldSkeletonOptionProps } from "../../form-skeletons"
+
+export type RadioButtonFieldBlockOption = {
+  label: React.ReactNode
+  value: string
+} & Partial<Omit<RadioButtonFieldSkeletonOptionProps, "label" | "value">>
 
 export type RadioButtonFieldBlockProps = WithFormFieldBlock<
   {
-    options: { label: string; value: any }[]
-  } & RadioButtonFieldOptionProps
+    options: RadioButtonFieldBlockOption[]
+  } & RadioButtonFieldOptionItemProps
 >
 
 export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
@@ -45,17 +49,15 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
         {label}
       </RadioButtonFieldLabel>
       <RadioButtonFieldOptions>
-        {options.map(({ label, value }) => (
-          <RadioButtonFieldOptionWrapper key={value}>
-            <RadioButtonFieldOption
-              value={value}
-              checked={value === fieldValue}
-              {...rest}
-            />
-            <RadioButtonFieldOptionLabel optionValue={value}>
-              {label}
-            </RadioButtonFieldOptionLabel>
-          </RadioButtonFieldOptionWrapper>
+        {options.map(({ value, label, ...restOption }) => (
+          <RadioButtonFieldOptionItem
+            key={value}
+            value={value}
+            checked={value === fieldValue}
+            label={label}
+            {...rest}
+            {...restOption}
+          />
         ))}
       </RadioButtonFieldOptions>
       <RadioButtonFieldHint>{hint}</RadioButtonFieldHint>
