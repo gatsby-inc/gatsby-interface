@@ -11,10 +11,16 @@ import {
   RadioButtonFieldOptionItemProps,
 } from "./RadioButtonField"
 import { WithFormFieldBlock } from "./FormField"
+import { RadioButtonFieldSkeletonOptionProps } from "../../form-skeletons"
+
+export type RadioButtonFieldBlockOption = {
+  label: React.ReactNode
+  value: string
+} & Partial<Omit<RadioButtonFieldSkeletonOptionProps, "label" | "value">>
 
 export type RadioButtonFieldBlockProps = WithFormFieldBlock<
   {
-    options: { label: string; value: any }[]
+    options: RadioButtonFieldBlockOption[]
   } & RadioButtonFieldOptionItemProps
 >
 
@@ -29,7 +35,6 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
     validationMode,
     value: fieldValue,
     options,
-    children,
     ...rest
   } = props
 
@@ -44,16 +49,16 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
         {label}
       </RadioButtonFieldLabel>
       <RadioButtonFieldOptions>
-        {children ||
-          options.map(({ label, value }) => (
-            <RadioButtonFieldOptionItem
-              key={value}
-              value={value}
-              checked={value === fieldValue}
-              label={label}
-              {...rest}
-            />
-          ))}
+        {options.map(({ value, label, ...restOption }) => (
+          <RadioButtonFieldOptionItem
+            key={value}
+            value={value}
+            checked={value === fieldValue}
+            label={label}
+            {...rest}
+            {...restOption}
+          />
+        ))}
       </RadioButtonFieldOptions>
       <RadioButtonFieldHint>{hint}</RadioButtonFieldHint>
       <RadioButtonFieldError validationMode={validationMode}>

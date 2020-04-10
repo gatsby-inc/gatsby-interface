@@ -46,7 +46,7 @@ export function CheckboxGroupFieldSkeletonError(
 
 export type CheckboxGroupFieldSkeletonOptionProps = Omit<
   FormGroupFieldSkeletonOptionProps,
-  "type" | "ref"
+  "type" | "ref" | "children"
 >
 
 export const CheckboxGroupFieldSkeletonOption = React.forwardRef<
