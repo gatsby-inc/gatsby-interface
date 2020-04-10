@@ -110,9 +110,10 @@ const getFrameStyles: ThemeCss = theme => ({
 
 export type RadioButtonFieldOptionLabelProps = RadioButtonFieldSkeletonOptionLabelProps &
   FormGroupFieldOptionLabelProps
-export const RadioButtonFieldOptionLabel: React.FC<
-  RadioButtonFieldOptionLabelProps
-> = ({ size, ...rest }) => {
+export const RadioButtonFieldOptionLabel: React.FC<RadioButtonFieldOptionLabelProps> = ({
+  size,
+  ...rest
+}) => {
   const { hasError } = useFormFieldSkeleton()
   const { css, ...styledProps } = useStyledGroupFieldOptionLabel({ size })
   const { variant } = useFormGroupField()
@@ -163,9 +164,7 @@ export type RadioButtonFieldOptionFrameProps = Pick<
   "className" | "style"
 >
 
-export const RadioButtonFieldOptionFrame: React.FC<
-  RadioButtonFieldOptionFrameProps
-> = props => {
+export const RadioButtonFieldOptionFrame: React.FC<RadioButtonFieldOptionFrameProps> = props => {
   const { variant } = useFormGroupField()
 
   return (
@@ -225,4 +224,23 @@ export function RadioButtonFieldOptionWrapper(
   props: RadioButtonFieldOptionWrapperProps
 ) {
   return <FormGroupFieldOptionWrapper {...props} />
+}
+
+export type RadioButtonFieldOptionItemProps = RadioButtonFieldOptionProps & {
+  label: React.ReactNode
+}
+
+export function RadioButtonFieldOptionItem({
+  label,
+  value,
+  ...rest
+}: RadioButtonFieldOptionItemProps) {
+  return (
+    <RadioButtonFieldOptionWrapper>
+      <RadioButtonFieldOption value={value} {...rest} />
+      <RadioButtonFieldOptionLabel optionValue={value}>
+        {label}
+      </RadioButtonFieldOptionLabel>
+    </RadioButtonFieldOptionWrapper>
+  )
 }

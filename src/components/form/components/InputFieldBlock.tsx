@@ -18,7 +18,7 @@ export type InputFieldBlockProps = WithFormFieldBlock<InputFieldControlProps>
 export const InputFieldBlock = React.forwardRef<
   HTMLInputElement,
   InputFieldBlockProps
->((props, ref) => {
+>(function InputFieldBlock(props, ref) {
   const {
     id,
     label,

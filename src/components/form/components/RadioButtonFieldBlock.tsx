@@ -5,19 +5,17 @@ import {
   RadioButtonField,
   RadioButtonFieldLabel,
   RadioButtonFieldOptions,
-  RadioButtonFieldOptionWrapper,
-  RadioButtonFieldOption,
-  RadioButtonFieldOptionLabel,
   RadioButtonFieldHint,
   RadioButtonFieldError,
-  RadioButtonFieldOptionProps,
+  RadioButtonFieldOptionItem,
+  RadioButtonFieldOptionItemProps,
 } from "./RadioButtonField"
 import { WithFormFieldBlock } from "./FormField"
 
 export type RadioButtonFieldBlockProps = WithFormFieldBlock<
   {
     options: { label: string; value: any }[]
-  } & RadioButtonFieldOptionProps
+  } & RadioButtonFieldOptionItemProps
 >
 
 export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
@@ -31,6 +29,7 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
     validationMode,
     value: fieldValue,
     options,
+    children,
     ...rest
   } = props
 
@@ -45,18 +44,16 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
         {label}
       </RadioButtonFieldLabel>
       <RadioButtonFieldOptions>
-        {options.map(({ label, value }) => (
-          <RadioButtonFieldOptionWrapper key={value}>
-            <RadioButtonFieldOption
+        {children ||
+          options.map(({ label, value }) => (
+            <RadioButtonFieldOptionItem
+              key={value}
               value={value}
               checked={value === fieldValue}
+              label={label}
               {...rest}
             />
-            <RadioButtonFieldOptionLabel optionValue={value}>
-              {label}
-            </RadioButtonFieldOptionLabel>
-          </RadioButtonFieldOptionWrapper>
-        ))}
+          ))}
       </RadioButtonFieldOptions>
       <RadioButtonFieldHint>{hint}</RadioButtonFieldHint>
       <RadioButtonFieldError validationMode={validationMode}>
