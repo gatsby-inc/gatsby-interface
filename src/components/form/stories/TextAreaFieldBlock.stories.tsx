@@ -14,6 +14,7 @@ const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 export default {
   title: `Form/Styled Blocks/TextAreaFieldBlock`,
   parameters: {
+    layout: `padded`,
     options: {
       showRoots: true,
     },

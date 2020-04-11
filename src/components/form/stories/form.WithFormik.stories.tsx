@@ -4,33 +4,10 @@ import React from "react"
 
 import { storiesOf } from "@storybook/react"
 import README from "../README_FORMIK.md"
-import {
-  InputField,
-  InputFieldWrapper,
-  InputFieldControl,
-  InputFieldLabel,
-  InputFieldError,
-  InputFieldHint,
-} from "../components/InputField"
 import { InputFieldBlock } from "../components/InputFieldBlock"
 import { InputConnectedField } from "../components/InputConnectedField"
-import {
-  TextAreaField,
-  TextAreaFieldWrapper,
-  TextAreaFieldLabel,
-  TextAreaFieldControl,
-  TextAreaFieldHint,
-  TextAreaFieldError,
-} from "../components/TextAreaField"
 import { TextAreaFieldBlock } from "../components/TextAreaFieldBlock"
 import { TextAreaConnectedField } from "../components/TextAreaConnectedField"
-import {
-  SelectField,
-  SelectFieldWrapper,
-  SelectFieldLabel,
-  SelectFieldControl,
-  SelectFieldError,
-} from "../components/SelectField"
 import { SelectFieldBlock } from "../components/SelectFieldBlock"
 import { SelectConnectedField } from "../components/SelectConnectedField"
 import {
@@ -241,73 +218,6 @@ storiesOf(`form/Formik usage examples`, module)
               errors,
             }: FormikProps<MyFormValues>) => (
               <form onSubmit={handleSubmit} noValidate css={stackCss}>
-                <InputField
-                  id="titleField"
-                  hasError={!!(touched.title && errors.title)}
-                  hasHint={true}
-                >
-                  <InputFieldWrapper css={stackItemCss}>
-                    <InputFieldLabel isRequired={true}>Title</InputFieldLabel>
-                    <InputFieldControl
-                      name="title"
-                      value={values.title}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      required
-                    />
-                    <InputFieldHint>
-                      At least {TITLE_MIN_LENGTH} and not more than{" "}
-                      {TITLE_MAX_LENGTH} characters
-                    </InputFieldHint>
-                    <InputFieldError>
-                      {touched.title && errors.title ? errors.title : ``}
-                    </InputFieldError>
-                  </InputFieldWrapper>
-                </InputField>
-
-                <TextAreaField
-                  id="descriptionField"
-                  hasError={!!(touched.description && errors.description)}
-                  hasHint={true}
-                >
-                  <TextAreaFieldWrapper css={stackItemCss}>
-                    <TextAreaFieldLabel>Description</TextAreaFieldLabel>
-                    <TextAreaFieldControl
-                      name="description"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.description}
-                    />
-                    <TextAreaFieldHint>{`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}</TextAreaFieldHint>
-                    <TextAreaFieldError>
-                      {touched.description && errors.description
-                        ? errors.description
-                        : ``}
-                    </TextAreaFieldError>
-                  </TextAreaFieldWrapper>
-                </TextAreaField>
-
-                <SelectField
-                  id="authorField"
-                  hasError={!!(touched.author && errors.author)}
-                >
-                  <SelectFieldWrapper css={stackItemCss}>
-                    <SelectFieldLabel isRequired={true}>
-                      Author
-                    </SelectFieldLabel>
-                    <SelectFieldControl
-                      name="author"
-                      options={authors}
-                      value={values.author}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                    />
-                    <SelectFieldError>
-                      {touched.author && errors.author ? errors.author : ``}
-                    </SelectFieldError>
-                  </SelectFieldWrapper>
-                </SelectField>
-
                 <RadioButtonField
                   id="categoryField"
                   hasError={!!(touched.category && errors.category)}
@@ -341,7 +251,7 @@ storiesOf(`form/Formik usage examples`, module)
                   id="tagsField"
                   hasError={!!(touched.tags && errors.tags)}
                   hasHint={true}
-                  layout="horizontal"
+                  optionsDirection="horizontal"
                   css={stackItemCss}
                 >
                   <CheckboxGroupFieldLabel isRequired={true}>

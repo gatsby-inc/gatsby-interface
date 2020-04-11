@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core"
 
 import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import { InputFieldBlock } from "../components/InputFieldBlock"
+import { CheckboxFieldBlock } from "../components/CheckboxFieldBlock"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
@@ -12,7 +12,7 @@ import { withVariationsContainer } from "../../../utils/storybook"
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
 export default {
-  title: `Form/Styled Blocks/InputFieldBlock`,
+  title: `Form/Styled Blocks/CheckboxFieldBlock`,
   parameters: {
     layout: `padded`,
     options: {
@@ -26,7 +26,7 @@ export default {
 }
 
 export const Basic = () => (
-  <InputFieldBlock
+  <CheckboxFieldBlock
     id="inputFieldBlock"
     label="Field label"
     onChange={e => action(`Change`)(e.target.value)}
@@ -36,7 +36,7 @@ export const Basic = () => (
 export const Sandbox = () => {
   const placeholder = text(`Placeholder`, `This is a placeholder`)
   return (
-    <InputFieldBlock
+    <CheckboxFieldBlock
       id="inputFieldBlock"
       placeholder={placeholder}
       {...getFieldBlockSandboxProps()}
@@ -51,19 +51,23 @@ Sandbox.story = {
 }
 
 export const Required = () => (
-  <InputFieldBlock id="inputFieldBlock" label="Field label" required />
+  <CheckboxFieldBlock id="inputFieldBlock" label="Field label" required />
 )
 
 export const Disabled = () => (
-  <InputFieldBlock id="inputFieldBlock" label="Field label" disabled />
+  <CheckboxFieldBlock id="inputFieldBlock" label="Field label" disabled />
 )
 
 export const WithHint = () => (
-  <InputFieldBlock id="inputFieldBlock" label="Field label" hint="Hint text" />
+  <CheckboxFieldBlock
+    id="inputFieldBlock"
+    label="Field label"
+    hint="Hint text"
+  />
 )
 
 export const WithError = () => (
-  <InputFieldBlock
+  <CheckboxFieldBlock
     id="inputFieldBlock"
     label="Field label"
     error="Error message"
@@ -71,7 +75,7 @@ export const WithError = () => (
 )
 
 export const WithErrorAndHint = () => (
-  <InputFieldBlock
+  <CheckboxFieldBlock
     id="inputFieldBlock"
     label="Field label"
     hint="Hint text"
@@ -80,7 +84,7 @@ export const WithErrorAndHint = () => (
 )
 
 export const WithRichText = () => (
-  <InputFieldBlock
+  <CheckboxFieldBlock
     id="inputFieldBlock"
     label={
       <span>
@@ -102,7 +106,7 @@ export const WithRichText = () => (
 
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
-    <InputFieldBlock
+    <CheckboxFieldBlock
       key={labelSize}
       id={`inputFieldBlock__size--${labelSize}`}
       label={`Label size: "${labelSize}"`}

@@ -44,11 +44,14 @@ export type RadioButtonFieldProps = WithFormGroupField<
 >
 export function RadioButtonField({
   variant,
-  layout,
+  optionsDirection,
   ...rest
 }: RadioButtonFieldProps) {
   return (
-    <FormGroupFieldProvider variant={variant} layout={layout}>
+    <FormGroupFieldProvider
+      variant={variant}
+      optionsDirection={optionsDirection}
+    >
       <RadioButtonFieldSkeleton
         css={(theme: Theme) => [
           formGroupFieldCss(theme),

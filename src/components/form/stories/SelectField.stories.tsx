@@ -5,20 +5,34 @@ import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
 import {
   SelectField,
-  SelectFieldWrapper,
   SelectFieldLabel,
   SelectFieldControl,
   SelectFieldHint,
   SelectFieldError,
 } from "../components/SelectField"
-import { getFieldBlockSandboxProps } from "./stories.utils"
+import { getFieldSandboxProps, FieldDocDisclaimer } from "./stories.utils"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
 
-const options = getGroupFieldStoryOptions()
+const options = getGroupFieldStoryOptions("long")
 
 export default {
   title: `Form/Styled Primitives/SelectField`,
+  component: SelectField,
+  subcomponents: {
+    SelectFieldLabel,
+    SelectFieldControl,
+    SelectFieldHint,
+    SelectFieldError,
+  },
   parameters: {
+    componentSubtitle: (
+      <FieldDocDisclaimer
+        fieldType="select"
+        blockComponentName="SelectFieldBlock"
+        connectedComponentName="SelectConnectedField"
+      />
+    ),
+    layout: `padded`,
     options: {
       showRoots: true,
     },
@@ -29,14 +43,14 @@ export default {
 }
 
 export const Basic = () => (
-  <SelectField id="SelectField">
-    <SelectFieldWrapper>
-      <SelectFieldLabel>Field label</SelectFieldLabel>
-      <SelectFieldControl
-        onChange={e => action(`Change`)(e.target.value)}
-        options={options}
-      />
-    </SelectFieldWrapper>
+  <SelectField id="SelectField" hasError hasHint>
+    <SelectFieldLabel isRequired>Field label</SelectFieldLabel>
+    <SelectFieldControl
+      onChange={e => action(`Change`)(e.target.value)}
+      options={options}
+    />
+    <SelectFieldHint>Field hint</SelectFieldHint>
+    <SelectFieldError>Field error</SelectFieldError>
   </SelectField>
 )
 
@@ -48,23 +62,21 @@ export const Sandbox = () => {
     hint,
     disabled,
     required,
-  } = getFieldBlockSandboxProps()
+  } = getFieldSandboxProps()
 
   return (
-    <SelectField id="SelectField" hasError={!!error} hasHint={!!hint}>
-      <SelectFieldWrapper>
-        <SelectFieldLabel size={labelSize} isRequired={required}>
-          {label}
-        </SelectFieldLabel>
-        <SelectFieldControl
-          options={options}
-          onChange={e => action(`Change`)(e.target.value)}
-          disabled={disabled}
-          required={required}
-        />
-        <SelectFieldHint>{hint}</SelectFieldHint>
-        <SelectFieldError>{error}</SelectFieldError>
-      </SelectFieldWrapper>
+    <SelectField id="SelectField__sandbox" hasError={!!error} hasHint={!!hint}>
+      <SelectFieldLabel size={labelSize} isRequired={required}>
+        {label}
+      </SelectFieldLabel>
+      <SelectFieldControl
+        options={options}
+        onChange={e => action(`Change`)(e.target.value)}
+        disabled={disabled}
+        required={required}
+      />
+      <SelectFieldHint>{hint}</SelectFieldHint>
+      <SelectFieldError>{error}</SelectFieldError>
     </SelectField>
   )
 }
