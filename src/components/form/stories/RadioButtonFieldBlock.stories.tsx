@@ -3,11 +3,19 @@ import { jsx } from "@emotion/core"
 
 import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import { RadioButtonFieldBlock } from "../components/RadioButtonFieldBlock"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getGroupFieldSandboxProps } from "./stories.utils"
-import { withVariationsContainer } from "../../../utils/storybook"
+import {
+  withVariationsContainer,
+  radioKnobOptions,
+} from "../../../utils/storybook"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
+import { radios } from "@storybook/addon-knobs"
+import {
+  RadioButtonFieldBlock,
+  RadioButtonFieldVariant,
+  FormFieldBlockLayout,
+} from ".."
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
@@ -37,12 +45,15 @@ export const Basic = () => (
   />
 )
 
+const VARIANTS: RadioButtonFieldVariant[] = ["default", "framed"]
+
 export const Sandbox = () => {
   return (
     <RadioButtonFieldBlock
       id="radioButtonFieldBlock"
       name="radioButtonFieldBlock"
       options={options}
+      variant={radios("variant", radioKnobOptions(VARIANTS), "default")}
       {...getGroupFieldSandboxProps()}
     />
   )
@@ -141,5 +152,41 @@ export const LabelSizes = () =>
   ))
 
 LabelSizes.story = {
+  decorators: [withVariationsContainer],
+}
+
+const OPTIONS_DIRECTIONS: FormFieldBlockLayout[] = [`horizontal`, `vertical`]
+
+export const OptionsDirections = () =>
+  OPTIONS_DIRECTIONS.map(optionsDirection => (
+    <RadioButtonFieldBlock
+      key={optionsDirection}
+      id={`radioButtonFieldBlock__${optionsDirection}`}
+      name={`radioButtonFieldBlock__${optionsDirection}`}
+      options={options}
+      label={`Options Direction: ${optionsDirection}`}
+      onChange={e => action(`Change`)(e.target.value)}
+      optionsDirection={optionsDirection}
+    />
+  ))
+
+OptionsDirections.story = {
+  decorators: [withVariationsContainer],
+}
+
+export const Variants = () =>
+  VARIANTS.map(variant => (
+    <RadioButtonFieldBlock
+      key={variant}
+      id={`radioButtonFieldBlock__${variant}`}
+      name={`radioButtonFieldBlock__${variant}`}
+      options={options}
+      label={`Variant: ${variant}`}
+      onChange={e => action(`Change`)(e.target.value)}
+      variant={variant}
+    />
+  ))
+
+Variants.story = {
   decorators: [withVariationsContainer],
 }

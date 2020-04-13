@@ -27,36 +27,30 @@ import {
   FormGroupFieldOptionWrapper,
   useStyledGroupFieldOptionLabel,
   FormGroupFieldOptionLabelProps,
-  useFormGroupField,
   FormGroupFieldProvider,
   formGroupFieldCss,
   WithFormGroupField,
 } from "./FormGroupField"
 import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
-import { getStackStyles } from "../../stack"
 import { Theme, ThemeCss } from "../../../theme"
 
 import { INPUT_WIDTH, INPUT_VERTICAL_OFFSET_CALC } from "./FormGroupField"
 import { WithStyledFieldLabel } from "./FormField"
 
+export type RadioButtonFieldVariant = "default" | "framed"
+
 export type RadioButtonFieldProps = WithFormGroupField<
   RadioButtonFieldSkeletonProps
 >
+
 export function RadioButtonField({
-  variant,
   optionsDirection,
   ...rest
 }: RadioButtonFieldProps) {
   return (
-    <FormGroupFieldProvider
-      variant={variant}
-      optionsDirection={optionsDirection}
-    >
+    <FormGroupFieldProvider optionsDirection={optionsDirection}>
       <RadioButtonFieldSkeleton
-        css={(theme: Theme) => [
-          formGroupFieldCss(theme),
-          variant === `framed` && getStackStyles({ gap: 3, theme }),
-        ]}
+        css={(theme: Theme) => [formGroupFieldCss(theme)]}
         {...rest}
       />
     </FormGroupFieldProvider>
@@ -112,20 +106,24 @@ const getFrameStyles: ThemeCss = theme => ({
 })
 
 export type RadioButtonFieldOptionLabelProps = RadioButtonFieldSkeletonOptionLabelProps &
-  FormGroupFieldOptionLabelProps
+  FormGroupFieldOptionLabelProps & {
+    variant: RadioButtonFieldVariant
+  }
 export const RadioButtonFieldOptionLabel: React.FC<RadioButtonFieldOptionLabelProps> = ({
   size,
+  variant,
   ...rest
 }) => {
   const { hasError } = useFormFieldSkeleton()
   const { css, ...styledProps } = useStyledGroupFieldOptionLabel({ size })
-  const { variant } = useFormGroupField()
 
   return (
     <RadioButtonFieldSkeletonOptionLabel
       css={(theme: Theme) => [
         css(theme),
         {
+          display: `block`,
+          margin: 0,
           "&:before": {
             backgroundColor: theme.colors.white,
             border: hasError
@@ -146,7 +144,6 @@ export const RadioButtonFieldOptionLabel: React.FC<RadioButtonFieldOptionLabelPr
         variant === `framed` && [
           getFrameStyles(theme),
           {
-            marginBottom: 0,
             padding: `${theme.space[4]} ${theme.space[5]}`,
             paddingLeft: `calc(${INPUT_WIDTH} + ${theme.space[7]})`,
             "&:before": {
@@ -158,33 +155,6 @@ export const RadioButtonFieldOptionLabel: React.FC<RadioButtonFieldOptionLabelPr
       ]}
       {...rest}
       {...styledProps}
-    />
-  )
-}
-
-export type RadioButtonFieldOptionFrameProps = Pick<
-  JSX.IntrinsicElements["div"],
-  "className" | "style"
->
-
-export const RadioButtonFieldOptionFrame: React.FC<RadioButtonFieldOptionFrameProps> = props => {
-  const { variant } = useFormGroupField()
-
-  return (
-    <div
-      css={(theme: Theme) => [
-        variant !== `framed` ? getFrameStyles(theme) : {},
-        {
-          label: {
-            display: `block`,
-            margin: 0,
-          },
-          "&:focus-within": {
-            borderColor: theme.colors.purple[40],
-          },
-        },
-      ]}
-      {...props}
     />
   )
 }
@@ -222,26 +192,33 @@ export function RadioButtonFieldOptions(props: RadioButtonFieldOptionsProps) {
   return <FormGroupFieldOptions {...props} />
 }
 
-export type RadioButtonFieldOptionWrapperProps = FormGroupFieldOptionWrapperProps
-export function RadioButtonFieldOptionWrapper(
-  props: RadioButtonFieldOptionWrapperProps
-) {
-  return <FormGroupFieldOptionWrapper {...props} />
+export type RadioButtonFieldOptionWrapperProps = FormGroupFieldOptionWrapperProps & {
+  variant: RadioButtonFieldVariant
+}
+export function RadioButtonFieldOptionWrapper({
+  variant,
+  ...rest
+}: RadioButtonFieldOptionWrapperProps) {
+  return (
+    <FormGroupFieldOptionWrapper {...rest} noSpacing={variant === `framed`} />
+  )
 }
 
 export type RadioButtonFieldOptionItemProps = RadioButtonFieldOptionProps & {
   label: React.ReactNode
+  variant?: RadioButtonFieldVariant
 }
 
 export function RadioButtonFieldOptionItem({
   label,
   value,
+  variant = `default`,
   ...rest
 }: RadioButtonFieldOptionItemProps) {
   return (
-    <RadioButtonFieldOptionWrapper>
+    <RadioButtonFieldOptionWrapper variant={variant}>
       <RadioButtonFieldOption value={value} {...rest} />
-      <RadioButtonFieldOptionLabel optionValue={value}>
+      <RadioButtonFieldOptionLabel optionValue={value} variant={variant}>
         {label}
       </RadioButtonFieldOptionLabel>
     </RadioButtonFieldOptionWrapper>

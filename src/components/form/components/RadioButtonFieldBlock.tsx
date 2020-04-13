@@ -9,6 +9,7 @@ import {
   RadioButtonFieldError,
   RadioButtonFieldOptionItem,
   RadioButtonFieldOptionItemProps,
+  RadioButtonFieldVariant,
 } from "./RadioButtonField"
 import { WithFormFieldBlock, useFormFieldContainerProps } from "./FormField"
 
@@ -22,6 +23,7 @@ export type RadioButtonFieldBlockProps = WithFormFieldBlock<
     options: RadioButtonFieldBlockOption[]
     value?: string
     optionsDirection?: `horizontal` | `vertical`
+    variant?: RadioButtonFieldVariant
   } & Omit<RadioButtonFieldOptionItemProps, "value">
 >
 
@@ -38,6 +40,7 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
     options,
     layout,
     optionsDirection,
+    variant,
     ...rest
   } = props
 
@@ -70,6 +73,7 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
               fieldValue === undefined ? undefined : value === fieldValue
             }
             label={label}
+            variant={variant}
             {...rest}
             {...restOption}
           />

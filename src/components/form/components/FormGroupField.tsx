@@ -15,33 +15,28 @@ export const INPUT_VERTICAL_OFFSET_CALC = `(1em - 14px) * 0.5`
 
 export type FormGroupFieldContextValue = {
   optionsDirection?: `horizontal` | `vertical`
-  variant?: `standard` | `framed`
 }
 
 const FormGroupFieldContext = React.createContext<FormGroupFieldContextValue>({
-  variant: undefined,
   optionsDirection: undefined,
 })
 
 export type FormGroupFieldProviderProps = {
   optionsDirection?: `horizontal` | `vertical`
-  variant?: `standard` | `framed`
   children?: React.ReactNode
 }
 
-// TODO we can probably do away with context for optionsDirection and variant
-// they can be replaced with passing props since in most cases we're going to use *Block or *ConnectedField components
+// TODO we can probably do away with context for optionsDirection
+// it can be replaced with passing props since in most cases we're going to use *Block or *ConnectedField components
 export function FormGroupFieldProvider({
   optionsDirection,
-  variant,
   children,
 }: FormGroupFieldProviderProps) {
   const fieldContext = React.useMemo<FormGroupFieldContextValue>(() => {
     return {
       optionsDirection,
-      variant,
     }
-  }, [variant, optionsDirection])
+  }, [optionsDirection])
 
   return (
     <FormGroupFieldContext.Provider value={fieldContext}>
@@ -159,8 +154,14 @@ export function useStyledGroupFieldOptionLabel({
 export type FormGroupFieldOptionWrapperProps = Omit<
   JSX.IntrinsicElements["div"],
   "ref"
->
-export const FormGroupFieldOptionWrapper: React.FC<FormGroupFieldOptionWrapperProps> = props => {
+> & {
+  noSpacing?: boolean
+}
+
+export const FormGroupFieldOptionWrapper: React.FC<FormGroupFieldOptionWrapperProps> = ({
+  noSpacing,
+  ...rest
+}) => {
   const { optionsDirection } = useFormGroupField()
   const isHorizontal = optionsDirection === `horizontal`
 
@@ -171,16 +172,23 @@ export const FormGroupFieldOptionWrapper: React.FC<FormGroupFieldOptionWrapperPr
           display: `flex`,
           alignItems: `center`,
           flexShrink: 0,
-          marginBottom: theme.space[4],
-          "&:last-of-type": {
-            marginBottom: 0,
+        },
+        !noSpacing && [
+          {
+            marginBottom: theme.space[4],
           },
-        },
-        isHorizontal && {
-          marginRight: theme.space[6],
-        },
+          isHorizontal
+            ? {
+                marginRight: theme.space[6],
+              }
+            : {
+                "&:last-of-type": {
+                  marginBottom: 0,
+                },
+              },
+        ],
       ]}
-      {...props}
+      {...rest}
     />
   )
 }

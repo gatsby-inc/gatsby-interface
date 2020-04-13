@@ -10,9 +10,15 @@ import {
   RadioButtonFieldOptionItem,
   RadioButtonFieldHint,
   RadioButtonFieldError,
+  RadioButtonFieldVariant,
 } from "../components/RadioButtonField"
 import { getFieldSandboxProps, FieldDocDisclaimer } from "./stories.utils"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
+import { radios } from "@storybook/addon-knobs"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../../utils/storybook"
 
 const options = getGroupFieldStoryOptions("short")
 
@@ -63,6 +69,8 @@ export const Basic = () => (
   </RadioButtonField>
 )
 
+const VARIANTS: RadioButtonFieldVariant[] = ["default", "framed"]
+
 export const Sandbox = () => {
   const {
     label,
@@ -91,6 +99,7 @@ export const Sandbox = () => {
             onChange={e => action(`Change`)(e.target.value)}
             name="radioField"
             disabled={disabled}
+            variant={radios("variant", radioKnobOptions(VARIANTS), "default")}
           />
         ))}
       </RadioButtonFieldOptions>
@@ -104,4 +113,32 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+}
+
+export const Variants = () =>
+  VARIANTS.map(variant => (
+    <RadioButtonField id={`RadioButtonField__${variant}`} hasError hasHint>
+      <RadioButtonFieldLabel isRequired>
+        Variant: {variant}
+      </RadioButtonFieldLabel>
+      <RadioButtonFieldOptions>
+        {options.map(({ value, label }, idx) => (
+          <RadioButtonFieldOptionItem
+            key={value}
+            value={value}
+            label={label}
+            onChange={e => action(`Change`)(e.target.value)}
+            name={`radioField__${variant}`}
+            variant={variant}
+            defaultChecked={idx === 0}
+          />
+        ))}
+      </RadioButtonFieldOptions>
+      <RadioButtonFieldHint>Field hint</RadioButtonFieldHint>
+      <RadioButtonFieldError>Field error</RadioButtonFieldError>
+    </RadioButtonField>
+  ))
+
+Variants.story = {
+  decorators: [withVariationsContainer],
 }
