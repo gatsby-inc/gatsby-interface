@@ -12,6 +12,7 @@ import {
   RadioButtonFieldVariant,
 } from "./RadioButtonField"
 import { WithFormFieldBlock, useFormFieldContainerProps } from "./FormField"
+import { FormGroupOptionsDirection } from "./FormGroupField"
 
 export type RadioButtonFieldBlockOption = {
   label: React.ReactNode
@@ -22,7 +23,7 @@ export type RadioButtonFieldBlockProps = WithFormFieldBlock<
   {
     options: RadioButtonFieldBlockOption[]
     value?: string
-    optionsDirection?: `horizontal` | `vertical`
+    optionsDirection?: FormGroupOptionsDirection
     variant?: RadioButtonFieldVariant
   } & Omit<RadioButtonFieldOptionItemProps, "value">
 >

@@ -6,6 +6,7 @@ import space from "../../../theme/space"
 import { radioKnobOptions } from "../../../utils/storybook/knobs"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { FormFieldBlockLayout } from "../components/FormField"
+import { FormGroupOptionsDirection } from "../components/FormGroupField"
 
 export const Wrapper: React.FC<{}> = ({ children }) => (
   <div
@@ -52,13 +53,13 @@ export function getFieldBlockSandboxProps() {
   }
 }
 
-const OPTIONS_DIRECTIONS: FormFieldBlockLayout[] = [`horizontal`, `vertical`]
+const OPTIONS_DIRECTIONS: FormGroupOptionsDirection[] = [`row`, `column`]
 
 export function getGroupFieldSandboxProps() {
   const optionsDirection = radios(
     `Options Direction`,
     radioKnobOptions(OPTIONS_DIRECTIONS),
-    `vertical`
+    `column`
   )
 
   return {

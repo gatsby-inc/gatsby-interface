@@ -13,8 +13,10 @@ import { getLabelFontSize, FormFieldLabelSize } from "./FormField.helpers"
 export const INPUT_WIDTH = `20px`
 export const INPUT_VERTICAL_OFFSET_CALC = `(1em - 14px) * 0.5`
 
+export type FormGroupOptionsDirection = `row` | `column`
+
 export type FormGroupFieldContextValue = {
-  optionsDirection?: `horizontal` | `vertical`
+  optionsDirection?: FormGroupOptionsDirection
 }
 
 const FormGroupFieldContext = React.createContext<FormGroupFieldContextValue>({
@@ -22,7 +24,7 @@ const FormGroupFieldContext = React.createContext<FormGroupFieldContextValue>({
 })
 
 export type FormGroupFieldProviderProps = {
-  optionsDirection?: `horizontal` | `vertical`
+  optionsDirection?: FormGroupOptionsDirection
   children?: React.ReactNode
 }
 
@@ -113,7 +115,7 @@ export type FormGroupFieldOptionsProps = Omit<
 >
 export const FormGroupFieldOptions: React.FC<FormGroupFieldOptionsProps> = props => {
   const { optionsDirection } = useFormGroupField()
-  const isHorizontal = optionsDirection === `horizontal`
+  const isHorizontal = optionsDirection === `row`
 
   return isHorizontal ? (
     <div css={horizontalOptionsCss} {...props} />
@@ -132,7 +134,7 @@ export function useStyledGroupFieldOptionLabel({
   size?: FormFieldLabelSize
 }): { css: ThemeCss } {
   const { optionsDirection } = useFormGroupField()
-  const isHorizontal = optionsDirection === `horizontal`
+  const isHorizontal = optionsDirection === `row`
 
   return {
     css: (theme: Theme) => [
@@ -163,7 +165,7 @@ export const FormGroupFieldOptionWrapper: React.FC<FormGroupFieldOptionWrapperPr
   ...rest
 }) => {
   const { optionsDirection } = useFormGroupField()
-  const isHorizontal = optionsDirection === `horizontal`
+  const isHorizontal = optionsDirection === `row`
 
   return (
     <div

@@ -257,7 +257,7 @@ storiesOf(`form/Formik usage examples`, module)
                   id="tagsField"
                   hasError={!!(touched.tags && errors.tags)}
                   hasHint={true}
-                  optionsDirection="horizontal"
+                  optionsDirection="row"
                   css={stackItemCss}
                 >
                   <CheckboxGroupFieldLabel isRequired={true}>

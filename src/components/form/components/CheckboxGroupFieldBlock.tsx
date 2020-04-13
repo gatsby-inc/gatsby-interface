@@ -12,6 +12,7 @@ import {
   CheckboxGroupFieldOptionItem,
 } from "./CheckboxGroupField"
 import { WithFormFieldBlock, useFormFieldContainerProps } from "./FormField"
+import { FormGroupOptionsDirection } from "./FormGroupField"
 
 export type CheckboxGroupFieldBlockOption = {
   label: React.ReactNode
@@ -21,7 +22,7 @@ export type CheckboxGroupFieldBlockOption = {
 export type CheckboxGroupFieldBlockProps = WithFormFieldBlock<
   {
     options: CheckboxGroupFieldBlockOption[]
-    optionsDirection?: `horizontal` | `vertical`
+    optionsDirection?: FormGroupOptionsDirection
     value: string[]
   } & Omit<CheckboxGroupFieldOptionProps, "value">
 >

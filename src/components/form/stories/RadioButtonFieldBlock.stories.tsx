@@ -11,11 +11,8 @@ import {
 } from "../../../utils/storybook"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
 import { radios } from "@storybook/addon-knobs"
-import {
-  RadioButtonFieldBlock,
-  RadioButtonFieldVariant,
-  FormFieldBlockLayout,
-} from ".."
+import { RadioButtonFieldBlock, RadioButtonFieldVariant } from ".."
+import { FormGroupOptionsDirection } from "../components/FormGroupField"
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
@@ -155,7 +152,7 @@ LabelSizes.story = {
   decorators: [withVariationsContainer],
 }
 
-const OPTIONS_DIRECTIONS: FormFieldBlockLayout[] = [`horizontal`, `vertical`]
+const OPTIONS_DIRECTIONS: FormGroupOptionsDirection[] = [`row`, `column`]
 
 export const OptionsDirections = () =>
   OPTIONS_DIRECTIONS.map(optionsDirection => (
