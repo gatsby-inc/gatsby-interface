@@ -113,29 +113,6 @@ export const WithErrorAndHint = () => (
   />
 )
 
-export const WithRichText = () => (
-  <RadioButtonFieldBlock
-    id="radioButtonFieldBlock"
-    name="radioButtonFieldBlock"
-    options={options}
-    label={
-      <span>
-        This is a <strong>rich label</strong>
-      </span>
-    }
-    hint={
-      <span>
-        This is a <em>rich hint text</em>
-      </span>
-    }
-    error={
-      <span>
-        This is a <u>rich error message</u>
-      </span>
-    }
-  />
-)
-
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
     <RadioButtonFieldBlock

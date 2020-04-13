@@ -79,10 +79,11 @@ export function FieldDocDisclaimer({
 }) {
   return (
     <React.Fragment>
-      These components can be used as building blocks for your {fieldType}{" "}
-      fields. They do not have any spacing or positioning styles, you'll have to
-      take care of those yourself (or use <code>{blockComponentName}</code> or{" "}
-      <code>{connectedComponentName}</code>)
+      This compound component can be used as building blocks for your{" "}
+      {fieldType} fields. They do not have any spacing or positioning styles,
+      you'll have to take care of those yourself (or use{" "}
+      <code>{blockComponentName}</code> or <code>{connectedComponentName}</code>
+      )
     </React.Fragment>
   )
 }
