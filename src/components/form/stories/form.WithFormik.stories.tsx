@@ -228,7 +228,10 @@ storiesOf(`form/Formik usage examples`, module)
                   </RadioButtonFieldLabel>
                   <RadioButtonFieldOptions>
                     {categories.map(({ label, value }) => (
-                      <RadioButtonFieldOptionWrapper key={value}>
+                      <RadioButtonFieldOptionWrapper
+                        key={value}
+                        variant="default"
+                      >
                         <RadioButtonFieldOption
                           value={value}
                           name="category"
@@ -236,7 +239,10 @@ storiesOf(`form/Formik usage examples`, module)
                           onBlur={handleBlur}
                           checked={values.category === value}
                         />
-                        <RadioButtonFieldOptionLabel optionValue={value}>
+                        <RadioButtonFieldOptionLabel
+                          optionValue={value}
+                          variant="default"
+                        >
                           {label}
                         </RadioButtonFieldOptionLabel>
                       </RadioButtonFieldOptionWrapper>
