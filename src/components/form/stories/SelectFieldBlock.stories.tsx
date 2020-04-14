@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
-import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import { SelectFieldBlock } from "../components/SelectFieldBlock"
+import { SelectFieldBlock, FormFieldBlockLayout } from ".."
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
 import { withVariationsContainer } from "../../../utils/storybook"
+import SelectFieldBlockDocs from "./SelectFieldBlock.mdx"
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
@@ -21,8 +21,8 @@ export default {
     options: {
       showRoots: true,
     },
-    readme: {
-      sidebar: README,
+    docs: {
+      page: SelectFieldBlockDocs,
     },
     chromatic: { pauseAnimationAtEnd: true },
   },
@@ -135,5 +135,23 @@ export const LabelSizes = () =>
   ))
 
 LabelSizes.story = {
+  decorators: [withVariationsContainer],
+}
+
+const LAYOUTS: FormFieldBlockLayout[] = [`vertical`, `horizontal`]
+
+export const Layouts = () =>
+  LAYOUTS.map(layout => (
+    <SelectFieldBlock
+      key={layout}
+      id={layout}
+      options={options}
+      label={`Layout: ${layout}`}
+      onChange={e => action(`Change`)(e.target.value)}
+      layout={layout}
+    />
+  ))
+
+Layouts.story = {
   decorators: [withVariationsContainer],
 }

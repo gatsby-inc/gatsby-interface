@@ -1,13 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
-import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import { InputFieldBlock } from "../components/InputFieldBlock"
+import { InputFieldBlock, FormFieldBlockLayout } from ".."
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
 import { withVariationsContainer } from "../../../utils/storybook"
+import InputFieldBlockDocs from "./InputFieldBlock.mdx"
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
@@ -18,8 +17,8 @@ export default {
     options: {
       showRoots: true,
     },
-    readme: {
-      sidebar: README,
+    docs: {
+      page: InputFieldBlockDocs,
     },
     chromatic: { pauseAnimationAtEnd: true },
   },
@@ -27,7 +26,7 @@ export default {
 
 export const Basic = () => (
   <InputFieldBlock
-    id="inputFieldBlock"
+    id="basic"
     label="Field label"
     onChange={e => action(`Change`)(e.target.value)}
   />
@@ -37,7 +36,7 @@ export const Sandbox = () => {
   const placeholder = text(`Placeholder`, `This is a placeholder`)
   return (
     <InputFieldBlock
-      id="inputFieldBlock"
+      id="sandbox"
       placeholder={placeholder}
       {...getFieldBlockSandboxProps()}
     />
@@ -51,28 +50,24 @@ Sandbox.story = {
 }
 
 export const Required = () => (
-  <InputFieldBlock id="inputFieldBlock" label="Field label" required />
+  <InputFieldBlock id="required" label="Field label" required />
 )
 
 export const Disabled = () => (
-  <InputFieldBlock id="inputFieldBlock" label="Field label" disabled />
+  <InputFieldBlock id="disabled" label="Field label" disabled />
 )
 
 export const WithHint = () => (
-  <InputFieldBlock id="inputFieldBlock" label="Field label" hint="Hint text" />
+  <InputFieldBlock id="withHint" label="Field label" hint="Hint text" />
 )
 
 export const WithError = () => (
-  <InputFieldBlock
-    id="inputFieldBlock"
-    label="Field label"
-    error="Error message"
-  />
+  <InputFieldBlock id="withError" label="Field label" error="Error message" />
 )
 
 export const WithErrorAndHint = () => (
   <InputFieldBlock
-    id="inputFieldBlock"
+    id="withErrorAndHint"
     label="Field label"
     hint="Hint text"
     error="Error message"
@@ -104,12 +99,30 @@ export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
     <InputFieldBlock
       key={labelSize}
-      id={`inputFieldBlock__size--${labelSize}`}
+      id={labelSize}
       label={`Label size: "${labelSize}"`}
       labelSize={labelSize}
     />
   ))
 
 LabelSizes.story = {
+  decorators: [withVariationsContainer],
+}
+
+const LAYOUTS: FormFieldBlockLayout[] = [`vertical`, `horizontal`]
+
+export const Layouts = () =>
+  LAYOUTS.map(layout => (
+    <InputFieldBlock
+      key={layout}
+      id={layout}
+      name={layout}
+      label={`Layout: ${layout}`}
+      onChange={e => action(`Change`)(e.target.value)}
+      layout={layout}
+    />
+  ))
+
+Layouts.story = {
   decorators: [withVariationsContainer],
 }

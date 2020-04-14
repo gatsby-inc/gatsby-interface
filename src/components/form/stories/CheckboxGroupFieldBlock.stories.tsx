@@ -1,12 +1,15 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
-import README from "../README_INPUT_FIELD.md"
+import { action } from "@storybook/addon-actions"
 import { CheckboxGroupFieldBlock } from "../components/CheckboxGroupFieldBlock"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getGroupFieldSandboxProps } from "./stories.utils"
 import { withVariationsContainer } from "../../../utils/storybook"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
+import CheckboxGroupFieldBlockDocs from "./CheckboxGroupFieldBlock.mdx"
+import { FormFieldBlockLayout } from ".."
+import { FormGroupOptionsDirection } from "../components/FormGroupField"
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
@@ -17,14 +20,23 @@ export default {
     options: {
       showRoots: true,
     },
-    readme: {
-      sidebar: README,
+    docs: {
+      page: CheckboxGroupFieldBlockDocs,
     },
     chromatic: { pauseAnimationAtEnd: true },
   },
 }
 
 const options = getGroupFieldStoryOptions("short")
+const optionsWithDefaultCheck = options.map((option, idx) => {
+  if (idx === 0) {
+    return {
+      ...option,
+      defaultChecked: true,
+    }
+  }
+  return option
+})
 
 function useCheckboxGroupState() {
   const [fieldValue, setFieldValue] = React.useState<string[]>([])
@@ -204,5 +216,43 @@ export const LabelSizes = () =>
   })
 
 LabelSizes.story = {
+  decorators: [withVariationsContainer],
+}
+
+const LAYOUTS: FormFieldBlockLayout[] = [`vertical`, `horizontal`]
+
+export const Layouts = () =>
+  LAYOUTS.map(layout => (
+    <CheckboxGroupFieldBlock
+      key={layout}
+      id={layout}
+      name={layout}
+      options={optionsWithDefaultCheck}
+      label={`Layout: ${layout}`}
+      onChange={e => action(`Change`)(e.target.value)}
+      layout={layout}
+    />
+  ))
+
+Layouts.story = {
+  decorators: [withVariationsContainer],
+}
+
+const OPTIONS_DIRECTIONS: FormGroupOptionsDirection[] = [`row`, `column`]
+
+export const OptionsDirections = () =>
+  OPTIONS_DIRECTIONS.map(optionsDirection => (
+    <CheckboxGroupFieldBlock
+      key={optionsDirection}
+      id={optionsDirection}
+      name={optionsDirection}
+      options={optionsWithDefaultCheck}
+      label={`Options Direction: ${optionsDirection}`}
+      onChange={e => action(`Change`)(e.target.value)}
+      optionsDirection={optionsDirection}
+    />
+  ))
+
+OptionsDirections.story = {
   decorators: [withVariationsContainer],
 }

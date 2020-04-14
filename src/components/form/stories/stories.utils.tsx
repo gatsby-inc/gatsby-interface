@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
+import { Story, Preview, DocsContext } from "@storybook/addon-docs/dist/blocks"
 import { text, radios, boolean } from "@storybook/addon-knobs"
+import coreClient from "@storybook/core/dist/client"
 import space from "../../../theme/space"
 import { radioKnobOptions } from "../../../utils/storybook/knobs"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
@@ -84,5 +86,45 @@ export function FieldDocDisclaimer({
       take care of those yourself (or use <code>{blockComponentName}</code> or{" "}
       <code>{connectedComponentName}</code>)
     </React.Fragment>
+  )
+}
+
+class PropsStoryErrorBoundary extends React.Component<
+  { errorMessage?: string },
+  { hasError: boolean }
+> {
+  constructor(props: { errorMessage?: string }) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <h1 style={{ color: "red" }}>
+          {this.props.errorMessage || `Something went wrong.`}
+        </h1>
+      )
+    }
+
+    return this.props.children
+  }
+}
+
+export function PropsDescriptionStory({ storyName }: { storyName: string }) {
+  const docsContext = React.useContext(DocsContext)
+
+  return (
+    <PropsStoryErrorBoundary
+      errorMessage={`No story kind found for ${storyName}!`}
+    >
+      <Preview>
+        <Story id={coreClient.toId(docsContext.kind!, storyName)} />
+      </Preview>
+    </PropsStoryErrorBoundary>
   )
 }
