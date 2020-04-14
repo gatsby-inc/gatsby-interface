@@ -12,9 +12,15 @@ import {
   MenuProps,
 } from "@reach/menu-button"
 import { MdKeyboardArrowDown } from "react-icons/md"
-import { dropdownCss, dropdownLabelCss, menuItemCss } from "./styles"
+import { dropdownCss, dropdownLabelCss, menuItemCss } from "./Dropdown.styles"
+import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
-export const Dropdown: React.FC<MenuProps> = props => <Menu {...props} />
+export const Dropdown: React.FC<MenuProps> = props => (
+  <div>
+    <DisableReachStyleCheck reachComponent="menu-button" />
+    <Menu {...props} />
+  </div>
+)
 
 export interface DropdownLabelProps
   extends Omit<MenuButtonProps, "placeholder"> {
@@ -31,10 +37,14 @@ export const DropdownLabel: React.FC<DropdownLabelProps> = ({
   </MenuButton>
 )
 
-export const DropdownItems: React.FC<MenuListProps> = props => (
+export type DropdownItemsProps = MenuListProps
+
+export const DropdownItems: React.FC<DropdownItemsProps> = props => (
   <MenuList {...props} css={dropdownCss}></MenuList>
 )
 
-export const DropdownItem: React.FC<MenuItemProps> = props => (
+export type DropdownItemProps = MenuItemProps
+
+export const DropdownItem: React.FC<DropdownItemProps> = props => (
   <MenuItem {...props} css={menuItemCss} />
 )
