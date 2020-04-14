@@ -4,25 +4,10 @@ import React from "react"
 import { Story, Preview, DocsContext } from "@storybook/addon-docs/dist/blocks"
 import { text, radios, boolean } from "@storybook/addon-knobs"
 import coreClient from "@storybook/core/dist/client"
-import space from "../../../theme/space"
 import { radioKnobOptions } from "../../../utils/storybook/knobs"
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { FormFieldBlockLayout } from "../components/FormField"
 import { FormGroupOptionsDirection } from "../components/FormGroupField"
-
-export const Wrapper: React.FC<{}> = ({ children }) => (
-  <div
-    css={{
-      maxWidth: `80%`,
-      width: `25rem`,
-      "& > * + *": {
-        marginTop: `${space[8]}!important`,
-      },
-    }}
-  >
-    {children}
-  </div>
-)
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
@@ -81,10 +66,11 @@ export function FieldDocDisclaimer({
 }) {
   return (
     <React.Fragment>
-      These components can be used as building blocks for your {fieldType}{" "}
-      fields. They do not have any spacing or positioning styles, you'll have to
-      take care of those yourself (or use <code>{blockComponentName}</code> or{" "}
-      <code>{connectedComponentName}</code>)
+      This compound component can be used as building blocks for your{" "}
+      {fieldType} fields. They do not have any spacing or positioning styles,
+      you'll have to take care of those yourself (or use{" "}
+      <code>{blockComponentName}</code> or <code>{connectedComponentName}</code>
+      )
     </React.Fragment>
   )
 }

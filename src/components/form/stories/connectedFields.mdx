@@ -1,0 +1,21 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+
+# Connected Fields
+----
+"Connected" fields are components that connect form elements (e.g. `InputFieldBlock`) to [Formik](https://jaredpalmer.com/formik/):
+they will take care of binding field context to the form element and will display error messages (if any). 
+
+Each one of connected fields can receive any prop supported by their `*FieldBlock` counterpart.
+
+List of available connected fields:
+* `CheckboxConnectedField`
+* `CheckboxGroupConnectedField`
+* `InputConnectedField`
+* `RadioButtonConnectedField`
+* `SelectConnectedField`
+* `TextAreaConnectedField`
+
+
+<Preview>
+<Story id="form-connected-fields--example" />
+</Preview>
