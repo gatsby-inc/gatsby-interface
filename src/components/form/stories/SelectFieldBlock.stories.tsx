@@ -17,6 +17,7 @@ const options = getGroupFieldStoryOptions()
 export default {
   title: `Form/Styled Blocks/SelectFieldBlock`,
   parameters: {
+    layout: `padded`,
     options: {
       showRoots: true,
     },

@@ -9,19 +9,23 @@ import {
   RadioButtonFieldError,
   RadioButtonFieldOptionItem,
   RadioButtonFieldOptionItemProps,
+  RadioButtonFieldVariant,
 } from "./RadioButtonField"
-import { WithFormFieldBlock } from "./FormField"
-import { RadioButtonFieldSkeletonOptionProps } from "../../form-skeletons"
+import { WithFormFieldBlock, useFormFieldContainerProps } from "./FormField"
+import { FormGroupOptionsDirection } from "./FormGroupField"
 
 export type RadioButtonFieldBlockOption = {
   label: React.ReactNode
   value: string
-} & Partial<Omit<RadioButtonFieldSkeletonOptionProps, "label" | "value">>
+} & Partial<Omit<RadioButtonFieldOptionItemProps, "label" | "value">>
 
 export type RadioButtonFieldBlockProps = WithFormFieldBlock<
   {
     options: RadioButtonFieldBlockOption[]
-  } & RadioButtonFieldOptionItemProps
+    value?: string
+    optionsDirection?: FormGroupOptionsDirection
+    variant?: RadioButtonFieldVariant
+  } & Omit<RadioButtonFieldOptionItemProps, "value">
 >
 
 export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
@@ -35,26 +39,42 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
     validationMode,
     value: fieldValue,
     options,
+    layout,
+    optionsDirection,
+    variant,
     ...rest
   } = props
+
+  const layoutProps = useFormFieldContainerProps(layout)
 
   return (
     <RadioButtonField
       id={id}
       hasError={!!error}
       hasHint={!!hint}
+      optionsDirection={optionsDirection}
       className={className}
+      {...layoutProps}
     >
-      <RadioButtonFieldLabel size={labelSize} isRequired={!!rest.required}>
+      <RadioButtonFieldLabel
+        size={labelSize}
+        isRequired={!!rest.required}
+        css={_theme => [layout === `horizontal` && { alignSelf: `baseline` }]}
+      >
         {label}
       </RadioButtonFieldLabel>
-      <RadioButtonFieldOptions>
+      <RadioButtonFieldOptions
+        css={_theme => [layout === `horizontal` && { paddingTop: 0 }]}
+      >
         {options.map(({ value, label, ...restOption }) => (
           <RadioButtonFieldOptionItem
             key={value}
             value={value}
-            checked={value === fieldValue}
+            checked={
+              fieldValue === undefined ? undefined : value === fieldValue
+            }
             label={label}
+            variant={variant}
             {...rest}
             {...restOption}
           />

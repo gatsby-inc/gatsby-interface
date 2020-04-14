@@ -4,9 +4,6 @@ import React from "react"
 
 import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import {
-  getFieldStackStyles,
-  FormFieldStack,
-  FormFieldStackProps,
   useStyledFieldHint,
   useStyledFieldError,
   useStyledFieldLabel,
@@ -48,18 +45,12 @@ export const InputFieldControl = React.forwardRef<
   return (
     <InputFieldSkeletonControl
       ref={ref}
-      css={(theme: Theme) => [
-        getFieldStackStyles(`item`, theme),
-        getInputStyles(theme, hasError),
-      ]}
+      css={(theme: Theme) => [getInputStyles(theme, hasError)]}
       {...props}
       placeholder={placeholder}
     />
   )
 })
-
-export type InputFieldWrapperProps = FormFieldStackProps
-export const InputFieldWrapper = FormFieldStack
 
 export type InputFieldLabelProps = WithStyledFieldLabel<
   InputFieldSkeletonLabelProps
