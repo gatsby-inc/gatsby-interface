@@ -16,7 +16,7 @@ export { LinkButton } from "./components/LinkButton"
 
 export { Link } from "./components/Link"
 
-export { RadioSkeleton, Radio } from "./components/Radio"
+export { RadioSkeleton } from "./components/Radio"
 
 export { FileUpload } from "./components/FileUpload"
 
