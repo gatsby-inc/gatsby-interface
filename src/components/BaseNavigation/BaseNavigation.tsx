@@ -327,7 +327,6 @@ export function BaseNavigationItemLink({
   ...rest
 }: BaseNavigationItemLinkProps) {
   const {
-    isMobileNavOpen,
     setIsMobileNavOpen,
     linkClosesMobileNav,
   } = BaseNavigation.useNavigationContext()
@@ -337,7 +336,7 @@ export function BaseNavigationItemLink({
       activeClassName="nav-item-active"
       to={item.linkTo}
       onClick={() => {
-        return linkClosesMobileNav ? setIsMobileNavOpen(!isMobileNavOpen) : null
+        return linkClosesMobileNav ? setIsMobileNavOpen(false) : null
       }}
       {...rest}
     >
@@ -445,7 +444,6 @@ export function BaseNavigationDropdownItem({
   ...rest
 }: BaseNavigationDropdownItemProps) {
   const {
-    isMobileNavOpen,
     setIsMobileNavOpen,
     linkClosesMobileNav,
   } = BaseNavigation.useNavigationContext()
@@ -456,9 +454,7 @@ export function BaseNavigationDropdownItem({
         activeClassName="nav-item-active"
         to={linkTo}
         onClick={() => {
-          return linkClosesMobileNav
-            ? setIsMobileNavOpen(!isMobileNavOpen)
-            : null
+          return linkClosesMobileNav ? setIsMobileNavOpen(false) : null
         }}
       >
         {name}
