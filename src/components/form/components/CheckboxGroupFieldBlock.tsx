@@ -23,7 +23,7 @@ export type CheckboxGroupFieldBlockProps = WithFormFieldBlock<
   {
     options: CheckboxGroupFieldBlockOption[]
     optionsDirection?: FormGroupOptionsDirection
-    value: string[]
+    value?: string[]
   } & Omit<CheckboxGroupFieldOptionProps, "value">
 >
 
@@ -70,7 +70,10 @@ export const CheckboxGroupFieldBlock = (
           <CheckboxGroupFieldOptionItem
             key={value}
             value={value}
-            checked={fieldValue.includes(value)}
+            // Support uncontrolled field
+            checked={
+              fieldValue === undefined ? undefined : fieldValue.includes(value)
+            }
             label={label}
             {...rest}
             {...restOption}

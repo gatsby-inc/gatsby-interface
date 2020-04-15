@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
-import README from "../README_INPUT_FIELD.md"
 import { action } from "@storybook/addon-actions"
-import { CheckboxFieldBlock } from "../components/CheckboxFieldBlock"
+import { CheckboxFieldBlock } from ".."
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
 import { withVariationsContainer } from "../../../utils/storybook"
+import CheckboxFieldBlockDocs from "./CheckboxFieldBlock.mdx"
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
 
@@ -18,8 +18,8 @@ export default {
     options: {
       showRoots: true,
     },
-    readme: {
-      sidebar: README,
+    docs: {
+      page: CheckboxFieldBlockDocs,
     },
     chromatic: { pauseAnimationAtEnd: true },
   },
@@ -80,27 +80,6 @@ export const WithErrorAndHint = () => (
     label="Field label"
     hint="Hint text"
     error="Error message"
-  />
-)
-
-export const WithRichText = () => (
-  <CheckboxFieldBlock
-    id="inputFieldBlock"
-    label={
-      <span>
-        This is a <strong>rich label</strong>
-      </span>
-    }
-    hint={
-      <span>
-        This is a <em>rich hint text</em>
-      </span>
-    }
-    error={
-      <span>
-        This is a <u>rich error message</u>
-      </span>
-    }
   />
 )
 
