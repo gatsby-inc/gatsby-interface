@@ -22,8 +22,6 @@ export { FileUpload } from "./components/FileUpload"
 
 export { SidebarNav } from "./components/SidebarNav"
 
-export { Navigation } from "./components/Navigation"
-
 export * from "./components/CopyButton"
 
 export * from "./components/form"
@@ -71,3 +69,4 @@ export * from "./components/ConcealedValue"
 export * from "./components/StepIndicator"
 export * from "./components/DensityProvider"
 export * from "./components/StickyObserver"
+export * from "./components/Navigation"
