@@ -1,0 +1,25 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import {
+  CheckboxGroupFieldBlock,
+} from "../components/CheckboxGroupFieldBlock"
+import { PropsDescriptionStory } from "./stories.utils"
+import FieldSharedPropsDescription from './FieldSharedPropsDescription.mdx'
+
+# CheckboxGroupFieldBlock
+----
+<Preview>
+<Story id="form-styled-blocks-checkboxgroupfieldblock--basic" />
+</Preview>
+
+## Props
+<Props of={CheckboxGroupFieldBlock} />
+
+`CheckboxGroupFieldBlock` accepts the following props:
+
+### `optionsDirections: "row" | "column"`
+Controls the direction of checkboxes:
+
+<PropsDescriptionStory storyName="Options Directions" />
+
+`CheckboxGroupFieldBlock` also supports all of the props shared between field block components: 
+<FieldSharedPropsDescription />

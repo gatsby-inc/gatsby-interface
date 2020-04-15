@@ -70,6 +70,7 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
           <RadioButtonFieldOptionItem
             key={value}
             value={value}
+            // Support uncontrolled field
             checked={
               fieldValue === undefined ? undefined : value === fieldValue
             }
