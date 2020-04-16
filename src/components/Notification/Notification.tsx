@@ -173,25 +173,25 @@ function NotificationDismissButton({
 
   return (
     <Button
-      css={theme => ({
-        padding: `0`,
-        minHeight: `auto`,
-        color:
-          variant === "SOLID"
-            ? theme.colors.whiteFade[60]
-            : theme.colors.grey[40],
-        width: theme.space[5],
-        marginLeft: theme.space[5],
-        fontSize: theme.fontSizes[4],
-        ...(variant === "SOLID"
-          ? {
-              ":hover": {
-                background: "transparent",
-                color: theme.colors.white,
-              },
-            }
-          : null),
-      })}
+      css={theme => [
+        {
+          padding: `0`,
+          minHeight: `auto`,
+          color:
+            variant === "SOLID"
+              ? theme.colors.whiteFade[60]
+              : theme.colors.grey[40],
+          width: theme.space[5],
+          marginLeft: theme.space[5],
+          fontSize: theme.fontSizes[4],
+        },
+        variant === "SOLID" && {
+          ":hover": {
+            background: "transparent",
+            color: theme.colors.white,
+          },
+        },
+      ]}
       type="button"
       onClick={onDismiss}
       variant="GHOST"
