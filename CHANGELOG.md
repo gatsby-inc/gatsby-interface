@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.137](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.136...v0.0.137) (2020-04-16)
+
+
+### Features
+
+* Navigation rewritten to TypeScript ([#288](https://github.com/gatsby-inc/gatsby-interface/issues/288)) ([5fad7e6](https://github.com/gatsby-inc/gatsby-interface/commit/5fad7e6b9cce65b68f16fa30af69ae57d8b010e4))
+
 ### [0.0.136](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.135...v0.0.136) (2020-04-16)
 
 ### Features
