@@ -43,7 +43,6 @@ export type BaseNavigationContextValue = {
   mobileNavMediaQuery: string
   isMobileNavOpen: boolean
   setIsMobileNavOpen: (value: boolean) => void
-  linkClosesMobileNav: boolean
   components: BaseNavigationComponents
 }
 
@@ -58,7 +57,6 @@ export type BaseNavigationProps = Omit<JSX.IntrinsicElements["div"], "ref"> & {
   mobileNavMediaQuery?: string
   isMobileNavOpen?: boolean
   setIsMobileNavOpen?: (value: boolean) => void
-  linkClosesMobileNav?: boolean
 } & Partial<BaseNavigationComponents>
 
 export const BaseNavigation = ({
@@ -69,7 +67,6 @@ export const BaseNavigation = ({
   mobileNavMediaQuery = `@media (max-width: 1065px)`,
   isMobileNavOpen: customIsMobileNavOpen,
   setIsMobileNavOpen: customSetIsMobileNavOpen,
-  linkClosesMobileNav = false,
   // override base components
   Hamburger = BaseNavigationHamburger,
   HamburgerIcon = BaseNavigationHamburgerIcon,
@@ -108,7 +105,6 @@ export const BaseNavigation = ({
     mobileNavMediaQuery,
     isMobileNavOpen,
     setIsMobileNavOpen,
-    linkClosesMobileNav,
     components: {
       Hamburger,
       HamburgerIcon,
@@ -326,18 +322,13 @@ export function BaseNavigationItemLink({
   item,
   ...rest
 }: BaseNavigationItemLinkProps) {
-  const {
-    setIsMobileNavOpen,
-    linkClosesMobileNav,
-  } = BaseNavigation.useNavigationContext()
+  const { setIsMobileNavOpen } = BaseNavigation.useNavigationContext()
 
   return (
     <Link
       activeClassName="nav-item-active"
       to={item.linkTo}
-      onClick={() => {
-        return linkClosesMobileNav ? setIsMobileNavOpen(false) : null
-      }}
+      onClick={() => setIsMobileNavOpen(false)}
       {...rest}
     >
       {/*
@@ -443,19 +434,14 @@ export function BaseNavigationDropdownItem({
   item: { name, linkTo },
   ...rest
 }: BaseNavigationDropdownItemProps) {
-  const {
-    setIsMobileNavOpen,
-    linkClosesMobileNav,
-  } = BaseNavigation.useNavigationContext()
+  const { setIsMobileNavOpen } = BaseNavigation.useNavigationContext()
 
   return (
     <li {...rest}>
       <Link
         activeClassName="nav-item-active"
         to={linkTo}
-        onClick={() => {
-          return linkClosesMobileNav ? setIsMobileNavOpen(false) : null
-        }}
+        onClick={() => setIsMobileNavOpen(false)}
       >
         {name}
       </Link>
