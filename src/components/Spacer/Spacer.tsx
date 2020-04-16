@@ -66,10 +66,6 @@ export function Spacer({
   return (
     <div
       css={[
-        {
-          minHeight: `1px`,
-          minWidth: `1px`,
-        },
         { [defaultSizeProperty]: theme.space[size] },
         direction === `horizontal` ? horizontalCss(theme) : verticalCss(theme),
         responsiveStyles,

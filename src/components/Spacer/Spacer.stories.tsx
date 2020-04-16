@@ -19,6 +19,8 @@ export default {
 
 const coloredSpacerCss: ThemeCss = theme => ({
   backgroundColor: theme.colors.purple[30],
+  minHeight: `1px`,
+  minWidth: `1px`,
 })
 
 const Showcase: React.FC = ({ children }) => {
@@ -43,6 +45,7 @@ const { space } = getTheme()
 
 const spacerSize = (label: string, defaultValue = "5") =>
   parseInt(select(label, Object.keys(space), defaultValue)) as SpacerSize
+
 const spacerDirection = (
   label: string,
   defaultValue: SpacerDirection = "vertical"
