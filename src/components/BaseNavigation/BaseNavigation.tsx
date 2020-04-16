@@ -322,8 +322,15 @@ export function BaseNavigationItemLink({
   item,
   ...rest
 }: BaseNavigationItemLinkProps) {
+  const { setIsMobileNavOpen } = BaseNavigation.useNavigationContext()
+
   return (
-    <Link activeClassName="nav-item-active" to={item.linkTo} {...rest}>
+    <Link
+      activeClassName="nav-item-active"
+      to={item.linkTo}
+      onClick={() => setIsMobileNavOpen(false)}
+      {...rest}
+    >
       {/*
         This span is needed for the styles applied in theme/styles/navigation
       */}
@@ -427,9 +434,15 @@ export function BaseNavigationDropdownItem({
   item: { name, linkTo },
   ...rest
 }: BaseNavigationDropdownItemProps) {
+  const { setIsMobileNavOpen } = BaseNavigation.useNavigationContext()
+
   return (
     <li {...rest}>
-      <Link activeClassName="nav-item-active" to={linkTo}>
+      <Link
+        activeClassName="nav-item-active"
+        to={linkTo}
+        onClick={() => setIsMobileNavOpen(false)}
+      >
         {name}
       </Link>
     </li>
