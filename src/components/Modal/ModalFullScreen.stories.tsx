@@ -6,6 +6,11 @@ import { ModalFullScreen } from "./"
 export default {
   title: `Modal/ModalFullScreen`,
   component: ModalFullScreen,
+  parameters: {
+    options: {
+      showRoots: true,
+    },
+  },
 }
 
 export const Basic = () => (

@@ -1,0 +1,33 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import {
+  SelectField,
+  SelectFieldLabel,
+  SelectFieldControl,
+  SelectFieldHint,
+  SelectFieldError,
+} from "../components/SelectField"
+import { FieldDocDisclaimer } from "./stories.utils"
+import { getStoryOptions } from "../../../utils/storybook"
+
+<Meta title="Form/Styled Primitives/SelectField" />
+
+# SelectField
+----
+<FieldDocDisclaimer
+  fieldType="select"
+  blockComponentName="SelectFieldBlock"
+  connectedComponentName="SelectConnectedField"
+/>
+
+<Preview>
+  <Story name="Basic">
+    <SelectField id="basic" hasError hasHint>
+      <SelectFieldLabel isRequired>Field label</SelectFieldLabel>
+      <SelectFieldControl options={getStoryOptions('long')} />
+      <SelectFieldHint>Field hint</SelectFieldHint>
+      <SelectFieldError>Field error</SelectFieldError>
+    </SelectField>
+  </Story>
+</Preview>
+
+<Props components={{ SelectField, SelectFieldLabel, SelectFieldControl, SelectFieldHint, SelectFieldError,}} />

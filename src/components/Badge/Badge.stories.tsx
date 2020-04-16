@@ -1,22 +1,17 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { DecoratorFn } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
 
 import { MdFlashOn } from "react-icons/md"
-import { StoryUtils } from "../../utils/storybook"
 import { Badge, BadgeVariant } from "."
-import { radioKnobOptions } from "../../utils/storybook/knobs"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
 
 export default {
   title: `Badge`,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
+  component: Badge,
 }
 
 export const Basic = () => <Badge>Badge</Badge>
@@ -47,6 +42,10 @@ export const Variants = () =>
       Variant: {variant}
     </Badge>
   ))
+
+Variants.story = {
+  decorators: [withVariationsContainer],
+}
 
 export const WithIcon = () => (
   <Badge>

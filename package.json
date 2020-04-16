@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.125",
+  "version": "0.0.137",
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
@@ -44,6 +44,7 @@
     "@reach/alert": "^0.1.5",
     "@reach/combobox": "^0.8.5",
     "@reach/dialog": "^0.4.0",
+    "@reach/menu-button": "^0.10.0",
     "@reach/popover": "^0.9.0",
     "@reach/tooltip": "^0.8.5",
     "@types/lodash.sample": "^4.2.6",
@@ -118,7 +119,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^10.0.14",
-    "babel-plugin-react-docgen": "^2.0.2",
+    "babel-plugin-react-docgen": "^4.1.0",
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-plugin-typescript-to-proptypes": "^1.1.0",

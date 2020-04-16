@@ -3,12 +3,8 @@ import { jsx, keyframes } from "@emotion/core"
 import React from "react"
 
 import { MdError } from "react-icons/md"
-import { getStackStyles } from "../../stack"
 import { Theme } from "../../../theme"
-import {
-  useFormFieldSkeleton,
-  ErrorValidationMode,
-} from "../../form-skeletons/components/FormFieldSkeleton"
+import { ErrorValidationMode } from "../../form-skeletons"
 
 import {
   getLabelFontSize,
@@ -16,23 +12,8 @@ import {
   getDescriptionStyles,
   RequiredFlag,
   FormFieldLabelSize,
+  getFieldLayoutStyles,
 } from "./FormField.helpers"
-
-export function getFieldStackStyles(type: `stack` | `item`, theme: Theme) {
-  const { stackCss, stackItemCss } = getStackStyles({
-    gap: 2,
-    align: "left",
-    theme: theme,
-  })
-
-  return type === `item` ? stackItemCss : stackCss
-}
-
-export type FormFieldStackProps = Omit<JSX.IntrinsicElements["div"], "ref">
-
-export const FormFieldStack: React.FC<FormFieldStackProps> = props => {
-  return <div css={theme => getFieldStackStyles(`stack`, theme)} {...props} />
-}
 
 export type StyledFieldLabelProps = {
   isRequired?: boolean
@@ -50,7 +31,6 @@ export function useStyledFieldLabel(
     css: (theme: Theme) => [
       getLabelFontSize(size, theme),
       getLabelStyles(theme),
-      getFieldStackStyles(`item`, theme),
     ],
     children: (
       <React.Fragment>
@@ -61,16 +41,11 @@ export function useStyledFieldLabel(
 }
 
 export function useStyledFieldHint() {
-  const { hasHint } = useFormFieldSkeleton()
-
   return {
     css: (theme: Theme) => [
       getDescriptionStyles(theme),
-      getFieldStackStyles(`item`, theme),
       {
-        "&&": {
-          marginTop: !hasHint ? 0 : undefined,
-        },
+        gridArea: `hint`,
       },
     ],
   }
@@ -92,20 +67,14 @@ const errorIconEntry = keyframes`
 `
 
 export function useStyledFieldError(error?: React.ReactNode) {
-  const { hasError, hasHint } = useFormFieldSkeleton()
-
   return {
     css: (theme: Theme) => [
       getDescriptionStyles(theme),
-      getFieldStackStyles(`item`, theme),
       {
+        gridArea: `error`,
         animation: `${errorEntry} .25s ease forwards`,
         color: theme.colors.red[70],
         opacity: 0,
-
-        "&&": {
-          marginTop: !hasError ? 0 : hasHint ? `${theme.space[1]}` : undefined,
-        },
       },
     ],
     children: (
@@ -126,6 +95,32 @@ export function useStyledFieldError(error?: React.ReactNode) {
   }
 }
 
+export type FormFieldBlockLayout = `horizontal` | `vertical`
+
+export type FormFieldContainerProps = Omit<
+  JSX.IntrinsicElements["div"],
+  "ref"
+> & {
+  layout?: FormFieldBlockLayout
+}
+
+export function FormFieldContainer({
+  layout,
+  ...rest
+}: FormFieldContainerProps) {
+  const layoutProps = useFormFieldContainerProps(layout)
+
+  return <div {...layoutProps} {...rest} />
+}
+
+export function useFormFieldContainerProps(
+  layout: FormFieldBlockLayout = `vertical`
+) {
+  return {
+    css: (theme: Theme) => getFieldLayoutStyles(theme, layout),
+  }
+}
+
 export type FormFieldBlockProps = {
   id: string
   label: React.ReactNode
@@ -133,6 +128,7 @@ export type FormFieldBlockProps = {
   error?: React.ReactNode
   hint?: React.ReactNode
   validationMode?: ErrorValidationMode
+  layout?: FormFieldBlockLayout
 }
 
 export type WithFormFieldBlock<T> = Omit<T, keyof FormFieldBlockProps> &

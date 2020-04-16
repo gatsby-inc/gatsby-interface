@@ -68,8 +68,8 @@ function SidebarNavList({ variant = `DEFAULT`, ...rest }: SidebarNavListProps) {
 }
 
 const baseNavItemCss: ThemeCss = theme => ({
-  fontFamily: theme.fonts.heading,
-  fontSize: theme.fontSizes[2],
+  fontFamily: theme.fonts.body,
+  fontSize: theme.fontSizes[1],
   fontWeight: theme.fontWeights.body,
   color: theme.colors.grey[60],
   marginBottom: `0`,
@@ -83,13 +83,19 @@ const baseNavItemCss: ThemeCss = theme => ({
 
 const baseNavItemActiveCss: ThemeCss = theme => ({
   color: theme.colors.purple[50],
-  fontWeight: `bold`,
+  fontWeight: theme.fontWeights.semiBold,
 })
 
 const navItemIconCss: ThemeCss = theme => ({
+  color: theme.colors.grey[40],
+  fontSize: theme.fontSizes[4],
   verticalAlign: `middle`,
   position: `absolute`,
   left: `-${theme.space[8]}`,
+})
+
+const navItemActiveIconCss: ThemeCss = theme => ({
+  color: theme.colors.purple[40],
 })
 
 type SidebarNavItemProps = Omit<
@@ -117,7 +123,15 @@ function SidebarNavListItem({
       ]}
       label={
         <React.Fragment>
-          {Icon && active && <Icon css={navItemIconCss} />}
+          {Icon && (
+            <Icon
+              css={(theme: Theme) => [
+                navItemIconCss(theme),
+                active && navItemActiveIconCss(theme),
+              ]}
+              size="inherit"
+            />
+          )}
           {label}
         </React.Fragment>
       }

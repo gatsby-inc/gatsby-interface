@@ -1,0 +1,36 @@
+import { PropsDescriptionStory } from './stories.utils'
+
+## Shared Props for Field Blocks
+----
+### `label: React.ReactNode` (required)
+
+Each `*FieldBlock` or `*ConnectedField` requires a `label` prop to be passed.
+
+### `labelSize: "S" | "M" | "L"`
+Controls font size for the field label
+
+<PropsDescriptionStory storyName="Label Sizes" />
+
+### `required: boolean`
+Whether the field should be marked as required.
+
+<PropsDescriptionStory storyName="Required" />
+
+### `disabled: boolean`
+Whether the field should be marked as disabled.
+
+<PropsDescriptionStory storyName="Disabled" />
+
+### `error: React.ReactNode`
+When a true-ish value is passed, displays it as an error message below the field and associates it with the control via ARIA attributes.
+<PropsDescriptionStory storyName="With Error" />
+
+### `hint: React.ReactNode`
+When a true-ish value is passed, displays it as a hint text below the field and associates it with the control via ARIA attributes.
+<PropsDescriptionStory storyName="With Hint" />
+
+### `error` and `hint` used together
+<PropsDescriptionStory storyName="With Error and Hint" />
+
+### `layout: "vertical" | "horizontal"`
+<PropsDescriptionStory storyName="Layouts" />

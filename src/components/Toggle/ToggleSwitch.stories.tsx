@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
-import { DecoratorFn } from "@storybook/react"
-import { StoryUtils } from "../../utils/storybook"
 
-import { radioKnobOptions } from "../../utils/storybook/knobs"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
 import { radios, text } from "@storybook/addon-knobs"
 import { Theme } from "../../theme"
 import { ToggleSwitch, ToggleSwitchProps } from "."
@@ -22,13 +23,6 @@ const toggleToneOptions = radioKnobOptions(TOGGLE_TONES)
 export default {
   title: `ToggleSwitch`,
   component: ToggleSwitch,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
 }
 
 const ToggleSwitchStory = ({
@@ -111,6 +105,10 @@ export const Tones = () =>
       />
     </div>
   ))
+
+Tones.story = {
+  decorators: [withVariationsContainer],
+}
 
 export const WithAccessibleFieldLabel = () => (
   <div>

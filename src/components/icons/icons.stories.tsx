@@ -5,13 +5,19 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 import { color, select, withKnobs } from "@storybook/addon-knobs"
 import { css } from "@emotion/core"
-import { StoryUtils } from "../../utils/storybook"
 import * as icons from "./icons"
 import { IconSize, IconProps } from "./types"
 import { useTheme } from "../ThemeProvider"
 import { Theme, ThemeCss } from "../../theme"
 
-const sizes: IconSize[] = [`xxsmall`, `xsmall`, `small`, `medium`, `large`]
+const sizes: IconSize[] = [
+  `inherit`,
+  `xxsmall`,
+  `xsmall`,
+  `small`,
+  `medium`,
+  `large`,
+]
 const customSizes = [`1em`, `16px`, `24px`, `32px`, `40px`, `64px`]
 const customIconColors = ["#cc2408", "#046b80"]
 
@@ -89,9 +95,9 @@ function CustomSizeInfo({ size }: { size: string }) {
   )
 }
 
-const allIconsCss = css`
-  max-width: 640px;
-  margin: 0 auto;
+const rootCss = css`
+  max-width: 480px;
+  margin: 1rem auto 2rem;
   flex-grow: 1;
 `
 
@@ -104,39 +110,49 @@ const sortedIconComponentNames = Object.keys(icons)
   .filter(componentName => typeof (icons as any)[componentName] !== `boolean`)
   .sort()
 
-storiesOf(`icons`, module)
+storiesOf(`Icons`, module)
   .addDecorator(withKnobs)
+  .addParameters({
+    layout: `padded`,
+    options: {
+      showRoots: true,
+    },
+  })
   .add(`All icons`, () => (
-    <StoryUtils.Container>
-      <div css={allIconsCss}>
-        <h2>{sortedIconComponentNames.length} icon(s):</h2>
-        <div css={iconBlockCss}>
-          {sortedIconComponentNames.map(componentName => {
-            const Component: React.ComponentType<IconProps> = (icons as any)[
-              componentName
-            ]
+    <div css={rootCss}>
+      <h2>{sortedIconComponentNames.length} icon(s):</h2>
+      <div css={iconBlockCss}>
+        {sortedIconComponentNames.map(componentName => {
+          const Component: React.ComponentType<IconProps> = (icons as any)[
+            componentName
+          ]
 
-            return (
-              <StoryCase info={componentName} key={componentName}>
-                <Component
-                  size={select(`size`, sizes, `small`)}
-                  color={color(`color`, `#000`)}
-                />
-              </StoryCase>
-            )
-          })}
-        </div>
+          return (
+            <StoryCase info={componentName} key={componentName}>
+              <Component
+                size={select(`size`, sizes, `small`)}
+                color={color(`color`, `#000`)}
+              />
+            </StoryCase>
+          )
+        })}
       </div>
-    </StoryUtils.Container>
+    </div>
   ))
 
 sortedIconComponentNames.forEach(componentName => {
-  storiesOf(`icons/Single icons`, module).add(componentName, () => {
-    const Component = (icons as any)[componentName]
+  storiesOf(`Icons/Single icons`, module)
+    .addParameters({
+      layout: `padded`,
+      options: {
+        showRoots: true,
+      },
+    })
+    .add(componentName, () => {
+      const Component = (icons as any)[componentName]
 
-    return (
-      <StoryUtils.Container>
-        <div key={componentName} css={iconBlockCss}>
+      return (
+        <div key={componentName} css={rootCss}>
           <h1>{`<${componentName} />`}</h1>
           <h2>Size:</h2>
           {sizes.map(size => (
@@ -175,7 +191,6 @@ sortedIconComponentNames.forEach(componentName => {
             Lorem ipsum <Component height="1em" /> foo bar
           </p>
         </div>
-      </StoryUtils.Container>
-    )
-  })
+      )
+    })
 })

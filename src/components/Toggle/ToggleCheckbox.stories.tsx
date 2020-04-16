@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
-import { DecoratorFn } from "@storybook/react"
-import { StoryUtils } from "../../utils/storybook"
 
 import { ToggleCheckbox, ToggleCheckboxProps } from "./"
-import { radioKnobOptions } from "../../utils/storybook/knobs"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
 import { radios, text } from "@storybook/addon-knobs"
 import { Theme } from "../../theme"
 
@@ -29,13 +30,6 @@ const toggleLabelPositionOptions = radioKnobOptions(TOGGLE_LABEL_POSITIONS)
 export default {
   title: `ToggleCheckbox`,
   component: ToggleCheckbox,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
 }
 
 export const Basic = () => (
@@ -67,6 +61,10 @@ export const Tones = () =>
     />
   ))
 
+Tones.story = {
+  decorators: [withVariationsContainer],
+}
+
 export const LabelPositions = () =>
   TOGGLE_LABEL_POSITIONS.map(labelPosition => (
     <ToggleCheckbox
@@ -75,6 +73,10 @@ export const LabelPositions = () =>
       labelPosition={labelPosition}
     />
   ))
+
+LabelPositions.story = {
+  decorators: [withVariationsContainer],
+}
 
 export const WithRichLabel = () => (
   <ToggleCheckbox

@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import {
+  RadioButtonFieldBlock,
+} from "../components/RadioButtonFieldBlock"
+import { PropsDescriptionStory } from "./stories.utils"
+import FieldSharedPropsDescription from './FieldSharedPropsDescription.mdx'
+
+# RadioButtonFieldBlock
+----
+<Preview>
+<Story id="form-styled-blocks-radiobuttonfieldblock--basic" />
+</Preview>
+
+## Props
+<Props of={RadioButtonFieldBlock} />
+
+`RadioButtonFieldBlock` accepts the following props:
+
+### `optionsDirections: "row" | "column"`
+Controls the direction of radio buttons:
+
+<PropsDescriptionStory storyName="Options Directions" />
+
+### `variant: "default" | "framed"`
+<PropsDescriptionStory storyName="Variants" />
+
+
+`RadioButtonFieldBlock` also supports all of the props shared between field block components: 
+<FieldSharedPropsDescription />

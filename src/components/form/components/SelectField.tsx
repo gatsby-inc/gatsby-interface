@@ -4,9 +4,6 @@ import React from "react"
 
 import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import {
-  getFieldStackStyles,
-  FormFieldStackProps,
-  FormFieldStack,
   useStyledFieldLabel,
   useStyledFieldError,
   useStyledFieldHint,
@@ -47,7 +44,6 @@ export const SelectFieldControl = React.forwardRef<
     <SelectFieldSkeletonControl
       ref={ref}
       css={(theme: Theme) => [
-        getFieldStackStyles(`item`, theme),
         getInputStyles(theme, hasError),
         {
           padding: `0 ${theme.space[3]}`,
@@ -60,9 +56,6 @@ export const SelectFieldControl = React.forwardRef<
     />
   )
 })
-
-export type SelectFieldWrapperProps = FormFieldStackProps
-export const SelectFieldWrapper = FormFieldStack
 
 export type SelectFieldLabelProps = WithStyledFieldLabel<
   SelectFieldSkeletonLabelProps

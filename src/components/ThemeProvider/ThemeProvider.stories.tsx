@@ -10,7 +10,7 @@ const textCss: Interpolation = {
   textTransform: `uppercase`,
 }
 
-storiesOf(`ThemeProvider`, module)
+storiesOf(`Theme/ThemeProvider`, module)
   .addParameters({
     options: {
       showPanel: true,

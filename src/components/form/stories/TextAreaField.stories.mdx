@@ -1,0 +1,32 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import {
+  TextAreaField,
+  TextAreaFieldLabel,
+  TextAreaFieldControl,
+  TextAreaFieldHint,
+  TextAreaFieldError,
+} from "../components/TextAreaField"
+import { FieldDocDisclaimer } from "./stories.utils"
+
+<Meta title="Form/Styled Primitives/TextAreaField" />
+
+# TextAreaField
+----
+<FieldDocDisclaimer
+  fieldType="text area"
+  blockComponentName="TextAreaFieldBlock"
+  connectedComponentName="TextAreaConnectedField"
+/>
+
+<Preview>
+  <Story name="Basic">
+    <TextAreaField id="basic" hasError hasHint>
+      <TextAreaFieldLabel isRequired>Field label</TextAreaFieldLabel>
+      <TextAreaFieldControl defaultValue="Lorem ipsum" />
+      <TextAreaFieldHint>Field hint</TextAreaFieldHint>
+      <TextAreaFieldError>Field error</TextAreaFieldError>
+    </TextAreaField>
+  </Story>
+</Preview>
+
+<Props components={{ TextAreaField, TextAreaFieldLabel, TextAreaFieldControl, TextAreaFieldHint, TextAreaFieldError,}} />

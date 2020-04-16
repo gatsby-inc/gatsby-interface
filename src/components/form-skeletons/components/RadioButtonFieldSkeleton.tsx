@@ -44,7 +44,7 @@ export function RadioButtonFieldSkeletonError(
 
 export type RadioButtonFieldSkeletonOptionProps = Omit<
   FormGroupFieldSkeletonOptionProps,
-  "type" | "ref"
+  "type" | "ref" | "children"
 >
 
 export const RadioButtonFieldSkeletonOption = React.forwardRef<

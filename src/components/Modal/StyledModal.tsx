@@ -10,6 +10,7 @@ import {
   closeIconCss,
   bodyCss,
   bodyVariantCss,
+  actionsCss,
 } from "./StyledModal.styles"
 
 export type StyledModalVariant =
@@ -96,4 +97,12 @@ export function StyledModalBody({ children }: StyledModalBodyProps) {
       {children}
     </div>
   )
+}
+
+export type StyledModalActionsProps = {
+  children: React.ReactNode
+}
+
+export function StyledModalActions({ children }: StyledModalActionsProps) {
+  return <div css={actionsCss}>{children}</div>
 }

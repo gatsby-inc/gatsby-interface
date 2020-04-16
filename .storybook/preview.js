@@ -98,6 +98,7 @@ const viewports = {
 }
 
 export const parameters = {
+  layout: `centered`,
   viewport: { viewports: viewports },
   docs: {
     components: docsMDXComponents,

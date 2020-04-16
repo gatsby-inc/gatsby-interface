@@ -10,7 +10,10 @@ import {
   NotificationVariant,
   NotificationTone,
 } from "."
-import { StoryUtils } from "../../utils/storybook"
+import {
+  sandboxWithPropVariations,
+  withVariationsContainer,
+} from "../../utils/storybook"
 import { Button } from "../Button"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
 import { MdSignalWifi1BarLock } from "react-icons/md"
@@ -34,14 +37,7 @@ const toneOptions = radioKnobOptions(TONES)
 export default {
   title: `Notification`,
   component: Notification,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-    withDesign,
-  ] as DecoratorFn[],
+  decorators: [withDesign] as DecoratorFn[],
   parameters: {
     design: {
       type: "figma",
@@ -55,22 +51,30 @@ export const Basic = () => (
   <Notification content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
 )
 
-export const Sandbox = () => (
-  <Notification
-    content={text(
-      "content",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    )}
-    variant={radios("variant", variantOptions, `PRIMARY`)}
-    tone={radios("tone", toneOptions, `BRAND`)}
-    contentAs={select("content element", ["div", "span"], "div")}
-    linkUrl={text("linkUrl", "")}
-    linkText={text("linkText", "")}
-    isOpened={boolean("isOpened", true)}
-    showDismissButton={boolean("show dismiss button", false)}
-    dismissButtonLabel={text("dismiss button label", "Close")}
-  />
-)
+export const Sandbox = () =>
+  sandboxWithPropVariations(
+    propVariations => (
+      <Notification
+        content={text(
+          "content",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        )}
+        variant={radios("variant", variantOptions, `PRIMARY`)}
+        tone={radios("tone", toneOptions, `BRAND`)}
+        contentAs={select("content element", ["div", "span"], "div")}
+        linkUrl={text("linkUrl", "")}
+        linkText={text("linkText", "")}
+        isOpened={boolean("isOpened", true)}
+        showDismissButton={boolean("show dismiss button", false)}
+        dismissButtonLabel={text("dismiss button label", "Close")}
+        {...propVariations}
+      />
+    ),
+    {
+      variant: VARIANTS,
+      tone: TONES,
+    }
+  )
 
 Sandbox.story = {
   parameters: {
@@ -87,6 +91,10 @@ export const Variants = () =>
     />
   ))
 
+Variants.story = {
+  decorators: [withVariationsContainer],
+}
+
 export const Tones = () =>
   TONES.map(tone => (
     <Notification
@@ -95,6 +103,10 @@ export const Tones = () =>
       content={`Notification tone "${tone}"`}
     />
   ))
+
+Tones.story = {
+  decorators: [withVariationsContainer],
+}
 
 function ControlledNotification(props: NotificationProps) {
   const [isOpened, setIsOpened] = React.useState<boolean>(true)
