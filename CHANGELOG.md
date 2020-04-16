@@ -2,23 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.137](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.136...v0.0.137) (2020-04-16)
+
+
+### Features
+
+* Navigation rewritten to TypeScript ([#288](https://github.com/gatsby-inc/gatsby-interface/issues/288)) ([5fad7e6](https://github.com/gatsby-inc/gatsby-interface/commit/5fad7e6b9cce65b68f16fa30af69ae57d8b010e4))
+
+### [0.0.136](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.135...v0.0.136) (2020-04-16)
+
+### Features
+
+- Spacer component ([#289](https://github.com/gatsby-inc/gatsby-interface/issues/289)) ([f3bc8a6](https://github.com/gatsby-inc/gatsby-interface/commit/f3bc8a6544f01030e3e1cbdfb655dc86908b963a))
+
+### [0.0.135](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.134...v0.0.135) (2020-04-16)
+
+### Bug Fixes
+
+- click on link closes mobile nav ([#286](https://github.com/gatsby-inc/gatsby-interface/issues/286)) ([3533561](https://github.com/gatsby-inc/gatsby-interface/commit/3533561f030ee866481ddd590a7b7856133b22f9))
+
 ### [0.0.134](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.133...v0.0.134) (2020-04-16)
 
 ### [0.0.133](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.132...v0.0.133) (2020-04-15)
 
 ### [0.0.132](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.131...v0.0.132) (2020-04-14)
 
-
 ### Features
 
-* Form refactoring ([#284](https://github.com/gatsby-inc/gatsby-interface/issues/284)) ([a4cd0c5](https://github.com/gatsby-inc/gatsby-interface/commit/a4cd0c58880108da3dcc2038a78678591d5d06ce))
+- Form refactoring ([#284](https://github.com/gatsby-inc/gatsby-interface/issues/284)) ([a4cd0c5](https://github.com/gatsby-inc/gatsby-interface/commit/a4cd0c58880108da3dcc2038a78678591d5d06ce))
 
 ### [0.0.131](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.130...v0.0.131) (2020-04-10)
 
-
 ### Features
 
-* Form updates for radio button block and connected single input blocks ([#283](https://github.com/gatsby-inc/gatsby-interface/issues/283)) ([695ff12](https://github.com/gatsby-inc/gatsby-interface/commit/695ff126f4ff82526fad2230ceaa1b6660b2170f))
+- Form updates for radio button block and connected single input blocks ([#283](https://github.com/gatsby-inc/gatsby-interface/issues/283)) ([695ff12](https://github.com/gatsby-inc/gatsby-interface/commit/695ff126f4ff82526fad2230ceaa1b6660b2170f))
 
 ### [0.0.130](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.129...v0.0.130) (2020-04-09)
 

@@ -15,10 +15,14 @@ import { ThemeCss, Theme } from "../../theme"
 
 export type NotificationContextValue = {
   onDismiss?: () => void
+  variant?: NotificationVariant
+  tone?: NotificationTone
 }
 
 const NotificationContext = React.createContext<NotificationContextValue>({
   onDismiss: () => undefined,
+  variant: undefined,
+  tone: undefined,
 })
 
 const baseCss: ThemeCss = theme => ({
@@ -70,7 +74,9 @@ export default function Notification({
   const Icon = CustomIcon || PresetIcon
 
   return (
-    <NotificationContext.Provider value={{ onDismiss: onDismissButtonClick }}>
+    <NotificationContext.Provider
+      value={{ onDismiss: onDismissButtonClick, variant, tone }}
+    >
       <div
         css={(theme: Theme) => [
           variant === `PRIMARY` && theme.cardStyles.frame,
@@ -80,17 +86,34 @@ export default function Notification({
         {...rest}
       >
         {content && (
-          <NotificationContent as={contentAs}>
+          <NotificationContent
+            as={contentAs}
+            css={theme => ({
+              color:
+                variant === `SOLID` && tone !== `WARNING`
+                  ? theme.colors.white
+                  : null,
+            })}
+          >
             {Icon && (
               <Icon
-                css={theme => ({
-                  marginRight: theme.space[4],
-                  fontSize: theme.fontSizes[4],
-                  color: theme.tones[tone].medium,
-                  flexShrink: 0,
-                  width: "auto",
-                  height: "1em",
-                })}
+                css={theme => [
+                  {
+                    marginRight: theme.space[4],
+                    fontSize: theme.fontSizes[4],
+                    color: theme.tones[tone].medium,
+                    flexShrink: 0,
+                    width: "auto",
+                    height: "1em",
+                  },
+                  variant === `SOLID` && {
+                    color: theme.colors.whiteFade[90],
+                  },
+                  variant === `SOLID` &&
+                    tone === `WARNING` && {
+                      color: theme.colors.blackFade[90],
+                    },
+                ]}
               />
             )}
             {content}
@@ -98,7 +121,16 @@ export default function Notification({
         )}
 
         {linkUrl && linkText && (
-          <Link to={linkUrl} onClick={onLinkClick}>
+          <Link
+            to={linkUrl}
+            onClick={onLinkClick}
+            css={theme => ({
+              color: variant === `SOLID` ? theme.colors.white : null,
+              ":hover": {
+                color: variant === `SOLID` ? theme.colors.whiteFade[80] : null,
+              },
+            })}
+          >
             {linkText && (
               <Fragment>
                 {linkText} <MdArrowForward />
@@ -142,18 +174,34 @@ function NotificationContent({
 }
 
 function NotificationDismissButton({ label = `Close` }: { label?: string }) {
-  const { onDismiss } = useNotificationContext()
+  const { onDismiss, variant, tone } = useNotificationContext()
 
   return (
     <Button
-      css={theme => ({
-        padding: `0`,
-        minHeight: `auto`,
-        color: theme.colors.grey[40],
-        width: theme.space[5],
-        marginLeft: theme.space[5],
-        fontSize: theme.fontSizes[4],
-      })}
+      css={theme => [
+        {
+          padding: `0`,
+          minHeight: `auto`,
+          color: theme.colors.grey[40],
+          width: theme.space[5],
+          marginLeft: theme.space[5],
+          fontSize: theme.fontSizes[4],
+        },
+        variant === `SOLID` && {
+          color: theme.colors.whiteFade[60],
+          ":hover": {
+            background: "transparent",
+            color: theme.colors.white,
+          },
+        },
+        variant === `SOLID` &&
+          tone === `WARNING` && {
+            color: theme.colors.blackFade[60],
+            ":hover": {
+              color: theme.colors.black,
+            },
+          },
+      ]}
       type="button"
       onClick={onDismiss}
       variant="GHOST"
