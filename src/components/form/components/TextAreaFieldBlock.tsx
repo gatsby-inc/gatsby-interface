@@ -5,13 +5,12 @@ import React from "react"
 import {
   TextAreaField,
   TextAreaFieldControlProps,
-  TextAreaFieldWrapper,
   TextAreaFieldLabel,
   TextAreaFieldControl,
   TextAreaFieldHint,
   TextAreaFieldError,
 } from "./TextAreaField"
-import { WithFormFieldBlock } from "./FormField"
+import { WithFormFieldBlock, FormFieldContainer } from "./FormField"
 
 export type TextAreaFieldBlockProps = WithFormFieldBlock<
   TextAreaFieldControlProps
@@ -29,13 +28,23 @@ export const TextAreaFieldBlock = React.forwardRef<
     hint,
     className,
     validationMode,
+    layout,
     ...rest
   } = props
 
   return (
-    <TextAreaField id={id} hasError={!!error} hasHint={!!hint}>
-      <TextAreaFieldWrapper className={className}>
-        <TextAreaFieldLabel size={labelSize} isRequired={!!rest.required}>
+    <FormFieldContainer layout={layout} className={className}>
+      <TextAreaField id={id} hasError={!!error} hasHint={!!hint}>
+        <TextAreaFieldLabel
+          size={labelSize}
+          isRequired={!!rest.required}
+          css={theme => [
+            layout === `horizontal` && {
+              alignSelf: `baseline`,
+              paddingTop: theme.space[2],
+            },
+          ]}
+        >
           {label}
         </TextAreaFieldLabel>
         <TextAreaFieldControl ref={ref} {...rest} />
@@ -43,7 +52,7 @@ export const TextAreaFieldBlock = React.forwardRef<
         <TextAreaFieldError validationMode={validationMode}>
           {error}
         </TextAreaFieldError>
-      </TextAreaFieldWrapper>
-    </TextAreaField>
+      </TextAreaField>
+    </FormFieldContainer>
   )
 })

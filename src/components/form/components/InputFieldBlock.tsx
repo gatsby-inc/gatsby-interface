@@ -5,13 +5,12 @@ import React from "react"
 import {
   InputField,
   InputFieldControlProps,
-  InputFieldWrapper,
   InputFieldLabel,
   InputFieldControl,
   InputFieldHint,
   InputFieldError,
 } from "./InputField"
-import { WithFormFieldBlock } from "./FormField"
+import { WithFormFieldBlock, FormFieldContainer } from "./FormField"
 
 export type InputFieldBlockProps = WithFormFieldBlock<InputFieldControlProps>
 
@@ -27,12 +26,13 @@ export const InputFieldBlock = React.forwardRef<
     hint,
     className,
     validationMode,
+    layout,
     ...rest
   } = props
 
   return (
-    <InputField id={id} hasError={!!error} hasHint={!!hint}>
-      <InputFieldWrapper className={className}>
+    <FormFieldContainer layout={layout} className={className}>
+      <InputField id={id} hasError={!!error} hasHint={!!hint}>
         <InputFieldLabel size={labelSize} isRequired={!!rest.required}>
           {label}
         </InputFieldLabel>
@@ -41,7 +41,7 @@ export const InputFieldBlock = React.forwardRef<
         <InputFieldError validationMode={validationMode}>
           {error}
         </InputFieldError>
-      </InputFieldWrapper>
-    </InputField>
+      </InputField>
+    </FormFieldContainer>
   )
 })

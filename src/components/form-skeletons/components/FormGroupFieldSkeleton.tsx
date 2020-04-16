@@ -9,7 +9,7 @@ import { getFinalAriaDescribedBy } from "../utils"
 import { OmitControlProps } from "../sharedTypes"
 
 export type FormGroupFieldSkeletonProps = FormFieldSkeletonProps &
-  Pick<JSX.IntrinsicElements["fieldset"], "className" | "style">
+  Pick<JSX.IntrinsicElements["div"], "className" | "style">
 
 export function FormGroupFieldSkeleton({
   id,
@@ -21,21 +21,28 @@ export function FormGroupFieldSkeleton({
 }: FormGroupFieldSkeletonProps) {
   return (
     <FormFieldSkeleton id={id} hasError={hasError} hasHint={hasHint}>
-      <fieldset id={id} className={className} style={style}>
+      <div
+        role="group"
+        id={id}
+        aria-labelledby={`${id}__legend`}
+        className={className}
+        style={style}
+      >
         {children}
-      </fieldset>
+      </div>
     </FormFieldSkeleton>
   )
 }
 
 export type FormGroupFieldSkeletonLabelProps = Omit<
-  JSX.IntrinsicElements["legend"],
+  JSX.IntrinsicElements["div"],
   "ref"
 >
 
-export const FormGroupFieldSkeletonLabel: React.FC<
-  FormGroupFieldSkeletonLabelProps
-> = props => <legend {...props} />
+export const FormGroupFieldSkeletonLabel: React.FC<FormGroupFieldSkeletonLabelProps> = props => {
+  const { id } = useFormFieldSkeleton()
+  return <div {...props} id={`${id}__legend`} />
+}
 
 export type FormGroupFieldSkeletonOptionProps = Omit<
   OmitControlProps<JSX.IntrinsicElements["input"]>,
@@ -70,9 +77,10 @@ export type FormGroupFieldSkeletonOptionLabelProps = FormFieldSkeletonLabelProps
   optionValue: string
 }
 
-export const FormGroupFieldSkeletonOptionLabel: React.FC<
-  FormGroupFieldSkeletonOptionLabelProps
-> = ({ optionValue, ...rest }) => {
+export const FormGroupFieldSkeletonOptionLabel: React.FC<FormGroupFieldSkeletonOptionLabelProps> = ({
+  optionValue,
+  ...rest
+}) => {
   const { id } = useFormFieldSkeleton()
 
   return <label htmlFor={getGroupOptionId(id, optionValue)} {...rest} />

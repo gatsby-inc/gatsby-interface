@@ -67,3 +67,12 @@ export function getGroupFieldStoryOptions(size: OptionsSize = "mid") {
     }
   })
 }
+
+export function getStoryOptions(size: OptionsSize = "mid") {
+  return optionsByLength[size].map(name => {
+    return {
+      label: name,
+      value: name.toLowerCase().replace(/\s/g, `-`),
+    }
+  })
+}

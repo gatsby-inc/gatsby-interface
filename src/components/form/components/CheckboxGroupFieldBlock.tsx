@@ -5,20 +5,25 @@ import {
   CheckboxGroupField,
   CheckboxGroupFieldLabel,
   CheckboxGroupFieldOptions,
-  CheckboxGroupFieldOptionWrapper,
-  CheckboxGroupFieldOption,
   CheckboxGroupFieldOptionProps,
-  CheckboxGroupFieldOptionLabel,
   CheckboxGroupFieldHint,
   CheckboxGroupFieldError,
+  CheckboxGroupFieldOptionItemProps,
+  CheckboxGroupFieldOptionItem,
 } from "./CheckboxGroupField"
-import { WithFormFieldBlock } from "./FormField"
+import { WithFormFieldBlock, useFormFieldContainerProps } from "./FormField"
+import { FormGroupOptionsDirection } from "./FormGroupField"
+
+export type CheckboxGroupFieldBlockOption = {
+  label: React.ReactNode
+  value: string
+} & Partial<Omit<CheckboxGroupFieldOptionItemProps, "label" | "value">>
 
 export type CheckboxGroupFieldBlockProps = WithFormFieldBlock<
   {
-    options: { label: string; value: any }[]
-    layout?: `horizontal` | `vertical`
-    value: any[]
+    options: CheckboxGroupFieldBlockOption[]
+    optionsDirection?: FormGroupOptionsDirection
+    value?: string[]
   } & Omit<CheckboxGroupFieldOptionProps, "value">
 >
 
@@ -29,6 +34,7 @@ export const CheckboxGroupFieldBlock = (
     id,
     label,
     layout,
+    optionsDirection,
     labelSize,
     options,
     error,
@@ -39,29 +45,39 @@ export const CheckboxGroupFieldBlock = (
     ...rest
   } = props
 
+  const layoutProps = useFormFieldContainerProps(layout)
+
   return (
     <CheckboxGroupField
       id={id}
       hasError={!!error}
       hasHint={!!hint}
-      layout={layout}
+      optionsDirection={optionsDirection}
       className={className}
+      {...layoutProps}
     >
-      <CheckboxGroupFieldLabel size={labelSize} isRequired={!!rest.required}>
+      <CheckboxGroupFieldLabel
+        size={labelSize}
+        isRequired={!!rest.required}
+        css={_theme => [layout === `horizontal` && { alignSelf: `baseline` }]}
+      >
         {label}
       </CheckboxGroupFieldLabel>
-      <CheckboxGroupFieldOptions>
-        {options.map(({ label, value }) => (
-          <CheckboxGroupFieldOptionWrapper key={value}>
-            <CheckboxGroupFieldOption
-              value={value}
-              checked={fieldValue.includes(value)}
-              {...rest}
-            />
-            <CheckboxGroupFieldOptionLabel optionValue={value}>
-              {label}
-            </CheckboxGroupFieldOptionLabel>
-          </CheckboxGroupFieldOptionWrapper>
+      <CheckboxGroupFieldOptions
+        css={_theme => [layout === `horizontal` && { paddingTop: 0 }]}
+      >
+        {options.map(({ value, label, ...restOption }) => (
+          <CheckboxGroupFieldOptionItem
+            key={value}
+            value={value}
+            // Support uncontrolled field
+            checked={
+              fieldValue === undefined ? undefined : fieldValue.includes(value)
+            }
+            label={label}
+            {...rest}
+            {...restOption}
+          />
         ))}
       </CheckboxGroupFieldOptions>
       <CheckboxGroupFieldHint>{hint}</CheckboxGroupFieldHint>

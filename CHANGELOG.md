@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.133](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.132...v0.0.133) (2020-04-15)
+
+### [0.0.132](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.131...v0.0.132) (2020-04-14)
+
+
+### Features
+
+* Form refactoring ([#284](https://github.com/gatsby-inc/gatsby-interface/issues/284)) ([a4cd0c5](https://github.com/gatsby-inc/gatsby-interface/commit/a4cd0c58880108da3dcc2038a78678591d5d06ce))
+
 ### [0.0.131](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.130...v0.0.131) (2020-04-10)
 
 
