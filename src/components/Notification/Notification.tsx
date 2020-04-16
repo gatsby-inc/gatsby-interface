@@ -15,10 +15,12 @@ import { ThemeCss, Theme } from "../../theme"
 
 export type NotificationContextValue = {
   onDismiss?: () => void
+  variant?: NotificationVariant
 }
 
 const NotificationContext = React.createContext<NotificationContextValue>({
   onDismiss: () => undefined,
+  variant: undefined,
 })
 
 const baseCss: ThemeCss = theme => ({
@@ -71,7 +73,9 @@ export default function Notification({
   const Icon = CustomIcon || PresetIcon
 
   return (
-    <NotificationContext.Provider value={{ onDismiss: onDismissButtonClick }}>
+    <NotificationContext.Provider
+      value={{ onDismiss: onDismissButtonClick, variant }}
+    >
       <div
         css={(theme: Theme) => [
           variant === `PRIMARY` && theme.cardStyles.frame,
@@ -126,10 +130,7 @@ export default function Notification({
         )}
 
         {showDismissButton && (
-          <NotificationDismissButton
-            label={dismissButtonLabel}
-            variant={variant}
-          />
+          <NotificationDismissButton label={dismissButtonLabel} />
         )}
         {children}
       </div>
@@ -162,14 +163,8 @@ function NotificationContent({
   )
 }
 
-function NotificationDismissButton({
-  label = `Close`,
-  variant,
-}: {
-  label?: string
-  variant?: NotificationVariant
-}) {
-  const { onDismiss } = useNotificationContext()
+function NotificationDismissButton({ label = `Close` }: { label?: string }) {
+  const { onDismiss, variant } = useNotificationContext()
 
   return (
     <Button
