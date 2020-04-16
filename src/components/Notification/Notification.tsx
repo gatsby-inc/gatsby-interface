@@ -82,15 +82,6 @@ export default function Notification({
           variant === `PRIMARY` && theme.cardStyles.frame,
           baseCss(theme),
           getNotificationVariantStyles(variant, tone)(theme),
-          variant === `SOLID` && { borderRadius: theme.radii[2] },
-          variant === `SOLID` &&
-            tone === `WARNING` && {
-              background: theme.colors.yellow[50],
-            },
-          variant === `SOLID` &&
-            tone === `SUCCESS` && {
-              background: theme.colors.green[80],
-            },
         ]}
         {...rest}
       >
