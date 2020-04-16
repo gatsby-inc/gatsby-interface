@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.136](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.135...v0.0.136) (2020-04-16)
 
-
 ### Features
 
-* Spacer component ([#289](https://github.com/gatsby-inc/gatsby-interface/issues/289)) ([f3bc8a6](https://github.com/gatsby-inc/gatsby-interface/commit/f3bc8a6544f01030e3e1cbdfb655dc86908b963a))
+- Spacer component ([#289](https://github.com/gatsby-inc/gatsby-interface/issues/289)) ([f3bc8a6](https://github.com/gatsby-inc/gatsby-interface/commit/f3bc8a6544f01030e3e1cbdfb655dc86908b963a))
 
 ### [0.0.135](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.134...v0.0.135) (2020-04-16)
 
