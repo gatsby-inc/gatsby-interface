@@ -4,9 +4,9 @@ import { ThemeCss, Theme } from "../../theme"
 
 const baseCss: ThemeCss = theme => ({
   borderRadius: theme.radii[2],
-  fontFamily: theme.fonts.heading,
-  fontWeight: `bold`,
-  lineHeight: 1,
+  fontFamily: theme.fonts.body,
+  fontWeight: theme.fontWeights.semiBold,
+  lineHeight: theme.lineHeights.dense,
 })
 
 const variantCss: Record<BadgeVariant, ThemeCss> = {
@@ -14,7 +14,7 @@ const variantCss: Record<BadgeVariant, ThemeCss> = {
     background: theme.colors.green[50],
     color: theme.colors.white,
     fontSize: theme.fontSizes[1],
-    letterSpacing: `0.05em`,
+    letterSpacing: theme.letterSpacings.tracked,
     padding: `${theme.space[3]} ${theme.space[3]} ${theme.space[2]}`,
     textTransform: `uppercase`,
   }),
