@@ -3,7 +3,9 @@ import { jsx } from "@emotion/core"
 import { ThemeCss, Theme } from "../../theme"
 
 const baseCss: ThemeCss = theme => ({
+  alignItems: `center`,
   borderRadius: theme.radii[2],
+  display: `inline-flex`,
   fontFamily: theme.fonts.body,
   fontWeight: theme.fontWeights.semiBold,
   lineHeight: theme.lineHeights.dense,
@@ -13,19 +15,18 @@ const variantCss: Record<BadgeVariant, ThemeCss> = {
   PILL: theme => ({
     background: theme.colors.green[50],
     color: theme.colors.white,
-    fontSize: theme.fontSizes[1],
+    fontSize: theme.fontSizes[0],
     letterSpacing: theme.letterSpacings.tracked,
-    padding: `${theme.space[3]} ${theme.space[3]} ${theme.space[2]}`,
+    padding: `${theme.space[1]} ${theme.space[3]}`,
+    minHeight: theme.space[7],
     textTransform: `uppercase`,
   }),
-
   STATUS: theme => ({
-    alignItems: `center`,
     background: theme.colors.green[5],
     color: theme.colors.green[50],
-    display: `inline-flex`,
-    fontSize: theme.fontSizes[2],
-    padding: `${theme.space[3]} ${theme.space[4]}`,
+    fontSize: theme.fontSizes[1],
+    minHeight: theme.space[8],
+    padding: `${theme.space[1]} ${theme.space[4]}`,
   }),
 }
 
