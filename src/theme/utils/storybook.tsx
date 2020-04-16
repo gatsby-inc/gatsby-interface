@@ -81,9 +81,9 @@ const renderScale = (
 function Code({ children }: { children: React.ReactNode }) {
   return (
     <span
-      css={theme => ({
+      css={(theme: Theme) => ({
         color: theme.colors.grey[90],
-        backgroundColor: theme.colors.grey[20],
+        backgroundColor: theme.colors.white,
         padding: `${theme.space[1]} ${theme.space[2]}`,
         borderRadius: theme.radii[1],
       })}

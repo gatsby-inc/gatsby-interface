@@ -8,6 +8,9 @@ export default {
   component: ModalCard,
   parameters: {
     chromatic: { pauseAnimationAtEnd: true },
+    options: {
+      showRoots: true,
+    },
   },
 }
 

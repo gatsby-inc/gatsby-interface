@@ -1,21 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { DecoratorFn } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
-import { StoryUtils } from "../../utils/storybook"
-import { radioKnobOptions } from "../../utils/storybook/knobs"
+import { radioKnobOptions, withVariationsContainer } from "../../utils/storybook"
 import { <%= COMPONENT_NAME %>, <%= COMPONENT_NAME %>Variant } from "."
 
 export default {
   title: `<%= COMPONENT_NAME %>`,
   component: <%= COMPONENT_NAME %>,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
 }
 
 export const Basic = () => <<%= COMPONENT_NAME %>>Hello world!</<%= COMPONENT_NAME %>>
@@ -46,3 +37,7 @@ export const Variants = () =>
       Variant: {variant}
     </<%= COMPONENT_NAME %>>
   ))
+
+Variants.story = {
+  decorators: [withVariationsContainer]
+}

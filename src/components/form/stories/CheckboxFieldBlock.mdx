@@ -1,0 +1,18 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import {
+  CheckboxFieldBlock,
+} from "../components/CheckboxFieldBlock"
+import { FieldDocDisclaimer } from "./stories.utils"
+import FieldSharedPropsDescription from './FieldSharedPropsDescription.mdx'
+
+# CheckboxFieldBlock
+----
+<Preview>
+<Story id="form-styled-blocks-checkboxfieldblock--basic" />
+</Preview>
+
+## Props
+<Props of={CheckboxFieldBlock} />
+
+`CheckboxFieldBlock` accepts all of the props supported by `<input type="checkbox" />` as well as the props shared between field block components: 
+<FieldSharedPropsDescription />

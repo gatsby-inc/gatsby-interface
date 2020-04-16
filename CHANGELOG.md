@@ -2,12 +2,68 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.125](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.124...v0.0.125) (2020-04-03)
+### [0.0.137](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.136...v0.0.137) (2020-04-16)
 
 
 ### Features
 
-* StyledModal component ([#266](https://github.com/gatsby-inc/gatsby-interface/issues/266)) ([373e440](https://github.com/gatsby-inc/gatsby-interface/commit/373e4407d3b5d3b0e15f5d210e1232ad332185a9))
+* Navigation rewritten to TypeScript ([#288](https://github.com/gatsby-inc/gatsby-interface/issues/288)) ([5fad7e6](https://github.com/gatsby-inc/gatsby-interface/commit/5fad7e6b9cce65b68f16fa30af69ae57d8b010e4))
+
+### [0.0.136](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.135...v0.0.136) (2020-04-16)
+
+### Features
+
+- Spacer component ([#289](https://github.com/gatsby-inc/gatsby-interface/issues/289)) ([f3bc8a6](https://github.com/gatsby-inc/gatsby-interface/commit/f3bc8a6544f01030e3e1cbdfb655dc86908b963a))
+
+### [0.0.135](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.134...v0.0.135) (2020-04-16)
+
+### Bug Fixes
+
+- click on link closes mobile nav ([#286](https://github.com/gatsby-inc/gatsby-interface/issues/286)) ([3533561](https://github.com/gatsby-inc/gatsby-interface/commit/3533561f030ee866481ddd590a7b7856133b22f9))
+
+### [0.0.134](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.133...v0.0.134) (2020-04-16)
+
+### [0.0.133](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.132...v0.0.133) (2020-04-15)
+
+### [0.0.132](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.131...v0.0.132) (2020-04-14)
+
+### Features
+
+- Form refactoring ([#284](https://github.com/gatsby-inc/gatsby-interface/issues/284)) ([a4cd0c5](https://github.com/gatsby-inc/gatsby-interface/commit/a4cd0c58880108da3dcc2038a78678591d5d06ce))
+
+### [0.0.131](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.130...v0.0.131) (2020-04-10)
+
+### Features
+
+- Form updates for radio button block and connected single input blocks ([#283](https://github.com/gatsby-inc/gatsby-interface/issues/283)) ([695ff12](https://github.com/gatsby-inc/gatsby-interface/commit/695ff126f4ff82526fad2230ceaa1b6660b2170f))
+
+### [0.0.130](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.129...v0.0.130) (2020-04-09)
+
+### [0.0.129](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.128...v0.0.129) (2020-04-09)
+
+### [0.0.128](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.127...v0.0.128) (2020-04-07)
+
+### Features
+
+- StickyObserver, StyledPanel and StyledModalActions components ([#276](https://github.com/gatsby-inc/gatsby-interface/issues/276)) ([37cbd43](https://github.com/gatsby-inc/gatsby-interface/commit/37cbd43add10c365925f205f2f9c332bcfb98691))
+
+### [0.0.127](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.126...v0.0.127) (2020-04-06)
+
+### Features
+
+- realign `<SidebarNav>` ([#274](https://github.com/gatsby-inc/gatsby-interface/issues/274)) ([a66022a](https://github.com/gatsby-inc/gatsby-interface/commit/a66022a17142b573c812377441c24e86beade552)), closes [/github.com/facebook/jest/issues/9292#issuecomment-569673251](https://github.com/gatsby-inc//github.com/facebook/jest/issues/9292/issues/issuecomment-569673251) [#277](https://github.com/gatsby-inc/gatsby-interface/issues/277)
+
+### [0.0.126](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.125...v0.0.126) (2020-04-06)
+
+### Features
+
+- DensityProvider ([#268](https://github.com/gatsby-inc/gatsby-interface/issues/268)) ([0e00cd4](https://github.com/gatsby-inc/gatsby-interface/commit/0e00cd40a2d5d6b85e946a8eb92f30474c7a83e6))
+
+### [0.0.125](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.124...v0.0.125) (2020-04-03)
+
+### Features
+
+- StyledModal component ([#266](https://github.com/gatsby-inc/gatsby-interface/issues/266)) ([373e440](https://github.com/gatsby-inc/gatsby-interface/commit/373e4407d3b5d3b0e15f5d210e1232ad332185a9))
 
 ### [0.0.124](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.123...v0.0.124) (2020-04-03)
 
@@ -17,10 +73,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.121](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.120...v0.0.121) (2020-04-01)
 
-
 ### Features
 
-* Add ConcealedValue component ([#256](https://github.com/gatsby-inc/gatsby-interface/issues/256)) ([84f3d36](https://github.com/gatsby-inc/gatsby-interface/commit/84f3d36366d990e0d90777273b17b8fe25660a25))
+- Add ConcealedValue component ([#256](https://github.com/gatsby-inc/gatsby-interface/issues/256)) ([84f3d36](https://github.com/gatsby-inc/gatsby-interface/commit/84f3d36366d990e0d90777273b17b8fe25660a25))
 
 ### [0.0.120](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.119...v0.0.120) (2020-04-01)
 

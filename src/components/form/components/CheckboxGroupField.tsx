@@ -40,11 +40,11 @@ export type CheckboxGroupFieldProps = Omit<
   "variant"
 >
 export function CheckboxGroupField({
-  layout,
+  optionsDirection,
   ...rest
 }: CheckboxGroupFieldProps) {
   return (
-    <FormGroupFieldProvider layout={layout}>
+    <FormGroupFieldProvider optionsDirection={optionsDirection}>
       <CheckboxGroupFieldSkeleton css={formGroupFieldCss} {...rest} />
     </FormGroupFieldProvider>
   )
@@ -81,9 +81,10 @@ export const CheckboxGroupFieldOption = React.forwardRef<
 
 export type CheckboxGroupFieldOptionLabelProps = CheckboxGroupFieldSkeletonOptionLabelProps &
   FormGroupFieldOptionLabelProps
-export const CheckboxGroupFieldOptionLabel: React.FC<
-  CheckboxGroupFieldOptionLabelProps
-> = ({ size, ...rest }) => {
+export const CheckboxGroupFieldOptionLabel: React.FC<CheckboxGroupFieldOptionLabelProps> = ({
+  size,
+  ...rest
+}) => {
   const { hasError } = useFormFieldSkeleton()
   const { css, ...styledProps } = useStyledGroupFieldOptionLabel({ size })
 
@@ -157,4 +158,23 @@ export function CheckboxGroupFieldOptionWrapper(
   props: CheckboxGroupFieldOptionWrapperProps
 ) {
   return <FormGroupFieldOptionWrapper {...props} />
+}
+
+export type CheckboxGroupFieldOptionItemProps = CheckboxGroupFieldOptionProps & {
+  label: React.ReactNode
+}
+
+export function CheckboxGroupFieldOptionItem({
+  label,
+  value,
+  ...rest
+}: CheckboxGroupFieldOptionItemProps) {
+  return (
+    <CheckboxGroupFieldOptionWrapper>
+      <CheckboxGroupFieldOption value={value} {...rest} />
+      <CheckboxGroupFieldOptionLabel optionValue={value}>
+        {label}
+      </CheckboxGroupFieldOptionLabel>
+    </CheckboxGroupFieldOptionWrapper>
+  )
 }

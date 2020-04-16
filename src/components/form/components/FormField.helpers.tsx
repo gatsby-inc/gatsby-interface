@@ -22,7 +22,8 @@ export const getLabelFontSize = (
 
 export const getLabelStyles = (theme: Theme): Interpolation => ({
   color: theme.colors.grey[90],
-  lineHeight: 1.1,
+  lineHeight: theme.lineHeights.dense,
+  alignSelf: `center`,
 })
 
 export const RequiredFlag = () => (
@@ -86,7 +87,35 @@ export const getInputStyles = (
 export const getDescriptionStyles = (theme: Theme): Interpolation => ({
   color: theme.colors.grey[50],
   fontSize: theme.fontSizes[0],
-  lineHeight: 1.2,
+  lineHeight: theme.lineHeights.dense,
   position: `relative`,
   zIndex: 0,
 })
+
+export const getFieldLayoutStyles = (
+  theme: Theme,
+  layout: `horizontal` | `vertical` = `vertical`
+): Interpolation => [
+  {
+    display: `grid`,
+    gridRowGap: theme.space[2],
+    gridColumnGap: theme.space[4],
+  },
+  layout === `horizontal`
+    ? {
+        gridTemplateAreas: `
+      "label control"
+      "..... hint"
+      "..... error"
+    `,
+        gridTemplateColumns: `30% 70%`,
+      }
+    : {
+        gridTemplateAreas: `
+      "label"
+      "control"
+      "hint"
+      "error"
+    `,
+      },
+]

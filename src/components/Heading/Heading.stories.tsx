@@ -1,20 +1,16 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { DecoratorFn } from "@storybook/react"
 import { select, text, radios } from "@storybook/addon-knobs"
 
-import { StoryUtils, radioKnobOptions } from "../../utils/storybook"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
 import { Heading, HeadingTone, HeadingVariant } from "."
 
 export default {
   title: `Heading`,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
+  component: Heading,
 }
 
 export const Basic = () => (
@@ -54,9 +50,17 @@ export const Tones = () =>
     </Heading>
   ))
 
+Tones.story = {
+  decorators: [withVariationsContainer],
+}
+
 export const Variants = () =>
   VARIANTS.map(variant => (
     <Heading key={variant} variant={variant}>
       Variant: {variant}
     </Heading>
   ))
+
+Variants.story = {
+  decorators: [withVariationsContainer],
+}

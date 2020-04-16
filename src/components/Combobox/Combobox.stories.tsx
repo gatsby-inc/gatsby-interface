@@ -8,21 +8,19 @@ import {
   ComboboxList,
   ComboboxOption,
 } from "./"
-import { DecoratorFn } from "@storybook/react"
-import { StoryUtils } from "../../utils/storybook"
 import { Theme } from "../../theme"
 import { ComboboxOptionProps } from "./Combobox"
 import { boolean } from "@storybook/addon-knobs"
 
 export default {
   title: `Combobox`,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
+  component: Combobox,
+  subcomponents: {
+    ComboboxInput,
+    ComboboxPopover,
+    ComboboxList,
+    ComboboxOption,
+  },
 }
 
 const options: ComboboxOptionProps[] = [

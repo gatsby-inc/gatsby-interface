@@ -1,5 +1,3 @@
-export { General, Integrations, Preview, Skull } from "./assets"
-
 export {
   Button,
   // deprecated, legacy exports
@@ -23,8 +21,6 @@ export { RadioSkeleton, Radio } from "./components/Radio"
 export { FileUpload } from "./components/FileUpload"
 
 export { SidebarNav } from "./components/SidebarNav"
-
-export { Navigation } from "./components/Navigation"
 
 export * from "./components/CopyButton"
 
@@ -71,3 +67,8 @@ export * from "./components/Tooltip"
 export * from "./components/Combobox"
 export * from "./components/ConcealedValue"
 export * from "./components/StepIndicator"
+export * from "./components/DensityProvider"
+export * from "./components/StickyObserver"
+export * from "./components/Dropdown"
+export * from "./components/Spacer"
+export * from "./components/Navigation"
