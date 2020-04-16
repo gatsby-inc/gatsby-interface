@@ -16,11 +16,13 @@ import { ThemeCss, Theme } from "../../theme"
 export type NotificationContextValue = {
   onDismiss?: () => void
   variant?: NotificationVariant
+  tone?: NotificationTone
 }
 
 const NotificationContext = React.createContext<NotificationContextValue>({
   onDismiss: () => undefined,
   variant: undefined,
+  tone: undefined,
 })
 
 const baseCss: ThemeCss = theme => ({
@@ -74,13 +76,21 @@ export default function Notification({
 
   return (
     <NotificationContext.Provider
-      value={{ onDismiss: onDismissButtonClick, variant }}
+      value={{ onDismiss: onDismissButtonClick, variant, tone }}
     >
       <div
         css={(theme: Theme) => [
           variant === `PRIMARY` && theme.cardStyles.frame,
           baseCss(theme),
           getNotificationVariantStyles(variant, tone)(theme),
+          variant === `SOLID` &&
+            tone === `WARNING` && {
+              background: theme.colors.yellow[50],
+            },
+          variant === `SOLID` &&
+            tone === `SUCCESS` && {
+              background: theme.colors.green[80],
+            },
         ]}
         {...rest}
       >
@@ -88,22 +98,31 @@ export default function Notification({
           <NotificationContent
             as={contentAs}
             css={theme => ({
-              color: variant === `SOLID` ? theme.colors.white : null,
+              color:
+                variant === `SOLID` && tone !== `WARNING`
+                  ? theme.colors.white
+                  : null,
             })}
           >
             {Icon && (
               <Icon
-                css={theme => ({
-                  marginRight: theme.space[4],
-                  fontSize: theme.fontSizes[4],
-                  color:
-                    variant === `SOLID`
-                      ? theme.colors.whiteFade[90]
-                      : theme.tones[tone].medium,
-                  flexShrink: 0,
-                  width: "auto",
-                  height: "1em",
-                })}
+                css={theme => [
+                  {
+                    marginRight: theme.space[4],
+                    fontSize: theme.fontSizes[4],
+                    color: theme.tones[tone].medium,
+                    flexShrink: 0,
+                    width: "auto",
+                    height: "1em",
+                  },
+                  variant === `SOLID` && {
+                    color: theme.colors.whiteFade[90],
+                  },
+                  variant === `SOLID` &&
+                    tone === `WARNING` && {
+                      color: theme.colors.blackFade[90],
+                    },
+                ]}
               />
             )}
             {content}
@@ -164,7 +183,7 @@ function NotificationContent({
 }
 
 function NotificationDismissButton({ label = `Close` }: { label?: string }) {
-  const { onDismiss, variant } = useNotificationContext()
+  const { onDismiss, variant, tone } = useNotificationContext()
 
   return (
     <Button
@@ -177,13 +196,20 @@ function NotificationDismissButton({ label = `Close` }: { label?: string }) {
           marginLeft: theme.space[5],
           fontSize: theme.fontSizes[4],
         },
-        variant === "SOLID" && {
+        variant === `SOLID` && {
           color: theme.colors.whiteFade[60],
           ":hover": {
             background: "transparent",
             color: theme.colors.white,
           },
         },
+        variant === `SOLID` &&
+          tone === `WARNING` && {
+            color: theme.colors.blackFade[60],
+            ":hover": {
+              color: theme.colors.black,
+            },
+          },
       ]}
       type="button"
       onClick={onDismiss}
