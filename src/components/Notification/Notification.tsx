@@ -177,15 +177,13 @@ function NotificationDismissButton({
         {
           padding: `0`,
           minHeight: `auto`,
-          color:
-            variant === "SOLID"
-              ? theme.colors.whiteFade[60]
-              : theme.colors.grey[40],
+          color: theme.colors.grey[40],
           width: theme.space[5],
           marginLeft: theme.space[5],
           fontSize: theme.fontSizes[4],
         },
         variant === "SOLID" && {
+          color: theme.colors.whiteFade[60],
           ":hover": {
             background: "transparent",
             color: theme.colors.white,
