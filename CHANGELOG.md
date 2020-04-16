@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.135](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.134...v0.0.135) (2020-04-16)
+
+
+### Bug Fixes
+
+* click on link closes mobile nav ([#286](https://github.com/gatsby-inc/gatsby-interface/issues/286)) ([3533561](https://github.com/gatsby-inc/gatsby-interface/commit/3533561f030ee866481ddd590a7b7856133b22f9))
+
 ### [0.0.134](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.133...v0.0.134) (2020-04-16)
 
 ### [0.0.133](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.132...v0.0.133) (2020-04-15)
