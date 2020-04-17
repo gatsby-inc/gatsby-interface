@@ -9,7 +9,7 @@ const variants: Record<BadgeVariant, GetVariantStylesFn> = {
       {
         boxShadow: `0 0 1px 0 ${theme.tones[tone].light} inset`,
         background: theme.tones[tone].superLight,
-        color: theme.tones[tone].dark,
+        color: theme.tones[tone].darker,
       },
     ]
   },
