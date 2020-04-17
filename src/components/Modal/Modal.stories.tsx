@@ -12,6 +12,11 @@ const TYPES: ModalType[] = ["info", "success", "warn", "error"]
 export default {
   title: `Modal`,
   component: ModalPanel,
+  parameters: {
+    options: {
+      showRoots: true,
+    },
+  },
 }
 
 export const Basic = () => (

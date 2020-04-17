@@ -2,7 +2,11 @@
 import { jsx } from "@emotion/core"
 import { DecoratorFn } from "@storybook/react"
 import { create, themes } from "@storybook/theming"
-import { ThemeProvider, getTheme, Heading, Text } from "../src"
+// DO NOT IMPORT FROM ../src/index.ts, it will break hot module reloading in Storybook
+import { getTheme } from "../src/theme"
+import { ThemeProvider } from "../src/components/ThemeProvider"
+import { Heading } from "../src/components/Heading"
+import { Text } from "../src/components/Text"
 import { CodeOrSourceMdx } from "@storybook/addon-docs/blocks"
 
 const theme = getTheme()
@@ -10,12 +14,15 @@ const theme = getTheme()
 export const storybookThemeLight = create({
   ...themes.light,
   appBg: theme.colors.grey[5],
+  appBorderColor: theme.colors.blackFade[10],
   fontBase: theme.fonts.body,
+  textColor: theme.colors.grey[90],
   fontCode: theme.fonts.monospace,
-  colorSecondary: theme.colors.purple[40],
+  colorSecondary: theme.colors.purple[50],
   brandTitle: `Gatsby Interface`,
   barTextColor: theme.colors.grey[70],
-  barSelectedColor: theme.colors.purple[40],
+  barSelectedColor: theme.colors.purple[50],
+  inputBorder: theme.colors.blackFade[10],
 })
 
 export const withTheme: DecoratorFn = story => {

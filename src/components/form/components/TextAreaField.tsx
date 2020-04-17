@@ -4,9 +4,6 @@ import React from "react"
 
 import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
 import {
-  getFieldStackStyles,
-  FormFieldStack,
-  FormFieldStackProps,
   useStyledFieldLabel,
   useStyledFieldError,
   useStyledFieldHint,
@@ -53,7 +50,6 @@ export const TextAreaFieldControl = React.forwardRef<
       ref={ref}
       css={(theme: Theme) => [
         getInputStyles(theme, hasError),
-        getFieldStackStyles(`item`, theme),
         {
           display: `block`,
           minHeight: `4.85em`,
@@ -66,9 +62,6 @@ export const TextAreaFieldControl = React.forwardRef<
     />
   )
 })
-
-export type TextAreaFieldWrapperProps = FormFieldStackProps
-export const TextAreaFieldWrapper = FormFieldStack
 
 export type TextAreaFieldLabelProps = WithStyledFieldLabel<
   TextAreaFieldSkeletonLabelProps

@@ -39,6 +39,51 @@ exports[`icons <BlogIcon /> renders unchanged 1`] = `
 </div>
 `;
 
+exports[`icons <BuildsIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-BuildsIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="currentColor"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <rect
+      height="9.54724"
+      stroke="currentColor"
+      stroke-width="2"
+      transform="matrix(0.866044 0.499967 -0.866044 0.499967 12.8699 11.55)"
+      width="9.54724"
+      y="0.999935"
+    />
+    <rect
+      height="9.54724"
+      stroke="currentColor"
+      stroke-width="2"
+      transform="matrix(0.866044 0.499967 -0.866044 0.499967 12.8664 7)"
+      width="9.54724"
+      y="0.999935"
+    />
+    <rect
+      fill="white"
+      height="9.54724"
+      stroke="currentColor"
+      stroke-miterlimit="11.4737"
+      stroke-width="2"
+      transform="matrix(0.866044 0.499967 -0.866044 0.499967 12.8699 2)"
+      width="9.54724"
+      y="0.999935"
+    />
+  </svg>
+</div>
+`;
+
 exports[`icons <CheckCircleIcon /> renders unchanged 1`] = `
 <div>
   <svg
@@ -235,6 +280,49 @@ exports[`icons <EllipsisIcon /> renders unchanged 1`] = `
 </div>
 `;
 
+exports[`icons <GeneralIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-GeneralIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="none"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <path
+      d="M22.6607 9.27801C20.4579 10.703 19 13.1812 19 16C19 17.3216 19.3205 18.5684 19.888 19.6668C20.4176 19.122 20.8913 18.5226 21.2997 17.8777C21.1053 17.287 21 16.6558 21 16C21 14.2276 21.7685 12.6348 22.9905 11.5364C22.9583 10.7601 22.8456 10.0046 22.6607 9.27801Z"
+      fill="currentColor"
+    />
+    <path
+      d="M16.602 21.994C15.5831 20.2303 15 18.1833 15 16C15 11.5725 17.3978 7.70503 20.9657 5.62533C21.3515 6.16694 21.6894 6.745 21.9733 7.35333C18.9991 9.08615 17 12.3096 17 16C17 17.819 17.4857 19.5246 18.3345 20.9941C17.7912 21.3775 17.2117 21.7128 16.602 21.994Z"
+      fill="currentColor"
+    />
+    <path
+      d="M3.39698 5.14461C4.47981 5.69176 5.70393 5.99999 7.00005 5.99999C10.2635 5.99999 13.0705 4.04592 14.315 1.24401C13.6302 1.09734 12.9219 1.01441 12.1964 1.00171C11.1587 2.79417 9.22019 3.99999 7.00005 3.99999C6.25376 3.99999 5.53929 3.86374 4.88016 3.61476C4.33797 4.07559 3.84103 4.58807 3.39698 5.14461Z"
+      fill="currentColor"
+    />
+    <path
+      d="M18.0084 2.78435C16.1602 7.03088 11.9269 9.99999 7.00005 9.99999C5.02241 9.99999 3.15651 9.5216 1.51176 8.67422C1.7159 8.02985 1.97778 7.41116 2.29133 6.82424C3.69453 7.57457 5.29761 7.99999 7.00005 7.99999C11.1606 7.99999 14.7277 5.45915 16.2343 1.8445C16.8567 2.1043 17.4501 2.41965 18.0084 2.78435Z"
+      fill="currentColor"
+    />
+    <path
+      d="M9.91093 22.8019C9.33274 18.9519 6.01113 16 2.00005 16C1.91687 16 1.83398 16.0013 1.75141 16.0038C2.03454 16.728 2.39221 17.4148 2.81499 18.0549C5.11332 18.367 6.99803 19.9805 7.70253 22.1289C8.40431 22.427 9.14343 22.6543 9.91093 22.8019Z"
+      fill="currentColor"
+    />
+    <path
+      d="M1.00012 12.0411C1.32983 12.0139 1.66332 12 2.00005 12C8.23232 12 13.3549 16.751 13.9436 22.8288C13.3127 22.9413 12.6633 23 12 23C11.9836 23 11.9671 23 11.9507 22.9999C11.4489 17.9466 7.18536 14 2.00005 14C1.72648 14 1.45547 14.011 1.18745 14.0325C1.06682 13.3868 1.00261 12.7212 1.00012 12.0411Z"
+      fill="currentColor"
+    />
+  </svg>
+</div>
+`;
+
 exports[`icons <InProgressIcon /> renders unchanged 1`] = `
 <div>
   <svg
@@ -359,6 +447,57 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
 </div>
 `;
 
+exports[`icons <IntegrationsIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-IntegrationsIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="currentColor"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <circle
+      r="2.125"
+      stroke="currentColor"
+      stroke-width="1.75"
+      transform="matrix(1 0 0 -1 5.5 5.5)"
+    />
+    <circle
+      r="2.125"
+      stroke="currentColor"
+      stroke-width="1.75"
+      transform="matrix(1 0 0 -1 12 12)"
+    />
+    <circle
+      fill="currentColor"
+      r="2.75"
+      transform="matrix(1 0 0 -1 18.75 18.5)"
+    />
+    <path
+      d="M7.5 5.5H17.25C19.0449 5.5 20.5 6.95507 20.5 8.75V8.75C20.5 10.5449 19.0449 12 17.25 12H14"
+      stroke="currentColor"
+      stroke-width="2"
+    />
+    <path
+      d="M14 18.5L6.75 18.5C4.95508 18.5 3.5 17.0449 3.5 15.25V15.25C3.5 13.4551 4.95507 12 6.75 12L10.5 12"
+      stroke="currentColor"
+      stroke-width="2"
+    />
+    <path
+      d="M11.1517 15.8483L13.8033 18.5L11.1517 21.1517"
+      stroke="currentColor"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
 exports[`icons <PortfolioIcon /> renders unchanged 1`] = `
 <div>
   <svg
@@ -413,6 +552,128 @@ exports[`icons <PortfolioIcon /> renders unchanged 1`] = `
       d="M3 15.748V3.74799C3 3.35016 3.15804 2.96863 3.43934 2.68733C3.72064 2.40602 4.10218 2.24799 4.5 2.24799H19.5C19.8978 2.24799 20.2794 2.40602 20.5607 2.68733C20.842 2.96863 21 3.35016 21 3.74799V15.748"
       stroke-linecap="round"
       stroke-linejoin="round"
+    />
+  </svg>
+</div>
+`;
+
+exports[`icons <ReportsIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-ReportsIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="currentColor"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <circle
+      cx="12"
+      cy="12"
+      r="5"
+      stroke="currentColor"
+      stroke-width="2"
+    />
+    <rect
+      fill="currentColor"
+      height="2"
+      width="4.5"
+      x="17"
+      y="4"
+    />
+    <rect
+      fill="currentColor"
+      height="2"
+      width="2"
+      x="4.5"
+      y="6"
+    />
+    <rect
+      fill="currentColor"
+      height="2"
+      width="4.5"
+      x="15.5"
+      y="18"
+    />
+    <path
+      d="M3.5 11.5V20.5H12.5"
+      stroke="currentColor"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
+exports[`icons <SkullIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-SkullIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="none"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M12 2C16.4183 2 20 5.58172 20 10V14C20 15.7416 18.8869 17.2233 17.3333 17.7724V18C17.3333 20.2091 15.5425 22 13.3333 22H10.6667C8.45753 22 6.66667 20.2091 6.66667 18V17.7724C5.11308 17.2233 4 15.7416 4 14V10C4 5.58172 7.58172 2 12 2Z"
+      fill="white"
+      fill-rule="evenodd"
+    />
+    <rect
+      fill="currentColor"
+      height="3"
+      rx="1.5"
+      width="3"
+      x="7"
+      y="11"
+    />
+    <rect
+      fill="currentColor"
+      height="3"
+      rx="1.5"
+      width="3"
+      x="14"
+      y="11"
+    />
+    <line
+      stroke="currentColor"
+      stroke-width="1.5"
+      x1="7"
+      x2="17"
+      y1="18.5"
+      y2="18.5"
+    />
+    <mask
+      fill="white"
+      id="path-9-inside-1"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M12 2C16.4183 2 20 5.58172 20 10V14C20 15.7416 18.8869 17.2233 17.3333 17.7724V18C17.3333 20.2091 15.5425 22 13.3333 22H10.6667C8.45753 22 6.66667 20.2091 6.66667 18V17.7724C5.11308 17.2233 4 15.7416 4 14V10C4 5.58172 7.58172 2 12 2Z"
+        fill-rule="evenodd"
+      />
+    </mask>
+    <path
+      d="M17.3333 17.7724L16.6668 15.8867L15.3333 16.358V17.7724H17.3333ZM6.66667 17.7724H8.66667V16.358L7.33316 15.8867L6.66667 17.7724ZM22 10C22 4.47715 17.5228 0 12 0V4C15.3137 4 18 6.68629 18 10H22ZM22 14V10H18V14H22ZM17.9998 19.6581C20.3275 18.8354 22 16.6156 22 14H18C18 14.8677 17.4463 15.6112 16.6668 15.8867L17.9998 19.6581ZM15.3333 17.7724V18H19.3333V17.7724H15.3333ZM15.3333 18C15.3333 19.1046 14.4379 20 13.3333 20V24C16.647 24 19.3333 21.3137 19.3333 18H15.3333ZM13.3333 20H10.6667V24H13.3333V20ZM10.6667 20C9.5621 20 8.66667 19.1046 8.66667 18H4.66667C4.66667 21.3137 7.35296 24 10.6667 24V20ZM8.66667 18V17.7724H4.66667V18H8.66667ZM2 14C2 16.6156 3.67249 18.8354 6.00017 19.6581L7.33316 15.8867C6.55367 15.6112 6 14.8677 6 14H2ZM2 10V14H6V10H2ZM12 0C6.47715 0 2 4.47715 2 10H6C6 6.68629 8.68629 4 12 4V0Z"
+      fill="currentColor"
+      mask="url(#path-9-inside-1)"
+    />
+    <path
+      d="M12 13L13.299 15.25H10.701L12 13Z"
+      fill="currentColor"
+      stroke="currentColor"
+      stroke-width="0.5"
     />
   </svg>
 </div>

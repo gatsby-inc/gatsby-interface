@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import React from "react"
 import { SelectFieldBlock } from "./SelectFieldBlock"
 import { SelectFieldBlockProps } from "./SelectFieldBlock"
 import { useConnectedField } from "../hooks/useConnectedField"
@@ -10,10 +11,11 @@ export type SelectConnectedFieldProps = {
   label?: React.ReactNode
 } & Omit<SelectFieldBlockProps, "id" | "label">
 
-export const SelectConnectedField: React.FC<
+export const SelectConnectedField = React.forwardRef<
+  HTMLSelectElement,
   SelectConnectedFieldProps
-> = props => {
+>(function SelectConnectedField(props, ref) {
   const [connectedProps] = useConnectedField(props.name)
 
-  return <SelectFieldBlock {...connectedProps} {...props} />
-}
+  return <SelectFieldBlock ref={ref} {...connectedProps} {...props} />
+})

@@ -1,3 +1,6 @@
 export * from "./knobs"
 export * from "./layoutHelpers"
+export * from "./withVariationsContainer"
+export * from "./propsCombinationStory"
+export * from "./storyData"
 export { default as StoryUtils } from "./StoryUtils"

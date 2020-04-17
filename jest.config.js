@@ -20,7 +20,9 @@ module.exports = {
     // use "yarn test:a11y" to run these
     `AccessiblityStoryshots.test.js`,
   ],
-  transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
+  transformIgnorePatterns: [
+    `node_modules/(?!(gatsby|storybook-addon-designs)/)`,
+  ],
   globals: {
     __PATH_PREFIX__: ``,
   },

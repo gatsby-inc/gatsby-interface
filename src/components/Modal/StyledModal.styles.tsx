@@ -137,3 +137,14 @@ export const bodyVariantCss: Record<StyledModalVariant, ThemeCss> = {
     },
   ],
 }
+
+export const actionsCss: ThemeCss = theme => ({
+  display: `flex`,
+  alignItems: `center`,
+  justifyContent: `space-between`,
+  width: `100%`,
+  marginTop: theme.space[7],
+  [theme.mediaQueries.desktop]: {
+    marginTop: theme.space[8],
+  },
+})

@@ -9,5 +9,7 @@
     "@babel/preset-react",
     "@babel/typescript"
   ],
-  "plugins": [["babel-plugin-typescript-to-proptypes", { "typeCheck": true }], "@babel/plugin-proposal-class-properties"]
+  "plugins": [["babel-plugin-typescript-to-proptypes", { "typeCheck": true }], "@babel/plugin-proposal-class-properties", ["babel-plugin-react-docgen", {
+    "DOC_GEN_COLLECTION_NAME": "STORYBOOK_REACT_CLASSES"
+  }]]
 }

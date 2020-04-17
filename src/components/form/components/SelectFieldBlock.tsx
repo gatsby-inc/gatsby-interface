@@ -5,13 +5,12 @@ import React from "react"
 import {
   SelectField,
   SelectFieldControlProps,
-  SelectFieldWrapper,
   SelectFieldLabel,
   SelectFieldControl,
   SelectFieldHint,
   SelectFieldError,
 } from "./SelectField"
-import { WithFormFieldBlock } from "./FormField"
+import { WithFormFieldBlock, FormFieldContainer } from "./FormField"
 
 export type SelectFieldBlockProps = WithFormFieldBlock<SelectFieldControlProps>
 
@@ -27,12 +26,13 @@ export const SelectFieldBlock = React.forwardRef<
     hint,
     className,
     validationMode,
+    layout,
     ...rest
   } = props
 
   return (
-    <SelectField id={id} hasError={!!error} hasHint={!!hint}>
-      <SelectFieldWrapper className={className}>
+    <FormFieldContainer layout={layout} className={className}>
+      <SelectField id={id} hasError={!!error} hasHint={!!hint}>
         <SelectFieldLabel size={labelSize} isRequired={!!rest.required}>
           {label}
         </SelectFieldLabel>
@@ -41,7 +41,7 @@ export const SelectFieldBlock = React.forwardRef<
         <SelectFieldError validationMode={validationMode}>
           {error}
         </SelectFieldError>
-      </SelectFieldWrapper>
-    </SelectField>
+      </SelectField>
+    </FormFieldContainer>
   )
 })

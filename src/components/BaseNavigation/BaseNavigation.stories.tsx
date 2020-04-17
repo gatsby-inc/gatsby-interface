@@ -4,7 +4,6 @@ import React from "react"
 import { DecoratorFn } from "@storybook/react"
 import { text, boolean } from "@storybook/addon-knobs"
 
-import { StoryUtils } from "../../utils/storybook"
 import { BaseNavigation } from "."
 import { Theme } from "../../theme"
 
@@ -35,13 +34,7 @@ const items = [
 
 export default {
   title: `BaseNavigation`,
-  decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-  ] as DecoratorFn[],
+  component: BaseNavigation,
 }
 
 export const Basic = () => <BaseNavigation items={items} />

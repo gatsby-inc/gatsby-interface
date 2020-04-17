@@ -4,26 +4,24 @@ import React from "react"
 import { DecoratorFn } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
 
-import { StoryUtils } from "../../utils/storybook"
 import README from "./README.md"
 import { Tooltip, TooltipPosition } from "."
 import { MdNotifications, MdInfoOutline } from "react-icons/md"
 import { Theme } from "../../theme"
-import { radioKnobOptions } from "../../utils/storybook/knobs"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
 
 export default {
   title: `Tooltip`,
   parameters: {
+    layout: `padded`,
     readme: {
       sidebar: README,
     },
   },
   decorators: [
-    story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>{story()}</StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
     story => {
       React.useEffect(() => {
         const tooltipToggle = document.querySelector<
@@ -34,7 +32,21 @@ export default {
         }
       }, [])
 
-      return story()
+      return (
+        <div
+          css={(theme: Theme) => ({
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "100vh",
+            margin: "0px",
+            padding: theme.space[4],
+            boxSizing: "border-box",
+          })}
+        >
+          {story()}
+        </div>
+      )
     },
   ] as DecoratorFn[],
 }
@@ -81,6 +93,10 @@ export const Positions = () =>
       <button>Position: {position}</button>
     </Tooltip>
   ))
+
+Positions.story = {
+  decorators: [withVariationsContainer],
+}
 
 export const WithAccessibleLabel = () => (
   <div css={{ textAlign: `center` }}>
