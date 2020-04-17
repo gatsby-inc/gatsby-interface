@@ -6,7 +6,7 @@ import { BadgeText, BadgeTone, BadgeVariant, BadgeSize } from "./types"
 
 const baseCss: ThemeCss = theme => ({
   alignItems: `center`,
-  borderRadius: theme.radii[2],
+  borderRadius: theme.radii[1],
   display: `inline-flex`,
   fontFamily: theme.fonts.body,
   fontSize: theme.fontSizes[0],
@@ -39,10 +39,15 @@ export function Badge({
           letterSpacing: theme.letterSpacings.tracked,
         },
         size === "MEDIUM" && {
+          borderRadius: theme.radii[2],
           fontSize: theme.fontSizes[1],
           minHeight: `calc(${theme.space[2]} * 7)`,
           padding: `${theme.space[1]} ${theme.space[4]}`,
         },
+        size === "MEDIUM" &&
+          text === "CAPS" && {
+            fontSize: theme.fontSizes[0],
+          },
         getBadgeVariantStyles(variant, tone)(theme),
       ]}
       {...rest}
