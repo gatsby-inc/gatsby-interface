@@ -16,6 +16,8 @@ const baseCss: ThemeCss = theme => ({
 })
 
 export type BadgeProps = Omit<JSX.IntrinsicElements["span"], "ref"> & {
+  children?: React.ReactNode
+  Icon?: React.ComponentType<any>
   variant?: BadgeVariant
   text?: BadgeText
   tone?: BadgeTone
@@ -23,6 +25,8 @@ export type BadgeProps = Omit<JSX.IntrinsicElements["span"], "ref"> & {
 }
 
 export function Badge({
+  children,
+  Icon,
   variant = `STATUS`,
   text = `CAPS`,
   tone = `BRAND`,
@@ -51,6 +55,29 @@ export function Badge({
         getBadgeVariantStyles(variant, tone)(theme),
       ]}
       {...rest}
-    />
+    >
+      {Icon && (
+        <Icon
+          css={theme => [
+            {
+              marginRight: size === "SMALL" ? theme.space[2] : theme.space[3],
+              fontSize: theme.fontSizes[2],
+              color: theme.tones[tone].medium,
+              flexShrink: 0,
+              width: "auto",
+              height: "1em",
+            },
+            variant === `PILL` && {
+              color: theme.colors.whiteFade[90],
+            },
+            variant === `PILL` &&
+              tone === `WARNING` && {
+                color: theme.colors.blackFade[90],
+              },
+          ]}
+        />
+      )}
+      {children}
+    </span>
   )
 }

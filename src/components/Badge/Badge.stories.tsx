@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import { text, radios } from "@storybook/addon-knobs"
 
-import { MdFlashOn } from "react-icons/md"
+import { MdSettingsEthernet } from "react-icons/md"
 import { Badge } from "."
 import { BadgeVariant, BadgeTone, BadgeText, BadgeSize } from "./types"
 import {
@@ -77,8 +77,4 @@ Tones.story = {
   decorators: [withVariationsContainer],
 }
 
-export const WithIcon = () => (
-  <Badge>
-    Badge <MdFlashOn />
-  </Badge>
-)
+export const WithIcon = () => <Badge Icon={MdSettingsEthernet}>Badge</Badge>
