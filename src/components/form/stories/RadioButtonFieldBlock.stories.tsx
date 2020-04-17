@@ -88,7 +88,7 @@ export const Disabled = () => (
   <RadioButtonFieldBlock
     id="disabled"
     name="disabled"
-    options={options}
+    options={optionsWithDefaultCheck}
     label="Field label"
     disabled
   />
@@ -108,7 +108,7 @@ export const WithError = () => (
   <RadioButtonFieldBlock
     id="withError"
     name="withError"
-    options={options}
+    options={optionsWithDefaultCheck}
     label="Field label"
     error="Error message"
   />

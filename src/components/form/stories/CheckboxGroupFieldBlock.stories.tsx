@@ -39,8 +39,8 @@ const optionsWithDefaultCheck = options.map((option, idx) => {
 export const Basic = () => {
   return (
     <CheckboxGroupFieldBlock
-      id="checkboxGroupFieldBlock"
-      name="checkboxGroupFieldBlock"
+      id="basic"
+      name="basic"
       options={options}
       label="Field label"
     />
@@ -50,8 +50,8 @@ export const Basic = () => {
 export const Sandbox = () => {
   return (
     <CheckboxGroupFieldBlock
-      id="checkboxGroupFieldBlock"
-      name="checkboxGroupFieldBlock"
+      id="sandbox"
+      name="sandbox"
       options={options}
       {...getGroupFieldSandboxProps()}
     />
@@ -67,8 +67,8 @@ Sandbox.story = {
 export const Required = () => {
   return (
     <CheckboxGroupFieldBlock
-      id="checkboxGroupFieldBlock"
-      name="checkboxGroupFieldBlock"
+      id="required"
+      name="required"
       options={options}
       label="Field label"
       required
@@ -79,9 +79,9 @@ export const Required = () => {
 export const Disabled = () => {
   return (
     <CheckboxGroupFieldBlock
-      id="checkboxGroupFieldBlock"
-      name="checkboxGroupFieldBlock"
-      options={options}
+      id="disabled"
+      name="disabled"
+      options={optionsWithDefaultCheck}
       label="Field label"
       disabled
     />
@@ -91,8 +91,8 @@ export const Disabled = () => {
 export const WithHint = () => {
   return (
     <CheckboxGroupFieldBlock
-      id="checkboxGroupFieldBlock"
-      name="checkboxGroupFieldBlock"
+      id="withHint"
+      name="withHint"
       options={options}
       label="Field label"
       hint="Hint text"
@@ -103,9 +103,9 @@ export const WithHint = () => {
 export const WithError = () => {
   return (
     <CheckboxGroupFieldBlock
-      id="checkboxGroupFieldBlock"
-      name="checkboxGroupFieldBlock"
-      options={options}
+      id="withError"
+      name="withError"
+      options={optionsWithDefaultCheck}
       label="Field label"
       error="Error message"
     />
@@ -115,8 +115,8 @@ export const WithError = () => {
 export const WithErrorAndHint = () => {
   return (
     <CheckboxGroupFieldBlock
-      id="checkboxGroupFieldBlock"
-      name="checkboxGroupFieldBlock"
+      id="withErrorAndHint"
+      name="withErrorAndHint"
       options={options}
       label="Field label"
       hint="Hint text"
@@ -130,8 +130,8 @@ export const LabelSizes = () =>
     return (
       <CheckboxGroupFieldBlock
         key={labelSize}
-        id={`checkboxGroupFieldBlock--${labelSize}`}
-        name={`checkboxGroupFieldBlock--${labelSize}`}
+        id={labelSize}
+        name={labelSize}
         options={options}
         label={`Label size: "${labelSize}"`}
         labelSize={labelSize}
