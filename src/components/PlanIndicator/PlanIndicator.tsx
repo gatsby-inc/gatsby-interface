@@ -9,8 +9,8 @@ import {
   EnterprisePlanIcon,
 } from "../icons"
 
-const baseCss: ThemeCss = theme => ({
-  fontWeight: theme.fontWeights.semiBold,
+const baseCss: ThemeCss = _theme => ({
+  fontWeight: 500,
 })
 
 const planTypeFreeCss: ThemeCss = theme => ({
