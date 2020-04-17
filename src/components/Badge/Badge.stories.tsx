@@ -34,7 +34,7 @@ const TONES: BadgeTone[] = [`BRAND`, `SUCCESS`, `DANGER`, `WARNING`, `NEUTRAL`]
 
 const TEXT_VARIANTS: BadgeTextVariant[] = [`DEFAULT`, `CAPS`]
 
-const SIZES: BadgeSize[] = [`MEDIUM`, `SMALL`]
+const SIZES: BadgeSize[] = [`M`, `S`]
 
 export const Sandbox = () =>
   sandboxWithPropVariations(
@@ -51,7 +51,7 @@ export const Sandbox = () =>
           radioKnobOptions<BadgeTextVariant>(TEXT_VARIANTS),
           `DEFAULT`
         )}
-        size={radios("size", radioKnobOptions<BadgeSize>(SIZES), `MEDIUM`)}
+        size={radios("size", radioKnobOptions<BadgeSize>(SIZES), `M`)}
         Icon={boolean("withIcon", true) ? MdSettingsEthernet : undefined}
         {...propVariations}
       >

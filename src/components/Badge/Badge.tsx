@@ -31,11 +31,11 @@ export function Badge({
   variant = `STATUS`,
   textVariant = `CAPS`,
   tone = `BRAND`,
-  size = `SMALL`,
+  size = `S`,
   ...rest
 }: BadgeProps) {
   const iconSize =
-    size === `SMALL` ? iconHeightBySize.xxsmall : iconHeightBySize.xsmall
+    size === `S` ? iconHeightBySize.xxsmall : iconHeightBySize.xsmall
 
   return (
     <span
@@ -46,13 +46,13 @@ export function Badge({
           fontWeight: 500,
           letterSpacing: theme.letterSpacings.tracked,
         },
-        size === "MEDIUM" && {
+        size === "M" && {
           borderRadius: theme.radii[2],
           fontSize: theme.fontSizes[1],
           minHeight: `calc(${theme.space[2]} * 7)`,
           padding: `${theme.space[1]} ${theme.space[4]}`,
         },
-        size === "MEDIUM" &&
+        size === "M" &&
           textVariant === "CAPS" && {
             fontSize: theme.fontSizes[0],
           },
@@ -64,7 +64,7 @@ export function Badge({
         <Icon
           css={(theme: Theme) => [
             {
-              marginRight: size === "SMALL" ? theme.space[2] : theme.space[3],
+              marginRight: size === "S" ? theme.space[2] : theme.space[3],
               color: theme.tones[tone].medium,
               flexShrink: 0,
               width: iconSize,

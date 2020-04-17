@@ -70,7 +70,7 @@ export function PlanIndicator({ planType }: PlanIndicatorProps) {
 
   return (
     <Badge
-      size="MEDIUM"
+      size="M"
       textVariant="DEFAULT"
       Icon={Icon}
       aria-label={`Plan: ${label}`}
