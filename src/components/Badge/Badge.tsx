@@ -40,7 +40,7 @@ export function Badge({
         },
         size === "MEDIUM" && {
           fontSize: theme.fontSizes[1],
-          minHeight: theme.space[8],
+          minHeight: `calc(${theme.space[2]} * 7)`,
           padding: `${theme.space[1]} ${theme.space[4]}`,
         },
         getBadgeVariantStyles(variant, tone)(theme),
