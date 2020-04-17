@@ -17,10 +17,11 @@ const variants: Record<BadgeVariant, GetVariantStylesFn> = {
     return theme => [
       {
         background: theme.tones[tone].dark,
-        color: tone !== `WARNING` ? theme.colors.white : null,
+        color: theme.colors.white,
       },
       tone === `WARNING` && {
         background: theme.colors.yellow[50],
+        color: theme.colors.blackFade[70],
       },
       tone === `SUCCESS` && {
         background: theme.colors.green[80],
