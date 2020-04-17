@@ -10,7 +10,7 @@ const baseCss: ThemeCss = theme => ({
   display: `inline-flex`,
   fontFamily: theme.fonts.body,
   fontSize: theme.fontSizes[0],
-  lineHeight: theme.lineHeights.dense,
+  lineHeight: theme.lineHeights.solid,
   padding: `${theme.space[1]} ${theme.space[3]}`,
   minHeight: theme.space[7],
 })
