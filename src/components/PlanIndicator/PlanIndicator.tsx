@@ -2,6 +2,12 @@
 import { jsx } from "@emotion/core"
 import { ThemeCss } from "../../theme"
 import { Badge } from "../Badge"
+import {
+  FreePlanIcon,
+  ProfessionalPlanIcon,
+  BusinessPlanIcon,
+  EnterprisePlanIcon,
+} from "../icons"
 
 const baseCss: ThemeCss = theme => ({
   fontWeight: theme.fontWeights.semiBold,
@@ -41,6 +47,13 @@ const planTypeLabels: Record<PlanIndicatorPlanType, string> = {
   ENTERPRISE: `Enterprise`,
 }
 
+const planTypeIcons: Record<PlanIndicatorPlanType, React.ComponentType> = {
+  FREE: FreePlanIcon,
+  PROFESSIONAL: ProfessionalPlanIcon,
+  BUSINESS: BusinessPlanIcon,
+  ENTERPRISE: EnterprisePlanIcon,
+}
+
 export type PlanIndicatorPlanType =
   | `FREE`
   | `PROFESSIONAL`
@@ -53,11 +66,13 @@ export type PlanIndicatorProps = {
 
 export function PlanIndicator({ planType }: PlanIndicatorProps) {
   const label = planTypeLabels[planType]
+  const Icon = planTypeIcons[planType]
 
   return (
     <Badge
       size="MEDIUM"
       textVariant="DEFAULT"
+      Icon={Icon}
       aria-label={`Plan: ${label}`}
       css={theme => [baseCss(theme), planTypeCss[planType](theme)]}
     >

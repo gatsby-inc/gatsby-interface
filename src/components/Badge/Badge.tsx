@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core"
 import { ThemeCss, Theme } from "../../theme"
 import { getBadgeVariantStyles } from "./Badge.helpers"
 import { BadgeTextVariant, BadgeTone, BadgeVariant, BadgeSize } from "./types"
+import { iconHeightBySize } from "../icons/IconSkeleton"
 
 const baseCss: ThemeCss = theme => ({
   alignItems: `center`,
@@ -33,6 +34,9 @@ export function Badge({
   size = `SMALL`,
   ...rest
 }: BadgeProps) {
+  const iconSize =
+    size === `SMALL` ? iconHeightBySize.xxsmall : iconHeightBySize.xsmall
+
   return (
     <span
       css={(theme: Theme) => [
@@ -61,11 +65,10 @@ export function Badge({
           css={(theme: Theme) => [
             {
               marginRight: size === "SMALL" ? theme.space[2] : theme.space[3],
-              fontSize: theme.fontSizes[2],
               color: theme.tones[tone].medium,
               flexShrink: 0,
-              width: "auto",
-              height: "1em",
+              width: iconSize,
+              height: iconSize,
             },
             variant === `PILL` && {
               color: theme.colors.whiteFade[90],

@@ -61,6 +61,7 @@ export const Sandbox = () =>
     {
       variant: VARIANTS,
       tone: TONES,
+      size: SIZES,
     }
   )
 
