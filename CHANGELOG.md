@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.139](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.138...v0.0.139) (2020-04-17)
+
+
+### Features
+
+* Adding ProgressBar ([#290](https://github.com/gatsby-inc/gatsby-interface/issues/290)) ([737c666](https://github.com/gatsby-inc/gatsby-interface/commit/737c6660e436bb06a59dc92293091cc46f6c0e05))
+
 ### [0.0.138](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.137...v0.0.138) (2020-04-16)
 
 
