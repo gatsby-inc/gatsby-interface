@@ -6,7 +6,7 @@ import { withDesign } from "storybook-addon-designs"
 import { MdSettingsEthernet } from "react-icons/md"
 
 import { Badge } from "."
-import { BadgeVariant, BadgeTone, BadgeText, BadgeSize } from "./types"
+import { BadgeVariant, BadgeTone, BadgeTextVariant, BadgeSize } from "./types"
 import {
   radioKnobOptions,
   withVariationsContainer,
@@ -32,7 +32,7 @@ const VARIANTS: BadgeVariant[] = [`STATUS`, `PILL`]
 
 const TONES: BadgeTone[] = [`BRAND`, `SUCCESS`, `DANGER`, `WARNING`, `NEUTRAL`]
 
-const TEXTS: BadgeText[] = [`DEFAULT`, `CAPS`]
+const TEXT_VARIANTS: BadgeTextVariant[] = [`DEFAULT`, `CAPS`]
 
 const SIZES: BadgeSize[] = [`MEDIUM`, `SMALL`]
 
@@ -46,7 +46,11 @@ export const Sandbox = () =>
           `STATUS`
         )}
         tone={radios("tone", radioKnobOptions<BadgeTone>(TONES), `BRAND`)}
-        text={radios("text", radioKnobOptions<BadgeText>(TEXTS), `DEFAULT`)}
+        textVariant={radios(
+          "text",
+          radioKnobOptions<BadgeTextVariant>(TEXT_VARIANTS),
+          `DEFAULT`
+        )}
         size={radios("size", radioKnobOptions<BadgeSize>(SIZES), `MEDIUM`)}
         Icon={boolean("withIcon", true) ? MdSettingsEthernet : undefined}
         {...propVariations}
@@ -61,6 +65,7 @@ export const Sandbox = () =>
   )
 
 Sandbox.story = {
+  decorators: [withVariationsContainer],
   parameters: {
     chromatic: { disable: true },
   },
@@ -85,6 +90,28 @@ export const Tones = () =>
   ))
 
 Tones.story = {
+  decorators: [withVariationsContainer],
+}
+
+export const TextVariants = () =>
+  TEXT_VARIANTS.map(textVariant => (
+    <Badge key={textVariant} textVariant={textVariant}>
+      Text Variant: {textVariant}
+    </Badge>
+  ))
+
+TextVariants.story = {
+  decorators: [withVariationsContainer],
+}
+
+export const Sizes = () =>
+  SIZES.map(size => (
+    <Badge key={size} size={size}>
+      Size: {size}
+    </Badge>
+  ))
+
+Sizes.story = {
   decorators: [withVariationsContainer],
 }
 

@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import { ThemeCss, Theme } from "../../theme"
 import { getBadgeVariantStyles } from "./Badge.helpers"
-import { BadgeText, BadgeTone, BadgeVariant, BadgeSize } from "./types"
+import { BadgeTextVariant, BadgeTone, BadgeVariant, BadgeSize } from "./types"
 
 const baseCss: ThemeCss = theme => ({
   alignItems: `center`,
@@ -19,7 +19,7 @@ export type BadgeProps = Omit<JSX.IntrinsicElements["span"], "ref"> & {
   children?: React.ReactNode
   Icon?: React.ComponentType<any>
   variant?: BadgeVariant
-  text?: BadgeText
+  textVariant?: BadgeTextVariant
   tone?: BadgeTone
   size?: BadgeSize
 }
@@ -28,7 +28,7 @@ export function Badge({
   children,
   Icon,
   variant = `STATUS`,
-  text = `CAPS`,
+  textVariant = `CAPS`,
   tone = `BRAND`,
   size = `SMALL`,
   ...rest
@@ -37,7 +37,7 @@ export function Badge({
     <span
       css={(theme: Theme) => [
         baseCss(theme),
-        text === "CAPS" && {
+        textVariant === "CAPS" && {
           textTransform: `uppercase`,
           fontWeight: 500,
           letterSpacing: theme.letterSpacings.tracked,
@@ -49,7 +49,7 @@ export function Badge({
           padding: `${theme.space[1]} ${theme.space[4]}`,
         },
         size === "MEDIUM" &&
-          text === "CAPS" && {
+          textVariant === "CAPS" && {
             fontSize: theme.fontSizes[0],
           },
         getBadgeVariantStyles(variant, tone)(theme),
