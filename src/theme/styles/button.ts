@@ -158,7 +158,7 @@ function getButtonVariantCss(
         background: theme.tones[tone].dark,
         border: `1px solid ${theme.tones[tone].dark}`,
         color: theme.colors.white,
-        fontWeight: `bold`,
+        fontWeight: theme.fontWeights.semiBold,
         ":hover": {
           background: theme.tones[tone].darker,
           border: `1px solid ${theme.tones[tone].darker}`,
