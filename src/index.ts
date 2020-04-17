@@ -16,8 +16,6 @@ export { LinkButton } from "./components/LinkButton"
 
 export { Link } from "./components/Link"
 
-export { RadioSkeleton } from "./components/Radio"
-
 export { FileUpload } from "./components/FileUpload"
 
 export { SidebarNav } from "./components/SidebarNav"
