@@ -29,7 +29,7 @@ const planTypeBusinessCss: ThemeCss = theme => ({
 })
 
 const planTypeEnterpriseCss: ThemeCss = theme => ({
-  backgroundColor: theme.colors.purple[90],
+  backgroundColor: theme.colors.purple[80],
   color: theme.colors.white,
 })
 
