@@ -134,7 +134,7 @@ function getButtonSizeCss(size: ButtonSize): ThemeCss {
     if (size === `L`) {
       return {
         fontSize: theme.fontSizes[2],
-        minHeight: theme.space[9],
+        minHeight: `calc(${theme.space[2]} * 9)`,
         padding: `0.25rem 1rem`,
       }
     }
