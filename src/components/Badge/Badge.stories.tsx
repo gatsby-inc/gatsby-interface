@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { text, radios } from "@storybook/addon-knobs"
+import { text, radios, boolean } from "@storybook/addon-knobs"
 
 import { MdSettingsEthernet } from "react-icons/md"
 import { Badge } from "."
@@ -38,9 +38,10 @@ export const Sandbox = () =>
         tone={radios("tone", radioKnobOptions<BadgeTone>(TONES), `BRAND`)}
         text={radios("text", radioKnobOptions<BadgeText>(TEXTS), `DEFAULT`)}
         size={radios("size", radioKnobOptions<BadgeSize>(SIZES), `MEDIUM`)}
+        Icon={boolean("withIcon", true) ? MdSettingsEthernet : undefined}
         {...propVariations}
       >
-        {text("badge text", "Badge label")}
+        {text("badge text", "Badge")}
       </Badge>
     ),
     {
