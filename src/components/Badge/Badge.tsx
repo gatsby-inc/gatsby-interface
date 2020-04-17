@@ -58,7 +58,7 @@ export function Badge({
     >
       {Icon && (
         <Icon
-          css={theme => [
+          css={(theme: Theme) => [
             {
               marginRight: size === "SMALL" ? theme.space[2] : theme.space[3],
               fontSize: theme.fontSizes[2],
