@@ -3,10 +3,12 @@ import { jsx } from "@emotion/core"
 import { text, radios } from "@storybook/addon-knobs"
 
 import { MdFlashOn } from "react-icons/md"
-import { Badge, BadgeVariant } from "."
+import { Badge } from "."
+import { BadgeVariant, BadgeTone, BadgeText, BadgeSize } from "./types"
 import {
   radioKnobOptions,
   withVariationsContainer,
+  sandboxWithPropVariations,
 } from "../../utils/storybook"
 
 export default {
@@ -18,17 +20,34 @@ export const Basic = () => <Badge>Badge</Badge>
 
 const VARIANTS: BadgeVariant[] = [`STATUS`, `PILL`]
 
-export const Sandbox = () => (
-  <Badge
-    variant={radios(
-      `variant`,
-      radioKnobOptions<BadgeVariant>(VARIANTS),
-      `STATUS`
-    )}
-  >
-    {text("badge text", "Lorem ispum")}
-  </Badge>
-)
+const TONES: BadgeTone[] = [`BRAND`, `SUCCESS`, `DANGER`, `WARNING`, `NEUTRAL`]
+
+const TEXTS: BadgeText[] = [`DEFAULT`, `CAPS`]
+
+const SIZES: BadgeSize[] = [`MEDIUM`, `SMALL`]
+
+export const Sandbox = () =>
+  sandboxWithPropVariations(
+    propVariations => (
+      <Badge
+        variant={radios(
+          `variant`,
+          radioKnobOptions<BadgeVariant>(VARIANTS),
+          `STATUS`
+        )}
+        tone={radios("tone", radioKnobOptions<BadgeTone>(TONES), `BRAND`)}
+        text={radios("text", radioKnobOptions<BadgeText>(TEXTS), `DEFAULT`)}
+        size={radios("size", radioKnobOptions<BadgeSize>(SIZES), `MEDIUM`)}
+        {...propVariations}
+      >
+        {text("badge text", "Badge label")}
+      </Badge>
+    ),
+    {
+      variant: VARIANTS,
+      tone: TONES,
+    }
+  )
 
 Sandbox.story = {
   parameters: {
@@ -44,6 +63,17 @@ export const Variants = () =>
   ))
 
 Variants.story = {
+  decorators: [withVariationsContainer],
+}
+
+export const Tones = () =>
+  TONES.map(tone => (
+    <Badge key={tone} tone={tone}>
+      Tone: {tone}
+    </Badge>
+  ))
+
+Tones.story = {
   decorators: [withVariationsContainer],
 }
 

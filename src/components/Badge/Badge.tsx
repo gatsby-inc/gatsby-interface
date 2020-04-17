@@ -1,45 +1,50 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { ThemeCss, Theme } from "../../theme"
+import { getBadgeVariantStyles } from "./Badge.helpers"
+import { BadgeText, BadgeTone, BadgeVariant, BadgeSize } from "./types"
 
 const baseCss: ThemeCss = theme => ({
   alignItems: `center`,
   borderRadius: theme.radii[2],
   display: `inline-flex`,
   fontFamily: theme.fonts.body,
-  fontWeight: theme.fontWeights.semiBold,
+  fontSize: theme.fontSizes[0],
   lineHeight: theme.lineHeights.dense,
+  padding: `${theme.space[1]} ${theme.space[3]}`,
+  minHeight: theme.space[7],
 })
-
-const variantCss: Record<BadgeVariant, ThemeCss> = {
-  PILL: theme => ({
-    background: theme.colors.green[50],
-    color: theme.colors.white,
-    fontSize: theme.fontSizes[0],
-    letterSpacing: theme.letterSpacings.tracked,
-    padding: `${theme.space[1]} ${theme.space[3]}`,
-    minHeight: theme.space[7],
-    textTransform: `uppercase`,
-  }),
-  STATUS: theme => ({
-    background: theme.colors.green[5],
-    color: theme.colors.green[50],
-    fontSize: theme.fontSizes[1],
-    minHeight: theme.space[8],
-    padding: `${theme.space[1]} ${theme.space[4]}`,
-  }),
-}
-
-export type BadgeVariant = `PILL` | `STATUS`
 
 export type BadgeProps = Omit<JSX.IntrinsicElements["span"], "ref"> & {
   variant?: BadgeVariant
+  text?: BadgeText
+  tone?: BadgeTone
+  size?: BadgeSize
 }
 
-export function Badge({ variant = `STATUS`, ...rest }: BadgeProps) {
+export function Badge({
+  variant = `STATUS`,
+  text = `CAPS`,
+  tone = `BRAND`,
+  size = `SMALL`,
+  ...rest
+}: BadgeProps) {
   return (
     <span
-      css={(theme: Theme) => [baseCss(theme), variantCss[variant](theme)]}
+      css={(theme: Theme) => [
+        baseCss(theme),
+        text === "CAPS" && {
+          textTransform: `uppercase`,
+          fontWeight: 500,
+          letterSpacing: theme.letterSpacings.tracked,
+        },
+        size === "MEDIUM" && {
+          fontSize: theme.fontSizes[1],
+          minHeight: theme.space[8],
+          padding: `${theme.space[1]} ${theme.space[4]}`,
+        },
+        getBadgeVariantStyles(variant, tone)(theme),
+      ]}
       {...rest}
     />
   )
