@@ -12,12 +12,12 @@ export type ToneColors = {
 
 const tones: Record<AtomTone, ToneColors> = {
   BRAND: {
-    superLight: colors.purple[5],
-    light: colors.purple[20],
-    medium: colors.purple[50],
-    dark: colors.purple[60],
-    darker: colors.purple[70],
-    superDark: colors.purple[90],
+    superLight: colors.orange[5],
+    light: colors.orange[20],
+    medium: colors.orange[50],
+    dark: colors.orange[60],
+    darker: colors.orange[70],
+    superDark: colors.orange[90],
   },
   SUCCESS: {
     superLight: colors.green[5],
