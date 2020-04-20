@@ -3,7 +3,7 @@
 exports[`<PrimaryButton> renders unchanged 1`] = `
 <div>
   <button
-    class="css-9qeu11"
+    class="css-e6cl70"
     type="button"
   >
     Click me!
