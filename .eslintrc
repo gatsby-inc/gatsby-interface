@@ -6,9 +6,6 @@
     "prettier/@typescript-eslint",
     "prettier/react"
   ],
-  "plugins": [
-    "sort-exports"
-  ],
   "globals": {
     "__PATH_PREFIX__": true,
     "__BASE_PATH__": true
@@ -47,16 +44,5 @@
     "import/no-webpack-loader-syntax": "off",
     "react-hooks/exhaustive-deps": "off",
     "react-hooks/rules-of-hooks": "off"
-  },
-  "overrides": [
-    {
-      "files": ["./src/index.ts"],
-      "rules": {
-        "sort-exports/sort-exports": [
-          "warn",
-          { "sortDir": "asc", "ignoreCase": true }
-        ]
-      }
-    }
-  ]
+  }
 }
