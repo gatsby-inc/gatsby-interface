@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.142](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.141...v0.0.142) (2020-04-20)
+
+
+### Features
+
+* <Badge> update, add <PlanIndicator>s ([#293](https://github.com/gatsby-inc/gatsby-interface/issues/293)) ([63c9103](https://github.com/gatsby-inc/gatsby-interface/commit/63c9103c08132611ef5921f7a8111c8199eab4b4))
+
 ### [0.0.141](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.140...v0.0.141) (2020-04-17)
 
 ### [0.0.140](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.139...v0.0.140) (2020-04-17)
