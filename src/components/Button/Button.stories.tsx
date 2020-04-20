@@ -5,21 +5,11 @@ import { storiesOf } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 
 import { Button } from "./Button"
-import {
-  PrimaryButton,
-  SecondaryButton,
-  CancelButton,
-  SuccessButton,
-  TextButton,
-  PrimaryDeleteButton,
-  SecondaryDeleteButton,
-} from "./"
 
 import README_MAIN from "./README_MAIN.md"
 import README_ICONS from "./README_ICONS.md"
 import customStyling from "./README_customStyling.md"
 import README_MANUAL_STYLING from "./README_MANUAL_STYLING.md"
-import README_LEGACY from "./README_LEGACY.md"
 import { getButtonCss } from "../../theme/styles/button"
 import { StoryUtils } from "../../utils/storybook"
 import {
@@ -99,27 +89,6 @@ storiesOf(`buttons/Button`, module)
     {
       readme: {
         sidebar: README_MANUAL_STYLING,
-      },
-    }
-  )
-  .add(
-    `legacy Buttons`,
-    () => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>
-          <PrimaryButton>PrimaryButton</PrimaryButton>
-          <SecondaryButton>SecondaryButton</SecondaryButton>
-          <CancelButton>CancelButton</CancelButton>
-          <SuccessButton>SuccessButton</SuccessButton>
-          <TextButton>TextButton</TextButton>
-          <PrimaryDeleteButton>PrimaryDeleteButton</PrimaryDeleteButton>
-          <SecondaryDeleteButton>SecondaryDeleteButton</SecondaryDeleteButton>
-        </StoryUtils.Stack>
-      </StoryUtils.Container>
-    ),
-    {
-      readme: {
-        sidebar: README_LEGACY,
       },
     }
   )
