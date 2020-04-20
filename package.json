@@ -39,7 +39,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@loadable/component": "^5.10.2",
     "@mdx-js/react": "^1.5.2",
     "@reach/alert": "^0.1.5",
     "@reach/combobox": "^0.8.5",
