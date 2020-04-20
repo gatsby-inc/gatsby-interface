@@ -119,21 +119,21 @@ function getButtonSizeCss(size: ButtonSize): ThemeCss {
     if (size === `S`) {
       return {
         fontSize: theme.fontSizes[0],
-        minHeight: theme.space[7],
+        minHeight: `calc(${theme.space[2]} * 7)`,
         padding: `${theme.space[2]} ${theme.space[3]}`,
       }
     }
     if (size === `M`) {
       return {
         fontSize: theme.fontSizes[1],
-        minHeight: theme.space[8],
+        minHeight: `calc(${theme.space[2]} * 9)`,
         padding: `${theme.space[2]} ${theme.space[4]}`,
       }
     }
     if (size === `L`) {
       return {
         fontSize: theme.fontSizes[2],
-        minHeight: `calc(${theme.space[2]} * 9)`,
+        minHeight: theme.space[9],
         padding: `${theme.space[2]} ${theme.space[5]}`,
       }
     }
