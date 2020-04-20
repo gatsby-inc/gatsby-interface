@@ -4,6 +4,7 @@ import { Theme, ThemeCss } from ".."
 export type ButtonSize = "XL" | "L" | "M" | "S"
 export type ButtonTone = "BRAND" | "SUCCESS" | "DANGER" | "NEUTRAL"
 export type ButtonVariant = "PRIMARY" | "SECONDARY" | "GHOST"
+export type ButtonTextVariant = "DEFAULT" | "BRAND"
 
 export function getButtonCss({
   size = `L`,
@@ -12,7 +13,7 @@ export function getButtonCss({
   leftIcon,
   rightIcon,
   loading,
-  marketing,
+  textVariant = "DEFAULT",
 }: {
   size?: ButtonSize
   tone?: ButtonTone
@@ -20,21 +21,21 @@ export function getButtonCss({
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
   loading?: boolean
-  marketing?: boolean
+  textVariant?: ButtonTextVariant
 }): InterpolationWithTheme<Theme> {
   return (theme: Theme) => [
-    getButtonBaseCss(marketing)(theme),
+    getButtonBaseCss(textVariant)(theme),
     getButtonIconsCss({
       hasLeftIcon: !!leftIcon,
       hasRightIcon: !!rightIcon || loading,
     })(theme),
     getButtonLoadingCss({ loading })(theme),
     getButtonVariantCss(variant, tone)(theme),
-    getButtonSizeCss(size, marketing)(theme),
+    getButtonSizeCss(size, textVariant)(theme),
   ]
 }
 
-function getButtonBaseCss(marketing?: boolean): ThemeCss {
+function getButtonBaseCss(textVariant?: ButtonTextVariant): ThemeCss {
   return theme => ({
     alignItems: `center`,
     border: theme.colors.grey[60],
@@ -42,7 +43,8 @@ function getButtonBaseCss(marketing?: boolean): ThemeCss {
     boxSizing: `border-box`,
     cursor: `pointer`,
     display: `inline-flex`,
-    fontFamily: marketing ? theme.fonts.heading : theme.fonts.body,
+    fontFamily:
+      textVariant === "BRAND" ? theme.fonts.heading : theme.fonts.body,
     justifyContent: `center`,
     transition: `background 0.5s, border 0.5s, color 0.5s`,
     lineHeight: theme.lineHeights.solid,
@@ -116,32 +118,39 @@ function getButtonLoadingCss({ loading }: { loading?: boolean }): ThemeCss {
       : {}
 }
 
-function getButtonSizeCss(size: ButtonSize, marketing?: boolean): ThemeCss {
+function getButtonSizeCss(
+  size: ButtonSize,
+  textVariant?: ButtonTextVariant
+): ThemeCss {
   return theme => {
     if (size === `S`) {
       return {
-        fontSize: marketing ? theme.fontSizes[1] : theme.fontSizes[0],
+        fontSize:
+          textVariant === "BRAND" ? theme.fontSizes[1] : theme.fontSizes[0],
         minHeight: `calc(${theme.space[2]} * 7)`,
         padding: `${theme.space[2]} ${theme.space[3]}`,
       }
     }
     if (size === `M`) {
       return {
-        fontSize: marketing ? theme.fontSizes[2] : theme.fontSizes[1],
+        fontSize:
+          textVariant === "BRAND" ? theme.fontSizes[2] : theme.fontSizes[1],
         minHeight: `calc(${theme.space[2]} * 9)`,
         padding: `${theme.space[2]} ${theme.space[4]}`,
       }
     }
     if (size === `L`) {
       return {
-        fontSize: marketing ? theme.fontSizes[3] : theme.fontSizes[2],
+        fontSize:
+          textVariant === "BRAND" ? theme.fontSizes[3] : theme.fontSizes[2],
         minHeight: theme.space[9],
         padding: `${theme.space[2]} ${theme.space[5]}`,
       }
     }
     if (size === `XL`) {
       return {
-        fontSize: marketing ? theme.fontSizes[5] : theme.fontSizes[4],
+        fontSize:
+          textVariant === "BRAND" ? theme.fontSizes[5] : theme.fontSizes[4],
         minHeight: theme.space[10],
         padding: `${theme.space[3]} ${theme.space[6]}`,
       }
