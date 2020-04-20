@@ -77,6 +77,7 @@ export const Sandbox = () =>
   )
 
 Sandbox.story = {
+  decorators: [withVariationsContainer],
   parameters: {
     chromatic: { disable: true },
   },

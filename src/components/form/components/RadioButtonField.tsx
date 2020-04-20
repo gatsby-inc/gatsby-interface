@@ -32,7 +32,7 @@ import {
   WithFormGroupField,
 } from "./FormGroupField"
 import { useFormFieldSkeleton } from "../../form-skeletons/components/FormFieldSkeleton"
-import { Theme, ThemeCss } from "../../../theme"
+import { Theme, ThemeCss, getTheme } from "../../../theme"
 
 import { INPUT_WIDTH, INPUT_VERTICAL_OFFSET_CALC } from "./FormGroupField"
 import { WithStyledFieldLabel } from "./FormField"
@@ -57,6 +57,13 @@ export function RadioButtonField({
   )
 }
 
+const getCheckImage = (color: string) => {
+  const encodedColor = encodeURIComponent(color)
+  return `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 0H0V20H20V0ZM10 14C12.2091 14 14 12.2091 14 10C14 7.79086 12.2091 6 10 6C7.79086 6 6 7.79086 6 10C6 12.2091 7.79086 14 10 14Z' fill='${encodedColor}'/%3E%3C/svg%3E%0A")`
+}
+
+const { colors: staticColors } = getTheme()
+
 export type RadioButtonFieldOptionProps = RadioButtonFieldSkeletonOptionProps
 export const RadioButtonFieldOption = React.forwardRef<
   HTMLInputElement,
@@ -68,7 +75,6 @@ export const RadioButtonFieldOption = React.forwardRef<
       css={(theme: Theme) => [
         {
           position: `absolute`,
-          left: `-9999px`,
           opacity: 0,
 
           "&:checked + label": {
@@ -79,11 +85,22 @@ export const RadioButtonFieldOption = React.forwardRef<
             borderColor: theme.colors.purple[60],
             backgroundColor: theme.colors.purple[60],
             backgroundOrigin: `border-box`,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 0H0V20H20V0ZM10 14C12.2091 14 14 12.2091 14 10C14 7.79086 12.2091 6 10 6C7.79086 6 6 7.79086 6 10C6 12.2091 7.79086 14 10 14Z' fill='white'/%3E%3C/svg%3E%0A")`,
+            backgroundImage: getCheckImage(staticColors.white),
           },
 
-          "&:not(:checked):hover + label::before": {
+          "&:not(:checked):not(:disabled):hover + label::before": {
             borderColor: theme.colors.purple[40],
+          },
+
+          "&:disabled + label::before": {
+            backgroundColor: theme.colors.grey[10],
+            borderColor: theme.colors.grey[30],
+            cursor: `not-allowed`,
+          },
+
+          "&:checked:disabled + label::before": {
+            backgroundImage: getCheckImage(staticColors.grey[10]),
+            backgroundColor: theme.colors.grey[40],
           },
 
           "&:focus + label::before": {

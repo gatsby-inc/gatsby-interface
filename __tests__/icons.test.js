@@ -1,6 +1,5 @@
 import React from "react"
-import { render } from "@testing-library/react"
-
+import { renderWithTheme } from "../src/utils/testing"
 import * as icons from "../src/components/icons/icons"
 
 const sortedIconComponentNames = Object.keys(icons).sort()
@@ -14,7 +13,7 @@ describe(`icons`, () => {
         const IconComponent = icons[componentName]
 
         it(`renders unchanged`, () => {
-          const { container } = render(<IconComponent />)
+          const { container } = renderWithTheme(<IconComponent />)
 
           expect(container).toMatchSnapshot()
         })

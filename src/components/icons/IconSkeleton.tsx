@@ -1,7 +1,7 @@
 import React from "react"
 import { IconSize, IconSkeletonProps } from "./types"
 
-const iconHeightBySize: Record<IconSize, string> = {
+export const iconHeightBySize: Record<IconSize, string> = {
   inherit: `1em`,
   xxsmall: `16px`,
   xsmall: `20px`,
