@@ -121,28 +121,28 @@ function getButtonSizeCss(size: ButtonSize): ThemeCss {
         // borderRadius: theme.radii[1],
         fontSize: theme.fontSizes[0],
         minHeight: theme.space[7],
-        padding: `0.25rem 0.5rem`,
+        padding: `${theme.space[2]} ${theme.space[3]}`,
       }
     }
     if (size === `M`) {
       return {
         fontSize: theme.fontSizes[1],
         minHeight: theme.space[8],
-        padding: `0.25rem 0.75rem`,
+        padding: `${theme.space[2]} ${theme.space[4]}`,
       }
     }
     if (size === `L`) {
       return {
         fontSize: theme.fontSizes[2],
         minHeight: `calc(${theme.space[2]} * 9)`,
-        padding: `0.25rem 1rem`,
+        padding: `${theme.space[2]} ${theme.space[5]}`,
       }
     }
     if (size === `XL`) {
       return {
         fontSize: theme.fontSizes[4],
         minHeight: theme.space[10],
-        padding: `0.75rem 1.25rem`,
+        padding: `${theme.space[4]} ${theme.space[6]}`,
       }
     }
   }
