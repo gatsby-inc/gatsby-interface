@@ -12,6 +12,7 @@ export function getButtonCss({
   leftIcon,
   rightIcon,
   loading,
+  marketing,
 }: {
   size?: ButtonSize
   tone?: ButtonTone
@@ -19,20 +20,21 @@ export function getButtonCss({
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
   loading?: boolean
+  marketing?: boolean
 }): InterpolationWithTheme<Theme> {
   return (theme: Theme) => [
-    getButtonBaseCss()(theme),
+    getButtonBaseCss(marketing)(theme),
     getButtonIconsCss({
       hasLeftIcon: !!leftIcon,
       hasRightIcon: !!rightIcon || loading,
     })(theme),
     getButtonLoadingCss({ loading })(theme),
     getButtonVariantCss(variant, tone)(theme),
-    getButtonSizeCss(size)(theme),
+    getButtonSizeCss(size, marketing)(theme),
   ]
 }
 
-function getButtonBaseCss(): ThemeCss {
+function getButtonBaseCss(marketing?: boolean): ThemeCss {
   return theme => ({
     alignItems: `center`,
     border: theme.colors.grey[60],
@@ -40,7 +42,7 @@ function getButtonBaseCss(): ThemeCss {
     boxSizing: `border-box`,
     cursor: `pointer`,
     display: `inline-flex`,
-    fontFamily: theme.fonts.body,
+    fontFamily: marketing ? theme.fonts.heading : theme.fonts.body,
     justifyContent: `center`,
     transition: `background 0.5s, border 0.5s, color 0.5s`,
     lineHeight: theme.lineHeights.solid,
@@ -114,34 +116,34 @@ function getButtonLoadingCss({ loading }: { loading?: boolean }): ThemeCss {
       : {}
 }
 
-function getButtonSizeCss(size: ButtonSize): ThemeCss {
+function getButtonSizeCss(size: ButtonSize, marketing?: boolean): ThemeCss {
   return theme => {
     if (size === `S`) {
       return {
-        fontSize: theme.fontSizes[0],
+        fontSize: marketing ? theme.fontSizes[1] : theme.fontSizes[0],
         minHeight: `calc(${theme.space[2]} * 7)`,
         padding: `${theme.space[2]} ${theme.space[3]}`,
       }
     }
     if (size === `M`) {
       return {
-        fontSize: theme.fontSizes[1],
+        fontSize: marketing ? theme.fontSizes[2] : theme.fontSizes[1],
         minHeight: `calc(${theme.space[2]} * 9)`,
         padding: `${theme.space[2]} ${theme.space[4]}`,
       }
     }
     if (size === `L`) {
       return {
-        fontSize: theme.fontSizes[2],
+        fontSize: marketing ? theme.fontSizes[3] : theme.fontSizes[2],
         minHeight: theme.space[9],
         padding: `${theme.space[2]} ${theme.space[5]}`,
       }
     }
     if (size === `XL`) {
       return {
-        fontSize: theme.fontSizes[4],
+        fontSize: marketing ? theme.fontSizes[5] : theme.fontSizes[4],
         minHeight: theme.space[10],
-        padding: `${theme.space[4]} ${theme.space[6]}`,
+        padding: `${theme.space[3]} ${theme.space[6]}`,
       }
     }
   }
