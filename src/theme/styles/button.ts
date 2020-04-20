@@ -118,7 +118,6 @@ function getButtonSizeCss(size: ButtonSize): ThemeCss {
   return theme => {
     if (size === `S`) {
       return {
-        // borderRadius: theme.radii[1],
         fontSize: theme.fontSizes[0],
         minHeight: theme.space[7],
         padding: `${theme.space[2]} ${theme.space[3]}`,
