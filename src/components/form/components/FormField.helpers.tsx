@@ -39,7 +39,7 @@ export const RequiredFlag = () => (
 )
 
 export const getFocusStyles = (theme: Theme, hasError?: boolean) => ({
-  boxShadow: `0 0 0 4px ${
+  boxShadow: `0 0 0 3px ${
     hasError ? theme.colors.red[10] : theme.colors.purple[20]
   }`,
   borderColor: hasError ? theme.colors.red[30] : theme.colors.purple[60],
@@ -57,7 +57,7 @@ export const getInputStyles = (
   color: theme.colors.grey[90],
   fontFamily: theme.fonts.system,
   fontSize: theme.fontSizes[2],
-  height: `calc(${theme.space[2]} * 9)`,
+  height: `2.25rem`,
   padding: `0 ${theme.space[3]}`,
   position: `relative`,
   width: `100%`,
