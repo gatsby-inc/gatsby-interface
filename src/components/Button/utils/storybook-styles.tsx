@@ -12,6 +12,7 @@ import {
   ButtonSize,
   ButtonTone,
   ButtonVariant,
+  ButtonTextVariant,
 } from "../../../theme/styles/button"
 import { StoryFnReactReturnType } from "@storybook/react/dist/client/preview/types"
 
@@ -31,6 +32,12 @@ const BUTTON_TONE_OPTIONS = BUTTON_TONES.reduce(enumToOptions, {})
 const BUTTON_VARIANTS: ButtonVariant[] = [`PRIMARY`, `SECONDARY`, `GHOST`]
 const BUTTON_VARIANT_OPTIONS = BUTTON_VARIANTS.reduce(enumToOptions, {})
 
+const BUTTON_TEXT_VARIANTS: ButtonTextVariant[] = [`DEFAULT`, `BRAND`]
+const BUTTON_TEXT_VARIANT_OPTIONS = BUTTON_TEXT_VARIANTS.reduce(
+  enumToOptions,
+  {}
+)
+
 type ShowcaseReturn = Parameters<StoryApi<StoryFnReactReturnType>["add"]>
 
 export function showcaseVariants<P>(
@@ -42,6 +49,11 @@ export function showcaseVariants<P>(
     () => {
       const size: ButtonSize = radios(`size`, BUTTON_SIZE_OPTIONS, `L`)
       const tone: ButtonTone = radios(`tone`, BUTTON_TONE_OPTIONS, `BRAND`)
+      const textVariant: ButtonTextVariant = radios(
+        `textVariant`,
+        BUTTON_TEXT_VARIANT_OPTIONS,
+        `DEFAULT`
+      )
 
       const renderCase = (variant: ButtonVariant) => (
         <Component
@@ -51,6 +63,7 @@ export function showcaseVariants<P>(
           tone={tone}
           size={size}
           ref={undefined}
+          textVariant={textVariant}
         >
           variant&nbsp;<React.Fragment>'{variant}'</React.Fragment>
         </Component>
@@ -78,6 +91,11 @@ export function showcaseSizes<P>(
         `PRIMARY`
       )
       const tone: ButtonTone = radios(`tone`, BUTTON_TONE_OPTIONS, `BRAND`)
+      const textVariant: ButtonTextVariant = radios(
+        `textVariant`,
+        BUTTON_TEXT_VARIANT_OPTIONS,
+        `DEFAULT`
+      )
 
       const renderCase = (size: ButtonSize) => (
         <Component
@@ -87,6 +105,7 @@ export function showcaseSizes<P>(
           tone={tone}
           size={size}
           ref={undefined}
+          textVariant={textVariant}
         >
           size&nbsp;<React.Fragment>'{size}'</React.Fragment>
         </Component>
@@ -114,6 +133,11 @@ export function showcaseTones<P>(
         `PRIMARY`
       )
       const size: ButtonSize = radios(`size`, BUTTON_SIZE_OPTIONS, `L`)
+      const textVariant: ButtonTextVariant = radios(
+        `textVariant`,
+        BUTTON_TEXT_VARIANT_OPTIONS,
+        `DEFAULT`
+      )
 
       const renderCase = (tone: ButtonTone) => (
         <Component
@@ -123,6 +147,7 @@ export function showcaseTones<P>(
           tone={tone}
           size={size}
           ref={undefined}
+          textVariant={textVariant}
         >
           tone&nbsp;<React.Fragment>'{tone}'</React.Fragment>
         </Component>

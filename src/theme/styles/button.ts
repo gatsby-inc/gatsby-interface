@@ -13,7 +13,7 @@ export function getButtonCss({
   leftIcon,
   rightIcon,
   loading,
-  textVariant = "DEFAULT",
+  textVariant = `DEFAULT`,
 }: {
   size?: ButtonSize
   tone?: ButtonTone
