@@ -152,13 +152,12 @@ export function showcaseCustomStyles<P>(
             onClick={action(`Button was clicked`)}
             css={theme => ({
               color: theme.colors.blackFade[80],
-              background: theme.colors.teal[30],
-              borderColor: theme.colors.teal[30],
-              fontWeight: theme.fontWeights.body,
+              background: theme.colors.teal[20],
+              borderColor: theme.colors.teal[20],
 
               "&:hover:not([disabled])": {
-                background: theme.colors.teal[50],
-                borderColor: theme.colors.teal[50],
+                background: theme.colors.teal[30],
+                borderColor: theme.colors.teal[30],
                 color: theme.colors.black,
               },
             })}
