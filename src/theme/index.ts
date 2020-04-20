@@ -46,7 +46,7 @@ const themeTones: ToneScale = {
     medium: themeColors.green[50],
     dark: themeColors.green[60],
     darker: themeColors.green[70],
-    superDark: themeColors.green[90],
+    superDark: themeColors.green[80],
   },
   DANGER: {
     superLight: themeColors.red[5],
@@ -66,11 +66,11 @@ const themeTones: ToneScale = {
   },
   WARNING: {
     superLight: themeColors.orange[5],
-    light: themeColors.orange[20],
+    light: themeColors.orange[30],
     medium: themeColors.orange[50],
     dark: themeColors.orange[60],
     darker: themeColors.orange[70],
-    superDark: themeColors.orange[90],
+    superDark: themeColors.yellow[90],
   },
 }
 
