@@ -34,14 +34,20 @@ export const Dropdown: React.FC<MenuProps> = props => (
 
 export type DropdownButtonProps = MenuButtonProps
 
-export const DropdownButton: React.FC<DropdownButtonProps> = ({
+export const DropdownButton: React.FC<DropdownButtonProps> = props => (
+  <MenuButton {...props} />
+)
+
+export type DropdownButtonStyledProps = DropdownButtonProps
+
+export const DropdownButtonStyled: React.FC<DropdownButtonProps> = ({
   children,
   ...props
 }) => (
-  <MenuButton {...props} css={dropdownButtonCss}>
+  <DropdownButton {...props} css={dropdownButtonCss}>
     {children}
     <MdKeyboardArrowDown css={dropdownButtonIconCss} />
-  </MenuButton>
+  </DropdownButton>
 )
 
 export type DropdownItemsProps = MenuListProps

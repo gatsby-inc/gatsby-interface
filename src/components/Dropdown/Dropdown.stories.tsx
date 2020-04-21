@@ -8,6 +8,7 @@ import {
   DropdownLink,
   DropdownItem,
   DropdownItems,
+  DropdownButtonStyled,
 } from "./"
 import React from "react"
 import { select } from "@storybook/addon-knobs"
@@ -18,6 +19,7 @@ export default {
   component: Dropdown,
   subcomponents: {
     DropdownButton,
+    DropdownButtonStyled,
     DropdownPopover,
     DropdownItems,
     DropdownLink,
@@ -50,6 +52,28 @@ export const Basic = () => {
       <DropdownButton>
         {selected || "Placeholder for the dropdown"}
       </DropdownButton>
+      <DropdownItems>
+        <DropdownItem onSelect={() => setSelected("First")}>First</DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Second")}>
+          Second
+        </DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Third")}>Third</DropdownItem>
+        <DropdownItem onSelect={() => setSelected("Fourth")}>
+          Fourth
+        </DropdownItem>
+      </DropdownItems>
+    </Dropdown>
+  )
+}
+
+export const StyledButton = () => {
+  const [selected, setSelected] = React.useState<undefined | string>(undefined)
+
+  return (
+    <Dropdown>
+      <DropdownButtonStyled>
+        {selected || "Placeholder for the dropdown"}
+      </DropdownButtonStyled>
       <DropdownItems>
         <DropdownItem onSelect={() => setSelected("First")}>First</DropdownItem>
         <DropdownItem onSelect={() => setSelected("Second")}>
