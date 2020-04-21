@@ -1,30 +1,43 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { DecoratorFn } from "@storybook/react"
-import { StoryUtils } from "../../utils/storybook"
-import { Dropdown, DropdownLabel, DropdownItem, DropdownItems } from "./"
+import {
+  Dropdown,
+  DropdownButton,
+  DropdownPopover,
+  DropdownLink,
+  DropdownItem,
+  DropdownItems,
+} from "./"
 import React from "react"
 import { select } from "@storybook/addon-knobs"
 import { Theme } from "../../theme"
 
 export default {
   title: `Dropdown`,
+  component: Dropdown,
+  subcomponents: {
+    DropdownButton,
+    DropdownPopover,
+    DropdownItems,
+    DropdownLink,
+    DropdownItem,
+  },
+  parameters: {
+    layout: `padded`,
+  },
   decorators: [
     story => (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>
-          <div
-            css={(theme: Theme) => ({
-              width: "300px",
-              [theme.mediaQueries.phablet]: {
-                width: "700px",
-              },
-            })}
-          >
-            {story()}
-          </div>
-        </StoryUtils.Stack>
-      </StoryUtils.Container>
+      <div
+        css={(theme: Theme) => ({
+          width: "300px",
+          [theme.mediaQueries.phablet]: {
+            width: "700px",
+          },
+        })}
+      >
+        {story()}
+      </div>
     ),
   ] as DecoratorFn[],
 }
@@ -34,9 +47,9 @@ export const Basic = () => {
 
   return (
     <Dropdown>
-      <DropdownLabel placeholder="Placeholder for the dropdown">
-        {selected}
-      </DropdownLabel>
+      <DropdownButton>
+        {selected || "Placeholder for the dropdown"}
+      </DropdownButton>
       <DropdownItems>
         <DropdownItem onSelect={() => setSelected("First")}>First</DropdownItem>
         <DropdownItem onSelect={() => setSelected("Second")}>
@@ -56,9 +69,9 @@ export const WithComponentPlaceholder = () => {
 
   return (
     <Dropdown>
-      <DropdownLabel placeholder={<p>This is a complex placeholder</p>}>
-        {selected}
-      </DropdownLabel>
+      <DropdownButton>
+        {selected || <p>This is a complex placeholder</p>}
+      </DropdownButton>
       <DropdownItems>
         <DropdownItem onSelect={() => setSelected("First")}>First</DropdownItem>
         <DropdownItem onSelect={() => setSelected("Second")}>
@@ -90,9 +103,9 @@ export const Sandbox = () => {
 
   return (
     <Dropdown>
-      <DropdownLabel placeholder="Placeholder for the dropdown">
-        {selected}
-      </DropdownLabel>
+      <DropdownButton>
+        {selected || "Placeholder for the dropdown"}
+      </DropdownButton>
       <DropdownItems>
         {items.map(item => (
           <DropdownItem key={item} onSelect={() => undefined}>

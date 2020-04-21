@@ -3,37 +3,44 @@ import { jsx } from "@emotion/core"
 import React from "react"
 import {
   Menu,
-  MenuList,
-  MenuButton,
-  MenuItem,
-  MenuButtonProps,
-  MenuListProps,
-  MenuItemProps,
   MenuProps,
+  MenuPopover,
+  MenuPopoverProps,
+  MenuList,
+  MenuListProps,
+  MenuButton,
+  MenuButtonProps,
+  MenuItem,
+  MenuItemProps,
+  MenuLink,
+  MenuLinkProps,
+  useMenuButtonContext,
 } from "@reach/menu-button"
 import { MdKeyboardArrowDown } from "react-icons/md"
-import { dropdownCss, dropdownLabelCss, menuItemCss } from "./Dropdown.styles"
+import {
+  dropdownCss,
+  dropdownButtonCss,
+  menuItemCss,
+  dropdownButtonIconCss,
+} from "./Dropdown.styles"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
 export const Dropdown: React.FC<MenuProps> = props => (
-  <div>
+  <React.Fragment>
     <DisableReachStyleCheck reachComponent="menu-button" />
     <Menu {...props} />
-  </div>
+  </React.Fragment>
 )
 
-export interface DropdownLabelProps
-  extends Omit<MenuButtonProps, "placeholder"> {
-  placeholder: React.ReactNode
-}
+export type DropdownButtonProps = MenuButtonProps
 
-export const DropdownLabel: React.FC<DropdownLabelProps> = ({
+export const DropdownButton: React.FC<DropdownButtonProps> = ({
   children,
-  placeholder,
   ...props
 }) => (
-  <MenuButton {...props} css={dropdownLabelCss}>
-    <span>{children ? children : placeholder}</span> <MdKeyboardArrowDown />
+  <MenuButton {...props} css={dropdownButtonCss}>
+    {children}
+    <MdKeyboardArrowDown css={dropdownButtonIconCss} />
   </MenuButton>
 )
 
@@ -48,3 +55,19 @@ export type DropdownItemProps = MenuItemProps
 export const DropdownItem: React.FC<DropdownItemProps> = props => (
   <MenuItem {...props} css={menuItemCss} />
 )
+
+export type DropdownLinkProps = MenuLinkProps
+
+export function DropdownLink(props: DropdownLinkProps) {
+  return <MenuLink {...props} />
+}
+
+export type DropdownPopoverProps = MenuPopoverProps
+
+export function DropdownPopover(props: DropdownPopoverProps) {
+  return <MenuPopover {...props} />
+}
+
+export function useDropdownContext() {
+  return useMenuButtonContext()
+}
