@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
-import { DialogOverlay, DialogOverlayProps } from "@reach/dialog"
+import { DialogOverlay } from "@reach/dialog"
 import colors from "../../theme/colors"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
 import { keyframes } from "@emotion/core"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { ThemeCss } from "../../theme"
+import { PropsOf } from "../../utils/types"
 
 const buildFadeIn = (color: string) =>
   keyframes`
@@ -39,7 +40,7 @@ const overlayCss: ThemeCss = theme => ({
 
 export type ModalType = "success" | "info" | "warn" | "error"
 
-export interface ModalProps extends Omit<DialogOverlayProps, "ref"> {
+export interface ModalProps extends Omit<PropsOf<typeof DialogOverlay>, "ref"> {
   type?: ModalType
 }
 
