@@ -11,7 +11,8 @@ import {
   DropdownMenuButtonStyled,
 } from "./"
 import React from "react"
-import { select } from "@storybook/addon-knobs"
+import { text } from "@storybook/addon-knobs"
+import { action } from "@storybook/addon-actions"
 import { Theme } from "../../theme"
 
 export default {
@@ -45,106 +46,54 @@ export default {
 }
 
 export const Basic = () => {
-  const [selected, setSelected] = React.useState<undefined | string>(undefined)
+  React.useEffect(() => {
+    const button = document.querySelector<HTMLButtonElement>("button")
+    if (button) {
+      // Toggle menu for Chromatic snapshots
+      button.focus()
+      button.dispatchEvent(
+        new KeyboardEvent("keydown", {
+          bubbles: true,
+          cancelable: true,
+          key: "Enter",
+          shiftKey: false,
+        })
+      )
+    }
+  }, [])
 
   return (
-    <DropdownMenu>
-      <DropdownMenuButton>
-        {selected || "Placeholder for the dropdown"}
-      </DropdownMenuButton>
-      <DropdownMenuItems>
-        <DropdownMenuItem onSelect={() => setSelected("First")}>
-          First
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Second")}>
-          Second
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Third")}>
-          Third
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Fourth")}>
-          Fourth
-        </DropdownMenuItem>
-      </DropdownMenuItems>
-    </DropdownMenu>
-  )
-}
-
-export const StyledButton = () => {
-  const [selected, setSelected] = React.useState<undefined | string>(undefined)
-
-  return (
-    <DropdownMenu>
-      <DropdownMenuButtonStyled>
-        {selected || "Placeholder for the dropdown"}
-      </DropdownMenuButtonStyled>
-      <DropdownMenuItems>
-        <DropdownMenuItem onSelect={() => setSelected("First")}>
-          First
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Second")}>
-          Second
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Third")}>
-          Third
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Fourth")}>
-          Fourth
-        </DropdownMenuItem>
-      </DropdownMenuItems>
-    </DropdownMenu>
-  )
-}
-
-export const WithComponentPlaceholder = () => {
-  const [selected, setSelected] = React.useState<undefined | string>(undefined)
-
-  return (
-    <DropdownMenu>
-      <DropdownMenuButton>
-        {selected || <p>This is a complex placeholder</p>}
-      </DropdownMenuButton>
-      <DropdownMenuItems>
-        <DropdownMenuItem onSelect={() => setSelected("First")}>
-          First
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Second")}>
-          Second
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Third")}>
-          Third
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setSelected("Fourth")}>
-          Fourth
-        </DropdownMenuItem>
-      </DropdownMenuItems>
-    </DropdownMenu>
+    <div css={{ minHeight: "100vh" }}>
+      <DropdownMenu>
+        <DropdownMenuButton onKeyDown={console.log}>Actions</DropdownMenuButton>
+        <DropdownMenuItems>
+          <DropdownMenuItem onSelect={() => action("Select")("First")}>
+            First
+          </DropdownMenuItem>
+          <DropdownMenuItem onSelect={() => action("Select")("Second")}>
+            Second
+          </DropdownMenuItem>
+          <DropdownMenuItem onSelect={() => action("Select")("Third")}>
+            Third
+          </DropdownMenuItem>
+          <DropdownMenuItem onSelect={() => action("Select")("Fourth")}>
+            Fourth
+          </DropdownMenuItem>
+        </DropdownMenuItems>
+      </DropdownMenu>
+    </div>
   )
 }
 
 const items: string[] = ["First", "Second", "Third"]
 
-const label = "Items"
-const options = {
-  None: undefined,
-  First: "First",
-  Second: "Second",
-  Third: "Third",
-}
-const defaultValue = options.None
-const groupId = "GROUP-ID1"
-
 export const Sandbox = () => {
-  const selected = select(label, options, defaultValue, groupId)
-
   return (
     <DropdownMenu>
-      <DropdownMenuButton>
-        {selected || "Placeholder for the dropdown"}
-      </DropdownMenuButton>
+      <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
       <DropdownMenuItems>
         {items.map(item => (
-          <DropdownMenuItem key={item} onSelect={() => undefined}>
+          <DropdownMenuItem key={item} onSelect={() => action("Select")(item)}>
             {item}
           </DropdownMenuItem>
         ))}
@@ -157,4 +106,50 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+}
+
+export const StyledButton = () => {
+  return (
+    <DropdownMenu>
+      <DropdownMenuButtonStyled>Actions</DropdownMenuButtonStyled>
+      <DropdownMenuItems>
+        <DropdownMenuItem onSelect={() => action("Select")("First")}>
+          First
+        </DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => action("Select")("Second")}>
+          Second
+        </DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => action("Select")("Third")}>
+          Third
+        </DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => action("Select")("Fourth")}>
+          Fourth
+        </DropdownMenuItem>
+      </DropdownMenuItems>
+    </DropdownMenu>
+  )
+}
+
+export const WithComponentPlaceholder = () => {
+  return (
+    <DropdownMenu>
+      <DropdownMenuButton>
+        <p>This is a complex placeholder</p>
+      </DropdownMenuButton>
+      <DropdownMenuItems>
+        <DropdownMenuItem onSelect={() => action("Select")("First")}>
+          First
+        </DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => action("Select")("Second")}>
+          Second
+        </DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => action("Select")("Third")}>
+          Third
+        </DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => action("Select")("Fourth")}>
+          Fourth
+        </DropdownMenuItem>
+      </DropdownMenuItems>
+    </DropdownMenu>
+  )
 }
