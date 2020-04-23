@@ -14,6 +14,7 @@ import React from "react"
 import { text } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
 import { Theme } from "../../theme"
+import { disableAnimationsDecorator } from "../../utils/storybook"
 
 export default {
   title: `DropdownMenu`,
@@ -42,6 +43,7 @@ export default {
         {story()}
       </div>
     ),
+    disableAnimationsDecorator,
   ] as DecoratorFn[],
 }
 
