@@ -184,11 +184,20 @@ function isExternalLinkItem(
 export type NavigationDropdownProps = BaseNavigationDropdownProps
 
 function NavigationDropdown(delegated: NavigationDropdownProps) {
-  const { mobileNavMediaQuery } = Navigation.useNavigationContext()
+  const {
+    mobileNavMediaQuery,
+    dropdownOffsets,
+  } = Navigation.useNavigationContext()
+
+  const offset =
+    dropdownOffsets[delegated.item.name] &&
+    dropdownOffsets[delegated.item.name].offset
+      ? `${dropdownOffsets[delegated.item.name].offset}px`
+      : `0px`
 
   return (
     <BaseNavigation.Dropdown
-      css={dropdownCss(mobileNavMediaQuery)}
+      css={dropdownCss(mobileNavMediaQuery, offset)}
       {...delegated}
     />
   )
