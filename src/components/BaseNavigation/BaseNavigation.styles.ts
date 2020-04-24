@@ -195,10 +195,10 @@ const baseStyles = {
       isInverted && baseNavigationItemInvertedCss(theme),
     ]
   },
-  dropdown: (isDropdownOpen: boolean, isMeausured: boolean): ThemeCss => {
+  dropdown: (isDropdownOpen: boolean, isMeasured: boolean): ThemeCss => {
     return theme => [
       baseNavigationDropdownClosedStyles(theme),
-      isMeausured && baseNavigationDropdownMeasureStyles(theme),
+      isMeasured && baseNavigationDropdownMeasureStyles(theme),
       isDropdownOpen && baseNavigationDropdownOpenStyles(theme),
     ]
   },
