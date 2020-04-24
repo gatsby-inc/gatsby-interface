@@ -16,7 +16,7 @@ import breakpoints, {
 } from "./breakpoints"
 import transitions, { Transitions } from "./transition"
 import { AtomTone } from "./types"
-import { ToneColors } from "./tones"
+import tones, { ToneColors } from "./tones"
 import { Interpolation, InterpolationWithTheme } from "@emotion/core"
 
 /**
@@ -31,48 +31,7 @@ const themeColors: ColorScale = colors
  */
 type ToneScale = Record<AtomTone, ToneColors>
 
-const themeTones: ToneScale = {
-  BRAND: {
-    superLight: themeColors.purple[5],
-    light: themeColors.purple[20],
-    medium: themeColors.purple[40],
-    dark: themeColors.purple[60],
-    darker: themeColors.purple[70],
-    superDark: themeColors.purple[90],
-  },
-  SUCCESS: {
-    superLight: themeColors.green[5],
-    light: themeColors.green[20],
-    medium: themeColors.green[50],
-    dark: themeColors.green[60],
-    darker: themeColors.green[70],
-    superDark: themeColors.green[80],
-  },
-  DANGER: {
-    superLight: themeColors.red[5],
-    light: themeColors.red[20],
-    medium: themeColors.red[50],
-    dark: themeColors.red[70],
-    darker: themeColors.red[80],
-    superDark: themeColors.red[90],
-  },
-  NEUTRAL: {
-    superLight: themeColors.grey[5],
-    light: themeColors.grey[20],
-    medium: themeColors.grey[40],
-    dark: themeColors.grey[50],
-    darker: themeColors.grey[60],
-    superDark: themeColors.grey[90],
-  },
-  WARNING: {
-    superLight: themeColors.orange[5],
-    light: themeColors.orange[30],
-    medium: themeColors.orange[50],
-    dark: themeColors.orange[60],
-    darker: themeColors.orange[70],
-    superDark: themeColors.yellow[90],
-  },
-}
+const themeTones: ToneScale = tones
 
 /**
  * Font families
