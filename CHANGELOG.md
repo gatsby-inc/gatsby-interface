@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.144](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.143...v0.0.144) (2020-04-24)
+
+
+### Features
+
+* Only allow TypeScript in the library code ([#295](https://github.com/gatsby-inc/gatsby-interface/issues/295)) ([5413f5c](https://github.com/gatsby-inc/gatsby-interface/commit/5413f5c0cd60be89e83c11aef0d03b4b9983010c))
+
 ### [0.0.143](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.142...v0.0.143) (2020-04-24)
 
 ### Features
