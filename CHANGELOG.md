@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.143](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.142...v0.0.143) (2020-04-24)
+
+
+### Features
+
+* make `<Button>` use `fonts.sans` by default, add prop `textVariant` to use them w/ "Futura PT" ([#296](https://github.com/gatsby-inc/gatsby-interface/issues/296)) ([252f5f2](https://github.com/gatsby-inc/gatsby-interface/commit/252f5f2ce1d45fd81ebfb2c8b31bf8468cf04cfc))
+
 ### [0.0.142](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.141...v0.0.142) (2020-04-20)
 
 
