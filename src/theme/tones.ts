@@ -14,7 +14,7 @@ const tones: Record<AtomTone, ToneColors> = {
   BRAND: {
     superLight: colors.purple[5],
     light: colors.purple[20],
-    medium: colors.purple[50],
+    medium: colors.purple[40],
     dark: colors.purple[60],
     darker: colors.purple[70],
     superDark: colors.purple[90],
@@ -25,7 +25,7 @@ const tones: Record<AtomTone, ToneColors> = {
     medium: colors.green[50],
     dark: colors.green[60],
     darker: colors.green[70],
-    superDark: colors.green[90],
+    superDark: colors.green[80],
   },
   DANGER: {
     superLight: colors.red[5],
@@ -44,11 +44,11 @@ const tones: Record<AtomTone, ToneColors> = {
     superDark: colors.grey[90],
   },
   WARNING: {
-    superLight: colors.yellow[5],
-    light: colors.yellow[20],
-    medium: colors.yellow[40],
-    dark: colors.yellow[50],
-    darker: colors.yellow[60],
+    superLight: colors.orange[5],
+    light: colors.orange[30],
+    medium: colors.orange[50],
+    dark: colors.orange[60],
+    darker: colors.orange[70],
     superDark: colors.yellow[90],
   },
 }
