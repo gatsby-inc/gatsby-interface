@@ -44,6 +44,8 @@ export type BaseNavigationContextValue = {
   isMobileNavOpen: boolean
   setIsMobileNavOpen: (value: boolean) => void
   components: BaseNavigationComponents
+  dropdownOffsets: any
+  setDropdownOffsets: (value: any) => void
 }
 
 const BaseNavigationContext = React.createContext<BaseNavigationContextValue>(
@@ -86,6 +88,8 @@ export const BaseNavigation = ({
     false
   )
 
+  const [dropdownOffsets, setDropdownOffsets] = React.useState({})
+
   let isMobileNavOpen = internalIsMobileNavOpen
   let setIsMobileNavOpen: BaseNavigationContextValue["setIsMobileNavOpen"] = internalSetIsMobileNavOpen
 
@@ -105,6 +109,8 @@ export const BaseNavigation = ({
     mobileNavMediaQuery,
     isMobileNavOpen,
     setIsMobileNavOpen,
+    dropdownOffsets,
+    setDropdownOffsets,
     components: {
       Hamburger,
       HamburgerIcon,
@@ -394,13 +400,46 @@ export function BaseNavigationDropdown({
   dropdownChildren = false,
   ...rest
 }: BaseNavigationDropdownProps) {
+  const ref = React.useRef<HTMLDivElement>(null)
   const {
     components: { DropdownItem },
-  } = useBaseNavigationContext()
+    setDropdownOffsets,
+  } = BaseNavigation.useNavigationContext()
+  const [isMeasured, setIsMeasured] = React.useState(false)
+  const [windowWidth, setWindowWidth] = React.useState(0)
+  const VIEWPORT_FIT_MARGIN = 20
+
+  React.useEffect(() => {
+    setIsMeasured(true)
+    setWindowWidth(window.innerWidth || document.documentElement.clientWidth)
+  }, [])
+
+  React.useEffect(() => {
+    if (ref.current && isMeasured) {
+      const { left, right } = ref.current.getBoundingClientRect()
+      setIsMeasured(false)
+
+      const leftFit = left >= VIEWPORT_FIT_MARGIN
+      const rightFit = right <= windowWidth - VIEWPORT_FIT_MARGIN
+      const offset = !leftFit
+        ? (left - VIEWPORT_FIT_MARGIN) * -1
+        : !rightFit
+        ? windowWidth - (right + VIEWPORT_FIT_MARGIN)
+        : 0
+
+      setDropdownOffsets((state: any) => ({
+        ...state,
+        [item.name]: {
+          offset: offset,
+        },
+      }))
+    }
+  }, [isMeasured])
 
   return (
     <div
-      css={baseStyles.dropdown(isDropdownOpen)}
+      ref={ref}
+      css={baseStyles.dropdown(isDropdownOpen, isMeasured)}
       // id to associate with aria-controls on BaseNavigation.Item
       id={getDropdownId(item.name)}
       onKeyDown={e => {

@@ -103,7 +103,6 @@ const dropdownOpenCss: ThemeCss = theme => ({
     width: 12,
     height: 12,
     content: `" "`,
-    transform: `translateX(-50%) rotate(45deg)`,
     borderRadius: `2px 0 0 0`,
     background: theme.colors.white,
     boxShadow: `-3px -3px 10px ${hexToRGBA(theme.colors.lilac, 0.1, true)}`,
@@ -201,9 +200,21 @@ export const itemLinkCss = (
   ]
 }
 
-export const dropdownCss = (mobileNavMediaQuery: string): ThemeCss => {
+export const dropdownCss = (
+  mobileNavMediaQuery: string,
+  offset: string
+): ThemeCss => {
   return theme => [
     dropdownOpenCss(theme),
+    {
+      // offset is set when dropdown in default positioning hits left or right edge of he viewport
+      // if so the dropdown is shifted to the position when it fits into the viewport
+      transform: `translate(calc(-50% + ${offset}), -${theme.space[2]})`,
+      ":after": {
+        // to make the spout centered to parent menu item we shift it into the opposite direction
+        transform: `translateX(calc(-50% + (${offset} * -1))) rotate(45deg)`,
+      },
+    },
     {
       [mobileNavMediaQuery]: [
         {
