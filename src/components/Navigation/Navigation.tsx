@@ -189,11 +189,8 @@ function NavigationDropdown(delegated: NavigationDropdownProps) {
     dropdownOffsets,
   } = Navigation.useNavigationContext()
 
-  const offset =
-    dropdownOffsets[delegated.item.name] &&
-    dropdownOffsets[delegated.item.name].offset
-      ? `${dropdownOffsets[delegated.item.name].offset}px`
-      : `0px`
+  const itemOffset = dropdownOffsets[delegated.item.name]
+  const offset = itemOffset ? `${itemOffset}px` : `0px`
 
   return (
     <BaseNavigation.Dropdown

@@ -20,6 +20,8 @@ export type BaseNavigationItemOptions = BaseNavigationItem & {
   items?: BaseNavigationItem[]
 }
 
+export type DropdownOffsets = { [key: string]: number }
+
 export type BaseNavigationComponents = {
   Hamburger: React.ComponentType<any>
   HamburgerIcon: React.ComponentType<any>
@@ -44,7 +46,7 @@ export type BaseNavigationContextValue = {
   isMobileNavOpen: boolean
   setIsMobileNavOpen: (value: boolean) => void
   components: BaseNavigationComponents
-  dropdownOffsets: any
+  dropdownOffsets: DropdownOffsets
   setDropdownOffsets: (value: any) => void
 }
 
@@ -427,11 +429,9 @@ export function BaseNavigationDropdown({
         ? windowWidth - (right + VIEWPORT_FIT_MARGIN)
         : 0
 
-      setDropdownOffsets((state: any) => ({
+      setDropdownOffsets((state: DropdownOffsets) => ({
         ...state,
-        [item.name]: {
-          offset: offset,
-        },
+        [item.name]: offset,
       }))
     }
   }, [isMeasured])
