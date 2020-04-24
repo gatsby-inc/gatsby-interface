@@ -190,7 +190,11 @@ export const WithWideDropdowns = () => (
 )
 
 export const WithItemLinksAsPropsAndChildren = () => (
-  <Navigation items={items2} secondaryItems={secondaryItems} />
+  <Navigation items={items2}>
+    <Navigation items={items2} secondaryItems={secondaryItems} />
+    <Navigation.Item item={{ name: `Contact`, linkTo: `/contact/` }} />
+    <Navigation.Button linkTo="/">Test</Navigation.Button>
+  </Navigation>
 )
 
 export const WithItemLinksAsChildren = () => (
