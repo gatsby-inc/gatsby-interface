@@ -19,11 +19,7 @@ const templates = [
   },
 ]
 
-const libIndexFiles = [
-  path.join(process.cwd(), `./src/index.ts`),
-  // TODO remove the next line once all exported code is in TypeScript (https://github.com/gatsby-inc/gatsby-interface/issues/47)
-  path.join(process.cwd(), `./index-ts-only.ts`),
-]
+const libIndexFiles = [path.join(process.cwd(), `./src/index.ts`)]
 
 let componentCmdValue = ``
 

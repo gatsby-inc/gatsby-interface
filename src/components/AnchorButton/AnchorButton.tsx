@@ -10,7 +10,16 @@ export const AnchorButton = React.forwardRef<
   HTMLAnchorElement,
   AnchorButtonProps
 >((props, ref) => {
-  const { children, size, tone, variant, leftIcon, rightIcon, ...rest } = props
+  const {
+    children,
+    size,
+    tone,
+    variant,
+    leftIcon,
+    rightIcon,
+    textVariant,
+    ...rest
+  } = props
 
   return (
     <BaseAnchor
@@ -21,6 +30,7 @@ export const AnchorButton = React.forwardRef<
         variant,
         leftIcon,
         rightIcon,
+        textVariant,
       })}
       {...rest}
       ref={ref}
