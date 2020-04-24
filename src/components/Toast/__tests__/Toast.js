@@ -1,5 +1,5 @@
 import React from "react"
-import { render, fireEvent, act } from "@testing-library/react"
+import { fireEvent, act } from "@testing-library/react"
 import {
   ToastProvider,
   ToastConsumer,
@@ -8,6 +8,9 @@ import {
   useShowErrorAlert,
 } from "../"
 import { Toast } from "../Toast"
+import { renderWithTheme } from "../../../utils/testing"
+
+const render = renderWithTheme
 
 describe(`Toast`, () => {
   const baseProps = {

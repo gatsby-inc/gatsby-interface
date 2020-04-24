@@ -4,26 +4,23 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.143](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.142...v0.0.143) (2020-04-24)
 
-
 ### Features
 
-* make `<Button>` use `fonts.sans` by default, add prop `textVariant` to use them w/ "Futura PT" ([#296](https://github.com/gatsby-inc/gatsby-interface/issues/296)) ([252f5f2](https://github.com/gatsby-inc/gatsby-interface/commit/252f5f2ce1d45fd81ebfb2c8b31bf8468cf04cfc))
+- make `<Button>` use `fonts.sans` by default, add prop `textVariant` to use them w/ "Futura PT" ([#296](https://github.com/gatsby-inc/gatsby-interface/issues/296)) ([252f5f2](https://github.com/gatsby-inc/gatsby-interface/commit/252f5f2ce1d45fd81ebfb2c8b31bf8468cf04cfc))
 
 ### [0.0.142](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.141...v0.0.142) (2020-04-20)
 
-
 ### Features
 
-* <Badge> update, add <PlanIndicator>s ([#293](https://github.com/gatsby-inc/gatsby-interface/issues/293)) ([63c9103](https://github.com/gatsby-inc/gatsby-interface/commit/63c9103c08132611ef5921f7a8111c8199eab4b4))
+- <Badge> update, add <PlanIndicator>s ([#293](https://github.com/gatsby-inc/gatsby-interface/issues/293)) ([63c9103](https://github.com/gatsby-inc/gatsby-interface/commit/63c9103c08132611ef5921f7a8111c8199eab4b4))
 
 ### [0.0.141](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.140...v0.0.141) (2020-04-17)
 
 ### [0.0.140](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.139...v0.0.140) (2020-04-17)
 
-
 ### Bug Fixes
 
-* add missing styles for disabled radio buttons and checkboxes ([#292](https://github.com/gatsby-inc/gatsby-interface/issues/292)) ([e524f79](https://github.com/gatsby-inc/gatsby-interface/commit/e524f793e3e1fb5566b7758cd319d185d1d4b8f1))
+- add missing styles for disabled radio buttons and checkboxes ([#292](https://github.com/gatsby-inc/gatsby-interface/issues/292)) ([e524f79](https://github.com/gatsby-inc/gatsby-interface/commit/e524f793e3e1fb5566b7758cd319d185d1d4b8f1))
 
 ### [0.0.139](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.138...v0.0.139) (2020-04-17)
 
