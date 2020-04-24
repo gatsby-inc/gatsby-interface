@@ -66,7 +66,7 @@ const baseNavigationItemCss: ThemeCss = theme => ({
   position: `relative`,
   color: theme.colors.black,
   // Show dropdown menu on hover, if exists
-  //  "&:hover > ul": baseNavigationDropdownOpenStyles(theme),
+  "&:hover > div": baseNavigationDropdownOpenStyles(theme),
 })
 
 const baseNavigationItemInvertedCss: ThemeCss = theme => ({
