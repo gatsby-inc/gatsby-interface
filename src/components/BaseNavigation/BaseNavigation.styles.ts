@@ -74,19 +74,21 @@ const baseNavigationItemInvertedCss: ThemeCss = theme => ({
 })
 
 const baseNavigationDropdownOpenStyles: ThemeCss = theme => ({
-  display: `inline-block`,
+  display: `block`,
   position: `absolute`,
-  top: `95%`,
-  left: 0,
-  margin: 0,
-  padding: `${theme.space[4]} 0`,
+  top: `100%`,
+  left: `50%`,
+  transform: `translateX(-50%)`,
+
+  ul: {
+    margin: 0,
+    padding: `${theme.space[4]} 0`,
+    listStyle: `none`,
+  },
 })
 
 const baseNavigationDropdownClosedStyles: ThemeCss = _theme => ({
   display: `none`,
-  listStyle: `none`,
-  margin: 0,
-  padding: 0,
 })
 
 const baseNavigationDropdownToggleCss: ThemeCss = theme => ({

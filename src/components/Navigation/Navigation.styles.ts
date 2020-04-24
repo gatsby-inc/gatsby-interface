@@ -87,21 +87,24 @@ export const listCss = (mobileNavMediaQuery: string): ThemeCss => {
 const dropdownOpenCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
   fontFamily: theme.fonts.system,
-  right: 0,
   boxShadow: theme.shadows.dialog,
   background: theme.colors.white,
-  width: 450,
   borderRadius: theme.radii[1],
+
+  "& > ul": {
+    display: `grid`,
+    gridTemplateColumns: `max-content`,
+  },
 
   ":after": {
     position: `absolute`,
     top: -6,
-    left: 30,
+    left: `50%`,
     width: 12,
     height: 12,
     content: `" "`,
-    transform: `rotate(45deg)`,
-    borderRadius: `2 0 0 0`,
+    transform: `translateX(-50%) rotate(45deg)`,
+    borderRadius: `2px 0 0 0`,
     background: theme.colors.white,
     boxShadow: `-3px -3px 10px ${hexToRGBA(theme.colors.lilac, 0.1, true)}`,
     willChange: `transform`,
@@ -210,6 +213,7 @@ export const dropdownCss = (mobileNavMediaQuery: string): ThemeCss => {
         dropdownMobileCss(theme),
       ],
     },
+    {},
   ]
 }
 

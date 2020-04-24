@@ -376,7 +376,7 @@ export const BaseNavigationDropdownToggle = React.forwardRef<
 BaseNavigation.DropdownToggle = BaseNavigationDropdownToggle
 
 export type BaseNavigationDropdownProps = Omit<
-  JSX.IntrinsicElements["ul"],
+  JSX.IntrinsicElements["div"],
   "ref"
 > & {
   item: BaseNavigationItem
@@ -399,7 +399,7 @@ export function BaseNavigationDropdown({
   } = useBaseNavigationContext()
 
   return (
-    <ul
+    <div
       css={baseStyles.dropdown(isDropdownOpen)}
       // id to associate with aria-controls on BaseNavigation.Item
       id={getDropdownId(item.name)}
@@ -412,12 +412,14 @@ export function BaseNavigationDropdown({
       }}
       {...rest}
     >
-      {dropdownItems.length > 0 &&
-        dropdownItems.map((item, index) => (
-          <DropdownItem key={`${index}-${item.name}`} item={item} />
-        ))}
-      {dropdownChildren && dropdownChildren}
-    </ul>
+      <ul>
+        {dropdownItems.length > 0 &&
+          dropdownItems.map((item, index) => (
+            <DropdownItem key={`${index}-${item.name}`} item={item} />
+          ))}
+        {dropdownChildren && dropdownChildren}
+      </ul>
+    </div>
   )
 }
 
