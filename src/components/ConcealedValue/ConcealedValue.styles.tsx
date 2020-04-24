@@ -21,7 +21,7 @@ export const concealedValueInputCss: ThemeCss = theme => ({
   overflow: `hidden`,
   fontFamily: theme.fonts.heading,
   fontSize: theme.fontSizes[1],
-  color: theme.tones[`NEUTRAL`].dark,
+  color: theme.tones[`NEUTRAL`].text,
   width: `100%`,
 })
 

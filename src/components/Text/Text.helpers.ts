@@ -3,7 +3,7 @@ import { ThemeCss } from "../../theme"
 
 export const baseStyle = (tone: TextTone): ThemeCss => {
   return theme => ({
-    color: theme.tones[tone].darker,
+    color: theme.tones[tone].text,
     fontFamily: theme.fonts.system,
     fontWeight: `normal`,
   })

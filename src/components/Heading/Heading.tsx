@@ -16,7 +16,7 @@ const modifiedCss: (variant: HeadingVariant, tone: HeadingTone) => ThemeCss = (
   tone
 ) => theme => [
   {
-    color: theme.tones[tone].superDark,
+    color: theme.tones[tone].text,
   },
   variant === `PRIMARY` && {
     fontWeight: theme.fontWeights.bold,
@@ -27,7 +27,6 @@ const modifiedCss: (variant: HeadingVariant, tone: HeadingTone) => ThemeCss = (
   variant === `LIGHT` && {
     fontWeight: 100,
     textTransform: `uppercase`,
-    color: theme.tones[tone].dark,
   },
 ]
 
