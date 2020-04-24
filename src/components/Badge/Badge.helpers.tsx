@@ -8,7 +8,7 @@ const variants: Record<BadgeVariant, GetVariantStylesFn> = {
     return theme => [
       {
         background: theme.tones[tone].superLight,
-        border: `1px solid ${theme.tones[tone].light}`,
+        border: `1px solid ${theme.tones[tone].lighter}`,
         color: theme.tones[tone].darker,
       },
       (tone === "WARNING" || tone === "SUCCESS") && {
