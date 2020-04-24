@@ -43,6 +43,7 @@ export const peerDepsList = Object.keys(pkg.peerDependencies)
 <br />
 
 ### Module not found: Error: Can't resolve 'fs' in ...
+This may occur if you're using an older version of `gatsby-interface` that depends on `filestack-react`.
 You need to provide resolutions for filestack-js; in your root project `package.json` add this:
 ```json
 "resolutions": {

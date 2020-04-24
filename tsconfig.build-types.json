@@ -1,13 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "allowJs": false,
-    "declaration": true
-  },
-  "exclude": [
-    "./src/index.ts",
-    "node_modules",
-    "./src/**/*.stories.*",
-    "./src/**/__tests__/*"
-  ]
+  "exclude": ["node_modules", "./src/**/*.stories.*", "./src/**/__tests__/*"]
 }
