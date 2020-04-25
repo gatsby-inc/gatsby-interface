@@ -81,7 +81,7 @@ const StoryUtilsDefault = () => (
     size="S"
     tone="NEUTRAL"
     textVariant="DEFAULT"
-    css={theme => ({ marginLeft: theme.space[5], verticalAlign: `middle` })}
+    css={theme => ({ marginLeft: theme.space[4], verticalAlign: `middle` })}
   >
     Default
   </Badge>
