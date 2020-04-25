@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core"
+import { jsx, css, keyframes } from "@emotion/core"
 import React from "react"
 import {
   getTheme,
@@ -19,6 +19,7 @@ const labelStyles = {
   fontFamily: theme.fonts.monospace,
   fontSize: theme.fontSizes[1],
   marginBottom: theme.space[4],
+  fontWeight: theme.fontWeights.body,
 }
 
 function LongText({
@@ -302,8 +303,8 @@ export const ZIndices = () => {
               background: colorsByToken[token as ThemeZIndex],
               position: `fixed`,
               padding: `${space} 1rem 1rem`,
-              border: `1px solid ${theme.colors.blackFade[50]}`,
               borderRadius: theme.radii[2],
+              border: `1px solid ${theme.colors.blackFade[10]}`,
               width: `${(zIndicesCount - idx) * offset + labelWidth}rem`,
             }}
           >
@@ -428,86 +429,128 @@ MediaQueries.story = {
 }
 
 export const Transitions = () => {
-  const curveSpeed = number(`Curve speed (ms)`, 500)
+  const curveSpeed = number(`Curve speed (ms)`, 1000)
   const baseCss = css({
-    fontSize: theme.fontSizes[3],
-    boxShadow: theme.shadows.raised,
-    color: theme.colors.white,
-    height: `6rem`,
-    textAlign: `center`,
-    display: `flex`,
-    alignItems: `center`,
-    justifyContent: `space-around`,
-    padding: `0 ${theme.space[4]}`,
-    position: "relative",
-    zIndex: 1,
-    "&:hover": {
-      transform: `translateX(50%)`,
-      zIndex: 2,
-    },
+    fontFamily: theme.fonts.monospace,
+    fontSize: theme.fontSizes[1],
+    paddingBottom: theme.space[4],
   })
+  // delay animation so that bars are in sync
+  // @see https://github.com/uber/baseweb/blob/07befaffd7b5e61792adac44e66da70918f54487/documentation-site/components/theming/animations.js 🙏
+  const transitionAnimation = (speed: string) =>
+    keyframes({
+      from: { width: "0px" },
+      to: { width: "100%" },
+      ...(speed !== "100%" && {
+        [parseInt(speed) / 10 + "%"]: {
+          width: "100%",
+        },
+      }),
+    })
+  const Token = ({ children }: { children?: React.ReactNode }) => (
+    <div>{children}</div>
+  )
+  const TokenValue = ({ children }: { children?: React.ReactNode }) => (
+    <div
+      css={{ fontSize: theme.fontSizes[0], color: theme.colors.blackFade[80] }}
+    >
+      {children}
+    </div>
+  )
+  const TransitionDemo = ({
+    color,
+    curve = "linear",
+    speed,
+  }: {
+    color?: string
+    curve?: string
+    speed?: any
+  }) => (
+    <div>
+      <div
+        css={theme => ({
+          background: theme.colors.grey[20],
+          height: theme.space[2],
+          width: "100%",
+          marginTop: theme.space[3],
+          marginBottom: theme.space[3],
+          borderRadius: theme.radii[0],
+        })}
+      >
+        <div
+          css={{
+            animationDuration: `1s`,
+            animationTimingFunction: curve,
+            animationIterationCount: `infinite`,
+            animationDirection: `alternate`,
+            height: `100%`,
+            background: color,
+            borderRadius: theme.radii[0],
+            animationName: transitionAnimation(speed),
+          }}
+        />
+      </div>
+    </div>
+  )
   const colors = [
-    theme.colors.green[90],
-    theme.colors.blue[90],
-    theme.colors.purple[70],
-    theme.colors.magenta[70],
-    theme.colors.orange[90],
-    theme.colors.teal[70],
+    theme.colors.yellow[50],
+    theme.colors.orange[50],
+    theme.colors.red[40],
+    theme.colors.magenta[40],
+    theme.colors.purple[40],
+    theme.colors.blue[50],
   ]
 
   return (
     <div
       css={{
         display: `grid`,
-        gridGap: `1rem`,
-        textAlign: `center`,
-        maxWidth: 640,
+        gridGap: theme.space[5],
+        maxWidth: 560,
       }}
     >
-      <h4>
-        Curve <br />
-        <small>Hover on a card to start a transition</small>
-      </h4>
-      {Object.entries(theme.transitions.curve).map(([token, curve], idx) => {
-        return (
-          <div
-            key={token}
-            css={[
-              baseCss,
-              {
-                backgroundColor: colors[idx % colors.length],
-                transition: `all ${curveSpeed}ms ${curve}`,
-              },
-            ]}
-          >
-            {token}
-          </div>
-        )
-      })}
-      <h4>
-        Speed <br />
-        <small>Hover on a card to start a transition</small>
-      </h4>
+      <h4 css={{ marginTop: 0 }}>Speed</h4>
       {Object.entries(theme.transitions.speed)
         .sort(([_tokenA, speedA], [_tokenB, speedB]) => {
           return parseInt(speedA) - parseInt(speedB)
         })
         .map(([token, speed], idx) => {
           return (
-            <div
-              key={token}
-              css={[
-                baseCss,
-                {
-                  backgroundColor: colors[idx % colors.length],
-                  transition: `all ${speed} linear`,
-                },
-              ]}
-            >
-              {token}
+            <div key={token} css={[baseCss]}>
+              <Token>{token}</Token>
+              <TransitionDemo
+                color={colors[idx % colors.length]}
+                speed={speed}
+              />
+              <TokenValue>{speed}</TokenValue>
             </div>
           )
         })}
+      <h4>
+        Curve{" "}
+        <small
+          css={{
+            fontFamily: theme.fonts.monospace,
+            fontWeight: theme.fontWeights.body,
+            color: theme.colors.grey[50],
+          }}
+        >
+          @{curveSpeed}ms
+        </small>
+      </h4>
+      {Object.entries(theme.transitions.curve).map(([token, curve], idx) => {
+        return (
+          <div key={token} css={[baseCss]}>
+            <Token>{token}</Token>
+            <TransitionDemo
+              color={colors[idx % colors.length]}
+              curve={curve}
+              speed={curveSpeed}
+            />
+            <TokenValue>{curve}</TokenValue>
+          </div>
+        )
+      })}
     </div>
   )
 }
