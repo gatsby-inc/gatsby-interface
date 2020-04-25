@@ -3,6 +3,7 @@ import { AtomTone } from "./types"
 
 export type ToneColors = {
   superLight: string
+  lighter: string
   light: string
   medium: string
   dark: string
@@ -13,22 +14,25 @@ export type ToneColors = {
 const tones: Record<AtomTone, ToneColors> = {
   BRAND: {
     superLight: colors.purple[5],
+    lighter: colors.purple[10],
     light: colors.purple[20],
-    medium: colors.purple[50],
+    medium: colors.purple[40],
     dark: colors.purple[60],
     darker: colors.purple[70],
     superDark: colors.purple[90],
   },
   SUCCESS: {
     superLight: colors.green[5],
+    lighter: colors.green[10],
     light: colors.green[20],
     medium: colors.green[50],
     dark: colors.green[60],
     darker: colors.green[70],
-    superDark: colors.green[90],
+    superDark: colors.green[80],
   },
   DANGER: {
     superLight: colors.red[5],
+    lighter: colors.red[10],
     light: colors.red[20],
     medium: colors.red[50],
     dark: colors.red[70],
@@ -37,6 +41,7 @@ const tones: Record<AtomTone, ToneColors> = {
   },
   NEUTRAL: {
     superLight: colors.grey[5],
+    lighter: colors.grey[10],
     light: colors.grey[20],
     medium: colors.grey[40],
     dark: colors.grey[50],
@@ -44,11 +49,12 @@ const tones: Record<AtomTone, ToneColors> = {
     superDark: colors.grey[90],
   },
   WARNING: {
-    superLight: colors.yellow[5],
-    light: colors.yellow[20],
-    medium: colors.yellow[40],
-    dark: colors.yellow[50],
-    darker: colors.yellow[60],
+    superLight: colors.orange[5],
+    lighter: colors.orange[10],
+    light: colors.orange[30],
+    medium: colors.orange[50],
+    dark: colors.orange[60],
+    darker: colors.orange[70],
     superDark: colors.yellow[90],
   },
 }
