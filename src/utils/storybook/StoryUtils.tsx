@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core"
 
 import { MdInfoOutline } from "react-icons/md"
 import colors from "../../theme/colors"
-import { Chip } from "../../components/Chip"
+import { Badge } from "../../components/Badge"
 
 type StoryUtilWrapperProps = Omit<JSX.IntrinsicElements["div"], "ref">
 
@@ -76,12 +76,15 @@ const StoryUtilsContent = ({
 )
 
 const StoryUtilsDefault = () => (
-  <Chip
-    icon={<MdInfoOutline />}
-    css={theme => ({ marginLeft: theme.space[8], verticalAlign: `middle` })}
+  <Badge
+    Icon={MdInfoOutline}
+    size="S"
+    tone="NEUTRAL"
+    textVariant="DEFAULT"
+    css={theme => ({ marginLeft: theme.space[5], verticalAlign: `middle` })}
   >
     Default
-  </Chip>
+  </Badge>
 )
 
 export default {
