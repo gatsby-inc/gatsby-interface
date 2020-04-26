@@ -88,12 +88,18 @@ export default function Notification({
         {content && (
           <NotificationContent
             as={contentAs}
-            css={theme => ({
-              color:
-                variant === `SOLID` && tone !== `WARNING`
-                  ? theme.colors.white
-                  : null,
-            })}
+            css={theme => [
+              {
+                color:
+                  variant === `SOLID` && tone !== `WARNING`
+                    ? theme.colors.white
+                    : null,
+              },
+              linkUrl &&
+                linkText && {
+                  marginRight: theme.space[5],
+                },
+            ]}
           >
             {Icon && (
               <Icon
@@ -125,6 +131,9 @@ export default function Notification({
             to={linkUrl}
             onClick={onLinkClick}
             css={theme => ({
+              // to push <Link> to the right also when there's a
+              // <NotificationDismissButton>
+              marginLeft: "auto",
               color: variant === `SOLID` ? theme.colors.white : null,
               ":hover": {
                 color: variant === `SOLID` ? theme.colors.whiteFade[80] : null,
