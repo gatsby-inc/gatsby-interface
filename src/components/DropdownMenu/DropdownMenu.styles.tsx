@@ -1,5 +1,5 @@
-import { Theme } from "../../theme"
-import { keyframes, CSSObject } from "@emotion/core"
+import { ThemeCss } from "../../theme"
+import { keyframes } from "@emotion/core"
 
 const enter = keyframes`
 to {
@@ -7,7 +7,7 @@ to {
 }
 `
 
-export const dropdownCss = (theme: Theme) => ({
+export const dropdownCss: ThemeCss = theme => ({
   background: theme.colors.primaryBackground,
   border: `1px solid ${theme.colors.grey[10]}`,
   borderRadius: theme.radii[3],
@@ -26,11 +26,11 @@ export const dropdownCss = (theme: Theme) => ({
   },
 
   [theme.mediaQueries.phablet]: {
-    width: "20rem",
+    maxWidth: "20rem",
   },
 })
 
-export const menuItemCss = (theme: Theme) => ({
+export const menuItemCss: ThemeCss = theme => ({
   cursor: `pointer`,
   color: theme.colors.grey[90],
   fontSize: theme.fontSizes[1],
@@ -38,7 +38,7 @@ export const menuItemCss = (theme: Theme) => ({
   overflow: "hidden",
 })
 
-export const dropdownLabelCss = (theme: Theme): CSSObject => ({
+export const dropdownButtonCss: ThemeCss = theme => ({
   cursor: "pointer",
   display: "flex",
   alignItems: "center",
@@ -55,19 +55,12 @@ export const dropdownLabelCss = (theme: Theme): CSSObject => ({
     outline: 0,
     transition: `box-shadow 0.15s ease-in-out`,
   },
+})
 
-  /* everything behind is hard coupling between span, SVG and the label */
-  span: {
-    textAlign: "left",
-    flex: 1,
-  },
-  svg: {
-    transition: "transform .3s",
-  },
-
-  "&[aria-expanded]": {
-    svg: {
-      transform: "rotate(180deg)",
-    },
+export const dropdownButtonIconCss: ThemeCss = _theme => ({
+  marginInlineStart: `auto`,
+  transition: "transform .3s",
+  "[aria-expanded] > &": {
+    transform: "rotate(180deg)",
   },
 })

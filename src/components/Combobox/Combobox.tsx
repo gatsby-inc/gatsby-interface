@@ -13,6 +13,7 @@ import {
   ComboboxOption as ReachComboboxOption,
   ComboboxOptionProps as ReachComboboxOptionProps,
   ComboboxOptionText as ReachComboboxOptionText,
+  useComboboxContext as useReachComboboxContext,
 } from "@reach/combobox"
 import { PopoverProps } from "@reach/popover"
 import { PropsWithAs } from "@reach/utils"
@@ -28,18 +29,18 @@ import {
   inputWithSelectedValueCss,
 } from "./Combobox.styles"
 
-type ComboboxContextValue = {
+type ComboboxCustomContextValue = {
   listRef: React.RefObject<HTMLUListElement>
 }
 
-const ComboboxContext = React.createContext<ComboboxContextValue>({
+const ComboboxCustomContext = React.createContext<ComboboxCustomContextValue>({
   listRef: {
     current: null,
   },
 })
 
-function useComboboxContext(): ComboboxContextValue {
-  return React.useContext(ComboboxContext)
+function useComboboxCustomContext(): ComboboxCustomContextValue {
+  return React.useContext(ComboboxCustomContext)
 }
 
 export type ComboboxProps = PropsWithAs<"div", ReachComboboxProps>
@@ -48,9 +49,9 @@ export function Combobox(props: ComboboxProps) {
   const listRef = React.useRef<HTMLUListElement>(null)
 
   return (
-    <ComboboxContext.Provider value={{ listRef }}>
+    <ComboboxCustomContext.Provider value={{ listRef }}>
       <ReachCombobox openOnFocus css={comboboxCss} {...props} />
-    </ComboboxContext.Provider>
+    </ComboboxCustomContext.Provider>
   )
 }
 
@@ -66,7 +67,7 @@ export const ComboboxInput = React.forwardRef<
   HTMLInputElement,
   ComboboxInputProps
 >(function ComboboxInput({ selectedOptionLabel, hasError, ...delegated }, ref) {
-  const { listRef } = useComboboxContext()
+  const { listRef } = useComboboxCustomContext()
 
   /**
    * This handler allows to scroll list of options along with keyboard navigation
@@ -156,7 +157,7 @@ export const ComboboxPopover = React.forwardRef<
 export type ComboboxListProps = PropsWithAs<"ul", ReachComboboxListProps>
 
 export function ComboboxList(props: ComboboxListProps) {
-  const { listRef } = useComboboxContext()
+  const { listRef } = useComboboxCustomContext()
   return (
     <ReachComboboxList
       ref={listRef}
@@ -209,4 +210,8 @@ export type ComboboxOptionTextProps = {}
 
 export function ComboboxOptionText(props: ComboboxOptionTextProps) {
   return <ReachComboboxOptionText {...props} />
+}
+
+export function useComboboxContext() {
+  return useReachComboboxContext()
 }
