@@ -46,7 +46,7 @@ function getButtonBaseCss(textVariant?: ButtonTextVariant): ThemeCss {
     fontFamily:
       textVariant === "BRAND" ? theme.fonts.heading : theme.fonts.body,
     justifyContent: `center`,
-    transition: `background 0.5s, border 0.5s, color 0.5s`,
+    transition: `background ${theme.transitions.speed.default}, border ${theme.transitions.speed.default}, color ${theme.transitions.speed.default}`,
     lineHeight: theme.lineHeights.solid,
     textDecoration: `none`,
 
