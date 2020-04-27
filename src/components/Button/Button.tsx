@@ -9,6 +9,7 @@ import {
   ButtonVariant,
   ButtonTone,
   ButtonSize,
+  ButtonTextVariant,
 } from "../../theme/styles/button"
 import { Theme } from "../../theme"
 
@@ -18,6 +19,7 @@ export type ButtonStyleProps = {
   variant?: ButtonVariant
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
+  textVariant?: ButtonTextVariant
 }
 
 export type ButtonProps = BaseButtonProps & ButtonStyleProps
@@ -30,6 +32,7 @@ export function getButtonStyles({
   loading,
   leftIcon,
   rightIcon,
+  textVariant = `DEFAULT`,
 }: {
   children: React.ReactNode
   loading?: boolean
@@ -45,6 +48,7 @@ export function getButtonStyles({
       loading,
       leftIcon,
       rightIcon,
+      textVariant,
     }),
     children:
       leftIcon || rightIcon ? (
@@ -70,6 +74,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant,
       leftIcon,
       rightIcon,
+      textVariant,
       ...rest
     } = props
 
@@ -83,6 +88,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           variant,
           leftIcon,
           rightIcon,
+          textVariant,
         })}
         loading={loading}
         LoadingIcon={LoadingIcon}

@@ -14,21 +14,25 @@ const baseCss: ThemeCss = _theme => ({
 })
 
 const planTypeFreeCss: ThemeCss = theme => ({
+  borderColor: theme.colors.orange[10],
   backgroundColor: theme.colors.orange[10],
   color: theme.colors.orange[90],
 })
 
 const planTypeProfessionalCss: ThemeCss = theme => ({
+  borderColor: theme.colors.blue[10],
   backgroundColor: theme.colors.blue[10],
   color: theme.colors.blue[90],
 })
 
 const planTypeBusinessCss: ThemeCss = theme => ({
+  borderColor: theme.colors.purple[10],
   backgroundColor: theme.colors.purple[10],
   color: theme.colors.purple[70],
 })
 
 const planTypeEnterpriseCss: ThemeCss = theme => ({
+  borderColor: theme.colors.purple[80],
   backgroundColor: theme.colors.purple[80],
   color: theme.colors.white,
 })

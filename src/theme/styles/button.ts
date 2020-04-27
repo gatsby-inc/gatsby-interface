@@ -4,6 +4,7 @@ import { Theme, ThemeCss } from ".."
 export type ButtonSize = "XL" | "L" | "M" | "S"
 export type ButtonTone = "BRAND" | "SUCCESS" | "DANGER" | "NEUTRAL"
 export type ButtonVariant = "PRIMARY" | "SECONDARY" | "GHOST"
+export type ButtonTextVariant = "DEFAULT" | "BRAND"
 
 export function getButtonCss({
   size = `L`,
@@ -12,6 +13,7 @@ export function getButtonCss({
   leftIcon,
   rightIcon,
   loading,
+  textVariant = `DEFAULT`,
 }: {
   size?: ButtonSize
   tone?: ButtonTone
@@ -19,20 +21,21 @@ export function getButtonCss({
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
   loading?: boolean
+  textVariant?: ButtonTextVariant
 }): InterpolationWithTheme<Theme> {
   return (theme: Theme) => [
-    getButtonBaseCss()(theme),
+    getButtonBaseCss(textVariant)(theme),
     getButtonIconsCss({
       hasLeftIcon: !!leftIcon,
       hasRightIcon: !!rightIcon || loading,
     })(theme),
     getButtonLoadingCss({ loading })(theme),
     getButtonVariantCss(variant, tone)(theme),
-    getButtonSizeCss(size)(theme),
+    getButtonSizeCss(size, textVariant)(theme),
   ]
 }
 
-function getButtonBaseCss(): ThemeCss {
+function getButtonBaseCss(textVariant?: ButtonTextVariant): ThemeCss {
   return theme => ({
     alignItems: `center`,
     border: theme.colors.grey[60],
@@ -40,10 +43,11 @@ function getButtonBaseCss(): ThemeCss {
     boxSizing: `border-box`,
     cursor: `pointer`,
     display: `inline-flex`,
-    fontFamily: theme.fonts.heading,
+    fontFamily:
+      textVariant === "BRAND" ? theme.fonts.heading : theme.fonts.body,
     justifyContent: `center`,
-    transition: `background 0.5s, border 0.5s, color 0.5s`,
-    lineHeight: theme.lineHeights.dense,
+    transition: `background ${theme.transitions.speed.default}, border ${theme.transitions.speed.default}, color ${theme.transitions.speed.default}`,
+    lineHeight: theme.lineHeights.solid,
     textDecoration: `none`,
 
     "&[disabled], &[disabled]:hover": {
@@ -114,34 +118,41 @@ function getButtonLoadingCss({ loading }: { loading?: boolean }): ThemeCss {
       : {}
 }
 
-function getButtonSizeCss(size: ButtonSize): ThemeCss {
+function getButtonSizeCss(
+  size: ButtonSize,
+  textVariant?: ButtonTextVariant
+): ThemeCss {
   return theme => {
     if (size === `S`) {
       return {
-        fontSize: theme.fontSizes[1],
-        minHeight: `1.6rem`,
-        padding: `0.3rem 0.5rem`,
+        fontSize:
+          textVariant === "BRAND" ? theme.fontSizes[1] : theme.fontSizes[0],
+        minHeight: `calc(${theme.space[2]} * 7)`,
+        padding: `${theme.space[2]} ${theme.space[3]}`,
       }
     }
     if (size === `M`) {
       return {
-        fontSize: theme.fontSizes[2],
-        minHeight: `2rem`,
-        padding: `0.45rem 0.75rem`,
+        fontSize:
+          textVariant === "BRAND" ? theme.fontSizes[2] : theme.fontSizes[1],
+        minHeight: `calc(${theme.space[2]} * 9)`,
+        padding: `${theme.space[2]} ${theme.space[4]}`,
       }
     }
     if (size === `L`) {
       return {
-        fontSize: theme.fontSizes[3],
-        minHeight: `2.4rem`,
-        padding: `0.55rem 1rem`,
+        fontSize:
+          textVariant === "BRAND" ? theme.fontSizes[3] : theme.fontSizes[2],
+        minHeight: theme.space[9],
+        padding: `${theme.space[2]} ${theme.space[5]}`,
       }
     }
     if (size === `XL`) {
       return {
-        fontSize: theme.fontSizes[5],
-        minHeight: `3.25rem`,
-        padding: `0.65rem 1.25rem`,
+        fontSize:
+          textVariant === "BRAND" ? theme.fontSizes[5] : theme.fontSizes[4],
+        minHeight: theme.space[10],
+        padding: `${theme.space[3]} ${theme.space[6]}`,
       }
     }
   }
@@ -157,7 +168,7 @@ function getButtonVariantCss(
         background: theme.tones[tone].dark,
         border: `1px solid ${theme.tones[tone].dark}`,
         color: theme.colors.white,
-        fontWeight: `bold`,
+        fontWeight: theme.fontWeights.semiBold,
         ":hover": {
           background: theme.tones[tone].darker,
           border: `1px solid ${theme.tones[tone].darker}`,
