@@ -110,6 +110,27 @@ Sandbox.story = {
   },
 }
 
+export const WithAccessibleNameForList = () => {
+  return (
+    <div>
+      <h4 id="demo">Combobox with an explicit accessible label</h4>
+      <Combobox>
+        <ComboboxInput
+          aria-labelledby="demo"
+          ref={element => element && element.focus()}
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-label="Grocery list">
+            {options.map(({ value }) => {
+              return <ComboboxOption key={value} value={value} />
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  )
+}
+
 export const WithSelect = () => {
   const [term, setTerm] = React.useState("")
 
