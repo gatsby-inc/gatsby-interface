@@ -52,3 +52,5 @@ export { default as space } from "./theme/space"
 export { default as shadows } from "./theme/shadows"
 export { default as zIndices } from "./theme/zIndices"
 export { default as transition } from "./theme/transition"
+
+export { hexToRGB, hexToRGBA } from "./utils/helpers/hexToRgb"
