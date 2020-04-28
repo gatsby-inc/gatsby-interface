@@ -58,7 +58,7 @@ const options: ComboboxOptionProps[] = [
 
 export const Basic = () => {
   return (
-    <div>
+    <div css={{ minHeight: `100vh` }}>
       <h4 id="demo">Basic, fixed List Combobox</h4>
       <Combobox>
         <ComboboxInput
