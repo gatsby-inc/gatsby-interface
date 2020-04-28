@@ -30,6 +30,7 @@ import {
 } from "./Combobox.styles"
 import { warn } from "../../utils/maintenance/warn"
 import { RequireProp } from "../../utils/types"
+import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
 type ComboboxCustomContextValue = {
   listRef: React.RefObject<HTMLUListElement>
@@ -52,6 +53,7 @@ export function Combobox(props: ComboboxProps) {
 
   return (
     <ComboboxCustomContext.Provider value={{ listRef }}>
+      <DisableReachStyleCheck reachComponent="combobox" />
       <ReachCombobox openOnFocus css={comboboxCss} {...props} />
     </ComboboxCustomContext.Provider>
   )
