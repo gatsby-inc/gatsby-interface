@@ -58,7 +58,7 @@ const options: ComboboxOptionProps[] = [
 
 export const Basic = () => {
   return (
-    <div>
+    <div css={{ minHeight: `100vh` }}>
       <h4 id="demo">Basic, fixed List Combobox</h4>
       <Combobox>
         <ComboboxInput
@@ -108,6 +108,27 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+}
+
+export const WithAccessibleNameForList = () => {
+  return (
+    <div>
+      <h4 id="demo">Combobox with an explicit accessible label</h4>
+      <Combobox>
+        <ComboboxInput
+          aria-labelledby="demo"
+          ref={element => element && element.focus()}
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-label="Grocery list">
+            {options.map(({ value }) => {
+              return <ComboboxOption key={value} value={value} />
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  )
 }
 
 export const WithSelect = () => {

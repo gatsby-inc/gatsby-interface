@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.152](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.151...v0.0.152) (2020-04-29)
+
+
+### Bug Fixes
+
+* various Combobox fixes ([#315](https://github.com/gatsby-inc/gatsby-interface/issues/315)) ([e74241b](https://github.com/gatsby-inc/gatsby-interface/commit/e74241b17e4973581ed244217574922d3b38083f))
+
 ### [0.0.151](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.150...v0.0.151) (2020-04-28)
 
 

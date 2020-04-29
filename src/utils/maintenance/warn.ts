@@ -1,7 +1,4 @@
-export default function showDeprecationMessage(
-  message: string,
-  level: `warning` | `error` = `warning`
-) {
+export function warn(message: string, level: `warning` | `error` = `warning`) {
   if (process.env.NODE_ENV === `development`) {
     if (level === `error`) {
       console.error(message)

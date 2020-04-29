@@ -28,6 +28,9 @@ import {
   selectedValueCss,
   inputWithSelectedValueCss,
 } from "./Combobox.styles"
+import { warn } from "../../utils/maintenance/warn"
+import { RequireProp } from "../../utils/types"
+import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
 type ComboboxCustomContextValue = {
   listRef: React.RefObject<HTMLUListElement>
@@ -50,6 +53,7 @@ export function Combobox(props: ComboboxProps) {
 
   return (
     <ComboboxCustomContext.Provider value={{ listRef }}>
+      <DisableReachStyleCheck reachComponent="combobox" />
       <ReachCombobox openOnFocus css={comboboxCss} {...props} />
     </ComboboxCustomContext.Provider>
   )
@@ -145,19 +149,35 @@ export const ComboboxPopover = React.forwardRef<
   ComboboxPopoverProps
 >(function ComboboxPopover(props, ref) {
   return (
-    <ReachComboboxPopover
-      ref={ref}
-      portal={false}
-      css={popoverCss}
-      {...props}
-    />
+    <ReachComboboxPopover ref={ref} portal={true} css={popoverCss} {...props} />
   )
 })
 
-export type ComboboxListProps = PropsWithAs<"ul", ReachComboboxListProps>
+type ComboboxListBaseProps = PropsWithAs<"ul", ReachComboboxListProps>
+
+/**
+ * ComboboxList renders an element with role="listbox"
+ * which must have an accessible name (https://dequeuniversity.com/rules/axe/3.5/aria-input-field-name?application=AxeChrome)
+ * therefore we require "aria-label" or "aria-labelledby" to be passed
+ */
+export type ComboboxListProps =
+  | RequireProp<ComboboxListBaseProps, "aria-label">
+  | RequireProp<ComboboxListBaseProps, "aria-labelledby">
 
 export function ComboboxList(props: ComboboxListProps) {
   const { listRef } = useComboboxCustomContext()
+
+  if (process.env.NODE_ENV === `development`) {
+    const hasAccessibleName = Boolean(
+      props["aria-label"] || props["aria-labelledby"]
+    )
+    if (!hasAccessibleName) {
+      warn(
+        `<ComboboxList /> is missing one of the required props: "aria-label", "aria-labelledby"`
+      )
+    }
+  }
+
   return (
     <ReachComboboxList
       ref={listRef}
