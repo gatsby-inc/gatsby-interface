@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.151](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.150...v0.0.151) (2020-04-28)
+
+
+### Features
+
+* expose hexToRGB and hexToRGBA utils as gatsby-interface exports ([#313](https://github.com/gatsby-inc/gatsby-interface/issues/313)) ([962b592](https://github.com/gatsby-inc/gatsby-interface/commit/962b592c3c47eca53a3d70f91995fab719dae97e))
+
 ### [0.0.150](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.149...v0.0.150) (2020-04-27)
 
 
