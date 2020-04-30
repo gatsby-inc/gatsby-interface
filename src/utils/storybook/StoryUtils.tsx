@@ -41,7 +41,6 @@ const StoryUtilsContainer = ({
       alignItems: `center`,
       background: secondaryBg ? colors.secondaryBackground : ``,
       display: `flex`,
-      minHeight: `100vh`,
       justifyContent: `center`,
       width: `100%`,
       padding: theme.space[6],
