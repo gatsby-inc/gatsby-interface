@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.153](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.152...v0.0.153) (2020-04-30)
+
+
+### Bug Fixes
+
+* Add `CODE_OF_CONDUCT.md`, add section to README ([#318](https://github.com/gatsby-inc/gatsby-interface/issues/318)) [ci skip] ([28bfe11](https://github.com/gatsby-inc/gatsby-interface/commit/28bfe11e84a0996fd710d0fbedb95e1f20b145db))
+
 ### [0.0.152](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.151...v0.0.152) (2020-04-29)
 
 
