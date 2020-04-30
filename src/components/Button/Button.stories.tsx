@@ -23,6 +23,8 @@ import { MdCloud } from "react-icons/md"
 
 storiesOf(`buttons/Button`, module)
   .addParameters({
+    componentSubtitle:
+      "Buttons allow users to take actions and make choices. They are common in dialogs, forms, panels, and pages: An example of their usage is confirming the deletion of a user in a dialog.",
     options: {
       showPanel: true,
     },
