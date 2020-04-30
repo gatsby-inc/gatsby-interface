@@ -83,3 +83,7 @@ These are some patterns and best practices we use when contributing to `gatsby-i
 To run the visual testing tool, run `CHROMATIC_APP_CODE=<insert_app_code> yarn chromatic`
 
 You can find the app code in the Chromatic dashboard - https://www.chromaticqa.com
+
+## ❗ Code of Conduct
+
+Gatsby is dedicated to building a welcoming, diverse, safe community. We expect everyone participating in the Gatsby community to abide by our [**Code of Conduct**](https://gatsbyjs.org/contributing/code-of-conduct/). Please read it. Please follow it. In the Gatsby community, we work hard to build each other up and create amazing things together. 💪💜
