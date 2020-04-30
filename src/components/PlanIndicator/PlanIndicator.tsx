@@ -61,13 +61,13 @@ const planTypeLabels: Record<PlanIndicatorPlanType, string> = {
 
 const planTypeIcons: Record<
   PlanIndicatorPlanType,
-  React.ComponentType | undefined
+  React.ComponentType | null
 > = {
   FREE: FreePlanIcon,
   PROFESSIONAL: ProfessionalPlanIcon,
   BUSINESS: BusinessPlanIcon,
   ENTERPRISE: EnterprisePlanIcon,
-  TRIALING: undefined,
+  TRIALING: null,
 }
 
 export type PlanIndicatorPlanType =
