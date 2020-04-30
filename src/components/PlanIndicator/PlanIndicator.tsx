@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { ThemeCss } from "../../theme"
-import { Badge } from "../Badge"
+import { Badge, BadgeProps } from "../Badge"
 import {
   FreePlanIcon,
   ProfessionalPlanIcon,
@@ -59,15 +59,12 @@ const planTypeLabels: Record<PlanIndicatorPlanType, string> = {
   TRIALING: "Professional Trial",
 }
 
-const planTypeIcons: Record<
-  PlanIndicatorPlanType,
-  React.ComponentType | null
-> = {
+const planTypeIcons: Record<PlanIndicatorPlanType, BadgeProps["Icon"]> = {
   FREE: FreePlanIcon,
   PROFESSIONAL: ProfessionalPlanIcon,
   BUSINESS: BusinessPlanIcon,
   ENTERPRISE: EnterprisePlanIcon,
-  TRIALING: null,
+  TRIALING: undefined,
 }
 
 export type PlanIndicatorPlanType =
