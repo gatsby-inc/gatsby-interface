@@ -20,6 +20,7 @@ const PLAN_TYPES: PlanIndicatorPlanType[] = [
   `PROFESSIONAL`,
   `BUSINESS`,
   `ENTERPRISE`,
+  `TRIALING`,
 ]
 
 export const Sandbox = () => (
