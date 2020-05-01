@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.156](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.155...v0.0.156) (2020-05-01)
+
+
+### Features
+
+* Expand tones for less one-offs, fix `SUCCESS` a11y ([#311](https://github.com/gatsby-inc/gatsby-interface/issues/311)) ([d611c74](https://github.com/gatsby-inc/gatsby-interface/commit/d611c7488b2cc124f75c5b2d5b824c9dbbc6a966))
+
 ### [0.0.155](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.154...v0.0.155) (2020-05-01)
 
 ### Bug Fixes
