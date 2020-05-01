@@ -6,7 +6,13 @@ import { withDesign } from "storybook-addon-designs"
 import { MdSettingsEthernet } from "react-icons/md"
 
 import { Badge } from "."
-import { BadgeVariant, BadgeTone, BadgeTextVariant, BadgeSize } from "./types"
+import {
+  BadgeVariant,
+  BadgeTone,
+  BadgeTextVariant,
+  BadgeSize,
+  BadgeShape,
+} from "./types"
 import {
   radioKnobOptions,
   withVariationsContainer,
@@ -32,9 +38,11 @@ const VARIANTS: BadgeVariant[] = [`STATUS`, `PILL`]
 
 const TONES: BadgeTone[] = [`BRAND`, `SUCCESS`, `DANGER`, `WARNING`, `NEUTRAL`]
 
-const TEXT_VARIANTS: BadgeTextVariant[] = [`DEFAULT`, `CAPS`]
+const TEXT_VARIANTS: BadgeTextVariant[] = [`DEFAULT`, `EMPHASIZED`, `CAPS`]
 
-const SIZES: BadgeSize[] = [`M`, `S`]
+const SIZES: BadgeSize[] = [`M`, `S`, `XS`, `XXS`]
+
+const SHAPES: BadgeShape[] = [`DEFAULT`, `PILL`]
 
 export const Sandbox = () =>
   sandboxWithPropVariations(
@@ -52,6 +60,7 @@ export const Sandbox = () =>
           `DEFAULT`
         )}
         size={radios("size", radioKnobOptions<BadgeSize>(SIZES), `M`)}
+        shape={radios("shape", radioKnobOptions<BadgeShape>(SHAPES), `DEFAULT`)}
         Icon={boolean("withIcon", true) ? MdSettingsEthernet : undefined}
         {...propVariations}
       >
@@ -62,6 +71,7 @@ export const Sandbox = () =>
       variant: VARIANTS,
       tone: TONES,
       size: SIZES,
+      shape: SHAPES,
     }
   )
 
