@@ -113,6 +113,8 @@ const sortedIconComponentNames = Object.keys(icons)
 storiesOf(`Icons`, module)
   .addDecorator(withKnobs)
   .addParameters({
+    componentSubtitle:
+      "Icons provide visual context, communicate meaning, and enhance usability.",
     layout: `padded`,
     options: {
       showRoots: true,

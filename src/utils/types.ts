@@ -10,3 +10,9 @@ export type PropsOf<Tag> = Tag extends keyof JSX.IntrinsicElements
   : Tag extends React.ComponentType<infer Props>
   ? Props & JSX.IntrinsicAttributes
   : never
+
+export type RequireProp<TProps, TPropName extends keyof TProps> = Omit<
+  TProps,
+  TPropName
+> &
+  Required<Pick<TProps, TPropName>>

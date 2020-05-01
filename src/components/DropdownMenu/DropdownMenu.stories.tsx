@@ -28,6 +28,8 @@ export default {
     DropdownMenuItem,
   },
   parameters: {
+    componentSubtitle:
+      "Dropdown Menus display a list of choices on a temporary surface.",
     layout: `padded`,
   },
   decorators: [

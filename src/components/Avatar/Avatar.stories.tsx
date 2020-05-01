@@ -14,6 +14,8 @@ const IMG_URL_2 = `https://picsum.photos/id/1025/200/200`
 
 storiesOf(`Avatar`, module)
   .addParameters({
+    componentSubtitle:
+      "Avatars can represent a user or a brand, plugin, theme, or starter (with a logo or branded graphic). Usually used to represent user, they can also display user initials or a default icon as a fallback.",
     options: {
       showPanel: true,
     },

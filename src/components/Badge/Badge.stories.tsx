@@ -18,6 +18,8 @@ export default {
   component: Badge,
   decorators: [withDesign] as DecoratorFn[],
   parameters: {
+    componentSubtitle:
+      "Badges, or labels, add metatdata or indicate the status of items and navigational elements.",
     design: {
       type: "figma",
       url:

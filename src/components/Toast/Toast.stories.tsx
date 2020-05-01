@@ -13,6 +13,8 @@ import README from "./README.md"
 
 storiesOf(`Toast`, module)
   .addParameters({
+    componentSubtitle:
+      "Toasts provide brief messages about app processes at the bottom of the screen, usually to give feedback after an action has taken place.",
     options: {
       showPanel: true,
     },

@@ -24,6 +24,8 @@ export default {
   component: StyledModal,
   subcomponents: { StyledModalHeader, StyledModalBody, StyledModalActions },
   parameters: {
+    componentSubtitle:
+      "Modals inform users about a task and can contain critical information, require decisions, or involve multiple tasks. They are purposefully interruptive, so they should be used sparingly.",
     options: {
       showRoots: true,
     },
