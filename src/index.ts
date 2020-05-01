@@ -54,3 +54,4 @@ export { default as zIndices } from "./theme/zIndices"
 export { default as transition } from "./theme/transition"
 
 export { hexToRGB, hexToRGBA } from "./utils/helpers/hexToRgb"
+export * from "./components/NumberBadge"
