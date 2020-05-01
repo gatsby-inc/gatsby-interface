@@ -26,6 +26,7 @@ const NotificationContext = React.createContext<NotificationContextValue>({
 })
 
 const baseCss: ThemeCss = theme => ({
+  color: theme.colors.grey[90],
   display: `flex`,
   alignItems: `flex-start`,
   justifyContent: `space-between`,
@@ -89,12 +90,6 @@ export default function Notification({
           <NotificationContent
             as={contentAs}
             css={theme => [
-              {
-                color:
-                  variant === `SOLID` && tone !== `WARNING`
-                    ? theme.colors.white
-                    : null,
-              },
               linkUrl &&
                 linkText && {
                   marginRight: theme.space[5],
@@ -113,12 +108,10 @@ export default function Notification({
                     height: "1em",
                   },
                   variant === `SOLID` && {
-                    color: theme.colors.whiteFade[90],
+                    color: theme.tones[tone].mediumInverted
+                      ? theme.tones[tone].mediumInverted
+                      : theme.colors.whiteFade[90],
                   },
-                  variant === `SOLID` &&
-                    tone === `WARNING` && {
-                      color: theme.colors.blackFade[90],
-                    },
                 ]}
               />
             )}
@@ -172,11 +165,10 @@ function NotificationContent({
 }: NotificationContentProps) {
   return (
     <Component
-      css={(theme: Theme) => ({
+      css={{
         display: `flex`,
         alignItems: `flex-start`,
-        color: theme.tones[`NEUTRAL`].superDark,
-      })}
+      }}
       {...rest}
     />
   )

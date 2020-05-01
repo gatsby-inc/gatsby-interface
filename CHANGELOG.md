@@ -4,45 +4,39 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.155](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.154...v0.0.155) (2020-05-01)
 
-
 ### Bug Fixes
 
-* addon-docs content not fully displaying ([#316](https://github.com/gatsby-inc/gatsby-interface/issues/316)) ([a8636c4](https://github.com/gatsby-inc/gatsby-interface/commit/a8636c4295a359d2106e5fd1b44a0d2bf129311f)), closes [#312](https://github.com/gatsby-inc/gatsby-interface/issues/312)
+- addon-docs content not fully displaying ([#316](https://github.com/gatsby-inc/gatsby-interface/issues/316)) ([a8636c4](https://github.com/gatsby-inc/gatsby-interface/commit/a8636c4295a359d2106e5fd1b44a0d2bf129311f)), closes [#312](https://github.com/gatsby-inc/gatsby-interface/issues/312)
 
 ### [0.0.154](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.153...v0.0.154) (2020-05-01)
 
-
 ### Bug Fixes
 
-* **Notification:** `Link` margin-left ([#308](https://github.com/gatsby-inc/gatsby-interface/issues/308)) ([2d82dd5](https://github.com/gatsby-inc/gatsby-interface/commit/2d82dd55e75be5c51cf035f6cb867d8938263d54)), closes [#291](https://github.com/gatsby-inc/gatsby-interface/issues/291)
+- **Notification:** `Link` margin-left ([#308](https://github.com/gatsby-inc/gatsby-interface/issues/308)) ([2d82dd5](https://github.com/gatsby-inc/gatsby-interface/commit/2d82dd55e75be5c51cf035f6cb867d8938263d54)), closes [#291](https://github.com/gatsby-inc/gatsby-interface/issues/291)
 
 ### [0.0.153](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.152...v0.0.153) (2020-04-30)
 
-
 ### Bug Fixes
 
-* Add `CODE_OF_CONDUCT.md`, add section to README ([#318](https://github.com/gatsby-inc/gatsby-interface/issues/318)) [ci skip] ([28bfe11](https://github.com/gatsby-inc/gatsby-interface/commit/28bfe11e84a0996fd710d0fbedb95e1f20b145db))
+- Add `CODE_OF_CONDUCT.md`, add section to README ([#318](https://github.com/gatsby-inc/gatsby-interface/issues/318)) [ci skip](<[28bfe11](https://github.com/gatsby-inc/gatsby-interface/commit/28bfe11e84a0996fd710d0fbedb95e1f20b145db)>)
 
 ### [0.0.152](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.151...v0.0.152) (2020-04-29)
 
-
 ### Bug Fixes
 
-* various Combobox fixes ([#315](https://github.com/gatsby-inc/gatsby-interface/issues/315)) ([e74241b](https://github.com/gatsby-inc/gatsby-interface/commit/e74241b17e4973581ed244217574922d3b38083f))
+- various Combobox fixes ([#315](https://github.com/gatsby-inc/gatsby-interface/issues/315)) ([e74241b](https://github.com/gatsby-inc/gatsby-interface/commit/e74241b17e4973581ed244217574922d3b38083f))
 
 ### [0.0.151](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.150...v0.0.151) (2020-04-28)
 
-
 ### Features
 
-* expose hexToRGB and hexToRGBA utils as gatsby-interface exports ([#313](https://github.com/gatsby-inc/gatsby-interface/issues/313)) ([962b592](https://github.com/gatsby-inc/gatsby-interface/commit/962b592c3c47eca53a3d70f91995fab719dae97e))
+- expose hexToRGB and hexToRGBA utils as gatsby-interface exports ([#313](https://github.com/gatsby-inc/gatsby-interface/issues/313)) ([962b592](https://github.com/gatsby-inc/gatsby-interface/commit/962b592c3c47eca53a3d70f91995fab719dae97e))
 
 ### [0.0.150](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.149...v0.0.150) (2020-04-27)
 
-
 ### Features
 
-* Updates to ReachUI-based components ([#297](https://github.com/gatsby-inc/gatsby-interface/issues/297)) ([a105976](https://github.com/gatsby-inc/gatsby-interface/commit/a1059760bc45a9871d225ddfd327a985937cc6d0))
+- Updates to ReachUI-based components ([#297](https://github.com/gatsby-inc/gatsby-interface/issues/297)) ([a105976](https://github.com/gatsby-inc/gatsby-interface/commit/a1059760bc45a9871d225ddfd327a985937cc6d0))
 
 ### [0.0.149](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.148...v0.0.149) (2020-04-27)
 

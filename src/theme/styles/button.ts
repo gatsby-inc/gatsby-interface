@@ -179,10 +179,10 @@ function getButtonVariantCss(
       return {
         background: `transparent`,
         border: `1px solid ${theme.tones[tone].light}`,
-        color: theme.tones[tone].dark,
+        color: theme.tones[tone].text,
         ":hover": {
           borderColor: theme.tones[tone].dark,
-          color: theme.tones[tone].dark,
+          color: theme.tones[tone].superDark,
         },
       }
     }
@@ -190,10 +190,10 @@ function getButtonVariantCss(
       return {
         background: `transparent`,
         border: `1px solid transparent`,
-        color: theme.tones[tone].dark,
+        color: theme.tones[tone].text,
         ":hover": {
           background: theme.tones[tone].superLight,
-          color: theme.tones[tone].dark,
+          color: theme.tones[tone].superDark,
         },
       }
     }
