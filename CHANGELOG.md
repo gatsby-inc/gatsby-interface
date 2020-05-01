@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.154](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.153...v0.0.154) (2020-05-01)
+
+
+### Bug Fixes
+
+* **Notification:** `Link` margin-left ([#308](https://github.com/gatsby-inc/gatsby-interface/issues/308)) ([2d82dd5](https://github.com/gatsby-inc/gatsby-interface/commit/2d82dd55e75be5c51cf035f6cb867d8938263d54)), closes [#291](https://github.com/gatsby-inc/gatsby-interface/issues/291)
+
 ### [0.0.153](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.152...v0.0.153) (2020-04-30)
 
 
