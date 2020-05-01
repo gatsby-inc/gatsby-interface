@@ -18,32 +18,10 @@ const baseCss: ThemeCss = theme => ({
   borderRadius: `10px`,
 })
 
-const toneCss: Record<NumberBadgeTone, ThemeCss> = {
-  DANGER: theme => ({
-    backgroundColor: theme.tones.DANGER.lighter,
-    color: theme.tones.DANGER.superDark,
-  }),
-  WARNING: theme => ({
-    backgroundColor: theme.tones.WARNING.light,
-    color: theme.tones.WARNING.textInverted,
-  }),
-  NEUTRAL: theme => ({
-    backgroundColor: theme.tones.NEUTRAL.light,
-    color: theme.tones.NEUTRAL.dark,
-  }),
-}
+export type NumberBadgeVariant = `PRIMARY` | `SECONDARY`
 
-export type NumberBadgeTone = `DANGER` | `WARNING` | `NEUTRAL`
+export type NumberBadgeProps = React.ComponentPropsWithoutRef<"span">
 
-export type NumberBadgeProps = React.ComponentPropsWithoutRef<"span"> & {
-  tone?: NumberBadgeTone
-}
-
-export function NumberBadge({ tone = `NEUTRAL`, ...rest }: NumberBadgeProps) {
-  return (
-    <span
-      css={(theme: Theme) => [baseCss(theme), toneCss[tone](theme)]}
-      {...rest}
-    />
-  )
+export function NumberBadge(props: NumberBadgeProps) {
+  return <span css={(theme: Theme) => [baseCss(theme)]} {...props} />
 }
