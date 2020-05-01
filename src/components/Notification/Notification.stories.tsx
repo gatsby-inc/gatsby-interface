@@ -39,6 +39,8 @@ export default {
   component: Notification,
   decorators: [withDesign] as DecoratorFn[],
   parameters: {
+    componentSubtitle:
+      "Notifications, or flash messages, inform users of successful or pending actions, or contain other important information. Use them sparingly, and ideally don't show more than one at a time.",
     design: {
       type: "figma",
       url:

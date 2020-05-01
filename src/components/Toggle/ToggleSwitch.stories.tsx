@@ -23,6 +23,10 @@ const toggleToneOptions = radioKnobOptions(TOGGLE_TONES)
 export default {
   title: `ToggleSwitch`,
   component: ToggleSwitch,
+  parameters: {
+    componentSubtitle:
+      "Switches can be used as an alternative to the Checkboxes, and switch between two states — usually enabled and disabled. A Switch must always be accompanied by a label, and follow the same keyboard workflow as a Checkbox.",
+  },
 }
 
 const ToggleSwitchStory = ({
