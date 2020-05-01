@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.155](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.154...v0.0.155) (2020-05-01)
+
+
+### Bug Fixes
+
+* addon-docs content not fully displaying ([#316](https://github.com/gatsby-inc/gatsby-interface/issues/316)) ([a8636c4](https://github.com/gatsby-inc/gatsby-interface/commit/a8636c4295a359d2106e5fd1b44a0d2bf129311f)), closes [#312](https://github.com/gatsby-inc/gatsby-interface/issues/312)
+
 ### [0.0.154](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.153...v0.0.154) (2020-05-01)
 
 
