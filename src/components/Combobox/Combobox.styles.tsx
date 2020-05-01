@@ -57,6 +57,7 @@ export const selectedValueCss: ThemeCss = theme => ({
   opacity: 0,
   transform: `translate3d(0.8rem, 1.1rem, 0)`,
   transition: `all ${theme.transitions.curve.default} ${theme.transitions.speed.default}`,
+  pointerEvents: `none`,
 })
 
 export const listCss: ThemeCss = () => ({

@@ -11,6 +11,8 @@ export default {
   title: `ProgressBar`,
   component: ProgressBar,
   parameters: {
+    componentSubtitle:
+      "Progress Bars express a specified or unspecified time or display the length of a process.",
     layout: "padded",
   },
   decorators: [
