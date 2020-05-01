@@ -156,9 +156,9 @@ function SidebarNavListItem({
                   paddingTop: theme.space[3],
                   paddingRight: theme.space[5],
                   paddingBottom: theme.space[3],
-                  paddingLeft: theme.space[6],
+                  paddingLeft: `calc(${theme.space[6]} + 1px)`,
                   marginBottom: `0`,
-                  marginLeft: `calc(-${theme.space[6]} - 1px)`,
+                  marginLeft: `calc(-${theme.space[6]} - 2px)`,
                   borderLeft: `1px solid ${theme.colors.grey[30]}`,
                 },
                 subItem.active && {
