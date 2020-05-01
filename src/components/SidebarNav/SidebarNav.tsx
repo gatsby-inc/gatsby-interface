@@ -153,8 +153,12 @@ function SidebarNavListItem({
               key={subItem.to}
               css={(theme: Theme) => [
                 {
-                  padding: `${theme.space[3]} ${theme.space[5]}`,
+                  paddingTop: theme.space[3],
+                  paddingRight: theme.space[5],
+                  paddingBottom: theme.space[3],
+                  paddingLeft: theme.space[6],
                   marginBottom: `0`,
+                  marginLeft: `calc(-${theme.space[6]} - 1px)`,
                   borderLeft: `1px solid ${theme.colors.grey[30]}`,
                 },
                 subItem.active && {
