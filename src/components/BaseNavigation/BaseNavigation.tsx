@@ -47,7 +47,7 @@ export type BaseNavigationContextValue = {
   setIsMobileNavOpen: (value: boolean) => void
   components: BaseNavigationComponents
   dropdownOffsets: DropdownOffsets
-  setDropdownOffsets: (value: any) => void
+  setDropdownOffsets: React.Dispatch<React.SetStateAction<DropdownOffsets>>
 }
 
 const BaseNavigationContext = React.createContext<BaseNavigationContextValue>(
@@ -402,7 +402,7 @@ export function BaseNavigationDropdown({
   dropdownChildren = false,
   ...rest
 }: BaseNavigationDropdownProps) {
-  const ref = React.useRef<HTMLDivElement>(null)
+  const dropdownRef = React.useRef<HTMLDivElement>(null)
   const {
     components: { DropdownItem },
     setDropdownOffsets,
@@ -417,8 +417,8 @@ export function BaseNavigationDropdown({
   }, [])
 
   React.useEffect(() => {
-    if (ref.current && isMeasured) {
-      const { left, right } = ref.current.getBoundingClientRect()
+    if (dropdownRef.current && isMeasured) {
+      const { left, right } = dropdownRef.current.getBoundingClientRect()
       setIsMeasured(false)
 
       const leftFit = left >= VIEWPORT_FIT_MARGIN
@@ -438,7 +438,7 @@ export function BaseNavigationDropdown({
 
   return (
     <div
-      ref={ref}
+      ref={dropdownRef}
       css={baseStyles.dropdown(isDropdownOpen, isMeasured)}
       // id to associate with aria-controls on BaseNavigation.Item
       id={getDropdownId(item.name)}
