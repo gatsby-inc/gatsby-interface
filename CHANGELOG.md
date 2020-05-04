@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.157](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.156...v0.0.157) (2020-05-04)
+
+
+### Features
+
+* NumberBadge component ([#325](https://github.com/gatsby-inc/gatsby-interface/issues/325)) ([6188615](https://github.com/gatsby-inc/gatsby-interface/commit/6188615521a94b1908a4a8b9c8b70be707d66072))
+
 ### [0.0.156](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.155...v0.0.156) (2020-05-01)
 
 
