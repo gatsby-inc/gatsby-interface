@@ -12,7 +12,13 @@ import React from "react"
 export function DisableReachStyleCheck({
   reachComponent,
 }: {
-  reachComponent: `dialog` | `tooltip` | `alert` | `combobox` | `menu-button`
+  reachComponent:
+    | `dialog`
+    | `tooltip`
+    | `alert`
+    | `combobox`
+    | `menu-button`
+    | `tabs`
 }) {
   React.useEffect(() => {
     const reachCheckProperty = `--reach-${reachComponent}`
