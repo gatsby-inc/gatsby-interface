@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.158](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.157...v0.0.158) (2020-05-05)
+
+
+### Features
+
+* Tabs component ([#329](https://github.com/gatsby-inc/gatsby-interface/issues/329)) ([c34a086](https://github.com/gatsby-inc/gatsby-interface/commit/c34a0869a946dad3a436233c705f42ac3eee57e7))
+
 ### [0.0.157](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.156...v0.0.157) (2020-05-04)
 
 
