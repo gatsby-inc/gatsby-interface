@@ -40,16 +40,7 @@ const tabsListCss: ThemeCss = theme => [
     "&::-webkit-scrollbar": {
       display: `none`,
     },
-
-    "&:after": {
-      background: theme.colors.blackFade[10],
-      bottom: `-1px`,
-      content: `""`,
-      height: `1px`,
-      position: `absolute`,
-      left: 0,
-      width: `100%`,
-    },
+    borderBottom: `1px solid ${theme.colors.blackFade[10]}`,
   },
 ]
 
