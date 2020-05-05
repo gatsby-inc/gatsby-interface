@@ -46,7 +46,7 @@ function getButtonBaseCss(textVariant?: ButtonTextVariant): ThemeCss {
     fontFamily:
       textVariant === "BRAND" ? theme.fonts.heading : theme.fonts.body,
     justifyContent: `center`,
-    transition: `background 0.5s, border 0.5s, color 0.5s`,
+    transition: `background ${theme.transitions.speed.default}, border ${theme.transitions.speed.default}, color ${theme.transitions.speed.default}`,
     lineHeight: theme.lineHeights.solid,
     textDecoration: `none`,
 
@@ -179,10 +179,10 @@ function getButtonVariantCss(
       return {
         background: `transparent`,
         border: `1px solid ${theme.tones[tone].light}`,
-        color: theme.tones[tone].dark,
+        color: theme.tones[tone].text,
         ":hover": {
           borderColor: theme.tones[tone].dark,
-          color: theme.tones[tone].dark,
+          color: theme.tones[tone].superDark,
         },
       }
     }
@@ -190,10 +190,10 @@ function getButtonVariantCss(
       return {
         background: `transparent`,
         border: `1px solid transparent`,
-        color: theme.tones[tone].dark,
+        color: theme.tones[tone].text,
         ":hover": {
           background: theme.tones[tone].superLight,
-          color: theme.tones[tone].dark,
+          color: theme.tones[tone].superDark,
         },
       }
     }

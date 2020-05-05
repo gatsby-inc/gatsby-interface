@@ -2,22 +2,79 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.157](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.156...v0.0.157) (2020-05-04)
+
+
+### Features
+
+* NumberBadge component ([#325](https://github.com/gatsby-inc/gatsby-interface/issues/325)) ([6188615](https://github.com/gatsby-inc/gatsby-interface/commit/6188615521a94b1908a4a8b9c8b70be707d66072))
+
+### [0.0.156](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.155...v0.0.156) (2020-05-01)
+
+
+### Features
+
+* Expand tones for less one-offs, fix `SUCCESS` a11y ([#311](https://github.com/gatsby-inc/gatsby-interface/issues/311)) ([d611c74](https://github.com/gatsby-inc/gatsby-interface/commit/d611c7488b2cc124f75c5b2d5b824c9dbbc6a966))
+
+### [0.0.155](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.154...v0.0.155) (2020-05-01)
+
+### Bug Fixes
+
+- addon-docs content not fully displaying ([#316](https://github.com/gatsby-inc/gatsby-interface/issues/316)) ([a8636c4](https://github.com/gatsby-inc/gatsby-interface/commit/a8636c4295a359d2106e5fd1b44a0d2bf129311f)), closes [#312](https://github.com/gatsby-inc/gatsby-interface/issues/312)
+
+### [0.0.154](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.153...v0.0.154) (2020-05-01)
+
+### Bug Fixes
+
+- **Notification:** `Link` margin-left ([#308](https://github.com/gatsby-inc/gatsby-interface/issues/308)) ([2d82dd5](https://github.com/gatsby-inc/gatsby-interface/commit/2d82dd55e75be5c51cf035f6cb867d8938263d54)), closes [#291](https://github.com/gatsby-inc/gatsby-interface/issues/291)
+
+### [0.0.153](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.152...v0.0.153) (2020-04-30)
+
+### Bug Fixes
+
+- Add `CODE_OF_CONDUCT.md`, add section to README ([#318](https://github.com/gatsby-inc/gatsby-interface/issues/318)) [ci skip](<[28bfe11](https://github.com/gatsby-inc/gatsby-interface/commit/28bfe11e84a0996fd710d0fbedb95e1f20b145db)>)
+
+### [0.0.152](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.151...v0.0.152) (2020-04-29)
+
+### Bug Fixes
+
+- various Combobox fixes ([#315](https://github.com/gatsby-inc/gatsby-interface/issues/315)) ([e74241b](https://github.com/gatsby-inc/gatsby-interface/commit/e74241b17e4973581ed244217574922d3b38083f))
+
+### [0.0.151](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.150...v0.0.151) (2020-04-28)
+
+### Features
+
+- expose hexToRGB and hexToRGBA utils as gatsby-interface exports ([#313](https://github.com/gatsby-inc/gatsby-interface/issues/313)) ([962b592](https://github.com/gatsby-inc/gatsby-interface/commit/962b592c3c47eca53a3d70f91995fab719dae97e))
+
+### [0.0.150](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.149...v0.0.150) (2020-04-27)
+
+### Features
+
+- Updates to ReachUI-based components ([#297](https://github.com/gatsby-inc/gatsby-interface/issues/297)) ([a105976](https://github.com/gatsby-inc/gatsby-interface/commit/a1059760bc45a9871d225ddfd327a985937cc6d0))
+
+### [0.0.149](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.148...v0.0.149) (2020-04-27)
+
+### Features
+
+- Make `<Button>` transitions snappier, use theme tokens ([#307](https://github.com/gatsby-inc/gatsby-interface/issues/307)) ([1fb4024](https://github.com/gatsby-inc/gatsby-interface/commit/1fb402485e9d794db3e235b11e64880d04917aad))
+
+### [0.0.148](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.147...v0.0.148) (2020-04-27)
+
 ### [0.0.147](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.146...v0.0.147) (2020-04-25)
 
 ### [0.0.146](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.145...v0.0.146) (2020-04-25)
 
 ### [0.0.145](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.144...v0.0.145) (2020-04-24)
 
-
 ### Bug Fixes
 
-* SSOT for `tones` ([#300](https://github.com/gatsby-inc/gatsby-interface/issues/300)) ([86ee612](https://github.com/gatsby-inc/gatsby-interface/commit/86ee612847de3ab722c50995d6699f74d89a0366))
+- SSOT for `tones` ([#300](https://github.com/gatsby-inc/gatsby-interface/issues/300)) ([86ee612](https://github.com/gatsby-inc/gatsby-interface/commit/86ee612847de3ab722c50995d6699f74d89a0366))
 
 ### [0.0.144](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.143...v0.0.144) (2020-04-24)
 
 ### Features
 
-* Only allow TypeScript in the library code ([#295](https://github.com/gatsby-inc/gatsby-interface/issues/295)) ([5413f5c](https://github.com/gatsby-inc/gatsby-interface/commit/5413f5c0cd60be89e83c11aef0d03b4b9983010c))
+- Only allow TypeScript in the library code ([#295](https://github.com/gatsby-inc/gatsby-interface/issues/295)) ([5413f5c](https://github.com/gatsby-inc/gatsby-interface/commit/5413f5c0cd60be89e83c11aef0d03b4b9983010c))
 
 ### [0.0.143](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.142...v0.0.143) (2020-04-24)
 

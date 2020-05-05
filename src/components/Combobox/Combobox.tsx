@@ -13,6 +13,7 @@ import {
   ComboboxOption as ReachComboboxOption,
   ComboboxOptionProps as ReachComboboxOptionProps,
   ComboboxOptionText as ReachComboboxOptionText,
+  useComboboxContext as useReachComboboxContext,
 } from "@reach/combobox"
 import { PopoverProps } from "@reach/popover"
 import { PropsWithAs } from "@reach/utils"
@@ -27,19 +28,22 @@ import {
   selectedValueCss,
   inputWithSelectedValueCss,
 } from "./Combobox.styles"
+import { warn } from "../../utils/maintenance/warn"
+import { RequireProp } from "../../utils/types"
+import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 
-type ComboboxContextValue = {
+type ComboboxCustomContextValue = {
   listRef: React.RefObject<HTMLUListElement>
 }
 
-const ComboboxContext = React.createContext<ComboboxContextValue>({
+const ComboboxCustomContext = React.createContext<ComboboxCustomContextValue>({
   listRef: {
     current: null,
   },
 })
 
-function useComboboxContext(): ComboboxContextValue {
-  return React.useContext(ComboboxContext)
+function useComboboxCustomContext(): ComboboxCustomContextValue {
+  return React.useContext(ComboboxCustomContext)
 }
 
 export type ComboboxProps = PropsWithAs<"div", ReachComboboxProps>
@@ -48,9 +52,10 @@ export function Combobox(props: ComboboxProps) {
   const listRef = React.useRef<HTMLUListElement>(null)
 
   return (
-    <ComboboxContext.Provider value={{ listRef }}>
+    <ComboboxCustomContext.Provider value={{ listRef }}>
+      <DisableReachStyleCheck reachComponent="combobox" />
       <ReachCombobox openOnFocus css={comboboxCss} {...props} />
-    </ComboboxContext.Provider>
+    </ComboboxCustomContext.Provider>
   )
 }
 
@@ -66,7 +71,7 @@ export const ComboboxInput = React.forwardRef<
   HTMLInputElement,
   ComboboxInputProps
 >(function ComboboxInput({ selectedOptionLabel, hasError, ...delegated }, ref) {
-  const { listRef } = useComboboxContext()
+  const { listRef } = useComboboxCustomContext()
 
   /**
    * This handler allows to scroll list of options along with keyboard navigation
@@ -144,19 +149,35 @@ export const ComboboxPopover = React.forwardRef<
   ComboboxPopoverProps
 >(function ComboboxPopover(props, ref) {
   return (
-    <ReachComboboxPopover
-      ref={ref}
-      portal={false}
-      css={popoverCss}
-      {...props}
-    />
+    <ReachComboboxPopover ref={ref} portal={true} css={popoverCss} {...props} />
   )
 })
 
-export type ComboboxListProps = PropsWithAs<"ul", ReachComboboxListProps>
+type ComboboxListBaseProps = PropsWithAs<"ul", ReachComboboxListProps>
+
+/**
+ * ComboboxList renders an element with role="listbox"
+ * which must have an accessible name (https://dequeuniversity.com/rules/axe/3.5/aria-input-field-name?application=AxeChrome)
+ * therefore we require "aria-label" or "aria-labelledby" to be passed
+ */
+export type ComboboxListProps =
+  | RequireProp<ComboboxListBaseProps, "aria-label">
+  | RequireProp<ComboboxListBaseProps, "aria-labelledby">
 
 export function ComboboxList(props: ComboboxListProps) {
-  const { listRef } = useComboboxContext()
+  const { listRef } = useComboboxCustomContext()
+
+  if (process.env.NODE_ENV === `development`) {
+    const hasAccessibleName = Boolean(
+      props["aria-label"] || props["aria-labelledby"]
+    )
+    if (!hasAccessibleName) {
+      warn(
+        `<ComboboxList /> is missing one of the required props: "aria-label", "aria-labelledby"`
+      )
+    }
+  }
+
   return (
     <ReachComboboxList
       ref={listRef}
@@ -209,4 +230,8 @@ export type ComboboxOptionTextProps = {}
 
 export function ComboboxOptionText(props: ComboboxOptionTextProps) {
   return <ReachComboboxOptionText {...props} />
+}
+
+export function useComboboxContext() {
+  return useReachComboboxContext()
 }

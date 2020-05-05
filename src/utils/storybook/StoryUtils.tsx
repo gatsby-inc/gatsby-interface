@@ -37,15 +37,14 @@ const StoryUtilsContainer = ({
   secondaryBg = false,
 }: StoryUtilWrapperProps & { secondaryBg?: boolean }) => (
   <div
-    css={{
+    css={theme => ({
       alignItems: `center`,
       background: secondaryBg ? colors.secondaryBackground : ``,
       display: `flex`,
-      minHeight: `100vh`,
       justifyContent: `center`,
       width: `100%`,
-      padding: `20px`,
-    }}
+      padding: theme.space[6],
+    })}
   >
     {children}
   </div>

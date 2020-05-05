@@ -137,7 +137,13 @@ declare module "gatsby-design-tokens" {
    * Token types
    */
   export type BreakpointToken = "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
-  export type FontToken = "body" | "system" | "heading" | "monospace" | "serif"
+  export type FontToken =
+    | "body"
+    | "system"
+    | "heading"
+    | "monospace"
+    | "serif"
+    | "sans"
   export type FontWeightToken =
     | "body"
     | "semiBold"

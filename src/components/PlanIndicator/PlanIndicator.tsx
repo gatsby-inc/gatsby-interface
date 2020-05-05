@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { ThemeCss } from "../../theme"
-import { Badge } from "../Badge"
+import { Badge, BadgeProps } from "../Badge"
 import {
   FreePlanIcon,
   ProfessionalPlanIcon,
@@ -37,11 +37,18 @@ const planTypeEnterpriseCss: ThemeCss = theme => ({
   color: theme.colors.white,
 })
 
+const planTypeTrialingCss: ThemeCss = theme => ({
+  borderColor: theme.colors.green[10],
+  backgroundColor: theme.colors.green[10],
+  color: theme.colors.green[70],
+})
+
 const planTypeCss: Record<PlanIndicatorPlanType, ThemeCss> = {
   FREE: planTypeFreeCss,
   PROFESSIONAL: planTypeProfessionalCss,
   BUSINESS: planTypeBusinessCss,
   ENTERPRISE: planTypeEnterpriseCss,
+  TRIALING: planTypeTrialingCss,
 }
 
 const planTypeLabels: Record<PlanIndicatorPlanType, string> = {
@@ -49,13 +56,15 @@ const planTypeLabels: Record<PlanIndicatorPlanType, string> = {
   PROFESSIONAL: `Professional`,
   BUSINESS: `Business`,
   ENTERPRISE: `Enterprise`,
+  TRIALING: "Professional Trial",
 }
 
-const planTypeIcons: Record<PlanIndicatorPlanType, React.ComponentType> = {
+const planTypeIcons: Record<PlanIndicatorPlanType, BadgeProps["Icon"]> = {
   FREE: FreePlanIcon,
   PROFESSIONAL: ProfessionalPlanIcon,
   BUSINESS: BusinessPlanIcon,
   ENTERPRISE: EnterprisePlanIcon,
+  TRIALING: undefined,
 }
 
 export type PlanIndicatorPlanType =
@@ -63,6 +72,7 @@ export type PlanIndicatorPlanType =
   | `PROFESSIONAL`
   | `BUSINESS`
   | `ENTERPRISE`
+  | `TRIALING`
 
 export type PlanIndicatorProps = {
   planType: PlanIndicatorPlanType

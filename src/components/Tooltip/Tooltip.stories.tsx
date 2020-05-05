@@ -16,6 +16,8 @@ import {
 export default {
   title: `Tooltip`,
   parameters: {
+    componentSubtitle:
+      "Tooltips display contextual information when users hover over, focus on, or tap an element.",
     layout: `padded`,
     readme: {
       sidebar: README,
