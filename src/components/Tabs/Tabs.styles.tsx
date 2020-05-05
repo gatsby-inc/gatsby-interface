@@ -35,16 +35,12 @@ const tabsListCss: ThemeCss = theme => [
     listStyleType: `none`,
     margin: 0,
     position: `relative`,
-
-    "&:after": {
-      background: theme.colors.blackFade[10],
-      bottom: `-1px`,
-      content: `""`,
-      height: `1px`,
-      position: `absolute`,
-      left: 0,
-      width: `100%`,
+    overflowX: `auto`,
+    WebkitOverflowScrolling: `touch`,
+    "&::-webkit-scrollbar": {
+      display: `none`,
     },
+    borderBottom: `1px solid ${theme.colors.blackFade[10]}`,
   },
 ]
 
