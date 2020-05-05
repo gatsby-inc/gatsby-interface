@@ -82,18 +82,18 @@ const baseNavigationDropdownOpenStyles: ThemeCss = _theme => ({
   display: `block`,
 })
 
-const baseNavigationDropdownClosedStyles: ThemeCss = theme => ({
+const baseNavigationDropdownClosedStyles: ThemeCss = () => ({
   display: `none`,
   position: `absolute`,
   top: `100%`,
   left: `50%`,
   transform: `translateX(-50%)`,
+})
 
-  ul: {
-    margin: 0,
-    padding: `${theme.space[4]} 0`,
-    listStyle: `none`,
-  },
+const baseNavigationDropdownListStyles: ThemeCss = theme => ({
+  margin: 0,
+  padding: `${theme.space[4]} 0`,
+  listStyle: `none`,
 })
 
 const baseNavigationDropdownToggleCss: ThemeCss = theme => ({
@@ -201,6 +201,9 @@ const baseStyles = {
       isMeasured && baseNavigationDropdownMeasureStyles(theme),
       isDropdownOpen && baseNavigationDropdownOpenStyles(theme),
     ]
+  },
+  dropdownList: (): ThemeCss => {
+    return theme => baseNavigationDropdownListStyles(theme)
   },
   dropdownToggle: (isInverted: boolean): ThemeCss => {
     return theme => [

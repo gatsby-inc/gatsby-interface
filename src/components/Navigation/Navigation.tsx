@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
+import { ClassNames } from "@emotion/core"
 import {
   BaseNavigation,
   BaseNavigationProps,
@@ -26,6 +27,7 @@ import {
   itemCss,
   itemLinkCss,
   dropdownCss,
+  dropdownListCss,
   dropdownToggleCss,
   dropdownItemCss,
   buttonItemCss,
@@ -193,10 +195,15 @@ function NavigationDropdown(delegated: NavigationDropdownProps) {
   const offset = itemOffset ? `${itemOffset}px` : `0px`
 
   return (
-    <BaseNavigation.Dropdown
-      css={dropdownCss(mobileNavMediaQuery, offset)}
-      {...delegated}
-    />
+    <ClassNames>
+      {({ css }) => (
+        <BaseNavigation.Dropdown
+          css={dropdownCss(mobileNavMediaQuery, offset)}
+          dropdownListClassName={css(dropdownListCss)}
+          {...delegated}
+        />
+      )}
+    </ClassNames>
   )
 }
 

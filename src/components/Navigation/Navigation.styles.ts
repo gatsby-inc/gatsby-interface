@@ -91,11 +91,6 @@ const dropdownOpenCss: ThemeCss = theme => ({
   background: theme.colors.white,
   borderRadius: theme.radii[1],
 
-  "& > ul": {
-    display: `grid`,
-    gridTemplateColumns: `max-content`,
-  },
-
   ":after": {
     position: `absolute`,
     top: -6,
@@ -111,6 +106,11 @@ const dropdownOpenCss: ThemeCss = theme => ({
     transitionDuration: theme.transitions.speed.default,
   },
 })
+
+export const dropdownListCss = {
+  display: `grid`,
+  gridTemplateColumns: `max-content`,
+}
 
 const dropdownMobileCss: ThemeCss = theme => ({
   width: `100%`,

@@ -392,6 +392,7 @@ export type BaseNavigationDropdownProps = Omit<
   toggleDropdown: (value: boolean) => void
   dropdownItems?: BaseNavigationItem[]
   dropdownChildren?: React.ReactNode
+  dropdownListClassName?: string
 }
 
 export function BaseNavigationDropdown({
@@ -400,6 +401,7 @@ export function BaseNavigationDropdown({
   toggleDropdown,
   dropdownItems = [],
   dropdownChildren = false,
+  dropdownListClassName,
   ...rest
 }: BaseNavigationDropdownProps) {
   const dropdownRef = React.useRef<HTMLDivElement>(null)
@@ -451,7 +453,7 @@ export function BaseNavigationDropdown({
       }}
       {...rest}
     >
-      <ul>
+      <ul css={baseStyles.dropdownList()} className={dropdownListClassName}>
         {dropdownItems.length > 0 &&
           dropdownItems.map((item, index) => (
             <DropdownItem key={`${index}-${item.name}`} item={item} />
