@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.159](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.158...v0.0.159) (2020-05-05)
+
+
+### Bug Fixes
+
+* make TabList scrollable ([#330](https://github.com/gatsby-inc/gatsby-interface/issues/330)) ([6058374](https://github.com/gatsby-inc/gatsby-interface/commit/6058374bc360b7a117723a3d81d66d79c19e4c83))
+
+### [0.0.158](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.157...v0.0.158) (2020-05-05)
+
+
+### Features
+
+* Tabs component ([#329](https://github.com/gatsby-inc/gatsby-interface/issues/329)) ([c34a086](https://github.com/gatsby-inc/gatsby-interface/commit/c34a0869a946dad3a436233c705f42ac3eee57e7))
+
+### [0.0.157](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.156...v0.0.157) (2020-05-04)
+
+
+### Features
+
+* NumberBadge component ([#325](https://github.com/gatsby-inc/gatsby-interface/issues/325)) ([6188615](https://github.com/gatsby-inc/gatsby-interface/commit/6188615521a94b1908a4a8b9c8b70be707d66072))
+
 ### [0.0.156](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.155...v0.0.156) (2020-05-01)
 
 
