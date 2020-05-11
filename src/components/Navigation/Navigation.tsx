@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
+import { ClassNames } from "@emotion/core"
 import {
   BaseNavigation,
   BaseNavigationProps,
@@ -26,6 +27,7 @@ import {
   itemCss,
   itemLinkCss,
   dropdownCss,
+  dropdownListCss,
   dropdownToggleCss,
   dropdownItemCss,
   buttonItemCss,
@@ -184,13 +186,24 @@ function isExternalLinkItem(
 export type NavigationDropdownProps = BaseNavigationDropdownProps
 
 function NavigationDropdown(delegated: NavigationDropdownProps) {
-  const { mobileNavMediaQuery } = Navigation.useNavigationContext()
+  const {
+    mobileNavMediaQuery,
+    dropdownOffsets,
+  } = Navigation.useNavigationContext()
+
+  const itemOffset = dropdownOffsets[delegated.item.name]
+  const offset = itemOffset ? `${itemOffset}px` : `0px`
 
   return (
-    <BaseNavigation.Dropdown
-      css={dropdownCss(mobileNavMediaQuery)}
-      {...delegated}
-    />
+    <ClassNames>
+      {({ css }) => (
+        <BaseNavigation.Dropdown
+          css={dropdownCss(mobileNavMediaQuery, offset)}
+          dropdownListClassName={css(dropdownListCss)}
+          {...delegated}
+        />
+      )}
+    </ClassNames>
   )
 }
 

@@ -87,21 +87,18 @@ export const listCss = (mobileNavMediaQuery: string): ThemeCss => {
 const dropdownOpenCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
   fontFamily: theme.fonts.system,
-  right: 0,
   boxShadow: theme.shadows.dialog,
   background: theme.colors.white,
-  width: 450,
   borderRadius: theme.radii[1],
 
   ":after": {
     position: `absolute`,
     top: -6,
-    left: 30,
+    left: `50%`,
     width: 12,
     height: 12,
     content: `" "`,
-    transform: `rotate(45deg)`,
-    borderRadius: `2 0 0 0`,
+    borderRadius: `2px 0 0 0`,
     background: theme.colors.white,
     boxShadow: `-3px -3px 10px ${hexToRGBA(theme.colors.lilac, 0.1, true)}`,
     willChange: `transform`,
@@ -109,6 +106,11 @@ const dropdownOpenCss: ThemeCss = theme => ({
     transitionDuration: theme.transitions.speed.default,
   },
 })
+
+export const dropdownListCss = {
+  display: `grid`,
+  gridTemplateColumns: `max-content`,
+}
 
 const dropdownMobileCss: ThemeCss = theme => ({
   width: `100%`,
@@ -198,9 +200,21 @@ export const itemLinkCss = (
   ]
 }
 
-export const dropdownCss = (mobileNavMediaQuery: string): ThemeCss => {
+export const dropdownCss = (
+  mobileNavMediaQuery: string,
+  offset: string
+): ThemeCss => {
   return theme => [
     dropdownOpenCss(theme),
+    {
+      // offset is set when dropdown in default positioning hits left or right edge of he viewport
+      // if so the dropdown is shifted to the position when it fits into the viewport
+      transform: `translate(calc(-50% + ${offset}), -${theme.space[2]})`,
+      ":after": {
+        // to make the spout centered to parent menu item we shift it into the opposite direction
+        transform: `translateX(calc(-50% + (${offset} * -1))) rotate(45deg)`,
+      },
+    },
     {
       [mobileNavMediaQuery]: [
         {
@@ -210,6 +224,7 @@ export const dropdownCss = (mobileNavMediaQuery: string): ThemeCss => {
         dropdownMobileCss(theme),
       ],
     },
+    {},
   ]
 }
 
