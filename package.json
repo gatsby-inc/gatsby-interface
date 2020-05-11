@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.157",
+  "version": "0.0.159",
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
@@ -45,6 +45,7 @@
     "@reach/dialog": "^0.10.1",
     "@reach/menu-button": "^0.10.1",
     "@reach/popover": "^0.10.1",
+    "@reach/tabs": "0.10.1",
     "@reach/tooltip": "^0.10.1",
     "@types/lodash.sample": "^4.2.6",
     "case": "^1.6.2",
