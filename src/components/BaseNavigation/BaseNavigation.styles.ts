@@ -66,27 +66,34 @@ const baseNavigationItemCss: ThemeCss = theme => ({
   position: `relative`,
   color: theme.colors.black,
   // Show dropdown menu on hover, if exists
-  "&:hover > ul": baseNavigationDropdownOpenStyles(theme),
+  "&:hover > div": baseNavigationDropdownOpenStyles(theme),
 })
 
 const baseNavigationItemInvertedCss: ThemeCss = theme => ({
   color: theme.colors.white,
 })
 
-const baseNavigationDropdownOpenStyles: ThemeCss = theme => ({
-  display: `inline-block`,
-  position: `absolute`,
-  top: `95%`,
-  left: 0,
-  margin: 0,
-  padding: `${theme.space[4]} 0`,
+const baseNavigationDropdownMeasureStyles: ThemeCss = _theme => ({
+  visibility: `hidden`,
+  display: `block`,
 })
 
-const baseNavigationDropdownClosedStyles: ThemeCss = _theme => ({
+const baseNavigationDropdownOpenStyles: ThemeCss = _theme => ({
+  display: `block`,
+})
+
+const baseNavigationDropdownClosedStyles: ThemeCss = () => ({
   display: `none`,
-  listStyle: `none`,
+  position: `absolute`,
+  top: `100%`,
+  left: `50%`,
+  transform: `translateX(-50%)`,
+})
+
+const baseNavigationDropdownListStyles: ThemeCss = theme => ({
   margin: 0,
-  padding: 0,
+  padding: `${theme.space[4]} 0`,
+  listStyle: `none`,
 })
 
 const baseNavigationDropdownToggleCss: ThemeCss = theme => ({
@@ -188,11 +195,15 @@ const baseStyles = {
       isInverted && baseNavigationItemInvertedCss(theme),
     ]
   },
-  dropdown: (isDropdownOpen: boolean): ThemeCss => {
+  dropdown: (isDropdownOpen: boolean, isMeasured: boolean): ThemeCss => {
     return theme => [
       baseNavigationDropdownClosedStyles(theme),
+      isMeasured && baseNavigationDropdownMeasureStyles(theme),
       isDropdownOpen && baseNavigationDropdownOpenStyles(theme),
     ]
+  },
+  dropdownList: (): ThemeCss => {
+    return theme => baseNavigationDropdownListStyles(theme)
   },
   dropdownToggle: (isInverted: boolean): ThemeCss => {
     return theme => [
