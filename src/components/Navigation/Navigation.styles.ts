@@ -107,10 +107,16 @@ const dropdownOpenCss: ThemeCss = theme => ({
   },
 })
 
-export const dropdownListCss = {
+export const dropdownListCss = (mobileNavMediaQuery: string) => ({
   display: `grid`,
   gridTemplateColumns: `max-content`,
-}
+
+  // regretably our mobileNavMediaQuery styling is NOT 'mobile-first'
+  // so we have to 'remove' default style for mobile version
+  [mobileNavMediaQuery]: {
+    display: `block`,
+  },
+})
 
 const dropdownMobileCss: ThemeCss = theme => ({
   width: `100%`,
