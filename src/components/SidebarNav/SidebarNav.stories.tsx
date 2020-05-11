@@ -10,19 +10,8 @@ import {
   SkullIcon,
   GeneralIcon,
 } from "../icons"
-import {
-  SidebarNav,
-  SidebarNavOption,
-  SidebarNavProps,
-  SidebarNavVariant,
-} from "./"
-import {
-  radioKnobOptions,
-  withVariationsContainer,
-} from "../../utils/storybook"
-import { radios, text } from "@storybook/addon-knobs"
-
-const SIDEBAR_NAV_VARIANTS: SidebarNavVariant[] = [`DEFAULT`, `FULL`]
+import { SidebarNav, SidebarNavOption, SidebarNavProps } from "./"
+import { text } from "@storybook/addon-knobs"
 
 export default {
   title: `SidebarNav`,
@@ -41,12 +30,7 @@ export const Basic = () => <SidebarNavExample />
 
 export const Sandbox = () => (
   <SidebarNavExample
-    variant={radios(
-      "variant",
-      radioKnobOptions(SIDEBAR_NAV_VARIANTS),
-      `DEFAULT`
-    )}
-    aria-label={text("accessible label", "Sandbox navigation")}
+    aria-label={text("Accessible label", "Sandbox navigation")}
   />
 )
 
@@ -54,18 +38,6 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
-}
-
-export const Variants = () =>
-  SIDEBAR_NAV_VARIANTS.map(variant => (
-    <React.Fragment key={variant}>
-      <h3>{variant}:</h3>
-      <SidebarNavExample key={variant} variant={variant} />
-    </React.Fragment>
-  ))
-
-Variants.story = {
-  decorators: [withVariationsContainer],
 }
 
 const SidebarNavExample = (props: Partial<SidebarNavProps>) => {

@@ -16,18 +16,11 @@ export type SidebarNavOption = SidebarNavItem & {
   subItems?: SidebarNavItem[]
 }
 
-export type SidebarNavVariant = `DEFAULT` | `FULL`
-
 export type SidebarNavProps = JSX.IntrinsicElements["nav"] & {
   options?: SidebarNavOption[]
-  variant?: SidebarNavVariant
 }
 
-export default function SidebarNav({
-  options,
-  variant,
-  ...rest
-}: SidebarNavProps) {
+export default function SidebarNav({ options, ...rest }: SidebarNavProps) {
   return (
     <nav
       aria-label="sidebar navigation"
@@ -37,7 +30,7 @@ export default function SidebarNav({
       {...rest}
     >
       {options && (
-        <SidebarNavList variant={variant}>
+        <SidebarNavList>
           {options.map(option => {
             return <SidebarNavListItem key={option.to} {...option} />
           })}
@@ -47,11 +40,9 @@ export default function SidebarNav({
   )
 }
 
-type SidebarNavListProps = JSX.IntrinsicElements["ul"] & {
-  variant?: SidebarNavVariant
-}
+type SidebarNavListProps = JSX.IntrinsicElements["ul"]
 
-function SidebarNavList({ variant = `DEFAULT`, ...rest }: SidebarNavListProps) {
+function SidebarNavList({ ...rest }: SidebarNavListProps) {
   return (
     <ul
       css={[
@@ -60,7 +51,6 @@ function SidebarNavList({ variant = `DEFAULT`, ...rest }: SidebarNavListProps) {
           margin: 0,
           padding: 0,
         },
-        variant === `FULL` && { maxWidth: `8rem` },
       ]}
       {...rest}
     />
