@@ -1,5 +1,5 @@
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
-import { ThemeCss } from "../../theme"
+import { ThemeCss, Theme } from "../../theme"
 
 const liReset = {
   margin: 0,
@@ -107,7 +107,7 @@ const dropdownOpenCss: ThemeCss = theme => ({
   },
 })
 
-export const dropdownListCss = (mobileNavMediaQuery: string) => ({
+export const dropdownListCss = (theme: Theme, mobileNavMediaQuery: string) => ({
   display: `grid`,
   gridTemplateColumns: `max-content`,
 
@@ -115,6 +115,8 @@ export const dropdownListCss = (mobileNavMediaQuery: string) => ({
   // so we have to 'remove' default style for mobile version
   [mobileNavMediaQuery]: {
     display: `block`,
+    gridTemplateColumns: `none`,
+    padding: `0 0 ${theme.space[4]}`,
   },
 })
 
@@ -246,6 +248,10 @@ export const dropdownToggleCss = (mobileNavMediaQuery: string): ThemeCss => {
 
 export const dropdownItemCss = (mobileNavMediaQuery: string): ThemeCss => {
   return theme => ({
+    "&:first-of-type > a": {
+      margin: 0,
+    },
+
     a: {
       color: theme.colors.grey[50],
       textDecoration: `none`,
@@ -266,6 +272,7 @@ export const dropdownItemCss = (mobileNavMediaQuery: string): ThemeCss => {
         padding: 0,
         margin: `${theme.space[3]} 0 0 0`,
         fontSize: theme.fontSizes[1],
+
         "&:hover, &:focus-within": {
           opacity: 1,
           color: theme.colors.accent,
