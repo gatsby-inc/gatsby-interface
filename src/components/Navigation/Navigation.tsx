@@ -196,10 +196,12 @@ function NavigationDropdown(delegated: NavigationDropdownProps) {
 
   return (
     <ClassNames>
-      {({ css }) => (
+      {({ css, theme }) => (
         <BaseNavigation.Dropdown
           css={dropdownCss(mobileNavMediaQuery, offset)}
-          dropdownListClassName={css(dropdownListCss)}
+          dropdownListClassName={css(
+            dropdownListCss(theme, mobileNavMediaQuery)
+          )}
           {...delegated}
         />
       )}

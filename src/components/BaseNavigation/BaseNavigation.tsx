@@ -408,6 +408,7 @@ export function BaseNavigationDropdown({
   const {
     components: { DropdownItem },
     setDropdownOffsets,
+    mobileNavMediaQuery,
   } = BaseNavigation.useNavigationContext()
   const [isMeasured, setIsMeasured] = React.useState(false)
   const [windowWidth, setWindowWidth] = React.useState(0)
@@ -441,7 +442,7 @@ export function BaseNavigationDropdown({
   return (
     <div
       ref={dropdownRef}
-      css={baseStyles.dropdown(isDropdownOpen, isMeasured)}
+      css={baseStyles.dropdown(isDropdownOpen, isMeasured, mobileNavMediaQuery)}
       // id to associate with aria-controls on BaseNavigation.Item
       id={getDropdownId(item.name)}
       onKeyDown={e => {
