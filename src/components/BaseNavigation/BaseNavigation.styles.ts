@@ -1,4 +1,5 @@
-import { ThemeCss } from "../../theme"
+import { Theme, ThemeCss } from "../../theme"
+import { Interpolation } from "@emotion/core"
 
 const hamburgerIconStylesShared: ThemeCss = theme => {
   return {
@@ -73,6 +74,26 @@ const baseNavigationItemInvertedCss: ThemeCss = theme => ({
   color: theme.colors.white,
 })
 
+const baseNavigationDropdownStyles: (
+  theme: Theme,
+  mobileNavMediaQuery: string
+) => Interpolation = (_theme, mobileNavMediaQuery) => ({
+  display: `none`,
+  position: `absolute`,
+  top: `100%`,
+  left: `50%`,
+  transform: `translateX(-50%)`,
+
+  // regretably our mobileNavMediaQuery styling is NOT 'mobile-first'
+  // so we have to 'remove' default style for mobile version
+  [mobileNavMediaQuery]: {
+    position: `relative`,
+    left: `auto`,
+    transform: `none`,
+    top: `auto`,
+  },
+})
+
 const baseNavigationDropdownMeasureStyles: ThemeCss = _theme => ({
   visibility: `hidden`,
   display: `block`,
@@ -80,14 +101,6 @@ const baseNavigationDropdownMeasureStyles: ThemeCss = _theme => ({
 
 const baseNavigationDropdownOpenStyles: ThemeCss = _theme => ({
   display: `block`,
-})
-
-const baseNavigationDropdownClosedStyles: ThemeCss = () => ({
-  display: `none`,
-  position: `absolute`,
-  top: `100%`,
-  left: `50%`,
-  transform: `translateX(-50%)`,
 })
 
 const baseNavigationDropdownListStyles: ThemeCss = theme => ({
@@ -195,9 +208,13 @@ const baseStyles = {
       isInverted && baseNavigationItemInvertedCss(theme),
     ]
   },
-  dropdown: (isDropdownOpen: boolean, isMeasured: boolean): ThemeCss => {
+  dropdown: (
+    isDropdownOpen: boolean,
+    isMeasured: boolean,
+    mobileNavMediaQuery: string
+  ): ThemeCss => {
     return theme => [
-      baseNavigationDropdownClosedStyles(theme),
+      baseNavigationDropdownStyles(theme, mobileNavMediaQuery),
       isMeasured && baseNavigationDropdownMeasureStyles(theme),
       isDropdownOpen && baseNavigationDropdownOpenStyles(theme),
     ]
