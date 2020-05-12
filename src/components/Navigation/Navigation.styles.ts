@@ -111,7 +111,7 @@ export const dropdownListCss = (theme: Theme, mobileNavMediaQuery: string) => ({
   display: `grid`,
   gridTemplateColumns: `max-content`,
 
-  // regretably our mobileNavMediaQuery styling is NOT 'mobile-first'
+  // regretably our mobileNavMediaQuery is NOT 'mobile-first' styling
   // so we have to 'remove' default style for mobile version
   [mobileNavMediaQuery]: {
     display: `block`,
