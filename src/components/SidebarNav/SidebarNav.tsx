@@ -42,7 +42,7 @@ export default function SidebarNav({ options, ...rest }: SidebarNavProps) {
 
 type SidebarNavListProps = JSX.IntrinsicElements["ul"]
 
-function SidebarNavList({ ...rest }: SidebarNavListProps) {
+function SidebarNavList(props: SidebarNavListProps) {
   return (
     <ul
       css={[
@@ -52,7 +52,7 @@ function SidebarNavList({ ...rest }: SidebarNavListProps) {
           padding: 0,
         },
       ]}
-      {...rest}
+      {...props}
     />
   )
 }
