@@ -4,7 +4,7 @@ export const baseCss: ThemeCss = theme => ({
   display: `inline-flex`,
   alignItems: `center`,
   borderRadius: `${theme.radii[2]} ${theme.radii[2]} 0 0`,
-  backgroundColor: theme.colors.grey[5],
+  backgroundColor: theme.colors.secondaryBackground,
   border: `1px solid ${theme.colors.standardLine}`,
   color: theme.colors.blackFade[70],
   fontFamily: theme.fonts.heading,
