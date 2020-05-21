@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.164](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.163...v0.0.164) (2020-05-21)
+
+
+### Bug Fixes
+
+* fix color contrast issues in Announcement and StepIndicator ([#333](https://github.com/gatsby-inc/gatsby-interface/issues/333)) ([5efca8d](https://github.com/gatsby-inc/gatsby-interface/commit/5efca8d7985be644020a51b2e8c142d6a5fd5f4c))
+
 ### [0.0.163](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.162...v0.0.163) (2020-05-12)
 
 ### [0.0.162](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.161...v0.0.162) (2020-05-12)
