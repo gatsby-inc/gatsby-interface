@@ -6,7 +6,7 @@ const baseCss: ThemeCss = theme => ({
   display: `flex`,
   alignItems: `center`,
   background: theme.colors.teal[5],
-  color: theme.colors.green[90],
+  color: theme.colors.blackFade[70],
   fontSize: theme.fontSizes[1],
   fontFamily: theme.fonts.system,
 
