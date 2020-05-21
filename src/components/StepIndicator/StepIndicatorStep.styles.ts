@@ -6,7 +6,7 @@ export const baseCss: ThemeCss = theme => ({
   borderRadius: `${theme.radii[2]} ${theme.radii[2]} 0 0`,
   backgroundColor: theme.colors.grey[5],
   border: `1px solid ${theme.colors.standardLine}`,
-  color: theme.colors.grey[60],
+  color: theme.colors.blackFade[70],
   fontFamily: theme.fonts.heading,
   fontSize: theme.fontSizes[3],
   fontWeight: theme.fontWeights.bold,
