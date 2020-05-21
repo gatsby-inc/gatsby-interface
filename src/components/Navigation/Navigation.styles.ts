@@ -39,7 +39,6 @@ export const navCss = (
     {
       display: `flex`,
       justifyContent: `space-between`,
-      padding: `0 ${theme.space[5]}`,
       width: "100%",
       [mobileNavMediaQuery]: {
         display: isMobileNavOpen ? `block` : `none`,
