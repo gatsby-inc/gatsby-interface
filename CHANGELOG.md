@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.165](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.164...v0.0.165) (2020-05-27)
+
+
+### Bug Fixes
+
+* remove `Navigation` horizontal padding ([#334](https://github.com/gatsby-inc/gatsby-interface/issues/334)) ([c0a60f5](https://github.com/gatsby-inc/gatsby-interface/commit/c0a60f5aad042154e303e30395ba2f0a11f4cf43))
+
 ### [0.0.164](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.163...v0.0.164) (2020-05-21)
 
 
