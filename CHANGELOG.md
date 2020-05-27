@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.166](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.165...v0.0.166) (2020-05-27)
+
+
+### Bug Fixes
+
+* bump ReachUI dependencies ([#336](https://github.com/gatsby-inc/gatsby-interface/issues/336)) ([eb51192](https://github.com/gatsby-inc/gatsby-interface/commit/eb51192e4dbee25d48e5a14bb04e33def9d44bc0))
+
 ### [0.0.165](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.164...v0.0.165) (2020-05-27)
 
 
