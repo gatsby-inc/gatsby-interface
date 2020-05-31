@@ -58,7 +58,7 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "formik": "^2.0.8",
-    "gatsby": "2.6.0",
+    "gatsby": "^2.6.0",
     "prop-types": "^15.6.1",
     "react": "16.8.1",
     "react-dom": "16.8.1",
