@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.167](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.166...v0.0.167) (2020-06-01)
+
+
+### Bug Fixes
+
+* Unpin gatsby peer dependency ([#337](https://github.com/gatsby-inc/gatsby-interface/issues/337)) ([15a2e25](https://github.com/gatsby-inc/gatsby-interface/commit/15a2e25bc3e990ced5c09abbe7bd711a2d8ce192))
+
 ### [0.0.166](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.165...v0.0.166) (2020-05-27)
 
 
