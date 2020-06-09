@@ -2,17 +2,11 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import {
-  SelectField,
-  SelectFieldControlProps,
-  SelectFieldLabel,
-  SelectFieldControl,
-  SelectFieldHint,
-  SelectFieldError,
-} from "./SelectField"
-import { WithFormFieldBlock, FormFieldContainer } from "./FormField"
+import { WithFormFieldBlock } from "./FormField"
+import { FormFieldBlock } from "./FormFieldBlock"
+import { StyledSelect, StyledSelectProps } from "./styled/StyledSelect"
 
-export type SelectFieldBlockProps = WithFormFieldBlock<SelectFieldControlProps>
+export type SelectFieldBlockProps = WithFormFieldBlock<StyledSelectProps>
 
 export const SelectFieldBlock = React.forwardRef<
   HTMLSelectElement,
@@ -27,21 +21,23 @@ export const SelectFieldBlock = React.forwardRef<
     className,
     validationMode,
     layout,
+    required,
     ...rest
   } = props
 
   return (
-    <FormFieldContainer layout={layout} className={className}>
-      <SelectField id={id} hasError={!!error} hasHint={!!hint}>
-        <SelectFieldLabel size={labelSize} isRequired={!!rest.required}>
-          {label}
-        </SelectFieldLabel>
-        <SelectFieldControl ref={ref} {...rest} />
-        <SelectFieldHint>{hint}</SelectFieldHint>
-        <SelectFieldError validationMode={validationMode}>
-          {error}
-        </SelectFieldError>
-      </SelectField>
-    </FormFieldContainer>
+    <FormFieldBlock
+      id={id}
+      label={label}
+      error={error}
+      hint={hint}
+      required={required}
+      labelSize={labelSize}
+      validationMode={validationMode}
+      layout={layout}
+      className={className}
+    >
+      {controlProps => <StyledSelect ref={ref} {...controlProps} {...rest} />}
+    </FormFieldBlock>
   )
 })

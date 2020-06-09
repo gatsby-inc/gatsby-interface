@@ -52,6 +52,25 @@ export const InputFieldControl = React.forwardRef<
   )
 })
 
+export const StyledInput = React.forwardRef<
+  HTMLInputElement,
+  React.ComponentPropsWithRef<"input">
+>(function InputFieldControl(props, ref) {
+  const placeholder =
+    props.placeholder && props.disabled
+      ? `The field is disabled`
+      : props.placeholder
+
+  return (
+    <input
+      ref={ref}
+      css={(theme: Theme) => [getInputStyles(theme, !!props["aria-invalid"])]}
+      {...props}
+      placeholder={placeholder}
+    />
+  )
+})
+
 export type InputFieldLabelProps = WithStyledFieldLabel<
   InputFieldSkeletonLabelProps
 >

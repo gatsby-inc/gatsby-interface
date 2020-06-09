@@ -32,6 +32,166 @@ export type FormFieldSkeletonProps = {
   children?: React.ReactNode
 }
 
+export function useFormField(
+  fieldId: string,
+  {
+    required = false,
+    hasError = false,
+    hasHint = false,
+    validationMode,
+  }: {
+    required?: boolean
+    hasError?: boolean
+    hasHint?: boolean
+    validationMode?: ErrorValidationMode
+  }
+): FormFieldData {
+  const hintId = getHintId(fieldId)
+  const errorId = getErrorId(fieldId)
+  const controlDescribedBy =
+    [hasError && errorId, hasHint && hintId]
+      .filter(describedBy => describedBy)
+      .join(` `) || undefined
+
+  return {
+    controlProps: {
+      id: fieldId,
+      "aria-describedby": controlDescribedBy,
+      "aria-invalid": hasError,
+      required,
+    },
+    labelProps: {
+      htmlFor: fieldId,
+    },
+    hintProps: {
+      id: hintId,
+      hidden: !hasHint,
+    },
+    errorProps: {
+      id: errorId,
+      hidden: !hasError,
+      "aria-live": getErrorAriaLiveAttribute(validationMode),
+    },
+  }
+}
+
+export type FormFieldData = {
+  controlProps: {
+    id: string
+    "aria-describedby": string | undefined
+    "aria-invalid": boolean
+    required: boolean
+  }
+  labelProps: {
+    htmlFor: string
+  }
+  hintProps: {
+    id: string
+    hidden: boolean
+  }
+  errorProps: {
+    id: string
+    hidden: boolean
+    "aria-live": `polite` | `assertive` | `off` | undefined
+  }
+}
+
+export type FormGroupFieldData = {
+  groupContainerProps: {
+    id: string
+    role: `group`
+    "aria-labelledby": string
+  }
+  groupLabelProps: {
+    id: string
+  }
+  getControlProps: (
+    optionValue: string
+  ) => {
+    id: string
+    "aria-describedby": string | undefined
+    "aria-invalid": boolean
+    required: boolean
+  }
+  getControlLabelProps: (
+    optionValue: string
+  ) => {
+    htmlFor: string
+  }
+  hintProps: {
+    id: string
+    hidden: boolean
+  }
+  errorProps: {
+    id: string
+    hidden: boolean
+    "aria-live": `polite` | `assertive` | `off` | undefined
+  }
+  meta: {
+    required: boolean
+  }
+}
+
+export function useFormGroupField(
+  fieldId: string,
+  {
+    required = false,
+    hasError = false,
+    hasHint = false,
+    validationMode,
+  }: {
+    required?: boolean
+    hasError?: boolean
+    hasHint?: boolean
+    validationMode?: ErrorValidationMode
+  }
+): FormGroupFieldData {
+  const hintId = getHintId(fieldId)
+  const errorId = getErrorId(fieldId)
+  const controlDescribedBy =
+    [hasError && errorId, hasHint && hintId]
+      .filter(describedBy => describedBy)
+      .join(` `) || undefined
+
+  const groupLabelId = `${fieldId}__legend`
+
+  return {
+    groupContainerProps: {
+      id: fieldId,
+      role: `group`,
+      "aria-labelledby": groupLabelId,
+    },
+    groupLabelProps: {
+      id: groupLabelId,
+    },
+    getControlProps: (optionValue: string) => ({
+      id: getGroupOptionId(fieldId, optionValue),
+      "aria-describedby": controlDescribedBy,
+      "aria-invalid": hasError,
+      required,
+    }),
+    getControlLabelProps: (optionValue: string) => ({
+      htmlFor: getGroupOptionId(fieldId, optionValue),
+    }),
+    hintProps: {
+      id: hintId,
+      hidden: !hasHint,
+    },
+    errorProps: {
+      id: errorId,
+      hidden: !hasError,
+      "aria-live": getErrorAriaLiveAttribute(validationMode),
+    },
+    meta: {
+      required,
+    },
+  }
+}
+
+function getGroupOptionId(fieldId: string, optionValue: string) {
+  return `${fieldId}__option--${optionValue}`
+}
+
 function FormFieldSkeletonProvider({
   id,
   hasError,
@@ -70,9 +230,7 @@ export type FormFieldSkeletonLabelProps = Omit<
   "ref" | "htmlFor"
 >
 
-export const FormFieldSkeletonLabel: React.FC<
-  FormFieldSkeletonLabelProps
-> = props => {
+export const FormFieldSkeletonLabel: React.FC<FormFieldSkeletonLabelProps> = props => {
   const { id } = useFormFieldSkeleton()
 
   return <label htmlFor={id} {...props} />
