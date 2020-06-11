@@ -5,7 +5,7 @@ import { getHintId, getErrorId, getErrorAriaLiveAttribute } from "../utils"
 import { visuallyHiddenCss } from "../../../stylesheets/a11y"
 import { ErrorValidationMode } from "../types"
 
-export type FormGroupFieldData = {
+export type AriaFormGroupFieldData = {
   groupContainerProps: {
     id: string
     role: `group`
@@ -57,7 +57,7 @@ export type FormGroupFieldData = {
  * while marking the actual visible messages as hidden from screen readers
  * For more details see this article: https://blog.tenon.io/accessible-validation-of-checkbox-and-radiobutton-groups
  */
-export function useFormGroupField(
+export function useAriaFormGroupField(
   fieldId: string,
   {
     required = false,
@@ -74,7 +74,7 @@ export function useFormGroupField(
     hasHint?: boolean
     validationMode?: ErrorValidationMode
   }
-): FormGroupFieldData {
+): AriaFormGroupFieldData {
   const hintId = getHintId(fieldId)
   const errorId = getErrorId(fieldId)
 

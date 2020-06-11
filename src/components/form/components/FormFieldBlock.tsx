@@ -3,10 +3,10 @@ import { jsx } from "@emotion/core"
 import React from "react"
 import { FormFieldBlockLayout } from "./FormField"
 import {
-  FormFieldData,
-  useFormField,
-  FormGroupFieldData,
-  useFormGroupField,
+  AriaFormFieldData,
+  useAriaFormField,
+  AriaFormGroupFieldData,
+  useAriaFormGroupField,
   ErrorValidationMode,
 } from "../../form-skeletons"
 import {
@@ -29,7 +29,7 @@ export type CommonFieldBlockProps = {
 }
 
 export type RenderFieldControl = (
-  controlProps: FormFieldData["controlProps"]
+  controlProps: AriaFormFieldData["controlProps"]
 ) => React.ReactNode
 
 export type FormFieldBlockProps = CommonFieldBlockProps & {
@@ -50,7 +50,7 @@ export function FormFieldBlock({
   className,
   children,
 }: FormFieldBlockProps) {
-  const fieldData = useFormField(id, {
+  const fieldData = useAriaFormField(id, {
     required: required,
     hasError: !!error,
     hasHint: !!hint,
@@ -83,7 +83,7 @@ export function FormFieldBlockBoilerplate({
   labelSize,
   ...rest
 }: Omit<React.ComponentPropsWithoutRef<"div">, "label"> & {
-  fieldData: FormFieldData
+  fieldData: AriaFormFieldData
   label?: React.ReactNode
   labelSize?: StyledLabelSize
   error?: React.ReactNode
@@ -116,7 +116,7 @@ export function FormFieldBlockBoilerplate({
 
 export type RenderGroupFieldControl = (
   controlProps: Pick<
-    FormGroupFieldData,
+    AriaFormGroupFieldData,
     "getOptionControlProps" | "getOptionLabelProps"
   >
 ) => React.ReactNode
@@ -141,7 +141,7 @@ export function FormGroupFieldBlock({
   role = `group`,
   children,
 }: FormGroupFieldBlockProps) {
-  const fieldData = useFormGroupField(id, {
+  const fieldData = useAriaFormGroupField(id, {
     required: required,
     error,
     hint,
@@ -177,7 +177,7 @@ export function FormGroupFieldBlockBoilerplate({
   labelSize,
   ...rest
 }: Omit<React.ComponentPropsWithoutRef<"div">, "label"> & {
-  fieldData: FormGroupFieldData
+  fieldData: AriaFormGroupFieldData
   label?: React.ReactNode
   labelSize?: StyledLabelSize
   error?: React.ReactNode

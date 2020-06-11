@@ -1,7 +1,7 @@
 import { getHintId, getErrorId, getErrorAriaLiveAttribute } from "../utils"
 import { ErrorValidationMode } from "../types"
 
-export type FormFieldData = {
+export type AriaFormFieldData = {
   controlProps: {
     id: string
     "aria-describedby": string | undefined
@@ -22,7 +22,7 @@ export type FormFieldData = {
   }
 }
 
-export function useFormField(
+export function useAriaFormField(
   fieldId: string,
   {
     required = false,
@@ -35,7 +35,7 @@ export function useFormField(
     hasHint?: boolean
     validationMode?: ErrorValidationMode
   }
-): FormFieldData {
+): AriaFormFieldData {
   const hintId = getHintId(fieldId)
   const errorId = getErrorId(fieldId)
   const controlDescribedBy =

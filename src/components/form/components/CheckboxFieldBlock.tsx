@@ -8,7 +8,7 @@ import {
   StyledCheckbox,
   StyledCheckboxProps,
 } from "./styled-primitives/StyledCheckbox"
-import { useFormField } from "../../form-skeletons"
+import { useAriaFormField } from "../../form-skeletons"
 import { FormHint, FormError } from "./styled-primitives/StyledFormElements"
 import { ThemeCss } from "../../../theme"
 
@@ -42,7 +42,7 @@ export const CheckboxFieldBlock = React.forwardRef<
     ...rest
   } = props
 
-  const fieldData = useFormField(id, {
+  const fieldData = useAriaFormField(id, {
     required: required,
     hasError: !!error,
     hasHint: !!hint,
