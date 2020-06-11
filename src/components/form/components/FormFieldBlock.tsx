@@ -13,7 +13,7 @@ import {
   FormError,
   FormHint,
   StyledLabel,
-  StyledGroupFieldLabel,
+  StyledGroupLabel,
   StyledLabelSize,
   FieldLayoutContainer,
 } from "./styled-primitives/StyledFormElements"
@@ -190,7 +190,7 @@ export function FormGroupFieldBlockBoilerplate({
       {...fieldData.groupContainerProps}
       {...rest}
     >
-      <StyledGroupFieldLabel
+      <StyledGroupLabel
         labelSize={labelSize}
         required={fieldData.meta.required}
         {...fieldData.getGroupLabelProps(label)}

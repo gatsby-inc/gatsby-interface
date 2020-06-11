@@ -149,15 +149,15 @@ export function StyledLabel({
   )
 }
 
-export type StyledGroupFieldLabelProps = React.ComponentPropsWithoutRef<"div"> &
+export type StyledGroupLabelProps = React.ComponentPropsWithoutRef<"div"> &
   StyledLabelOptions
 
-export function StyledGroupFieldLabel({
+export function StyledGroupLabel({
   children,
   required,
   labelSize,
   ...rest
-}: StyledGroupFieldLabelProps) {
+}: StyledGroupLabelProps) {
   if (!children) {
     return null
   }
