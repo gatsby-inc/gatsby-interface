@@ -37,7 +37,14 @@ export const InputFieldBlock = React.forwardRef<
       layout={layout}
       className={className}
     >
-      {controlProps => <StyledInput ref={ref} {...controlProps} {...rest} />}
+      {controlProps => (
+        <StyledInput
+          ref={ref}
+          {...controlProps}
+          css={{ width: `100%` }}
+          {...rest}
+        />
+      )}
     </FormFieldBlock>
   )
 })
