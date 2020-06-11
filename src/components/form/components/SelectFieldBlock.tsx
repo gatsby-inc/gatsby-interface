@@ -4,7 +4,10 @@ import React from "react"
 
 import { WithFormFieldBlock } from "./FormField"
 import { FormFieldBlock } from "./FormFieldBlock"
-import { StyledSelect, StyledSelectProps } from "./styled/StyledSelect"
+import {
+  StyledSelect,
+  StyledSelectProps,
+} from "./styled-primitives/StyledSelect"
 
 export type SelectFieldBlockProps = WithFormFieldBlock<StyledSelectProps>
 

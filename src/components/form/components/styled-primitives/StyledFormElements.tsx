@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx, keyframes } from "@emotion/core"
 import React from "react"
-import { ThemeCss } from "../../../theme"
+import { ThemeCss } from "../../../../theme"
 import { MdError } from "react-icons/md"
-import { FormFieldBlockLayout } from "./FormField"
-import { FormGroupOptionsDirection } from "./FormGroupField"
+import { FormFieldBlockLayout } from "../FormField"
+import { FormGroupOptionsDirection } from "../FormGroupField"
 
 const auxillaryTextCss: ThemeCss = theme => ({
   color: theme.colors.grey[50],
@@ -73,7 +73,7 @@ export function FormHint(props: FormHintProps) {
   return <div {...props} css={baseCss} />
 }
 
-export type StyledFieldLabelSize = "L" | "M" | "S"
+export type StyledLabelSize = "L" | "M" | "S"
 
 const labelBaseCss: ThemeCss = theme => ({
   color: theme.colors.grey[90],
@@ -87,14 +87,14 @@ const labelRequiredFlagCss: ThemeCss = theme => ({
   marginLeft: theme.space[1],
 })
 
-const labelSizeStyles: Record<StyledFieldLabelSize, ThemeCss> = {
+const labelSizeStyles: Record<StyledLabelSize, ThemeCss> = {
   L: theme => ({ fontSize: theme.fontSizes[2] }),
   M: theme => ({ fontSize: theme.fontSizes[1] }),
   S: theme => ({ fontSize: theme.fontSizes[0] }),
 }
 
 type StyledLabelOptions = {
-  labelSize?: StyledFieldLabelSize
+  labelSize?: StyledLabelSize
   required?: boolean
 }
 
@@ -124,15 +124,15 @@ function getStyledFieldLabel(
   }
 }
 
-export type StyledFieldLabelProps = React.ComponentPropsWithoutRef<"label"> &
+export type StyledLabelProps = React.ComponentPropsWithoutRef<"label"> &
   StyledLabelOptions
 
-export function StyledFieldLabel({
+export function StyledLabel({
   children,
   required,
   labelSize,
   ...rest
-}: StyledFieldLabelProps) {
+}: StyledLabelProps) {
   if (!children) {
     return null
   }
@@ -174,11 +174,16 @@ export function StyledGroupFieldLabel({
   )
 }
 
-export type FieldContainerProps = React.ComponentPropsWithoutRef<"div"> & {
+export type FieldLayoutContainerProps = React.ComponentPropsWithoutRef<
+  "div"
+> & {
   layout?: FormFieldBlockLayout
 }
 
-export function FieldContainer({ layout, ...rest }: FieldContainerProps) {
+export function FieldLayoutContainer({
+  layout,
+  ...rest
+}: FieldLayoutContainerProps) {
   const baseCss: ThemeCss = theme => [
     layout === `horizontal`
       ? {

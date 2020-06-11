@@ -8,9 +8,12 @@ import {
 import { WithFormFieldBlock } from "./FormField"
 import { FormGroupOptionsDirection } from "./FormGroupField"
 import { FormGroupFieldBlock } from "./FormFieldBlock"
-import { StyledCheckbox, StyledCheckboxLabel } from "./styled/StyledCheckbox"
+import {
+  StyledCheckbox,
+  StyledCheckboxLabel,
+} from "./styled-primitives/StyledCheckbox"
 import { Theme } from "../../../theme"
-import { OptionsContainer } from "./StyledFormElements"
+import { OptionsContainer } from "./styled-primitives/StyledFormElements"
 import { getOptionLabelOffsetStyles } from "../styles"
 
 export type CheckboxGroupFieldBlockOption = {

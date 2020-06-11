@@ -37,7 +37,7 @@ const errorStyles = (theme: Theme): CSSObject => ({
   borderColor: theme.colors.red[60],
 })
 
-export const baseStyles = {
+export const baseFormControlStyles = {
   disabledStyles,
   disabledPlaceholderStyles,
   focusedStyles,
@@ -63,16 +63,20 @@ export const baseInputCss: ThemeCss = theme => [
     zIndex: 1,
     WebkitAppearance: `none`,
 
-    ":focus": baseStyles.focusedStyles(theme),
+    ":focus": baseFormControlStyles.focusedStyles(theme),
 
-    ":disabled": baseStyles.disabledStyles(theme),
+    ":disabled": baseFormControlStyles.disabledStyles(theme),
 
-    "&:disabled::placeholder": baseStyles.disabledPlaceholderStyles(theme),
+    "&:disabled::placeholder": baseFormControlStyles.disabledPlaceholderStyles(
+      theme
+    ),
 
-    "&::placeholder": baseStyles.placeholderStyles(theme),
+    "&::placeholder": baseFormControlStyles.placeholderStyles(theme),
 
-    "&[aria-invalid='true']": baseStyles.errorStyles(theme),
-    "&[aria-invalid='true']:focus": baseStyles.focusedErrorStyles(theme),
+    "&[aria-invalid='true']": baseFormControlStyles.errorStyles(theme),
+    "&[aria-invalid='true']:focus": baseFormControlStyles.focusedErrorStyles(
+      theme
+    ),
   },
 ]
 

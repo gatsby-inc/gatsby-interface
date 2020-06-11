@@ -8,8 +8,11 @@ import {
 import { WithFormFieldBlock } from "./FormField"
 import { FormGroupOptionsDirection } from "./FormGroupField"
 import { FormGroupFieldBlock } from "./FormFieldBlock"
-import { StyledRadioButton, StyledRadioLabel } from "./styled/StyledRadio"
-import { OptionsContainer } from "./StyledFormElements"
+import {
+  StyledRadioButton,
+  StyledRadioLabel,
+} from "./styled-primitives/StyledRadio"
+import { OptionsContainer } from "./styled-primitives/StyledFormElements"
 import { Theme, ThemeCss } from "../../../theme"
 import React from "react"
 import { getOptionLabelOffsetStyles } from "../styles"

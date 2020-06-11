@@ -7,9 +7,9 @@ import {
   StyledCheckboxLabel,
   StyledCheckbox,
   StyledCheckboxProps,
-} from "./styled/StyledCheckbox"
+} from "./styled-primitives/StyledCheckbox"
 import { useFormField } from "../../form-skeletons"
-import { FormHint, FormError } from "./StyledFormElements"
+import { FormHint, FormError } from "./styled-primitives/StyledFormElements"
 import { ThemeCss } from "../../../theme"
 
 const baseCss: ThemeCss = _theme => ({

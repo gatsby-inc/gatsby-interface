@@ -2,8 +2,8 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 import { ThemeCss } from "../../../../theme"
-import { baseStyles } from "../../styles"
-import { StyledFieldLabel, StyledFieldLabelProps } from "../StyledFormElements"
+import { baseFormControlStyles } from "../../styles"
+import { StyledLabel, StyledLabelProps } from "./StyledFormElements"
 
 export type StyledRadioButtonProps = Omit<
   React.ComponentPropsWithRef<"input">,
@@ -22,10 +22,10 @@ export const StyledRadioButton = React.forwardRef<
   )
 })
 
-export type StyledRadioLabelProps = StyledFieldLabelProps
+export type StyledRadioLabelProps = StyledLabelProps
 
 export function StyledRadioLabel(props: StyledRadioLabelProps) {
-  return <StyledFieldLabel labelSize="L" css={{ marginBottom: 0 }} {...props} />
+  return <StyledLabel labelSize="L" css={{ marginBottom: 0 }} {...props} />
 }
 
 const DOT_SIZE = `8px`
@@ -83,7 +83,7 @@ const styledRadioButtonCss: ThemeCss = theme => [
     },
 
     "&:focus + span::before": [
-      baseStyles.focusedStyles(theme),
+      baseFormControlStyles.focusedStyles(theme),
       {
         transition: `border-color 0.15s ease-in-out 0s`,
       },

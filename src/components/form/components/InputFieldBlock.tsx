@@ -4,7 +4,7 @@ import React from "react"
 
 import { WithFormFieldBlock } from "./FormField"
 import { FormFieldBlock } from "./FormFieldBlock"
-import { StyledInput, StyledInputProps } from "./styled/StyledInput"
+import { StyledInput, StyledInputProps } from "./styled-primitives/StyledInput"
 
 export type InputFieldBlockProps = WithFormFieldBlock<StyledInputProps>
 

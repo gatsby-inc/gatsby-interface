@@ -2,8 +2,8 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 import { ThemeCss } from "../../../../theme"
-import { baseStyles } from "../../styles"
-import { StyledFieldLabel, StyledFieldLabelProps } from "../StyledFormElements"
+import { baseFormControlStyles } from "../../styles"
+import { StyledLabel, StyledLabelProps } from "./StyledFormElements"
 
 export type StyledCheckboxProps = Omit<
   React.ComponentPropsWithRef<"input">,
@@ -24,10 +24,10 @@ export const StyledCheckbox = React.forwardRef<
   )
 })
 
-export type StyledCheckboxLabelProps = StyledFieldLabelProps
+export type StyledCheckboxLabelProps = StyledLabelProps
 
 export function StyledCheckboxLabel(props: StyledCheckboxLabelProps) {
-  return <StyledFieldLabel labelSize="L" css={{ marginBottom: 0 }} {...props} />
+  return <StyledLabel labelSize="L" css={{ marginBottom: 0 }} {...props} />
 }
 
 const CHECKBOX_BOX_SIZE = "20px"
@@ -42,7 +42,7 @@ const styledCheckboxCss: ThemeCss = theme => [
     margin: 0,
     padding: 0,
 
-    "&:focus + span::before": baseStyles.focusedStyles(theme),
+    "&:focus + span::before": baseFormControlStyles.focusedStyles(theme),
 
     "&:checked + span": {
       color: theme.colors.white,
@@ -66,14 +66,14 @@ const styledCheckboxCss: ThemeCss = theme => [
     },
 
     "&:disabled + span::before": [
-      baseStyles.disabledStyles(theme),
+      baseFormControlStyles.disabledStyles(theme),
       {
         borderColor: theme.colors.grey[30],
       },
     ],
 
-    "&[aria-invalid='true']": baseStyles.errorStyles(theme),
-    "&[aria-invalid='true']:focus + span::before": baseStyles.focusedErrorStyles(
+    "&[aria-invalid='true']": baseFormControlStyles.errorStyles(theme),
+    "&[aria-invalid='true']:focus + span::before": baseFormControlStyles.focusedErrorStyles(
       theme
     ),
   },

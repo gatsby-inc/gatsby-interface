@@ -4,7 +4,10 @@ import React from "react"
 
 import { WithFormFieldBlock } from "./FormField"
 import { FormFieldBlock } from "./FormFieldBlock"
-import { StyledTextArea, StyledTextAreaProps } from "./styled/StyledTextArea"
+import {
+  StyledTextArea,
+  StyledTextAreaProps,
+} from "./styled-primitives/StyledTextArea"
 
 export type TextAreaFieldBlockProps = WithFormFieldBlock<StyledTextAreaProps>
 

@@ -12,16 +12,16 @@ import {
 import {
   FormError,
   FormHint,
-  StyledFieldLabel,
+  StyledLabel,
   StyledGroupFieldLabel,
-  StyledFieldLabelSize,
-  FieldContainer,
-} from "./StyledFormElements"
+  StyledLabelSize,
+  FieldLayoutContainer,
+} from "./styled-primitives/StyledFormElements"
 
 export type CommonFieldBlockProps = {
   id: string
   label: React.ReactNode
-  labelSize?: StyledFieldLabelSize
+  labelSize?: StyledLabelSize
   error?: React.ReactNode
   hint?: React.ReactNode
   validationMode?: ErrorValidationMode
@@ -85,27 +85,27 @@ export function FormFieldBlockBoilerplate({
 }: Omit<React.ComponentPropsWithoutRef<"div">, "label"> & {
   fieldData: FormFieldData
   label?: React.ReactNode
-  labelSize?: StyledFieldLabelSize
+  labelSize?: StyledLabelSize
   error?: React.ReactNode
   hint?: React.ReactNode
   layout?: FormFieldBlockLayout
 }) {
   return (
-    <FieldContainer layout={layout} {...rest}>
-      <StyledFieldLabel
+    <FieldLayoutContainer layout={layout} {...rest}>
+      <StyledLabel
         required={fieldData.controlProps.required}
         labelSize={labelSize}
         {...fieldData.labelProps}
         css={{ display: `block` }}
       >
         {label}
-      </StyledFieldLabel>
+      </StyledLabel>
       <div>
         {children}
         <FormHint {...fieldData.hintProps}>{hint}</FormHint>
         <FormError {...fieldData.errorProps}>{error}</FormError>
       </div>
-    </FieldContainer>
+    </FieldLayoutContainer>
   )
 }
 
@@ -178,13 +178,13 @@ export function FormGroupFieldBlockBoilerplate({
 }: Omit<React.ComponentPropsWithoutRef<"div">, "label"> & {
   fieldData: FormGroupFieldData
   label?: React.ReactNode
-  labelSize?: StyledFieldLabelSize
+  labelSize?: StyledLabelSize
   error?: React.ReactNode
   hint?: React.ReactNode
   layout?: FormFieldBlockLayout
 }) {
   return (
-    <FieldContainer
+    <FieldLayoutContainer
       layout={layout}
       {...fieldData.groupContainerProps}
       {...rest}
@@ -202,6 +202,6 @@ export function FormGroupFieldBlockBoilerplate({
         <FormHint {...fieldData.hintProps}>{hint}</FormHint>
         <FormError {...fieldData.errorProps}>{error}</FormError>
       </div>
-    </FieldContainer>
+    </FieldLayoutContainer>
   )
 }
