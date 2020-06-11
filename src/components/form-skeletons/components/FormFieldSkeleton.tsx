@@ -1,5 +1,8 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
 import React from "react"
-import { getHintId, getErrorId } from "../utils"
+import { getHintId, getErrorId, getErrorAriaLiveAttribute } from "../utils"
+import { ErrorValidationMode } from "../types"
 
 export type FormFieldSkeletonContextValue = {
   id: string
@@ -30,166 +33,6 @@ export type FormFieldSkeletonProps = {
   hasHint?: boolean
   hasError?: boolean
   children?: React.ReactNode
-}
-
-export function useFormField(
-  fieldId: string,
-  {
-    required = false,
-    hasError = false,
-    hasHint = false,
-    validationMode,
-  }: {
-    required?: boolean
-    hasError?: boolean
-    hasHint?: boolean
-    validationMode?: ErrorValidationMode
-  }
-): FormFieldData {
-  const hintId = getHintId(fieldId)
-  const errorId = getErrorId(fieldId)
-  const controlDescribedBy =
-    [hasError && errorId, hasHint && hintId]
-      .filter(describedBy => describedBy)
-      .join(` `) || undefined
-
-  return {
-    controlProps: {
-      id: fieldId,
-      "aria-describedby": controlDescribedBy,
-      "aria-invalid": hasError,
-      required,
-    },
-    labelProps: {
-      htmlFor: fieldId,
-    },
-    hintProps: {
-      id: hintId,
-      hidden: !hasHint,
-    },
-    errorProps: {
-      id: errorId,
-      hidden: !hasError,
-      "aria-live": getErrorAriaLiveAttribute(validationMode),
-    },
-  }
-}
-
-export type FormFieldData = {
-  controlProps: {
-    id: string
-    "aria-describedby": string | undefined
-    "aria-invalid": boolean
-    required: boolean
-  }
-  labelProps: {
-    htmlFor: string
-  }
-  hintProps: {
-    id: string
-    hidden: boolean
-  }
-  errorProps: {
-    id: string
-    hidden: boolean
-    "aria-live": `polite` | `assertive` | `off` | undefined
-  }
-}
-
-export type FormGroupFieldData = {
-  groupContainerProps: {
-    id: string
-    role: `group`
-    "aria-labelledby": string
-  }
-  groupLabelProps: {
-    id: string
-  }
-  getControlProps: (
-    optionValue: string
-  ) => {
-    id: string
-    "aria-describedby": string | undefined
-    "aria-invalid": boolean
-    required: boolean
-  }
-  getControlLabelProps: (
-    optionValue: string
-  ) => {
-    htmlFor: string
-  }
-  hintProps: {
-    id: string
-    hidden: boolean
-  }
-  errorProps: {
-    id: string
-    hidden: boolean
-    "aria-live": `polite` | `assertive` | `off` | undefined
-  }
-  meta: {
-    required: boolean
-  }
-}
-
-export function useFormGroupField(
-  fieldId: string,
-  {
-    required = false,
-    hasError = false,
-    hasHint = false,
-    validationMode,
-  }: {
-    required?: boolean
-    hasError?: boolean
-    hasHint?: boolean
-    validationMode?: ErrorValidationMode
-  }
-): FormGroupFieldData {
-  const hintId = getHintId(fieldId)
-  const errorId = getErrorId(fieldId)
-  const controlDescribedBy =
-    [hasError && errorId, hasHint && hintId]
-      .filter(describedBy => describedBy)
-      .join(` `) || undefined
-
-  const groupLabelId = `${fieldId}__legend`
-
-  return {
-    groupContainerProps: {
-      id: fieldId,
-      role: `group`,
-      "aria-labelledby": groupLabelId,
-    },
-    groupLabelProps: {
-      id: groupLabelId,
-    },
-    getControlProps: (optionValue: string) => ({
-      id: getGroupOptionId(fieldId, optionValue),
-      "aria-describedby": controlDescribedBy,
-      "aria-invalid": hasError,
-      required,
-    }),
-    getControlLabelProps: (optionValue: string) => ({
-      htmlFor: getGroupOptionId(fieldId, optionValue),
-    }),
-    hintProps: {
-      id: hintId,
-      hidden: !hasHint,
-    },
-    errorProps: {
-      id: errorId,
-      hidden: !hasError,
-      "aria-live": getErrorAriaLiveAttribute(validationMode),
-    },
-    meta: {
-      required,
-    },
-  }
-}
-
-function getGroupOptionId(fieldId: string, optionValue: string) {
-  return `${fieldId}__option--${optionValue}`
 }
 
 function FormFieldSkeletonProvider({
@@ -254,7 +97,6 @@ export const FormFieldSkeletonHint: React.FC<FormFieldSkeletonHintProps> = ({
   )
 }
 
-export type ErrorValidationMode = "focus" | "change" | "submit"
 export type FormFieldSkeletonErrorProps = Omit<
   JSX.IntrinsicElements["div"],
   "ref" | "id"
@@ -284,16 +126,4 @@ export function FormFieldSkeleton(props: FormFieldSkeletonProps) {
 
 export function useFormFieldSkeleton() {
   return React.useContext(FormFieldSkeletonContext)
-}
-
-function getErrorAriaLiveAttribute(
-  validationMode?: ErrorValidationMode
-): React.HTMLAttributes<HTMLDivElement>["aria-live"] {
-  if (validationMode === `focus`) {
-    return `assertive`
-  }
-  if (validationMode === `change`) {
-    return `polite`
-  }
-  return undefined
 }

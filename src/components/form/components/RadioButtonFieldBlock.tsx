@@ -69,7 +69,6 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
       return defaultCheckedOption ? defaultCheckedOption.value : undefined
     }
   )
-  console.log({ checkedOption })
 
   return (
     <FormGroupFieldBlock
@@ -82,8 +81,9 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
       validationMode={validationMode}
       layout={layout}
       className={className}
+      role="radiogroup"
     >
-      {({ getControlProps, getControlLabelProps }) => (
+      {({ getOptionControlProps, getOptionLabelProps }) => (
         <OptionsContainer layout={layout} optionsDirection={optionsDirection}>
           {options.map(({ value, label, ...restOption }) => (
             <div
@@ -129,12 +129,12 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
                 checked={
                   fieldValue === undefined ? undefined : fieldValue === value
                 }
-                {...getControlProps(value)}
+                {...getOptionControlProps(value)}
                 {...rest}
                 {...restOption}
               />
               <StyledRadioLabel
-                {...getControlLabelProps(value)}
+                {...getOptionLabelProps(value)}
                 css={getOptionLabelOffsetStyles(optionsDirection)}
               >
                 {label}

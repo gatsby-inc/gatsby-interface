@@ -117,14 +117,15 @@ export function FormFieldBlockBoilerplate({
 export type RenderGroupFieldControl = (
   controlProps: Pick<
     FormGroupFieldData,
-    "getControlProps" | "getControlLabelProps"
+    "getOptionControlProps" | "getOptionLabelProps"
   >
 ) => React.ReactNode
 
 export type FormGroupFieldBlockProps = CommonFieldBlockProps & {
   required?: boolean
   className?: string
-  children: React.ReactNode | RenderGroupFieldControl
+  role?: "group" | "radiogroup"
+  children: RenderGroupFieldControl
 }
 
 export function FormGroupFieldBlock({
@@ -137,12 +138,13 @@ export function FormGroupFieldBlock({
   validationMode,
   layout,
   className,
+  role = `group`,
   children,
 }: FormGroupFieldBlockProps) {
   const fieldData = useFormGroupField(id, {
     required: required,
-    hasError: !!error,
-    hasHint: !!hint,
+    error,
+    hint,
     validationMode,
   })
 
@@ -154,14 +156,13 @@ export function FormGroupFieldBlock({
       hint={hint}
       layout={layout}
       labelSize={labelSize}
+      role={role}
       className={className}
     >
-      {typeof children === `function`
-        ? children({
-            getControlProps: fieldData.getControlProps,
-            getControlLabelProps: fieldData.getControlLabelProps,
-          })
-        : children}
+      {children({
+        getOptionControlProps: fieldData.getOptionControlProps,
+        getOptionLabelProps: fieldData.getOptionLabelProps,
+      })}
     </FormGroupFieldBlockBoilerplate>
   )
 }
@@ -192,11 +193,9 @@ export function FormGroupFieldBlockBoilerplate({
       <StyledGroupFieldLabel
         labelSize={labelSize}
         required={fieldData.meta.required}
-        {...fieldData.groupLabelProps}
+        {...fieldData.getGroupLabelProps(label)}
         css={{ display: `block` }}
-      >
-        {label}
-      </StyledGroupFieldLabel>
+      />
       <div>
         {children}
         <FormHint {...fieldData.hintProps}>{hint}</FormHint>

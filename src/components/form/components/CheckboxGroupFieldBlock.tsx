@@ -60,7 +60,7 @@ export const CheckboxGroupFieldBlock = (
       layout={layout}
       className={className}
     >
-      {({ getControlProps, getControlLabelProps }) => (
+      {({ getOptionControlProps, getOptionLabelProps }) => (
         <OptionsContainer layout={layout} optionsDirection={optionsDirection}>
           {options.map(({ value, label, ...restOption }) => (
             <div
@@ -90,12 +90,12 @@ export const CheckboxGroupFieldBlock = (
                     ? undefined
                     : fieldValue.includes(value)
                 }
-                {...getControlProps(value)}
+                {...getOptionControlProps(value)}
                 {...rest}
                 {...restOption}
               />
               <StyledCheckboxLabel
-                {...getControlLabelProps(value)}
+                {...getOptionLabelProps(value)}
                 css={getOptionLabelOffsetStyles(optionsDirection)}
               >
                 {label}
