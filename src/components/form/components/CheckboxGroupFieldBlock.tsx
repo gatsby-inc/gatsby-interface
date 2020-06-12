@@ -61,7 +61,7 @@ export const CheckboxGroupFieldBlock = (
       className={className}
     >
       {({ getOptionControlProps, getOptionLabelProps }) => (
-        <OptionsContainer layout={layout} optionsDirection={optionsDirection}>
+        <OptionsContainer optionsDirection={optionsDirection}>
           {options.map(({ value, label, ...restOption }) => (
             <div
               key={value}

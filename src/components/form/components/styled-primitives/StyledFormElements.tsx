@@ -3,7 +3,6 @@ import { jsx, keyframes } from "@emotion/core"
 import React from "react"
 import { ThemeCss } from "../../../../theme"
 import { MdError } from "react-icons/md"
-import { FormFieldBlockLayout } from "../FormField"
 import { FormGroupOptionsDirection } from "../FormGroupField"
 
 const auxillaryTextCss: ThemeCss = theme => ({
@@ -79,6 +78,9 @@ const labelBaseCss: ThemeCss = theme => ({
   color: theme.colors.grey[90],
   lineHeight: theme.lineHeights.dense,
   alignSelf: `baseline`,
+  wordWrap: `break-word`,
+  overflowWrap: `break-word`,
+  hyphens: `auto`,
 })
 
 const labelRequiredFlagCss: ThemeCss = theme => ({
@@ -149,7 +151,7 @@ export function StyledLabel({
   )
 }
 
-export type StyledGroupLabelProps = React.ComponentPropsWithoutRef<"div"> &
+export type StyledGroupLabelProps = React.ComponentPropsWithoutRef<"legend"> &
   StyledLabelOptions
 
 export function StyledGroupLabel({
@@ -167,35 +169,33 @@ export function StyledGroupLabel({
     labelSize,
   })
 
+  const finalLabelCss: ThemeCss = theme => [
+    labelCss(theme),
+    { display: `block`, padding: 0 },
+  ]
+
   return (
-    <div {...rest} css={labelCss}>
+    <legend {...rest} css={finalLabelCss}>
       {finalLabel}
-    </div>
+    </legend>
   )
 }
 
-export type FieldLayoutContainerProps = React.ComponentPropsWithoutRef<
-  "div"
-> & {
-  layout?: FormFieldBlockLayout
-}
+export type FormFieldsetProps = React.ComponentPropsWithoutRef<"fieldset">
 
-export function FieldLayoutContainer({
-  layout,
-  ...rest
-}: FieldLayoutContainerProps) {
-  const baseCss: ThemeCss = theme => [
-    layout === `horizontal`
-      ? {
-          display: `grid`,
-          gridTemplateColumns: `auto auto`,
-          gridColumnGap: theme.space[7],
-          alignItems: `baseline`,
-        }
-      : { display: `block` },
-  ]
-
-  return <div css={baseCss} {...rest}></div>
+export function FormFieldset(props: FormFieldsetProps) {
+  return (
+    <fieldset
+      {...props}
+      // CSS reset for <fieldset> based on https://thatemil.com/blog/2015/01/03/reset-your-fieldset/
+      css={{
+        border: 0,
+        margin: 0,
+        padding: `0.01em 0 0 0`,
+        minWidth: 0,
+      }}
+    />
+  )
 }
 
 const horizontalOptionsCss: ThemeCss = theme => ({
@@ -212,22 +212,17 @@ const verticalOptionsCss: ThemeCss = theme => [
 ]
 
 export type OptionsContainerProps = React.ComponentPropsWithoutRef<"div"> & {
-  layout?: FormFieldBlockLayout
   optionsDirection?: FormGroupOptionsDirection
 }
 
 export function OptionsContainer({
-  layout = `vertical`,
   optionsDirection = `column`,
   ...rest
 }: OptionsContainerProps) {
   const baseCss: ThemeCss = theme => [
     optionsDirection === `row`
       ? horizontalOptionsCss(theme)
-      : [
-          verticalOptionsCss(theme),
-          layout === `horizontal` && { paddingTop: 0 },
-        ],
+      : verticalOptionsCss(theme),
   ]
   return <div css={baseCss} {...rest} />
 }

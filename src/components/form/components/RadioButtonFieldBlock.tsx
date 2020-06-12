@@ -23,6 +23,10 @@ const framedCss: ThemeCss = theme => ({
   margin: 0,
   width: `100%`,
   transition: `border .15s ease-in-out`,
+  paddingTop: theme.space[4],
+  paddingBottom: theme.space[4],
+  paddingLeft: theme.space[4],
+  paddingRight: theme.space[5],
 })
 
 export type RadioButtonFieldBlockOption = {
@@ -84,7 +88,7 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
       role="radiogroup"
     >
       {({ getOptionControlProps, getOptionLabelProps }) => (
-        <OptionsContainer layout={layout} optionsDirection={optionsDirection}>
+        <OptionsContainer optionsDirection={optionsDirection}>
           {options.map(({ value, label, ...restOption }) => (
             <div
               key={value}
@@ -95,32 +99,27 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
                   flexShrink: 0,
                   marginBottom: theme.space[4],
                 },
-                variant === `framed` && [
-                  framedCss(theme),
-                  {
-                    paddingTop: theme.space[4],
-                    paddingBottom: theme.space[4],
-                    paddingLeft: theme.space[4],
-                    paddingRight: theme.space[5],
-                  },
-                  value === checkedOption && {
-                    borderColor: theme.colors.purple[60],
-                  },
-                ],
-                variant !== `framed` && [
-                  {
-                    marginBottom: theme.space[4],
-                  },
-                  optionsDirection === `row`
-                    ? {
-                        marginRight: theme.space[6],
-                      }
-                    : {
-                        "&:last-of-type": {
-                          marginBottom: 0,
-                        },
+                variant === `framed`
+                  ? [
+                      framedCss(theme),
+                      value === checkedOption && {
+                        borderColor: theme.colors.purple[60],
                       },
-                ],
+                    ]
+                  : [
+                      {
+                        marginBottom: theme.space[4],
+                      },
+                      optionsDirection === `row`
+                        ? {
+                            marginRight: theme.space[6],
+                          }
+                        : {
+                            "&:last-of-type": {
+                              marginBottom: 0,
+                            },
+                          },
+                    ],
               ]}
             >
               <StyledRadioButton

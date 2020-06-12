@@ -15,8 +15,11 @@ import {
   StyledLabel,
   StyledGroupLabel,
   StyledLabelSize,
-  FieldLayoutContainer,
+  FormFieldsetProps,
+  FormFieldset,
 } from "./styled-primitives/StyledFormElements"
+import { getFieldLayoutStyles } from "../styles"
+import { ThemeCss } from "../../../theme"
 
 export type CommonFieldBlockProps = {
   id: string
@@ -90,22 +93,29 @@ export function FormFieldBlockBoilerplate({
   hint?: React.ReactNode
   layout?: FormFieldBlockLayout
 }) {
+  const { labelCss, fieldBodyCss } = getFieldLayoutStyles(layout)
+
+  const finalLabelCss: ThemeCss = theme => [
+    labelCss(theme),
+    { display: `block` },
+  ]
+
   return (
-    <FieldLayoutContainer layout={layout} {...rest}>
+    <div {...rest}>
       <StyledLabel
         required={fieldData.controlProps.required}
         labelSize={labelSize}
         {...fieldData.labelProps}
-        css={{ display: `block` }}
+        css={finalLabelCss}
       >
         {label}
       </StyledLabel>
-      <div>
+      <div css={fieldBodyCss}>
         {children}
         <FormHint {...fieldData.hintProps}>{hint}</FormHint>
         <FormError {...fieldData.errorProps}>{error}</FormError>
       </div>
-    </FieldLayoutContainer>
+    </div>
   )
 }
 
@@ -176,7 +186,7 @@ export function FormGroupFieldBlockBoilerplate({
   layout,
   labelSize,
   ...rest
-}: Omit<React.ComponentPropsWithoutRef<"div">, "label"> & {
+}: Omit<FormFieldsetProps, "label"> & {
   fieldData: AriaFormGroupFieldData
   label?: React.ReactNode
   labelSize?: StyledLabelSize
@@ -184,23 +194,25 @@ export function FormGroupFieldBlockBoilerplate({
   hint?: React.ReactNode
   layout?: FormFieldBlockLayout
 }) {
+  const { labelCss, fieldBodyCss } = getFieldLayoutStyles(layout, true)
+  const finalLabelCss: ThemeCss = theme => [
+    labelCss(theme),
+    { display: `block` },
+  ]
+
   return (
-    <FieldLayoutContainer
-      layout={layout}
-      {...fieldData.groupContainerProps}
-      {...rest}
-    >
+    <FormFieldset {...fieldData.groupContainerProps} {...rest}>
       <StyledGroupLabel
         labelSize={labelSize}
         required={fieldData.meta.required}
         {...fieldData.getGroupLabelProps(label)}
-        css={{ display: `block` }}
+        css={finalLabelCss}
       />
-      <div>
+      <div css={fieldBodyCss}>
         {children}
         <FormHint {...fieldData.hintProps}>{hint}</FormHint>
         <FormError {...fieldData.errorProps}>{error}</FormError>
       </div>
-    </FieldLayoutContainer>
+    </FormFieldset>
   )
 }

@@ -1,6 +1,7 @@
 import { CSSObject } from "@emotion/core"
 import { ThemeCss, Theme } from "../../../theme"
 import { FormGroupOptionsDirection } from "../components/FormGroupField"
+import { FormFieldBlockLayout } from "../components/FormField"
 
 /**
  * Base styles
@@ -101,4 +102,47 @@ export function getOptionLabelOffsetStyles(
   return (theme: Theme): CSSObject => ({
     paddingLeft: optionsDirection === `row` ? theme.space[2] : theme.space[4],
   })
+}
+
+export function getFieldLayoutStyles(
+  layout: FormFieldBlockLayout = `vertical`,
+  isGroupField = false
+) {
+  const isHorizontal = layout === `horizontal`
+
+  const labelCss: ThemeCss = theme => [
+    isHorizontal && {
+      [theme.mediaQueries.desktop]: [
+        {
+          display: `table-cell`,
+          minWidth: `20ch`,
+          maxWidth: `20ch`,
+          width: `20ch`,
+          paddingRight: theme.space[7],
+          paddingTop: theme.space[3],
+          verticalAlign: `top`,
+        },
+        isGroupField && {
+          // Unfortunately, setting "display" to <legend> does not seem to work in Chrome,
+          // So instead we are going to rely on "float" for group form fields
+          float: `left`,
+        },
+      ],
+    },
+  ]
+
+  const fieldBodyCss: ThemeCss = theme => [
+    isHorizontal && {
+      [theme.mediaQueries.desktop]: {
+        display: `table-cell`,
+        width: `100%`,
+        verticalAlign: `top`,
+      },
+    },
+  ]
+
+  return {
+    labelCss: labelCss,
+    fieldBodyCss: fieldBodyCss,
+  }
 }
