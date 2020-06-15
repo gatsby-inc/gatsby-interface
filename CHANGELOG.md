@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.168](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.167...v0.0.168) (2020-06-15)
+
+
+### Bug Fixes
+
+* unpin gatsby, react and react-dom dependencies ([#341](https://github.com/gatsby-inc/gatsby-interface/issues/341)) ([8229e46](https://github.com/gatsby-inc/gatsby-interface/commit/8229e4682553ed01180c3521904ec6bea0352345))
+
 ### [0.0.167](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.166...v0.0.167) (2020-06-01)
 
 
