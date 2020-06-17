@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import React from "react"
-import { text, radios } from "@storybook/addon-knobs"
+import { text, radios, select } from "@storybook/addon-knobs"
 import { DecoratorFn } from "@storybook/react"
 import { withDesign } from "storybook-addon-designs"
 import {
@@ -94,6 +94,11 @@ export const Sandbox = () => {
           </EmptyStateSecondaryAction>
         ) : null
       }
+      headingAs={select(
+        "headingAs",
+        ["h1", "h2", "h3", "h4", "h5", "h6", "span"],
+        "h3"
+      )}
     />
   )
 }
