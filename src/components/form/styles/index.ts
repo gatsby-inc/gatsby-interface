@@ -117,6 +117,9 @@ export function getFieldLayoutStyles(
           display: `table-cell`,
           minWidth: `20ch`,
           maxWidth: `20ch`,
+          // Use box-sizing in combination with width and padding-right
+          // to ensure that the label text itself takes no more than 20 chars in width
+          boxSizing: `content-box`,
           width: `20ch`,
           paddingRight: theme.space[7],
           paddingTop: theme.space[3],
