@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import { WithFormFieldBlock } from "./FormField"
+import { WithFormFieldBlock } from "./FormFieldBlock"
 import {
   StyledCheckboxLabel,
   StyledCheckbox,

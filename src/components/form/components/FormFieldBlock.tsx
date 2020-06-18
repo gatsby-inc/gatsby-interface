@@ -29,6 +29,7 @@ export type CommonFieldBlockProps = {
   hint?: React.ReactNode
   validationMode?: ErrorValidationMode
   layout?: FormFieldBlockLayout
+  required?: boolean
 }
 
 export type RenderFieldControl = (
@@ -36,10 +37,12 @@ export type RenderFieldControl = (
 ) => React.ReactNode
 
 export type FormFieldBlockProps = CommonFieldBlockProps & {
-  required?: boolean
   className?: string
   children: React.ReactNode | RenderFieldControl
 }
+
+export type WithFormFieldBlock<T> = Omit<T, keyof CommonFieldBlockProps> &
+  CommonFieldBlockProps
 
 export function FormFieldBlock({
   id,
@@ -132,7 +135,6 @@ export type RenderGroupFieldControl = (
 ) => React.ReactNode
 
 export type FormGroupFieldBlockProps = CommonFieldBlockProps & {
-  required?: boolean
   className?: string
   role?: "group" | "radiogroup"
   children: RenderGroupFieldControl

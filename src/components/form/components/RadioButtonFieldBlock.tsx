@@ -5,9 +5,8 @@ import {
   RadioButtonFieldOptionItemProps,
   RadioButtonFieldVariant,
 } from "./RadioButtonField"
-import { WithFormFieldBlock } from "./FormField"
 import { FormGroupOptionsDirection } from "./FormGroupField"
-import { FormGroupFieldBlock } from "./FormFieldBlock"
+import { FormGroupFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
 import {
   StyledRadioButton,
   StyledRadioLabel,

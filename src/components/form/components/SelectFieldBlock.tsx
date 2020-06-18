@@ -2,8 +2,7 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import { WithFormFieldBlock } from "./FormField"
-import { FormFieldBlock } from "./FormFieldBlock"
+import { FormFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
 import {
   StyledSelect,
   StyledSelectProps,
