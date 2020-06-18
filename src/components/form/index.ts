@@ -1,4 +1,5 @@
 export * from "./components/FormField"
+export * from "./components/FormFieldBlock"
 
 export * from "./components/InputField"
 export * from "./components/InputFieldBlock"
