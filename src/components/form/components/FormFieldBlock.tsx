@@ -136,7 +136,6 @@ export type RenderGroupFieldControl = (
 
 export type FormGroupFieldBlockProps = CommonFieldBlockProps & {
   className?: string
-  role?: "group" | "radiogroup"
   children: RenderGroupFieldControl
 }
 
@@ -150,7 +149,6 @@ export function FormGroupFieldBlock({
   validationMode,
   layout,
   className,
-  role = `group`,
   children,
 }: FormGroupFieldBlockProps) {
   const fieldData = useAriaFormGroupField(id, {
@@ -168,7 +166,6 @@ export function FormGroupFieldBlock({
       hint={hint}
       layout={layout}
       labelSize={labelSize}
-      role={role}
       className={className}
     >
       {children({
@@ -203,11 +200,11 @@ export function FormGroupFieldBlockBoilerplate({
   ]
 
   return (
-    <FormFieldset {...fieldData.groupContainerProps} {...rest}>
+    <FormFieldset {...rest}>
       <StyledGroupLabel
         labelSize={labelSize}
         required={fieldData.meta.required}
-        {...fieldData.getGroupLabelProps(label)}
+        {...fieldData.getLegendProps(label)}
         css={finalLabelCss}
       />
       <div css={fieldBodyCss}>

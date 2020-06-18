@@ -84,7 +84,6 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
       validationMode={validationMode}
       layout={layout}
       className={className}
-      role="radiogroup"
     >
       {({ getOptionControlProps, getOptionLabelProps }) => (
         <OptionsContainer optionsDirection={optionsDirection}>

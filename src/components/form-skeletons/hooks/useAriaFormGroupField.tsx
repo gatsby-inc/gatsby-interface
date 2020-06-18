@@ -6,15 +6,9 @@ import { visuallyHiddenCss } from "../../../stylesheets/a11y"
 import { ErrorValidationMode } from "../types"
 
 export type AriaFormGroupFieldData = {
-  groupContainerProps: {
-    id: string
-    role: `group`
-    "aria-labelledby": string
-  }
-  getGroupLabelProps: (
+  getLegendProps: (
     label: React.ReactNode
   ) => {
-    id: string
     children: React.ReactNode
   }
   getOptionControlProps: (
@@ -78,16 +72,8 @@ export function useAriaFormGroupField(
   const hintId = getHintId(fieldId)
   const errorId = getErrorId(fieldId)
 
-  const groupLabelId = `${fieldId}__legend`
-
   return {
-    groupContainerProps: {
-      id: fieldId,
-      role: `group`,
-      "aria-labelledby": groupLabelId,
-    },
-    getGroupLabelProps: (label: React.ReactNode) => ({
-      id: groupLabelId,
+    getLegendProps: (label: React.ReactNode) => ({
       children: (
         <React.Fragment>
           {label}
