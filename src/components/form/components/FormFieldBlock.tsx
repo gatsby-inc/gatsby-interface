@@ -13,7 +13,7 @@ import {
   FormError,
   FormHint,
   StyledLabel,
-  StyledGroupLabel,
+  FormLegend,
   StyledLabelSize,
   FormFieldsetProps,
   FormFieldset,
@@ -201,7 +201,7 @@ export function FormGroupFieldBlockBoilerplate({
 
   return (
     <FormFieldset {...rest}>
-      <StyledGroupLabel
+      <FormLegend
         labelSize={labelSize}
         required={fieldData.meta.required}
         {...fieldData.getLegendProps(label)}

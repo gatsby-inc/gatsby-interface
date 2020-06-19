@@ -151,15 +151,15 @@ export function StyledLabel({
   )
 }
 
-export type StyledGroupLabelProps = React.ComponentPropsWithoutRef<"legend"> &
+export type FormLegendProps = React.ComponentPropsWithoutRef<"legend"> &
   StyledLabelOptions
 
-export function StyledGroupLabel({
+export function FormLegend({
   children,
   required,
   labelSize,
   ...rest
-}: StyledGroupLabelProps) {
+}: FormLegendProps) {
   if (!children) {
     return null
   }
