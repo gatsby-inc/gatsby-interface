@@ -164,6 +164,29 @@ WithGraphic.story = {
   decorators: [withVariationsContainer],
 }
 
+export const FitContainerWidth = () => (
+  <EmptyState
+    heading="Image/SVG/Component graphic"
+    text="EmptyState takes all available width while keeping max width for its content"
+    graphic={<GraphicImage />}
+    primaryAction={
+      <EmptyStatePrimaryAction>Upgrade plan</EmptyStatePrimaryAction>
+    }
+    secondaryAction={
+      <EmptyStateSecondaryAction href="https://www.github.com" target="_blank">
+        View production branch
+      </EmptyStateSecondaryAction>
+    }
+    variant="BORDERED"
+  />
+)
+
+FitContainerWidth.story = {
+  parameters: {
+    layout: `padded`,
+  },
+}
+
 function GraphicImage() {
   return (
     <svg

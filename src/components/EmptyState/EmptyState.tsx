@@ -9,13 +9,16 @@ import { LinkButtonProps, LinkButton } from "../LinkButton"
 import { AnchorButtonProps, AnchorButton } from "../AnchorButton"
 import { LinkProps, Link } from "../Link"
 
-const baseCss: ThemeCss = _theme => ({
+const baseCss: ThemeCss = _theme => ({})
+
+const innerCss: ThemeCss = _theme => ({
   boxSizing: `content-box`,
   maxWidth: 480,
   display: `flex`,
   flexDirection: `column`,
   alignItems: `center`,
   textAlign: `center`,
+  margin: `0 auto`,
 })
 
 const graphicCss: ThemeCss = theme => ({
@@ -113,15 +116,22 @@ export function EmptyState({
 }: EmptyStateProps) {
   return (
     <div css={(theme: Theme) => [baseCss(theme), variantCss[variant](theme)]}>
-      {graphic && <div css={graphicCss}>{graphic}</div>}
-      <Heading as={headingAs} css={headingCss} variant="PRIMARY" tone="NEUTRAL">
-        {heading}
-      </Heading>
-      <Text size="M" css={textCss}>
-        {text}
-      </Text>
-      {primaryAction}
-      {secondaryAction}
+      <div css={innerCss}>
+        {graphic && <div css={graphicCss}>{graphic}</div>}
+        <Heading
+          as={headingAs}
+          css={headingCss}
+          variant="PRIMARY"
+          tone="NEUTRAL"
+        >
+          {heading}
+        </Heading>
+        <Text size="M" css={textCss}>
+          {text}
+        </Text>
+        {primaryAction}
+        {secondaryAction}
+      </div>
     </div>
   )
 }
