@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.169](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.168...v0.0.169) (2020-06-22)
+
+
+### Features
+
+* EmptyState component ([#342](https://github.com/gatsby-inc/gatsby-interface/issues/342)) ([8a6212b](https://github.com/gatsby-inc/gatsby-interface/commit/8a6212bae63fc811f271dd874480eb5c448197dc))
+
 ### [0.0.168](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.167...v0.0.168) (2020-06-15)
 
 
