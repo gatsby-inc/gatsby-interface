@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.171](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.170...v0.0.171) (2020-06-23)
+
+
+### Bug Fixes
+
+* tweak color contrast for PlanIndicator variants ([#344](https://github.com/gatsby-inc/gatsby-interface/issues/344)) ([ea86970](https://github.com/gatsby-inc/gatsby-interface/commit/ea86970b7308f0691ef434059dba751db71796c7))
+
 ### [0.0.170](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.169...v0.0.170) (2020-06-23)
 
 ### [0.0.169](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.168...v0.0.169) (2020-06-22)
