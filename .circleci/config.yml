@@ -119,7 +119,7 @@ jobs:
           command: npm run release -- --no-verify
       - run:
           name: Publish to NPM
-          command: git push --follow-tags origin master && npm publish
+          command: git push --follow-tags origin main && npm publish
 
 workflows:
   version: 2
@@ -130,6 +130,7 @@ workflows:
             branches:
               ignore:
                 - master
+                - main
                 - dev
       - branch-prerelease:
           requires:
@@ -138,6 +139,7 @@ workflows:
             branches:
               ignore:
                 - master
+                - main
                 - dev
   run-prerelease:
     jobs:
@@ -156,10 +158,10 @@ workflows:
       - is-green:
           filters:
             branches:
-              only: master
+              only: main
       - release:
           requires:
             - is-green
           filters:
             branches:
-              only: master
+              only: main
