@@ -10,6 +10,8 @@ import {
   StyledPanelHeader,
   StyledPanelBodySection,
   StyledPanelActions,
+  Modal,
+  ModalPanel,
 } from "./"
 import { Theme } from "../../theme"
 import { Button } from "../Button"
@@ -89,4 +91,39 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+}
+
+export const UsageExample = () => {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false)
+
+  React.useEffect(() => {
+    // Open panel in Chromatic to keep track of visual regressions
+    if (!isChromatic()) {
+      return
+    }
+    const button = document.querySelector("button")
+    if (button) {
+      button.click()
+    }
+  }, [])
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setIsOpen(true)}>Open panel</Button>
+      <Modal aria-label="Some impressive content" isOpen={isOpen}>
+        <ModalPanel>
+          <StyledPanel>
+            <StyledPanelHeader onCloseButtonClick={() => setIsOpen(false)}>
+              Header
+            </StyledPanelHeader>
+            <StyledPanelBodySection>{LONG_TEXT}</StyledPanelBodySection>
+            <StyledPanelActions>
+              <Button>Action 1</Button>
+              <Button>Action 2</Button>
+            </StyledPanelActions>
+          </StyledPanel>
+        </ModalPanel>
+      </Modal>
+    </React.Fragment>
+  )
 }
