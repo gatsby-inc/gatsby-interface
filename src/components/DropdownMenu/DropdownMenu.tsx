@@ -64,11 +64,17 @@ export const DropdownMenuItem: React.FC<DropdownMenuItemProps> = props => (
   <MenuItem {...props} css={menuItemCss} />
 )
 
-export type DropdownMenuLinkProps = MenuLinkProps
+export type DropdownMenuLinkProps = import("@reach/utils").PropsWithAs<
+  "a",
+  MenuLinkProps
+>
 
-export function DropdownMenuLink(props: DropdownMenuLinkProps) {
-  return <MenuLink {...props} />
-}
+export const DropdownMenuLink = React.forwardRef<
+  HTMLAnchorElement,
+  DropdownMenuLinkProps
+>(function DropdownMenuLink(props, ref) {
+  return <MenuLink ref={ref} {...props} css={menuItemCss} />
+})
 
 export type DropdownMenuPopoverProps = MenuPopoverProps
 
