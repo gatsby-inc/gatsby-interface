@@ -13,11 +13,12 @@ import {
   ComboboxOption as ReachComboboxOption,
   ComboboxOptionProps as ReachComboboxOptionProps,
   ComboboxOptionText as ReachComboboxOptionText,
+  ComboboxButton as ReachComboboxButton,
   useComboboxContext as useReachComboboxContext,
 } from "@reach/combobox"
 import { PopoverProps } from "@reach/popover"
 import { PropsWithAs } from "@reach/utils"
-import { MdDone } from "react-icons/md"
+import { MdDone, MdArrowDropDown, MdSearch } from "react-icons/md"
 import {
   comboboxCss,
   inputCss,
@@ -27,10 +28,14 @@ import {
   selectedOptionIconCss,
   selectedValueCss,
   inputWithSelectedValueCss,
+  toggleButtonCss,
+  inputWithToggleButtonCss,
+  searchIconCss,
 } from "./Combobox.styles"
 import { warn } from "../../utils/maintenance/warn"
 import { RequireProp } from "../../utils/types"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
+import { visuallyHiddenCss } from "../../stylesheets/a11y"
 
 type ComboboxCustomContextValue = {
   listRef: React.RefObject<HTMLUListElement>
@@ -64,13 +69,24 @@ export type ComboboxInputProps = PropsWithAs<
   ReachComboboxInputProps & {
     selectedOptionLabel?: string
     hasError?: boolean
+    showToggleButton?: boolean
+    toggleButtonAriaLabel?: string
   }
 >
 
 export const ComboboxInput = React.forwardRef<
   HTMLInputElement,
   ComboboxInputProps
->(function ComboboxInput({ selectedOptionLabel, hasError, ...delegated }, ref) {
+>(function ComboboxInput(
+  {
+    selectedOptionLabel,
+    hasError,
+    showToggleButton,
+    toggleButtonAriaLabel = "Show options",
+    ...delegated
+  },
+  ref
+) {
   const { listRef } = useComboboxCustomContext()
 
   /**
@@ -118,6 +134,7 @@ export const ComboboxInput = React.forwardRef<
 
   return (
     <div css={{ position: "relative" }}>
+      <MdSearch css={searchIconCss} aria-hidden />
       <ReachComboboxInput
         ref={ref}
         selectOnClick
@@ -125,6 +142,7 @@ export const ComboboxInput = React.forwardRef<
         css={theme => [
           inputCss(hasError)(theme),
           showSelectedOptionLabel && inputWithSelectedValueCss(theme),
+          showToggleButton && inputWithToggleButtonCss(theme),
         ]}
         {...delegated}
       />
@@ -132,6 +150,12 @@ export const ComboboxInput = React.forwardRef<
         <span aria-hidden css={selectedValueCss}>
           {selectedOptionLabel}
         </span>
+      )}
+      {showToggleButton && (
+        <ComboboxButton css={toggleButtonCss}>
+          <span css={visuallyHiddenCss}>{toggleButtonAriaLabel}</span>
+          <MdArrowDropDown aria-hidden />
+        </ComboboxButton>
       )}
     </div>
   )
@@ -230,6 +254,17 @@ export type ComboboxOptionTextProps = {}
 
 export function ComboboxOptionText(props: ComboboxOptionTextProps) {
   return <ReachComboboxOptionText {...props} />
+}
+
+export type ComboboxButtonProps = import("@reach/utils").PropsWithAs<
+  "button",
+  {}
+>
+
+export function ComboboxButton(props: ComboboxButtonProps) {
+  // According to WAI-ARIA authoring practices, combobox button should be excluded from the tab sequence
+  // https://www.w3.org/TR/wai-aria-practices-1.1/#keyboard-interaction-6
+  return <ReachComboboxButton tabIndex={-1} {...props} />
 }
 
 export function useComboboxContext() {

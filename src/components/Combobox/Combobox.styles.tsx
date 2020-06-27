@@ -18,16 +18,22 @@ export const popoverCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
 })
 
+export const searchIconCss: ThemeCss = theme => ({
+  position: `absolute`,
+  color: theme.colors.grey[60],
+  fontSize: theme.fontSizes[3],
+  top: `calc((100% - ${theme.fontSizes[3]}) / 2)`,
+  margin: `0 ${theme.space[3]}`,
+  zIndex: 2,
+})
+
 export const inputCss: (hasError?: boolean) => ThemeCss = (
   hasError = false
 ) => theme => [
   getInputStyles(theme, hasError),
   {
-    paddingLeft: theme.space[8],
-    backgroundImage: `url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CiAgPHBhdGggZmlsbD0iI0I3QjVCRCIgZD0iTTE1LjUgMTRoLS44bC0uMy0uM2MxLTEuMSAxLjYtMi42IDEuNi00LjJhNi41IDYuNSAwIDEgMC0yLjMgNWwuMy4ydi44bDUgNSAxLjUtMS41LTUtNXptLTYgMGE0LjUgNC41IDAgMSAxIDAtOSA0LjUgNC41IDAgMCAxIDAgOXoiLz4KICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==)`,
-    backgroundPosition: `left 0.4rem center`,
-    backgroundRepeat: `no-repeat`,
-    backgroundSize: `${theme.space[6]} ${theme.space[6]}`,
+    // offset padding based on search icon spacing and size
+    paddingLeft: `calc(${theme.fontSizes[3]} + 2 * ${theme.space[3]})`,
   },
 ]
 
@@ -58,6 +64,28 @@ export const selectedValueCss: ThemeCss = theme => ({
   transform: `translate3d(0.8rem, 1.1rem, 0)`,
   transition: `all ${theme.transitions.curve.default} ${theme.transitions.speed.default}`,
   pointerEvents: `none`,
+})
+
+export const inputWithToggleButtonCss: ThemeCss = theme => ({
+  // offset padding based on toggle button padding and size
+  paddingRight: `calc(${theme.fontSizes[5]} + 2 * ${theme.space[3]})`,
+})
+
+export const toggleButtonCss: ThemeCss = theme => ({
+  position: `absolute`,
+  top: 1,
+  right: 1,
+  zIndex: 1,
+  background: theme.colors.white,
+  border: `none`,
+  margin: 0,
+  padding: `0 ${theme.space[3]}`,
+  display: `flex`,
+  alignItems: `center`,
+  color: theme.colors.grey[70],
+  fontSize: theme.fontSizes[5],
+  height: `calc(100% - 2px)`,
+  borderRadius: theme.radii[2],
 })
 
 export const listCss: ThemeCss = () => ({
