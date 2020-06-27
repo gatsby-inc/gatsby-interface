@@ -16,7 +16,7 @@ const baseCss: ThemeCss = _theme => ({
 const planTypeFreeCss: ThemeCss = theme => ({
   borderColor: theme.colors.orange[10],
   backgroundColor: theme.colors.orange[10],
-  color: theme.colors.orange[90],
+  color: theme.colors.red[70],
 })
 
 const planTypeProfessionalCss: ThemeCss = theme => ({
@@ -40,7 +40,7 @@ const planTypeEnterpriseCss: ThemeCss = theme => ({
 const planTypeTrialingCss: ThemeCss = theme => ({
   borderColor: theme.colors.green[10],
   backgroundColor: theme.colors.green[10],
-  color: theme.colors.green[70],
+  color: theme.colors.green[90],
 })
 
 const planTypeCss: Record<PlanIndicatorPlanType, ThemeCss> = {

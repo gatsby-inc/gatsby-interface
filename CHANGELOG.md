@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.171](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.170...v0.0.171) (2020-06-23)
+
+
+### Bug Fixes
+
+* tweak color contrast for PlanIndicator variants ([#344](https://github.com/gatsby-inc/gatsby-interface/issues/344)) ([ea86970](https://github.com/gatsby-inc/gatsby-interface/commit/ea86970b7308f0691ef434059dba751db71796c7))
+
+### [0.0.170](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.169...v0.0.170) (2020-06-23)
+
+### [0.0.169](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.168...v0.0.169) (2020-06-22)
+
+
+### Features
+
+* EmptyState component ([#342](https://github.com/gatsby-inc/gatsby-interface/issues/342)) ([8a6212b](https://github.com/gatsby-inc/gatsby-interface/commit/8a6212bae63fc811f271dd874480eb5c448197dc))
+
+### [0.0.168](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.167...v0.0.168) (2020-06-15)
+
+
+### Bug Fixes
+
+* unpin gatsby, react and react-dom dependencies ([#341](https://github.com/gatsby-inc/gatsby-interface/issues/341)) ([8229e46](https://github.com/gatsby-inc/gatsby-interface/commit/8229e4682553ed01180c3521904ec6bea0352345))
+
+### [0.0.167](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.166...v0.0.167) (2020-06-01)
+
+
+### Bug Fixes
+
+* Unpin gatsby peer dependency ([#337](https://github.com/gatsby-inc/gatsby-interface/issues/337)) ([15a2e25](https://github.com/gatsby-inc/gatsby-interface/commit/15a2e25bc3e990ced5c09abbe7bd711a2d8ce192))
+
+### [0.0.166](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.165...v0.0.166) (2020-05-27)
+
+
+### Bug Fixes
+
+* bump ReachUI dependencies ([#336](https://github.com/gatsby-inc/gatsby-interface/issues/336)) ([eb51192](https://github.com/gatsby-inc/gatsby-interface/commit/eb51192e4dbee25d48e5a14bb04e33def9d44bc0))
+
 ### [0.0.165](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.164...v0.0.165) (2020-05-27)
 
 
