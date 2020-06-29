@@ -36,7 +36,7 @@ export type ModalPanelProps = Omit<ModalContentProps, "ref"> & {
 }
 
 export const ModalPanel: React.FC<ModalPanelProps> = ({
-  maxWidth = `20%`,
+  maxWidth = `50vw`,
   position = `right`,
   ...props
 }) => (
