@@ -49,7 +49,11 @@ export default {
         {story()}
       </React.Fragment>
     ),
-    story => <div style={{ maxWidth: `620px` }}>{story()}</div>,
+    isChromatic()
+      ? story => (
+          <div style={{ width: `100vw`, height: `100vh` }}>{story()}</div>
+        )
+      : story => <div style={{ maxWidth: `620px` }}>{story()}</div>,
   ] as DecoratorFn[],
 }
 
