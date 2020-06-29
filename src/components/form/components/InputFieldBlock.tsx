@@ -2,17 +2,10 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
-import {
-  InputField,
-  InputFieldControlProps,
-  InputFieldLabel,
-  InputFieldControl,
-  InputFieldHint,
-  InputFieldError,
-} from "./InputField"
-import { WithFormFieldBlock, FormFieldContainer } from "./FormField"
+import { FormFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
+import { StyledInput, StyledInputProps } from "./styled-primitives/StyledInput"
 
-export type InputFieldBlockProps = WithFormFieldBlock<InputFieldControlProps>
+export type InputFieldBlockProps = WithFormFieldBlock<StyledInputProps>
 
 export const InputFieldBlock = React.forwardRef<
   HTMLInputElement,
@@ -27,21 +20,30 @@ export const InputFieldBlock = React.forwardRef<
     className,
     validationMode,
     layout,
+    required,
     ...rest
   } = props
 
   return (
-    <FormFieldContainer layout={layout} className={className}>
-      <InputField id={id} hasError={!!error} hasHint={!!hint}>
-        <InputFieldLabel size={labelSize} isRequired={!!rest.required}>
-          {label}
-        </InputFieldLabel>
-        <InputFieldControl ref={ref} {...rest} />
-        <InputFieldHint>{hint}</InputFieldHint>
-        <InputFieldError validationMode={validationMode}>
-          {error}
-        </InputFieldError>
-      </InputField>
-    </FormFieldContainer>
+    <FormFieldBlock
+      id={id}
+      label={label}
+      error={error}
+      hint={hint}
+      required={required}
+      labelSize={labelSize}
+      validationMode={validationMode}
+      layout={layout}
+      className={className}
+    >
+      {controlProps => (
+        <StyledInput
+          ref={ref}
+          {...controlProps}
+          css={{ width: `100%` }}
+          {...rest}
+        />
+      )}
+    </FormFieldBlock>
   )
 })

@@ -24,10 +24,10 @@ if (!branch) {
   sh.exit(1)
 }
 
-if (branch === `master` || branch === `dev`) {
+if (branch === `main` || branch === `dev`) {
   sh.echo(
     chalk.yellow(
-      'Branch prereleases are disabled for "master" and "dev" branches'
+      'Branch prereleases are disabled for "main" and "dev" branches'
     )
   )
   sh.exit(0)

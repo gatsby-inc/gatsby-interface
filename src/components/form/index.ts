@@ -1,4 +1,5 @@
 export * from "./components/FormField"
+export * from "./components/FormFieldBlock"
 
 export * from "./components/InputField"
 export * from "./components/InputFieldBlock"
@@ -25,3 +26,12 @@ export * from "./components/RadioButtonFieldBlock"
 export * from "./components/RadioButtonConnectedField"
 
 export { useConnectedField } from "./hooks/useConnectedField"
+
+export * from "./components/styled-primitives/StyledCheckbox"
+export * from "./components/styled-primitives/StyledFormElements"
+export * from "./components/styled-primitives/StyledInput"
+export * from "./components/styled-primitives/StyledRadio"
+export * from "./components/styled-primitives/StyledSelect"
+export * from "./components/styled-primitives/StyledTextArea"
+
+export * from "./styles"
