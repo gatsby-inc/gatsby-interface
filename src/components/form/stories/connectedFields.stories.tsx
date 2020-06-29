@@ -8,14 +8,16 @@ import {
   RadioButtonConnectedField,
   SelectConnectedField,
   TextAreaConnectedField,
+  FormFieldBlockLayout,
 } from ".."
 import { Formik } from "formik"
 import * as Yup from "yup"
 import Debug from "../../../utils/formik/Debug"
 import { Button } from "../../Button"
 import { MdArrowForward } from "react-icons/md"
-import { getStoryOptions } from "../../../utils/storybook"
+import { getStoryOptions, radioKnobOptions } from "../../../utils/storybook"
 import ConnectedFieldsDocs from "./connectedFields.mdx"
+import { radios } from "@storybook/addon-knobs"
 
 export default {
   title: `Form/Connected Fields`,
@@ -130,6 +132,9 @@ export const Example = () => {
     ),
   })
 
+  const LAYOUTS: FormFieldBlockLayout[] = [`horizontal`, `vertical`]
+  const layout = radios(`Layout`, radioKnobOptions(LAYOUTS), `horizontal`)
+
   return (
     <Formik
       validationSchema={validationSchema}
@@ -148,38 +153,43 @@ export const Example = () => {
             display: `grid`,
             gridGap: theme.space[5],
             maxWidth: `80%`,
-            width: `25rem`,
+            width: `600px`,
           })}
         >
           <InputConnectedField
             name="title"
             hint={`At least ${TITLE_MIN_LENGTH} and not more than ${TITLE_MAX_LENGTH} characters`}
             required
+            layout={layout}
           />
 
           <TextAreaConnectedField
             name="description"
             hint={`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}
+            layout={layout}
           />
 
           <SelectConnectedField
             name="author"
             options={getStoryOptions("mid")}
             required
+            layout={layout}
           />
 
           <RadioButtonConnectedField
             name="category"
             options={categories}
             required
+            layout={layout}
           />
 
           <CheckboxGroupConnectedField
             name="tags"
             options={tags}
-            optionsDirection="row"
+            // optionsDirection="row"
             hint={`Check at least ${TAGS_MIN_LENGTH} tags`}
             required
+            layout={layout}
           />
 
           <CheckboxConnectedField

@@ -2,19 +2,27 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
+import { WithFormFieldBlock } from "./FormFieldBlock"
 import {
-  CheckboxField,
-  CheckboxFieldControlProps,
-  CheckboxFieldWrapper,
-  CheckboxFieldControl,
-  CheckboxFieldLabel,
-  CheckboxFieldHint,
-  CheckboxFieldError,
-} from "./CheckboxField"
-import { WithFormFieldBlock } from "./FormField"
+  StyledCheckboxLabel,
+  StyledCheckbox,
+  StyledCheckboxProps,
+} from "./styled-primitives/StyledCheckbox"
+import { useAriaFormField } from "../../form-skeletons"
+import { FormHint, FormError } from "./styled-primitives/StyledFormElements"
+import { ThemeCss } from "../../../theme"
+
+const baseCss: ThemeCss = _theme => ({
+  display: `flex`,
+  alignItems: `baseline`,
+})
+
+const checkboxContainerCss: ThemeCss = theme => ({
+  marginRight: theme.space[4],
+})
 
 export type CheckboxFieldBlockProps = Omit<
-  WithFormFieldBlock<CheckboxFieldControlProps>,
+  WithFormFieldBlock<StyledCheckboxProps>,
   "layout"
 >
 
@@ -30,21 +38,33 @@ export const CheckboxFieldBlock = React.forwardRef<
     hint,
     className,
     validationMode,
+    required,
     ...rest
   } = props
 
+  const fieldData = useAriaFormField(id, {
+    required: required,
+    hasError: !!error,
+    hasHint: !!hint,
+    validationMode,
+  })
+
   return (
-    <CheckboxField id={id} hasError={!!error} hasHint={!!hint}>
-      <CheckboxFieldWrapper className={className}>
-        <CheckboxFieldControl ref={ref} {...rest} />
-        <CheckboxFieldLabel size={labelSize} isRequired={!!rest.required}>
+    <div css={baseCss} className={className}>
+      <div css={checkboxContainerCss}>
+        <StyledCheckbox ref={ref} {...fieldData.controlProps} {...rest} />
+      </div>
+      <div>
+        <StyledCheckboxLabel
+          required={fieldData.controlProps.required}
+          labelSize={labelSize}
+          {...fieldData.labelProps}
+        >
           {label}
-        </CheckboxFieldLabel>
-        <CheckboxFieldHint>{hint}</CheckboxFieldHint>
-        <CheckboxFieldError validationMode={validationMode}>
-          {error}
-        </CheckboxFieldError>
-      </CheckboxFieldWrapper>
-    </CheckboxField>
+        </StyledCheckboxLabel>
+        <FormHint {...fieldData.hintProps}>{hint}</FormHint>
+        <FormError {...fieldData.errorProps}>{error}</FormError>
+      </div>
+    </div>
   )
 })

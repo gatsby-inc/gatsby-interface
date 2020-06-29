@@ -2,19 +2,13 @@
 import { jsx } from "@emotion/core"
 import React from "react"
 
+import { FormFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
 import {
-  TextAreaField,
-  TextAreaFieldControlProps,
-  TextAreaFieldLabel,
-  TextAreaFieldControl,
-  TextAreaFieldHint,
-  TextAreaFieldError,
-} from "./TextAreaField"
-import { WithFormFieldBlock, FormFieldContainer } from "./FormField"
+  StyledTextArea,
+  StyledTextAreaProps,
+} from "./styled-primitives/StyledTextArea"
 
-export type TextAreaFieldBlockProps = WithFormFieldBlock<
-  TextAreaFieldControlProps
->
+export type TextAreaFieldBlockProps = WithFormFieldBlock<StyledTextAreaProps>
 
 export const TextAreaFieldBlock = React.forwardRef<
   HTMLTextAreaElement,
@@ -29,30 +23,23 @@ export const TextAreaFieldBlock = React.forwardRef<
     className,
     validationMode,
     layout,
+    required,
     ...rest
   } = props
 
   return (
-    <FormFieldContainer layout={layout} className={className}>
-      <TextAreaField id={id} hasError={!!error} hasHint={!!hint}>
-        <TextAreaFieldLabel
-          size={labelSize}
-          isRequired={!!rest.required}
-          css={theme => [
-            layout === `horizontal` && {
-              alignSelf: `baseline`,
-              paddingTop: theme.space[2],
-            },
-          ]}
-        >
-          {label}
-        </TextAreaFieldLabel>
-        <TextAreaFieldControl ref={ref} {...rest} />
-        <TextAreaFieldHint>{hint}</TextAreaFieldHint>
-        <TextAreaFieldError validationMode={validationMode}>
-          {error}
-        </TextAreaFieldError>
-      </TextAreaField>
-    </FormFieldContainer>
+    <FormFieldBlock
+      id={id}
+      label={label}
+      error={error}
+      hint={hint}
+      required={required}
+      labelSize={labelSize}
+      validationMode={validationMode}
+      layout={layout}
+      className={className}
+    >
+      {controlProps => <StyledTextArea ref={ref} {...controlProps} {...rest} />}
+    </FormFieldBlock>
   )
 })

@@ -2,17 +2,18 @@
 import { jsx } from "@emotion/core"
 
 import {
-  CheckboxGroupField,
-  CheckboxGroupFieldLabel,
-  CheckboxGroupFieldOptions,
   CheckboxGroupFieldOptionProps,
-  CheckboxGroupFieldHint,
-  CheckboxGroupFieldError,
   CheckboxGroupFieldOptionItemProps,
-  CheckboxGroupFieldOptionItem,
 } from "./CheckboxGroupField"
-import { WithFormFieldBlock, useFormFieldContainerProps } from "./FormField"
 import { FormGroupOptionsDirection } from "./FormGroupField"
+import { FormGroupFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
+import {
+  StyledCheckbox,
+  StyledCheckboxLabel,
+} from "./styled-primitives/StyledCheckbox"
+import { Theme } from "../../../theme"
+import { OptionsContainer } from "./styled-primitives/StyledFormElements"
+import { getOptionLabelOffsetStyles } from "../styles"
 
 export type CheckboxGroupFieldBlockOption = {
   label: React.ReactNode
@@ -42,48 +43,66 @@ export const CheckboxGroupFieldBlock = (
     className,
     validationMode,
     value: fieldValue,
+    required,
     ...rest
   } = props
 
-  const layoutProps = useFormFieldContainerProps(layout)
-
   return (
-    <CheckboxGroupField
+    <FormGroupFieldBlock
       id={id}
-      hasError={!!error}
-      hasHint={!!hint}
-      optionsDirection={optionsDirection}
+      label={label}
+      error={error}
+      hint={hint}
+      required={required}
+      labelSize={labelSize}
+      validationMode={validationMode}
+      layout={layout}
       className={className}
-      {...layoutProps}
     >
-      <CheckboxGroupFieldLabel
-        size={labelSize}
-        isRequired={!!rest.required}
-        css={_theme => [layout === `horizontal` && { alignSelf: `baseline` }]}
-      >
-        {label}
-      </CheckboxGroupFieldLabel>
-      <CheckboxGroupFieldOptions
-        css={_theme => [layout === `horizontal` && { paddingTop: 0 }]}
-      >
-        {options.map(({ value, label, ...restOption }) => (
-          <CheckboxGroupFieldOptionItem
-            key={value}
-            value={value}
-            // Support uncontrolled field
-            checked={
-              fieldValue === undefined ? undefined : fieldValue.includes(value)
-            }
-            label={label}
-            {...rest}
-            {...restOption}
-          />
-        ))}
-      </CheckboxGroupFieldOptions>
-      <CheckboxGroupFieldHint>{hint}</CheckboxGroupFieldHint>
-      <CheckboxGroupFieldError validationMode={validationMode}>
-        {error}
-      </CheckboxGroupFieldError>
-    </CheckboxGroupField>
+      {({ getOptionControlProps, getOptionLabelProps }) => (
+        <OptionsContainer optionsDirection={optionsDirection}>
+          {options.map(({ value, label, ...restOption }) => (
+            <div
+              key={value}
+              css={(theme: Theme) => [
+                {
+                  display: `flex`,
+                  flexShrink: 0,
+                  marginBottom: theme.space[4],
+                },
+                optionsDirection === `row`
+                  ? {
+                      marginRight: theme.space[6],
+                    }
+                  : {
+                      "&:last-of-type": {
+                        marginBottom: 0,
+                      },
+                    },
+              ]}
+            >
+              <StyledCheckbox
+                value={value}
+                // Support uncontrolled field
+                checked={
+                  fieldValue === undefined
+                    ? undefined
+                    : fieldValue.includes(value)
+                }
+                {...getOptionControlProps(value)}
+                {...rest}
+                {...restOption}
+              />
+              <StyledCheckboxLabel
+                {...getOptionLabelProps(value)}
+                css={getOptionLabelOffsetStyles(optionsDirection)}
+              >
+                {label}
+              </StyledCheckboxLabel>
+            </div>
+          ))}
+        </OptionsContainer>
+      )}
+    </FormGroupFieldBlock>
   )
 }
