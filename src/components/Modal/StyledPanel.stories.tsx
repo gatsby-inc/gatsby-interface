@@ -49,13 +49,16 @@ export default {
         {story()}
       </React.Fragment>
     ),
-    isChromatic()
-      ? story => (
-          <div style={{ width: `100vw`, height: `100vh` }}>{story()}</div>
-        )
-      : story => <div style={{ maxWidth: `620px` }}>{story()}</div>,
   ] as DecoratorFn[],
 }
+
+const fullSizeDecorator: DecoratorFn = story => (
+  <div style={{ width: `100vw`, height: `100vh` }}>{story()}</div>
+)
+
+const maxWidthDecorator: DecoratorFn = story => (
+  <div style={{ maxWidth: `620px` }}>{story()}</div>
+)
 
 const LONG_TEXT = Array(15)
   .fill(
@@ -73,6 +76,10 @@ export const Basic = () => (
     </StyledPanelActions>
   </StyledPanel>
 )
+
+Basic.story = {
+  decorators: [maxWidthDecorator],
+}
 
 export const Sandbox = () => (
   <StyledPanel>
@@ -95,6 +102,7 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+  decorators: [maxWidthDecorator],
 }
 
 export const UsageExample = () => {
@@ -130,4 +138,8 @@ export const UsageExample = () => {
       </Modal>
     </React.Fragment>
   )
+}
+
+UsageExample.story = {
+  decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
 }
