@@ -1,11 +1,19 @@
 /** @jsx jsx */
 import React from "react"
-import { css, jsx } from "@emotion/core"
+import { jsx } from "@emotion/core"
 import { Link } from "../Link"
+import { ThemeCss } from "../../theme"
 
-const messageCss = css`
-  margin-bottom: 8px;
-`
+const messageCss: ThemeCss = theme => ({
+  marginBottom: theme.space[3],
+})
+
+const linkCss: ThemeCss = theme => ({
+  color: theme.colors.grey[30],
+  ":hover": {
+    color: theme.colors.white,
+  },
+})
 
 export interface MessageWithLinkProps {
   linkLabel: React.ReactNode
@@ -22,6 +30,7 @@ export const MessageWithLink: React.FC<MessageWithLinkProps> = ({
   <React.Fragment>
     <div css={messageCss}>{children}</div>
     <Link
+      css={linkCss}
       // we need to cast to "any" because TS claims that "href" is required for <Link /> even though it's not
       {...(linkProps as any)}
     >

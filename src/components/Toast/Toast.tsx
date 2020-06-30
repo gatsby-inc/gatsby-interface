@@ -1,15 +1,10 @@
 /** @jsx jsx */
 import React from "react"
 import Alert from "@reach/alert"
-import { keyframes, css, jsx } from "@emotion/core"
+import { keyframes, jsx } from "@emotion/core"
 import { MdDone, MdClose, MdWarning } from "react-icons/md"
-
 import { ToastTone } from "./types"
-import fontSizes from "../../theme/fontSizes"
-import dimensions from "../../theme/dimensions"
-import space from "../../theme/space"
-import colors from "../../theme/colors"
-import radii from "../../theme/radii"
+import { ThemeCss } from "../../theme"
 
 const toastEntryAnimation = keyframes`
   100% {
@@ -17,59 +12,77 @@ const toastEntryAnimation = keyframes`
   }
 `
 
-const toastCss = css`
-  align-items: center;
-  animation: ${toastEntryAnimation} 0.5s 0.25s ease forwards;
-  background: ${colors.grey[90]};
-  border-left: 8px solid ${colors.green[50]};
-  border-radius: ${radii[2]} ${radii[2]} 0 0;
-  color: ${colors.green[5]};
-  display: flex;
-  font-size: ${fontSizes[1]};
-  min-height: ${dimensions.toast.minHeight};
-  max-width: calc(100% - (${space[7]} * 2));
-  padding-left: ${space[4]};
-  transform: perspective(1000px) rotateX(90deg);
-  transform-origin: bottom center;
+const TOAST_MIN_HEIGHT = `3rem`
 
-  svg {
-    height: auto;
-    width: calc(${dimensions.toast.minHeight} * 0.4);
-  }
+const baseCss: ThemeCss = theme => ({
+  alignItems: "center",
+  animation: `${toastEntryAnimation} 0.5s 0.25s ease forwards`,
+  background: theme.colors.grey[90],
+  borderLeft: `${theme.space[3]} solid ${theme.colors.green[50]}`,
+  borderRadius: `${theme.radii[2]} ${theme.radii[2]} 0 0`,
+  color: theme.colors.green[5],
+  display: "flex",
+  fontSize: theme.fontSizes[1],
+  minHeight: TOAST_MIN_HEIGHT,
+  maxWidth: `calc(100% - (${theme.space[7]} * 2))`,
+  paddingLeft: theme.space[4],
+  transform: "perspective(1000px) rotateX(90deg)",
+  transformOrigin: "bottom center",
 
-  &:not(:first-of-type) {
-    border-radius: ${radii[2]};
-    margin-bottom: ${space[1]};
-  }
-`
+  "&:not(:first-of-type)": {
+    borderRadius: theme.radii[2],
+    marginBottom: theme.space[1],
+  },
+})
 
-const messageCss = css`
-  line-height: 1;
-  margin: 0 ${space[2]} 0 ${space[3]};
-`
-
-const statusCss = css`
-  align-items: center;
-  color: ${colors.green[50]};
-  display: flex;
-`
-
-const closeButtonCss = css`
-  align-items: center;
-  background: none;
-  border: none;
-  color: ${colors.grey[40]};
-  cursor: pointer;
-  display: flex;
-  height: ${dimensions.toast.minHeight};
-  justify-content: center;
-  width: ${dimensions.toast.minHeight};
-`
-
-const toastColorByTone = {
-  SUCCESS: colors.green[50],
-  DANGER: colors.red[60],
+const baseToneStyles: Record<ToastTone, ThemeCss> = {
+  SUCCESS: theme => ({
+    borderLeftColor: theme.colors.green[50],
+  }),
+  DANGER: theme => ({
+    borderLeftColor: theme.colors.red[60],
+  }),
 }
+
+const iconCss: ThemeCss = _theme => ({
+  height: `auto`,
+  width: `calc(${TOAST_MIN_HEIGHT} * 0.4)`,
+})
+
+const messageCss: ThemeCss = theme => ({
+  lineHeight: theme.lineHeights.solid,
+  marginTop: 0,
+  marginBottom: 0,
+  marginRight: theme.space[2],
+  marginLeft: theme.space[3],
+})
+
+const statusCss: ThemeCss = theme => ({
+  display: "flex",
+  alignItems: "center",
+  color: theme.colors.green[50],
+})
+
+const statusToneStyles: Record<ToastTone, ThemeCss> = {
+  SUCCESS: theme => ({
+    color: theme.colors.green[50],
+  }),
+  DANGER: theme => ({
+    color: theme.colors.red[60],
+  }),
+}
+
+const closeButtonCss: ThemeCss = theme => ({
+  background: "none",
+  border: "none",
+  color: theme.colors.grey[40],
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: TOAST_MIN_HEIGHT,
+  width: TOAST_MIN_HEIGHT,
+})
 
 const ToastIconByTone = {
   SUCCESS: MdDone,
@@ -83,34 +96,32 @@ export interface ToastProps {
   tone: ToastTone
 }
 
-export const Toast: React.FC<ToastProps> = ({
+export function Toast({
   message,
   tone,
   closeButtonLabel,
   onClose,
-}) => {
+}: ToastProps) {
   const IconComponent = ToastIconByTone[tone]
+
+  const toastCss: ThemeCss = theme => [
+    baseCss(theme),
+    baseToneStyles[tone](theme),
+  ]
+
+  const statusFinalCss: ThemeCss = theme => [
+    statusCss(theme),
+    statusToneStyles[tone](theme),
+  ]
 
   return (
     <Alert
-      css={[
-        toastCss,
-        css({
-          borderLeftColor: toastColorByTone[tone],
-        }),
-      ]}
+      css={toastCss}
       data-testid="toast"
       type={tone === `DANGER` ? `assertive` : `polite`}
     >
-      <span
-        css={[
-          statusCss,
-          css({
-            color: toastColorByTone[tone],
-          }),
-        ]}
-      >
-        <IconComponent />
+      <span css={statusFinalCss}>
+        <IconComponent css={iconCss} />
       </span>
       <div css={messageCss}>{message}</div>
       <button

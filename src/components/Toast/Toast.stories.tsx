@@ -1,6 +1,9 @@
 import React from "react"
-import { storiesOf } from "@storybook/react"
-import { StoryUtils } from "../../utils/storybook"
+import { DecoratorFn } from "@storybook/react"
+import {
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
 import { Button } from "../Button"
 import {
   ToastProvider,
@@ -8,34 +11,104 @@ import {
   useShowErrorToast,
   useShowSuccessToast,
   useShowErrorAlert,
+  ToastTone,
 } from "."
 import README from "./README.md"
+import { Toast } from "./Toast"
+import { action } from "@storybook/addon-actions"
+import { text, radios } from "@storybook/addon-knobs"
+import { Global } from "@emotion/core"
+import isChromatic from "storybook-chromatic/isChromatic"
 
-storiesOf(`Toast`, module)
-  .addParameters({
+export default {
+  title: `Toast`,
+  component: Toast,
+  subcomponents: {
+    ToastProvider,
+    ToastConsumer,
+  },
+  parameters: {
     componentSubtitle:
       "Toasts provide brief messages about app processes at the bottom of the screen, usually to give feedback after an action has taken place.",
-    options: {
-      showPanel: true,
-    },
     readme: {
       sidebar: README,
     },
-  })
-  .add(`Default`, () => {
-    function ErrorToastExample() {
-      const showErrorToast = useShowErrorToast()
+  },
+  decorators: [
+    story => (
+      <React.Fragment>
+        <Global
+          styles={() => [
+            isChromatic() && {
+              // Make animations instant so that Chromatic can take proper snapshots
+              "*, :before, :after": {
+                animationDuration: `0s !important`,
+                animationDelay: `0s !important`,
+              },
+            },
+          ]}
+        />
+        {story()}
+      </React.Fragment>
+    ),
+  ] as DecoratorFn[],
+}
 
-      return (
+export const Basic = () => (
+  <Toast
+    message="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+    onClose={action("onClose")}
+    closeButtonLabel="Close"
+    tone="SUCCESS"
+  />
+)
+
+const TONES: ToastTone[] = ["SUCCESS", "DANGER"]
+
+export const Sandbox = () => (
+  <Toast
+    message={text(
+      "message",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit"
+    )}
+    tone={radios(`tone`, radioKnobOptions(TONES), `SUCCESS`)}
+    closeButtonLabel={text("closeButtonLabel", "Close")}
+    onClose={action("onClose")}
+  />
+)
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
+export const Tones = () =>
+  TONES.map(tone => (
+    <Toast
+      key={tone}
+      message="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+      tone={tone}
+      onClose={action("onClose")}
+      closeButtonLabel="Close"
+    />
+  ))
+
+Tones.story = {
+  decorators: [withVariationsContainer],
+}
+
+export const UsageWithHooks = () => {
+  function ToastTriggersExample() {
+    const showErrorToast = useShowErrorToast()
+    const showErrorAlert = useShowErrorAlert()
+    const showSuccessToast = useShowSuccessToast()
+
+    return (
+      <React.Fragment>
         <Button onClick={() => showErrorToast(`An error occured`)}>
           Show error toast
         </Button>
-      )
-    }
-    function ErrorAlertExample() {
-      const showErrorAlert = useShowErrorAlert()
-
-      return (
         <Button
           onClick={() =>
             showErrorAlert(`An error occured`, {
@@ -47,12 +120,6 @@ storiesOf(`Toast`, module)
         >
           Show error alert
         </Button>
-      )
-    }
-    function NoTimeoutExample() {
-      const showSuccessToast = useShowSuccessToast()
-
-      return (
         <Button
           onClick={() =>
             showSuccessToast(`This message will stay on screen until closed`, {
@@ -62,28 +129,32 @@ storiesOf(`Toast`, module)
         >
           Show toast without auto hide
         </Button>
-      )
-    }
-    return (
-      <StoryUtils.Container>
-        <StoryUtils.Stack>
-          <ToastProvider>
-            <ToastConsumer>
-              {({ showToast }) => (
-                <React.Fragment>
-                  <Button
-                    onClick={() => showToast(`Your action was successful`)}
-                  >
-                    Show toast
-                  </Button>
-                </React.Fragment>
-              )}
-            </ToastConsumer>
-            <NoTimeoutExample />
-            <ErrorToastExample />
-            <ErrorAlertExample />
-          </ToastProvider>
-        </StoryUtils.Stack>
-      </StoryUtils.Container>
+      </React.Fragment>
     )
-  })
+  }
+
+  // Trigger all toasts for visual regression testing
+  React.useEffect(() => {
+    if (!isChromatic()) {
+      return
+    }
+    document.querySelectorAll("button").forEach(button => button.click())
+  }, [])
+
+  return (
+    <ToastProvider>
+      <ToastTriggersExample />
+    </ToastProvider>
+  )
+}
+
+UsageWithHooks.story = {
+  decorators: [
+    withVariationsContainer,
+    story => (
+      <div style={isChromatic() ? { width: `100vw`, height: `100vh` } : {}}>
+        {story()}
+      </div>
+    ),
+  ] as DecoratorFn[],
+}
