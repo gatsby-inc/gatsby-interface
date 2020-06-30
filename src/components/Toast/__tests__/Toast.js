@@ -23,17 +23,6 @@ describe(`Toast`, () => {
     id: 0,
   }
 
-  it(`renders unchanged`, async () => {
-    const { container } = render(
-      <React.Fragment>
-        <Toast {...baseProps} />
-        <Toast {...baseProps} id={1} tone="DANGER" />
-      </React.Fragment>
-    )
-
-    expect(container).toMatchSnapshot()
-  })
-
   it(`displays the toast message`, async () => {
     const { queryByText } = render(<Toast {...baseProps} />)
 
