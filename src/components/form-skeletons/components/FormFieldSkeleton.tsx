@@ -1,5 +1,9 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
 import React from "react"
-import { getHintId, getErrorId } from "../utils"
+import { getHintId, getErrorId, getErrorAriaLiveAttribute } from "../utils"
+import { ErrorValidationMode } from "../types"
+import { showFormSkeletonDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type FormFieldSkeletonContextValue = {
   id: string
@@ -70,9 +74,7 @@ export type FormFieldSkeletonLabelProps = Omit<
   "ref" | "htmlFor"
 >
 
-export const FormFieldSkeletonLabel: React.FC<
-  FormFieldSkeletonLabelProps
-> = props => {
+export const FormFieldSkeletonLabel: React.FC<FormFieldSkeletonLabelProps> = props => {
   const { id } = useFormFieldSkeleton()
 
   return <label htmlFor={id} {...props} />
@@ -96,7 +98,6 @@ export const FormFieldSkeletonHint: React.FC<FormFieldSkeletonHintProps> = ({
   )
 }
 
-export type ErrorValidationMode = "focus" | "change" | "submit"
 export type FormFieldSkeletonErrorProps = Omit<
   JSX.IntrinsicElements["div"],
   "ref" | "id"
@@ -121,21 +122,10 @@ export const FormFieldSkeletonError: React.FC<FormFieldSkeletonErrorProps> = ({
 }
 
 export function FormFieldSkeleton(props: FormFieldSkeletonProps) {
+  showFormSkeletonDeprecatedMessage("FormFieldSkeleton")
   return <FormFieldSkeletonProvider {...props} />
 }
 
 export function useFormFieldSkeleton() {
   return React.useContext(FormFieldSkeletonContext)
-}
-
-function getErrorAriaLiveAttribute(
-  validationMode?: ErrorValidationMode
-): React.HTMLAttributes<HTMLDivElement>["aria-live"] {
-  if (validationMode === `focus`) {
-    return `assertive`
-  }
-  if (validationMode === `change`) {
-    return `polite`
-  }
-  return undefined
 }

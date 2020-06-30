@@ -15,9 +15,11 @@ import {
   FormGroupFieldSkeletonOptionLabel,
   FormGroupFieldSkeletonOptionLabelProps,
 } from "./FormGroupFieldSkeleton"
+import { showFormSkeletonDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type RadioButtonFieldSkeletonProps = FormGroupFieldSkeletonProps
 export function RadioButtonFieldSkeleton(props: RadioButtonFieldSkeletonProps) {
+  showFormSkeletonDeprecatedMessage("RadioButtonFieldSkeleton", true)
   return <FormGroupFieldSkeleton {...props} />
 }
 

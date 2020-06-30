@@ -10,6 +10,8 @@ import {
   StyledPanelHeader,
   StyledPanelBodySection,
   StyledPanelActions,
+  Modal,
+  ModalPanel,
 } from "./"
 import { Theme } from "../../theme"
 import { Button } from "../Button"
@@ -47,9 +49,16 @@ export default {
         {story()}
       </React.Fragment>
     ),
-    story => <div style={{ maxWidth: `620px` }}>{story()}</div>,
   ] as DecoratorFn[],
 }
+
+const fullSizeDecorator: DecoratorFn = story => (
+  <div style={{ width: `100vw`, height: `100vh` }}>{story()}</div>
+)
+
+const maxWidthDecorator: DecoratorFn = story => (
+  <div style={{ maxWidth: `620px` }}>{story()}</div>
+)
 
 const LONG_TEXT = Array(15)
   .fill(
@@ -67,6 +76,10 @@ export const Basic = () => (
     </StyledPanelActions>
   </StyledPanel>
 )
+
+Basic.story = {
+  decorators: [maxWidthDecorator],
+}
 
 export const Sandbox = () => (
   <StyledPanel>
@@ -89,4 +102,44 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+  decorators: [maxWidthDecorator],
+}
+
+export const UsageExample = () => {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false)
+
+  React.useEffect(() => {
+    // Open panel in Chromatic to keep track of visual regressions
+    if (!isChromatic()) {
+      return
+    }
+    const button = document.querySelector("button")
+    if (button) {
+      button.click()
+    }
+  }, [])
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setIsOpen(true)}>Open panel</Button>
+      <Modal aria-label="Some impressive content" isOpen={isOpen}>
+        <ModalPanel>
+          <StyledPanel>
+            <StyledPanelHeader onCloseButtonClick={() => setIsOpen(false)}>
+              Header
+            </StyledPanelHeader>
+            <StyledPanelBodySection>{LONG_TEXT}</StyledPanelBodySection>
+            <StyledPanelActions>
+              <Button>Action 1</Button>
+              <Button>Action 2</Button>
+            </StyledPanelActions>
+          </StyledPanel>
+        </ModalPanel>
+      </Modal>
+    </React.Fragment>
+  )
+}
+
+UsageExample.story = {
+  decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
 }

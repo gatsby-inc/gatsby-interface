@@ -23,9 +23,11 @@ import {
   TextAreaFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/TextAreaFieldSkeleton"
 import { Theme } from "../../../theme"
+import { showFormFieldDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type TextAreaFieldProps = TextAreaFieldSkeletonProps
 export function TextAreaField(props: TextAreaFieldProps) {
+  showFormFieldDeprecatedMessage("TextAreaField")
   return <TextAreaFieldSkeleton {...props}></TextAreaFieldSkeleton>
 }
 

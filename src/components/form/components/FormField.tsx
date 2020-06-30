@@ -4,7 +4,6 @@ import React from "react"
 
 import { MdError } from "react-icons/md"
 import { Theme } from "../../../theme"
-import { ErrorValidationMode } from "../../form-skeletons"
 
 import {
   getLabelFontSize,
@@ -120,16 +119,3 @@ export function useFormFieldContainerProps(
     css: (theme: Theme) => getFieldLayoutStyles(theme, layout),
   }
 }
-
-export type FormFieldBlockProps = {
-  id: string
-  label: React.ReactNode
-  labelSize?: FormFieldLabelSize
-  error?: React.ReactNode
-  hint?: React.ReactNode
-  validationMode?: ErrorValidationMode
-  layout?: FormFieldBlockLayout
-}
-
-export type WithFormFieldBlock<T> = Omit<T, keyof FormFieldBlockProps> &
-  FormFieldBlockProps
