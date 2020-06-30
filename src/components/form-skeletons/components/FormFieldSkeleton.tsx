@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core"
 import React from "react"
 import { getHintId, getErrorId, getErrorAriaLiveAttribute } from "../utils"
 import { ErrorValidationMode } from "../types"
+import { showFormSkeletonDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type FormFieldSkeletonContextValue = {
   id: string
@@ -121,6 +122,7 @@ export const FormFieldSkeletonError: React.FC<FormFieldSkeletonErrorProps> = ({
 }
 
 export function FormFieldSkeleton(props: FormFieldSkeletonProps) {
+  showFormSkeletonDeprecatedMessage("FormFieldSkeleton")
   return <FormFieldSkeletonProvider {...props} />
 }
 

@@ -7,6 +7,7 @@ import {
 } from "./FormFieldSkeleton"
 import { getFinalAriaDescribedBy } from "../utils"
 import { OmitControlProps } from "../sharedTypes"
+import { showFormSkeletonDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type FormGroupFieldSkeletonProps = FormFieldSkeletonProps &
   Pick<JSX.IntrinsicElements["div"], "className" | "style">
@@ -19,6 +20,7 @@ export function FormGroupFieldSkeleton({
   className,
   style,
 }: FormGroupFieldSkeletonProps) {
+  showFormSkeletonDeprecatedMessage("FormGroupFieldSkeleton", true)
   return (
     <FormFieldSkeleton id={id} hasError={hasError} hasHint={hasHint}>
       <div
