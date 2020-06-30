@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.175](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.174...v0.0.175) (2020-06-30)
+
+
+### Bug Fixes
+
+* **DropdownMenu:** style DropdownMenuLink and make it forward refs ([#348](https://github.com/gatsby-inc/gatsby-interface/issues/348)) ([33a6146](https://github.com/gatsby-inc/gatsby-interface/commit/33a614691b953559a5d6411a16d43370e9f088da))
+
 ### [0.0.174](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.173...v0.0.174) (2020-06-30)
 
 ### [0.0.173](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.172...v0.0.173) (2020-06-29)
