@@ -23,9 +23,11 @@ import {
   CheckboxFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/CheckboxFieldSkeleton"
 import { Theme, ThemeCss, getTheme } from "../../../theme"
+import { showFormFieldDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type CheckboxFieldProps = CheckboxFieldSkeletonProps
 export function CheckboxField(props: CheckboxFieldProps) {
+  showFormFieldDeprecatedMessage("CheckboxField")
   return <CheckboxFieldSkeleton {...props}></CheckboxFieldSkeleton>
 }
 

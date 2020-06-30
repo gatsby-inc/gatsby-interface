@@ -12,9 +12,11 @@ import {
 } from "./FormFieldSkeleton"
 import { getFinalAriaDescribedBy } from "../utils"
 import { OmitControlProps } from "../sharedTypes"
+import { showFormSkeletonDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type SelectFieldSkeletonProps = FormFieldSkeletonProps
 export function SelectFieldSkeleton(props: FormFieldSkeletonProps) {
+  showFormSkeletonDeprecatedMessage("SelectFieldSkeleton")
   return <FormFieldSkeleton {...props} />
 }
 

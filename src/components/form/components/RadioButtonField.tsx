@@ -36,6 +36,7 @@ import { Theme, ThemeCss, getTheme } from "../../../theme"
 
 import { INPUT_WIDTH, INPUT_VERTICAL_OFFSET_CALC } from "./FormGroupField"
 import { WithStyledFieldLabel } from "./FormField"
+import { showFormFieldDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type RadioButtonFieldVariant = "default" | "framed"
 
@@ -47,6 +48,7 @@ export function RadioButtonField({
   optionsDirection,
   ...rest
 }: RadioButtonFieldProps) {
+  showFormFieldDeprecatedMessage("RadioButtonField", true)
   return (
     <FormGroupFieldProvider optionsDirection={optionsDirection}>
       <RadioButtonFieldSkeleton

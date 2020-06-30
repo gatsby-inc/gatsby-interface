@@ -23,9 +23,11 @@ import {
   SelectFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/SelectFieldSkeleton"
 import { Theme } from "../../../theme"
+import { showFormFieldDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type SelectFieldProps = SelectFieldSkeletonProps
 export function SelectField(props: SelectFieldProps) {
+  showFormFieldDeprecatedMessage("SelectField")
   return <SelectFieldSkeleton {...props}></SelectFieldSkeleton>
 }
 

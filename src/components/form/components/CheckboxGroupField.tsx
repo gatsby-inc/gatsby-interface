@@ -34,6 +34,7 @@ import { Theme } from "../../../theme"
 import { INPUT_WIDTH, INPUT_VERTICAL_OFFSET_CALC } from "./FormGroupField"
 import { WithStyledFieldLabel } from "./FormField"
 import { styledCheckboxCss } from "./CheckboxField"
+import { showFormFieldDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type CheckboxGroupFieldProps = Omit<
   WithFormGroupField<CheckboxGroupFieldSkeletonProps>,
@@ -43,6 +44,7 @@ export function CheckboxGroupField({
   optionsDirection,
   ...rest
 }: CheckboxGroupFieldProps) {
+  showFormFieldDeprecatedMessage("CheckboxGroupField", true)
   return (
     <FormGroupFieldProvider optionsDirection={optionsDirection}>
       <CheckboxGroupFieldSkeleton css={formGroupFieldCss} {...rest} />

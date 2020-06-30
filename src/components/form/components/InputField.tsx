@@ -23,9 +23,11 @@ import {
   InputFieldSkeletonLabelProps,
 } from "../../form-skeletons/components/InputFieldSkeleton"
 import { Theme } from "../../../theme"
+import { showFormFieldDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type InputFieldProps = InputFieldSkeletonProps
 export function InputField(props: InputFieldProps) {
+  showFormFieldDeprecatedMessage("InputField")
   return <InputFieldSkeleton {...props}></InputFieldSkeleton>
 }
 

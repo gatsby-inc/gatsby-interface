@@ -15,11 +15,13 @@ import {
   FormGroupFieldSkeletonOptionLabel,
   FormGroupFieldSkeletonOptionLabelProps,
 } from "./FormGroupFieldSkeleton"
+import { showFormSkeletonDeprecatedMessage } from "../../../utils/maintenance/deprecationMessages"
 
 export type CheckboxGroupFieldSkeletonProps = FormGroupFieldSkeletonProps
 export function CheckboxGroupFieldSkeleton(
   props: CheckboxGroupFieldSkeletonProps
 ) {
+  showFormSkeletonDeprecatedMessage("CheckboxGroupFieldSkeleton", true)
   return <FormGroupFieldSkeleton {...props} />
 }
 
