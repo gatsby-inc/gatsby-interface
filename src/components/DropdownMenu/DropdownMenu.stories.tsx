@@ -102,22 +102,24 @@ export const MenuLinks = () => {
   useOpenMenuOnMount()
 
   return (
-    <DropdownMenu>
-      <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
-      <DropdownMenuItems>
-        {["Ashalmawia", "Addadshashanammu", "Ularradallaku"].map(item => (
-          <DropdownMenuLink
-            href={`https://www.google.com/search?q=${item}`}
-            target="_blank"
-            rel="noreferrer noopener"
-            key={item}
-            onSelect={() => action("Select")(item)}
-          >
-            {item}
-          </DropdownMenuLink>
-        ))}
-      </DropdownMenuItems>
-    </DropdownMenu>
+    <div css={{ minHeight: "100vh" }}>
+      <DropdownMenu>
+        <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
+        <DropdownMenuItems>
+          {["Ashalmawia", "Addadshashanammu", "Ularradallaku"].map(item => (
+            <DropdownMenuLink
+              href={`https://www.google.com/search?q=${item}`}
+              target="_blank"
+              rel="noreferrer noopener"
+              key={item}
+              onSelect={() => action("Select")(item)}
+            >
+              {item}
+            </DropdownMenuLink>
+          ))}
+        </DropdownMenuItems>
+      </DropdownMenu>
+    </div>
   )
 }
 
