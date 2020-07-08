@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.177](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.176...v0.0.177) (2020-07-08)
+
+
+### Bug Fixes
+
+* **Combobox:** force type="button" on ComboboxButton ([#352](https://github.com/gatsby-inc/gatsby-interface/issues/352)) ([3efe887](https://github.com/gatsby-inc/gatsby-interface/commit/3efe8875e3d4f9122d2f515c5de9e150aa9e6ce1))
+
 ### [0.0.176](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.175...v0.0.176) (2020-07-08)
 
 
