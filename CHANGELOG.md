@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.176](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.175...v0.0.176) (2020-07-08)
+
+
+### Features
+
+* **Combobox:** support toggle button ([#347](https://github.com/gatsby-inc/gatsby-interface/issues/347)) ([e815dcb](https://github.com/gatsby-inc/gatsby-interface/commit/e815dcbad59bff7df79e451441cd4dfdd1c1e5ec))
+
 ### [0.0.175](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.174...v0.0.175) (2020-06-30)
 
 
