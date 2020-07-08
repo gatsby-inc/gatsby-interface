@@ -256,15 +256,15 @@ export function ComboboxOptionText(props: ComboboxOptionTextProps) {
   return <ReachComboboxOptionText {...props} />
 }
 
-export type ComboboxButtonProps = import("@reach/utils").PropsWithAs<
-  "button",
-  {}
+export type ComboboxButtonProps = Omit<
+  import("@reach/utils").PropsWithAs<"button", {}>,
+  "type"
 >
 
 export function ComboboxButton(props: ComboboxButtonProps) {
   // According to WAI-ARIA authoring practices, combobox button should be excluded from the tab sequence
   // https://www.w3.org/TR/wai-aria-practices-1.1/#keyboard-interaction-6
-  return <ReachComboboxButton tabIndex={-1} {...props} />
+  return <ReachComboboxButton tabIndex={-1} {...props} type="button" />
 }
 
 export function useComboboxContext() {
