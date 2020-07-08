@@ -10,7 +10,7 @@ import {
 } from "./"
 import { Theme } from "../../theme"
 import { ComboboxOptionProps } from "./Combobox"
-import { boolean } from "@storybook/addon-knobs"
+import { boolean, text } from "@storybook/addon-knobs"
 
 export default {
   title: `Combobox`,
@@ -85,6 +85,8 @@ export const Sandbox = () => {
         <ComboboxInput
           aria-labelledby="demo"
           hasError={boolean(`hasError`, false)}
+          showToggleButton={boolean(`showToggleButton`, false)}
+          toggleButtonAriaLabel={text("toggleButtonAriaLabel", "Show options")}
         />
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
@@ -108,6 +110,29 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+}
+
+export const WithToggleButton = () => {
+  return (
+    <div css={{ minHeight: `100vh` }}>
+      <h4 id="demo">Toggle Button</h4>
+      <Combobox>
+        <ComboboxInput
+          aria-labelledby="demo"
+          ref={element => element && element.focus()}
+          showToggleButton
+          toggleButtonAriaLabel="Show available options"
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby="demo">
+            {options.map(({ value }) => {
+              return <ComboboxOption key={value} value={value} />
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  )
 }
 
 export const WithAccessibleNameForList = () => {
