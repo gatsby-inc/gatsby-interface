@@ -35,7 +35,13 @@ export const menuItemCss: ThemeCss = theme => ({
   color: theme.colors.grey[90],
   fontSize: theme.fontSizes[1],
   padding: `${theme.space[4]} ${theme.space[5]}`,
+  lineHeight: theme.lineHeights.default,
   overflow: "hidden",
+  wordWrap: `break-word`,
+  overflowWrap: `break-word`,
+  hyphens: `auto`,
+  display: `block`,
+  textDecoration: `none`,
 })
 
 export const dropdownButtonCss: ThemeCss = theme => ({

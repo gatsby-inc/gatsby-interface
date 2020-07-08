@@ -50,21 +50,7 @@ export default {
 }
 
 export const Basic = () => {
-  React.useEffect(() => {
-    const button = document.querySelector<HTMLButtonElement>("button")
-    if (button) {
-      // Toggle menu for Chromatic snapshots
-      button.focus()
-      button.dispatchEvent(
-        new KeyboardEvent("keydown", {
-          bubbles: true,
-          cancelable: true,
-          key: "Enter",
-          shiftKey: false,
-        })
-      )
-    }
-  }, [])
+  useOpenMenuOnMount()
 
   return (
     <div css={{ minHeight: "100vh" }}>
@@ -112,6 +98,31 @@ Sandbox.story = {
   },
 }
 
+export const MenuLinks = () => {
+  useOpenMenuOnMount()
+
+  return (
+    <div css={{ minHeight: "100vh" }}>
+      <DropdownMenu>
+        <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
+        <DropdownMenuItems>
+          {["Ashalmawia", "Addadshashanammu", "Ularradallaku"].map(item => (
+            <DropdownMenuLink
+              href={`https://www.google.com/search?q=${item}`}
+              target="_blank"
+              rel="noreferrer noopener"
+              key={item}
+              onSelect={() => action("Select")(item)}
+            >
+              {item}
+            </DropdownMenuLink>
+          ))}
+        </DropdownMenuItems>
+      </DropdownMenu>
+    </div>
+  )
+}
+
 export const StyledButton = () => {
   return (
     <DropdownMenu>
@@ -156,4 +167,22 @@ export const WithComponentPlaceholder = () => {
       </DropdownMenuItems>
     </DropdownMenu>
   )
+}
+
+function useOpenMenuOnMount() {
+  React.useEffect(() => {
+    const button = document.querySelector<HTMLButtonElement>("button")
+    if (button) {
+      // Toggle menu for Chromatic snapshots
+      button.focus()
+      button.dispatchEvent(
+        new KeyboardEvent("keydown", {
+          bubbles: true,
+          cancelable: true,
+          key: "Enter",
+          shiftKey: false,
+        })
+      )
+    }
+  }, [])
 }
