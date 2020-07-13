@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.178](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.177...v0.0.178) (2020-07-13)
+
+
+### Features
+
+* **icons:** added BitbucketIcon, GitHubIcon and GitLabIcon ([#353](https://github.com/gatsby-inc/gatsby-interface/issues/353)) ([c676099](https://github.com/gatsby-inc/gatsby-interface/commit/c676099fd0764fcd38af3f1af6b5c629dd0f5baf))
+
 ### [0.0.177](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.176...v0.0.177) (2020-07-08)
 
 
