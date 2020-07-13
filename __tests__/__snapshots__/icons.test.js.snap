@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`icons <BitbucketIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-BitbucketIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="none"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <g
+      clip-path="url(#BitbucketIcon__clip)"
+    >
+      <path
+        d="M2.64036 2.8875C2.5481 2.8863 2.45669 2.90556 2.37256 2.94393C2.28843 2.9823 2.21362 3.03885 2.15337 3.10961C2.09312 3.18037 2.0489 3.26363 2.02381 3.35353C1.99873 3.44344 1.99338 3.53782 2.00815 3.63004L4.69189 20.1258C4.72533 20.3276 4.82794 20.5111 4.98172 20.644C5.13549 20.7768 5.33058 20.8506 5.53273 20.8523H18.4077C18.5592 20.8543 18.7064 20.8011 18.8225 20.7024C18.9385 20.6037 19.0157 20.4661 19.0399 20.3146L21.7237 3.63324C21.7384 3.54102 21.7331 3.44664 21.708 3.35673C21.6829 3.26683 21.6387 3.18357 21.5784 3.11281C21.5182 3.04205 21.4434 2.9855 21.3592 2.94713C21.2751 2.90876 21.1837 2.8895 21.0914 2.8907L2.64036 2.8875ZM13.9411 14.8096H9.83177L8.71908 8.92378H14.9369L13.9411 14.8096Z"
+        fill="#2684FF"
+      />
+      <path
+        d="M20.8702 8.92383H14.9369L13.9411 14.8097H9.83178L4.97955 20.6411C5.13335 20.7758 5.32943 20.8506 5.53274 20.8523H18.4109C18.5624 20.8543 18.7096 20.8011 18.8257 20.7024C18.9417 20.6037 19.0189 20.4661 19.0431 20.3147L20.8702 8.92383Z"
+        fill="url(#BitbucketIcon__gradient)"
+      />
+    </g>
+    <defs>
+      <lineargradient
+        gradientUnits="userSpaceOnUse"
+        id="BitbucketIcon__gradient"
+        x1="22.2421"
+        x2="12.3445"
+        y1="10.5721"
+        y2="18.2014"
+      >
+        <stop
+          offset="0.18"
+          stop-color="#0052CC"
+        />
+        <stop
+          offset="1"
+          stop-color="#2684FF"
+        />
+      </lineargradient>
+      <clippath
+        id="BitbucketIcon__clip"
+      >
+        <rect
+          fill="white"
+          height="18"
+          transform="translate(2 3)"
+          width="20"
+        />
+      </clippath>
+    </defs>
+  </svg>
+</div>
+`;
+
 exports[`icons <BlogIcon /> renders unchanged 1`] = `
 <div>
   <svg
@@ -495,6 +555,89 @@ exports[`icons <GeneralIcon /> renders unchanged 1`] = `
     <path
       d="M1.00012 12.0411C1.32983 12.0139 1.66332 12 2.00005 12C8.23232 12 13.3549 16.751 13.9436 22.8288C13.3127 22.9413 12.6633 23 12 23C11.9836 23 11.9671 23 11.9507 22.9999C11.4489 17.9466 7.18536 14 2.00005 14C1.72648 14 1.45547 14.011 1.18745 14.0325C1.06682 13.3868 1.00261 12.7212 1.00012 12.0411Z"
       fill="currentColor"
+    />
+  </svg>
+</div>
+`;
+
+exports[`icons <GitHubIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-GitHubIcon"
+    fill="currentColor"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="none"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12C2 16.42 4.87 20.17 8.84 21.5C9.34 21.58 9.5 21.27 9.5 21C9.5 20.77 9.5 20.14 9.5 19.31C6.73 19.91 6.14 17.97 6.14 17.97C5.68 16.81 5.03 16.5 5.03 16.5C4.12 15.88 5.1 15.9 5.1 15.9C6.1 15.97 6.63 16.93 6.63 16.93C7.5 18.45 8.97 18 9.54 17.76C9.63 17.11 9.89 16.67 10.17 16.42C7.95 16.17 5.62 15.31 5.62 11.5C5.62 10.39 6 9.5 6.65 8.79C6.55 8.54 6.2 7.5 6.75 6.15C6.75 6.15 7.59 5.88 9.5 7.17C10.29 6.95 11.15 6.84 12 6.84C12.85 6.84 13.71 6.95 14.5 7.17C16.41 5.88 17.25 6.15 17.25 6.15C17.8 7.5 17.45 8.54 17.35 8.79C18 9.5 18.38 10.39 18.38 11.5C18.38 15.32 16.04 16.16 13.81 16.41C14.17 16.72 14.5 17.33 14.5 18.26C14.5 19.6 14.5 20.68 14.5 21C14.5 21.27 14.66 21.59 15.17 21.5C19.14 20.16 22 16.42 22 12C22 6.48 17.52 2 12 2Z"
+    />
+  </svg>
+</div>
+`;
+
+exports[`icons <GitLabIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-GitLabIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="none"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M12.089 21.5871L15.8043 10.1526H8.37366L12.089 21.5871Z"
+      fill="#E24329"
+      fill-rule="evenodd"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M12.0889 21.5871L8.3736 10.1526H3.16669L12.0889 21.5871Z"
+      fill="#FC6D26"
+      fill-rule="evenodd"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M3.16672 10.1526L2.0377 13.6274C1.93473 13.9443 2.04751 14.2915 2.31712 14.4874L12.0889 21.5871L3.16672 10.1526Z"
+      fill="#FCA326"
+      fill-rule="evenodd"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M3.16669 10.1527H8.3736L6.13586 3.26578C6.02076 2.91136 5.51943 2.91146 5.40433 3.26578L3.16669 10.1527Z"
+      fill="#E24329"
+      fill-rule="evenodd"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M12.0889 21.5871L15.8042 10.1526H21.0111L12.0889 21.5871Z"
+      fill="#FC6D26"
+      fill-rule="evenodd"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M21.0111 10.1526L22.1402 13.6274C22.2431 13.9443 22.1304 14.2915 21.8607 14.4874L12.0889 21.5871L21.0111 10.1526Z"
+      fill="#FCA326"
+      fill-rule="evenodd"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M21.0112 10.1527H15.8043L18.042 3.26578C18.1571 2.91136 18.6584 2.91146 18.7735 3.26578L21.0112 10.1527Z"
+      fill="#E24329"
+      fill-rule="evenodd"
     />
   </svg>
 </div>
