@@ -31,7 +31,7 @@ export const StyledInput = React.forwardRef<HTMLInputElement, StyledInputProps>(
 
     const baseCss: ThemeCss = theme => [
       baseInputCss(theme),
-      { width: `auto` },
+      { width: `100%` },
       LeftIcon && inputWithLeftIconCss(theme),
     ]
 
