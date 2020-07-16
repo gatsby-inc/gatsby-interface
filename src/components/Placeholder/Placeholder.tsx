@@ -2,11 +2,13 @@
 import { jsx } from "@emotion/core"
 import React, { useContext } from "react"
 import { ThemeCss, Theme } from "../../theme"
-import { Spacer } from "../Spacer"
-import { SpaceToken } from "../../theme/space"
 
-const PlaceholderContext = React.createContext<{ space: string }>({
+const PlaceholderContext = React.createContext<{
+  space: string
+  animation: string
+}>({
   space: "",
+  animation: "",
 })
 
 export interface PlaceholderProps
@@ -14,6 +16,7 @@ export interface PlaceholderProps
   Left?: React.ComponentType
   Right?: React.ComponentType
   space?: string
+  animation?: string
 }
 
 export const Placeholder: React.FC<PlaceholderProps> = ({
@@ -21,10 +24,11 @@ export const Placeholder: React.FC<PlaceholderProps> = ({
   Left,
   Right,
   space = "0.5rem",
+  animation = "",
   ...props
 }) => {
   return (
-    <PlaceholderContext.Provider value={{ space }}>
+    <PlaceholderContext.Provider value={{ space, animation }}>
       <div
         css={{
           display: "flex",
@@ -33,13 +37,13 @@ export const Placeholder: React.FC<PlaceholderProps> = ({
         {...props}
       >
         {Left && (
-          <div css={{ marginRight: space }}>
+          <div css={{ marginRight: space, display: "block" }}>
             <Left />
           </div>
         )}
         <div css={{ flex: 1 }}>{children}</div>
         {Right && (
-          <div css={{ marginLeft: space }}>
+          <div css={{ marginLeft: space, display: "block" }}>
             <Right />
           </div>
         )}
@@ -68,7 +72,7 @@ export const PlaceholderBox: React.FC<PlaceholderBoxProps> = ({
   radii,
   ...props
 }) => {
-  const { space } = useContext(PlaceholderContext)
+  const { space, animation } = useContext(PlaceholderContext)
 
   const marginBottom = noSpace ? 0 : space
 
@@ -76,7 +80,13 @@ export const PlaceholderBox: React.FC<PlaceholderBoxProps> = ({
     <div
       css={(theme: Theme) => [
         placeholderLineCss(theme),
-        { width, height, marginBottom, borderRadius: radii || theme.radii[2] },
+        {
+          width,
+          height,
+          marginBottom,
+          borderRadius: radii || theme.radii[2],
+          animation,
+        },
       ]}
       {...props}
     />

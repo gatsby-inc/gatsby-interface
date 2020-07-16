@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
 import { Placeholder, PlaceholderBox } from "./"
-import { useTheme } from "../ThemeProvider"
+import { fadeAnimationCss } from "./Fade"
+import { Spacer } from "../Spacer"
 
 export default {
   title: `Placeholder`,
@@ -17,6 +17,7 @@ export const PlaceholderDefault = () => {
   return (
     <div css={{ width: "400px" }}>
       <Placeholder
+        animation={fadeAnimationCss}
         Left={() => <PlaceholderBox height="40px" width="40px" />}
         Right={() => <PlaceholderBox height="40px" width="40px" />}
       >
@@ -47,8 +48,44 @@ export const PlaceholderOnlyLeft = () => {
         Left={() => <PlaceholderBox height="40px" width="40px" radii="50%" />}
       >
         <PlaceholderBox />
+
         <PlaceholderBox width="70%" />
         <PlaceholderBox width="20%" noSpace />
+      </Placeholder>
+    </div>
+  )
+}
+
+export const PlaceholderComplexPage = () => {
+  return (
+    <div css={{ width: "800px", position: "relative" }}>
+      <Placeholder animation={fadeAnimationCss}>
+        <PlaceholderBox width="50%" noSpace />
+        <Spacer size={5} />
+
+        <PlaceholderBox width="70%" />
+
+        <Spacer size={5} />
+
+        <div css={{ display: "flex", flexDirection: "row" }}>
+          <PlaceholderBox width="100px" />
+          <Spacer size={5} direction="horizontal" />
+          <PlaceholderBox width="100px" />
+        </div>
+
+        <Spacer size={12} />
+
+        <div css={{ display: "flex", flexDirection: "row" }}>
+          <PlaceholderBox width="50px" />
+          <Spacer size={5} direction="horizontal" />
+          <PlaceholderBox width="50px" />
+        </div>
+
+        <Spacer size={7} />
+
+        <PlaceholderBox height="150px" noSpace />
+        <Spacer size={5} />
+        <PlaceholderBox height="150px" noSpace />
       </Placeholder>
     </div>
   )
