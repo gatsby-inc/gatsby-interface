@@ -160,8 +160,20 @@ const themeTransitions = transitions
 export type CardSpaceVariant = "DEFAULT" | "L" | "M"
 
 export type CardStyles = {
-  frame: Interpolation
-  space: Record<CardSpaceVariant, Interpolation>
+  frame: {
+    background: string
+    borderRadius: string
+    boxShadow: string
+  }
+  space: Record<
+    CardSpaceVariant,
+    {
+      paddingTop: string
+      paddingBottom: string
+      paddingLeft: string
+      paddingRight: string
+    }
+  >
 }
 
 const themeCardStyles: CardStyles = {
@@ -172,13 +184,22 @@ const themeCardStyles: CardStyles = {
   },
   space: {
     DEFAULT: {
-      padding: `${space[6]} ${space[3]} ${space[5]} ${space[7]}`,
+      paddingTop: space[6],
+      paddingBottom: space[5],
+      paddingLeft: space[7],
+      paddingRight: space[3],
     },
     M: {
-      padding: `${space[5]} ${space[9]}`,
+      paddingTop: space[5],
+      paddingBottom: space[5],
+      paddingLeft: space[9],
+      paddingRight: space[9],
     },
     L: {
-      padding: `${space[7]} ${space[9]} ${space[8]}`,
+      paddingTop: space[7],
+      paddingBottom: space[8],
+      paddingLeft: space[9],
+      paddingRight: space[9],
     },
   },
 }
