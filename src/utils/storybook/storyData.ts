@@ -76,3 +76,5 @@ export function getStoryOptions(size: OptionsSize = "mid") {
     }
   })
 }
+
+export const LONG_TEXT = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia recusandae nisi magni, dolore laboriosam maiores suscipit perspiciatis. Perspiciatis quod ipsum corporis officia necessitatibus, doloribus fuga culpa. Unde, molestiae repellendus.`
