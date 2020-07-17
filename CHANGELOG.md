@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.179](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.178...v0.0.179) (2020-07-17)
+
+
+### Features
+
+* **Card:** initial prototype for Card component ([#357](https://github.com/gatsby-inc/gatsby-interface/issues/357)) ([1603226](https://github.com/gatsby-inc/gatsby-interface/commit/16032265b4a3fce76093efdd863b741ce05a6571))
+
 ### [0.0.178](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.177...v0.0.178) (2020-07-13)
 
 
