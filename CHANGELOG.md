@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.180](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.179...v0.0.180) (2020-07-17)
+
+
+### Bug Fixes
+
+* top-level export for Card component ([#359](https://github.com/gatsby-inc/gatsby-interface/issues/359)) ([3e7175c](https://github.com/gatsby-inc/gatsby-interface/commit/3e7175c05a58baa1a9af9d0bc92153cd0178b523))
+
 ### [0.0.179](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.178...v0.0.179) (2020-07-17)
 
 
