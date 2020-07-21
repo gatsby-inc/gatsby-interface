@@ -1,7 +1,5 @@
 /** @jsx jsx */
 import { jsx, Interpolation } from "@emotion/core"
-import { storiesOf } from "@storybook/react"
-import { StoryUtils } from "../../utils/storybook"
 import { css } from "@emotion/core"
 import { Theme, getTheme } from "../../theme"
 import { useTheme, ThemeProvider } from "."
@@ -10,127 +8,130 @@ const textCss: Interpolation = {
   textTransform: `uppercase`,
 }
 
-storiesOf(`Theme/ThemeProvider`, module)
-  .addParameters({
-    options: {
-      showPanel: true,
-    },
-  })
-  .add(`accessing theme in a css prop`, () => {
-    function TestComponent() {
-      return (
-        <StoryUtils.Container>
-          <StoryUtils.Stack>
-            <div
-              css={(theme: Theme) =>
-                css(textCss, {
-                  backgroundColor: theme.colors.gatsby,
-                  color: theme.colors.white,
-                  padding: theme.space[5],
-                })
-              }
-            >
-              Lorem ipsum
-            </div>
-          </StoryUtils.Stack>
-        </StoryUtils.Container>
-      )
-    }
+export default {
+  title: `Theme/ThemeProvider`,
+  component: ThemeProvider,
+}
+
+export const CssProp = () => {
+  function TestComponent() {
+    return (
+      <div
+        css={(theme: Theme) =>
+          css(textCss, {
+            backgroundColor: theme.colors.gatsby,
+            color: theme.colors.white,
+            padding: theme.space[5],
+          })
+        }
+      >
+        Lorem ipsum
+      </div>
+    )
+  }
+
+  return (
+    <ThemeProvider>
+      <TestComponent />
+    </ThemeProvider>
+  )
+}
+
+CssProp.story = {
+  name: `Accessing theme in a css prop`,
+}
+
+export const UseTheme = () => {
+  function TestComponent() {
+    const theme = useTheme()
 
     return (
-      <ThemeProvider>
-        <TestComponent />
-      </ThemeProvider>
+      <div
+        style={{
+          backgroundColor: theme.colors.green[80],
+          color: theme.colors.white,
+          padding: theme.space[5],
+        }}
+      >
+        Lorem ipsum
+      </div>
     )
-  })
-  .add(`useTheme`, () => {
-    function TestComponent() {
-      const theme = useTheme()
-      return (
-        <StoryUtils.Container>
-          <StoryUtils.Stack>
-            <div
-              style={{
-                backgroundColor: theme.colors.green[80],
-                color: theme.colors.white,
-                padding: theme.space[5],
-              }}
-            >
-              Lorem ipsum
-            </div>
-          </StoryUtils.Stack>
-        </StoryUtils.Container>
-      )
-    }
+  }
 
+  return (
+    <ThemeProvider>
+      <TestComponent />
+    </ThemeProvider>
+  )
+}
+
+UseTheme.story = {
+  name: `useTheme`,
+}
+
+export const CustomThemeObject = () => {
+  function TestComponent() {
     return (
-      <ThemeProvider>
-        <TestComponent />
-      </ThemeProvider>
+      <div
+        css={(theme: Theme) =>
+          css(textCss, {
+            backgroundColor: theme.colors.gatsby,
+            color: theme.colors.white,
+            padding: theme.space[5],
+          })
+        }
+      >
+        Lorem ipsum
+      </div>
     )
-  })
-  .add("ThemeProvider custom theme prop of type Theme", () => {
-    function TestComponent() {
-      return (
-        <StoryUtils.Container>
-          <StoryUtils.Stack>
-            <div
-              css={(theme: Theme) =>
-                css(textCss, {
-                  backgroundColor: theme.colors.gatsby,
-                  color: theme.colors.white,
-                  padding: theme.space[5],
-                })
-              }
-            >
-              Lorem ipsum
-            </div>
-          </StoryUtils.Stack>
-        </StoryUtils.Container>
-      )
-    }
+  }
 
-    const defaultTheme = getTheme()
-    const otherTheme = {
-      ...defaultTheme,
-      colors: { ...defaultTheme.colors, gatsby: "red" },
-    }
+  const defaultTheme = getTheme()
+  const otherTheme = {
+    ...defaultTheme,
+    colors: { ...defaultTheme.colors, gatsby: "#b22222" },
+  }
 
+  return (
+    <ThemeProvider theme={otherTheme}>
+      <TestComponent />
+    </ThemeProvider>
+  )
+}
+
+CustomThemeObject.story = {
+  name: `Custom theme object`,
+}
+
+export const CustomThemeFunction = () => {
+  function TestComponent() {
     return (
-      <ThemeProvider theme={otherTheme}>
-        <TestComponent />
-      </ThemeProvider>
+      <div
+        css={(theme: Theme) =>
+          css(textCss, {
+            backgroundColor: theme.colors.gatsby,
+            color: theme.colors.white,
+            padding: theme.space[5],
+          })
+        }
+      >
+        Lorem ipsum
+      </div>
     )
-  })
-  .add("ThemeProvider custom theme prop of type function", () => {
-    function TestComponent() {
-      return (
-        <StoryUtils.Container>
-          <StoryUtils.Stack>
-            <div
-              css={(theme: Theme) =>
-                css(textCss, {
-                  backgroundColor: theme.colors.gatsby,
-                  color: theme.colors.white,
-                  padding: theme.space[5],
-                })
-              }
-            >
-              Lorem ipsum
-            </div>
-          </StoryUtils.Stack>
-        </StoryUtils.Container>
-      )
-    }
+  }
 
-    const getNewTheme = (defaultTheme: Theme) => ({
-      ...defaultTheme,
-      colors: { ...defaultTheme.colors, gatsby: "yellow" },
-    })
-
-    return (
-      <ThemeProvider theme={getNewTheme}>
-        <TestComponent />
-      </ThemeProvider>
-    )
+  const getNewTheme = (defaultTheme: Theme) => ({
+    ...defaultTheme,
+    colors: { ...defaultTheme.colors, gatsby: "#483d8b" },
   })
+
+  return (
+    <ThemeProvider theme={getNewTheme}>
+      <TestComponent />
+    </ThemeProvider>
+  )
+}
+
+CustomThemeFunction.story = {
+  name: `Custom theme function`,
+}
