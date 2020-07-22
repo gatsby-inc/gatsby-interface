@@ -80,6 +80,7 @@ function ThemeColorCase({
       <Component
         css={theme => ({ color: getColor(theme.colors) })}
         height="3em"
+        id={`customColor-${colorLabel}`}
       />
     </StoryCase>
   )
@@ -159,13 +160,13 @@ sortedIconComponentNames.forEach(componentName => {
           <h2>Size:</h2>
           {sizes.map(size => (
             <StoryCase info={size} key={size}>
-              <Component size={size} />
+              <Component size={size} id={`size-${size}`} />
             </StoryCase>
           ))}
           <h2>Custom size:</h2>
           {customSizes.map(size => (
             <StoryCase info={<CustomSizeInfo size={size} />} key={size}>
-              <Component height={size} width={size} />
+              <Component height={size} width={size} id={`customSize-${size}`} />
             </StoryCase>
           ))}
           <h2>Theme color:</h2>
@@ -185,12 +186,16 @@ sortedIconComponentNames.forEach(componentName => {
               info={<span style={{ color: colorCase }}>{colorCase}</span>}
               key={colorCase}
             >
-              <Component color={colorCase} height="3em" />
+              <Component
+                color={colorCase}
+                height="3em"
+                id={`customColor-${colorCase}`}
+              />
             </StoryCase>
           ))}
           <h2>Inline</h2>
           <p>
-            Lorem ipsum <Component height="1em" /> foo bar
+            Lorem ipsum <Component height="1em" id="inline" /> foo bar
           </p>
         </div>
       )
