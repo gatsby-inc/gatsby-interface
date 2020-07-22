@@ -4,6 +4,7 @@ import { BaseHeading, BaseHeadingProps } from "../BaseHeading"
 import { showCustomCssDeprecationMessage } from "../../utils/maintenance/deprecationMessages"
 import { ThemeCss, Theme } from "../../theme"
 import { HeadingTone, HeadingVariant } from "./types"
+import { useHeadingLevel } from "../AreaWithHeading"
 
 const baseCss: ThemeCss = theme => ({
   fontFamily: theme.fonts.heading,
@@ -39,15 +40,23 @@ export type HeadingProps = BaseHeadingProps & {
 export function Heading({
   tone = `NEUTRAL`,
   variant = `PRIMARY`,
-  as = `h2`,
+  as = undefined,
   customCss,
   ...rest
 }: HeadingProps) {
+  const parentHeadingLevel = useHeadingLevel()
+
+  const tag =
+    as ||
+    (`h${Math.max(1, parentHeadingLevel)}` as Exclude<
+      HeadingProps["as"],
+      "span"
+    >)
   showCustomCssDeprecationMessage(customCss)
 
   return (
     <BaseHeading
-      as={as}
+      as={tag}
       css={(theme: Theme) => [
         baseCss(theme),
         modifiedCss(variant, tone)(theme),

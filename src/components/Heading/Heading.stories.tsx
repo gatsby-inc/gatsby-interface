@@ -7,6 +7,7 @@ import {
   withVariationsContainer,
 } from "../../utils/storybook"
 import { Heading, HeadingTone, HeadingVariant } from "."
+import { AreaWithHeading } from "../AreaWithHeading"
 
 export default {
   title: `Heading`,
@@ -64,3 +65,42 @@ export const Variants = () =>
 Variants.story = {
   decorators: [withVariationsContainer],
 }
+
+export const AutomaticHeadingLevels = () => (
+  <AreaWithHeading>
+    <Heading>This should be H1</Heading>
+    <section>
+      <AreaWithHeading>
+        <Heading>This should be H2</Heading>
+        <section>
+          <AreaWithHeading>
+            <Heading>This should be H3</Heading>
+            <section>
+              <AreaWithHeading>
+                <Heading>This should be H4</Heading>
+                <section>
+                  <AreaWithHeading>
+                    <Heading>This should be H5</Heading>
+                    <section>
+                      <AreaWithHeading>
+                        <Heading>This should be H6</Heading>
+                      </AreaWithHeading>
+                    </section>
+                  </AreaWithHeading>
+                </section>
+              </AreaWithHeading>
+            </section>
+          </AreaWithHeading>
+        </section>
+        <section>
+          <AreaWithHeading>
+            <Heading>This should be H3</Heading>
+            <section>
+              <Heading as="span">Using "as" prop to override with SPAN</Heading>
+            </section>
+          </AreaWithHeading>
+        </section>
+      </AreaWithHeading>
+    </section>
+  </AreaWithHeading>
+)
