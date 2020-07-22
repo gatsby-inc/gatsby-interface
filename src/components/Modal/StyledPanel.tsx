@@ -45,7 +45,9 @@ export function StyledPanelHeader({
   return (
     <StickyObserver lipShadowPosition="bottom" css={headerContainerCss}>
       <div css={headerCss}>
-        <Heading variant="PRIMARY">{children}</Heading>
+        <Heading as="h2" variant="PRIMARY">
+          {children}
+        </Heading>
 
         <StyledPanelCloseButton
           onClick={onCloseButtonClick}

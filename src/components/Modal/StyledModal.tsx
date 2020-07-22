@@ -62,7 +62,9 @@ export function StyledModalHeader({
 }: StyledModalHeaderProps) {
   return (
     <div css={headerCss}>
-      <Heading css={titleCss}>{children}</Heading>
+      <Heading as="h2" css={titleCss}>
+        {children}
+      </Heading>
 
       <StyledModalCloseButton
         onClick={onCloseButtonClick}

@@ -19,7 +19,10 @@ export function StoryPropVariant({
 }: StoryPropVariantProps) {
   return (
     <div {...rest}>
-      <Heading css={(theme: Theme) => ({ marginBottom: theme.space[4] })}>
+      <Heading
+        as="h2"
+        css={(theme: Theme) => ({ marginBottom: theme.space[4] })}
+      >
         <span
           css={(theme: Theme) => ({
             fontFamily: theme.fonts.monospace,
