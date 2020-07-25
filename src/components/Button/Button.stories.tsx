@@ -32,6 +32,7 @@ import { StoryPropVariant } from "../../utils/storybook/components"
 import { text, radios, boolean } from "@storybook/addon-knobs"
 import { IconButton, IconAnchorButton } from "../IconButton"
 import { Badge } from "../Badge"
+import { GeneralIcon } from "../icons"
 
 export default {
   title: `Button, AnchorButton, LinkButton`,
@@ -192,8 +193,11 @@ export const Variants = () =>
       </LinkButton>
       <div css={theme => ({ marginTop: theme.space[3] })}>
         <IconButton icon={<MdShare />} variant={variant}>
-          IconButton
+          MD IconButton
         </IconButton>{" "}
+        <IconButton icon={<GeneralIcon size="inherit" />} variant={variant}>
+          Gatsby IconButton
+        </IconButton>
       </div>
     </div>
   ))
@@ -217,7 +221,10 @@ export const Tones = () =>
       </LinkButton>
       <div css={theme => ({ marginTop: theme.space[3] })}>
         <IconButton icon={<MdShare />} tone={tone}>
-          Icon Button
+          MD IconButton
+        </IconButton>{" "}
+        <IconButton icon={<GeneralIcon size="inherit" />} tone={tone}>
+          Gatsby IconButton
         </IconButton>
       </div>
     </div>
@@ -244,7 +251,10 @@ export const Sizes = () =>
         {size !== `XL` ? (
           <React.Fragment>
             <IconButton icon={<MdShare />} size={size}>
-              Icon Button
+              MD IconButton
+            </IconButton>{" "}
+            <IconButton icon={<GeneralIcon size="inherit" />} size={size}>
+              Gatsby IconButton
             </IconButton>
           </React.Fragment>
         ) : (
@@ -282,7 +292,10 @@ export const Disabled = () => (
   <React.Fragment>
     <Button disabled>Button</Button>
     <IconButton icon={<MdSend />} disabled>
-      Button
+      MD IconButton
+    </IconButton>
+    <IconButton icon={<GeneralIcon size="inherit" />} disabled>
+      Gatsby IconButton
     </IconButton>
   </React.Fragment>
 )
