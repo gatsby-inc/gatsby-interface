@@ -13,6 +13,7 @@ import {
   ButtonTone,
   ButtonSize,
   ButtonTextVariant,
+  ButtonWidth,
 } from "../../theme/styles/button"
 import {
   withVariationsContainer,
@@ -84,6 +85,7 @@ export const Sandbox = () => {
     radioKnobOptions(TEXT_VARIANTS),
     "DEFAULT"
   )
+  const width = radios("width", radioKnobOptions(WIDTHS), "AUTO")
   const icon = radios(
     "icon",
     { left: `left`, right: "right", none: `none` },
@@ -103,6 +105,7 @@ export const Sandbox = () => {
         tone={tone}
         size={size}
         textVariant={textVariant}
+        width={width}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
         disabled={disabled}
@@ -117,6 +120,7 @@ export const Sandbox = () => {
         tone={tone}
         size={size}
         textVariant={textVariant}
+        width={width}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
       >
@@ -128,6 +132,7 @@ export const Sandbox = () => {
         tone={tone}
         size={size}
         textVariant={textVariant}
+        width={width}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
       >
@@ -220,6 +225,33 @@ export const TextVariants = () =>
   ))
 
 TextVariants.story = {
+  decorators: [withVariationsContainer],
+}
+
+const WIDTHS: ButtonWidth[] = [`AUTO`, `FIT_CONTAINER`]
+
+export const Widths = () =>
+  WIDTHS.map(width => (
+    <div
+      key={width}
+      css={theme => ({
+        display: `grid`,
+        gridGap: theme.space[5],
+        maxWidth: `300px`,
+      })}
+    >
+      <StoryPropVariant propName="width" propValue={width} />
+      <Button width={width}>Button</Button>{" "}
+      <AnchorButton href="#" width={width}>
+        AnchorButton
+      </AnchorButton>{" "}
+      <LinkButton to="/" width={width}>
+        LinkButton
+      </LinkButton>
+    </div>
+  ))
+
+Widths.story = {
   decorators: [withVariationsContainer],
 }
 
