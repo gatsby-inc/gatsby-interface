@@ -18,11 +18,20 @@ import {
   withVariationsContainer,
   radioKnobOptions,
 } from "../../utils/storybook"
-import { MdCloud, MdAutorenew, MdCancel, MdArrowForward } from "react-icons/md"
+import {
+  MdCloud,
+  MdAutorenew,
+  MdCancel,
+  MdArrowForward,
+  MdShare,
+  MdSend,
+} from "react-icons/md"
 import { Theme } from "../../theme"
 import { Notification } from "../Notification"
 import { StoryPropVariant } from "../../utils/storybook/components"
 import { text, radios, boolean } from "@storybook/addon-knobs"
+import { IconButton, IconAnchorButton } from "../IconButton"
+import { Badge } from "../Badge"
 
 export default {
   title: `Button, AnchorButton, LinkButton`,
@@ -30,6 +39,8 @@ export default {
   subcomponents: {
     AnchorButton,
     LinkButton,
+    IconButton,
+    IconAnchorButton,
   },
   parameters: {
     componentSubtitle: (
@@ -55,17 +66,40 @@ export default {
   },
 }
 
-const withButtonOnlyWarning: DecoratorFn = story => (
+function withAvailabilityWarning(componentNames: string[]): DecoratorFn {
+  const lastComponent = componentNames[componentNames.length - 1]
+  const restComponents = componentNames.slice(0, -1)
+  return story => (
+    <React.Fragment>
+      <Notification
+        tone="WARNING"
+        css={(theme: Theme) => ({ marginBottom: theme.space[4] })}
+      >
+        Only availbale for {restComponents.join(", ")}
+        {restComponents.length > 0 ? " and " : ""}
+        {lastComponent}
+      </Notification>
+      {story()}
+    </React.Fragment>
+  )
+}
+
+const withBNotAvailableForIconButtonWarning: DecoratorFn = story => (
   <React.Fragment>
-    <Notification
-      tone="WARNING"
-      css={(theme: Theme) => ({ marginBottom: theme.space[4] })}
-    >
-      Only availbale for Button component
-    </Notification>
     {story()}
+    <NotAvailableForIconButton
+      css={(theme: Theme) => ({ marginTop: theme.space[4] })}
+    />
   </React.Fragment>
 )
+
+function NotAvailableForIconButton({ className }: { className?: string }) {
+  return (
+    <Badge tone="NEUTRAL" className={className}>
+      Not availbale for IconButton
+    </Badge>
+  )
+}
 
 export const Basic = () => (
   <React.Fragment>
@@ -156,6 +190,11 @@ export const Variants = () =>
       <LinkButton to="/" variant={variant}>
         LinkButton
       </LinkButton>
+      <div css={theme => ({ marginTop: theme.space[3] })}>
+        <IconButton icon={<MdShare />} variant={variant}>
+          IconButton
+        </IconButton>{" "}
+      </div>
     </div>
   ))
 
@@ -176,6 +215,11 @@ export const Tones = () =>
       <LinkButton to="/" tone={tone}>
         LinkButton
       </LinkButton>
+      <div css={theme => ({ marginTop: theme.space[3] })}>
+        <IconButton icon={<MdShare />} tone={tone}>
+          Icon Button
+        </IconButton>
+      </div>
     </div>
   ))
 
@@ -196,6 +240,17 @@ export const Sizes = () =>
       <LinkButton to="/" size={size}>
         LinkButton
       </LinkButton>
+      <div css={theme => ({ marginTop: theme.space[3] })}>
+        {size !== `XL` ? (
+          <React.Fragment>
+            <IconButton icon={<MdShare />} size={size}>
+              Icon Button
+            </IconButton>
+          </React.Fragment>
+        ) : (
+          <NotAvailableForIconButton />
+        )}
+      </div>
     </div>
   ))
 
@@ -220,13 +275,23 @@ export const TextVariants = () =>
   ))
 
 TextVariants.story = {
-  decorators: [withVariationsContainer],
+  decorators: [withVariationsContainer, withBNotAvailableForIconButtonWarning],
 }
 
-export const Disabled = () => <Button disabled>Button</Button>
+export const Disabled = () => (
+  <React.Fragment>
+    <Button disabled>Button</Button>
+    <IconButton icon={<MdSend />} disabled>
+      Button
+    </IconButton>
+  </React.Fragment>
+)
 
 Disabled.story = {
-  decorators: [withButtonOnlyWarning],
+  decorators: [
+    withVariationsContainer,
+    withAvailabilityWarning([`Button`, `IconButton`]),
+  ],
 }
 
 export const WithIcons = () => (
@@ -263,7 +328,7 @@ export const WithIcons = () => (
 )
 
 WithIcons.story = {
-  decorators: [withVariationsContainer],
+  decorators: [withVariationsContainer, withBNotAvailableForIconButtonWarning],
 }
 
 export const InLoadingState = () => (
@@ -283,7 +348,7 @@ export const InLoadingState = () => (
 )
 
 InLoadingState.story = {
-  decorators: [withVariationsContainer, withButtonOnlyWarning],
+  decorators: [withVariationsContainer, withAvailabilityWarning([`Button`])],
 }
 
 export const CustomButtonComponent = () => {
@@ -299,7 +364,7 @@ export const CustomButtonComponent = () => {
 }
 
 CustomButtonComponent.story = {
-  decorators: [withButtonOnlyWarning],
+  decorators: [withAvailabilityWarning([`Button`])],
 }
 
 export const ManuallyApplyStyles = () => (

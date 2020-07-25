@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, InterpolationWithTheme } from "@emotion/core"
+import { jsx } from "@emotion/core"
 import React from "react"
 import { MdRefresh } from "react-icons/md"
 
@@ -11,7 +11,7 @@ import {
   ButtonSize,
   ButtonTextVariant,
 } from "../../theme/styles/button"
-import { Theme } from "../../theme"
+import { ThemeCss } from "../../theme"
 
 export type ButtonStyleProps = {
   size?: ButtonSize
@@ -37,7 +37,7 @@ export function getButtonStyles({
   children: React.ReactNode
   loading?: boolean
 } & ButtonStyleProps): {
-  css: InterpolationWithTheme<Theme>
+  css: ThemeCss
   children: React.ReactNode
 } {
   return {

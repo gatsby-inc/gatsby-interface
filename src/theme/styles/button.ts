@@ -1,4 +1,4 @@
-import { InterpolationWithTheme, keyframes } from "@emotion/core"
+import { keyframes } from "@emotion/core"
 import { Theme, ThemeCss } from ".."
 
 export type ButtonSize = "XL" | "L" | "M" | "S"
@@ -22,7 +22,7 @@ export function getButtonCss({
   rightIcon?: React.ReactNode
   loading?: boolean
   textVariant?: ButtonTextVariant
-}): InterpolationWithTheme<Theme> {
+}): ThemeCss {
   return (theme: Theme) => [
     getButtonBaseCss(textVariant)(theme),
     getButtonIconsCss({
