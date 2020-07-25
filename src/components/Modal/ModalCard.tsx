@@ -4,6 +4,7 @@ import React from "react"
 import { keyframes } from "@emotion/core"
 import { ModalContent, ModalContentProps } from "./ModalContent"
 import { ThemeCss } from "../../theme"
+import { modalFullScreenCss } from "./ModalFullScreen"
 
 const cardIncoming = keyframes`
   100% {
@@ -11,21 +12,24 @@ const cardIncoming = keyframes`
   }
 `
 
-const baseCss: ThemeCss = theme => ({
-  background: theme.colors.white,
-  borderRadius: theme.radii[3],
-  boxShadow: "0px 5px 30px rgba(0, 0, 0, 0.2)",
-  maxWidth: `calc(100% - (${theme.space[5]} * 2))`,
-  animation: `${cardIncoming} 0.5s 0.25s ease forwards`,
-  transform:
-    "translate(0, 90vh) scale(0.9) perspective(1000px) rotateX(-90deg)",
-  transformOrigin: "top center",
-  margin: "0 auto",
-  [theme.mediaQueries.mobile]: {
-    maxWidth: `calc(100% - (${theme.space[7]} * 2))`,
+const baseCss: ThemeCss = theme => [
+  modalFullScreenCss(theme),
+  {
+    [theme.mediaQueries.phablet]: {
+      width: "620px",
+      height: `auto`,
+      background: theme.colors.white,
+      borderRadius: theme.radii[3],
+      boxShadow: "0px 5px 30px rgba(0, 0, 0, 0.2)",
+      maxWidth: `calc(100% - (${theme.space[5]} * 2))`,
+      animation: `${cardIncoming} 0.5s 0.25s ease forwards`,
+      transform:
+        "translate(0, 90vh) scale(0.9) perspective(1000px) rotateX(-90deg)",
+      transformOrigin: "top center",
+      margin: "0 auto",
+    },
   },
-  [theme.mediaQueries.phablet]: { width: "620px" },
-})
+]
 
 export type ModalCardProps = Omit<ModalContentProps, "ref">
 
