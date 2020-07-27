@@ -15,6 +15,7 @@ export function LinkButton<TState>(props: LinkButtonProps<TState>) {
     leftIcon,
     rightIcon,
     textVariant,
+    width,
     ...rest
   } = props
 
@@ -28,6 +29,7 @@ export function LinkButton<TState>(props: LinkButtonProps<TState>) {
         leftIcon,
         rightIcon,
         textVariant,
+        width,
       })}
       {...rest}
     />

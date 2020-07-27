@@ -18,6 +18,7 @@ export const AnchorButton = React.forwardRef<
     leftIcon,
     rightIcon,
     textVariant,
+    width,
     ...rest
   } = props
 
@@ -31,6 +32,7 @@ export const AnchorButton = React.forwardRef<
         leftIcon,
         rightIcon,
         textVariant,
+        width,
       })}
       {...rest}
       ref={ref}
