@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.179",
+  "version": "0.0.182",
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
@@ -163,7 +163,7 @@
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-url": "^1.4.0",
     "shelljs": "^0.8.3",
-    "standard-version": "^7.0.1",
+    "standard-version": "^8.0.1",
     "storybook-addon-designs": "^5.2.0",
     "storybook-chromatic": "^3.5.2",
     "storybook-host": "^5.1.0",

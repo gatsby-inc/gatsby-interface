@@ -2,40 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.179](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.178...v0.0.179) (2020-07-17)
+### [0.0.182](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.181...v0.0.182) (2020-07-22)
 
+### [0.0.181](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.180...v0.0.181) (2020-07-17)
+
+### [0.0.180](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.179...v0.0.180) (2020-07-17)
+
+### Bug Fixes
+
+- top-level export for Card component ([#359](https://github.com/gatsby-inc/gatsby-interface/issues/359)) ([3e7175c](https://github.com/gatsby-inc/gatsby-interface/commit/3e7175c05a58baa1a9af9d0bc92153cd0178b523))
+
+### [0.0.179](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.178...v0.0.179) (2020-07-17)
 
 ### Features
 
-* **Card:** initial prototype for Card component ([#357](https://github.com/gatsby-inc/gatsby-interface/issues/357)) ([1603226](https://github.com/gatsby-inc/gatsby-interface/commit/16032265b4a3fce76093efdd863b741ce05a6571))
+- **Card:** initial prototype for Card component ([#357](https://github.com/gatsby-inc/gatsby-interface/issues/357)) ([1603226](https://github.com/gatsby-inc/gatsby-interface/commit/16032265b4a3fce76093efdd863b741ce05a6571))
 
 ### [0.0.178](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.177...v0.0.178) (2020-07-13)
 
-
 ### Features
 
-* **icons:** added BitbucketIcon, GitHubIcon and GitLabIcon ([#353](https://github.com/gatsby-inc/gatsby-interface/issues/353)) ([c676099](https://github.com/gatsby-inc/gatsby-interface/commit/c676099fd0764fcd38af3f1af6b5c629dd0f5baf))
+- **icons:** added BitbucketIcon, GitHubIcon and GitLabIcon ([#353](https://github.com/gatsby-inc/gatsby-interface/issues/353)) ([c676099](https://github.com/gatsby-inc/gatsby-interface/commit/c676099fd0764fcd38af3f1af6b5c629dd0f5baf))
 
 ### [0.0.177](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.176...v0.0.177) (2020-07-08)
 
-
 ### Bug Fixes
 
-* **Combobox:** force type="button" on ComboboxButton ([#352](https://github.com/gatsby-inc/gatsby-interface/issues/352)) ([3efe887](https://github.com/gatsby-inc/gatsby-interface/commit/3efe8875e3d4f9122d2f515c5de9e150aa9e6ce1))
+- **Combobox:** force type="button" on ComboboxButton ([#352](https://github.com/gatsby-inc/gatsby-interface/issues/352)) ([3efe887](https://github.com/gatsby-inc/gatsby-interface/commit/3efe8875e3d4f9122d2f515c5de9e150aa9e6ce1))
 
 ### [0.0.176](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.175...v0.0.176) (2020-07-08)
 
-
 ### Features
 
-* **Combobox:** support toggle button ([#347](https://github.com/gatsby-inc/gatsby-interface/issues/347)) ([e815dcb](https://github.com/gatsby-inc/gatsby-interface/commit/e815dcbad59bff7df79e451441cd4dfdd1c1e5ec))
+- **Combobox:** support toggle button ([#347](https://github.com/gatsby-inc/gatsby-interface/issues/347)) ([e815dcb](https://github.com/gatsby-inc/gatsby-interface/commit/e815dcbad59bff7df79e451441cd4dfdd1c1e5ec))
 
 ### [0.0.175](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.174...v0.0.175) (2020-06-30)
 
-
 ### Bug Fixes
 
-* **DropdownMenu:** style DropdownMenuLink and make it forward refs ([#348](https://github.com/gatsby-inc/gatsby-interface/issues/348)) ([33a6146](https://github.com/gatsby-inc/gatsby-interface/commit/33a614691b953559a5d6411a16d43370e9f088da))
+- **DropdownMenu:** style DropdownMenuLink and make it forward refs ([#348](https://github.com/gatsby-inc/gatsby-interface/issues/348)) ([33a6146](https://github.com/gatsby-inc/gatsby-interface/commit/33a614691b953559a5d6411a16d43370e9f088da))
 
 ### [0.0.174](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.173...v0.0.174) (2020-06-30)
 
@@ -43,61 +48,53 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.172](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.171...v0.0.172) (2020-06-29)
 
-
 ### Features
 
-* Revised forms ([#340](https://github.com/gatsby-inc/gatsby-interface/issues/340)) ([4f5d18f](https://github.com/gatsby-inc/gatsby-interface/commit/4f5d18f0a9faafa9fd15c493c91343e3ff4d8155))
+- Revised forms ([#340](https://github.com/gatsby-inc/gatsby-interface/issues/340)) ([4f5d18f](https://github.com/gatsby-inc/gatsby-interface/commit/4f5d18f0a9faafa9fd15c493c91343e3ff4d8155))
 
 ### [0.0.171](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.170...v0.0.171) (2020-06-23)
 
-
 ### Bug Fixes
 
-* tweak color contrast for PlanIndicator variants ([#344](https://github.com/gatsby-inc/gatsby-interface/issues/344)) ([ea86970](https://github.com/gatsby-inc/gatsby-interface/commit/ea86970b7308f0691ef434059dba751db71796c7))
+- tweak color contrast for PlanIndicator variants ([#344](https://github.com/gatsby-inc/gatsby-interface/issues/344)) ([ea86970](https://github.com/gatsby-inc/gatsby-interface/commit/ea86970b7308f0691ef434059dba751db71796c7))
 
 ### [0.0.170](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.169...v0.0.170) (2020-06-23)
 
 ### [0.0.169](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.168...v0.0.169) (2020-06-22)
 
-
 ### Features
 
-* EmptyState component ([#342](https://github.com/gatsby-inc/gatsby-interface/issues/342)) ([8a6212b](https://github.com/gatsby-inc/gatsby-interface/commit/8a6212bae63fc811f271dd874480eb5c448197dc))
+- EmptyState component ([#342](https://github.com/gatsby-inc/gatsby-interface/issues/342)) ([8a6212b](https://github.com/gatsby-inc/gatsby-interface/commit/8a6212bae63fc811f271dd874480eb5c448197dc))
 
 ### [0.0.168](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.167...v0.0.168) (2020-06-15)
 
-
 ### Bug Fixes
 
-* unpin gatsby, react and react-dom dependencies ([#341](https://github.com/gatsby-inc/gatsby-interface/issues/341)) ([8229e46](https://github.com/gatsby-inc/gatsby-interface/commit/8229e4682553ed01180c3521904ec6bea0352345))
+- unpin gatsby, react and react-dom dependencies ([#341](https://github.com/gatsby-inc/gatsby-interface/issues/341)) ([8229e46](https://github.com/gatsby-inc/gatsby-interface/commit/8229e4682553ed01180c3521904ec6bea0352345))
 
 ### [0.0.167](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.166...v0.0.167) (2020-06-01)
 
-
 ### Bug Fixes
 
-* Unpin gatsby peer dependency ([#337](https://github.com/gatsby-inc/gatsby-interface/issues/337)) ([15a2e25](https://github.com/gatsby-inc/gatsby-interface/commit/15a2e25bc3e990ced5c09abbe7bd711a2d8ce192))
+- Unpin gatsby peer dependency ([#337](https://github.com/gatsby-inc/gatsby-interface/issues/337)) ([15a2e25](https://github.com/gatsby-inc/gatsby-interface/commit/15a2e25bc3e990ced5c09abbe7bd711a2d8ce192))
 
 ### [0.0.166](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.165...v0.0.166) (2020-05-27)
 
-
 ### Bug Fixes
 
-* bump ReachUI dependencies ([#336](https://github.com/gatsby-inc/gatsby-interface/issues/336)) ([eb51192](https://github.com/gatsby-inc/gatsby-interface/commit/eb51192e4dbee25d48e5a14bb04e33def9d44bc0))
+- bump ReachUI dependencies ([#336](https://github.com/gatsby-inc/gatsby-interface/issues/336)) ([eb51192](https://github.com/gatsby-inc/gatsby-interface/commit/eb51192e4dbee25d48e5a14bb04e33def9d44bc0))
 
 ### [0.0.165](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.164...v0.0.165) (2020-05-27)
 
-
 ### Bug Fixes
 
-* remove `Navigation` horizontal padding ([#334](https://github.com/gatsby-inc/gatsby-interface/issues/334)) ([c0a60f5](https://github.com/gatsby-inc/gatsby-interface/commit/c0a60f5aad042154e303e30395ba2f0a11f4cf43))
+- remove `Navigation` horizontal padding ([#334](https://github.com/gatsby-inc/gatsby-interface/issues/334)) ([c0a60f5](https://github.com/gatsby-inc/gatsby-interface/commit/c0a60f5aad042154e303e30395ba2f0a11f4cf43))
 
 ### [0.0.164](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.163...v0.0.164) (2020-05-21)
 
-
 ### Bug Fixes
 
-* fix color contrast issues in Announcement and StepIndicator ([#333](https://github.com/gatsby-inc/gatsby-interface/issues/333)) ([5efca8d](https://github.com/gatsby-inc/gatsby-interface/commit/5efca8d7985be644020a51b2e8c142d6a5fd5f4c))
+- fix color contrast issues in Announcement and StepIndicator ([#333](https://github.com/gatsby-inc/gatsby-interface/issues/333)) ([5efca8d](https://github.com/gatsby-inc/gatsby-interface/commit/5efca8d7985be644020a51b2e8c142d6a5fd5f4c))
 
 ### [0.0.163](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.162...v0.0.163) (2020-05-12)
 
@@ -109,31 +106,27 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.159](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.158...v0.0.159) (2020-05-05)
 
-
 ### Bug Fixes
 
-* make TabList scrollable ([#330](https://github.com/gatsby-inc/gatsby-interface/issues/330)) ([6058374](https://github.com/gatsby-inc/gatsby-interface/commit/6058374bc360b7a117723a3d81d66d79c19e4c83))
+- make TabList scrollable ([#330](https://github.com/gatsby-inc/gatsby-interface/issues/330)) ([6058374](https://github.com/gatsby-inc/gatsby-interface/commit/6058374bc360b7a117723a3d81d66d79c19e4c83))
 
 ### [0.0.158](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.157...v0.0.158) (2020-05-05)
 
-
 ### Features
 
-* Tabs component ([#329](https://github.com/gatsby-inc/gatsby-interface/issues/329)) ([c34a086](https://github.com/gatsby-inc/gatsby-interface/commit/c34a0869a946dad3a436233c705f42ac3eee57e7))
+- Tabs component ([#329](https://github.com/gatsby-inc/gatsby-interface/issues/329)) ([c34a086](https://github.com/gatsby-inc/gatsby-interface/commit/c34a0869a946dad3a436233c705f42ac3eee57e7))
 
 ### [0.0.157](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.156...v0.0.157) (2020-05-04)
 
-
 ### Features
 
-* NumberBadge component ([#325](https://github.com/gatsby-inc/gatsby-interface/issues/325)) ([6188615](https://github.com/gatsby-inc/gatsby-interface/commit/6188615521a94b1908a4a8b9c8b70be707d66072))
+- NumberBadge component ([#325](https://github.com/gatsby-inc/gatsby-interface/issues/325)) ([6188615](https://github.com/gatsby-inc/gatsby-interface/commit/6188615521a94b1908a4a8b9c8b70be707d66072))
 
 ### [0.0.156](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.155...v0.0.156) (2020-05-01)
 
-
 ### Features
 
-* Expand tones for less one-offs, fix `SUCCESS` a11y ([#311](https://github.com/gatsby-inc/gatsby-interface/issues/311)) ([d611c74](https://github.com/gatsby-inc/gatsby-interface/commit/d611c7488b2cc124f75c5b2d5b824c9dbbc6a966))
+- Expand tones for less one-offs, fix `SUCCESS` a11y ([#311](https://github.com/gatsby-inc/gatsby-interface/issues/311)) ([d611c74](https://github.com/gatsby-inc/gatsby-interface/commit/d611c7488b2cc124f75c5b2d5b824c9dbbc6a966))
 
 ### [0.0.155](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.154...v0.0.155) (2020-05-01)
 

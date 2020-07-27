@@ -16,7 +16,7 @@ exports[`icons <BitbucketIcon /> renders unchanged 1`] = `
     width="24px"
   >
     <g
-      clip-path="url(#BitbucketIcon__clip)"
+      clip-path="url(#BitbucketIcon__clip--noid)"
     >
       <path
         d="M2.64036 2.8875C2.5481 2.8863 2.45669 2.90556 2.37256 2.94393C2.28843 2.9823 2.21362 3.03885 2.15337 3.10961C2.09312 3.18037 2.0489 3.26363 2.02381 3.35353C1.99873 3.44344 1.99338 3.53782 2.00815 3.63004L4.69189 20.1258C4.72533 20.3276 4.82794 20.5111 4.98172 20.644C5.13549 20.7768 5.33058 20.8506 5.53273 20.8523H18.4077C18.5592 20.8543 18.7064 20.8011 18.8225 20.7024C18.9385 20.6037 19.0157 20.4661 19.0399 20.3146L21.7237 3.63324C21.7384 3.54102 21.7331 3.44664 21.708 3.35673C21.6829 3.26683 21.6387 3.18357 21.5784 3.11281C21.5182 3.04205 21.4434 2.9855 21.3592 2.94713C21.2751 2.90876 21.1837 2.8895 21.0914 2.8907L2.64036 2.8875ZM13.9411 14.8096H9.83177L8.71908 8.92378H14.9369L13.9411 14.8096Z"
@@ -24,13 +24,13 @@ exports[`icons <BitbucketIcon /> renders unchanged 1`] = `
       />
       <path
         d="M20.8702 8.92383H14.9369L13.9411 14.8097H9.83178L4.97955 20.6411C5.13335 20.7758 5.32943 20.8506 5.53274 20.8523H18.4109C18.5624 20.8543 18.7096 20.8011 18.8257 20.7024C18.9417 20.6037 19.0189 20.4661 19.0431 20.3147L20.8702 8.92383Z"
-        fill="url(#BitbucketIcon__gradient)"
+        fill="url(#BitbucketIcon__gradient--noid)"
       />
     </g>
     <defs>
       <lineargradient
         gradientUnits="userSpaceOnUse"
-        id="BitbucketIcon__gradient"
+        id="BitbucketIcon__gradient--noid"
         x1="22.2421"
         x2="12.3445"
         y1="10.5721"
@@ -46,7 +46,7 @@ exports[`icons <BitbucketIcon /> renders unchanged 1`] = `
         />
       </lineargradient>
       <clippath
-        id="BitbucketIcon__clip"
+        id="BitbucketIcon__clip--noid"
       >
         <rect
           fill="white"
@@ -371,7 +371,7 @@ exports[`icons <EllipsisIcon /> renders unchanged 1`] = `
   >
     <filter
       height="100%"
-      id="EllipsisIcon__filter"
+      id="EllipsisIcon__filter--noid"
       width="100%"
       x="0"
       y="0"
@@ -387,7 +387,7 @@ exports[`icons <EllipsisIcon /> renders unchanged 1`] = `
       cx="12"
       cy="12"
       r="10"
-      style="filter: url(#EllipsisIcon__filter);"
+      style="filter: url(#EllipsisIcon__filter--noid);"
     />
     <circle
       cx="6.5"
@@ -660,7 +660,7 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
   >
     <mask
       height="20"
-      id="InProgressIcon__mask--0"
+      id="InProgressIcon__mask0--noid"
       mask-type="alpha"
       maskUnits="userSpaceOnUse"
       width="20"
@@ -669,7 +669,7 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
     >
       <mask
         height="10"
-        id="InProgressIcon__mask--1"
+        id="InProgressIcon__mask1--noid"
         maskUnits="userSpaceOnUse"
         width="20"
         x="2"
@@ -681,7 +681,7 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
         />
       </mask>
       <g
-        mask="url(#InProgressIcon__mask--1)"
+        mask="url(#InProgressIcon__mask1--noid"
       >
         <path
           clip-rule="evenodd"
@@ -692,7 +692,7 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
       </g>
       <mask
         height="20"
-        id="InProgressIcon__mask--2"
+        id="InProgressIcon__mask2--noid"
         maskUnits="userSpaceOnUse"
         width="20"
         x="2"
@@ -706,23 +706,23 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
         />
       </mask>
       <g
-        mask="url(#InProgressIcon__mask--2)"
+        mask="url(#InProgressIcon__mask2--noid"
       >
         <path
           d="M12 2.00003C6.47714 2.00003 2 6.47718 2 12L22 12C22 6.47718 17.5228 2.00003 12 2.00003Z"
-          fill="url(#InProgressIcon__linear)"
+          fill="url(#InProgressIcon__gradient--noid)"
         />
       </g>
     </mask>
     <g
-      mask="url(#InProgressIcon__mask--0)"
+      mask="url(#InProgressIcon__mask0--noid"
     >
       <circle
         cx="12"
         cy="12"
         fill="currentColor"
         r="9.99998"
-        style="filter: url(#InProgressIcon__filter);"
+        style="filter: url(#InProgressIcon__filter--noid);"
       />
     </g>
     <circle
@@ -734,7 +734,7 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
     <defs>
       <lineargradient
         gradientUnits="userSpaceOnUse"
-        id="InProgressIcon__linear"
+        id="InProgressIcon__gradient--noid"
         x1="5.74999"
         x2="18.25"
         y1="12"
@@ -750,7 +750,7 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
       </lineargradient>
       <filter
         height="100%"
-        id="InProgressIcon__filter"
+        id="InProgressIcon__filter--noid"
         width="100%"
         x="0"
         y="0"
@@ -1025,7 +1025,7 @@ exports[`icons <SkullIcon /> renders unchanged 1`] = `
     />
     <mask
       fill="white"
-      id="path-9-inside-1"
+      id="SkullIcon__mask--noid"
     >
       <path
         clip-rule="evenodd"
@@ -1036,7 +1036,7 @@ exports[`icons <SkullIcon /> renders unchanged 1`] = `
     <path
       d="M17.3333 17.7724L16.6668 15.8867L15.3333 16.358V17.7724H17.3333ZM6.66667 17.7724H8.66667V16.358L7.33316 15.8867L6.66667 17.7724ZM22 10C22 4.47715 17.5228 0 12 0V4C15.3137 4 18 6.68629 18 10H22ZM22 14V10H18V14H22ZM17.9998 19.6581C20.3275 18.8354 22 16.6156 22 14H18C18 14.8677 17.4463 15.6112 16.6668 15.8867L17.9998 19.6581ZM15.3333 17.7724V18H19.3333V17.7724H15.3333ZM15.3333 18C15.3333 19.1046 14.4379 20 13.3333 20V24C16.647 24 19.3333 21.3137 19.3333 18H15.3333ZM13.3333 20H10.6667V24H13.3333V20ZM10.6667 20C9.5621 20 8.66667 19.1046 8.66667 18H4.66667C4.66667 21.3137 7.35296 24 10.6667 24V20ZM8.66667 18V17.7724H4.66667V18H8.66667ZM2 14C2 16.6156 3.67249 18.8354 6.00017 19.6581L7.33316 15.8867C6.55367 15.6112 6 14.8677 6 14H2ZM2 10V14H6V10H2ZM12 0C6.47715 0 2 4.47715 2 10H6C6 6.68629 8.68629 4 12 4V0Z"
       fill="currentColor"
-      mask="url(#path-9-inside-1)"
+      mask="url(#SkullIcon__mask--noid)"
     />
     <path
       d="M12 13L13.299 15.25H10.701L12 13Z"
