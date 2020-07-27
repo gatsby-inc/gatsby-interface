@@ -136,10 +136,10 @@ export function EmptyState({
   )
 }
 
-export type EmptyStatePrimaryActionProps = Omit<
-  ButtonProps | LinkButtonProps | AnchorButtonProps,
-  "variant" | "size" | "tone"
->
+export type EmptyStatePrimaryActionProps =
+  | Omit<ButtonProps, "variant" | "size" | "tone">
+  | Omit<LinkButtonProps, "variant" | "size" | "tone">
+  | Omit<AnchorButtonProps, "variant" | "size" | "tone">
 
 export function EmptyStatePrimaryAction(props: EmptyStatePrimaryActionProps) {
   const sharedProps: ButtonStyleProps = {
