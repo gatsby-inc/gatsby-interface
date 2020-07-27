@@ -97,7 +97,7 @@ const withBNotAvailableForIconButtonWarning: DecoratorFn = story => (
 function NotAvailableForIconButton({ className }: { className?: string }) {
   return (
     <Badge tone="NEUTRAL" className={className}>
-      Not availbale for IconButton
+      Not available for IconButton
     </Badge>
   )
 }
