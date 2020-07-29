@@ -8,90 +8,90 @@ export default function ProviderIcon(props: IconProps) {
   return (
     <IconSkeleton {...props} iconName="ProviderIcon">
       <line
-        x1="17.25"
-        y1="18"
-        x2="17.25"
-        y2="22"
+        x1="13.5326"
+        y1="13.1739"
+        x2="13.5326"
+        y2="16.3043"
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <line
-        x1="20.0554"
-        y1="10.8839"
-        x2="23.591"
-        y2="7.34838"
+        x1="15.4498"
+        y1="7.48951"
+        x2="18.2168"
+        y2="4.72257"
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <line
-        x1="10.7358"
-        y1="9.59828"
-        x2="14.8316"
-        y2="12.4662"
+        x1="8.36504"
+        y1="6.4651"
+        x2="11.5704"
+        y2="8.70953"
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <line
-        x1="19.7358"
-        y1="15.5983"
-        x2="23.8316"
-        y2="18.4662"
+        x1="15.4085"
+        y1="11.1608"
+        x2="18.6139"
+        y2="13.4052"
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <line
-        x1="7.59095"
-        y1="23.3484"
-        x2="14.5909"
-        y2="16.3484"
+        x1="5.69501"
+        y1="17.2443"
+        x2="11.1733"
+        y2="11.7661"
         stroke={theme.colors.blue[50]}
         strokeWidth="1.5"
       />
       <circle
-        cx="17"
-        cy="14"
-        r="4"
+        cx="13.1739"
+        cy="10.0435"
+        r="3.13043"
         fill={theme.colors.purple[30]}
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <circle
-        cx="25"
-        cy="19"
-        r="2"
+        cx="19.4348"
+        cy="13.9565"
+        r="1.56522"
         fill={theme.colors.purple[60]}
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <circle
-        cx="9"
-        cy="8.5"
-        r="2"
-        fill="white"
+        cx="6.91304"
+        cy="5.73913"
+        r="1.56522"
+        fill={theme.colors.white}
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <circle
-        cx="17.25"
-        cy="24"
-        r="2"
-        fill="white"
+        cx="13.3696"
+        cy="17.8696"
+        r="1.56522"
+        fill={theme.colors.white}
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <circle
-        cx="6"
-        cy="25"
-        r="2"
+        cx="4.56522"
+        cy="18.6522"
+        r="1.56522"
         fill={theme.colors.blue[50]}
         stroke={theme.colors.blue[50]}
         strokeWidth="1.5"
       />
       <circle
-        cx="24"
-        cy="7"
-        r="2"
-        fill="white"
+        cx="18.6522"
+        cy="4.56522"
+        r="1.56522"
+        fill={theme.colors.white}
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />

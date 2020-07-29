@@ -8,37 +8,36 @@ export default function DeployIcon(props: IconProps) {
   return (
     <IconSkeleton {...props} iconName="DeployIcon">
       <path
-        d="M11.5 9H20.5C22.433 9 24 10.567 24 12.5V12.5C24 14.433 22.433 16 20.5 16H18"
+        d="M7.95 5.70001H16.05C17.7897 5.70001 19.2 7.11031 19.2 8.85001V8.85001C19.2 10.5897 17.7897 12 16.05 12H13.8"
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <path
-        d="M18 23L11.5 23C9.567 23 8 21.433 8 19.5V19.5C8 17.567 9.567 16 11.5 16L13.5 16"
+        d="M13.8 18.3L7.95001 18.3C6.21031 18.3 4.8 16.8897 4.8 15.15V15.15C4.8 13.4103 6.21031 12 7.95001 12L9.75 12"
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <path
-        d="M15.0003 20.1716L17.8287 23L15.0003 25.8284"
+        d="M11.1003 15.7544L13.6459 18.3L11.1003 20.8456"
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
       <circle
-        r="2.25"
-        transform="matrix(1 0 0 -1 9 9)"
+        r="1.95"
+        transform="matrix(1 0 0 -1 5.7 5.69999)"
         fill={theme.colors.purple[30]}
         stroke={theme.colors.purple[60]}
         strokeWidth="1.5"
       />
-      <circle
-        r="2.25"
-        transform="matrix(1 0 0 -1 16 16)"
+      <path
+        d="M13.95 12C13.95 10.923 13.077 10.05 12 10.05C10.923 10.05 10.05 10.923 10.05 12C10.05 13.077 10.923 13.95 12 13.95C13.077 13.95 13.95 13.077 13.95 12Z"
         fill={theme.colors.orange[70]}
         stroke={theme.colors.orange[70]}
         strokeWidth="1.5"
       />
       <circle
-        r="3"
-        transform="matrix(1 0 0 -1 23 23)"
+        r="2.7"
+        transform="matrix(1 0 0 -1 18.3 18.3)"
         fill={theme.colors.purple[60]}
       />
     </IconSkeleton>
