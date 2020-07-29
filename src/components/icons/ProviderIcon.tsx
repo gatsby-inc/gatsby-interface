@@ -1,0 +1,100 @@
+import React from "react"
+import IconSkeleton from "./IconSkeleton"
+import { IconProps } from "./types"
+import { useTheme } from "../ThemeProvider"
+
+export default function ProviderIcon(props: IconProps) {
+  const theme = useTheme()
+  return (
+    <IconSkeleton {...props} iconName="ProviderIcon">
+      <line
+        x1="17.25"
+        y1="18"
+        x2="17.25"
+        y2="22"
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+      <line
+        x1="20.0554"
+        y1="10.8839"
+        x2="23.591"
+        y2="7.34838"
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+      <line
+        x1="10.7358"
+        y1="9.59828"
+        x2="14.8316"
+        y2="12.4662"
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+      <line
+        x1="19.7358"
+        y1="15.5983"
+        x2="23.8316"
+        y2="18.4662"
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+      <line
+        x1="7.59095"
+        y1="23.3484"
+        x2="14.5909"
+        y2="16.3484"
+        stroke={theme.colors.blue[50]}
+        strokeWidth="1.5"
+      />
+      <circle
+        cx="17"
+        cy="14"
+        r="4"
+        fill={theme.colors.purple[30]}
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+      <circle
+        cx="25"
+        cy="19"
+        r="2"
+        fill={theme.colors.purple[60]}
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+      <circle
+        cx="9"
+        cy="8.5"
+        r="2"
+        fill="white"
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+      <circle
+        cx="17.25"
+        cy="24"
+        r="2"
+        fill="white"
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+      <circle
+        cx="6"
+        cy="25"
+        r="2"
+        fill={theme.colors.blue[50]}
+        stroke={theme.colors.blue[50]}
+        strokeWidth="1.5"
+      />
+      <circle
+        cx="24"
+        cy="7"
+        r="2"
+        fill="white"
+        stroke={theme.colors.purple[60]}
+        strokeWidth="1.5"
+      />
+    </IconSkeleton>
+  )
+}
