@@ -23,6 +23,8 @@ const baseCss: ThemeCss = theme => ({
   transformOrigin: `top center`,
 })
 
+export const modalFullScreenCss = baseCss
+
 export type ModalFullScreenProps = Omit<ModalContentProps, "ref">
 
 export const ModalFullScreen: React.FC<ModalFullScreenProps> = props => (
