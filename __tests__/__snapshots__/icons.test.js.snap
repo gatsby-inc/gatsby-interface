@@ -305,6 +305,137 @@ exports[`icons <CloseCircleIcon /> renders unchanged 1`] = `
 </div>
 `;
 
+exports[`icons <CollaborationIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-CollaborationIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="currentColor"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <circle
+      cx="12.1011"
+      cy="3.80899"
+      fill="#b17acc"
+      r="0.808989"
+      stroke="#b17acc"
+      stroke-width="1.5"
+    />
+    <circle
+      cx="6.4382"
+      cy="7.04495"
+      fill="#d9bae8"
+      r="0.808989"
+      stroke="#d9bae8"
+      stroke-width="1.5"
+    />
+    <circle
+      cx="17.7641"
+      cy="7.04495"
+      fill="#0d96f2"
+      r="0.808989"
+      stroke="#0d96f2"
+      stroke-width="1.5"
+    />
+    <path
+      d="M5.42697 21L3.79766 18.9638C3.28131 18.3183 3 17.5163 3 16.6897V12.5056C3 12.1838 3.12785 11.8751 3.35542 11.6475C3.58299 11.42 3.89165 11.2921 4.21348 11.2921V11.2921C4.53532 11.2921 4.84397 11.42 5.07155 11.6475C5.29912 11.8751 5.42697 12.1838 5.42697 12.5056V15.5393"
+      stroke="#663399"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+    />
+    <path
+      d="M9.06743 20.89V18.463C9.06775 17.7431 8.85463 17.0393 8.45502 16.4405L7.53116 15.0539C7.45233 14.9225 7.34764 14.8084 7.22343 14.7186C7.09923 14.6288 6.95808 14.5651 6.80855 14.5315C6.65902 14.4978 6.50422 14.4949 6.35351 14.5228C6.2028 14.5507 6.05933 14.6089 5.93179 14.6939V14.6939C5.70152 14.8474 5.53538 15.0798 5.46474 15.3473C5.39409 15.6148 5.42383 15.899 5.54833 16.1461L6.64046 17.9663"
+      stroke="#663399"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+    />
+    <path
+      d="M18.7753 21L20.4046 18.9638C20.9209 18.3183 21.2022 17.5163 21.2023 16.6897V12.5056C21.2023 12.1838 21.0744 11.8751 20.8468 11.6475C20.6193 11.42 20.3106 11.2921 19.9888 11.2921C19.6669 11.2921 19.3583 11.42 19.1307 11.6475C18.9031 11.8751 18.7753 12.1838 18.7753 12.5056V15.5393"
+      stroke="#663399"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+    />
+    <path
+      d="M15.1348 20.89V18.463C15.1345 17.7431 15.3476 17.0393 15.7472 16.4405L16.6711 15.0539C16.7499 14.9225 16.8546 14.8084 16.9788 14.7186C17.103 14.6288 17.2442 14.5651 17.3937 14.5315C17.5432 14.4978 17.698 14.4949 17.8487 14.5228C17.9994 14.5507 18.1429 14.6089 18.2705 14.6939C18.5007 14.8474 18.6669 15.0798 18.7375 15.3473C18.8082 15.6148 18.7784 15.899 18.6539 16.1461L17.5618 17.9663"
+      stroke="#663399"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+    />
+    <circle
+      cx="12.1011"
+      cy="11.0899"
+      fill="#d9bae8"
+      r="3.23595"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+  </svg>
+</div>
+`;
+
+exports[`icons <DeployIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-DeployIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="currentColor"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <path
+      d="M7.95 5.70001H16.05C17.7897 5.70001 19.2 7.11031 19.2 8.85001V8.85001C19.2 10.5897 17.7897 12 16.05 12H13.8"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+    <path
+      d="M13.8 18.3L7.95001 18.3C6.21031 18.3 4.8 16.8897 4.8 15.15V15.15C4.8 13.4103 6.21031 12 7.95001 12L9.75 12"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+    <path
+      d="M11.1003 15.7544L13.6459 18.3L11.1003 20.8456"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+    <circle
+      fill="#d9bae8"
+      r="1.95"
+      stroke="#663399"
+      stroke-width="1.5"
+      transform="matrix(1 0 0 -1 5.7 5.69999)"
+    />
+    <path
+      d="M13.95 12C13.95 10.923 13.077 10.05 12 10.05C10.923 10.05 10.05 10.923 10.05 12C10.05 13.077 10.923 13.95 12 13.95C13.077 13.95 13.95 13.077 13.95 12Z"
+      fill="#f67300"
+      stroke="#f67300"
+      stroke-width="1.5"
+    />
+    <circle
+      fill="#663399"
+      r="2.7"
+      transform="matrix(1 0 0 -1 18.3 18.3)"
+    />
+  </svg>
+</div>
+`;
+
 exports[`icons <EcommerceIcon /> renders unchanged 1`] = `
 <div>
   <svg
@@ -477,6 +608,58 @@ exports[`icons <EnterprisePlanIcon /> renders unchanged 1`] = `
       r="10"
       stroke="#b17acc"
       transform="matrix(1 0 0 -1 12 12)"
+    />
+  </svg>
+</div>
+`;
+
+exports[`icons <FeaturesIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-FeaturesIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="currentColor"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <path
+      d="M13.3645 12.1161L11.8839 10.6354L9.41614 13.1032L10.8968 14.5838L13.3645 12.1161Z"
+      fill="#ffffff"
+      stroke="#663399"
+      stroke-miterlimit="10"
+      stroke-width="1.5"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M16.7026 6.0501L18.9236 5.22094L18.0944 7.44191L18.9236 9.66288L16.7026 8.83372L14.4817 9.66288L15.3108 7.44191L14.4817 5.22094L16.7026 6.0501Z"
+      fill="#663399"
+      fill-rule="evenodd"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M8.16271 7.44196L8.53122 8.42905L7.54413 8.06054L6.55703 8.42905L6.92555 7.44196L6.55703 6.45486L7.54413 6.82337L8.53122 6.45486L8.16271 7.44196Z"
+      fill="#f67300"
+      fill-rule="evenodd"
+      stroke="#f67300"
+      stroke-width="1.5"
+    />
+    <path
+      clip-rule="evenodd"
+      d="M17.5257 14.4218L17.8942 15.4089L16.9071 15.0403L15.92 15.4089L16.2885 14.4218L15.92 13.4347L16.9071 13.8032L17.8942 13.4347L17.5257 14.4218Z"
+      fill="#f67300"
+      fill-rule="evenodd"
+    />
+    <path
+      d="M9.41612 13.1033L10.8968 14.5839L5.22096 20.2597C4.81209 20.6686 4.14918 20.6686 3.74031 20.2597C3.33144 19.8509 3.33144 19.188 3.74031 18.7791L9.41612 13.1033Z"
+      fill="#f1defa"
+      stroke="#663399"
+      stroke-width="1.5"
     />
   </svg>
 </div>
@@ -818,6 +1001,55 @@ exports[`icons <IntegrationsIcon /> renders unchanged 1`] = `
 </div>
 `;
 
+exports[`icons <LoginIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-LoginIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="currentColor"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <path
+      d="M20.6912 9.67121C21.9773 14.4712 19.1288 19.405 14.3288 20.6912C9.52879 21.9773 4.59498 19.1288 3.30882 14.3288C2.02267 9.52879 4.8712 4.59498 9.67121 3.30882C14.4712 2.02267 19.405 4.8712 20.6912 9.67121Z"
+      fill="#fffafa"
+    />
+    <path
+      d="M17.3594 10.564C18.1525 13.5239 16.3959 16.5663 13.436 17.3594C10.4761 18.1525 7.43372 16.396 6.64062 13.4361C5.84751 10.4762 7.60405 7.43374 10.564 6.64063C13.5239 5.84753 16.5663 7.60407 17.3594 10.564Z"
+      fill="#ffffff"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+    <path
+      d="M15.4765 11.0684C15.9909 12.9884 14.8515 14.9619 12.9315 15.4764C11.0115 15.9909 9.03799 14.8515 8.52352 12.9314C8.00906 11.0114 9.14848 9.03793 11.0685 8.52346C12.9885 8.009 14.962 9.14841 15.4765 11.0684Z"
+      fill="#663399"
+    />
+    <path
+      d="M13.324 4.53601C13.7468 3.87024 13.2685 3 12.4798 3L11.5473 3C10.7587 3 10.2804 3.87024 10.7031 4.53601L11.1694 5.27036C11.5622 5.88902 12.465 5.88902 12.8578 5.27036L13.324 4.53601Z"
+      fill="#fa2915"
+    />
+    <path
+      d="M4.57183 10.6899C3.90615 10.2654 3.03409 10.7435 3.03409 11.533L3.03409 12.4671C3.03409 13.2566 3.90615 13.7347 4.57183 13.3102L5.30404 12.8432C5.92038 12.45 5.92038 11.55 5.30404 11.1569L4.57183 10.6899Z"
+      fill="#fa2915"
+    />
+    <path
+      d="M10.7031 19.464C10.2804 20.1298 10.7587 21 11.5474 21L12.4799 21C13.2685 21 13.7468 20.1298 13.3241 19.464L12.8578 18.7296C12.465 18.111 11.5622 18.111 11.1694 18.7296L10.7031 19.464Z"
+      fill="#da0013"
+    />
+    <path
+      d="M19.4554 13.3101C20.1211 13.7347 20.9932 13.2565 20.9932 12.467L20.9932 11.5448C20.9932 10.7552 20.1211 10.2771 19.4554 10.7017L18.7325 11.1628C18.1162 11.5559 18.1162 12.4559 18.7325 12.849L19.4554 13.3101Z"
+      fill="#db3a00"
+    />
+  </svg>
+</div>
+`;
+
 exports[`icons <PortfolioIcon /> renders unchanged 1`] = `
 <div>
   <svg
@@ -921,6 +1153,113 @@ exports[`icons <ProfessionalPlanIcon /> renders unchanged 1`] = `
       cy="17"
       fill="#0e8de6"
       r="1"
+    />
+  </svg>
+</div>
+`;
+
+exports[`icons <ProviderIcon /> renders unchanged 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    data-testid="icon-ProviderIcon"
+    fill="none"
+    fill-rule="evenodd"
+    height="24px"
+    preserveAspectRatio="xMidYMid meet"
+    stroke="currentColor"
+    stroke-width="1"
+    style="vertical-align: middle;"
+    viewBox="0 0 24 24"
+    width="24px"
+  >
+    <line
+      stroke="#663399"
+      stroke-width="1.5"
+      x1="13.5326"
+      x2="13.5326"
+      y1="13.1739"
+      y2="16.3043"
+    />
+    <line
+      stroke="#663399"
+      stroke-width="1.5"
+      x1="15.4498"
+      x2="18.2168"
+      y1="7.48951"
+      y2="4.72257"
+    />
+    <line
+      stroke="#663399"
+      stroke-width="1.5"
+      x1="8.36504"
+      x2="11.5704"
+      y1="6.4651"
+      y2="8.70953"
+    />
+    <line
+      stroke="#663399"
+      stroke-width="1.5"
+      x1="15.4085"
+      x2="18.6139"
+      y1="11.1608"
+      y2="13.4052"
+    />
+    <line
+      stroke="#0d96f2"
+      stroke-width="1.5"
+      x1="5.69501"
+      x2="11.1733"
+      y1="17.2443"
+      y2="11.7661"
+    />
+    <circle
+      cx="13.1739"
+      cy="10.0435"
+      fill="#d9bae8"
+      r="3.13043"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+    <circle
+      cx="19.4348"
+      cy="13.9565"
+      fill="#663399"
+      r="1.56522"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+    <circle
+      cx="6.91304"
+      cy="5.73913"
+      fill="#ffffff"
+      r="1.56522"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+    <circle
+      cx="13.3696"
+      cy="17.8696"
+      fill="#ffffff"
+      r="1.56522"
+      stroke="#663399"
+      stroke-width="1.5"
+    />
+    <circle
+      cx="4.56522"
+      cy="18.6522"
+      fill="#0d96f2"
+      r="1.56522"
+      stroke="#0d96f2"
+      stroke-width="1.5"
+    />
+    <circle
+      cx="18.6522"
+      cy="4.56522"
+      fill="#ffffff"
+      r="1.56522"
+      stroke="#663399"
+      stroke-width="1.5"
     />
   </svg>
 </div>
