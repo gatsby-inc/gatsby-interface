@@ -124,7 +124,7 @@ export const Sandbox = () => {
     { left: `left`, right: "right", none: `none` },
     `none`
   )
-  const disabled = boolean("disabled (Button only)", false)
+  const disabled = boolean("disabled (Button and IconButton only)", false)
   const loading = boolean("loading (Button only)", false)
   const loadingLabel = text("loading label (Button only)", "Loading")
 
@@ -168,6 +168,26 @@ export const Sandbox = () => {
       >
         LinkButton
       </LinkButton>
+      <div css={theme => ({ marginTop: theme.space[3] })}>
+        <IconButton
+          icon={<MdShare />}
+          variant={variant}
+          tone={tone}
+          size={size}
+          disabled={disabled}
+        >
+          MD IconButton
+        </IconButton>{" "}
+        <IconButton
+          icon={<GeneralIcon size="inherit" />}
+          variant={variant}
+          tone={tone}
+          size={size}
+          disabled={disabled}
+        >
+          Gatsby IconButton
+        </IconButton>
+      </div>
     </React.Fragment>
   )
 }
@@ -248,18 +268,12 @@ export const Sizes = () =>
         LinkButton
       </LinkButton>
       <div css={theme => ({ marginTop: theme.space[3] })}>
-        {size !== `XL` ? (
-          <React.Fragment>
-            <IconButton icon={<MdShare />} size={size}>
-              MD IconButton
-            </IconButton>{" "}
-            <IconButton icon={<GeneralIcon size="inherit" />} size={size}>
-              Gatsby IconButton
-            </IconButton>
-          </React.Fragment>
-        ) : (
-          <NotAvailableForIconButton />
-        )}
+        <IconButton icon={<MdShare />} size={size}>
+          MD IconButton
+        </IconButton>{" "}
+        <IconButton icon={<GeneralIcon size="inherit" />} size={size}>
+          Gatsby IconButton
+        </IconButton>
       </div>
     </div>
   ))

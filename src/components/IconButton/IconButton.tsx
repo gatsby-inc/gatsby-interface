@@ -12,25 +12,28 @@ import { BaseLinkProps, BaseLink } from "../BaseLink"
 const baseCss: ThemeCss = _theme => ({
   paddingLeft: 0,
   paddingRight: 0,
+  paddingTop: 0,
+  paddingBottom: 0,
+  // override default styles from getButtonStyles
+  svg: {
+    margin: 0,
+  },
 })
 
-const iconSizeStyles: Record<IconButtonSize, ThemeCss> = {
+const iconSizeStyles: Record<ButtonSize, ThemeCss> = {
   S: theme => ({
     fontSize: theme.fontSizes[4],
   }),
   M: theme => ({
     fontSize: theme.fontSizes[5],
-    paddingLeft: 1,
-    paddingRight: 1,
   }),
   L: theme => ({
     fontSize: theme.fontSizes[6],
-    paddingLeft: 1,
-    paddingRight: 1,
+  }),
+  XL: theme => ({
+    fontSize: theme.fontSizes[7],
   }),
 }
-
-export type IconButtonSize = Exclude<ButtonSize, "XL">
 
 type IconButtonCommonProps = Omit<
   ButtonStyleProps,
@@ -38,7 +41,7 @@ type IconButtonCommonProps = Omit<
 > & {
   icon: React.ReactNode
   children: React.ReactNode
-  size?: IconButtonSize
+  size?: ButtonSize
 }
 
 type WithIconButtonProps<T> = Omit<T, "children"> & IconButtonCommonProps
