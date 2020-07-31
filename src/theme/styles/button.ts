@@ -5,6 +5,7 @@ export type ButtonSize = "XL" | "L" | "M" | "S"
 export type ButtonTone = "BRAND" | "SUCCESS" | "DANGER" | "NEUTRAL"
 export type ButtonVariant = "PRIMARY" | "SECONDARY" | "GHOST"
 export type ButtonTextVariant = "DEFAULT" | "BRAND"
+export type ButtonWidth = "AUTO" | "FIT_CONTAINER"
 
 export function getButtonCss({
   size = `L`,
@@ -14,6 +15,7 @@ export function getButtonCss({
   rightIcon,
   loading,
   textVariant = `DEFAULT`,
+  width = `AUTO`,
 }: {
   size?: ButtonSize
   tone?: ButtonTone
@@ -22,6 +24,7 @@ export function getButtonCss({
   rightIcon?: React.ReactNode
   loading?: boolean
   textVariant?: ButtonTextVariant
+  width?: ButtonWidth
 }): ThemeCss {
   return (theme: Theme) => [
     getButtonBaseCss(textVariant)(theme),
@@ -32,6 +35,7 @@ export function getButtonCss({
     getButtonLoadingCss({ loading })(theme),
     getButtonVariantCss(variant, tone)(theme),
     getButtonSizeCss(size, textVariant)(theme),
+    getButtonWidthCss(width)(theme),
   ]
 }
 
@@ -204,4 +208,10 @@ function getButtonVariantCss(
     }
     return {}
   }
+}
+
+function getButtonWidthCss(buttonWidth?: ButtonWidth): ThemeCss {
+  return _theme => ({
+    width: buttonWidth === `FIT_CONTAINER` ? `100%` : undefined,
+  })
 }

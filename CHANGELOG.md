@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.184](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.183...v0.0.184) (2020-07-30)
+
+### [0.0.183](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.182...v0.0.183) (2020-07-29)
+
+### Features
+
+- **Button:** support new prop, width ([#362](https://github.com/gatsby-inc/gatsby-interface/issues/362)) ([d7983ef](https://github.com/gatsby-inc/gatsby-interface/commit/d7983efb8ad2d0f73c1175077d0df0ee6e3e6452))
+- **Modal:** changes default size for ModalPanel ([#363](https://github.com/gatsby-inc/gatsby-interface/issues/363)) ([d7ac213](https://github.com/gatsby-inc/gatsby-interface/commit/d7ac213d390fc0ddb2f472e393085a43d8250e7b))
+
+### Bug Fixes
+
+- **EmptyState:** fixes props type for EmptyStatePrimaryActionProps ([#364](https://github.com/gatsby-inc/gatsby-interface/issues/364)) ([7995afd](https://github.com/gatsby-inc/gatsby-interface/commit/7995afd129da321d9e3778c6b5e8b6ad33eb91da))
+
 ### [0.0.182](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.181...v0.0.182) (2020-07-22)
 
 ### [0.0.181](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.180...v0.0.181) (2020-07-17)
