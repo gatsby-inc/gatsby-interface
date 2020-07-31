@@ -21,7 +21,6 @@ import { PropsWithAs } from "@reach/utils"
 import { MdDone, MdArrowDropDown, MdSearch } from "react-icons/md"
 import {
   comboboxCss,
-  inputCss,
   popoverCss,
   listCss,
   optionCss,
@@ -30,12 +29,12 @@ import {
   inputWithSelectedValueCss,
   toggleButtonCss,
   inputWithToggleButtonCss,
-  searchIconCss,
 } from "./Combobox.styles"
 import { warn } from "../../utils/maintenance/warn"
 import { RequireProp } from "../../utils/types"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
+import { inputLeftIconCss, inputWithLeftIconCss, baseInputCss } from "../form"
 
 type ComboboxCustomContextValue = {
   listRef: React.RefObject<HTMLUListElement>
@@ -134,16 +133,18 @@ export const ComboboxInput = React.forwardRef<
 
   return (
     <div css={{ position: "relative" }}>
-      <MdSearch css={searchIconCss} aria-hidden />
+      <MdSearch css={inputLeftIconCss} aria-hidden />
       <ReachComboboxInput
         ref={ref}
         selectOnClick
         onKeyDown={onKeyDown}
         css={theme => [
-          inputCss(hasError)(theme),
+          baseInputCss(theme),
+          inputWithLeftIconCss(theme),
           showSelectedOptionLabel && inputWithSelectedValueCss(theme),
           showToggleButton && inputWithToggleButtonCss(theme),
         ]}
+        aria-invalid={hasError}
         {...delegated}
       />
       {!!selectedOptionLabel && (

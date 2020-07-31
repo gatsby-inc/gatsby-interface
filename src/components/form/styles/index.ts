@@ -81,6 +81,21 @@ export const baseInputCss: ThemeCss = theme => [
   },
 ]
 
+export const inputLeftIconCss: ThemeCss = theme => ({
+  position: `absolute`,
+  color: theme.colors.grey[60],
+  fontSize: theme.fontSizes[3],
+  top: `calc((100% - ${theme.fontSizes[3]}) / 2)`,
+  margin: `0 ${theme.space[3]}`,
+  zIndex: 2,
+  pointerEvents: `none`,
+})
+
+export const inputWithLeftIconCss: ThemeCss = theme => ({
+  // offset padding based on left icon spacing and size
+  paddingLeft: `calc(${theme.fontSizes[3]} + 2 * ${theme.space[3]})`,
+})
+
 export function getOptionLabelCss(
   optionControlSize = "0px",
   optionsDirection: FormGroupOptionsDirection = `column`

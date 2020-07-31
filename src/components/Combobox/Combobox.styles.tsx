@@ -1,4 +1,3 @@
-import { getInputStyles } from "../form/components/FormField.helpers"
 import { ThemeCss } from "../../theme"
 
 export const comboboxCss: ThemeCss = () => ({
@@ -17,25 +16,6 @@ export const popoverCss: ThemeCss = theme => ({
   color: theme.colors.grey[90],
   fontSize: theme.fontSizes[1],
 })
-
-export const searchIconCss: ThemeCss = theme => ({
-  position: `absolute`,
-  color: theme.colors.grey[60],
-  fontSize: theme.fontSizes[3],
-  top: `calc((100% - ${theme.fontSizes[3]}) / 2)`,
-  margin: `0 ${theme.space[3]}`,
-  zIndex: 2,
-})
-
-export const inputCss: (hasError?: boolean) => ThemeCss = (
-  hasError = false
-) => theme => [
-  getInputStyles(theme, hasError),
-  {
-    // offset padding based on search icon spacing and size
-    paddingLeft: `calc(${theme.fontSizes[3]} + 2 * ${theme.space[3]})`,
-  },
-]
 
 export const inputWithSelectedValueCss: ThemeCss = theme => ({
   "&:focus + span": {
