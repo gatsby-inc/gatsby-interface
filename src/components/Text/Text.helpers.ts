@@ -6,7 +6,7 @@ export const baseStyle = (tone: TextTone): ThemeCss => {
     // TODO figure out a better way to do this
     // https://github.com/gatsby-inc/gatsby-interface/issues/324
     color: tone === "NEUTRAL" ? theme.tones[tone].dark : theme.tones[tone].text,
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.body,
     fontWeight: `normal`,
   })
 }
