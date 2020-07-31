@@ -33,12 +33,6 @@ afterAll(() => {
 })
 
 describe(`<CopyButton>`, () => {
-  it(`renders unchanged`, async () => {
-    const { container } = render(<CopyButton content="test" />)
-
-    expect(container).toMatchSnapshot()
-  })
-
   it(`allows to configure button label`, async () => {
     const { container } = render(
       <CopyButton
