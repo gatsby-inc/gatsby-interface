@@ -1,4 +1,4 @@
-import { InterpolationWithTheme, keyframes } from "@emotion/core"
+import { keyframes } from "@emotion/core"
 import { Theme, ThemeCss } from ".."
 
 export type ButtonSize = "XL" | "L" | "M" | "S"
@@ -25,7 +25,7 @@ export function getButtonCss({
   loading?: boolean
   textVariant?: ButtonTextVariant
   width?: ButtonWidth
-}): InterpolationWithTheme<Theme> {
+}): ThemeCss {
   return (theme: Theme) => [
     getButtonBaseCss(textVariant)(theme),
     getButtonIconsCss({
@@ -132,6 +132,7 @@ function getButtonSizeCss(
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[1] : theme.fontSizes[0],
         minHeight: `calc(${theme.space[2]} * 7)`,
+        minWidth: `calc(${theme.space[2]} * 7)`,
         padding: `${theme.space[2]} ${theme.space[3]}`,
       }
     }
@@ -140,6 +141,7 @@ function getButtonSizeCss(
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[2] : theme.fontSizes[1],
         minHeight: `calc(${theme.space[2]} * 9)`,
+        minWidth: `calc(${theme.space[2]} * 9)`,
         padding: `${theme.space[2]} ${theme.space[4]}`,
       }
     }
@@ -148,6 +150,7 @@ function getButtonSizeCss(
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[3] : theme.fontSizes[2],
         minHeight: theme.space[9],
+        minWidth: theme.space[9],
         padding: `${theme.space[2]} ${theme.space[5]}`,
       }
     }
@@ -156,6 +159,7 @@ function getButtonSizeCss(
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[5] : theme.fontSizes[4],
         minHeight: theme.space[10],
+        minWidth: theme.space[10],
         padding: `${theme.space[3]} ${theme.space[6]}`,
       }
     }
@@ -186,6 +190,7 @@ function getButtonVariantCss(
         color: theme.tones[tone].text,
         ":hover": {
           borderColor: theme.tones[tone].dark,
+          background: theme.tones[tone].superLight,
           color: theme.tones[tone].superDark,
         },
       }
