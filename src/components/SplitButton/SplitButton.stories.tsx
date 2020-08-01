@@ -6,6 +6,7 @@ import {
   radioKnobOptions,
   withVariationsContainer,
   getStoryOptions,
+  disableAnimationsDecorator,
 } from "../../utils/storybook"
 import { SplitButton, SplitButtonVariant } from "."
 import { ButtonTone, ButtonSize, ButtonWidth } from "../../theme/styles/button"
@@ -17,6 +18,7 @@ export default {
   title: `SplitButton`,
   component: SplitButton,
   subcomponents: { DropdownMenuItem },
+  decorators: [disableAnimationsDecorator],
 }
 
 const options = getStoryOptions("short")
