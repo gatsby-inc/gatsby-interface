@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.186](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.185...v0.0.186) (2020-08-01)
+
+
+### Features
+
+* new IconButton, IconAnchorButton and IconLinkButton components ([#366](https://github.com/gatsby-inc/gatsby-interface/issues/366)) ([e71eac9](https://github.com/gatsby-inc/gatsby-interface/commit/e71eac90b798c5b7d543c551f19235e11a48113f))
+
 ### [0.0.185](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.184...v0.0.185) (2020-08-01)
 
 
