@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.185](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.184...v0.0.185) (2020-08-01)
+
+
+### Bug Fixes
+
+* **Text:** Use "body" font family for <Text /> ([#369](https://github.com/gatsby-inc/gatsby-interface/issues/369)) ([4389e7c](https://github.com/gatsby-inc/gatsby-interface/commit/4389e7c432e7f299cd7a0c4b7d0fedd086670ed9))
+
 ### [0.0.184](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.183...v0.0.184) (2020-07-30)
 
 ### [0.0.183](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.182...v0.0.183) (2020-07-29)
