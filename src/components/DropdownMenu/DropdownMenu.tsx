@@ -10,6 +10,8 @@ import {
   MenuListProps,
   MenuButton,
   MenuButtonProps,
+  MenuItems,
+  MenuItemsProps,
   MenuItem,
   MenuItemProps,
   MenuLink,
@@ -56,6 +58,12 @@ export type DropdownMenuItemsProps = MenuListProps
 
 export const DropdownMenuItems: React.FC<DropdownMenuItemsProps> = props => (
   <MenuList {...props} css={dropdownCss}></MenuList>
+)
+
+export type DropdownMenuItemsLowLevelProps = MenuItemsProps
+
+export const DropdownMenuItemsLowLevel: React.FC<DropdownMenuItemsLowLevelProps> = props => (
+  <MenuItems {...props} css={dropdownCss}></MenuItems>
 )
 
 export type DropdownMenuItemProps = MenuItemProps

@@ -115,7 +115,7 @@ export function IconLinkButton(props: IconLinkButtonProps) {
   return <BaseLink {...iconButtonProps} {...rest} />
 }
 
-function useIconButton({
+export function useIconButton({
   icon,
   children,
   size = `L`,
