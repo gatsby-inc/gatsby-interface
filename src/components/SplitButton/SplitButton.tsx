@@ -73,13 +73,16 @@ export function SplitButton({
     {
       borderTopLeftRadius: 0,
       borderBottomLeftRadius: 0,
+      flexShrink: 0,
     },
   ]
 
   const finalSeparatorCss: ThemeCss = theme => [
     separatorCss(theme),
     variant === `PRIMARY` && {
-      backgroundColor: theme.colors.whiteFade[30],
+      background: `
+        linear-gradient(${theme.colors.whiteFade[30]} 0%, ${theme.colors.whiteFade[30]} 100%),
+        linear-gradient(${theme.tones[tone].dark} 0%, ${theme.tones[tone].dark} 100%)`,
     },
     variant === `SECONDARY` && {
       backgroundColor: `transparent`,
