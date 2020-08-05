@@ -830,6 +830,7 @@ exports[`icons <InProgressIcon /> renders unchanged 1`] = `
 <div>
   <svg
     aria-hidden="true"
+    class="css-1hopcnb-InProgressIcon"
     data-testid="icon-InProgressIcon"
     fill="currentColor"
     fill-rule="evenodd"

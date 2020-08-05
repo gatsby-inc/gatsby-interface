@@ -1,6 +1,21 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
+import { keyframes } from "@emotion/core"
 import IconSkeleton from "./IconSkeleton"
 import { IconProps } from "./types"
+import { ThemeCss } from "../../theme"
+
+const rotating = keyframes`
+  100% {
+    transform: rotate(360deg);
+  }
+`
+
+const animatedCss: ThemeCss = _theme => ({
+  animation: `${rotating} 1s infinite`,
+  animationTimingFunction: `linear`,
+  transform: `rotate(0)`,
+})
 
 export default function InProgressIcon(props: IconProps) {
   const mask0Id = `InProgressIcon__mask0--${props.id || "noid"}`
@@ -8,11 +23,13 @@ export default function InProgressIcon(props: IconProps) {
   const mask2Id = `InProgressIcon__mask2--${props.id || "noid"}`
   const filterId = `InProgressIcon__filter--${props.id || "noid"}`
   const gradientId = `InProgressIcon__gradient--${props.id || "noid"}`
+
   return (
     <IconSkeleton
       {...props}
       iconName="InProgressIcon"
       applyColorToStroke={false}
+      css={animatedCss}
     >
       <mask
         id={mask0Id}
