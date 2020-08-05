@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.188](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.187...v0.0.188) (2020-08-05)
+
+
+### Features
+
+* SplitButton component ([#371](https://github.com/gatsby-inc/gatsby-interface/issues/371)) ([93a8cf2](https://github.com/gatsby-inc/gatsby-interface/commit/93a8cf22859ce192123d288159b98d134015f384))
+
 ### [0.0.187](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.186...v0.0.187) (2020-08-05)
 
 
