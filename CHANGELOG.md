@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.187](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.186...v0.0.187) (2020-08-05)
+
+
+### Features
+
+* **icons:** make InProgressIcon animated ([#372](https://github.com/gatsby-inc/gatsby-interface/issues/372)) ([93de85d](https://github.com/gatsby-inc/gatsby-interface/commit/93de85d3ab5d346cd453202c640403c4fa3ca7ea))
+
 ### [0.0.186](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.185...v0.0.186) (2020-08-01)
 
 
