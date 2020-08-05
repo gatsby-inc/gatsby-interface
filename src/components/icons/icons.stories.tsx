@@ -9,6 +9,7 @@ import * as icons from "./icons"
 import { IconSize, IconProps } from "./types"
 import { useTheme } from "../ThemeProvider"
 import { Theme, ThemeCss } from "../../theme"
+import { disableAnimationsDecorator } from "../../utils/storybook"
 
 const sizes: IconSize[] = [
   `inherit`,
@@ -113,6 +114,7 @@ const sortedIconComponentNames = Object.keys(icons)
 
 storiesOf(`Icons`, module)
   .addDecorator(withKnobs)
+  .addDecorator(disableAnimationsDecorator)
   .addParameters({
     componentSubtitle:
       "Icons provide visual context, communicate meaning, and enhance usability.",
@@ -145,6 +147,7 @@ storiesOf(`Icons`, module)
 
 sortedIconComponentNames.forEach(componentName => {
   storiesOf(`Icons/Single icons`, module)
+    .addDecorator(disableAnimationsDecorator)
     .addParameters({
       layout: `padded`,
       options: {
