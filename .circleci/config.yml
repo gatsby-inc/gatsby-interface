@@ -149,6 +149,8 @@ workflows:
                 - main
                 - dev
       - a11y-checks:
+          requires:
+            - is-green
           filters:
             branches:
               ignore:
