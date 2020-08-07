@@ -1,6 +1,6 @@
 # This configuration is partially based on the CircleCI blog post on publishing NPM packages
 # https://circleci.com/blog/publishing-npm-packages-using-circleci-2-0/
-version: 2
+version: 2.1
 
 # Default configuration that can be shared between jobs
 defaults: &defaults
