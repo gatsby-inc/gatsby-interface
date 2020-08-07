@@ -48,6 +48,22 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
+  # This job uses Storybook to detect basic a11y issues such as color contrast or missing input labels
+  a11y-checks:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: ~/repo
+
+      - run:
+          name: Build Storybook
+          command: STORYBOOK_A11Y_CHECK=1 yarn build-storybook
+
+      - run:
+          name: Run a11y checks
+          command: yarn test:a11y
   # This job publishes as prerelease version tagged with a normalized branch name, e.g. gatsby-interface@Elanhant-avatar-component
   branch-prerelease:
     <<: *defaults
@@ -126,6 +142,13 @@ workflows:
   run-branch-prerelease:
     jobs:
       - is-green:
+          filters:
+            branches:
+              ignore:
+                - master
+                - main
+                - dev
+      - a11y-checks:
           filters:
             branches:
               ignore:
