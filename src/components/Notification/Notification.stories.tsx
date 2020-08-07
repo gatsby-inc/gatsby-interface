@@ -13,6 +13,7 @@ import {
 import {
   sandboxWithPropVariations,
   withVariationsContainer,
+  isA11yTest,
 } from "../../utils/storybook"
 import { Button } from "../Button"
 import { radioKnobOptions } from "../../utils/storybook/knobs"
@@ -168,7 +169,7 @@ function AnimatedNotification(props: NotificationProps) {
   const transitions = useTransition(
     isOpened,
     null,
-    isChromatic()
+    isChromatic() || isA11yTest()
       ? {}
       : {
           from: { opacity: 0, transform: "translate3d(0, -40px, 0)" },

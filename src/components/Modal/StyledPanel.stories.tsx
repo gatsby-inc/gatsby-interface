@@ -15,6 +15,7 @@ import {
 } from "./"
 import { Theme } from "../../theme"
 import { Button } from "../Button"
+import { disableAnimationsDecorator } from "../../utils/storybook"
 
 export default {
   title: `Modal/StyledPanel`,
@@ -30,19 +31,13 @@ export default {
     },
   },
   decorators: [
+    disableAnimationsDecorator,
     story => (
       <React.Fragment>
         <Global
           styles={(theme: Theme) => [
             {
               body: { background: theme.colors.grey[20] },
-            },
-            isChromatic() && {
-              // Make animations instant so that Chromatic can take proper snapshots
-              "*, :before, :after": {
-                animationDuration: `0s !important`,
-                animationDelay: `0s !important`,
-              },
             },
           ]}
         />

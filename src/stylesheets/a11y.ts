@@ -10,3 +10,14 @@ export const visuallyHiddenCss: Interpolation = {
   overflow: `hidden`,
   position: `absolute`,
 }
+
+export const resetVisuallyHiddenCss: Interpolation = {
+  border: `unset`,
+  clip: `unset`,
+  height: `unset`,
+  width: `unset`,
+  margin: `unset`,
+  padding: `unset`,
+  overflow: `unset`,
+  position: `unset`,
+}
