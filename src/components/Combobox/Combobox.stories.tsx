@@ -11,7 +11,7 @@ import {
 import { Theme } from "../../theme"
 import { ComboboxOptionProps } from "./Combobox"
 import { boolean, text } from "@storybook/addon-knobs"
-import isChromatic from "storybook-chromatic/isChromatic"
+import { isA11yTest } from "../../utils/storybook"
 
 export default {
   title: `Combobox`,
@@ -64,7 +64,7 @@ export const Basic = () => {
       <Combobox>
         <ComboboxInput
           aria-labelledby="demo"
-          ref={element => isChromatic() && element && element.focus()}
+          ref={element => !isA11yTest() && element && element.focus()}
         />
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
@@ -120,7 +120,7 @@ export const WithToggleButton = () => {
       <Combobox>
         <ComboboxInput
           aria-labelledby="demo"
-          ref={element => isChromatic() && element && element.focus()}
+          ref={element => !isA11yTest() && element && element.focus()}
           showToggleButton
           toggleButtonAriaLabel="Show available options"
         />
@@ -143,7 +143,7 @@ export const WithAccessibleNameForList = () => {
       <Combobox>
         <ComboboxInput
           aria-labelledby="demo"
-          ref={element => isChromatic() && element && element.focus()}
+          ref={element => !isA11yTest() && element && element.focus()}
         />
         <ComboboxPopover>
           <ComboboxList aria-label="Grocery list">
