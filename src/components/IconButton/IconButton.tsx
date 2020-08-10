@@ -22,13 +22,13 @@ const baseCss: ThemeCss = _theme => ({
 
 const iconSizeStyles: Record<ButtonSize, ThemeCss> = {
   S: theme => ({
-    fontSize: theme.fontSizes[4],
+    fontSize: theme.fontSizes[2],
   }),
   M: theme => ({
-    fontSize: theme.fontSizes[5],
+    fontSize: theme.fontSizes[4],
   }),
   L: theme => ({
-    fontSize: theme.fontSizes[6],
+    fontSize: theme.fontSizes[5],
   }),
   XL: theme => ({
     fontSize: theme.fontSizes[7],
