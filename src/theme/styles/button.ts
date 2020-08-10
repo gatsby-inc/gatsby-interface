@@ -131,8 +131,8 @@ function getButtonSizeCss(
       return {
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[1] : theme.fontSizes[0],
-        minHeight: `calc(${theme.space[2]} * 7)`,
-        minWidth: `calc(${theme.space[2]} * 7)`,
+        minHeight: theme.space[7],
+        minWidth: theme.space[7],
         padding: `${theme.space[2]} ${theme.space[3]}`,
       }
     }
@@ -140,8 +140,8 @@ function getButtonSizeCss(
       return {
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[2] : theme.fontSizes[1],
-        minHeight: `calc(${theme.space[2]} * 9)`,
-        minWidth: `calc(${theme.space[2]} * 9)`,
+        minHeight: theme.space[8],
+        minWidth: theme.space[8],
         padding: `${theme.space[2]} ${theme.space[4]}`,
       }
     }
@@ -149,15 +149,15 @@ function getButtonSizeCss(
       return {
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[3] : theme.fontSizes[2],
-        minHeight: theme.space[9],
-        minWidth: theme.space[9],
+        minHeight: `calc(${theme.space[8]} + ${theme.space[2]})`,
+        minWidth: `calc(${theme.space[8]} + ${theme.space[2]})`,
         padding: `${theme.space[2]} ${theme.space[5]}`,
       }
     }
     if (size === `XL`) {
       return {
         fontSize:
-          textVariant === "BRAND" ? theme.fontSizes[5] : theme.fontSizes[4],
+          textVariant === "BRAND" ? theme.fontSizes[5] : theme.fontSizes[3],
         minHeight: theme.space[10],
         minWidth: theme.space[10],
         padding: `${theme.space[3]} ${theme.space[6]}`,
