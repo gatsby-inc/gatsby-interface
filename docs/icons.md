@@ -4,10 +4,29 @@ gatsby-interface mostly relies on two sets of icons:
 * Material Design icons (imported from [`react-icons`](https://github.com/react-icons/react-icons))
 * Gatsby icons (can be found in [/src/components/icons]())
 
-This doc mostly concerns the latter kind of icons.
+This doc mostly concerns the latter kind of icons, specific to Gatsby ecosystem.
 
 ## Icon Sizes
-TODO
+Gatsby icons support a set of preset icons in addition to inheriting based on current font size:
+
+```typescript
+export type IconSize =
+  | "inherit" // 1em
+  | "xxsmall" // 16px
+  | "xsmall" // 20px
+  | "small" // 24px, default
+  | "medium" // 32px
+  | "large" // 40px
+```
+
+Here's an example for setting an icon size:
+```jsx
+import { InProgressIcon } from "gatsby-interface"
+
+export function Example() {
+  return <InProgressIcon size="large" />
+}
+```
 
 ## Adding a new Gatsby icon
 
