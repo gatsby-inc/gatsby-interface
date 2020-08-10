@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.189](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.188...v0.0.189) (2020-08-10)
+
+
+### Bug Fixes
+
+* **buttons:** Adjust button sizes to match the design ([#375](https://github.com/gatsby-inc/gatsby-interface/issues/375)) ([32ef0f2](https://github.com/gatsby-inc/gatsby-interface/commit/32ef0f2703486c731c37f4ced91a35fafad24d5c))
+
 ### [0.0.188](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.187...v0.0.188) (2020-08-05)
 
 
