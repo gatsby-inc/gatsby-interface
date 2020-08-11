@@ -7,6 +7,7 @@ gatsby-interface mostly relies on two sets of icons:
 This doc mostly concerns the latter kind of icons, specific to Gatsby ecosystem.
 
 ## Icon Sizes
+
 Gatsby icons support a set of preset icons in addition to inheriting based on current font size:
 
 ```typescript
@@ -31,12 +32,14 @@ export function Example() {
 ## Adding a new Gatsby icon
 
 ### SVG requirements
+
 To add a new icon to the set of gatsby-interface icons, you will need its source SVG. 
 
 **IMPORTANT**: the icon source SVG has to be 24x24, otherwise it will not be displayed properly. 
 If the SVG has a different view box, either resize it yourself or ask someone from the design team to do it.
 
 ### Scaffolding the icon
+
 Once you have the SVG for your icon, pick a name for it (e.g. `NewCheck`) run the following in the root folder of gatsby-interface:
 ```bash
 yarn scaffold:icon NewCheck
@@ -64,6 +67,7 @@ A couple of things to note here:
 * `iconName` is a utility prop, used to set `data-testid` on the `<svg>` element 
 
 ### Icon code
+
 Once the stub component is created, copy **the content** of the icon's `<svg>` element and paste it in place of 
 ```
 {/* insert inner SVG code here */}
@@ -101,6 +105,7 @@ All that is left is some cleaning up:
   ```
   
   ### Checking our your new icon in Storybook
+  
   As soon as the icon is scaffolded, you can preview it in Storybook by running
   ```bash
   yarn storybook
