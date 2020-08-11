@@ -2,14 +2,18 @@
 import { jsx } from "@emotion/core"
 
 import { action } from "@storybook/addon-actions"
-import { TextAreaFieldBlock, FormFieldBlockLayout } from ".."
+import { TextAreaFieldBlock, FormFieldBlockLayout, InputSize } from ".."
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getFieldBlockSandboxProps } from "./stories.utils"
-import { text } from "@storybook/addon-knobs"
-import { withVariationsContainer } from "../../../utils/storybook"
+import { text, radios } from "@storybook/addon-knobs"
+import {
+  withVariationsContainer,
+  radioKnobOptions,
+} from "../../../utils/storybook"
 import TextAreaFieldBlockDocs from "./TextAreaFieldBlock.mdx"
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const SIZES: InputSize[] = [`S`, `M`, `L`]
 
 export default {
   title: `Form/Styled Blocks/TextAreaFieldBlock`,
@@ -39,6 +43,7 @@ export const Sandbox = () => {
     <TextAreaFieldBlock
       id="TextAreaFieldBlock"
       placeholder={placeholder}
+      size={radios("size", radioKnobOptions(SIZES), "M")}
       {...getFieldBlockSandboxProps()}
     />
   )
@@ -83,11 +88,26 @@ export const WithErrorAndHint = () => (
   />
 )
 
+export const Sizes = () =>
+  SIZES.map(size => (
+    <TextAreaFieldBlock
+      key={size}
+      id={`TextAreaFieldBlock__size--${size}`}
+      label={`Size: "${size}"`}
+      size={size}
+      defaultValue="Default value"
+    />
+  ))
+
+Sizes.story = {
+  decorators: [withVariationsContainer],
+}
+
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
     <TextAreaFieldBlock
       key={labelSize}
-      id={`TextAreaFieldBlock__size--${labelSize}`}
+      id={`TextAreaFieldBlock__labelSize--${labelSize}`}
       label={`Label size: "${labelSize}"`}
       labelSize={labelSize}
     />

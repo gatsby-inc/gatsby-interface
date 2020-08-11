@@ -31,7 +31,7 @@ export const InputFieldBlock = React.forwardRef<
       error={error}
       hint={hint}
       required={required}
-      labelSize={labelSize}
+      labelSize={labelSize === undefined ? rest.size : labelSize}
       validationMode={validationMode}
       layout={layout}
       className={className}

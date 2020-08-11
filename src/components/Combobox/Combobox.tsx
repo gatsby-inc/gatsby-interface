@@ -36,6 +36,7 @@ import { warn } from "../../utils/maintenance/warn"
 import { RequireProp } from "../../utils/types"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
+import { InputSize } from "../form"
 
 type ComboboxCustomContextValue = {
   listRef: React.RefObject<HTMLUListElement>
@@ -71,6 +72,7 @@ export type ComboboxInputProps = PropsWithAs<
     hasError?: boolean
     showToggleButton?: boolean
     toggleButtonAriaLabel?: string
+    size?: InputSize
   }
 >
 
@@ -83,6 +85,7 @@ export const ComboboxInput = React.forwardRef<
     hasError,
     showToggleButton,
     toggleButtonAriaLabel = "Show options",
+    size,
     ...delegated
   },
   ref
@@ -140,10 +143,11 @@ export const ComboboxInput = React.forwardRef<
         selectOnClick
         onKeyDown={onKeyDown}
         css={theme => [
-          inputCss(hasError)(theme),
+          inputCss(size)(theme),
           showSelectedOptionLabel && inputWithSelectedValueCss(theme),
           showToggleButton && inputWithToggleButtonCss(theme),
         ]}
+        aria-invalid={hasError}
         {...delegated}
       />
       {!!selectedOptionLabel && (
