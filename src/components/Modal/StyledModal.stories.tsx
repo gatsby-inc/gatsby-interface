@@ -4,10 +4,10 @@ import React from "react"
 import { Global } from "@emotion/core"
 import { DecoratorFn } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
-import isChromatic from "storybook-chromatic/isChromatic"
 import {
   radioKnobOptions,
   withVariationsContainer,
+  disableAnimationsDecorator,
 } from "../../utils/storybook"
 import {
   StyledModal,
@@ -31,19 +31,13 @@ export default {
     },
   },
   decorators: [
+    disableAnimationsDecorator,
     story => (
       <React.Fragment>
         <Global
           styles={(theme: Theme) => [
             {
               body: { background: theme.colors.grey[20] },
-            },
-            isChromatic() && {
-              // Make animations instant so that Chromatic can take proper snapshots
-              "*, :before, :after": {
-                animationDuration: `0s !important`,
-                animationDelay: `0s !important`,
-              },
             },
           ]}
         />
