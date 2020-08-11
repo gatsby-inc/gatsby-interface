@@ -2,15 +2,19 @@
 import { jsx } from "@emotion/core"
 
 import { action } from "@storybook/addon-actions"
-import { SelectFieldBlock, FormFieldBlockLayout } from ".."
+import { SelectFieldBlock, FormFieldBlockLayout, InputSize } from ".."
 import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getFieldBlockSandboxProps } from "./stories.utils"
-import { text } from "@storybook/addon-knobs"
+import { text, radios } from "@storybook/addon-knobs"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
-import { withVariationsContainer } from "../../../utils/storybook"
+import {
+  withVariationsContainer,
+  radioKnobOptions,
+} from "../../../utils/storybook"
 import SelectFieldBlockDocs from "./SelectFieldBlock.mdx"
 
 const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const SIZES: InputSize[] = [`S`, `M`, `L`]
 
 const options = getGroupFieldStoryOptions()
 
@@ -43,6 +47,7 @@ export const Sandbox = () => {
     <SelectFieldBlock
       id="SelectFieldBlock"
       placeholder={placeholder}
+      size={radios("size", radioKnobOptions(SIZES), "M")}
       {...getFieldBlockSandboxProps()}
       options={options}
     />
@@ -101,11 +106,26 @@ export const WithErrorAndHint = () => (
   />
 )
 
+export const Sizes = () =>
+  SIZES.map(size => (
+    <SelectFieldBlock
+      key={size}
+      id={`SelectFieldBlock__size--${size}`}
+      label={`Size: "${size}"`}
+      size={size}
+      options={options}
+    />
+  ))
+
+Sizes.story = {
+  decorators: [withVariationsContainer],
+}
+
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
     <SelectFieldBlock
       key={labelSize}
-      id={`SelectFieldBlock__size--${labelSize}`}
+      id={`SelectFieldBlock__labelSize--${labelSize}`}
       label={`Label size: "${labelSize}"`}
       labelSize={labelSize}
       options={options}

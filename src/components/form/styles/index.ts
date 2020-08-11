@@ -57,7 +57,6 @@ export const baseInputCss: ThemeCss = theme => [
     color: theme.colors.grey[90],
     fontFamily: theme.fonts.system,
     fontSize: theme.fontSizes[2],
-    height: `2.25rem`,
     padding: `0 ${theme.space[3]}`,
     position: `relative`,
     width: `100%`,
@@ -80,6 +79,27 @@ export const baseInputCss: ThemeCss = theme => [
     ),
   },
 ]
+
+export type InputSize = "S" | `M` | "L"
+
+export function getInputSizeCss(size: InputSize) {
+  return inputSizeCss[size]
+}
+
+const inputSizeCss: Record<InputSize, ThemeCss> = {
+  S: theme => ({
+    minHeight: theme.space[8],
+    fontSize: theme.fontSizes[1],
+  }),
+  M: theme => ({
+    minHeight: `calc(${theme.space[8]} + ${theme.space[2]})`,
+    fontSize: theme.fontSizes[2],
+  }),
+  L: theme => ({
+    minHeight: theme.space[10],
+    fontSize: theme.fontSizes[3],
+  }),
+}
 
 export function getOptionLabelCss(
   optionControlSize = "0px",

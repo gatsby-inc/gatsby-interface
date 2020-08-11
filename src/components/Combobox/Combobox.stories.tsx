@@ -10,8 +10,13 @@ import {
 } from "./"
 import { Theme } from "../../theme"
 import { ComboboxOptionProps } from "./Combobox"
-import { boolean, text } from "@storybook/addon-knobs"
-import { isA11yTest } from "../../utils/storybook"
+import { boolean, text, radios } from "@storybook/addon-knobs"
+import {
+  isA11yTest,
+  radioKnobOptions,
+  withVariationsContainer,
+} from "../../utils/storybook"
+import { InputSize, StyledLabel } from "../form"
 
 export default {
   title: `Combobox`,
@@ -57,6 +62,8 @@ const options: ComboboxOptionProps[] = [
   },
 ]
 
+const SIZES: InputSize[] = [`S`, `M`, `L`]
+
 export const Basic = () => {
   return (
     <div css={{ minHeight: `100vh` }}>
@@ -88,6 +95,7 @@ export const Sandbox = () => {
           hasError={boolean(`hasError`, false)}
           showToggleButton={boolean(`showToggleButton`, false)}
           toggleButtonAriaLabel={text("toggleButtonAriaLabel", "Show options")}
+          size={radios("size", radioKnobOptions(SIZES), "M")}
         />
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
@@ -277,4 +285,35 @@ export const WithControlledInput = () => {
       </div>
     </div>
   )
+}
+
+export const Sizes = () =>
+  SIZES.map(size => (
+    <div key={size}>
+      <StyledLabel
+        htmlFor={`input__size--${size}`}
+        id={`label__size--${size}`}
+        labelSize={size}
+      >
+        Label size: "{size}"
+      </StyledLabel>
+      <Combobox>
+        <ComboboxInput
+          aria-labelledby={`label__size--${size}`}
+          id={`input__size--${size}`}
+          size={size}
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby={`label__size--${size}`}>
+            {options.map(({ value }) => {
+              return <ComboboxOption key={value} value={value} />
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  ))
+
+Sizes.story = {
+  decorators: [withVariationsContainer],
 }
