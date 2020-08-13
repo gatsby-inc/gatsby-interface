@@ -25,6 +25,7 @@ const fadeMap: Record<ModalType, ReturnType<typeof keyframes>> = {
   success: buildFadeIn(hexToRGBA(colors.green[50], 0.75)),
   warn: buildFadeIn(hexToRGBA(colors.orange[50], 0.75)),
   error: buildFadeIn(hexToRGBA(colors.red[50], 0.75)),
+  neutral: buildFadeIn(hexToRGBA(colors.grey[50], 0.75)),
 }
 
 const overlayCss: ThemeCss = theme => ({
@@ -38,7 +39,7 @@ const overlayCss: ThemeCss = theme => ({
   zIndex: theme.zIndices.modals,
 })
 
-export type ModalType = "success" | "info" | "warn" | "error"
+export type ModalType = "success" | "info" | "warn" | "error" | "neutral"
 
 export interface ModalProps extends Omit<PropsOf<typeof DialogOverlay>, "ref"> {
   type?: ModalType
