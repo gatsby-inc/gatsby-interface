@@ -15,9 +15,12 @@ import {
   StyledModalBody,
   StyledModalActions,
   StyledModalVariant,
+  StyledModalHeaderLayout,
 } from "./"
 import { Theme } from "../../theme"
 import { Button } from "../Button"
+import { Heading } from "../Heading"
+import { Text } from "../Text"
 
 export default {
   title: `Modal/StyledModal`,
@@ -116,6 +119,32 @@ export const Variants = () =>
       </StyledModal>
     </div>
   ))
+
+export const ComposableHeader = () => (
+  <StyledModal
+    variant={radios(
+      `variant`,
+      radioKnobOptions<StyledModalVariant>(VARIANTS),
+      `DEFAULT`
+    )}
+  >
+    <StyledModalHeaderLayout
+      closeButtonLabel={text("close button label", "Close modal")}
+    >
+      <Text css={{ margin: 0, padding: 0 }}>
+        {text("subheader text", "New announcement")}
+      </Text>
+      <Heading>{text("header text", "Hello World")}</Heading>
+    </StyledModalHeaderLayout>
+    <StyledModalBody>
+      {text("body text", LONG_TEXT)}
+      <StyledModalActions>
+        <Button>Action 1</Button>
+        <Button>Action 2</Button>
+      </StyledModalActions>
+    </StyledModalBody>
+  </StyledModal>
+)
 
 Variants.story = {
   parameters: { layout: `padded` },

@@ -72,6 +72,23 @@ export function StyledModalHeader({
   )
 }
 
+export function StyledModalHeaderLayout({
+  children,
+  onCloseButtonClick,
+  closeButtonLabel = `Close modal`,
+}: StyledModalHeaderProps) {
+  return (
+    <div css={headerCss}>
+      <div css={{ flex: 1 }}>{children}</div>
+
+      <StyledModalCloseButton
+        onClick={onCloseButtonClick}
+        aria-label={closeButtonLabel}
+      />
+    </div>
+  )
+}
+
 export type StyledModalCloseButtonProps = Omit<
   JSX.IntrinsicElements["button"],
   "ref"
