@@ -4,10 +4,10 @@ import React from "react"
 import { Global } from "@emotion/core"
 import { DecoratorFn } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
+import isChromatic from "storybook-chromatic/isChromatic"
 import {
   radioKnobOptions,
   withVariationsContainer,
-  disableAnimationsDecorator,
 } from "../../utils/storybook"
 import {
   StyledModal,
@@ -15,12 +15,9 @@ import {
   StyledModalBody,
   StyledModalActions,
   StyledModalVariant,
-  StyledModalHeaderLayout,
 } from "./"
 import { Theme } from "../../theme"
 import { Button } from "../Button"
-import { Heading } from "../Heading"
-import { Text } from "../Text"
 
 export default {
   title: `Modal/StyledModal`,
@@ -34,13 +31,19 @@ export default {
     },
   },
   decorators: [
-    disableAnimationsDecorator,
     story => (
       <React.Fragment>
         <Global
           styles={(theme: Theme) => [
             {
               body: { background: theme.colors.grey[20] },
+            },
+            isChromatic() && {
+              // Make animations instant so that Chromatic can take proper snapshots
+              "*, :before, :after": {
+                animationDuration: `0s !important`,
+                animationDelay: `0s !important`,
+              },
             },
           ]}
         />
@@ -119,32 +122,6 @@ export const Variants = () =>
       </StyledModal>
     </div>
   ))
-
-export const ComposableHeader = () => (
-  <StyledModal
-    variant={radios(
-      `variant`,
-      radioKnobOptions<StyledModalVariant>(VARIANTS),
-      `DEFAULT`
-    )}
-  >
-    <StyledModalHeaderLayout
-      closeButtonLabel={text("close button label", "Close modal")}
-    >
-      <Text css={{ margin: 0, padding: 0 }}>
-        {text("subheader text", "New announcement")}
-      </Text>
-      <Heading>{text("header text", "Hello World")}</Heading>
-    </StyledModalHeaderLayout>
-    <StyledModalBody>
-      {text("body text", LONG_TEXT)}
-      <StyledModalActions>
-        <Button>Action 1</Button>
-        <Button>Action 2</Button>
-      </StyledModalActions>
-    </StyledModalBody>
-  </StyledModal>
-)
 
 Variants.story = {
   parameters: { layout: `padded` },
