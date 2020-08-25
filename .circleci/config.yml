@@ -79,6 +79,7 @@ jobs:
 
       - run:
           name: Run a11y checks
+          no_output_timeout: 20m
           command: yarn test:a11y
   # This job publishes as prerelease version tagged with a normalized branch name, e.g. gatsby-interface@Elanhant-avatar-component
   branch-prerelease:
