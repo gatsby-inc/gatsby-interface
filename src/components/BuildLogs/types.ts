@@ -1,4 +1,4 @@
-export enum ActivityStatus {
+export enum BuildActivityStatus {
   InProgress = "IN_PROGRESS",
   NotStarted = "NOT_STARTED",
   Failed = "FAILED",
@@ -38,7 +38,7 @@ export type BuildActivity = {
   name?: string | null
   message?: string | null
   type: BuildActivityType
-  status: ActivityStatus
+  status: BuildActivityStatus
   duration?: number | null
   current?: number | null
   total?: number | null

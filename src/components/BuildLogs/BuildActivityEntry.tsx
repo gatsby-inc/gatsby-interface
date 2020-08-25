@@ -4,7 +4,7 @@ import React from "react"
 import {
   BuildLogItem,
   BuildActivity,
-  ActivityStatus,
+  BuildActivityStatus,
   BuildActivityType,
 } from "./types"
 import { ProgressBar } from "../ProgressBar"
@@ -35,12 +35,14 @@ const hiddenOnMobileCss: ThemeCss = theme => ({
   },
 })
 
-const statusColorLookup = (theme: Theme): Record<ActivityStatus, string> => ({
-  [ActivityStatus.Failed]: theme.colors.red[70],
-  [ActivityStatus.InProgress]: theme.colors.blue[80],
-  [ActivityStatus.NotStarted]: theme.colors.grey[50],
-  [ActivityStatus.Success]: theme.colors.grey[50],
-  [ActivityStatus.Interrupted]: theme.colors.red[50],
+const statusColorLookup = (
+  theme: Theme
+): Record<BuildActivityStatus, string> => ({
+  [BuildActivityStatus.Failed]: theme.colors.red[70],
+  [BuildActivityStatus.InProgress]: theme.colors.blue[80],
+  [BuildActivityStatus.NotStarted]: theme.colors.grey[50],
+  [BuildActivityStatus.Success]: theme.colors.grey[50],
+  [BuildActivityStatus.Interrupted]: theme.colors.red[50],
 })
 
 export type BuildActivityEntryProps = Omit<BuildLogItem, "activity"> & {
@@ -54,10 +56,10 @@ export function BuildActivityEntry({
 }: BuildActivityEntryProps) {
   const { duration, current, total, type, status } = activity
 
-  const isSuccessfulActivity = status === ActivityStatus.Success
+  const isSuccessfulActivity = status === BuildActivityStatus.Success
   const isFailedActivity = [
-    ActivityStatus.Interrupted,
-    ActivityStatus.Failed,
+    BuildActivityStatus.Interrupted,
+    BuildActivityStatus.Failed,
   ].includes(status)
 
   /*
@@ -129,7 +131,7 @@ const formatProgress = (
     .join(` / `)
 
 type ActivityStatusIconProps = {
-  status: ActivityStatus
+  status: BuildActivityStatus
 }
 
 function ActivityStatusIcon({ status }: ActivityStatusIconProps) {
@@ -148,35 +150,35 @@ function ActivityStatusIcon({ status }: ActivityStatusIconProps) {
 }
 
 const activityEntryStatusVariants: Partial<Record<
-  ActivityStatus,
+  BuildActivityStatus,
   {
     label: string
     Icon: React.ComponentType
     styles: ThemeCss
   }
 >> = {
-  [ActivityStatus.Success]: {
+  [BuildActivityStatus.Success]: {
     label: `Completed`,
     Icon: MdCheck,
     styles: theme => ({
       color: theme.colors.grey[40],
     }),
   },
-  [ActivityStatus.Interrupted]: {
+  [BuildActivityStatus.Interrupted]: {
     label: `Failed`,
     Icon: MdClose,
     styles: theme => ({
       color: theme.colors.red[60],
     }),
   },
-  [ActivityStatus.Failed]: {
+  [BuildActivityStatus.Failed]: {
     label: `Failed`,
     Icon: MdClose,
     styles: theme => ({
       color: theme.colors.red[60],
     }),
   },
-  [ActivityStatus.InProgress]: {
+  [BuildActivityStatus.InProgress]: {
     label: `In Progress`,
     Icon: ActivityInProgressIcon,
     styles: theme => ({

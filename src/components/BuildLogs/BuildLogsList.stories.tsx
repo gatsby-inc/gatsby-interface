@@ -10,7 +10,11 @@ import {
 } from "../../utils/storybook"
 import { BuildLogsList } from "."
 import { BuildActivityEntry } from "./BuildActivityEntry"
-import { StructuredLogLevel, BuildActivityType, ActivityStatus } from "./types"
+import {
+  StructuredLogLevel,
+  BuildActivityType,
+  BuildActivityStatus,
+} from "./types"
 import { BuildStandardLogEntry } from "./BuildStandardLogEntry"
 import { Heading } from "../Heading"
 
@@ -36,7 +40,7 @@ const ALL_INCLUSIVE = [
       name: "Install project dependencies",
       type: BuildActivityType.Spinner,
       message: null,
-      status: ActivityStatus.Success,
+      status: BuildActivityStatus.Success,
       statusText: null,
       duration: 39.207,
       current: null,
@@ -74,7 +78,7 @@ const ALL_INCLUSIVE = [
       name: "Downloading remote files",
       type: BuildActivityType.Progress,
       message: null,
-      status: ActivityStatus.Success,
+      status: BuildActivityStatus.Success,
       statusText: "",
       duration: 4.10931195,
       current: 101,
@@ -98,7 +102,7 @@ const ALL_INCLUSIVE = [
       name: "Downloading remote files",
       type: BuildActivityType.Progress,
       message: null,
-      status: ActivityStatus.InProgress,
+      status: BuildActivityStatus.InProgress,
       statusText: "",
       duration: 4.65197033,
       current: 86,
@@ -164,7 +168,7 @@ const ALL_INCLUSIVE = [
       name: "createSchemaCustomization",
       type: BuildActivityType.Spinner,
       message: null,
-      status: ActivityStatus.Success,
+      status: BuildActivityStatus.Success,
       statusText: "",
       duration: 0.110791476,
       current: null,
@@ -188,7 +192,7 @@ const ALL_INCLUSIVE = [
       name: "source and transform nodes",
       type: BuildActivityType.Spinner,
       message: null,
-      status: ActivityStatus.Success,
+      status: BuildActivityStatus.Success,
       statusText: "",
       duration: 139.989050738,
       current: null,
@@ -212,7 +216,7 @@ const ALL_INCLUSIVE = [
       name: "createPages",
       type: BuildActivityType.Spinner,
       message: null,
-      status: ActivityStatus.Success,
+      status: BuildActivityStatus.Success,
       statusText: "",
       duration: 5.805308273,
       current: null,
@@ -253,7 +257,7 @@ const ALL_INCLUSIVE = [
       name: "Deploying Build to Netlify",
       type: BuildActivityType.Spinner,
       message: null,
-      status: ActivityStatus.InProgress,
+      status: BuildActivityStatus.InProgress,
       statusText: null,
       duration: null,
       current: null,
@@ -277,7 +281,7 @@ const ALL_INCLUSIVE = [
       name: "query-extraction",
       type: BuildActivityType.Spinner,
       message: null,
-      status: ActivityStatus.Failed,
+      status: BuildActivityStatus.Failed,
       statusText: "",
       duration: 0.297634156,
       current: null,
@@ -291,7 +295,7 @@ const ALL_INCLUSIVE = [
     name: "Building static HTML for pages",
     type: BuildActivityType.Spinner,
     message: null,
-    status: ActivityStatus.Failed,
+    status: BuildActivityStatus.Failed,
     statusText: "",
     duration: null,
     current: null,
@@ -340,8 +344,8 @@ export const SingleLogEntrySandbox = () => {
             ),
             status: select(
               "activity.status",
-              ActivityStatus,
-              ActivityStatus.InProgress
+              BuildActivityStatus,
+              BuildActivityStatus.InProgress
             ),
             duration: number("activity.duration", 4.179441338),
             current: number("activity.current", 101),
