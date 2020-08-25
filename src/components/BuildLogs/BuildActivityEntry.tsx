@@ -42,7 +42,7 @@ const statusColorLookup = (
   [BuildActivityStatus.InProgress]: theme.colors.blue[80],
   [BuildActivityStatus.NotStarted]: theme.colors.grey[50],
   [BuildActivityStatus.Success]: theme.colors.grey[50],
-  [BuildActivityStatus.Interrupted]: theme.colors.red[50],
+  [BuildActivityStatus.Interrupted]: theme.colors.red[70],
 })
 
 export type BuildActivityEntryProps = Omit<BuildLogItem, "activity"> & {

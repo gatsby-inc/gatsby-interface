@@ -75,7 +75,7 @@ jobs:
 
       - run:
           name: Build Storybook
-          command: STORYBOOK_A11Y_CHECK=1 yarn build-storybook
+          command: STORYBOOK_A11Y_CHECK=1 yarn build-storybook --quiet
 
       - run:
           name: Run a11y checks

@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import React from "react"
 import { BuildLogItem, StructuredLogLevel } from "./types"
 import { ThemeCss, Theme } from "../../theme"
 import { formatLogMessage } from "./utils"
@@ -18,7 +19,9 @@ export function FormattedLogMessage({
 }: FormattedLogMessageProps) {
   return (
     <div css={getMessageCss(level)} className={className}>
-      {formatLogMessage(message || "")}
+      {formatLogMessage(message || "").map((element, index) => (
+        <React.Fragment key={index}>{element}</React.Fragment>
+      ))}
     </div>
   )
 }
