@@ -92,7 +92,7 @@ const partToHtml = (part: string[]) => {
 
   if (isCode) {
     return (
-      <pre>
+      <pre tabIndex={0}>
         <code
           dangerouslySetInnerHTML={{ __html: part.map(toCodeLine).join(``) }}
         />

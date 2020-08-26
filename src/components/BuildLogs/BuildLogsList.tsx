@@ -15,30 +15,34 @@ export type BuildLogsListProps = {
   logItems: BuildLogItem[]
   // require aria-label for a11y
   "aria-label": string
+  className?: string
 }
 
 export function BuildLogsList({
   logItems,
   "aria-label": ariaLabel,
+  className,
 }: BuildLogsListProps) {
   return (
-    <ol css={baseCss} aria-label={ariaLabel}>
-      {logItems.map(logItem => {
-        return (
-          <li css={{ margin: 0 }} key={logItem.id}>
-            {logItem.activity ? (
-              <BuildActivityEntry {...logItem} activity={logItem.activity} />
-            ) : (
-              <BuildStandardLogEntry
-                level={logItem.level}
-                message={logItem.message}
-                context={logItem.context}
-                filePath={logItem.filePath}
-              />
-            )}
-          </li>
-        )
-      })}
-    </ol>
+    <div role="log" className={className}>
+      <ol css={baseCss} aria-label={ariaLabel}>
+        {logItems.map(logItem => {
+          return (
+            <li css={{ margin: 0 }} key={logItem.id}>
+              {logItem.activity ? (
+                <BuildActivityEntry {...logItem} activity={logItem.activity} />
+              ) : (
+                <BuildStandardLogEntry
+                  level={logItem.level}
+                  message={logItem.message}
+                  context={logItem.context}
+                  filePath={logItem.filePath}
+                />
+              )}
+            </li>
+          )
+        })}
+      </ol>
+    </div>
   )
 }

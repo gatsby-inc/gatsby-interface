@@ -87,7 +87,7 @@ export function BuildActivityEntry({
 
   return (
     <BuildLogEntrySkeleton
-      icon={<ActivityStatusIcon status={status} />}
+      icon={<ActivityStatusIcon activityId={activity.id} status={status} />}
       css={baseCss}
     >
       <div id={`activity__message--${activity.id}`}>
@@ -131,10 +131,11 @@ const formatProgress = (
     .join(` / `)
 
 type ActivityStatusIconProps = {
+  activityId: string
   status: BuildActivityStatus
 }
 
-function ActivityStatusIcon({ status }: ActivityStatusIconProps) {
+function ActivityStatusIcon({ activityId, status }: ActivityStatusIconProps) {
   const statusVariant = status ? activityEntryStatusVariants[status] : null
 
   if (!statusVariant) {
@@ -145,6 +146,7 @@ function ActivityStatusIcon({ status }: ActivityStatusIconProps) {
     <statusVariant.Icon
       aria-label={statusVariant.label}
       css={statusVariant.styles}
+      id={`statusIcon--${activityId}`}
     />
   )
 }
@@ -153,7 +155,7 @@ const activityEntryStatusVariants: Partial<Record<
   BuildActivityStatus,
   {
     label: string
-    Icon: React.ComponentType
+    Icon: React.ComponentType<any>
     styles: ThemeCss
   }
 >> = {
