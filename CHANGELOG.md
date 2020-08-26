@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.192](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.191...v0.0.192) (2020-08-26)
+
+
+### Features
+
+* BuildLogsList component ([#379](https://github.com/gatsby-inc/gatsby-interface/issues/379)) ([78502b5](https://github.com/gatsby-inc/gatsby-interface/commit/78502b5cb2ffe7de24228a4a090aaf8fa2c14990))
+
 ### [0.0.191](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.190...v0.0.191) (2020-08-18)
 
 ### [0.0.190](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.189...v0.0.190) (2020-08-17)
