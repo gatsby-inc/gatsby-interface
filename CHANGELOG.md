@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.193](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.192...v0.0.193) (2020-08-27)
+
+
+### Features
+
+* RawLogs component ([#380](https://github.com/gatsby-inc/gatsby-interface/issues/380)) ([17afd15](https://github.com/gatsby-inc/gatsby-interface/commit/17afd1591e07e9d79ca3aaadcc1be6d843aa4b76))
+
 ### [0.0.192](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.191...v0.0.192) (2020-08-26)
 
 
