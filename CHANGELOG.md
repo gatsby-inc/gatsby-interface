@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.194](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.193...v0.0.194) (2020-09-01)
+
+
+### Bug Fixes
+
+* **Avatar:** start a new z-index stack for AvatarsGroup ([#381](https://github.com/gatsby-inc/gatsby-interface/issues/381)) ([350b44c](https://github.com/gatsby-inc/gatsby-interface/commit/350b44ceece77bd4491914716ad6a00b18c4a7cf))
+
 ### [0.0.193](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.192...v0.0.193) (2020-08-27)
 
 
