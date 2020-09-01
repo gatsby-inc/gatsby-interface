@@ -1,13 +1,15 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { css } from "@emotion/core"
 import { AvatarSize } from "./types"
 import Avatar, { AvatarProps } from "./Avatar"
 import { DEFAULT_SIZE, borderSizeValues } from "./constants"
+import { ThemeCss } from "../../theme"
 
-const groupBaseCss = css({
+const groupBaseCss: ThemeCss = _theme => ({
   display: "flex",
   alignItems: "center",
+  // Create new stacking context
+  zIndex: 1,
 })
 
 export type AvatarDescriptor = Pick<AvatarProps, "src" | "label" | "fallback">
@@ -36,13 +38,14 @@ export default function AvatarsGroup({
     borderColor,
   }
   const overlapCss = {
-    marginLeft: `-${borderSizeValues[size] * 2}px`,
+    "&:not(:first-child)": {
+      marginLeft: `-${borderSizeValues[size] * 2}px`,
+    },
   }
-  const avatarsShown = avatars.length
 
   return (
     <div css={groupBaseCss} className={className} style={style}>
-      {avatars.map(({ src, label, ...avatar }, idx) => {
+      {avatars.map(({ src, label, ...avatar }, idx, list) => {
         return (
           <Avatar
             // Using both src and label as key because src might not be unique
@@ -51,8 +54,8 @@ export default function AvatarsGroup({
             label={label}
             {...commonAvatarProps}
             {...avatar}
-            css={idx !== 0 && overlapCss}
-            style={{ zIndex: avatarsShown - idx }}
+            css={overlapCss}
+            style={{ zIndex: list.length - idx }}
           />
         )
       })}
