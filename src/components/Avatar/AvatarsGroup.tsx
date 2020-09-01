@@ -9,7 +9,7 @@ const groupBaseCss: ThemeCss = _theme => ({
   display: "flex",
   alignItems: "center",
   // Create new stacking context
-  zIndex: 1,
+  zIndex: 0,
 })
 
 export type AvatarDescriptor = Pick<AvatarProps, "src" | "label" | "fallback">
