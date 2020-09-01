@@ -38,7 +38,7 @@ export default function AvatarsGroup({
     borderColor,
   }
   const overlapCss = {
-    "&:not(:first-child)": {
+    "&:not(:first-of-type)": {
       marginLeft: `-${borderSizeValues[size] * 2}px`,
     },
   }
