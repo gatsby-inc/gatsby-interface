@@ -53,6 +53,7 @@ export { default as shadows } from "./theme/shadows"
 export { default as zIndices } from "./theme/zIndices"
 export { default as transition } from "./theme/transition"
 
+export { visuallyHiddenCss, resetVisuallyHiddenCss } from "./stylesheets/a11y"
 export { hexToRGB, hexToRGBA } from "./utils/helpers/hexToRgb"
 export * from "./components/NumberBadge"
 export * from "./components/Tabs"
