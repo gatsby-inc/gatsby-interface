@@ -93,6 +93,7 @@ const styledCheckboxBoxCss: ThemeCss = theme => ({
     borderRadius: `3px`,
     content: `""`,
     display: `block`,
+    boxSizing: `border-box`,
     height: CHECKBOX_BOX_SIZE,
     marginRight: theme.space[3],
     position: `absolute`,

@@ -23,7 +23,7 @@ const listCss: ThemeCss = _theme => ({
 
 export type RawLogItem = {
   id?: string | null
-  message?: string | null
+  message?: React.ReactNode
   timestamp?: number | string
   sourceStream?: "STDERR" | "STDOUT" | null
   [k: string]: unknown
@@ -100,11 +100,13 @@ export function RawLogs({
           return (
             <li key={key} css={itemCss}>
               {timestampDate && (
-                <time dateTime={timestampDate.toString()}>
-                  {format(timestampDate, timeFormat)}
-                </time>
+                <React.Fragment>
+                  <time dateTime={timestampDate.toString()}>
+                    {format(timestampDate, timeFormat)}
+                  </time>
+                  &nbsp;
+                </React.Fragment>
               )}
-              &nbsp;
               {message}
             </li>
           )
