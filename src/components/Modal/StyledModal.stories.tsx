@@ -51,6 +51,14 @@ export default {
   ] as DecoratorFn[],
 }
 
+const fullSizeDecorator: DecoratorFn = story => (
+  <div style={{ width: `100vw`, height: `100vh` }}>{story()}</div>
+)
+
+const maxWidthDecorator: DecoratorFn = story => (
+  <div style={{ maxWidth: `620px` }}>{story()}</div>
+)
+
 const LONG_TEXT = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia recusandae nisi magni, dolore laboriosam maiores suscipit perspiciatis. Perspiciatis quod ipsum corporis officia necessitatibus, doloribus fuga culpa. Unde, molestiae repellendus.`
 
 export const Basic = () => (
@@ -160,4 +168,8 @@ export const UsageExample = () => {
       </Modal>
     </React.Fragment>
   )
+}
+
+UsageExample.story = {
+  decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
 }
