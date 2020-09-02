@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.196](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.195...v0.0.196) (2020-09-02)
+
+
+### Bug Fixes
+
+* small fixes in StyledCheckbox, StyledRadio and RawLogs ([#383](https://github.com/gatsby-inc/gatsby-interface/issues/383)) ([9ac2256](https://github.com/gatsby-inc/gatsby-interface/commit/9ac22567044868ad18cde1ffe58318325e42bb9a))
+
 ### [0.0.195](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.194...v0.0.195) (2020-09-02)
 
 ### [0.0.194](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.193...v0.0.194) (2020-09-01)
