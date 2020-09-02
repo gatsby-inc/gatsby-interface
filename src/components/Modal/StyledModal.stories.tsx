@@ -134,7 +134,7 @@ export const Variants = () =>
 
 Variants.story = {
   parameters: { layout: `padded` },
-  decorators: [maxWidthDecorator, withVariationsContainer],
+  decorators: [withVariationsContainer, maxWidthDecorator],
 }
 
 export const UsageExample = () => {
