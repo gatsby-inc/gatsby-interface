@@ -26,6 +26,7 @@ export * from "./components/form"
 export * from "./components/form-skeletons"
 export * from "./components/ConcealedValue"
 export * from "./components/DropdownMenu"
+export * from "./components/VisuallyHidden"
 
 export * from "./theme"
 export * from "./theme/styles/button"
