@@ -15,9 +15,12 @@ import {
   StyledModalBody,
   StyledModalActions,
   StyledModalVariant,
+  Modal,
+  ModalCard,
 } from "./"
 import { Theme } from "../../theme"
 import { Button } from "../Button"
+import isChromatic from "storybook-chromatic/isChromatic"
 
 export default {
   title: `Modal/StyledModal`,
@@ -44,9 +47,16 @@ export default {
         {story()}
       </React.Fragment>
     ),
-    story => <div style={{ maxWidth: `620px` }}>{story()}</div>,
   ] as DecoratorFn[],
 }
+
+const fullSizeDecorator: DecoratorFn = story => (
+  <div style={{ width: `100vw`, height: `100vh` }}>{story()}</div>
+)
+
+const maxWidthDecorator: DecoratorFn = story => (
+  <div style={{ maxWidth: `620px` }}>{story()}</div>
+)
 
 const LONG_TEXT = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia recusandae nisi magni, dolore laboriosam maiores suscipit perspiciatis. Perspiciatis quod ipsum corporis officia necessitatibus, doloribus fuga culpa. Unde, molestiae repellendus.`
 
@@ -62,6 +72,10 @@ export const Basic = () => (
     </StyledModalBody>
   </StyledModal>
 )
+
+Basic.story = {
+  decorators: [maxWidthDecorator],
+}
 
 const VARIANTS: StyledModalVariant[] = [
   `DEFAULT`,
@@ -99,6 +113,7 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+  decorators: [maxWidthDecorator],
 }
 
 export const Variants = () =>
@@ -119,5 +134,46 @@ export const Variants = () =>
 
 Variants.story = {
   parameters: { layout: `padded` },
-  decorators: [withVariationsContainer],
+  decorators: [withVariationsContainer, maxWidthDecorator],
+}
+
+export const UsageExample = () => {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false)
+
+  React.useEffect(() => {
+    // Open panel in Chromatic to keep track of visual regressions
+    if (!isChromatic()) {
+      return
+    }
+    const button = document.querySelector("button")
+    if (button) {
+      button.click()
+    }
+  }, [])
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setIsOpen(true)}>Open modal</Button>
+      <Modal aria-label="Some impressive content" isOpen={isOpen}>
+        <ModalCard>
+          <StyledModal>
+            <StyledModalHeader onCloseButtonClick={() => setIsOpen(false)}>
+              Header
+            </StyledModalHeader>
+            <StyledModalBody>
+              {LONG_TEXT}
+              <StyledModalActions>
+                <Button>Action 1</Button>
+                <Button>Action 2</Button>
+              </StyledModalActions>
+            </StyledModalBody>
+          </StyledModal>
+        </ModalCard>
+      </Modal>
+    </React.Fragment>
+  )
+}
+
+UsageExample.story = {
+  decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
 }

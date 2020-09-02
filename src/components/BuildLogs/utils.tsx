@@ -43,16 +43,18 @@ const composeHeading = (acc: string[][], item: string[], idx: number) => {
 
 const URL_REGEX = /(https?:\/\/([-a-zA-Z0-9@:%_+.~#?&//=]*))/
 
-const toInlineText = (item: string) => {
+const establishLinks = (item: string) => {
   // make link active
-  const rewritenItem = item.replace(
+  return item.replace(
     URL_REGEX,
     url =>
       `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
   )
+}
 
-  // add space at the end of string to separate pharse from the following one
-  return `${rewritenItem} `
+const toInlineText = (item: string) => {
+  // add space at the end of string to separate phrase from the following one
+  return `${establishLinks(item)} `
 }
 
 const ERROR_POINTERS_REGEX = /\^+/
@@ -74,7 +76,7 @@ const LIST_MARKER_REGEX = /^-\s/
 const toListItem = (item: string) => {
   const cleandItem = item.replace(LIST_MARKER_REGEX, "")
 
-  return `<li>${cleandItem}</li>`
+  return `<li>${establishLinks(cleandItem)}</li>`
 }
 
 const CODE_REGEX = /^([\s|>]+\d*\s\|\s)|([\d|\s]+\|)|GraphQL/
