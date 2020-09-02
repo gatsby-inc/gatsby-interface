@@ -1,13 +1,16 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import React from "react"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
 
-export type VisuallyHiddenProps = {
+export type VisuallyHiddenProps = React.ComponentPropsWithoutRef<"span"> & {
   children: React.ReactNode
 }
 
-function VisuallyHidden({ children }: VisuallyHiddenProps) {
-  return <span css={visuallyHiddenCss}>{children}</span>
+export function VisuallyHidden({ children, ...rest }: VisuallyHiddenProps) {
+  return (
+    <span css={visuallyHiddenCss} {...rest}>
+      {children}
+    </span>
+  )
 }
-
-export default VisuallyHidden

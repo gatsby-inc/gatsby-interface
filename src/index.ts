@@ -64,3 +64,4 @@ export { default as zIndices } from "./theme/zIndices"
 
 export { visuallyHiddenCss, resetVisuallyHiddenCss } from "./stylesheets/a11y"
 export { hexToRGB, hexToRGBA } from "./utils/helpers/hexToRgb"
+export * from "./components/VisuallyHidden"
