@@ -47,7 +47,6 @@ export default {
         {story()}
       </React.Fragment>
     ),
-    story => <div style={{ maxWidth: `620px` }}>{story()}</div>,
   ] as DecoratorFn[],
 }
 
@@ -73,6 +72,10 @@ export const Basic = () => (
     </StyledModalBody>
   </StyledModal>
 )
+
+Basic.story = {
+  decorators: [maxWidthDecorator],
+}
 
 const VARIANTS: StyledModalVariant[] = [
   `DEFAULT`,
@@ -110,6 +113,7 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+  decorators: [maxWidthDecorator],
 }
 
 export const Variants = () =>
@@ -130,7 +134,7 @@ export const Variants = () =>
 
 Variants.story = {
   parameters: { layout: `padded` },
-  decorators: [withVariationsContainer],
+  decorators: [maxWidthDecorator, withVariationsContainer],
 }
 
 export const UsageExample = () => {
