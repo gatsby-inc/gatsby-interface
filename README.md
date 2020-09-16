@@ -20,16 +20,16 @@ Storybook available at [gatsby-interface.netlify.com](https://gatsby-interface.n
 
 ## Installation
 
-Using [npm](https://www.npmjs.com/):
-
-```shell
-npm install gatsby-interface --save
-```
-
 Using [Yarn](https://yarnpkg.com/):
 
 ```shell
 yarn add gatsby-interface
+```
+
+Using [npm](https://www.npmjs.com/):
+
+```shell
+npm install gatsby-interface --save
 ```
 
 ### Fonts
@@ -43,40 +43,6 @@ Gatsby Inc. employees can download these fonts from our [Google Drive](https://d
 1. Clone the repository: `git clone https://github.com/gatsby-inc/gatsby-interface.git`.
 2. Install dependencies: `yarn`.
 3. Run Storybook: `yarn storybook`.
-
-### Adding a new component
-
-If you want to add a new component to `gatsby-interface`, run `yarn scaffold:component` to create stubs:
-
-```bash
-yarn scaffold:component MyNewComponent
-```
-
-This script will do the following:
-
-- Create a `MyNewComponent` directory for the component at [`./src/components`](./src/components)
-- Generate a file for the component itself, `MyNewComponent.tsx`, with stubs for props type, styles and even some variants
-- Generate a story file, `MyNewComponent.stories.tsx`, which follows the suggestions from [Component Checklist proposal](https://github.com/gatsby-inc/gatsby-interface/issues/205).
-- Generate an index file, `index.ts`, which reexports everything from the component file
-- Add export statements to library index files: [`./src/index.ts`](./src/index.ts) and [`./index-ts-only.ts`](./index-ts-only.ts).
-
-Everything that is generated should be working out of the box and be ready to shipped (though please avoid shipping the stubs 😅)
-
-### Contributing
-
-These are some patterns and best practices we use when contributing to `gatsby-interface`:
-
-- Use React hooks and functional components: https://reactjs.org/docs/hooks-intro.html.
-- Use CSS props for styling: https://emotion.sh/docs/css-prop.
-- Use `gatsby-design-tokens` for styling constants: https://www.gatsbyjs.org/guidelines/design-tokens/.
-- Use compound components to make components more composable and flexible: https://kentcdodds.com/blog/compound-components-with-react-hooks.
-- Make all PRs against the `dev` branch.
-- Use `TONE` and `VARIANT` prop (when appropriate) to definie color style and variant of a component — see e. g. `<Button>`.
-- Make the component as generic as possible so it can be used _anywhere_ by _anything_.
-- Components in the `skeletons` folder provide only the functionality, but no styles, and can be used within other components.
-- Write Storybook stories for any component created: https://storybook.js.org/docs/basics/writing-stories/.
-- Typscript coming soon!
-- Unit tests coming soon!
 
 ### Chromatic testing
 
