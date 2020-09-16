@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
 import { BuildLogItem, StructuredLogLevel } from "./types"
 import { ThemeCss, Theme } from "../../theme"
-import { formatLogMessage } from "./utils"
+import { FormattedMessage } from "./FormattedMessage"
 
 export type FormattedLogMessageProps = Pick<
   BuildLogItem,
@@ -19,9 +18,7 @@ export function FormattedLogMessage({
 }: FormattedLogMessageProps) {
   return (
     <div css={getMessageCss(level)} className={className}>
-      {formatLogMessage(message || "").map((element, index) => (
-        <React.Fragment key={index}>{element}</React.Fragment>
-      ))}
+      <FormattedMessage rawMessage={message || ""} />
     </div>
   )
 }
@@ -66,10 +63,6 @@ function getMessageCss(level: StructuredLogLevel | null | undefined): ThemeCss {
           background: theme.colors.grey[5],
           overflowY: "auto",
 
-          code: {
-            lineHeight: theme.lineHeights.default,
-          },
-
           em: {
             color: getLogLevelColor(level)(theme),
             fontStyle: `normal`,
@@ -82,11 +75,17 @@ function getMessageCss(level: StructuredLogLevel | null | undefined): ThemeCss {
         },
       ],
 
+      code: {
+        lineHeight: theme.lineHeights.default,
+        fontSize: theme.fontSizes[1],
+      },
+
       p: [
         spaceMixin,
         {
           color: theme.colors.grey[50],
           fontSize: theme.fontSizes[0],
+          lineHeight: theme.lineHeights.loose,
 
           "&:first-of-type": {
             color: getLogLevelColor(level)(theme),
