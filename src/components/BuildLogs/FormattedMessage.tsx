@@ -4,30 +4,28 @@ import Markdown from "markdown-to-jsx"
 // Check for "1 |" presence to create a code block
 // Stores every last index owning a " |" string
 // to close the code block at the good position
-// IMPORTANT: mutates the stringPartsByLines array
 const formatCodeBlocks = (stringPartsByLines: string[]) => {
   let lastIndexFound = -1
-  let opened = false
+  let codeBlockOpen = false
 
-  for (let i = 0; i < stringPartsByLines.length; i++) {
-    const str = stringPartsByLines[i]
-
+  const nextLines = stringPartsByLines.map((str, index) => {
     if (str.match(/(\s|\t)*\d+\s\|/)) {
-      if (opened) {
-        lastIndexFound = i
+      if (codeBlockOpen) {
+        lastIndexFound = index
       } else {
-        stringPartsByLines[i] = "```" + str
-        opened = true
+        codeBlockOpen = true
+        return "```" + str
       }
     }
-  }
+
+    return str
+  })
 
   if (lastIndexFound > -1) {
-    stringPartsByLines[lastIndexFound] =
-      stringPartsByLines[lastIndexFound] + "```"
+    nextLines[lastIndexFound] = nextLines[lastIndexFound] + "```"
   }
 
-  return stringPartsByLines.join("\n")
+  return nextLines.join("\n")
 }
 
 export interface FormattedMessageProps {
