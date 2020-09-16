@@ -63,10 +63,6 @@ function getMessageCss(level: StructuredLogLevel | null | undefined): ThemeCss {
           background: theme.colors.grey[5],
           overflowY: "auto",
 
-          code: {
-            lineHeight: theme.lineHeights.default,
-          },
-
           em: {
             color: getLogLevelColor(level)(theme),
             fontStyle: `normal`,
@@ -78,6 +74,11 @@ function getMessageCss(level: StructuredLogLevel | null | undefined): ThemeCss {
           },
         },
       ],
+
+      code: {
+        lineHeight: theme.lineHeights.default,
+        fontSize: theme.fontSizes[1],
+      },
 
       p: [
         spaceMixin,
