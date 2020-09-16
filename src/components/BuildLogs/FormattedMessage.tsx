@@ -1,23 +1,24 @@
 import React from "react"
 import Markdown from "markdown-to-jsx"
 
-const isLastChar = (char: string, str: string) => str[str.length - 1] === char
-
 // Check for "1 |" presence to create a code block
 // Stores every last index owning a " |" string
 // to close the code block at the good position
 // IMPORTANT: mutates the stringPartsByLines array
 const formatCodeBlocks = (stringPartsByLines: string[]) => {
   let lastIndexFound = -1
+  let opened = false
+
   for (let i = 0; i < stringPartsByLines.length; i++) {
     const str = stringPartsByLines[i]
 
-    if (str.includes(`1 |`)) {
-      stringPartsByLines[i] = "```" + str
-    }
-
-    if (str.includes(` |`)) {
-      lastIndexFound = i
+    if (str.match(/(\s|\t)*\d+\s\|/)) {
+      if (opened) {
+        lastIndexFound = i
+      } else {
+        stringPartsByLines[i] = "```" + str
+        opened = true
+      }
     }
   }
 
@@ -51,12 +52,12 @@ export const FormattedMessage = ({ rawMessage }: FormattedMessageProps) => {
   const firstLine = stringPartsByLines[0]
 
   // Line breaking to create a title at the first ":" met
-  if (firstLine.includes(":")) {
+  if (firstLine.endsWith(":")) {
     return <Markdown>{message.replace(`:`, `:\n\n`)}</Markdown>
   }
 
   // Line breaking to create a title when the first line ends with "."
-  if (isLastChar(".", firstLine)) {
+  if (firstLine.endsWith(".")) {
     const [_, ...actual] = stringPartsByLines
     const newFirstLine = firstLine.substring(0, firstLine.length - 1)
     const nextMessage = [`${newFirstLine}.\n\n`, ...actual].join("\n")
