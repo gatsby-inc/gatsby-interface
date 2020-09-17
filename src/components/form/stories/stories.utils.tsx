@@ -5,11 +5,13 @@ import { Story, Preview, DocsContext } from "@storybook/addon-docs/dist/blocks"
 import { text, radios, boolean } from "@storybook/addon-knobs"
 import coreClient from "@storybook/core/dist/client"
 import { radioKnobOptions } from "../../../utils/storybook/knobs"
-import { FormFieldLabelSize } from "../components/FormField.helpers"
-import { FormFieldBlockLayout } from "../components/FormField"
-import { FormGroupOptionsDirection } from "../components/FormGroupField"
+import {
+  StyledLabelSize,
+  FormFieldBlockLayout,
+  FormGroupOptionsDirection,
+} from ".."
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 export function getFieldSandboxProps() {
   const label = text(`Label`, `Field label`)

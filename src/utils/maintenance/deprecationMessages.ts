@@ -19,23 +19,3 @@ export function showFormSkeletonDeprecatedMessage(
     }"`
   )
 }
-
-export function showFormFieldDeprecatedMessage(
-  componentName: string,
-  isGroupField = false
-) {
-  warn(
-    `
-<${componentName}> and its subcomponents should be considered deprecated and replaced with one of the following:
-  - <${componentName}Block> (or <${componentName.substring(
-      0,
-      componentName.indexOf("Field")
-    )}ConnectedField> in Formik forms)
-  - "${
-    isGroupField ? `useAriaFormGroupField` : `useAriaFormField`
-  }" hook and a combination of styled form elements, such as <StyledInput>, <${
-      isGroupField ? `FormLegend` : `StyledLabel`
-    }>, <FormError>
-`.trim()
-  )
-}

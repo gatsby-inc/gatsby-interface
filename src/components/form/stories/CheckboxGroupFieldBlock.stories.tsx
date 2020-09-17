@@ -1,15 +1,18 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { action } from "@storybook/addon-actions"
-import { CheckboxGroupFieldBlock, FormFieldBlockLayout } from ".."
-import { FormFieldLabelSize } from "../components/FormField.helpers"
+import {
+  CheckboxGroupFieldBlock,
+  FormFieldBlockLayout,
+  StyledLabelSize,
+} from ".."
 import { getGroupFieldSandboxProps } from "./stories.utils"
 import { withVariationsContainer } from "../../../utils/storybook"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
 import CheckboxGroupFieldBlockDocs from "./CheckboxGroupFieldBlock.mdx"
-import { FormGroupOptionsDirection } from "../components/FormGroupField"
+import { FormGroupOptionsDirection } from "../types"
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 export default {
   title: `Form/Styled Blocks/CheckboxGroupFieldBlock`,

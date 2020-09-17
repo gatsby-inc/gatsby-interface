@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { action } from "@storybook/addon-actions"
-import { FormFieldLabelSize } from "../components/FormField.helpers"
 import { getGroupFieldSandboxProps } from "./stories.utils"
 import {
   withVariationsContainer,
@@ -13,11 +12,12 @@ import {
   RadioButtonFieldBlock,
   RadioButtonFieldVariant,
   FormFieldBlockLayout,
+  StyledLabelSize,
 } from ".."
-import { FormGroupOptionsDirection } from "../components/FormGroupField"
+import { FormGroupOptionsDirection } from "../types"
 import RadioButtonFieldBlockDocs from "./RadioButtonFieldBlock.mdx"
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 export default {
   title: `Form/Styled Blocks/RadioButtonFieldBlock`,

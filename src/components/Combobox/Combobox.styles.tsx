@@ -1,5 +1,5 @@
-import { getInputStyles } from "../form/components/FormField.helpers"
 import { ThemeCss } from "../../theme"
+import { baseInputCss } from "../form"
 
 export const comboboxCss: ThemeCss = () => ({
   position: `relative`,
@@ -27,10 +27,8 @@ export const searchIconCss: ThemeCss = theme => ({
   zIndex: 2,
 })
 
-export const inputCss: (hasError?: boolean) => ThemeCss = (
-  hasError = false
-) => theme => [
-  getInputStyles(theme, hasError),
+export const inputCss: ThemeCss = theme => [
+  baseInputCss(theme),
   {
     // offset padding based on search icon spacing and size
     paddingLeft: `calc(${theme.fontSizes[3]} + 2 * ${theme.space[3]})`,

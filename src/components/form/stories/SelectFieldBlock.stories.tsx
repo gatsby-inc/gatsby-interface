@@ -2,15 +2,14 @@
 import { jsx } from "@emotion/core"
 
 import { action } from "@storybook/addon-actions"
-import { SelectFieldBlock, FormFieldBlockLayout } from ".."
-import { FormFieldLabelSize } from "../components/FormField.helpers"
+import { SelectFieldBlock, FormFieldBlockLayout, StyledLabelSize } from ".."
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
 import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
 import { withVariationsContainer } from "../../../utils/storybook"
 import SelectFieldBlockDocs from "./SelectFieldBlock.mdx"
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 const options = getGroupFieldStoryOptions()
 
