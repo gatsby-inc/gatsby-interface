@@ -14,8 +14,6 @@ export const dropdownCss: ThemeCss = theme => ({
   borderRadius: theme.radii[3],
   outline: "none",
   boxShadow: theme.shadows.floating,
-  width: `max-content`,
-  maxWidth: "80vw",
   transform: `translate(0, 0) perspective(1000px) rotateX(-35deg)`,
   animation: `${enter} 0.5s ease forwards`,
   transformOrigin: "top center",
@@ -26,25 +24,34 @@ export const dropdownCss: ThemeCss = theme => ({
     background: theme.colors.purple[10],
     color: theme.colors.gatsby,
   },
+
+  [theme.mediaQueries.phablet]: {},
 })
 
 export const dropdownSizeCss: Record<DropdownMenuSize, ThemeCss> = {
+  AUTO: _theme => ({}),
   MAX_CONTENT: _theme => ({
     width: `max-content`,
   }),
   S: theme => ({
+    width: `max-content`,
     [theme.mediaQueries.phablet]: {
-      width: "12rem",
+      width: "80vw",
+      maxWidth: "12rem",
     },
   }),
   M: theme => ({
+    width: `max-content`,
     [theme.mediaQueries.phablet]: {
-      width: "15rem",
+      width: "80vw",
+      maxWidth: "15rem",
     },
   }),
   L: theme => ({
+    width: `max-content`,
     [theme.mediaQueries.phablet]: {
-      width: "20rem",
+      width: "80vw",
+      maxWidth: "20rem",
     },
   }),
 }

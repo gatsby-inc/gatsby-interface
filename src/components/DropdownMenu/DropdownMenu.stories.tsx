@@ -54,7 +54,7 @@ export default {
   ] as DecoratorFn[],
 }
 
-const SIZES: DropdownMenuSize[] = [`MAX_CONTENT`, `S`, `M`, `L`]
+const SIZES: DropdownMenuSize[] = [`AUTO`, `MAX_CONTENT`, `S`, `M`, `L`]
 
 export const Basic = () => {
   useOpenMenuOnMount()
@@ -134,11 +134,11 @@ export const Sizes = () => {
         css={{
           display: `grid`,
           gridTemplateColumns: `1fr 1fr`,
-          gridTemplateRows: `1fr 1fr`,
+          gridAutoRows: `200px`,
         }}
       >
         {SIZES.map(size => (
-          <div key={size} style={{ height: `25vh` }}>
+          <div key={size}>
             <DropdownMenu>
               <DropdownMenuButton>Size: {size}</DropdownMenuButton>
               <DropdownMenuItems size={size}>

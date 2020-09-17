@@ -56,7 +56,7 @@ export const DropdownMenuButtonStyled: React.FC<DropdownMenuButtonProps> = ({
   </DropdownMenuButton>
 )
 
-export type DropdownMenuSize = `MAX_CONTENT` | `S` | `M` | `L`
+export type DropdownMenuSize = `AUTO` | `MAX_CONTENT` | `S` | `M` | `L`
 
 export type DropdownMenuItemsProps = MenuListProps & {
   size?: DropdownMenuSize

@@ -120,7 +120,7 @@ export function SplitButton({
           disabled={disabled}
         />
         <DropdownMenuPopover position={positionMenuPopover}>
-          <DropdownMenuItemsLowLevel css={{ width: `auto` }}>
+          <DropdownMenuItemsLowLevel size="AUTO">
             {children}
           </DropdownMenuItemsLowLevel>
         </DropdownMenuPopover>
