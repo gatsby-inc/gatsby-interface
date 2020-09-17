@@ -11,10 +11,15 @@ import {
   DropdownMenuButtonStyled,
 } from "./"
 import React from "react"
-import { text } from "@storybook/addon-knobs"
+import { radios, text } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
 import { Theme } from "../../theme"
-import { disableAnimationsDecorator } from "../../utils/storybook"
+import {
+  disableAnimationsDecorator,
+  radioKnobOptions,
+} from "../../utils/storybook"
+import { DropdownMenuSize } from "./DropdownMenu"
+import { Notification } from "../Notification"
 
 export default {
   title: `DropdownMenu`,
@@ -49,6 +54,8 @@ export default {
   ] as DecoratorFn[],
 }
 
+const SIZES: DropdownMenuSize[] = [`MAX_CONTENT`, `S`, `M`, `L`]
+
 export const Basic = () => {
   useOpenMenuOnMount()
 
@@ -81,7 +88,7 @@ export const Sandbox = () => {
   return (
     <DropdownMenu>
       <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
-      <DropdownMenuItems>
+      <DropdownMenuItems size={radios(`size`, radioKnobOptions(SIZES), `L`)}>
         {items.map(item => (
           <DropdownMenuItem key={item} onSelect={() => action("Select")(item)}>
             {item}
@@ -96,6 +103,61 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+}
+
+// This is a hack to display multiple menus at the same time
+function ForceOpenMenu() {
+  const selfRef = React.useRef<HTMLDivElement>(null)
+  React.useEffect(() => {
+    let menu: HTMLElement | null = selfRef.current
+    while (menu && !menu.hasAttribute("data-reach-menu")) {
+      menu = menu.parentElement
+    }
+
+    if (menu) {
+      menu.removeAttribute("hidden")
+    }
+  })
+
+  return <div ref={selfRef} />
+}
+
+export const Sizes = () => {
+  return (
+    <React.Fragment>
+      <Notification
+        tone="WARNING"
+        content="This story's only purpose is to demonstrate 'size' prop variants, which is why all menus are forced to be open"
+      />
+      <br />
+      <div
+        css={{
+          display: `grid`,
+          gridTemplateColumns: `1fr 1fr`,
+          gridTemplateRows: `1fr 1fr`,
+        }}
+      >
+        {SIZES.map(size => (
+          <div key={size} style={{ height: `25vh` }}>
+            <DropdownMenu>
+              <DropdownMenuButton>Size: {size}</DropdownMenuButton>
+              <DropdownMenuItems size={size}>
+                {items.map(item => (
+                  <DropdownMenuItem
+                    key={item}
+                    onSelect={() => action("Select")(item)}
+                  >
+                    {item}
+                  </DropdownMenuItem>
+                ))}
+                <ForceOpenMenu />
+              </DropdownMenuItems>
+            </DropdownMenu>
+          </div>
+        ))}
+      </div>
+    </React.Fragment>
+  )
 }
 
 export const MenuLinks = () => {
