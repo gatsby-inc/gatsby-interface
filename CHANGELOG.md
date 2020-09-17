@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.199](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.198...v0.0.199) (2020-09-16)
+
+### [0.0.198](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.197...v0.0.198) (2020-09-04)
+
+### [0.0.197](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.196...v0.0.197) (2020-09-04)
+
+
+### Features
+
+* SkipNavTrigger and SkipNavTarget components ([#385](https://github.com/gatsby-inc/gatsby-interface/issues/385)) ([c31c94e](https://github.com/gatsby-inc/gatsby-interface/commit/c31c94ec7c4601d9b192dda446484540ba28c158))
+
 ### [0.0.196](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.195...v0.0.196) (2020-09-02)
 
 

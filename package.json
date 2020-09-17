@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.196",
+  "version": "0.0.199",
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
@@ -52,6 +52,7 @@
     "date-fns": "^2.8.1",
     "gatsby-design-tokens": "^2.0.2",
     "lodash.sample": "^4.2.1",
+    "markdown-to-jsx": "^7.0.0",
     "theme-ui": "^0.2.49"
   },
   "peerDependencies": {
