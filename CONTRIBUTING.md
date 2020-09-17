@@ -14,5 +14,5 @@ These are some patterns and best practices we use when contributing to `gatsby-i
 - Make the component as generic as possible so it can be used _anywhere_ by _anything_ (within reason!).
 - Write Storybook stories for any component created: https://storybook.js.org/docs/basics/writing-stories/.
   - Follow CSF (Component Story Format) format whenever possible: https://storybook.js.org/docs/react/api/csf
-  - Before committing your changes to a component, check "Accessibility" tab in Storybook for the related stories — there shouldn't be any errors
+  - Before committing your changes to a component, check the "Accessibility" tab in Storybook for the related stories — there shouldn't be any errors.
 - gatsby-interface relies on [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for component unit tests
