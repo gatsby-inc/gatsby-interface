@@ -12,7 +12,7 @@ This script does the following:
 - Generates a file for the component itself, `MyNewComponent.tsx`, with stubs for props type, styles and even some variants if you pass `--withVariant` flag to the script
 - Generates a story file, `MyNewComponent.stories.tsx`, which follows the suggestions from [Component Checklist proposal](https://github.com/gatsby-inc/gatsby-interface/issues/205).
 - Generates an index file in the component directory, `index.ts`, which reexports everything from the component file
-- Add export statements to the index file: [`/src/index.ts`](/src/index.ts)
+- Adds export statements to the index file: [`/src/index.ts`](/src/index.ts)
 
 Everything that is generated should be working out of the box and can be a good foundation for a fully fleshed-out component.
 

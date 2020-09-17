@@ -11,8 +11,8 @@ These are some patterns and best practices we use when contributing to `gatsby-i
 - If your component becomes too big or complex, consider using compound components to make components more composable and flexible: https://kentcdodds.com/blog/compound-components-with-react-hooks.
 - Make all PRs against the `main` branch.
 - Use `TONE` and `VARIANT` prop (when appropriate) to define color style and variant of a component — see e. g. `<Button>`.
-- Make the component as generic as possible so it can be used _anywhere_ by _anything_ (within reason!).
+- Make the component as generic as possible so it can be used _anywhere_ by _anything_ (within reason).
 - Write Storybook stories for any component created: https://storybook.js.org/docs/basics/writing-stories/.
   - Follow CSF (Component Story Format) format whenever possible: https://storybook.js.org/docs/react/api/csf
   - Before committing your changes to a component, check the "Accessibility" tab in Storybook for the related stories — there shouldn't be any errors.
-- gatsby-interface relies on [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for component unit tests
+- `gatsby-interface` relies on [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for component unit tests.
