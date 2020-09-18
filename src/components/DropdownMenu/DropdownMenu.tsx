@@ -56,14 +56,14 @@ export const DropdownMenuButtonStyled: React.FC<DropdownMenuButtonProps> = ({
   </DropdownMenuButton>
 )
 
-export type DropdownMenuSize = `AUTO` | `MAX_CONTENT` | `S` | `M` | `L`
+export type DropdownMenuSize = `AUTO` | `MAX_CONTENT` | `LEGACY`
 
 export type DropdownMenuItemsProps = MenuListProps & {
   size?: DropdownMenuSize
 }
 
 export const DropdownMenuItems: React.FC<DropdownMenuItemsProps> = ({
-  size = `L`,
+  size = `LEGACY`,
   ...rest
 }) => {
   const finalCss: ThemeCss = theme => [
@@ -78,7 +78,7 @@ export type DropdownMenuItemsLowLevelProps = MenuItemsProps & {
 }
 
 export const DropdownMenuItemsLowLevel: React.FC<DropdownMenuItemsLowLevelProps> = ({
-  size = `L`,
+  size = `LEGACY`,
   ...rest
 }) => {
   const finalCss: ThemeCss = theme => [

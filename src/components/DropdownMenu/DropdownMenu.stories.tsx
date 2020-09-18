@@ -54,7 +54,7 @@ export default {
   ] as DecoratorFn[],
 }
 
-const SIZES: DropdownMenuSize[] = [`AUTO`, `MAX_CONTENT`, `S`, `M`, `L`]
+const SIZES: DropdownMenuSize[] = [`AUTO`, `MAX_CONTENT`, `LEGACY`]
 
 export const Basic = () => {
   useOpenMenuOnMount()
@@ -88,7 +88,9 @@ export const Sandbox = () => {
   return (
     <DropdownMenu>
       <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
-      <DropdownMenuItems size={radios(`size`, radioKnobOptions(SIZES), `L`)}>
+      <DropdownMenuItems
+        size={radios(`size`, radioKnobOptions(SIZES), `LEGACY`)}
+      >
         {items.map(item => (
           <DropdownMenuItem key={item} onSelect={() => action("Select")(item)}>
             {item}

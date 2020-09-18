@@ -33,21 +33,7 @@ export const dropdownSizeCss: Record<DropdownMenuSize, ThemeCss> = {
   MAX_CONTENT: _theme => ({
     width: `max-content`,
   }),
-  S: theme => ({
-    width: `max-content`,
-    [theme.mediaQueries.phablet]: {
-      width: "80vw",
-      maxWidth: "12rem",
-    },
-  }),
-  M: theme => ({
-    width: `max-content`,
-    [theme.mediaQueries.phablet]: {
-      width: "80vw",
-      maxWidth: "15rem",
-    },
-  }),
-  L: theme => ({
+  LEGACY: theme => ({
     width: `max-content`,
     [theme.mediaQueries.phablet]: {
       width: "80vw",
