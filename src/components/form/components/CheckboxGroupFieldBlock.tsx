@@ -2,15 +2,19 @@
 import { jsx } from "@emotion/core"
 
 import { FormGroupOptionsDirection } from "../types"
-import { FormGroupFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
+import {
+  FormGroupFieldBlockBoilerplate,
+  WithFormFieldBlock,
+} from "./FormFieldBlock"
 import {
   StyledCheckbox,
   StyledCheckboxLabel,
 } from "./styled-primitives/StyledCheckbox"
-import { Theme } from "../../../theme"
+import { ThemeCss } from "../../../theme"
 import { OptionsContainer } from "./styled-primitives/StyledFormElements"
 import { getOptionLabelOffsetStyles } from "../styles"
 import { GroupControlProps } from "../types"
+import { useAriaFormGroupField } from "../../form-skeletons"
 
 export type CheckboxGroupFieldBlockOption = {
   label: React.ReactNode
@@ -43,63 +47,64 @@ export const CheckboxGroupFieldBlock = (
     required,
     ...rest
   } = props
+  const fieldData = useAriaFormGroupField(id, {
+    required: required,
+    error,
+    hint,
+    validationMode,
+  })
+
+  const optionContainerCss: ThemeCss = theme => [
+    {
+      display: `flex`,
+      flexShrink: 0,
+      marginBottom: theme.space[4],
+    },
+    optionsDirection === `row`
+      ? {
+          marginRight: theme.space[6],
+        }
+      : {
+          "&:last-of-type": {
+            marginBottom: 0,
+          },
+        },
+  ]
 
   return (
-    <FormGroupFieldBlock
-      id={id}
+    <FormGroupFieldBlockBoilerplate
+      fieldData={fieldData}
       label={label}
       error={error}
       hint={hint}
-      required={required}
-      labelSize={labelSize}
-      validationMode={validationMode}
       layout={layout}
+      labelSize={labelSize}
       className={className}
     >
-      {({ getOptionControlProps, getOptionLabelProps }) => (
-        <OptionsContainer optionsDirection={optionsDirection}>
-          {options.map(({ value, label, ...restOption }) => (
-            <div
-              key={value}
-              css={(theme: Theme) => [
-                {
-                  display: `flex`,
-                  flexShrink: 0,
-                  marginBottom: theme.space[4],
-                },
-                optionsDirection === `row`
-                  ? {
-                      marginRight: theme.space[6],
-                    }
-                  : {
-                      "&:last-of-type": {
-                        marginBottom: 0,
-                      },
-                    },
-              ]}
+      <OptionsContainer optionsDirection={optionsDirection}>
+        {options.map(({ value, label, ...restOption }) => (
+          <div key={value} css={optionContainerCss}>
+            <StyledCheckbox
+              value={value}
+              // Support uncontrolled field
+              checked={
+                fieldValue === undefined
+                  ? undefined
+                  : fieldValue.includes(value)
+              }
+              {...fieldData.getOptionControlProps(value)}
+              {...rest}
+              {...restOption}
+            />
+            <StyledCheckboxLabel
+              {...fieldData.getOptionLabelProps(value)}
+              css={getOptionLabelOffsetStyles(optionsDirection)}
             >
-              <StyledCheckbox
-                value={value}
-                // Support uncontrolled field
-                checked={
-                  fieldValue === undefined
-                    ? undefined
-                    : fieldValue.includes(value)
-                }
-                {...getOptionControlProps(value)}
-                {...rest}
-                {...restOption}
-              />
-              <StyledCheckboxLabel
-                {...getOptionLabelProps(value)}
-                css={getOptionLabelOffsetStyles(optionsDirection)}
-              >
-                {label}
-              </StyledCheckboxLabel>
-            </div>
-          ))}
-        </OptionsContainer>
-      )}
-    </FormGroupFieldBlock>
+              {label}
+            </StyledCheckboxLabel>
+          </div>
+        ))}
+      </OptionsContainer>
+    </FormGroupFieldBlockBoilerplate>
   )
 }

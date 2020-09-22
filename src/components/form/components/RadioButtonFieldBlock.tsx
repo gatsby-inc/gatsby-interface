@@ -2,7 +2,10 @@
 import { jsx } from "@emotion/core"
 
 import { FormGroupOptionsDirection, GroupControlProps } from "../types"
-import { FormGroupFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
+import {
+  FormGroupFieldBlockBoilerplate,
+  WithFormFieldBlock,
+} from "./FormFieldBlock"
 import {
   StyledRadioButton,
   StyledRadioLabel,
@@ -11,6 +14,7 @@ import { OptionsContainer } from "./styled-primitives/StyledFormElements"
 import { Theme, ThemeCss } from "../../../theme"
 import React from "react"
 import { getOptionLabelOffsetStyles } from "../styles"
+import { useAriaFormGroupField } from "../../form-skeletons"
 
 const framedCss: ThemeCss = theme => ({
   border: `2px solid ${theme.colors.white}`,
@@ -57,6 +61,12 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
     required,
     ...rest
   } = props
+  const fieldData = useAriaFormGroupField(id, {
+    required: required,
+    error,
+    hint,
+    validationMode,
+  })
 
   const [checkedOption, setCheckedOption] = React.useState<string | undefined>(
     () => {
@@ -72,72 +82,68 @@ export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {
   )
 
   return (
-    <FormGroupFieldBlock
-      id={id}
+    <FormGroupFieldBlockBoilerplate
+      fieldData={fieldData}
       label={label}
       error={error}
       hint={hint}
-      required={required}
-      labelSize={labelSize}
-      validationMode={validationMode}
       layout={layout}
+      labelSize={labelSize}
       className={className}
     >
-      {({ getOptionControlProps, getOptionLabelProps }) => (
-        <OptionsContainer optionsDirection={optionsDirection}>
-          {options.map(({ value, label, ...restOption }) => (
-            <div
-              key={value}
-              onChange={() => setCheckedOption(value)}
-              css={(theme: Theme) => [
-                {
-                  display: `flex`,
-                  flexShrink: 0,
-                  marginBottom: theme.space[4],
-                },
-                variant === `framed`
-                  ? [
-                      framedCss(theme),
-                      value === checkedOption && {
-                        borderColor: theme.colors.purple[60],
-                      },
-                    ]
-                  : [
-                      {
-                        marginBottom: theme.space[4],
-                      },
-                      optionsDirection === `row`
-                        ? {
-                            marginRight: theme.space[6],
-                          }
-                        : {
-                            "&:last-of-type": {
-                              marginBottom: 0,
-                            },
+      <OptionsContainer optionsDirection={optionsDirection}>
+        {options.map(({ value, label, ...restOption }) => (
+          <div
+            key={value}
+            onChange={() => setCheckedOption(value)}
+            css={(theme: Theme) => [
+              {
+                display: `flex`,
+                flexShrink: 0,
+                marginBottom: theme.space[4],
+              },
+              variant === `framed`
+                ? [
+                    framedCss(theme),
+                    value === checkedOption && {
+                      borderColor: theme.colors.purple[60],
+                    },
+                  ]
+                : [
+                    {
+                      marginBottom: theme.space[4],
+                    },
+                    optionsDirection === `row`
+                      ? {
+                          marginRight: theme.space[6],
+                        }
+                      : {
+                          "&:last-of-type": {
+                            marginBottom: 0,
                           },
-                    ],
-              ]}
+                        },
+                  ],
+            ]}
+          >
+            <StyledRadioButton
+              value={value}
+              // Support uncontrolled field
+              checked={
+                fieldValue === undefined ? undefined : fieldValue === value
+              }
+              {...fieldData.getOptionControlProps(value)}
+              {...rest}
+              {...restOption}
+            />
+            <StyledRadioLabel
+              {...fieldData.getOptionLabelProps(value)}
+              css={getOptionLabelOffsetStyles(optionsDirection)}
             >
-              <StyledRadioButton
-                value={value}
-                // Support uncontrolled field
-                checked={
-                  fieldValue === undefined ? undefined : fieldValue === value
-                }
-                {...getOptionControlProps(value)}
-                {...rest}
-                {...restOption}
-              />
-              <StyledRadioLabel
-                {...getOptionLabelProps(value)}
-                css={getOptionLabelOffsetStyles(optionsDirection)}
-              >
-                {label}
-              </StyledRadioLabel>
-            </div>
-          ))}
-        </OptionsContainer>
-      )}
-    </FormGroupFieldBlock>
+              {label}
+            </StyledRadioLabel>
+          </div>
+        ))}
+      </OptionsContainer>
+    </FormGroupFieldBlockBoilerplate>
   )
 }

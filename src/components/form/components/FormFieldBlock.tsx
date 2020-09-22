@@ -6,7 +6,6 @@ import {
   AriaFormFieldData,
   useAriaFormField,
   AriaFormGroupFieldData,
-  useAriaFormGroupField,
   ErrorValidationMode,
 } from "../../form-skeletons"
 import {
@@ -36,14 +35,13 @@ export type RenderFieldControl = (
   controlProps: AriaFormFieldData["controlProps"]
 ) => React.ReactNode
 
+export type WithFormFieldBlock<T> = Omit<T, keyof CommonFieldBlockProps> &
+  CommonFieldBlockProps
+
 export type FormFieldBlockProps = CommonFieldBlockProps & {
   className?: string
   children: React.ReactNode | RenderFieldControl
 }
-
-export type WithFormFieldBlock<T> = Omit<T, keyof CommonFieldBlockProps> &
-  CommonFieldBlockProps
-
 export function FormFieldBlock({
   id,
   label,
@@ -126,55 +124,6 @@ export function FormFieldBlockBoilerplate({
  * Group field organism
  *
  */
-
-export type RenderGroupFieldControl = (
-  controlProps: Pick<
-    AriaFormGroupFieldData,
-    "getOptionControlProps" | "getOptionLabelProps"
-  >
-) => React.ReactNode
-
-export type FormGroupFieldBlockProps = CommonFieldBlockProps & {
-  className?: string
-  children: RenderGroupFieldControl
-}
-
-export function FormGroupFieldBlock({
-  id,
-  label,
-  error,
-  hint,
-  required,
-  labelSize,
-  validationMode,
-  layout,
-  className,
-  children,
-}: FormGroupFieldBlockProps) {
-  const fieldData = useAriaFormGroupField(id, {
-    required: required,
-    error,
-    hint,
-    validationMode,
-  })
-
-  return (
-    <FormGroupFieldBlockBoilerplate
-      fieldData={fieldData}
-      label={label}
-      error={error}
-      hint={hint}
-      layout={layout}
-      labelSize={labelSize}
-      className={className}
-    >
-      {children({
-        getOptionControlProps: fieldData.getOptionControlProps,
-        getOptionLabelProps: fieldData.getOptionLabelProps,
-      })}
-    </FormGroupFieldBlockBoilerplate>
-  )
-}
 
 export function FormGroupFieldBlockBoilerplate({
   fieldData,
