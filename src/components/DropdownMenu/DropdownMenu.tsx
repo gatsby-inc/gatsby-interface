@@ -24,8 +24,10 @@ import {
   dropdownButtonCss,
   menuItemCss,
   dropdownButtonIconCss,
+  dropdownSizeCss,
 } from "./DropdownMenu.styles"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
+import { ThemeCss } from "../../theme"
 
 export type DropdownMenuProps = MenuProps
 
@@ -54,17 +56,37 @@ export const DropdownMenuButtonStyled: React.FC<DropdownMenuButtonProps> = ({
   </DropdownMenuButton>
 )
 
-export type DropdownMenuItemsProps = MenuListProps
+export type DropdownMenuSize = `AUTO` | `MAX_CONTENT` | `LEGACY`
 
-export const DropdownMenuItems: React.FC<DropdownMenuItemsProps> = props => (
-  <MenuList {...props} css={dropdownCss}></MenuList>
-)
+export type DropdownMenuItemsProps = MenuListProps & {
+  size?: DropdownMenuSize
+}
 
-export type DropdownMenuItemsLowLevelProps = MenuItemsProps
+export const DropdownMenuItems: React.FC<DropdownMenuItemsProps> = ({
+  size = `LEGACY`,
+  ...rest
+}) => {
+  const finalCss: ThemeCss = theme => [
+    dropdownCss(theme),
+    dropdownSizeCss[size](theme),
+  ]
+  return <MenuList {...rest} css={finalCss}></MenuList>
+}
 
-export const DropdownMenuItemsLowLevel: React.FC<DropdownMenuItemsLowLevelProps> = props => (
-  <MenuItems {...props} css={dropdownCss}></MenuItems>
-)
+export type DropdownMenuItemsLowLevelProps = MenuItemsProps & {
+  size?: DropdownMenuSize
+}
+
+export const DropdownMenuItemsLowLevel: React.FC<DropdownMenuItemsLowLevelProps> = ({
+  size = `LEGACY`,
+  ...rest
+}) => {
+  const finalCss: ThemeCss = theme => [
+    dropdownCss(theme),
+    dropdownSizeCss[size](theme),
+  ]
+  return <MenuItems {...rest} css={finalCss}></MenuItems>
+}
 
 export type DropdownMenuItemProps = MenuItemProps
 

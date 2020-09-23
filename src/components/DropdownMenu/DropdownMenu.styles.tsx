@@ -1,5 +1,6 @@
 import { ThemeCss } from "../../theme"
 import { keyframes } from "@emotion/core"
+import { DropdownMenuSize } from "./DropdownMenu"
 
 const enter = keyframes`
 to {
@@ -13,7 +14,6 @@ export const dropdownCss: ThemeCss = theme => ({
   borderRadius: theme.radii[3],
   outline: "none",
   boxShadow: theme.shadows.floating,
-  width: "80vw",
   transform: `translate(0, 0) perspective(1000px) rotateX(-35deg)`,
   animation: `${enter} 0.5s ease forwards`,
   transformOrigin: "top center",
@@ -25,10 +25,22 @@ export const dropdownCss: ThemeCss = theme => ({
     color: theme.colors.gatsby,
   },
 
-  [theme.mediaQueries.phablet]: {
-    maxWidth: "20rem",
-  },
+  [theme.mediaQueries.phablet]: {},
 })
+
+export const dropdownSizeCss: Record<DropdownMenuSize, ThemeCss> = {
+  AUTO: _theme => ({}),
+  MAX_CONTENT: _theme => ({
+    width: `max-content`,
+  }),
+  LEGACY: theme => ({
+    width: `max-content`,
+    [theme.mediaQueries.phablet]: {
+      width: "80vw",
+      maxWidth: "20rem",
+    },
+  }),
+}
 
 export const menuItemCss: ThemeCss = theme => ({
   cursor: `pointer`,
