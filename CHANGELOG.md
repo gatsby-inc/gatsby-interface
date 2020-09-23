@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.200](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.199...v0.0.200) (2020-09-23)
+
+
+### Features
+
+* **DropdownMenu:** support new 'size' prop ([#388](https://github.com/gatsby-inc/gatsby-interface/issues/388)) ([6da3270](https://github.com/gatsby-inc/gatsby-interface/commit/6da3270f3bdc5f6a1b6c69aceb7d7022cab5c3e0))
+
 ### [0.0.199](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.198...v0.0.199) (2020-09-16)
 
 ### [0.0.198](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.197...v0.0.198) (2020-09-04)
