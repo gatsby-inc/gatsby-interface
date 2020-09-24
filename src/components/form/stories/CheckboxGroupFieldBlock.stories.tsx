@@ -7,8 +7,10 @@ import {
   StyledLabelSize,
 } from ".."
 import { getGroupFieldSandboxProps } from "./stories.utils"
-import { withVariationsContainer } from "../../../utils/storybook"
-import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
+import {
+  withVariationsContainer,
+  getGroupFieldStoryOptions,
+} from "../../../utils/storybook"
 import CheckboxGroupFieldBlockDocs from "./CheckboxGroupFieldBlock.mdx"
 import { FormGroupOptionsDirection } from "../types"
 

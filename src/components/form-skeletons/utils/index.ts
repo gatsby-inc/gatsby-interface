@@ -1,16 +1,5 @@
 import { ErrorValidationMode } from "../types"
 
-export function getFinalAriaDescribedBy(
-  controlDescribedBy?: string,
-  ariaDescribedBy?: string
-) {
-  return (
-    [controlDescribedBy, ariaDescribedBy]
-      .filter(describedBy => describedBy)
-      .join(` `) || undefined
-  )
-}
-
 export function getHintId(fieldId: string) {
   return `${fieldId}__hint`
 }

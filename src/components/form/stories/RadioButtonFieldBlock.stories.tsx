@@ -5,8 +5,8 @@ import { getGroupFieldSandboxProps } from "./stories.utils"
 import {
   withVariationsContainer,
   radioKnobOptions,
+  getGroupFieldStoryOptions,
 } from "../../../utils/storybook"
-import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
 import { radios } from "@storybook/addon-knobs"
 import {
   RadioButtonFieldBlock,

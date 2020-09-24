@@ -5,8 +5,10 @@ import { action } from "@storybook/addon-actions"
 import { SelectFieldBlock, FormFieldBlockLayout, StyledLabelSize } from ".."
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
-import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
-import { withVariationsContainer } from "../../../utils/storybook"
+import {
+  withVariationsContainer,
+  getGroupFieldStoryOptions,
+} from "../../../utils/storybook"
 import SelectFieldBlockDocs from "./SelectFieldBlock.mdx"
 
 const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
