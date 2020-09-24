@@ -16,6 +16,7 @@ export * from "./components/CheckboxGroupConnectedField"
 export * from "./components/RadioButtonFieldBlock"
 export * from "./components/RadioButtonConnectedField"
 
+export * from "./components/FormFieldBlock"
 export { useConnectedField } from "./hooks/useConnectedField"
 
 export * from "./components/styled-primitives/StyledCheckbox"
