@@ -2,14 +2,13 @@
 import { jsx } from "@emotion/core"
 
 import { action } from "@storybook/addon-actions"
-import { TextAreaFieldBlock, FormFieldBlockLayout } from ".."
-import { FormFieldLabelSize } from "../components/FormField.helpers"
+import { TextAreaFieldBlock, FormFieldBlockLayout, StyledLabelSize } from ".."
 import { getFieldBlockSandboxProps } from "./stories.utils"
 import { text } from "@storybook/addon-knobs"
 import { withVariationsContainer } from "../../../utils/storybook"
 import TextAreaFieldBlockDocs from "./TextAreaFieldBlock.mdx"
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 export default {
   title: `Form/Styled Blocks/TextAreaFieldBlock`,

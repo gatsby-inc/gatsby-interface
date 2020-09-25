@@ -140,10 +140,11 @@ export const ComboboxInput = React.forwardRef<
         selectOnClick
         onKeyDown={onKeyDown}
         css={theme => [
-          inputCss(hasError)(theme),
+          inputCss(theme),
           showSelectedOptionLabel && inputWithSelectedValueCss(theme),
           showToggleButton && inputWithToggleButtonCss(theme),
         ]}
+        aria-invalid={hasError}
         {...delegated}
       />
       {!!selectedOptionLabel && (
