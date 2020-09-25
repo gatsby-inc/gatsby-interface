@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 // Used to close dropdown on an outside click
 function useOnClickOutside<TElement extends Element>(

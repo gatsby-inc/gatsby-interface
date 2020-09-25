@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Global } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { DecoratorFn } from "@storybook/react"
 import { text, boolean } from "@storybook/addon-knobs"
 

@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { DecoratorFn } from "@storybook/react"
 import { Global } from "@emotion/core"
 import isChromatic from "storybook-chromatic/isChromatic"

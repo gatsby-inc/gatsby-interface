@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
+import * as React from "react"
 
 import { storiesOf } from "@storybook/react"
 import { color, select, withKnobs } from "@storybook/addon-knobs"

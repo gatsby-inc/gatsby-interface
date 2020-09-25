@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { Theme } from "../../theme"
 import { CSSObject } from "@emotion/core"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"

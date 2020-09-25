@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, keyframes } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { ThemeCss } from "../../../../theme"
 import { MdError } from "react-icons/md"
 import { FormGroupOptionsDirection } from "../../types"

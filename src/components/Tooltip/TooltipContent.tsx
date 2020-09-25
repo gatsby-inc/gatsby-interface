@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { TooltipPopup, TooltipParams } from "@reach/tooltip"
 import { TooltipPosition } from "./types"
 import TooltipPointer, { TooltipPointerProps } from "./TooltipPointer"

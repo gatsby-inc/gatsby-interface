@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { jsx } from "@emotion/core"
 import { css } from "@emotion/core"
 import AvatarSkeleton from "./AvatarSkeleton"

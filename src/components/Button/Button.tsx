@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { MdRefresh } from "react-icons/md"
 
 import { BaseButton, BaseButtonProps } from "../BaseButton"

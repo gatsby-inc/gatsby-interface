@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { SkipNavTarget, SkipNavTrigger } from "."
 import { Button } from "../Button"
 import { Link } from "../Link"
