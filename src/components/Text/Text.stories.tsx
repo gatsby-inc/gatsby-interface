@@ -1,81 +1,106 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
-import { storiesOf } from "@storybook/react"
-import { StoryUtils } from "../../utils/storybook"
+import { radios, select, text } from "@storybook/addon-knobs"
+import {
+  radioKnobOptions,
+  StoryUtils,
+  withVariationsContainer,
+} from "../../utils/storybook"
 import Text from "./Text"
+import { TextSize, TextTone, TextVariant } from "./types"
 
-storiesOf(`Text`, module)
-  .addParameters({
-    options: {
-      showPanel: true,
-    },
-  })
-  .add(`rendered 'as'`, () => (
-    <StoryUtils.Container>
-      <StoryUtils.Stack>
-        <Text as={`span`}>Text rendered as &lt;span&gt; tag</Text>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
+export default {
+  title: `Text`,
+  component: Text,
+}
+
+export const Basic = () => (
+  <Text>
+    Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem
+    puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho
+    shooberino.
+  </Text>
+)
+
+const VARIANTS: TextVariant[] = [
+  "PRIMARY",
+  "EMPHASIZED",
+  "LEDE",
+  "EMPHASIZED_LEDE",
+  "ERROR",
+]
+const TONES: TextTone[] = [`NEUTRAL`, `BRAND`]
+const SIZES: TextSize[] = [`S`, `M`, `L`, `XL`, `2XL`]
+
+export const Sandbox = () => (
+  <Text
+    as={select(`as`, ["span", `p`], `p`)}
+    variant={radios(`variant`, radioKnobOptions(VARIANTS), `PRIMARY`)}
+    tone={radios(`tone`, radioKnobOptions(TONES), `NEUTRAL`)}
+    size={radios(`size`, radioKnobOptions(SIZES), `M`)}
+  >
+    {text(
+      "content",
+      "Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho shooberino."
+    )}
+  </Text>
+)
+
+Sandbox.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
+export const WithAsProp = () => (
+  <Text as={`span`}>Text rendered as &lt;span&gt; tag</Text>
+)
+
+WithAsProp.story = {
+  name: `With "as" prop`,
+}
+
+export const Variants = () =>
+  VARIANTS.map(variant => (
+    <Text key={variant} variant={variant}>
+      Text variant: {variant} {variant === `PRIMARY` && <StoryUtils.Default />}
+      <br />
+      Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge,
+      mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat
+      tungg tho shooberino.
+    </Text>
   ))
-  .add(`variants`, () => (
-    <StoryUtils.Container>
-      <StoryUtils.Stack>
-        <Text>
-          Text variant - PRIMARY <StoryUtils.Default />
-        </Text>
-        <Text variant={`EMPHASIZED`}>Text variant - EMPHASIZED</Text>
-        <Text variant={`ERROR`}>Text variant - ERROR</Text>
-        <Text variant={`LEDE`}>
-          Text variant - LEDE: Doggo ipsum mlem snoot adorable doggo you are
-          doing me the shock doge, mlem puggo boofers. Blep shoober heckin good
-          boys smol, ruff thicc, dat tungg tho shooberino.
-        </Text>
-        <Text variant={`EMPHASIZED_LEDE`}>
-          Text variant - EMPHASIZED_LEDE: Doggo ipsum mlem snoot adorable doggo
-          you are doing me the shock doge, mlem puggo boofers. Blep shoober
-          heckin good boys smol, ruff thicc, dat tungg tho shooberino.
-        </Text>
-        <Text variant={`EMPHASIZED_LEDE`} tone={`BRAND`}>
-          Text variant - EMPHASIZED_LEDE with BRAND tone: Doggo ipsum mlem snoot
-          adorable doggo you are doing me the shock doge, mlem puggo boofers.
-          Blep shoober heckin good boys smol, ruff thicc, dat tungg tho
-          shooberino.
-        </Text>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
+
+Variants.story = {
+  decorators: [withVariationsContainer],
+}
+
+export const Tones = () =>
+  TONES.map(tone => (
+    <Text key={tone} tone={tone}>
+      Text tone: {tone} {tone === `NEUTRAL` && <StoryUtils.Default />}
+      <br />
+      Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge,
+      mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat
+      tungg tho shooberino.
+    </Text>
   ))
-  .add(`tones`, () => (
-    <StoryUtils.Container>
-      <StoryUtils.Stack>
-        <Text tone={`NEUTRAL`}>
-          Text tone - NEUTRAL <StoryUtils.Default />
-        </Text>
-        <Text tone={`BRAND`}>Text tone - BRAND</Text>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
+
+Tones.story = {
+  decorators: [withVariationsContainer],
+}
+
+export const Sizes = () =>
+  SIZES.map(size => (
+    <Text key={size} size={size}>
+      Text size: {size} {size === `M` && <StoryUtils.Default />}
+      <br />
+      Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge,
+      mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat
+      tungg tho shooberino.
+    </Text>
   ))
-  .add(`sizes`, () => (
-    <StoryUtils.Container>
-      <StoryUtils.Stack>
-        <Text size={`S`}>Text size - S. </Text>
-        <Text size={`M`}>
-          Text size - M <StoryUtils.Default />
-        </Text>
-        <Text size={`L`}>Text size - L</Text>
-        <Text size={`XL`}>Text size - XL</Text>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
-  ))
-  .add(`with children`, () => (
-    <StoryUtils.Container>
-      <StoryUtils.Stack>
-        <Text>
-          <span>Wrapped with a &lt;span&gt; tag</span>
-        </Text>
-        <Text>
-          <strong>Wrapped with a &lt;strong&gt; tag</strong>
-        </Text>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
-  ))
+
+Sizes.story = {
+  decorators: [withVariationsContainer],
+}
