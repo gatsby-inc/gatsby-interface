@@ -1,25 +1,17 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { storiesOf } from "@storybook/react"
 import { BaseAnchor } from "."
-import Readme from "./README.md"
-import { StoryUtils } from "../../utils/storybook"
 
-storiesOf(`BaseAnchor`, module)
-  .addParameters({
-    options: {
-      showPanel: true,
-    },
-    readme: {
-      sidebar: Readme,
-    },
-  })
-  .add(`default`, () => (
-    <StoryUtils.Container>
-      <StoryUtils.Stack>
-        <BaseAnchor href="https://gatsbyjs.com" target="_blank">
-          Anchor
-        </BaseAnchor>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
-  ))
+export default {
+  title: `BaseAnchor`,
+  component: BaseAnchor,
+  parameters: {
+    chromatic: { disable: true },
+  },
+}
+
+export const Basic = () => (
+  <BaseAnchor href="https://gatsbyjs.com" target="_blank">
+    Anchor
+  </BaseAnchor>
+)

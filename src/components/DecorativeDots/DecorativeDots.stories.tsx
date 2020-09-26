@@ -1,42 +1,46 @@
 import * as React from "react"
 
-import { storiesOf } from "@storybook/react"
 import { number } from "@storybook/addon-knobs"
-
-import { StoryUtils } from "../../utils/storybook"
 import { DecorativeDots } from "./"
-import README from "./README.md"
+import isChromatic from "storybook-chromatic/isChromatic"
 
-storiesOf(`DecorativeDots`, module)
-  .addParameters({
-    options: {
-      showPanel: true,
-    },
-    readme: {
-      sidebar: README,
-      includePropTables: [DecorativeDots],
-    },
-    // TODO leverage isChromatic and testSafeSample/testSafeMathRandom instead of ignoring the story
+export default {
+  title: `DecorativeDots`,
+  component: DecorativeDots,
+}
+
+export const Basic = () => (
+  <DecorativeDots
+    width={300}
+    height={300}
+    dotSize={20}
+    __random={isChromatic() ? () => 0.65 : undefined}
+    __sample={isChromatic() ? values => values[1] : undefined}
+  />
+)
+
+export const Sandbox = () => (
+  <DecorativeDots
+    width={number(`width`, 300)}
+    height={number(`height`, 200)}
+    dotSize={number(`dotSize`, 20, {
+      range: true,
+      min: 4,
+      max: 40,
+      step: 1,
+    })}
+    angle={number(`angle`, 0, { range: true, min: 0, max: 360, step: 1 })}
+    fadeStrength={number(`fadeStrength`, 0.25, {
+      range: true,
+      min: 0,
+      max: 0.5,
+      step: 0.01,
+    })}
+  />
+)
+
+Sandbox.story = {
+  parameters: {
     chromatic: { disable: true },
-  })
-  .add(`Default`, () => (
-    <StoryUtils.Container>
-      <DecorativeDots
-        width={number(`width`, 300)}
-        height={number(`height`, 200)}
-        dotSize={number(`dotSize`, 20, {
-          range: true,
-          min: 4,
-          max: 40,
-          step: 1,
-        })}
-        angle={number(`angle`, 0, { range: true, min: 0, max: 360, step: 1 })}
-        fadeStrength={number(`fadeStrength`, 0.25, {
-          range: true,
-          min: 0,
-          max: 0.5,
-          step: 0.01,
-        })}
-      />
-    </StoryUtils.Container>
-  ))
+  },
+}
