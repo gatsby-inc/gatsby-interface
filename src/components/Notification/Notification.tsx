@@ -4,7 +4,6 @@ import React, { Fragment } from "react"
 import { MdClose, MdArrowForward } from "react-icons/md"
 
 import { Button } from "../Button"
-import { NotificationVariant, NotificationTone } from "./types"
 import {
   getNotificationVariantStyles,
   iconByTone,
@@ -36,6 +35,14 @@ const baseCss: ThemeCss = theme => ({
   lineHeight: theme.lineHeights.default,
 })
 
+export type NotificationVariant = `PRIMARY` | `SECONDARY` | `SOLID`
+export type NotificationTone =
+  | `BRAND`
+  | `SUCCESS`
+  | `DANGER`
+  | `WARNING`
+  | `NEUTRAL`
+
 export type NotificationProps = Omit<JSX.IntrinsicElements["div"], "ref"> & {
   children?: React.ReactNode
   variant?: NotificationVariant
@@ -52,7 +59,7 @@ export type NotificationProps = Omit<JSX.IntrinsicElements["div"], "ref"> & {
   Icon?: React.ComponentType<any>
 }
 
-export default function Notification({
+export function Notification({
   children,
   tone = `BRAND`,
   variant = `PRIMARY`,

@@ -1,26 +1,20 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import * as React from "react"
-import { DecoratorFn } from "@storybook/react"
-import { radios, text, select, boolean } from "@storybook/addon-knobs"
+import { Meta, Story } from "@storybook/react"
 import { useTransition, animated } from "react-spring"
+import { withVariationsContainer, isA11yTest } from "../../utils/storybook"
+import { Button } from "../Button"
+import { MdSignalWifi1BarLock } from "react-icons/md"
+import isChromatic from "storybook-chromatic/isChromatic"
+import { withDesign } from "storybook-addon-designs"
+import { Text } from "../Text"
 import {
   Notification,
   NotificationProps,
   NotificationVariant,
   NotificationTone,
 } from "."
-import {
-  sandboxWithPropVariations,
-  withVariationsContainer,
-  isA11yTest,
-} from "../../utils/storybook"
-import { Button } from "../Button"
-import { radioKnobOptions } from "../../utils/storybook/knobs"
-import { MdSignalWifi1BarLock } from "react-icons/md"
-import isChromatic from "storybook-chromatic/isChromatic"
-import { withDesign } from "storybook-addon-designs"
-import { Text } from "../Text"
 
 const VARIANTS: NotificationVariant[] = [`PRIMARY`, `SECONDARY`, `SOLID`]
 
@@ -32,13 +26,10 @@ const TONES: NotificationTone[] = [
   `NEUTRAL`,
 ]
 
-const variantOptions = radioKnobOptions(VARIANTS)
-const toneOptions = radioKnobOptions(TONES)
-
 export default {
   title: `Notification`,
   component: Notification,
-  decorators: [withDesign] as DecoratorFn[],
+  decorators: [withDesign],
   parameters: {
     componentSubtitle:
       "Notifications, or flash messages, inform users of successful or pending actions, or contain other important information. Use them sparingly, and ideally don't show more than one at a time.",
@@ -48,42 +39,14 @@ export default {
         "https://www.figma.com/file/h4ixUmOo781r3sDeBAbmDc/Notifications?node-id=1%3A152",
     },
   },
-}
+} as Meta
 
-export const Basic = () => (
-  <Notification content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
-)
+const Template: Story<NotificationProps> = args => <Notification {...args} />
 
-export const Sandbox = () =>
-  sandboxWithPropVariations(
-    propVariations => (
-      <Notification
-        content={text(
-          "content",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-        )}
-        variant={radios("variant", variantOptions, `PRIMARY`)}
-        tone={radios("tone", toneOptions, `BRAND`)}
-        contentAs={select("content element", ["div", "span"], "div")}
-        linkUrl={text("linkUrl", "")}
-        linkText={text("linkText", "")}
-        isOpened={boolean("isOpened", true)}
-        showDismissButton={boolean("show dismiss button", false)}
-        dismissButtonLabel={text("dismiss button label", "Close")}
-        {...propVariations}
-      />
-    ),
-    {
-      variant: VARIANTS,
-      tone: TONES,
-    }
-  )
+export const Basic = Template.bind({})
 
-Sandbox.story = {
-  decorators: [withVariationsContainer],
-  parameters: {
-    chromatic: { disable: true },
-  },
+Basic.args = {
+  content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit`,
 }
 
 export const Variants = () =>
@@ -153,12 +116,12 @@ export const Dismissable = () => (
   </div>
 )
 
-export const CustomIcon = () => (
-  <Notification
-    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    Icon={MdSignalWifi1BarLock}
-  />
-)
+export const CustomIcon = Template.bind({})
+
+CustomIcon.args = {
+  content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit`,
+  Icon: MdSignalWifi1BarLock,
+}
 
 const ReactSpringNotification = animated(Notification)
 

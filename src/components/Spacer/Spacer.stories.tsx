@@ -1,13 +1,15 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import * as React from "react"
-import { radios, select } from "@storybook/addon-knobs"
-import {
-  radioKnobOptions,
-  withVariationsContainer,
-} from "../../utils/storybook"
-import { Spacer, SpacerDirection, SpacerSize } from "."
+import { Meta, Story } from "@storybook/react"
+import { withVariationsContainer } from "../../utils/storybook"
+import { Spacer, SpacerProps, SpacerDirection } from "."
 import { getTheme, ThemeCss } from "../../theme"
+import { Text } from "../Text"
+
+const possibleSpaceValues = Object.keys(getTheme().space)
+  .map(Number)
+  .sort((a, b) => a - b)
 
 export default {
   title: `Spacer`,
@@ -15,7 +17,22 @@ export default {
   parameters: {
     layout: `padded`,
   },
-}
+  argTypes: {
+    size: {
+      table: {
+        type: {
+          summary: `number`,
+        },
+      },
+      control: {
+        type: `range`,
+        min: possibleSpaceValues[0],
+        max: possibleSpaceValues[possibleSpaceValues.length - 1],
+        step: 1,
+      },
+    },
+  },
+} as Meta
 
 const coloredSpacerCss: ThemeCss = theme => ({
   backgroundColor: theme.colors.purple[30],
@@ -33,54 +50,25 @@ const Showcase: React.FC = ({ children }) => {
   )
 }
 
-export const Basic = () => (
-  <Showcase>
-    <Spacer size={15} css={coloredSpacerCss} />
-  </Showcase>
+const Template: Story<SpacerProps & { description?: React.ReactNode }> = ({
+  description,
+  ...args
+}) => (
+  <React.Fragment>
+    {description && <Text>{description}</Text>}
+    Content before spacer
+    <Spacer css={coloredSpacerCss} {...args} />
+    Content after spacer
+  </React.Fragment>
 )
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  size: 15,
+}
 
 const DIRECTIONS: SpacerDirection[] = [`horizontal`, `vertical`]
-
-const { space } = getTheme()
-
-const spacerSize = (label: string, defaultValue = "5") =>
-  parseInt(select(label, Object.keys(space), defaultValue)) as SpacerSize
-
-const spacerDirection = (
-  label: string,
-  defaultValue: SpacerDirection = "vertical"
-): SpacerDirection =>
-  radios(label, radioKnobOptions<SpacerDirection>(DIRECTIONS), defaultValue)
-
-export const Sandbox = () => (
-  <Showcase>
-    <Spacer
-      size={spacerSize("size")}
-      direction={spacerDirection(`direction`)}
-      responsiveSize={{
-        mobile: spacerSize("responsiveSize.mobile"),
-        phablet: spacerSize("responsiveSize.phablet"),
-        tablet: spacerSize("responsiveSize.tablet"),
-        desktop: spacerSize("responsiveSize.desktop"),
-        hd: spacerSize("responsiveSize.hd"),
-      }}
-      responsiveDirection={{
-        mobile: spacerDirection("responsiveDirection.mobile"),
-        phablet: spacerDirection("responsiveDirection.phablet"),
-        tablet: spacerDirection("responsiveDirection.tablet"),
-        desktop: spacerDirection("responsiveDirection.desktop"),
-        hd: spacerDirection("responsiveDirection.hd"),
-      }}
-      css={coloredSpacerCss}
-    />
-  </Showcase>
-)
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
-}
 
 export const Directions = () =>
   DIRECTIONS.map(direction => (
@@ -96,49 +84,35 @@ Directions.story = {
   decorators: [withVariationsContainer],
 }
 
-export const ResponsiveSize = () => (
-  <React.Fragment>
-    <h3>
-      Resize Storybook window (or change viewports in the toolbar) to see spacer
-      changing its size
-    </h3>
-    <Showcase>
-      <Spacer
-        size={4}
-        responsiveSize={{
-          mobile: 15,
-          phablet: 13,
-          tablet: 11,
-          desktop: 9,
-          hd: 7,
-        }}
-        css={coloredSpacerCss}
-      />
-    </Showcase>
-  </React.Fragment>
-)
+export const ResponsiveSize = Template.bind({})
 
-export const ResponsiveDirection = () => (
-  <React.Fragment>
-    <h3>
-      Resize Storybook window (or change viewports in the toolbar) to see spacer
-      changing its direction
-    </h3>
-    <Showcase>
-      <Spacer
-        size={13}
-        responsiveDirection={{
-          mobile: `horizontal`,
-          phablet: `vertical`,
-          tablet: `horizontal`,
-          desktop: `vertical`,
-          hd: `horizontal`,
-        }}
-        css={coloredSpacerCss}
-      />
-    </Showcase>
-  </React.Fragment>
-)
+ResponsiveSize.args = {
+  description:
+    "Resize Storybook window (or change viewports in the toolbar) to see spacer changing its size",
+  size: 4,
+  responsiveSize: {
+    mobile: 15,
+    phablet: 13,
+    tablet: 11,
+    desktop: 9,
+    hd: 7,
+  },
+}
+
+export const ResponsiveDirection = Template.bind({})
+
+ResponsiveDirection.args = {
+  description:
+    "Resize Storybook window (or change viewports in the toolbar) to see spacer changing its direction",
+  size: 13,
+  responsiveDirection: {
+    mobile: `horizontal`,
+    phablet: `vertical`,
+    tablet: `horizontal`,
+    desktop: `vertical`,
+    hd: `horizontal`,
+  },
+}
 
 export const InFlexbox = () => {
   const flexItemCss: ThemeCss = theme => ({

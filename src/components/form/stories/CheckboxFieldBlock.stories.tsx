@@ -1,91 +1,73 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import * as React from "react"
+import { Meta, Story } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
-import { CheckboxFieldBlock, StyledLabelSize } from ".."
-import { getFieldBlockSandboxProps } from "./stories.utils"
-import { text } from "@storybook/addon-knobs"
+import Markdown from "markdown-to-jsx"
+import {
+  commonFieldArgTypes,
+  disabledArgs,
+  requiredArgs,
+  withErrorAndHintArgs,
+  withErrorArgs,
+  withHintArgs,
+} from "./stories.utils"
 import { withVariationsContainer } from "../../../utils/storybook"
-import CheckboxFieldBlockDocs from "./CheckboxFieldBlock.mdx"
+import {
+  CheckboxFieldBlock,
+  CheckboxFieldBlockProps,
+  StyledLabelSize,
+} from ".."
 
 const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 export default {
   title: `Form/Styled Blocks/CheckboxFieldBlock`,
   parameters: {
+    componentSubtitle: (
+      <Markdown>{`Accepts all of the props supported by \`<input type="checkbox" />\` as well as the props shared between field block components`}</Markdown>
+    ),
     layout: `padded`,
     options: {
       showRoots: true,
     },
-    docs: {
-      page: CheckboxFieldBlockDocs,
-    },
     chromatic: { pauseAnimationAtEnd: true },
   },
-}
-
-export const Basic = () => (
-  <CheckboxFieldBlock
-    id="basic"
-    label="Field label"
-    onChange={e => action(`Change`)(e.target.value)}
-  />
-)
-
-export const Sandbox = () => {
-  const placeholder = text(`Placeholder`, `This is a placeholder`)
-  return (
-    <CheckboxFieldBlock
-      id="sandbox"
-      placeholder={placeholder}
-      {...getFieldBlockSandboxProps()}
-    />
-  )
-}
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
+  argTypes: {
+    ...commonFieldArgTypes,
   },
+} as Meta
+
+const Template: Story<CheckboxFieldBlockProps> = args => (
+  <CheckboxFieldBlock {...args} />
+)
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  id: `basic`,
+  label: `Label`,
+  onChange: e => action(`Change`)(e.target.value),
 }
 
-export const Required = () => (
-  <CheckboxFieldBlock id="required" label="Field label" required />
-)
+export const Required = Template.bind({})
 
-export const Disabled = () => (
-  <React.Fragment>
-    <CheckboxFieldBlock id="disabled" label="Field label" disabled />
-    <br />
-    <CheckboxFieldBlock
-      id="disabled--checked"
-      label="Field label"
-      disabled
-      checked
-    />
-  </React.Fragment>
-)
+Required.args = requiredArgs
 
-export const WithHint = () => (
-  <CheckboxFieldBlock id="withHint" label="Field label" hint="Hint text" />
-)
+export const Disabled = Template.bind({})
 
-export const WithError = () => (
-  <CheckboxFieldBlock
-    id="withError"
-    label="Field label"
-    error="Error message"
-  />
-)
+Disabled.args = disabledArgs
 
-export const WithErrorAndHint = () => (
-  <CheckboxFieldBlock
-    id="withErrorAndHint"
-    label="Field label"
-    hint="Hint text"
-    error="Error message"
-  />
-)
+export const WithHint = Template.bind({})
+
+WithHint.args = withHintArgs
+
+export const WithError = Template.bind({})
+
+WithError.args = withErrorArgs
+
+export const WithErrorAndHint = Template.bind({})
+
+WithErrorAndHint.args = withErrorAndHintArgs
 
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
