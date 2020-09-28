@@ -4,7 +4,6 @@ import * as React from "react"
 
 import { storiesOf } from "@storybook/react"
 import { color, select, withKnobs } from "@storybook/addon-knobs"
-import { css } from "@emotion/core"
 import * as icons from "./icons"
 import { IconSize, IconProps } from "./types"
 import { useTheme } from "../ThemeProvider"
@@ -22,29 +21,29 @@ const sizes: IconSize[] = [
 const customSizes = [`1em`, `16px`, `24px`, `32px`, `40px`, `64px`]
 const customIconColors = ["#cc2408", "#046b80"]
 
-const baseCss = css`
-  display: flex;
-  align-items: center;
-  border: 1px dotted #bbb;
-  margin-bottom: 1rem;
-`
+const baseCss: ThemeCss = theme => ({
+  display: "flex",
+  alignItems: "center",
+  border: "1px dotted #bbb",
+  marginBottom: theme.space[5],
+})
 
-const storyCaseInfoCss: ThemeCss = theme => css`
-  line-height: 1.5;
-  padding: 0.5rem 0.75rem;
-  font-family: monospace;
-  flex-grow: 1;
-  font-size: ${theme.fontSizes[3]};
-`
+const storyCaseInfoCss: ThemeCss = theme => ({
+  lineHeight: theme.lineHeights.body,
+  padding: `${theme.space[3]} ${theme.space[4]}`,
+  fontFamily: "monospace",
+  flexGrow: 1,
+  fontSize: theme.fontSizes[3],
+})
 
-const storyCaseDisplayCss = css`
-  border-left: 1px dotted #bbb;
-  flex: 0 0 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-`
+const storyCaseDisplayCss: ThemeCss = _theme => ({
+  borderLeft: "1px dotted #bbb",
+  flex: "0 0 72px",
+  height: "72px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-around",
+})
 
 function StoryCase({
   info,
@@ -97,15 +96,15 @@ function CustomSizeInfo({ size }: { size: string }) {
   )
 }
 
-const rootCss = css`
-  max-width: 480px;
-  margin: 1rem auto 2rem;
-  flex-grow: 1;
-`
+const rootCss: ThemeCss = theme => ({
+  maxWidth: "480px",
+  margin: `${theme.space[5]} auto ${theme.space[8]}`,
+  flexGrow: 1,
+})
 
-const iconBlockCss = css`
-  margin: 1rem 0;
-`
+const iconBlockCss: ThemeCss = theme => ({
+  margin: `${theme.space[1]} 0`,
+})
 
 const sortedIconComponentNames = Object.keys(icons)
   // filter out __esModule
