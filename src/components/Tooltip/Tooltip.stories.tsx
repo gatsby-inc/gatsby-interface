@@ -136,7 +136,7 @@ WithLongTooltipText.args = {
 export const LinkWithTooltip = Template.bind({})
 
 LinkWithTooltip.args = {
-  label: LONG_TEXT,
+  label: "Tooltip text",
   children: (
     <a href="https://google.com" target="_blank" rel="noreferrer noopener">
       a link with a tooltip
