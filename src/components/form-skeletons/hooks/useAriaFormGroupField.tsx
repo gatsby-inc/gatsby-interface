@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { getHintId, getErrorId, getErrorAriaLiveAttribute } from "../utils"
 import { visuallyHiddenCss } from "../../../stylesheets/a11y"
 import { ErrorValidationMode } from "../types"

@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import Markdown from "markdown-to-jsx"
 
 // Check for "1 |" presence to create a code block

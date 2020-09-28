@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { css, jsx } from "@emotion/core"
 import { Link } from "../Link"
 

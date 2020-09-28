@@ -12,7 +12,7 @@ import {
   DropdownDivider,
   DropdownHeader,
 } from "./"
-import React from "react"
+import * as React from "react"
 import { radios, text } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
 import { Theme } from "../../theme"

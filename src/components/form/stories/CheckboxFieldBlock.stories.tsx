@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { action } from "@storybook/addon-actions"
 import { CheckboxFieldBlock, StyledLabelSize } from ".."
 import { getFieldBlockSandboxProps } from "./stories.utils"

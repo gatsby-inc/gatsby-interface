@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 
 import { FormFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
 import {

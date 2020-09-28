@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { useTooltip } from "@reach/tooltip"
 import { useTransition, animated } from "react-spring"
 

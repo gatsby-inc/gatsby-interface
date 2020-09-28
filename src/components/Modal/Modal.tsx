@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { DialogOverlay } from "@reach/dialog"
 import colors from "../../theme/colors"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"

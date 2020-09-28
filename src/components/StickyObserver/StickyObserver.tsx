@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { Theme } from "../../theme"
 
 export type LipShadowPosition = `top` | `bottom`

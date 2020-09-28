@@ -9,7 +9,7 @@ import {
 } from "./styled-primitives/StyledRadio"
 import { OptionsContainer } from "./styled-primitives/StyledFormElements"
 import { Theme, ThemeCss } from "../../../theme"
-import React from "react"
+import * as React from "react"
 import { getOptionLabelOffsetStyles } from "../styles"
 
 const framedCss: ThemeCss = theme => ({

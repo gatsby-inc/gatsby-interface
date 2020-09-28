@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.202](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.201...v0.0.202) (2020-09-28)
+
+
+### Bug Fixes
+
+* Use 'import * as React' ([#391](https://github.com/gatsby-inc/gatsby-interface/issues/391)) ([353142c](https://github.com/gatsby-inc/gatsby-interface/commit/353142c8cf2e1b455b225d349ad95ad682ba6260))
+
 ### [0.0.201](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.200...v0.0.201) (2020-09-25)
 
 ### [0.0.200](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.199...v0.0.200) (2020-09-23)

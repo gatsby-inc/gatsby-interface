@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { SelectFieldBlock } from "./SelectFieldBlock"
 import { SelectFieldBlockProps } from "./SelectFieldBlock"
 import { useConnectedField } from "../hooks/useConnectedField"

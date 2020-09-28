@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { Story, Preview, DocsContext } from "@storybook/addon-docs/dist/blocks"
 import { text, radios, boolean } from "@storybook/addon-knobs"
 import coreClient from "@storybook/core/dist/client"
