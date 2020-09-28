@@ -118,8 +118,8 @@ export function useDropdownMenuContext() {
   return useMenuButtonContext()
 }
 
-export function DropdownDivider() {
-  return <div css={dropdownDividerCss} />
+export function DropdownDivider(props) {
+  return <div {...props} css={dropdownDividerCss} />
 }
 
 export const DropdownHeader = ({ children, ...props }) => (
