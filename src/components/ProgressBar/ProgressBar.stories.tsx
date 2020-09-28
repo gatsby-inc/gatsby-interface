@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { number } from "@storybook/addon-knobs"
 import { ProgressBar } from "./ProgressBar"
 import { Theme } from "../../theme"

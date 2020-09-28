@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { fireEvent } from "@testing-library/react"
 import { CopyButton } from "../index"
 import { renderWithTheme } from "../../../utils/testing"

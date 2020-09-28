@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Global } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { boolean, text } from "@storybook/addon-knobs"
 import { Navigation, NavigationItemOptions } from "."
 

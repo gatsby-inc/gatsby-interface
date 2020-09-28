@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { Toast } from "./Toast"
 import { ToastContext } from "./ToastContext"
 import { useToastActions } from "./hooks"

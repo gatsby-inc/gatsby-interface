@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import {
   CheckboxGroupFieldBlock,
   CheckboxGroupFieldBlockProps,
@@ -14,9 +14,7 @@ export type CheckboxGroupConnectedFieldProps = {
   value?: string[]
 } & Omit<CheckboxGroupFieldBlockProps, "id" | "label" | "value">
 
-export const CheckboxGroupConnectedField: React.FC<
-  CheckboxGroupConnectedFieldProps
-> = props => {
+export const CheckboxGroupConnectedField: React.FC<CheckboxGroupConnectedFieldProps> = props => {
   const [connectedProps, _field, _meta, helpers] = useConnectedField<string[]>(
     props.name
   )

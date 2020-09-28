@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { text, radios, select } from "@storybook/addon-knobs"
 import { DecoratorFn } from "@storybook/react"
 import { withDesign } from "storybook-addon-designs"

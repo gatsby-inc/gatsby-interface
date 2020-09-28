@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css, keyframes } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import {
   getTheme,
   ThemeLineHeight,

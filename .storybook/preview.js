@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import * as React from "react"
 import { Global, css } from "@emotion/core"
 import { addDecorator } from "@storybook/react"
 import { withKnobs } from "@storybook/addon-knobs"
@@ -42,7 +42,7 @@ addDecorator(withKnobs)
 addDecorator(withTheme)
 
 const withGlobal = storyFn => (
-  <Fragment>
+  <React.Fragment>
     <Global
       styles={css`
         *,
@@ -71,7 +71,7 @@ const withGlobal = storyFn => (
       `}
     />
     {storyFn()}
-  </Fragment>
+  </React.Fragment>
 )
 
 addDecorator(withGlobal)

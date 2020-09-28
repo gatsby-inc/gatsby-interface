@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { TextAreaFieldBlock } from "./TextAreaFieldBlock"
 import { TextAreaFieldBlockProps } from "./TextAreaFieldBlock"
 import { useConnectedField } from "../hooks/useConnectedField"

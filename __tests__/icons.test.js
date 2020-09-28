@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { renderWithTheme } from "../src/utils/testing"
 import * as icons from "../src/components/icons/icons"
 
