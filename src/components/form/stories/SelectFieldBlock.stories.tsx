@@ -14,7 +14,6 @@ import {
 import {
   withVariationsContainer,
   getGroupFieldStoryOptions,
-  disableAnimationsDecorator,
 } from "../../../utils/storybook"
 import {
   SelectFieldBlock,
@@ -39,7 +38,6 @@ export default {
     },
     chromatic: { pauseAnimationAtEnd: true },
   },
-  decorators: [disableAnimationsDecorator],
   argTypes: {
     ...commonFieldArgTypes,
   },

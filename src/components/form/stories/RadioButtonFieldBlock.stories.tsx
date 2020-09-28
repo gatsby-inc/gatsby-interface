@@ -14,7 +14,6 @@ import {
 import {
   withVariationsContainer,
   getGroupFieldStoryOptions,
-  disableAnimationsDecorator,
 } from "../../../utils/storybook"
 import {
   RadioButtonFieldBlock,
@@ -38,7 +37,6 @@ export default {
     },
     chromatic: { pauseAnimationAtEnd: true },
   },
-  decorators: [disableAnimationsDecorator],
   argTypes: {
     ...commonFieldArgTypes,
     ...commonGroupFieldArgTypes,

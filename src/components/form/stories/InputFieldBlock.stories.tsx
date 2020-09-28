@@ -11,10 +11,7 @@ import {
   withErrorArgs,
   withHintArgs,
 } from "./stories.utils"
-import {
-  disableAnimationsDecorator,
-  withVariationsContainer,
-} from "../../../utils/storybook"
+import { withVariationsContainer } from "../../../utils/storybook"
 import {
   InputFieldBlock,
   InputFieldBlockProps,
@@ -37,7 +34,6 @@ export default {
     },
     chromatic: { pauseAnimationAtEnd: true },
   },
-  decorators: [disableAnimationsDecorator],
   argTypes: {
     ...commonFieldArgTypes,
     placeholder: {

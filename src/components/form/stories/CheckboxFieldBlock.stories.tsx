@@ -11,10 +11,7 @@ import {
   withErrorArgs,
   withHintArgs,
 } from "./stories.utils"
-import {
-  disableAnimationsDecorator,
-  withVariationsContainer,
-} from "../../../utils/storybook"
+import { withVariationsContainer } from "../../../utils/storybook"
 import {
   CheckboxFieldBlock,
   CheckboxFieldBlockProps,
@@ -35,7 +32,6 @@ export default {
     },
     chromatic: { pauseAnimationAtEnd: true },
   },
-  decorators: [disableAnimationsDecorator],
   argTypes: {
     ...commonFieldArgTypes,
   },
