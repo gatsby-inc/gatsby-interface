@@ -1,24 +1,26 @@
+// @ts-nocheck
+import * as React from "react"
 import { fireEvent } from "@testing-library/react"
 import { renderWithTheme as render } from "../../../utils/testing"
 import { Basic } from "../ToggleSwitch.stories"
 
 describe(`ToggleSwitch`, () => {
   it(`correctly links labels to radio buttons`, () => {
-    const { getByLabelText } = render(Basic())
+    const { getByLabelText } = render(<Basic {...Basic.args} />)
 
     expect(getByLabelText(`Monthly`)).toHaveAttribute(`type`, `radio`)
     expect(getByLabelText(`Yearly`)).toHaveAttribute(`type`, `radio`)
   })
 
   it(`defaults to "off"`, () => {
-    const { getByLabelText } = render(Basic())
+    const { getByLabelText } = render(<Basic {...Basic.args} />)
 
     expect(getByLabelText(`Monthly`)).not.toBeChecked()
     expect(getByLabelText(`Yearly`)).toBeChecked()
   })
 
   it(`clicking on "off" label switches the choice`, () => {
-    const { getByText, getByLabelText } = render(Basic())
+    const { getByText, getByLabelText } = render(<Basic {...Basic.args} />)
 
     fireEvent.click(getByText(`Yearly`) as HTMLLabelElement)
     expect(getByLabelText(`Monthly`)).toBeChecked()
@@ -30,7 +32,7 @@ describe(`ToggleSwitch`, () => {
   })
 
   it(`clicking on "on" label switches the choice`, () => {
-    const { getByText, getByLabelText } = render(Basic())
+    const { getByText, getByLabelText } = render(<Basic {...Basic.args} />)
 
     fireEvent.click(getByText(`Monthly`) as HTMLLabelElement)
     expect(getByLabelText(`Monthly`)).toBeChecked()
@@ -42,7 +44,7 @@ describe(`ToggleSwitch`, () => {
   })
 
   it(`clicking on the toggle gutter switches the choice`, () => {
-    const { container, getByLabelText } = render(Basic())
+    const { container, getByLabelText } = render(<Basic {...Basic.args} />)
 
     fireEvent.click(container.querySelector(`span`) as HTMLSpanElement)
     expect(getByLabelText(`Monthly`)).toBeChecked()

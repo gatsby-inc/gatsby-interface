@@ -1,10 +1,12 @@
+// @ts-nocheck
+import * as React from "react"
 import { fireEvent } from "@testing-library/react"
 import { renderWithTheme as render } from "../../../utils/testing"
-import { Basic, Sandbox } from "../SidebarNav.stories"
+import { Basic } from "../SidebarNav.stories"
 
 describe(`SidebarNav`, () => {
   it(`correctly labels navigation`, () => {
-    const { getByLabelText } = render(Basic())
+    const { getByLabelText } = render(<Basic {...Basic.args} />)
 
     expect(getByLabelText(`sidebar navigation`)).toHaveProperty(
       "tagName",
@@ -13,17 +15,16 @@ describe(`SidebarNav`, () => {
   })
 
   it(`supports custom label for navigation`, () => {
-    const { getByLabelText } = render(Sandbox())
-
-    expect(getByLabelText(`Sandbox navigation`)).toHaveProperty(
-      "tagName",
-      "NAV"
+    const { getByLabelText } = render(
+      <Basic {...Basic.args} aria-label="custom label" />
     )
+
+    expect(getByLabelText(`custom label`)).toHaveProperty("tagName", "NAV")
   })
 
   it(`applies correct aria-current values to "General" links when clicking "General"`, () => {
     ;(global as any).___navigate = jest.fn()
-    const { getByText } = render(Basic())
+    const { getByText } = render(<Basic {...Basic.args} />)
 
     fireEvent.click(getByText("General") as HTMLElement)
     expect(getByText("Integrations")).not.toHaveAttribute(
@@ -39,7 +40,7 @@ describe(`SidebarNav`, () => {
 
   it(`applies correct aria-current values to "Environment Variables" link when clicking "Environment Variables"`, () => {
     ;(global as any).___navigate = jest.fn()
-    const { getByText } = render(Basic())
+    const { getByText } = render(<Basic {...Basic.args} />)
 
     fireEvent.click(getByText("General") as HTMLElement)
     fireEvent.click(getByText("Environment Variables") as HTMLElement)

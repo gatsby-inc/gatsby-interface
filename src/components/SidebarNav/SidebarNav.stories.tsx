@@ -134,5 +134,5 @@ const Template: Story<SidebarNavProps> = args => {
 export const Basic = Template.bind({})
 
 Basic.args = {
-  "aria-label": `Sandbox navigation`,
+  "aria-label": `sidebar navigation`,
 }
