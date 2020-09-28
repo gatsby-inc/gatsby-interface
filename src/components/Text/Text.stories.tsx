@@ -1,26 +1,23 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { radios, select, text } from "@storybook/addon-knobs"
-import {
-  radioKnobOptions,
-  StoryUtils,
-  withVariationsContainer,
-} from "../../utils/storybook"
-import Text from "./Text"
-import { TextSize, TextTone, TextVariant } from "./types"
+import * as React from "react"
+import { Meta, Story } from "@storybook/react"
+import { StoryUtils, withVariationsContainer } from "../../utils/storybook"
+import { Text, TextProps, TextSize, TextTone, TextVariant } from "."
 
 export default {
   title: `Text`,
   component: Text,
-}
+} as Meta
 
-export const Basic = () => (
-  <Text>
-    Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem
-    puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho
-    shooberino.
-  </Text>
-)
+const Template: Story<TextProps> = args => <Text {...args} />
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  children:
+    "Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dattungg tho shooberino.",
+}
 
 const VARIANTS: TextVariant[] = [
   "PRIMARY",
@@ -32,33 +29,14 @@ const VARIANTS: TextVariant[] = [
 const TONES: TextTone[] = [`NEUTRAL`, `BRAND`]
 const SIZES: TextSize[] = [`S`, `M`, `L`, `XL`, `2XL`]
 
-export const Sandbox = () => (
-  <Text
-    as={select(`as`, ["span", `p`], `p`)}
-    variant={radios(`variant`, radioKnobOptions(VARIANTS), `PRIMARY`)}
-    tone={radios(`tone`, radioKnobOptions(TONES), `NEUTRAL`)}
-    size={radios(`size`, radioKnobOptions(SIZES), `M`)}
-  >
-    {text(
-      "content",
-      "Doggo ipsum mlem snoot adorable doggo you are doing me the shock doge, mlem puggo boofers. Blep shoober heckin good boys smol, ruff thicc, dat tungg tho shooberino."
-    )}
-  </Text>
-)
+export const WithAsProp = Template.bind({})
 
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
+WithAsProp.args = {
+  as: `span`,
+  children: <React.Fragment>Text rendered as &lt;span&gt; tag</React.Fragment>,
 }
 
-export const WithAsProp = () => (
-  <Text as={`span`}>Text rendered as &lt;span&gt; tag</Text>
-)
-
-WithAsProp.story = {
-  name: `With "as" prop`,
-}
+WithAsProp.storyName = `With "as" prop`
 
 export const Variants = () =>
   VARIANTS.map(variant => (

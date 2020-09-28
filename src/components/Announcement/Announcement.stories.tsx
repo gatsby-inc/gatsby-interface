@@ -1,26 +1,19 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { text } from "@storybook/addon-knobs"
+import { Meta, Story } from "@storybook/react"
 
-import { Announcement } from "."
+import { Announcement, AnnouncementProps } from "."
 
 export default {
   title: `Announcement`,
   component: Announcement,
-}
+} as Meta
 
-export const Basic = () => (
-  <Announcement>
-    We are working on adding more integrations all the time—watch your inbox!
-  </Announcement>
-)
+const Template: Story<AnnouncementProps> = args => <Announcement {...args} />
 
-export const Sandbox = () => (
-  <Announcement>{text("content", "Lorem ispum")}</Announcement>
-)
+export const Basic = Template.bind({})
 
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
+Basic.args = {
+  children:
+    "We are working on adding more integrations all the time—watch your inbox!",
 }

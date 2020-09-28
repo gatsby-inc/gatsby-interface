@@ -1,6 +1,6 @@
 import { SuccessIcon } from "../icons"
 import { MdWarning, MdError } from "react-icons/md"
-import { NotificationTone, NotificationVariant } from "./types"
+import { NotificationTone, NotificationVariant } from "./Notification"
 import { ThemeCss } from "../../theme"
 
 export const iconByTone: Record<

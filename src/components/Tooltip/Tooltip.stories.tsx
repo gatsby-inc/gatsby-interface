@@ -1,17 +1,15 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import * as React from "react"
-import { DecoratorFn } from "@storybook/react"
-import { text, radios } from "@storybook/addon-knobs"
+import { Meta, Story } from "@storybook/react"
 
 import README from "./README.md"
-import { Tooltip, TooltipPosition } from "."
 import { MdNotifications, MdInfoOutline } from "react-icons/md"
 import { Theme } from "../../theme"
-import {
-  radioKnobOptions,
-  withVariationsContainer,
-} from "../../utils/storybook"
+import { LONG_TEXT, withVariationsContainer } from "../../utils/storybook"
+import { Tooltip, TooltipPosition, TooltipProps } from "."
+
+const POSITIONS: TooltipPosition[] = [`top`, `bottom`]
 
 export default {
   title: `Tooltip`,
@@ -21,6 +19,27 @@ export default {
     layout: `padded`,
     readme: {
       sidebar: README,
+    },
+  },
+  argTypes: {
+    position: {
+      table: {
+        type: {
+          summary: POSITIONS.map(position => `"${position}"`).join(` | `),
+        },
+        defaultValue: {
+          summary: `top`,
+        },
+      },
+      control: {
+        type: `select`,
+        options: POSITIONS,
+      },
+    },
+    children: {
+      control: {
+        disable: true,
+      },
     },
   },
   decorators: [
@@ -40,9 +59,8 @@ export default {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            minHeight: "100vh",
             margin: "0px",
-            padding: theme.space[4],
+            padding: theme.space[15],
             boxSizing: "border-box",
           })}
         >
@@ -50,43 +68,16 @@ export default {
         </div>
       )
     },
-  ] as DecoratorFn[],
-}
+  ],
+} as Meta
 
-export const Basic = () => (
-  <Tooltip label="Tooltip text">
-    <button>Hover on me!</button>
-  </Tooltip>
-)
+const Template: Story<TooltipProps> = args => <Tooltip {...args} />
 
-const POSITIONS: TooltipPosition[] = [`top`, `bottom`]
+export const Basic = Template.bind({})
 
-export const Sandbox = () => (
-  <Tooltip
-    label={text("label", "Notfications")}
-    aria-label={text("aria-label (accessible tooltip text)", "3 notifications")}
-    position={radios(
-      `position`,
-      radioKnobOptions<TooltipPosition>(POSITIONS),
-      `top`
-    )}
-  >
-    <button
-      css={(theme: Theme) => ({
-        fontSize: theme.fontSizes[5],
-        display: `flex`,
-        alignItems: "center",
-      })}
-    >
-      <MdNotifications /> 3
-    </button>
-  </Tooltip>
-)
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
+Basic.args = {
+  label: "Tooltip text",
+  children: <button>Hover on me!</button>,
 }
 
 export const Positions = () =>
@@ -121,35 +112,37 @@ export const WithAccessibleLabel = () => (
   </div>
 )
 
-export const WithReachTooltip = () => (
-  <Tooltip
-    label={
-      <span css={{ display: `inline-flex`, alignItems: `center` }}>
-        <MdInfoOutline />
-        <span>
-          This is a <strong>rich</strong> tooltip
-        </span>
+export const WithRichTooltip = Template.bind({})
+
+WithRichTooltip.args = {
+  label: (
+    <span css={{ display: `inline-flex`, alignItems: `center` }}>
+      <MdInfoOutline />
+      <span>
+        This is a <strong>rich</strong> tooltip
       </span>
-    }
-  >
-    <button>Hover on me!</button>
-  </Tooltip>
-)
+    </span>
+  ),
+  children: <button>Hover on me!</button>,
+}
 
-const LONG_TEXT = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia recusandae nisi magni, dolore laboriosam maiores suscipit perspiciatis. Perspiciatis quod ipsum corporis officia necessitatibus, doloribus fuga culpa. Unde, molestiae repellendus.`
-export const WithLongTooltipText = () => (
-  <Tooltip label={LONG_TEXT}>
-    <button>Hover on me!</button>
-  </Tooltip>
-)
+export const WithLongTooltipText = Template.bind({})
 
-export const LinkWithTooltip = () => (
-  <Tooltip label="Tooltip text">
+WithLongTooltipText.args = {
+  label: LONG_TEXT,
+  children: <button>Hover on me!</button>,
+}
+
+export const LinkWithTooltip = Template.bind({})
+
+LinkWithTooltip.args = {
+  label: LONG_TEXT,
+  children: (
     <a href="https://google.com" target="_blank" rel="noreferrer noopener">
       a link with a tooltip
     </a>
-  </Tooltip>
-)
+  ),
+}
 
 export const InputWithTooltip = () => (
   <React.Fragment>
@@ -160,14 +153,13 @@ export const InputWithTooltip = () => (
   </React.Fragment>
 )
 
-export const CustomStyling = () => (
-  <Tooltip
-    label="This text should be ALL CAPS"
-    css={{ textTransform: "uppercase" }}
-  >
-    <button>Hover on me!</button>
-  </Tooltip>
-)
+export const CustomStyling = Template.bind({})
+
+CustomStyling.args = {
+  label: "This text should be ALL CAPS",
+  css: { textTransform: "uppercase" },
+  children: <button>Hover on me!</button>,
+}
 
 export const EventHandlersOnTriggerElement = () => {
   const [firedEvent, setFiredEvent] = React.useState<string>("")
@@ -199,4 +191,10 @@ export const EventHandlersOnTriggerElement = () => {
       </p>
     </div>
   )
+}
+
+EventHandlersOnTriggerElement.story = {
+  parameters: {
+    chromatic: { disable: true },
+  },
 }
