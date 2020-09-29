@@ -95,6 +95,8 @@ export const dropdownButtonIconCss: ThemeCss = _theme => ({
 })
 
 export const dropdownDividerCss: ThemeCss = theme => ({
+  // we're applying this to `hr`
+  border: 0,
   borderTop: `1px solid ${theme.colors.grey[20]}`,
   marginBottom: theme.space[3],
   marginTop: theme.space[3],
