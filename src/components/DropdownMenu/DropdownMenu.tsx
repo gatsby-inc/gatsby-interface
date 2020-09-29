@@ -118,8 +118,10 @@ export function useDropdownMenuContext() {
   return useMenuButtonContext()
 }
 
+export type DropdownDividerProps = React.ComponentPropsWithoutRef<"hr">
+
 export function DropdownDivider(props) {
-  return <hr role="separator" {...props} css={dropdownDividerCss} />
+  return <hr {...props} css={dropdownDividerCss} />
 }
 
 export const DropdownHeader = ({ children, ...props }) => (
