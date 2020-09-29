@@ -119,7 +119,7 @@ export function useDropdownMenuContext() {
 }
 
 export function DropdownDivider(props) {
-  return <div {...props} css={dropdownDividerCss} />
+  return <hr role="separator" {...props} css={dropdownDividerCss} />
 }
 
 export const DropdownHeader = ({ children, ...props }) => (
