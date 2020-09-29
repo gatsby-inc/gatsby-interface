@@ -9,7 +9,6 @@ import { withTheme, docsMDXComponents, storybookThemeLight } from "./theming"
 
 import fonts from "../src/theme/fonts"
 import "@storybook/addon-console"
-import { withA11yCheck } from "./a11y-check-addon/register"
 
 if (process.env.NODE_ENV === "test") {
   require(`babel-plugin-require-context-hook/register`)()
@@ -73,8 +72,6 @@ const withGlobal = storyFn => (
     {storyFn()}
   </React.Fragment>
 )
-
-addDecorator(withA11yCheck)
 
 addDecorator(withGlobal)
 

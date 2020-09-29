@@ -44,7 +44,7 @@ export function FormError({ children, ...rest }: FormErrorProps) {
     auxillaryTextCss(theme),
     {
       animation: `${errorEntry} .25s ease forwards`,
-      color: theme.colors.red[20],
+      color: theme.colors.red[70],
       opacity: 0,
     },
     {
