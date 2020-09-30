@@ -30,8 +30,8 @@ export function TextShowCaseItem({
   const rawValueElements = []
 
   for (let i = 0; i < rawValues.length; i++) {
-    rawValueElements.push(<code>{rawValues}</code>)
-    if (i === rawValues.length - 1 && i !== 0) {
+    rawValueElements.push(<code>{rawValues[i]}</code>)
+    if (i < rawValues.length - 1) {
       rawValueElements.push(", ")
     }
   }
