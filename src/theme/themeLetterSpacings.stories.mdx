@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { LetterSpacingsShowcase } from "./utils/LetterSpacingsShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Letter Spacings" />
+
+# Letter Spacings
+
+<br />
+
+<ThemeProvider>
+    <LetterSpacingsShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    letterSpacing: theme.letterSpacings.normal,
+  })}
+/>
+```

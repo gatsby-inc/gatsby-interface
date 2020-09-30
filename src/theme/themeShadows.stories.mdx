@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { ShadowsShowcase } from "./utils/ShadowsShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Shadows" />
+
+# Shadows
+
+<br />
+
+<ThemeProvider>
+    <ShadowsShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    boxShadow: theme.shadows.raised,
+  })}
+/>
+```
