@@ -1,18 +1,27 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import { Meta, Story } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 import {
-  CheckboxGroupFieldBlock,
-  FormFieldBlockLayout,
-  StyledLabelSize,
-} from ".."
-import { getGroupFieldSandboxProps } from "./stories.utils"
+  commonFieldArgTypes,
+  commonGroupFieldArgTypes,
+  disabledArgs,
+  requiredArgs,
+  withErrorAndHintArgs,
+  withErrorArgs,
+  withHintArgs,
+} from "./stories.utils"
 import {
   withVariationsContainer,
   getGroupFieldStoryOptions,
 } from "../../../utils/storybook"
-import CheckboxGroupFieldBlockDocs from "./CheckboxGroupFieldBlock.mdx"
-import { FormGroupOptionsDirection } from "../types"
+import {
+  CheckboxGroupFieldBlock,
+  CheckboxGroupFieldBlockProps,
+  FormFieldBlockLayout,
+  StyledLabelSize,
+  FormGroupOptionsDirection,
+} from ".."
 
 const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
@@ -23,12 +32,13 @@ export default {
     options: {
       showRoots: true,
     },
-    docs: {
-      page: CheckboxGroupFieldBlockDocs,
-    },
     chromatic: { pauseAnimationAtEnd: true },
   },
-}
+  argTypes: {
+    ...commonFieldArgTypes,
+    ...commonGroupFieldArgTypes,
+  },
+} as Meta
 
 const options = getGroupFieldStoryOptions("short")
 const optionsWithDefaultCheck = options.map((option, idx) => {
@@ -41,94 +51,39 @@ const optionsWithDefaultCheck = options.map((option, idx) => {
   return option
 })
 
-export const Basic = () => {
-  return (
-    <CheckboxGroupFieldBlock
-      id="basic"
-      name="basic"
-      options={options}
-      label="Field label"
-    />
-  )
+const Template: Story<CheckboxGroupFieldBlockProps> = args => (
+  <CheckboxGroupFieldBlock {...args} />
+)
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  id: `basic`,
+  name: `basic`,
+  label: `Label`,
+  onChange: e => action(`Change`)(e.target.value),
+  options,
 }
 
-export const Sandbox = () => {
-  return (
-    <CheckboxGroupFieldBlock
-      id="sandbox"
-      name="sandbox"
-      options={options}
-      {...getGroupFieldSandboxProps()}
-    />
-  )
-}
+export const Required = Template.bind({})
 
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
-}
+Required.args = { ...requiredArgs, options }
 
-export const Required = () => {
-  return (
-    <CheckboxGroupFieldBlock
-      id="required"
-      name="required"
-      options={options}
-      label="Field label"
-      required
-    />
-  )
-}
+export const Disabled = Template.bind({})
 
-export const Disabled = () => {
-  return (
-    <CheckboxGroupFieldBlock
-      id="disabled"
-      name="disabled"
-      options={optionsWithDefaultCheck}
-      label="Field label"
-      disabled
-    />
-  )
-}
+Disabled.args = { ...disabledArgs, options: optionsWithDefaultCheck }
 
-export const WithHint = () => {
-  return (
-    <CheckboxGroupFieldBlock
-      id="withHint"
-      name="withHint"
-      options={options}
-      label="Field label"
-      hint="Hint text"
-    />
-  )
-}
+export const WithHint = Template.bind({})
 
-export const WithError = () => {
-  return (
-    <CheckboxGroupFieldBlock
-      id="withError"
-      name="withError"
-      options={optionsWithDefaultCheck}
-      label="Field label"
-      error="Error message"
-    />
-  )
-}
+WithHint.args = { ...withHintArgs, options }
 
-export const WithErrorAndHint = () => {
-  return (
-    <CheckboxGroupFieldBlock
-      id="withErrorAndHint"
-      name="withErrorAndHint"
-      options={options}
-      label="Field label"
-      hint="Hint text"
-      error="Error message"
-    />
-  )
-}
+export const WithError = Template.bind({})
+
+WithError.args = { ...withErrorArgs, options: optionsWithDefaultCheck }
+
+export const WithErrorAndHint = Template.bind({})
+
+WithErrorAndHint.args = { ...withErrorAndHintArgs, options }
 
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => {

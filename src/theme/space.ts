@@ -50,7 +50,6 @@ export type PxSpace = [
   number,
   number,
   number,
-  number,
   number
 ]
 

@@ -328,6 +328,7 @@ BaseNavigation.ItemAnchor = BaseNavigationItemAnchor
 
 export function BaseNavigationItemLink({
   item,
+  to,
   ...rest
 }: BaseNavigationItemLinkProps) {
   const { setIsMobileNavOpen } = BaseNavigation.useNavigationContext()
@@ -335,7 +336,7 @@ export function BaseNavigationItemLink({
   return (
     <Link
       activeClassName="nav-item-active"
-      to={item.linkTo}
+      to={item.linkTo || to}
       onClick={() => setIsMobileNavOpen(false)}
       {...rest}
     >
@@ -505,13 +506,14 @@ export function BaseNavigationLinkButton({
   icon = true,
   size = `M`,
   children,
+  to,
   ...rest
 }: BaseNavigationLinkButtonProps) {
   const { isInverted } = BaseNavigation.useNavigationContext()
 
   return (
     <LinkButton
-      to={linkTo}
+      to={linkTo || to}
       size={size}
       css={baseStyles.button(isInverted)}
       rightIcon={icon ? <MdArrowForward /> : undefined}
