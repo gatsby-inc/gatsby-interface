@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
-    "../src/**/*.stories.(js|jsx|tsx|mdx)",
-    "../__stories__/**/*.stories.(js|jsx|tsx|mdx)",
+    "../src/**/*.stories.@(js|jsx|tsx|mdx)",
+    "../__stories__/**/*.stories.@(js|jsx|tsx|mdx)",
   ],
   addons: [
     "@storybook/addon-docs",
@@ -9,7 +9,7 @@ module.exports = {
     "@storybook/addon-storysource/register",
     "@storybook/addon-actions/register",
     "@storybook/addon-links/register",
-    "@storybook/addon-a11y/register",
+    "@storybook/addon-a11y",
     "@storybook/addon-viewport/register",
     "storybook-addon-designs/register",
   ],

@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { FontsShowcase } from "./utils/FontsShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Fonts" />
+
+# Fonts
+
+<br />
+
+<ThemeProvider>
+    <FontsShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    fontFamily: theme.fonts.body,
+  })}
+/>
+```

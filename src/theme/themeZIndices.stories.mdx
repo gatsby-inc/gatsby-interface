@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { ZIndicesShowcase } from "./utils/ZIndicesShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Z Indices" />
+
+# Tones
+
+<ThemeProvider>
+    <ZIndicesShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    position: `fixed`,
+    zIndex: theme.zIndices.toasts,
+  })}
+/>
+```
+

@@ -1,35 +1,24 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { radios, number } from "@storybook/addon-knobs"
-import {
-  radioKnobOptions,
-  withVariationsContainer,
-} from "../../utils/storybook"
-import { NumberBadge, NumberBadgeTone } from "."
+import { Meta, Story } from "@storybook/react"
+import { withVariationsContainer } from "../../utils/storybook"
 import { StoryPropVariant } from "../../utils/storybook/components"
+import { NumberBadge, NumberBadgeProps, NumberBadgeTone } from "."
 
 export default {
   title: `NumberBadge`,
   component: NumberBadge,
-}
+} as Meta
 
-export const Basic = () => <NumberBadge>8</NumberBadge>
+const Template: Story<NumberBadgeProps> = args => <NumberBadge {...args} />
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  children: 8,
+}
 
 const TONES: NumberBadgeTone[] = [`NEUTRAL`, `WARNING`, `DANGER`]
-
-export const Sandbox = () => (
-  <NumberBadge
-    tone={radios(`tone`, radioKnobOptions<NumberBadgeTone>(TONES), `NEUTRAL`)}
-  >
-    {number("content", 8)}
-  </NumberBadge>
-)
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
-}
 
 export const Tones = () =>
   TONES.map(tone => (

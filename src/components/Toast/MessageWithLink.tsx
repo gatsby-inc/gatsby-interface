@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import * as React from "react"
-import { css, jsx } from "@emotion/core"
+import { jsx } from "@emotion/core"
 import { Link } from "../Link"
+import { ThemeCss } from "../../theme"
 
-const messageCss = css`
-  margin-bottom: 8px;
-`
+const messageCss: ThemeCss = theme => ({
+  marginBottom: theme.space[3],
+})
 
 export interface MessageWithLinkProps {
   linkLabel: React.ReactNode

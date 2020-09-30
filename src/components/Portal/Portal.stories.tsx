@@ -6,14 +6,13 @@ import { text } from "@storybook/addon-knobs"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 
-const Toast = styled.div`
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  border-radius: 3px;
-  color: white;
-  background: #272727;
-  margin: 0.2rem;
-`
+const Toast = styled.div(_props => ({
+  padding: "0.5rem 1rem",
+  borderRadius: "3px",
+  color: "white",
+  background: "#272727",
+  margin: "0.2rem",
+}))
 
 storiesOf(`Portal`, module)
   .addDecorator(storyFn => (
