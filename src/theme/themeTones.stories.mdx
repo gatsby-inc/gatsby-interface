@@ -1,0 +1,24 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { TonesTable } from "./utils/TonesTable"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Tones" />
+
+# Tones
+
+<ThemeProvider>
+    <TonesTable />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    backgroundColor: theme.tones.BRAND.superLight,
+  })}
+/>
+```
