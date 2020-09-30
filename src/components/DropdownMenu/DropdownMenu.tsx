@@ -30,6 +30,7 @@ import {
 } from "./DropdownMenu.styles"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { ThemeCss } from "../../theme"
+import { Heading } from "../Heading"
 
 export type DropdownMenuProps = MenuProps
 
@@ -125,7 +126,7 @@ export function DropdownDivider(props) {
 }
 
 export const DropdownHeader = ({ children, ...props }) => (
-  <h6 {...props} css={dropdownHeaderCss}>
+  <Heading {...props} css={dropdownHeaderCss}>
     {children}
-  </h6>
+  </Heading>
 )
