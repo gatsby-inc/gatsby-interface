@@ -104,6 +104,7 @@ export const dropdownDividerCss: ThemeCss = theme => ({
 
 export const dropdownHeaderCss: ThemeCss = theme => ({
   color: theme.colors.grey[50],
+  fontFamily: theme.fonts.sans,
   fontSize: theme.fontSizes[0],
   fontWeight: theme.fontWeights.semiBold,
   margin: 0,
