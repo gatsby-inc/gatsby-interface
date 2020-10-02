@@ -9,11 +9,13 @@ describe("utils", () => {
     expect(render(<FormattedMessage rawMessage={message} />).container)
       .toMatchInlineSnapshot(`
       <div>
-        <p>
-          <span>
-            The GraphQL query in the non-page component "/usr/src/app/www/cloud/gatsbyjs.com/src/templates/get-started/index.js" will not be run.
-          </span>
-        </p>
+        <div>
+          <p>
+            <span>
+              The GraphQL query in the non-page component "/usr/src/app/www/cloud/gatsbyjs.com/src/templates/get-started/index.js" will not be run.
+            </span>
+          </p>
+        </div>
       </div>
     `)
   })

@@ -36,14 +36,16 @@ export const FormattedMessage = ({ rawMessage }: FormattedMessageProps) => {
   const stringPartsByLines = rawMessage.split("\n")
   const message = formatCodeBlocks(stringPartsByLines)
 
-  // Markdown formatter treats strings without line break as spans, we need to wrap them in a <p></p>
-  // to make it act as a line title
+  // Markdown formatter treats strings without line break as spans, we need to wrap them in a
+  // <div><p></p></div> to keep the same structure as a multi line message.
   const isOneLine = stringPartsByLines.length === 1
   if (isOneLine) {
     return (
-      <p>
-        <Markdown>{message}</Markdown>
-      </p>
+      <div>
+        <p>
+          <Markdown>{message}</Markdown>
+        </p>
+      </div>
     )
   }
 
