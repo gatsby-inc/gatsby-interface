@@ -25,9 +25,12 @@ import {
   menuItemCss,
   dropdownButtonIconCss,
   dropdownSizeCss,
+  dropdownDividerCss,
+  dropdownHeaderCss,
 } from "./DropdownMenu.styles"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { ThemeCss } from "../../theme"
+import { Heading, HeadingProps } from "../Heading"
 
 export type DropdownMenuProps = MenuProps
 
@@ -115,3 +118,17 @@ export function DropdownMenuPopover(props: DropdownMenuPopoverProps) {
 export function useDropdownMenuContext() {
   return useMenuButtonContext()
 }
+
+export type DropdownDividerProps = React.ComponentPropsWithoutRef<"hr">
+
+export function DropdownDivider(props: DropdownDividerProps) {
+  return <hr {...props} css={dropdownDividerCss} />
+}
+
+export type DropdownHeaderProps = HeadingProps
+
+export const DropdownHeader = ({ children, ...props }: DropdownHeaderProps) => (
+  <Heading {...props} css={dropdownHeaderCss}>
+    {children}
+  </Heading>
+)

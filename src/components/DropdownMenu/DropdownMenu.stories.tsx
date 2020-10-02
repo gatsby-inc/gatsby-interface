@@ -9,6 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuItems,
   DropdownMenuButtonStyled,
+  DropdownDivider,
+  DropdownHeader,
 } from "./"
 import * as React from "react"
 import { radios, text } from "@storybook/addon-knobs"
@@ -36,6 +38,11 @@ export default {
     componentSubtitle:
       "Dropdown Menus display a list of choices on a temporary surface.",
     layout: `padded`,
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/vaWj58n22gCrJ3JujReTvw/Dropdown?node-id=1%3A41",
+    },
   },
   decorators: [
     story => (
@@ -55,6 +62,7 @@ export default {
 }
 
 const SIZES: DropdownMenuSize[] = [`AUTO`, `MAX_CONTENT`, `LEGACY`]
+const items: string[] = ["Item 1", "Item 2", "Item 3"]
 
 export const Basic = () => {
   useOpenMenuOnMount()
@@ -64,25 +72,19 @@ export const Basic = () => {
       <DropdownMenu>
         <DropdownMenuButton onKeyDown={console.log}>Actions</DropdownMenuButton>
         <DropdownMenuItems>
-          <DropdownMenuItem onSelect={() => action("Select")("First")}>
-            First
-          </DropdownMenuItem>
-          <DropdownMenuItem onSelect={() => action("Select")("Second")}>
-            Second
-          </DropdownMenuItem>
-          <DropdownMenuItem onSelect={() => action("Select")("Third")}>
-            Third
-          </DropdownMenuItem>
-          <DropdownMenuItem onSelect={() => action("Select")("Fourth")}>
-            Fourth
-          </DropdownMenuItem>
+          {items.map(item => (
+            <DropdownMenuItem
+              key={item}
+              onSelect={() => action("Select")(item)}
+            >
+              {item}
+            </DropdownMenuItem>
+          ))}
         </DropdownMenuItems>
       </DropdownMenu>
     </div>
   )
 }
-
-const items: string[] = ["First", "Second", "Third"]
 
 export const Sandbox = () => {
   return (
@@ -91,11 +93,19 @@ export const Sandbox = () => {
       <DropdownMenuItems
         size={radios(`size`, radioKnobOptions(SIZES), `LEGACY`)}
       >
+        <DropdownHeader>Header</DropdownHeader>
         {items.map(item => (
           <DropdownMenuItem key={item} onSelect={() => action("Select")(item)}>
             {item}
           </DropdownMenuItem>
         ))}
+        <DropdownDivider />
+        <DropdownMenuItem
+          key="Item 4"
+          onSelect={() => action("Select")("Item 4")}
+        >
+          Item 4
+        </DropdownMenuItem>
       </DropdownMenuItems>
     </DropdownMenu>
   )
@@ -192,18 +202,11 @@ export const StyledButton = () => {
     <DropdownMenu>
       <DropdownMenuButtonStyled>Actions</DropdownMenuButtonStyled>
       <DropdownMenuItems>
-        <DropdownMenuItem onSelect={() => action("Select")("First")}>
-          First
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => action("Select")("Second")}>
-          Second
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => action("Select")("Third")}>
-          Third
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => action("Select")("Fourth")}>
-          Fourth
-        </DropdownMenuItem>
+        {items.map(item => (
+          <DropdownMenuItem key={item} onSelect={() => action("Select")(item)}>
+            {item}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuItems>
     </DropdownMenu>
   )
@@ -216,18 +219,11 @@ export const WithComponentPlaceholder = () => {
         <p>This is a complex placeholder</p>
       </DropdownMenuButton>
       <DropdownMenuItems>
-        <DropdownMenuItem onSelect={() => action("Select")("First")}>
-          First
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => action("Select")("Second")}>
-          Second
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => action("Select")("Third")}>
-          Third
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => action("Select")("Fourth")}>
-          Fourth
-        </DropdownMenuItem>
+        {items.map(item => (
+          <DropdownMenuItem key={item} onSelect={() => action("Select")(item)}>
+            {item}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuItems>
     </DropdownMenu>
   )

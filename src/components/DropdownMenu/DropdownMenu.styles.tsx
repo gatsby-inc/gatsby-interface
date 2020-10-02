@@ -4,7 +4,8 @@ import { DropdownMenuSize } from "./DropdownMenu"
 
 const enter = keyframes`
 to {
-  transform: translate(0, 0) perspective(1000px) rotateX(0);
+  opacity: 1;
+  transform: scale(1);
 }
 `
 
@@ -14,12 +15,20 @@ export const dropdownCss: ThemeCss = theme => ({
   borderRadius: theme.radii[3],
   outline: "none",
   boxShadow: theme.shadows.floating,
-  transform: `translate(0, 0) perspective(1000px) rotateX(-35deg)`,
-  animation: `${enter} 0.5s ease forwards`,
-  transformOrigin: "top center",
+  opacity: 0,
+  transform: `scale(0.95)`,
+  animation: `${enter} ${theme.transitions.speed.default} ease forwards`,
+  transformOrigin: "50% top",
   overflow: "auto",
   maxHeight: "20rem",
+  // @TODO port to `Combobox` — providing this bit of vertical padding
+  // aligns the first and last action items' visual size with the rest of the
+  // dropdown items
+  paddingTop: theme.space[3],
+  paddingBottom: theme.space[3],
 
+  // @TODO consider reserving purple background for `active` (CSS) and
+  // `selected` states only — `hover` background could be light grey instead
   "[data-selected]": {
     background: theme.colors.purple[10],
     color: theme.colors.gatsby,
@@ -46,6 +55,8 @@ export const menuItemCss: ThemeCss = theme => ({
   cursor: `pointer`,
   color: theme.colors.grey[90],
   fontSize: theme.fontSizes[1],
+  // @TODO consider bumping horizontal, decrease vertical padding;
+  // same goes for `Combobox`
   padding: `${theme.space[4]} ${theme.space[5]}`,
   lineHeight: theme.lineHeights.default,
   overflow: "hidden",
@@ -81,4 +92,21 @@ export const dropdownButtonIconCss: ThemeCss = _theme => ({
   "[aria-expanded] > &": {
     transform: "rotate(180deg)",
   },
+})
+
+export const dropdownDividerCss: ThemeCss = theme => ({
+  // we're applying this to `hr`
+  border: 0,
+  borderTop: `1px solid ${theme.colors.grey[20]}`,
+  marginBottom: theme.space[3],
+  marginTop: theme.space[3],
+})
+
+export const dropdownHeaderCss: ThemeCss = theme => ({
+  color: theme.colors.grey[50],
+  fontFamily: theme.fonts.sans,
+  fontSize: theme.fontSizes[0],
+  fontWeight: theme.fontWeights.semiBold,
+  margin: 0,
+  padding: `${theme.space[4]} ${theme.space[5]}`,
 })
