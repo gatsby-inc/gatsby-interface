@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
       # required - sets up auth in the node env
       - name: Set up Node.js
         uses: actions/setup-node@master
