@@ -37,6 +37,9 @@ export function BuildLogsList({
                   message={logItem.message}
                   context={logItem.context}
                   filePath={logItem.filePath}
+                  location={logItem.location}
+                  docsUrl={logItem.docsUrl}
+                  errorUrl={logItem.errorUrl}
                 />
               )}
             </li>
