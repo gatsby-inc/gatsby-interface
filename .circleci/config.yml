@@ -184,6 +184,24 @@ workflows:
   #               - master
   #               - main
   #               - dev
+  branch-check:
+    jobs:
+      - is-green:
+          filters:
+            branches:
+              ignore:
+                - master
+                - main
+                - dev
+      - a11y-checks:
+          requires:
+            - is-green
+          filters:
+            branches:
+              ignore:
+                - master
+                - main
+                - dev
   run-prerelease:
     jobs:
       - is-green:
