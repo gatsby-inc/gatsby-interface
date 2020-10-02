@@ -11,18 +11,20 @@ import format from "date-fns/format"
 import addMinutes from "date-fns/addMinutes"
 import pkg from "../package.json"
 
-const branch = process.env.CIRCLE_BRANCH
-
-sh.echo(chalk.cyan(`Preparing prerelease for branch ${branch}`))
+let branch = process.env.CIRCLE_BRANCH || process.env.GITHUB_REF
 
 if (!branch) {
   sh.echo(
     chalk.red(
-      `Could not detect Git branch, process.env.CIRCLE_BRANCH is ${branch}`
+      `Could not detect Git branch:\nprocess.env.CIRCLE_BRANCH is ${process.env.CIRCLE_BRANCH}\nprocess.env.GITHUB_REF is ${process.env.GITHUB_REF}`
     )
   )
   sh.exit(1)
 }
+
+branch = branch.replace("refs/heads/", "")
+
+sh.echo(chalk.cyan(`Preparing prerelease for branch ${branch}`))
 
 if (branch === `main` || branch === `dev`) {
   sh.echo(
