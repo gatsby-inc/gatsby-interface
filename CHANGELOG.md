@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.206](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.205...v0.0.206) (2020-10-02)
+
+
+### Features
+
+* **dropdown:** Add `DropdownHeader`, `DropdownDivider` ([#393](https://github.com/gatsby-inc/gatsby-interface/issues/393)) ([2555c9c](https://github.com/gatsby-inc/gatsby-interface/commit/2555c9ca1242c1dad541de37b5bd1f7521f4e3f6))
+
 ### [0.0.205](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.204...v0.0.205) (2020-10-02)
 
 
