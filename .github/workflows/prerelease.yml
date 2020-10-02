@@ -21,6 +21,10 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: 12.x
+      - name: Install Yarn
+        run: curl -o- -L https://yarnpkg.com/install.sh
+      - name: Install Dependencies
+        run: yarn install
       # Runs a single command using the runners shell
       - name: Authenticate with registry
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
