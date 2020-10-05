@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.207](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.206...v0.0.207) (2020-10-05)
+
+
+### Bug Fixes
+
+* **BuildLogs:** Updates location types to match graphql ([#399](https://github.com/gatsby-inc/gatsby-interface/issues/399)) ([5ca8ea1](https://github.com/gatsby-inc/gatsby-interface/commit/5ca8ea1d6b98af8ea7d43f2b7fb602b94c358891))
+
 ### [0.0.206](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.205...v0.0.206) (2020-10-02)
 
 
