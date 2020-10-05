@@ -2,53 +2,50 @@
 import { jsx } from "@emotion/core"
 import React, { useContext } from "react"
 import { ThemeCss, Theme } from "../../theme"
-import { Radii } from "../../theme/radii"
 import { SpacerSize } from "../Spacer"
 
+const mergeCss = (sharedCss: any, css: any, theme: Theme) => {
+  if (css) {
+    if (typeof css === "function") {
+      return { ...css(theme), ...sharedCss }
+    }
+
+    return { ...css(theme), ...sharedCss }
+  }
+
+  return sharedCss
+}
+
 const PlaceholderContext = React.createContext<{
-  space: SpacerSize
   animation: string
 }>({
-  space: 0,
   animation: "",
 })
 
 export interface PlaceholderProps
   extends React.ComponentPropsWithoutRef<"div"> {
-  Left?: React.ComponentType
-  Right?: React.ComponentType
   space?: SpacerSize
   animation?: string
+  css?: any
 }
 
 export const Placeholder: React.FC<PlaceholderProps> = ({
   children,
-  Left,
-  Right,
-  space = 0,
+  space = 3,
   animation = "",
+  css,
   ...props
 }) => {
+  const computeCss: ThemeCss = theme => {
+    const sharedCss = { display: "grid", gap: theme.space[space] }
+
+    return mergeCss(sharedCss, css, theme)
+  }
+
   return (
-    <PlaceholderContext.Provider value={{ space, animation }}>
-      <div
-        css={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-        {...props}
-      >
-        {Left && (
-          <div css={{ marginRight: space, display: "block" }}>
-            <Left />
-          </div>
-        )}
-        <div css={{ flex: 1 }}>{children}</div>
-        {Right && (
-          <div css={{ marginLeft: space, display: "block" }}>
-            <Right />
-          </div>
-        )}
+    <PlaceholderContext.Provider value={{ animation }}>
+      <div css={computeCss} {...props}>
+        {children}
       </div>
     </PlaceholderContext.Provider>
   )
@@ -64,32 +61,34 @@ export interface PlaceholderBoxProps
   width?: string
   height?: string
   noSpace?: boolean
-  radii?: Radii
+  radii?: number
+  css?: any
 }
 
 export const PlaceholderBox: React.FC<PlaceholderBoxProps> = ({
   height = "14px",
   width = "100%",
-  noSpace,
-  radii,
+  radii = 2,
+  css,
   ...props
 }) => {
-  const { space, animation } = useContext(PlaceholderContext)
+  const { animation } = useContext(PlaceholderContext)
 
-  const marginBottom = noSpace ? 0 : space
+  const computeCss: ThemeCss = theme => {
+    const sharedCss = {
+      width,
+      height,
+
+      borderRadius: theme.radii[radii],
+      animation,
+    }
+
+    return mergeCss(sharedCss, css, theme)
+  }
 
   return (
     <div
-      css={(theme: Theme) => [
-        placeholderLineCss(theme),
-        {
-          width,
-          height,
-          marginBottom,
-          borderRadius: radii || theme.radii[2],
-          animation,
-        },
-      ]}
+      css={(theme: Theme) => [placeholderLineCss(theme), computeCss(theme)]}
       {...props}
     />
   )
