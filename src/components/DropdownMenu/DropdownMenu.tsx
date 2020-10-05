@@ -19,6 +19,7 @@ import {
   useMenuButtonContext,
 } from "@reach/menu-button"
 import { forwardRefWithAs } from "@reach/utils"
+import { animated, useSpring } from "react-spring"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import {
   dropdownCss,
@@ -62,6 +63,8 @@ export const DropdownMenuButtonStyled: React.FC<DropdownMenuButtonProps> = ({
 
 export type DropdownMenuSize = `AUTO` | `MAX_CONTENT` | `LEGACY`
 
+const AnimatedMenuList = animated(MenuList)
+
 export type DropdownMenuItemsProps = MenuListProps & {
   size?: DropdownMenuSize
 }
@@ -70,12 +73,17 @@ export const DropdownMenuItems: React.FC<DropdownMenuItemsProps> = ({
   size = `LEGACY`,
   ...rest
 }) => {
+  const styleProps = useAnimatedMenuItems()
+
   const finalCss: ThemeCss = theme => [
     dropdownCss(theme),
     dropdownSizeCss[size](theme),
   ]
-  return <MenuList {...rest} css={finalCss}></MenuList>
+
+  return <AnimatedMenuList style={styleProps} {...rest} css={finalCss} />
 }
+
+const AnimatedMenuItems = animated(MenuItems)
 
 export type DropdownMenuItemsLowLevelProps = MenuItemsProps & {
   size?: DropdownMenuSize
@@ -85,11 +93,14 @@ export const DropdownMenuItemsLowLevel: React.FC<DropdownMenuItemsLowLevelProps>
   size = `LEGACY`,
   ...rest
 }) => {
+  const styleProps = useAnimatedMenuItems()
+
   const finalCss: ThemeCss = theme => [
     dropdownCss(theme),
     dropdownSizeCss[size](theme),
   ]
-  return <MenuItems {...rest} css={finalCss}></MenuItems>
+
+  return <AnimatedMenuItems style={styleProps} {...rest} css={finalCss} />
 }
 
 export type DropdownMenuItemProps = MenuItemProps
@@ -129,3 +140,12 @@ export const DropdownHeader = ({ children, ...props }: DropdownHeaderProps) => (
     {children}
   </Heading>
 )
+
+function useAnimatedMenuItems() {
+  const { isExpanded } = useDropdownMenuContext()
+
+  return useSpring({
+    opacity: isExpanded ? 1 : 0,
+    transform: isExpanded ? "scale(1)" : "scale(0.95)",
+  })
+}

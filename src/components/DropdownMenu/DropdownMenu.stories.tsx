@@ -8,6 +8,7 @@ import {
   DropdownMenuLink,
   DropdownMenuItem,
   DropdownMenuItems,
+  DropdownMenuItemsLowLevel,
   DropdownMenuButtonStyled,
   DropdownDivider,
   DropdownHeader,
@@ -23,6 +24,7 @@ import {
 import { DropdownMenuSize } from "./DropdownMenu"
 import { Notification } from "../Notification"
 import { Link } from "gatsby"
+import { positionRight } from "@reach/popover"
 
 export default {
   title: `DropdownMenu`,
@@ -32,6 +34,7 @@ export default {
     DropdownMenuButtonStyled,
     DropdownMenuPopover,
     DropdownMenuItems,
+    DropdownMenuItemsLowLevel,
     DropdownMenuLink,
     DropdownMenuItem,
   },
@@ -240,6 +243,32 @@ export const WithComponentPlaceholder = () => {
         ))}
       </DropdownMenuItems>
     </DropdownMenu>
+  )
+}
+
+export const WithCustomPositioning = () => {
+  useOpenMenuOnMount()
+
+  return (
+    <div css={{ minHeight: "100vh" }}>
+      <DropdownMenu>
+        <DropdownMenuButton onKeyDown={console.log}>
+          Click this button to open dropdown
+        </DropdownMenuButton>
+        <DropdownMenuPopover position={positionRight}>
+          <DropdownMenuItemsLowLevel size="MAX_CONTENT">
+            {items.map(item => (
+              <DropdownMenuItem
+                key={item}
+                onSelect={() => action("Select")(item)}
+              >
+                {item}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuItemsLowLevel>
+        </DropdownMenuPopover>
+      </DropdownMenu>
+    </div>
   )
 }
 
