@@ -1,9 +1,33 @@
-# BaseAnchor
+# Placeholder
 
-A skeleton component on which styled [AnchorButton](?path=/story/core-anchorbutton) is built.
+Create and compose placeholder when loading specific page data.
 
-This is just a wrapper for HTML `<a />` element that makes sure that all links with `target="_blank"` have their `rel` attribute set to `"noopener noreferrer"`.
+## API
 
-## Props
+```jsx
+<>
+  {/* Grid-based placeholder */}
+  <Placeholder
+    animation={fadeAnimationCss}
+    css={{
+      gridTemplateColumns: "auto 1fr auto",
+      gridTemplateRows: "1fr 1fr 1fr",
+      gridTemplateAreas: `
+        "left top right"
+        "left middle right"
+        "left bottom right"`,
+    }}
+  >
+    {/* Left side of the placeholder */}
+    <PlaceholderBox width="40px" height="40px" css={{ gridArea: "left" }} />
 
-`AnchorButton` accepts all props accepted by HTML's `<a>` element.
+    {/* Body of the placeholder */}
+    <PlaceholderBox width="70%" css={{ gridArea: "top" }} />
+    <PlaceholderBox css={{ gridArea: "middle" }} />
+    <PlaceholderBox width="30%" css={{ gridArea: "bottom" }} />
+
+    {/* Right side of the placeholder */}
+    <PlaceholderBox width="40px" height="40px" css={{ gridArea: "right" }} />
+  </Placeholder>
+</>
+```
