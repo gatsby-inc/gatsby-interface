@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.209](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.208...v0.0.209) (2020-10-05)
+
+
+### Bug Fixes
+
+* replace keyframes with spring animation for DropdownMenu ([#401](https://github.com/gatsby-inc/gatsby-interface/issues/401)) ([0fbd388](https://github.com/gatsby-inc/gatsby-interface/commit/0fbd388b893cc033523c3bbb1b61841727ab8d24))
+
 ### [0.0.208](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.207...v0.0.208) (2020-10-05)
 
 
