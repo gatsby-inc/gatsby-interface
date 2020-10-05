@@ -3,6 +3,8 @@ import { jsx } from "@emotion/core"
 import { Placeholder, PlaceholderBox } from "./"
 import { fadeAnimationCss } from "./Fade"
 import { Spacer } from "../Spacer"
+import { disableAnimationsDecorator } from "../../utils/storybook/disableAnimationsDecorator"
+import { DecoratorFn } from "@storybook/react"
 
 export default {
   title: `Placeholder`,
@@ -11,6 +13,7 @@ export default {
     Placeholder,
     PlaceholderBox,
   },
+  decorators: [disableAnimationsDecorator] as DecoratorFn[],
 }
 
 export const PlaceholderDefault = () => {

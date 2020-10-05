@@ -2,12 +2,14 @@
 import { jsx } from "@emotion/core"
 import React, { useContext } from "react"
 import { ThemeCss, Theme } from "../../theme"
+import { Radii } from "../../theme/radii"
+import { SpacerSize } from "../Spacer"
 
 const PlaceholderContext = React.createContext<{
-  space: string
+  space: SpacerSize
   animation: string
 }>({
-  space: "",
+  space: 0,
   animation: "",
 })
 
@@ -15,7 +17,7 @@ export interface PlaceholderProps
   extends React.ComponentPropsWithoutRef<"div"> {
   Left?: React.ComponentType
   Right?: React.ComponentType
-  space?: string
+  space?: SpacerSize
   animation?: string
 }
 
@@ -23,7 +25,7 @@ export const Placeholder: React.FC<PlaceholderProps> = ({
   children,
   Left,
   Right,
-  space = "0.5rem",
+  space = 0,
   animation = "",
   ...props
 }) => {
@@ -62,7 +64,7 @@ export interface PlaceholderBoxProps
   width?: string
   height?: string
   noSpace?: boolean
-  radii?: string
+  radii?: Radii
 }
 
 export const PlaceholderBox: React.FC<PlaceholderBoxProps> = ({
