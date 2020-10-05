@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.208](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.207...v0.0.208) (2020-10-05)
+
+
+### Bug Fixes
+
+* various TypeScript fixes ([#400](https://github.com/gatsby-inc/gatsby-interface/issues/400)) ([0e1da56](https://github.com/gatsby-inc/gatsby-interface/commit/0e1da5655c768a88d39436ca280ae42c1d6c991a))
+
 ### [0.0.207](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.206...v0.0.207) (2020-10-05)
 
 
