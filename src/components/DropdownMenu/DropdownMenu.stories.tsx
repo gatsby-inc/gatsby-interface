@@ -90,6 +90,10 @@ export const Basic = () => {
   )
 }
 
+Basic.parameters = {
+  chromatic: { delay: 150 },
+}
+
 export const Sandbox = () => {
   return (
     <DropdownMenu>
@@ -176,6 +180,10 @@ export const Sizes = () => {
   )
 }
 
+Sizes.parameters = {
+  chromatic: { delay: 150 },
+}
+
 export const MenuLinks = () => {
   useOpenMenuOnMount()
 
@@ -212,6 +220,10 @@ export const MenuLinks = () => {
       </DropdownMenu>
     </div>
   )
+}
+
+MenuLinks.parameters = {
+  chromatic: { delay: 150 },
 }
 
 export const StyledButton = () => {
@@ -270,6 +282,10 @@ export const WithCustomPositioning = () => {
       </DropdownMenu>
     </div>
   )
+}
+
+WithCustomPositioning.parameters = {
+  chromatic: { delay: 150 },
 }
 
 function useOpenMenuOnMount() {
