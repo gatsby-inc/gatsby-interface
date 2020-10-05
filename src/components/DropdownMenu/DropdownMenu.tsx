@@ -18,6 +18,7 @@ import {
   MenuLinkProps,
   useMenuButtonContext,
 } from "@reach/menu-button"
+import { forwardRefWithAs } from "@reach/utils"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import {
   dropdownCss,
@@ -97,17 +98,13 @@ export const DropdownMenuItem: React.FC<DropdownMenuItemProps> = props => (
   <MenuItem {...props} css={menuItemCss} />
 )
 
-export type DropdownMenuLinkProps = import("@reach/utils").PropsWithAs<
-  "a",
-  MenuLinkProps
->
+export type DropdownMenuLinkProps = MenuLinkProps
 
-export const DropdownMenuLink = React.forwardRef<
-  HTMLAnchorElement,
-  DropdownMenuLinkProps
->(function DropdownMenuLink(props, ref) {
-  return <MenuLink ref={ref} {...props} css={menuItemCss} />
-})
+export const DropdownMenuLink = forwardRefWithAs<DropdownMenuLinkProps, "a">(
+  function DropdownMenuLink(props, ref) {
+    return <MenuLink ref={ref} {...props} css={menuItemCss} />
+  }
+)
 
 export type DropdownMenuPopoverProps = MenuPopoverProps
 

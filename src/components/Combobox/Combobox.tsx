@@ -170,7 +170,7 @@ export type ComboboxPopoverProps = PropsWithAs<
 >
 
 export const ComboboxPopover = React.forwardRef<
-  HTMLInputElement,
+  HTMLDivElement,
   ComboboxPopoverProps
 >(function ComboboxPopover(props, ref) {
   return (

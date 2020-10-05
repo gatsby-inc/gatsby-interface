@@ -68,7 +68,7 @@ const headerCss: ThemeCss = theme => ({
   lineHeight: 1,
 })
 
-export type CardHeaderProps = Omit<CardSectionProps, "as"> & {
+export type CardHeaderProps = Omit<CardSectionProps, "as" | "title"> & {
   as?: "header" | "div"
   title: React.ReactNode
   titleAs?: HeadingProps["as"]
