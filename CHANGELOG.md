@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.210](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.209...v0.0.210) (2020-10-05)
+
+
+### Bug Fixes
+
+* fix Toast throwing an error on render ([#402](https://github.com/gatsby-inc/gatsby-interface/issues/402)) ([4e08a26](https://github.com/gatsby-inc/gatsby-interface/commit/4e08a2633c834ef9b9bd849ff3d6cbd8e12fb133))
+
 ### [0.0.209](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.208...v0.0.209) (2020-10-05)
 
 
