@@ -6,6 +6,7 @@ import { MdDone, MdClose, MdWarning } from "react-icons/md"
 
 import { ToastTone } from "./types"
 import { Theme, ThemeCss } from "../../theme"
+import { ThemeProvider } from "../ThemeProvider"
 
 const toastEntryAnimation = keyframes`
   100% {
@@ -114,18 +115,26 @@ export const Toast: React.FC<ToastProps> = ({
       data-testid="toast"
       type={tone === `DANGER` ? `assertive` : `polite`}
     >
-      <span css={finalStatusCss}>
-        <IconComponent />
-      </span>
-      <div css={messageCss}>{message}</div>
-      <button
-        css={closeButtonCss}
-        type="button"
-        onClick={onClose}
-        aria-label={closeButtonLabel}
-      >
-        <MdClose />
-      </button>
+      {/**
+       * We have to wrap Alert content in ThemeProvider, since ReachUI's Alert does not allow to use context that is defined outside of Alert
+       *
+       * See this issue: https://github.com/reach/reach-ui/issues/540
+       * Source code: https://github.com/reach/reach-ui/blob/develop/packages/alert/src/index.tsx
+       * */}
+      <ThemeProvider>
+        <span css={finalStatusCss}>
+          <IconComponent />
+        </span>
+        <div css={messageCss}>{message}</div>
+        <button
+          css={closeButtonCss}
+          type="button"
+          onClick={onClose}
+          aria-label={closeButtonLabel}
+        >
+          <MdClose />
+        </button>
+      </ThemeProvider>
     </Alert>
   )
 }
