@@ -25,8 +25,8 @@ export enum StructuredLogLevel {
 }
 
 export type Location = {
-  line: number
-  column: number
+  line?: number | null
+  column?: number | null
 }
 
 export type BuildLogItem = {
