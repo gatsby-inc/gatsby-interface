@@ -22,6 +22,7 @@ import {
 } from "../../utils/storybook"
 import { DropdownMenuSize } from "./DropdownMenu"
 import { Notification } from "../Notification"
+import { Link } from "gatsby"
 
 export default {
   title: `DropdownMenu`,
@@ -181,15 +182,28 @@ export const MenuLinks = () => {
         <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
         <DropdownMenuItems>
           {["Ashalmawia", "Addadshashanammu", "Ularradallaku"].map(item => (
-            <DropdownMenuLink
-              href={`https://www.google.com/search?q=${item}`}
-              target="_blank"
-              rel="noreferrer noopener"
-              key={item}
-              onSelect={() => action("Select")(item)}
-            >
-              {item}
-            </DropdownMenuLink>
+            <React.Fragment>
+              <DropdownMenuLink
+                href={`https://www.google.com/search?q=${item}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                key={item}
+                as={"a"}
+                onSelect={() => action("Select")(item)}
+              >
+                {item} {`(as "<a>")`}
+              </DropdownMenuLink>
+              <DropdownMenuLink
+                to={`https://www.google.com/search?q=${item}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                key={item}
+                as={Link}
+                onSelect={() => action("Select")(item)}
+              >
+                {item} {`(as "<Link>")`}
+              </DropdownMenuLink>
+            </React.Fragment>
           ))}
         </DropdownMenuItems>
       </DropdownMenu>
