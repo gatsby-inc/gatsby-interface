@@ -147,5 +147,8 @@ function useAnimatedMenuItems() {
   return useSpring({
     opacity: isExpanded ? 1 : 0,
     transform: isExpanded ? "scale(1)" : "scale(0.95)",
+    config: {
+      tension: 400,
+    },
   })
 }

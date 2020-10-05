@@ -130,12 +130,17 @@ function ForceOpenMenu() {
   const selfRef = React.useRef<HTMLDivElement>(null)
   React.useEffect(() => {
     let menu: HTMLElement | null = selfRef.current
-    while (menu && !menu.hasAttribute("data-reach-menu")) {
-      menu = menu.parentElement
+    let menuContainer: HTMLElement | null = menu
+    while (menuContainer && !menuContainer.hasAttribute("data-reach-menu")) {
+      menu = menuContainer
+      menuContainer = menuContainer.parentElement
     }
 
-    if (menu) {
-      menu.removeAttribute("hidden")
+    if (menuContainer) {
+      menuContainer.removeAttribute("hidden")
+      if (menu) {
+        menu.removeAttribute("style")
+      }
     }
   })
 
@@ -181,7 +186,7 @@ export const Sizes = () => {
 }
 
 Sizes.parameters = {
-  chromatic: { delay: 400 },
+  chromatic: { delay: 150 },
 }
 
 export const MenuLinks = () => {
