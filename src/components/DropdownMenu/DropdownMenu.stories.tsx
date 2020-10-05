@@ -181,7 +181,7 @@ export const Sizes = () => {
 }
 
 Sizes.parameters = {
-  chromatic: { delay: 150 },
+  chromatic: { delay: 400 },
 }
 
 export const MenuLinks = () => {
