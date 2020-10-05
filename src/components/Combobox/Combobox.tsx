@@ -162,12 +162,8 @@ export const ComboboxInput = React.forwardRef<
   )
 })
 
-export type ComboboxPopoverProps = PropsWithAs<
-  "div",
-  ReachComboboxPopoverProps &
-    Partial<PopoverProps> &
-    React.RefAttributes<HTMLDivElement>
->
+export type ComboboxPopoverProps = ReachComboboxPopoverProps &
+  Partial<PopoverProps>
 
 export const ComboboxPopover = React.forwardRef<
   HTMLDivElement,
