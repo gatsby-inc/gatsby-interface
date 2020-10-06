@@ -178,3 +178,7 @@ export const Boilerplate = () => {
 UsageExample.story = {
   decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
 }
+
+UsageExample.parameters = {
+  chromatic: { delay: 300 },
+}
