@@ -139,4 +139,41 @@ describe("utils", () => {
       </div>
     `)
   })
+
+  it(`should format multiple code blocks`, () => {
+    const message = `There was an error in your GraphQL query:\n\nVariable "$missingVar" is not defined by operation "SomeQuery".\n\nGraphQL request:16:32\n15 |           frontmatter {\n16 |             date(formatString: $missingVar)\n   |                                ^\n17 |             title\n\nGraphQL request:2:3\n1 |\n2 |   query {\n  |   ^\n3 |     site {`
+
+    expect(render(<FormattedMessage rawMessage={message} />).container)
+      .toMatchInlineSnapshot(`
+      <div>
+        <div>
+          <p>
+            There was an error in your GraphQL query:
+          </p>
+          <p>
+            Variable "$missingVar" is not defined by operation "SomeQuery".
+          </p>
+          <p>
+            GraphQL request:16:32
+      
+            <code>
+              15 |           frontmatter {
+      16 |             date(formatString: $missingVar)
+         |                                ^
+      17 |             title
+            </code>
+            
+      GraphQL request:2:3
+      
+            <code>
+              1 |
+      2 |   query {
+        |   ^
+      3 |     site {
+            </code>
+          </p>
+        </div>
+      </div>
+    `)
+  })
 })

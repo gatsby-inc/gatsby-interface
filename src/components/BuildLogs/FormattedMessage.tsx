@@ -4,18 +4,28 @@ import Markdown from "markdown-to-jsx"
 // Check for "1 |" presence to create a code block
 // Stores every last index owning a " |" string
 // to close the code block at the good position
+//
+// Example code block:
+// 15 |           frontmatter {
+// 16 |             date(formatString: $invaludVar)
+//    |                                ^
+//
 const formatCodeBlocks = (stringPartsByLines: string[]) => {
   let lastIndexFound = -1
   let codeBlockOpen = false
 
   const nextLines = stringPartsByLines.map((str, index) => {
-    if (str.match(/(\s|\t)*\d+\s\|/)) {
+    if (str.match(/(\s|\t)*\d+\s\|/) || str.match(/(\s|\t)*\|(\s|\t)*\^/)) {
       if (codeBlockOpen) {
         lastIndexFound = index
       } else {
         codeBlockOpen = true
         return "```" + str
       }
+    } else if (codeBlockOpen) {
+      // Close the current code block if the line doesn't match anymore
+      codeBlockOpen = false
+      return "```" + str
     }
 
     return str
