@@ -8,6 +8,8 @@ import {
 } from "./StyledModal"
 import { ThemeCss } from "../../theme"
 import { StickyObserver } from "../StickyObserver"
+import { Modal } from "./Modal"
+import { ModalPanel } from "./ModalPanel"
 
 export type StyledPanelProps = {
   children: React.ReactNode
@@ -70,14 +72,10 @@ const bodySectionCss: ThemeCss = theme => ({
   paddingLeft: theme.space[7],
 })
 
-export type StyledPanelBodySectionProps = {
-  children: React.ReactNode
-}
+export type StyledPanelBodySectionProps = React.ComponentPropsWithoutRef<"div">
 
-export function StyledPanelBodySection({
-  children,
-}: StyledPanelBodySectionProps) {
-  return <div css={bodySectionCss}>{children}</div>
+export function StyledPanelBodySection(props: StyledPanelBodySectionProps) {
+  return <div css={bodySectionCss} {...props} />
 }
 
 const actionsContainerCss: ThemeCss = theme => ({
@@ -105,5 +103,51 @@ export function StyledPanelActions({ children }: StyledPanelActionsProps) {
     <StickyObserver lipShadowPosition="top" css={actionsContainerCss}>
       <div css={actionsCss}>{children}</div>
     </StickyObserver>
+  )
+}
+
+export type StyledPanelBoilerplateProps = {
+  isOpen?: boolean
+  "aria-label": string
+  onClose: () => void
+  header?: React.ReactNode
+  children?: React.ReactNode
+  actions?: React.ReactNode
+}
+
+export function StyledPanelBoilerplate({
+  isOpen,
+  "aria-label": ariaLabel,
+  onClose,
+  header,
+  children,
+  actions,
+}: StyledPanelBoilerplateProps) {
+  return (
+    <Modal
+      aria-label={ariaLabel}
+      isOpen={isOpen}
+      onDismiss={onClose}
+      type="neutral"
+      css={{
+        width: `100%`,
+        height: `auto`,
+        minHeight: `100%`,
+        display: `flex`,
+        flexDirection: `column`,
+      }}
+    >
+      <ModalPanel>
+        <StyledPanel>
+          {header ? (
+            <StyledPanelHeader onCloseButtonClick={onClose}>
+              {header}
+            </StyledPanelHeader>
+          ) : null}
+          {children}
+          {actions ? <StyledPanelActions>{actions}</StyledPanelActions> : null}
+        </StyledPanel>
+      </ModalPanel>
+    </Modal>
   )
 }
