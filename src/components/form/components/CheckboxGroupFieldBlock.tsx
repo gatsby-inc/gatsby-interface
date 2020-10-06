@@ -1,11 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
-import {
-  CheckboxGroupFieldOptionProps,
-  CheckboxGroupFieldOptionItemProps,
-} from "./CheckboxGroupField"
-import { FormGroupOptionsDirection } from "./FormGroupField"
+import { FormGroupOptionsDirection } from "../types"
 import { FormGroupFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
 import {
   StyledCheckbox,
@@ -14,18 +10,19 @@ import {
 import { Theme } from "../../../theme"
 import { OptionsContainer } from "./styled-primitives/StyledFormElements"
 import { getOptionLabelOffsetStyles } from "../styles"
+import { GroupControlProps } from "../types"
 
 export type CheckboxGroupFieldBlockOption = {
   label: React.ReactNode
   value: string
-} & Partial<Omit<CheckboxGroupFieldOptionItemProps, "label" | "value">>
+} & Partial<Omit<GroupControlProps, "label" | "value">>
 
 export type CheckboxGroupFieldBlockProps = WithFormFieldBlock<
   {
     options: CheckboxGroupFieldBlockOption[]
     optionsDirection?: FormGroupOptionsDirection
     value?: string[]
-  } & Omit<CheckboxGroupFieldOptionProps, "value">
+  } & Omit<GroupControlProps, "value" | "type">
 >
 
 export const CheckboxGroupFieldBlock = (

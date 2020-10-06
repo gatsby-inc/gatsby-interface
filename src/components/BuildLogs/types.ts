@@ -24,6 +24,11 @@ export enum StructuredLogLevel {
   Error = "ERROR",
 }
 
+export type Location = {
+  line?: number | null
+  column?: number | null
+}
+
 export type BuildLogItem = {
   id: string
   message?: string | null
@@ -31,6 +36,9 @@ export type BuildLogItem = {
   activity?: BuildActivity | null
   filePath?: string | null
   context?: { [k: string]: string } | null
+  docsUrl?: string | null
+  errorUrl?: string | null
+  location?: { start?: Location | null; end?: Location | null } | null
 }
 
 export type BuildActivity = {

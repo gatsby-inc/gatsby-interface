@@ -1,26 +1,20 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { text, boolean, number } from "@storybook/addon-knobs"
-import { ConcealedValue } from "./"
+import { Meta, Story } from "@storybook/react"
+import { ConcealedValue, ConcealedValueProps } from "./"
 
 export default {
   title: `ConcealedValue`,
   component: ConcealedValue,
-}
+} as Meta
 
-export const Basic = () => <ConcealedValue value="abcde" ariaLabel="value" />
-
-export const Sandbox = () => (
-  <ConcealedValue
-    value={text("The concealed string value:", "Lorem ipsum")}
-    delay={number("Copy delay:", 2000)}
-    concealed={boolean("Initially conceal value?", true)}
-    ariaLabel={text("Label describing the value:", "Lorem ipsum")}
-  />
+const Template: Story<ConcealedValueProps> = args => (
+  <ConcealedValue {...args} />
 )
 
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
+export const Basic = Template.bind({})
+
+Basic.args = {
+  value: `abcde`,
+  ariaLabel: `value`,
 }

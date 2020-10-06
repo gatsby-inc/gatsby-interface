@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { visuallyHiddenCss } from "../../stylesheets/a11y"
 
 export type VisuallyHiddenProps = React.ComponentPropsWithoutRef<"span"> & {

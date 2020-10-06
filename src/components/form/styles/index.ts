@@ -1,7 +1,6 @@
 import { CSSObject } from "@emotion/core"
 import { ThemeCss, Theme } from "../../../theme"
-import { FormGroupOptionsDirection } from "../components/FormGroupField"
-import { FormFieldBlockLayout } from "../components/FormField"
+import { FormFieldBlockLayout, FormGroupOptionsDirection } from "../types"
 
 /**
  * Base styles

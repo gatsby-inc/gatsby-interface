@@ -1,24 +1,19 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
+import { Meta, Story } from "@storybook/react"
 
-import {
-  radioKnobOptions,
-  withVariationsContainer,
-} from "../../utils/storybook"
-import { radios, text } from "@storybook/addon-knobs"
+import { withVariationsContainer } from "../../utils/storybook"
 import { Theme } from "../../theme"
 import { ToggleSwitch, ToggleSwitchProps } from "."
 
-const TOGGLE_TONES: ToggleSwitchProps["tone"][] = [
+const TONES: ToggleSwitchProps["tone"][] = [
   `BRAND`,
   `SUCCESS`,
   `DANGER`,
   `WARNING`,
   `NEUTRAL`,
 ]
-
-const toggleToneOptions = radioKnobOptions(TOGGLE_TONES)
 
 export default {
   title: `ToggleSwitch`,
@@ -27,70 +22,52 @@ export default {
     componentSubtitle:
       "Switches can be used as an alternative to the Checkboxes, and switch between two states — usually enabled and disabled. A Switch must always be accompanied by a label, and follow the same keyboard workflow as a Checkbox.",
   },
-}
+  argTypes: {
+    tone: {
+      table: {
+        type: {
+          summary: TONES.map(tone => `"${tone}"`).join(` | `),
+        },
+        defaultValue: {
+          summary: `BRAND`,
+        },
+      },
+      control: {
+        type: `select`,
+        options: TONES,
+      },
+    },
+  },
+} as Meta
 
-const ToggleSwitchStory = ({
-  id = `toggleSwitch`,
-  name = id,
-  debug,
-  ...props
-}: Partial<ToggleSwitchProps> & { debug?: boolean }) => {
-  const [value, setValue] = React.useState<string>(props.value || "off")
+const Template: Story<ToggleSwitchProps> = ({ id, name = id, ...args }) => {
+  const [value, setValue] = React.useState<string>(args.value || "off")
 
   return (
-    <React.Fragment>
-      <ToggleSwitch
-        id={id}
-        name={name}
-        valueOn="on"
-        valueOff="off"
-        labelOn="Monthly"
-        labelOff="Yearly"
-        onChange={e => setValue(e.target.value)}
-        {...props}
-        value={value}
-      />
-      {debug && (
-        <p
-          css={(theme: Theme) => ({
-            fontFamily: theme.fonts.monospace,
-            padding: theme.space[3],
-            background: theme.colors.grey[10],
-            fontSize: theme.fontSizes[1],
-          })}
-        >
-          {JSON.stringify({ value })}
-        </p>
-      )}
-    </React.Fragment>
-  )
-}
-
-export const Basic = () => <ToggleSwitchStory />
-
-export const Sandbox = () => {
-  const valueOff = text("valueOff", "yearly")
-  return (
-    <ToggleSwitchStory
-      labelOn={text("labelOn", "Monthly")}
-      labelOff={text("labelOff", "Yearly")}
-      valueOn={text("valueOn", "monthly")}
-      valueOff={valueOff}
-      value={valueOff}
-      tone={radios("tone", toggleToneOptions, `BRAND`)}
-      debug
+    <ToggleSwitch
+      id={id}
+      name={name}
+      onChange={e => setValue(e.target.value)}
+      {...args}
+      value={value}
     />
   )
 }
 
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
+export const Basic = Template.bind({})
+
+Basic.args = {
+  id: "basic-switch",
+  valueOn: "on",
+  valueOff: "off",
+  labelOn: "Monthly",
+  labelOff: "Yearly",
 }
 
-export const Tones = () =>
-  TOGGLE_TONES.map(tone => (
+export const Tones = () => {
+  const [value, setValue] = React.useState<string>("on")
+
+  return TONES.map(tone => (
     <div key={tone}>
       <p
         id={`toggleSwitchLabel--${tone}`}
@@ -101,45 +78,67 @@ export const Tones = () =>
       >
         {tone}:
       </p>
-      <ToggleSwitchStory
+      <ToggleSwitch
         id={`tone--${tone}`}
         tone={tone}
-        value="on"
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        valueOn="on"
+        valueOff="off"
+        labelOn="Monthly"
+        labelOff="Yearly"
         aria-describedby={`toggleSwitchLabel--${tone}`}
       />
     </div>
   ))
+}
 
 Tones.story = {
   decorators: [withVariationsContainer],
 }
 
-export const WithAccessibleFieldLabel = () => (
-  <div>
-    <p id="toggleSwitchLabel">Billing period:</p>
-    <ToggleSwitchStory id="toggleSwitch" aria-describedby="toggleSwitchLabel" />
-  </div>
-)
+export const WithAccessibleFieldLabel = () => {
+  const [value, setValue] = React.useState<string>("off")
 
-export const WithRichLabels = () => (
-  <ToggleSwitchStory
-    labelOn={
-      <div>
-        ON
-        <br />
-        <small css={(theme: Theme) => ({ color: theme.colors.grey[50] })}>
-          This is a rich label
-        </small>
-      </div>
-    }
-    labelOff={
-      <div>
-        OFF
-        <br />
-        <small css={(theme: Theme) => ({ color: theme.colors.grey[50] })}>
-          This is a rich label
-        </small>
-      </div>
-    }
-  />
-)
+  return (
+    <React.Fragment>
+      <p id="toggleSwitchLabel">Billing period:</p>
+      <ToggleSwitch
+        id="toggleSwitch"
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        valueOn="on"
+        valueOff="off"
+        labelOn="Monthly"
+        labelOff="Yearly"
+        aria-describedby="toggleSwitchLabel"
+      />
+    </React.Fragment>
+  )
+}
+
+export const WithRichLabels = Template.bind({})
+
+WithRichLabels.args = {
+  id: "rich-labels-switch",
+  valueOn: "on",
+  valueOff: "off",
+  labelOn: (
+    <div>
+      ON
+      <br />
+      <small css={(theme: Theme) => ({ color: theme.colors.grey[50] })}>
+        This is a rich label
+      </small>
+    </div>
+  ),
+  labelOff: (
+    <div>
+      OFF
+      <br />
+      <small css={(theme: Theme) => ({ color: theme.colors.grey[50] })}>
+        This is a rich label
+      </small>
+    </div>
+  ),
+}

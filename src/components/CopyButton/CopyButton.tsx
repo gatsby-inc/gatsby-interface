@@ -1,23 +1,21 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import PropTypes from "prop-types"
-import { css } from "@emotion/core"
-
 import copyToClipboard from "../../utils/helpers/copyToClipboard"
 import { ButtonProps, Button } from "../Button/Button"
+import { ThemeCss } from "../../theme"
 
-const baseCss = css`
-  html:not([dir="rtl"]) & {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  html[dir="rtl"] & {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-`
+const baseCss: ThemeCss = _theme => ({
+  "html:not([dir=rtl]) &": {
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
+  },
+  "html[dir=rtl] &": {
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0,
+  },
+})
 
 export type GetLabelFn = (copied: boolean) => string
 

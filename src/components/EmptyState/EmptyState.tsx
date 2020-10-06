@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { ThemeCss, Theme } from "../../theme"
 import { HeadingProps, Heading } from "../Heading"
 import { Text } from "../Text"

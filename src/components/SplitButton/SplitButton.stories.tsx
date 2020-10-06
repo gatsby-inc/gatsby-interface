@@ -1,29 +1,107 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-import { text, radios, boolean } from "@storybook/addon-knobs"
+import * as React from "react"
+import { DecoratorFn, Meta, Story } from "@storybook/react"
 import {
-  radioKnobOptions,
   withVariationsContainer,
   getStoryOptions,
   disableAnimationsDecorator,
 } from "../../utils/storybook"
-import { SplitButton, SplitButtonVariant } from "."
+import { SplitButton, SplitButtonProps, SplitButtonVariant } from "."
 import { ButtonTone, ButtonSize, ButtonWidth } from "../../theme/styles/button"
 import { DropdownMenuItem } from "../DropdownMenu"
-import { DecoratorFn } from "@storybook/react"
 import isChromatic from "storybook-chromatic/isChromatic"
+
+const VARIANTS: SplitButtonVariant[] = [`PRIMARY`, `SECONDARY`]
+const TONES: ButtonTone[] = [`BRAND`, `NEUTRAL`, `SUCCESS`, `DANGER`]
+const SIZES: ButtonSize[] = [`S`, `M`, `L`, `XL`]
+const WIDTHS: ButtonWidth[] = [`AUTO`, `FIT_CONTAINER`]
 
 export default {
   title: `SplitButton`,
   component: SplitButton,
   subcomponents: { DropdownMenuItem },
   decorators: [disableAnimationsDecorator],
-}
+  argTypes: {
+    variant: {
+      table: {
+        type: {
+          summary: VARIANTS.map(variant => `"${variant}"`).join(` | `),
+        },
+        defaultValue: {
+          summary: `PRIMARY`,
+        },
+      },
+      control: {
+        type: `select`,
+        options: VARIANTS,
+      },
+    },
+    tone: {
+      table: {
+        type: {
+          summary: TONES.map(tone => `"${tone}"`).join(` | `),
+        },
+        defaultValue: {
+          summary: `BRAND`,
+        },
+      },
+      control: {
+        type: `select`,
+        options: TONES,
+      },
+    },
+    size: {
+      table: {
+        type: {
+          summary: SIZES.map(size => `"${size}"`).join(` | `),
+        },
+        defaultValue: {
+          summary: `L`,
+        },
+      },
+      control: {
+        type: `select`,
+        options: SIZES,
+      },
+    },
+    width: {
+      table: {
+        type: {
+          summary: WIDTHS.map(width => `"${width}"`).join(` | `),
+        },
+        defaultValue: {
+          summary: `AUTO`,
+        },
+      },
+      control: {
+        type: `select`,
+        options: WIDTHS,
+      },
+    },
+    disabled: {
+      table: {
+        type: {
+          summary: `boolean`,
+        },
+        defaultValue: {
+          summary: false,
+        },
+      },
+      control: {
+        type: `boolean`,
+      },
+    },
+  },
+} as Meta
 
 const options = getStoryOptions("short")
 
 const withOpenMenuOnMount = (selector = "button"): DecoratorFn => {
+  if (!isChromatic()) {
+    return story => story()
+  }
+
   return story => {
     React.useEffect(() => {
       const button = document.querySelector<HTMLButtonElement>(selector)
@@ -41,12 +119,12 @@ const withOpenMenuOnMount = (selector = "button"): DecoratorFn => {
       }
     }, [])
 
-    return <div css={isChromatic() && { height: `100vh` }}>{story()}</div>
+    return <div css={{ height: `100vh` }}>{story()}</div>
   }
 }
 
-export const Basic = () => (
-  <SplitButton buttonLabel="Button" dropdownButtonLabel="Other options">
+const Template: Story<SplitButtonProps> = args => (
+  <SplitButton {...args}>
     {options.map(({ value, label }) => (
       <DropdownMenuItem onSelect={() => console.log(value)}>
         {label}
@@ -55,39 +133,14 @@ export const Basic = () => (
   </SplitButton>
 )
 
-Basic.story = {
-  decorators: [withOpenMenuOnMount(`button[aria-haspopup="true"]`)],
+export const Basic = Template.bind({})
+
+Basic.args = {
+  buttonLabel: `Button`,
+  dropdownButtonLabel: `Other options`,
 }
 
-const VARIANTS: SplitButtonVariant[] = [`PRIMARY`, `SECONDARY`]
-
-export const Sandbox = () => (
-  <SplitButton
-    buttonLabel={text("buttonLabel", "Button")}
-    dropdownButtonLabel={text("dropdownButtonLabel", "Other options")}
-    disabled={boolean("disabled", false)}
-    variant={radios(
-      `variant`,
-      radioKnobOptions<SplitButtonVariant>(VARIANTS),
-      `PRIMARY`
-    )}
-    tone={radios(`tone`, radioKnobOptions<ButtonTone>(TONES), `BRAND`)}
-    size={radios(`size`, radioKnobOptions<ButtonSize>(SIZES), `L`)}
-    width={radios(`width`, radioKnobOptions<ButtonWidth>(WIDTHS), `AUTO`)}
-  >
-    {options.map(({ value, label }) => (
-      <DropdownMenuItem onSelect={() => console.log(value)}>
-        {label}
-      </DropdownMenuItem>
-    ))}
-  </SplitButton>
-)
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
-}
+Basic.decorators = [withOpenMenuOnMount(`button[aria-haspopup="true"]`)]
 
 export const Variants = () =>
   VARIANTS.map(variant => (
@@ -109,8 +162,6 @@ Variants.story = {
   decorators: [withVariationsContainer],
 }
 
-const TONES: ButtonTone[] = [`BRAND`, `NEUTRAL`, `SUCCESS`, `DANGER`]
-
 export const Tones = () =>
   TONES.map(tone => (
     <SplitButton
@@ -131,8 +182,6 @@ Tones.story = {
   decorators: [withVariationsContainer],
 }
 
-const SIZES: ButtonSize[] = [`S`, `M`, `L`, `XL`]
-
 export const Sizes = () =>
   SIZES.map(size => (
     <SplitButton
@@ -152,8 +201,6 @@ export const Sizes = () =>
 Sizes.story = {
   decorators: [withVariationsContainer],
 }
-
-const WIDTHS: ButtonWidth[] = [`AUTO`, `FIT_CONTAINER`]
 
 export const Widths = () =>
   WIDTHS.map(width => (

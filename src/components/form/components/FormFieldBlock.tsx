@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-import { FormFieldBlockLayout } from "./FormField"
+import * as React from "react"
+import { FormFieldBlockLayout } from "../types"
 import {
   AriaFormFieldData,
   useAriaFormField,

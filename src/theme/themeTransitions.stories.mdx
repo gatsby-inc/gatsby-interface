@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { TransitionsShowcase } from "./utils/TransitionsShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Transitions" />
+
+# Transitions
+
+<br />
+
+<ThemeProvider>
+    <TransitionsShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    transition: `all ${theme.transitions.speed.slower} ${theme.transitions.curve.fastOutLinearIn}`,
+  })}
+/>
+```

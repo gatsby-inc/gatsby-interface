@@ -2,6 +2,86 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.211](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.210...v0.0.211) (2020-10-06)
+
+
+### Bug Fixes
+
+* **BuildLogs:** Handle multiple code blocks ([#404](https://github.com/gatsby-inc/gatsby-interface/issues/404)) ([4043fa3](https://github.com/gatsby-inc/gatsby-interface/commit/4043fa3c28bba49e2fa4f9f3621b5da9fce916ed))
+
+### [0.0.210](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.209...v0.0.210) (2020-10-05)
+
+
+### Bug Fixes
+
+* fix Toast throwing an error on render ([#402](https://github.com/gatsby-inc/gatsby-interface/issues/402)) ([4e08a26](https://github.com/gatsby-inc/gatsby-interface/commit/4e08a2633c834ef9b9bd849ff3d6cbd8e12fb133))
+
+### [0.0.209](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.208...v0.0.209) (2020-10-05)
+
+
+### Bug Fixes
+
+* replace keyframes with spring animation for DropdownMenu ([#401](https://github.com/gatsby-inc/gatsby-interface/issues/401)) ([0fbd388](https://github.com/gatsby-inc/gatsby-interface/commit/0fbd388b893cc033523c3bbb1b61841727ab8d24))
+
+### [0.0.208](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.207...v0.0.208) (2020-10-05)
+
+
+### Bug Fixes
+
+* various TypeScript fixes ([#400](https://github.com/gatsby-inc/gatsby-interface/issues/400)) ([0e1da56](https://github.com/gatsby-inc/gatsby-interface/commit/0e1da5655c768a88d39436ca280ae42c1d6c991a))
+
+### [0.0.207](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.206...v0.0.207) (2020-10-05)
+
+
+### Bug Fixes
+
+* **BuildLogs:** Updates location types to match graphql ([#399](https://github.com/gatsby-inc/gatsby-interface/issues/399)) ([5ca8ea1](https://github.com/gatsby-inc/gatsby-interface/commit/5ca8ea1d6b98af8ea7d43f2b7fb602b94c358891))
+
+### [0.0.206](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.205...v0.0.206) (2020-10-02)
+
+
+### Features
+
+* **dropdown:** Add `DropdownHeader`, `DropdownDivider` ([#393](https://github.com/gatsby-inc/gatsby-interface/issues/393)) ([2555c9c](https://github.com/gatsby-inc/gatsby-interface/commit/2555c9ca1242c1dad541de37b5bd1f7521f4e3f6))
+
+### [0.0.205](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.204...v0.0.205) (2020-10-02)
+
+
+### Features
+
+* **BuildLogs:** Display docsUrl and errorUrl for errors ([#395](https://github.com/gatsby-inc/gatsby-interface/issues/395)) ([421cfb5](https://github.com/gatsby-inc/gatsby-interface/commit/421cfb59549851b6183434fc3173325fcdb35737))
+
+### [0.0.204](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.203...v0.0.204) (2020-09-30)
+
+### [0.0.203](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.202...v0.0.203) (2020-09-30)
+
+### [0.0.202](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.201...v0.0.202) (2020-09-28)
+
+
+### Bug Fixes
+
+* Use 'import * as React' ([#391](https://github.com/gatsby-inc/gatsby-interface/issues/391)) ([353142c](https://github.com/gatsby-inc/gatsby-interface/commit/353142c8cf2e1b455b225d349ad95ad682ba6260))
+
+### [0.0.201](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.200...v0.0.201) (2020-09-25)
+
+### [0.0.200](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.199...v0.0.200) (2020-09-23)
+
+
+### Features
+
+* **DropdownMenu:** support new 'size' prop ([#388](https://github.com/gatsby-inc/gatsby-interface/issues/388)) ([6da3270](https://github.com/gatsby-inc/gatsby-interface/commit/6da3270f3bdc5f6a1b6c69aceb7d7022cab5c3e0))
+
+### [0.0.199](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.198...v0.0.199) (2020-09-16)
+
+### [0.0.198](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.197...v0.0.198) (2020-09-04)
+
+### [0.0.197](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.196...v0.0.197) (2020-09-04)
+
+
+### Features
+
+* SkipNavTrigger and SkipNavTarget components ([#385](https://github.com/gatsby-inc/gatsby-interface/issues/385)) ([c31c94e](https://github.com/gatsby-inc/gatsby-interface/commit/c31c94ec7c4601d9b192dda446484540ba28c158))
+
 ### [0.0.196](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.195...v0.0.196) (2020-09-02)
 
 

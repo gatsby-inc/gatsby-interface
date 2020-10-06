@@ -156,7 +156,35 @@ jobs:
 
 workflows:
   version: 2
-  run-branch-prerelease:
+  # This is now replaced with a manually triggered GitHub Action — "Pre-release"
+  # run-branch-prerelease:
+  #   jobs:
+  #     - is-green:
+  #         filters:
+  #           branches:
+  #             ignore:
+  #               - master
+  #               - main
+  #               - dev
+  #     - a11y-checks:
+  #         requires:
+  #           - is-green
+  #         filters:
+  #           branches:
+  #             ignore:
+  #               - master
+  #               - main
+  #               - dev
+  #     - branch-prerelease:
+  #         requires:
+  #           - is-green
+  #         filters:
+  #           branches:
+  #             ignore:
+  #               - master
+  #               - main
+  #               - dev
+  branch-check:
     jobs:
       - is-green:
           filters:
@@ -166,15 +194,6 @@ workflows:
                 - main
                 - dev
       - a11y-checks:
-          requires:
-            - is-green
-          filters:
-            branches:
-              ignore:
-                - master
-                - main
-                - dev
-      - branch-prerelease:
           requires:
             - is-green
           filters:

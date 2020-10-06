@@ -1,116 +1,188 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core"
-import React from "react"
-import { Story, Preview, DocsContext } from "@storybook/addon-docs/dist/blocks"
-import { text, radios, boolean } from "@storybook/addon-knobs"
-import coreClient from "@storybook/core/dist/client"
-import { radioKnobOptions } from "../../../utils/storybook/knobs"
-import { FormFieldLabelSize } from "../components/FormField.helpers"
-import { FormFieldBlockLayout } from "../components/FormField"
-import { FormGroupOptionsDirection } from "../components/FormGroupField"
+import {
+  StyledLabelSize,
+  FormFieldBlockLayout,
+  FormGroupOptionsDirection,
+} from ".."
+import { ArgTypes } from "@storybook/react"
+import { ErrorValidationMode } from "../../form-skeletons"
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
-
-export function getFieldSandboxProps() {
-  const label = text(`Label`, `Field label`)
-  const hint = text(`Hint`, ``)
-  const error = text(`Error`, ``)
-  const size = radios(`Label size`, radioKnobOptions(LABEL_SIZES), `M`)
-  const required = boolean(`Required`, false)
-  const disabled = boolean(`Disabled`, false)
-
-  return {
-    label,
-    hint,
-    error,
-    labelSize: size,
-    required,
-    disabled,
-  }
-}
-
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 const LAYOUTS: FormFieldBlockLayout[] = [`horizontal`, `vertical`]
+const VALIDATION_MODES: ErrorValidationMode[] = [`focus`, `change`, `submit`]
 
-export function getFieldBlockSandboxProps() {
-  const layout = radios(`Layout`, radioKnobOptions(LAYOUTS), `vertical`)
-
-  return {
-    ...getFieldSandboxProps(),
-    layout,
-  }
+export const commonFieldArgTypes: ArgTypes = {
+  id: {
+    description: `id is always required`,
+    type: {
+      required: true,
+    },
+    table: {
+      type: {
+        summary: `string`,
+      },
+    },
+    control: {
+      type: `text`,
+    },
+  },
+  label: {
+    type: {
+      required: true,
+    },
+    table: {
+      type: {
+        summary: `ReactNode`,
+      },
+    },
+    control: {
+      type: `text`,
+    },
+  },
+  labelSize: {
+    description: `Controls font size for the field label`,
+    table: {
+      type: {
+        summary: LABEL_SIZES.map(labelSize => `"${labelSize}"`).join(` | `),
+      },
+      defaultValue: {
+        summary: `M`,
+      },
+    },
+    control: {
+      type: `select`,
+      options: LABEL_SIZES,
+    },
+  },
+  hint: {
+    description: `Pass a hint/description message to be displayed below the field; it will be associated with the field control via ARIA attributes`,
+    table: {
+      type: {
+        summary: `ReactNode`,
+      },
+    },
+    control: {
+      type: `text`,
+    },
+  },
+  error: {
+    description: `Pass an error message to be displayed below the field; it will be associated with the field control via ARIA attributes`,
+    table: {
+      type: {
+        summary: `ReactNode`,
+      },
+    },
+    control: {
+      type: `text`,
+    },
+  },
+  required: {
+    description: `Whether the field should be marked as required`,
+    table: {
+      type: {
+        summary: `boolean`,
+      },
+    },
+    control: {
+      type: `boolean`,
+    },
+  },
+  disabled: {
+    description: `Whether the field should be marked as disabled`,
+    table: {
+      type: {
+        summary: `boolean`,
+      },
+    },
+    control: {
+      type: `boolean`,
+    },
+  },
+  layout: {
+    description: `Horizontal layout puts label in the same line as the field control; it reverts back to vertical layout on small screens`,
+    table: {
+      type: {
+        summary: LAYOUTS.map(layout => `"${layout}"`).join(` | `),
+      },
+      defaultValue: {
+        summary: `vertical`,
+      },
+    },
+    control: {
+      type: `select`,
+      options: LAYOUTS,
+    },
+  },
+  validationMode: {
+    description: `Instructs screen readers when to announce error messages`,
+    table: {
+      type: {
+        summary: VALIDATION_MODES.map(layout => `"${layout}"`).join(` | `),
+      },
+      defaultValue: {
+        summary: undefined,
+      },
+    },
+    control: {
+      type: `select`,
+      options: VALIDATION_MODES,
+    },
+  },
 }
 
 const OPTIONS_DIRECTIONS: FormGroupOptionsDirection[] = [`row`, `column`]
 
-export function getGroupFieldSandboxProps() {
-  const optionsDirection = radios(
-    `Options Direction`,
-    radioKnobOptions(OPTIONS_DIRECTIONS),
-    `column`
-  )
-
-  return {
-    ...getFieldBlockSandboxProps(),
-    optionsDirection,
-  }
+export const commonGroupFieldArgTypes: ArgTypes = {
+  optionsDirection: {
+    description: `Allows to display options inline ("row" value is only compatible with "default" variant)`,
+    table: {
+      type: {
+        summary: OPTIONS_DIRECTIONS.map(
+          optionsDirection => `"${optionsDirection}"`
+        ).join(` | `),
+      },
+      defaultValue: {
+        summary: `column`,
+      },
+    },
+    control: {
+      type: `select`,
+      options: OPTIONS_DIRECTIONS,
+    },
+  },
 }
 
-export function FieldDocDisclaimer({
-  blockComponentName,
-  connectedComponentName,
-  fieldType,
-}: {
-  blockComponentName: string
-  connectedComponentName: string
-  fieldType: string
-}) {
-  return (
-    <React.Fragment>
-      This compound component can be used as building blocks for your{" "}
-      {fieldType} fields. They do not have any spacing or positioning styles,
-      you'll have to take care of those yourself (or use{" "}
-      <code>{blockComponentName}</code> or <code>{connectedComponentName}</code>
-      )
-    </React.Fragment>
-  )
+export const requiredArgs = {
+  id: `required`,
+  name: `required`,
+  label: `Label`,
+  required: true,
 }
 
-class PropsStoryErrorBoundary extends React.Component<
-  { errorMessage?: string },
-  { hasError: boolean }
-> {
-  constructor(props: { errorMessage?: string }) {
-    super(props)
-    this.state = { hasError: false }
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <h1 style={{ color: "red" }}>
-          {this.props.errorMessage || `Something went wrong.`}
-        </h1>
-      )
-    }
-
-    return this.props.children
-  }
+export const disabledArgs = {
+  id: `disabled`,
+  name: `disabled`,
+  label: `Label`,
+  disabled: true,
 }
 
-export function PropsDescriptionStory({ storyName }: { storyName: string }) {
-  const docsContext = React.useContext(DocsContext)
+export const withHintArgs = {
+  id: `withHint`,
+  name: `withHint`,
+  label: `Label`,
+  hint: `Hint text`,
+}
 
-  return (
-    <PropsStoryErrorBoundary
-      errorMessage={`No story kind found for ${storyName}!`}
-    >
-      <Preview>
-        <Story id={coreClient.toId(docsContext.kind!, storyName)} />
-      </Preview>
-    </PropsStoryErrorBoundary>
-  )
+export const withErrorArgs = {
+  id: `withError`,
+  name: `withError`,
+  label: `Label`,
+  error: `Error message`,
+}
+
+export const withErrorAndHintArgs = {
+  id: `withErrorAndHint`,
+  name: `withErrorAndHint`,
+  label: `Label`,
+  hint: `Hint text`,
+  error: `Error message`,
 }

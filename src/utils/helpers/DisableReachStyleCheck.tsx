@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 /**
  * To mark our components built on top of ReachUI as safe for tree-shaking, we have to apply global styles

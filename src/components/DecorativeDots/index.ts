@@ -1,1 +1,1 @@
-export { default as DecorativeDots } from "./DecorativeDots"
+export * from "./DecorativeDots"

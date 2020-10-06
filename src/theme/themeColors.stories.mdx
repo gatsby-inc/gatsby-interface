@@ -1,0 +1,55 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { ColorsTable } from "./utils/ColorsTable"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Colors" />
+
+# Colors
+Vibrant, friendly, and accessible color is an important part of Gatsby’s design. It distinguishes our brand and helps us to create consistent experiences and meaningful expressions across marketing and products.
+
+Our color palette includes primary and secondary colors that can be used for interfaces as well as illustrations.
+
+<ThemeProvider>
+    <ColorsTable />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    color: theme.colors.green[50],
+    backgroundColor: theme.colors.white,
+  })}
+/>
+```
+
+## Accessibility
+We are committed to complying with [Web Content Accessibility Guidelines 2.0](https://www.w3.org/WAI/intro/wcag) Level AA standard contrast ratios. To do this, we need to choose primary, secondary and neutral colors that support usability. This ensures sufficient color contrast between elements so that users with low vision can see and use our products.
+
+### Color Contrast
+The WCAG provides an equation that determines these two values. It outputs a number between 0 and 21, with 21 being the highest amount of contrast—think black text and a white background—and 0 being no contrast—white on white. That ratio is where the scores are derived from. There are technically 5 scores:
+
+* **× — Fail** – `< 3.0` <br />
+  The text doesn't have enough contrast with the background.
+* **2+ — AA Large** – `>= 3.0` <br />
+  The smallest acceptable amount of contrast for type sizes of 14pt bold/18pt (which roughly translates to ~18.5px bold/24px @1x) and larger.
+* **2 — AA** – `>= 4.5` <br />
+  The required contrast score for text sizes below 14pt bold/18pt.
+* **3 — AAA** – `>= 7.0` <br />
+  Use it for longer form text that will be read for a significant period of time and requires enhanced contrast.
+* **AAA Large** <br />
+  AAA Large means that your large text has a contrast ratio of `4.5` or higher—which is the same score as AA, and which is why you won't see AAA Large as a visible score in our documentation.
+
+### Color Blindness
+
+There are different types of [color blindness](https://en.wikipedia.org/wiki/Color_blindness) — the most common form is red-green color blindness, followed by blue-yellow color blindness and total color blindness. Red-green color blindness affects up to 6% of males and 0.4% of females.
+
+When using color, ensure that adjacent color shades are distinguishable for color blind people. Use a color blindness analyzer to confirm your choices. Here are a couple of free apps and browser extensions to help:
+
+* [Sim Daltonism](https://michelf.ca/projects/sim-daltonism/) (iOS, Mac OS X)
+* [Color Oracle](https://colororacle.org/index.html) (Mac OS X, Windows, Linux)
+* A11Y - Color blindness empathy test ([Chrome](https://chrome.google.com/webstore/detail/a11y-color-blindness-empa/idphhflanmeibmjgaciaadkmjebljhcc), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/a11y-color-blindness-test/))

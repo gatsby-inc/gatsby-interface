@@ -24,14 +24,23 @@ const messageCss: ThemeCss = theme => ({
 
 export type BuildStandardLogEntryProps = Pick<
   BuildLogItem,
-  "level" | "message" | "context" | "filePath"
+  | "level"
+  | "message"
+  | "context"
+  | "filePath"
+  | "docsUrl"
+  | "location"
+  | "errorUrl"
 > & {}
 
 export function BuildStandardLogEntry({
   level,
   message,
   context,
+  location,
   filePath,
+  docsUrl,
+  errorUrl,
 }: BuildStandardLogEntryProps) {
   const displayMessage =
     context && context.stageLabel
@@ -46,6 +55,10 @@ export function BuildStandardLogEntry({
       <FormattedLogMessage
         message={displayMessage}
         level={level}
+        location={location}
+        filePath={filePath}
+        docsUrl={docsUrl}
+        errorUrl={errorUrl}
         css={messageCss}
       />
     </BuildLogEntrySkeleton>

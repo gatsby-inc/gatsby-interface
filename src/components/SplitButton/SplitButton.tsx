@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { ThemeCss } from "../../theme"
 import { ButtonVariant } from "../../theme/styles/button"
 import {
@@ -120,7 +120,7 @@ export function SplitButton({
           disabled={disabled}
         />
         <DropdownMenuPopover position={positionMenuPopover}>
-          <DropdownMenuItemsLowLevel css={{ width: `auto` }}>
+          <DropdownMenuItemsLowLevel size="AUTO">
             {children}
           </DropdownMenuItemsLowLevel>
         </DropdownMenuPopover>

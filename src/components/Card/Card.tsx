@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { ThemeCss } from "../../theme"
 import { Heading, HeadingProps } from "../Heading"
 
@@ -68,7 +68,7 @@ const headerCss: ThemeCss = theme => ({
   lineHeight: 1,
 })
 
-export type CardHeaderProps = Omit<CardSectionProps, "as"> & {
+export type CardHeaderProps = Omit<CardSectionProps, "as" | "title"> & {
   as?: "header" | "div"
   title: React.ReactNode
   titleAs?: HeadingProps["as"]

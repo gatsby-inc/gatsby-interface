@@ -1,105 +1,80 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
+import { Meta, Story } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
-import { SelectFieldBlock, FormFieldBlockLayout } from ".."
-import { FormFieldLabelSize } from "../components/FormField.helpers"
-import { getFieldBlockSandboxProps } from "./stories.utils"
-import { text } from "@storybook/addon-knobs"
-import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
-import { withVariationsContainer } from "../../../utils/storybook"
-import SelectFieldBlockDocs from "./SelectFieldBlock.mdx"
+import Markdown from "markdown-to-jsx"
+import {
+  commonFieldArgTypes,
+  disabledArgs,
+  requiredArgs,
+  withErrorAndHintArgs,
+  withErrorArgs,
+  withHintArgs,
+} from "./stories.utils"
+import {
+  withVariationsContainer,
+  getGroupFieldStoryOptions,
+} from "../../../utils/storybook"
+import {
+  SelectFieldBlock,
+  SelectFieldBlockProps,
+  FormFieldBlockLayout,
+  StyledLabelSize,
+} from ".."
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 const options = getGroupFieldStoryOptions()
 
 export default {
   title: `Form/Styled Blocks/SelectFieldBlock`,
   parameters: {
+    componentSubtitle: (
+      <Markdown>{`Accepts all of the props supported by \`<select />\` as well as the props shared between field block components`}</Markdown>
+    ),
     layout: `padded`,
     options: {
       showRoots: true,
     },
-    docs: {
-      page: SelectFieldBlockDocs,
-    },
     chromatic: { pauseAnimationAtEnd: true },
   },
-}
-
-export const Basic = () => (
-  <SelectFieldBlock
-    id="SelectFieldBlock"
-    label="Field label"
-    onChange={e => action(`Change`)(e.target.value)}
-    options={options}
-  />
-)
-
-export const Sandbox = () => {
-  const placeholder = text(`Placeholder`, `This is a placeholder`)
-  return (
-    <SelectFieldBlock
-      id="SelectFieldBlock"
-      placeholder={placeholder}
-      {...getFieldBlockSandboxProps()}
-      options={options}
-    />
-  )
-}
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
+  argTypes: {
+    ...commonFieldArgTypes,
   },
+} as Meta
+
+const Template: Story<SelectFieldBlockProps> = args => (
+  <SelectFieldBlock {...args} />
+)
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  id: `basic`,
+  label: `Label`,
+  onChange: e => action(`Change`)(e.target.value),
+  options,
 }
 
-export const Required = () => (
-  <SelectFieldBlock
-    id="SelectFieldBlock"
-    label="Field label"
-    options={options}
-    required
-  />
-)
+export const Required = Template.bind({})
 
-export const Disabled = () => (
-  <SelectFieldBlock
-    id="SelectFieldBlock"
-    label="Field label"
-    options={options}
-    disabled
-  />
-)
+Required.args = { ...requiredArgs, options }
 
-export const WithHint = () => (
-  <SelectFieldBlock
-    id="SelectFieldBlock"
-    label="Field label"
-    options={options}
-    hint="Hint text"
-  />
-)
+export const Disabled = Template.bind({})
 
-export const WithError = () => (
-  <SelectFieldBlock
-    id="SelectFieldBlock"
-    label="Field label"
-    options={options}
-    error="Error message"
-  />
-)
+Disabled.args = { ...disabledArgs, options }
 
-export const WithErrorAndHint = () => (
-  <SelectFieldBlock
-    id="SelectFieldBlock"
-    label="Field label"
-    options={options}
-    hint="Hint text"
-    error="Error message"
-  />
-)
+export const WithHint = Template.bind({})
+
+WithHint.args = { ...withHintArgs, options }
+
+export const WithError = Template.bind({})
+
+WithError.args = { ...withErrorArgs, options }
+
+export const WithErrorAndHint = Template.bind({})
+
+WithErrorAndHint.args = { ...withErrorAndHintArgs, options }
 
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (

@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { FontWeightsShowcase } from "./utils/FontWeightsShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Font Weights" />
+
+# Font Weights
+
+<br />
+
+<ThemeProvider>
+    <FontWeightsShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    fontWeight: theme.fontWeights.bold,
+  })}
+/>
+```

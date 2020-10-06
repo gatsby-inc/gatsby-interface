@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-import { text, color, boolean, number, radios } from "@storybook/addon-knobs"
-import Avatar from "./Avatar"
-import AvatarsGroup from "./AvatarsGroup"
-import { AvatarSize } from "./index"
-import { radioKnobOptions } from "../../utils/storybook"
+import * as React from "react"
+import { Meta, Story } from "@storybook/react"
+import { Avatar, AvatarProps, AvatarSize } from "."
+
+const SIZES: AvatarSize[] = [`XS`, `S`, `M`, `L`, `XL`, `XXL`]
 
 export default {
   title: `Avatar`,
@@ -19,33 +18,15 @@ export default {
         "https://www.figma.com/file/E9BxE7udN0PmULGRCevSsGtK/Avatars?node-id=257%3A0",
     },
   },
-}
+} as Meta
 
 const IMG_URL_1 = `https://picsum.photos/id/1005/200/200`
-const IMG_URL_2 = `https://picsum.photos/id/1025/200/200`
-const SIZES: AvatarSize[] = [`XS`, `S`, `M`, `L`, `XL`, `XXL`]
 
-export const Basic = () => <Avatar src={IMG_URL_1} label="A nice userpic" />
+const Template: Story<AvatarProps> = args => <Avatar {...args} />
 
-export const Sandbox = () => {
-  const bordered = boolean("Show border?", false)
-  const borderColor = color("borderColor", "#000")
-  return (
-    <Avatar
-      src={text("src", IMG_URL_1)}
-      label={text("label", "John Doe")}
-      fallback={text("fallback text", "JD")}
-      borderColor={bordered ? borderColor : null}
-      size={radios("size", radioKnobOptions(SIZES), "M")}
-    />
-  )
-}
+export const Basic = Template.bind({})
 
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
-}
+Basic.args = { src: IMG_URL_1, label: "A nice userpic" }
 
 export const Sizes = () => (
   <React.Fragment>
@@ -74,56 +55,3 @@ export const Sizes = () => (
     </div>
   </React.Fragment>
 )
-
-export const AvatarsGroupStory = () => (
-  <AvatarsGroup
-    avatars={[
-      {
-        src: IMG_URL_1,
-        label: `John Doe`,
-      },
-      { src: ``, label: `John Doe`, fallback: "JD" },
-      {
-        src: IMG_URL_2,
-        label: `Jane Doe`,
-      },
-    ]}
-    omittedAvatarsCount={3}
-    omittedAvatarsLabel="3 more users not shown"
-  />
-)
-
-AvatarsGroupStory.story = {
-  name: `AvatarsGroup`,
-}
-
-export const AvatarsGroupSandbox = () => {
-  return (
-    <AvatarsGroup
-      avatars={[
-        {
-          src: IMG_URL_1,
-          label: `John Doe`,
-        },
-        { src: ``, label: `John Doe`, fallback: "JD" },
-        {
-          src: IMG_URL_2,
-          label: `Jane Doe`,
-        },
-      ]}
-      borderColor={color("borderColor", "#fff")}
-      size={radios("size", radioKnobOptions(SIZES), "M")}
-      omittedAvatarsCount={number("omittedAvatarsCount", 1)}
-      omittedAvatarsLabel={text(
-        "omittedAvatarsLabel",
-        "More users not displayed"
-      )}
-    />
-  )
-}
-
-AvatarsGroupSandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
-}

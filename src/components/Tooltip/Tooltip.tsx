@@ -1,10 +1,10 @@
-import React from "react"
+import * as React from "react"
 import { useTooltip } from "@reach/tooltip"
 import { useTransition, animated } from "react-spring"
 
-import { TooltipPosition } from "./types"
 import TooltipContent from "./TooltipContent"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
+import { TooltipPosition } from "./types"
 
 const AnimatedTooltipContent = animated(TooltipContent)
 
@@ -15,7 +15,7 @@ const transitionConfig = {
 }
 
 export type TooltipProps = Omit<
-  JSX.IntrinsicElements["div"],
+  React.ComponentPropsWithoutRef<"div">,
   "ref" | "label" | "children"
 > & {
   label: React.ReactNode

@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { ThemeProvider as ThemeUiProvider, useThemeUI } from "theme-ui"
 import { getTheme, Theme } from "../../theme"
 

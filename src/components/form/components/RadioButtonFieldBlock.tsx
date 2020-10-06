@@ -1,11 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
-import {
-  RadioButtonFieldOptionItemProps,
-  RadioButtonFieldVariant,
-} from "./RadioButtonField"
-import { FormGroupOptionsDirection } from "./FormGroupField"
+import { FormGroupOptionsDirection, GroupControlProps } from "../types"
 import { FormGroupFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
 import {
   StyledRadioButton,
@@ -13,7 +9,7 @@ import {
 } from "./styled-primitives/StyledRadio"
 import { OptionsContainer } from "./styled-primitives/StyledFormElements"
 import { Theme, ThemeCss } from "../../../theme"
-import React from "react"
+import * as React from "react"
 import { getOptionLabelOffsetStyles } from "../styles"
 
 const framedCss: ThemeCss = theme => ({
@@ -28,10 +24,12 @@ const framedCss: ThemeCss = theme => ({
   paddingRight: theme.space[5],
 })
 
+export type RadioButtonFieldVariant = "default" | "framed"
+
 export type RadioButtonFieldBlockOption = {
   label: React.ReactNode
   value: string
-} & Partial<Omit<RadioButtonFieldOptionItemProps, "label" | "value">>
+} & Partial<Omit<GroupControlProps, "label" | "value">>
 
 export type RadioButtonFieldBlockProps = WithFormFieldBlock<
   {
@@ -39,7 +37,7 @@ export type RadioButtonFieldBlockProps = WithFormFieldBlock<
     value?: string
     optionsDirection?: FormGroupOptionsDirection
     variant?: RadioButtonFieldVariant
-  } & Omit<RadioButtonFieldOptionItemProps, "value">
+  } & Omit<GroupControlProps, "value" | "type">
 >
 
 export const RadioButtonFieldBlock = (props: RadioButtonFieldBlockProps) => {

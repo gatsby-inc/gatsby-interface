@@ -1,42 +1,61 @@
-import React from "react"
+import * as React from "react"
+import { Meta, Story } from "@storybook/react"
+import { DecorativeDots, DecorativeDotsProps } from "./"
+import isChromatic from "storybook-chromatic/isChromatic"
 
-import { storiesOf } from "@storybook/react"
-import { number } from "@storybook/addon-knobs"
-
-import { StoryUtils } from "../../utils/storybook"
-import { DecorativeDots } from "./"
-import README from "./README.md"
-
-storiesOf(`DecorativeDots`, module)
-  .addParameters({
-    options: {
-      showPanel: true,
+export default {
+  title: `DecorativeDots`,
+  component: DecorativeDots,
+  argTypes: {
+    dotSize: {
+      control: {
+        type: "range",
+        min: 4,
+        max: 40,
+        step: 1,
+      },
     },
-    readme: {
-      sidebar: README,
-      includePropTables: [DecorativeDots],
+    fadeStrength: {
+      control: {
+        type: "range",
+        min: 0,
+        max: 0.5,
+        step: 0.01,
+      },
     },
-    // TODO leverage isChromatic and testSafeSample/testSafeMathRandom instead of ignoring the story
-    chromatic: { disable: true },
-  })
-  .add(`Default`, () => (
-    <StoryUtils.Container>
-      <DecorativeDots
-        width={number(`width`, 300)}
-        height={number(`height`, 200)}
-        dotSize={number(`dotSize`, 20, {
-          range: true,
-          min: 4,
-          max: 40,
-          step: 1,
-        })}
-        angle={number(`angle`, 0, { range: true, min: 0, max: 360, step: 1 })}
-        fadeStrength={number(`fadeStrength`, 0.25, {
-          range: true,
-          min: 0,
-          max: 0.5,
-          step: 0.01,
-        })}
-      />
-    </StoryUtils.Container>
-  ))
+    angle: {
+      control: {
+        type: `range`,
+        min: 0,
+        max: 360,
+        step: 1,
+      },
+    },
+    __random: {
+      control: {
+        disable: true,
+      },
+    },
+    __sample: {
+      control: {
+        disable: true,
+      },
+    },
+  },
+} as Meta
+
+const Template: Story<DecorativeDotsProps> = args => (
+  <DecorativeDots
+    {...args}
+    __random={isChromatic() ? () => 0.65 : undefined}
+    __sample={isChromatic() ? values => values[1] : undefined}
+  />
+)
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  width: 300,
+  height: 300,
+  dotSize: 20,
+}

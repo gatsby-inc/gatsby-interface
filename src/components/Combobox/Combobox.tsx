@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import {
   Combobox as ReachCombobox,
   ComboboxProps as ReachComboboxProps,
@@ -140,10 +140,11 @@ export const ComboboxInput = React.forwardRef<
         selectOnClick
         onKeyDown={onKeyDown}
         css={theme => [
-          inputCss(hasError)(theme),
+          inputCss(theme),
           showSelectedOptionLabel && inputWithSelectedValueCss(theme),
           showToggleButton && inputWithToggleButtonCss(theme),
         ]}
+        aria-invalid={hasError}
         {...delegated}
       />
       {!!selectedOptionLabel && (
@@ -161,15 +162,11 @@ export const ComboboxInput = React.forwardRef<
   )
 })
 
-export type ComboboxPopoverProps = PropsWithAs<
-  "div",
-  ReachComboboxPopoverProps &
-    Partial<PopoverProps> &
-    React.RefAttributes<HTMLDivElement>
->
+export type ComboboxPopoverProps = ReachComboboxPopoverProps &
+  Partial<PopoverProps>
 
 export const ComboboxPopover = React.forwardRef<
-  HTMLInputElement,
+  HTMLDivElement,
   ComboboxPopoverProps
 >(function ComboboxPopover(props, ref) {
   return (

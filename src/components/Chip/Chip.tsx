@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { css } from "@emotion/core"
 import BaseChip, { BaseChipProps } from "./BaseChip"
 
