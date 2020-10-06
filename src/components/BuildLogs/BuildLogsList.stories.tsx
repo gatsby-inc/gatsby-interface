@@ -231,7 +231,31 @@ const ALL_INCLUSIVE = [
       'There was an error in your GraphQL query:\n\nVariable "$slug" is never used in operation "BlogPostBySlug".\n\nGraphQL request:2:24\n1 |\n2 |   query BlogPostBySlug($slug: String!) {\n  |                        ^\n3 |     site {',
     code: "85901",
     type: "GRAPHQL",
-    filePath: "/usr/src/app/www/src/templates/blog-post.js",
+    filePath: "templates/blog-post.js",
+    location: {
+      start: {
+        line: 13,
+        column: 5,
+      },
+    },
+    errorUrl:
+      "https://www.github.com/julienp-test-org/gatsby-starter-blog/blob/local-dev/src/pages/index3.js#L13",
+    docsUrl: "https://gatsby.dev/issue-how-to",
+    context: {
+      sourceMessage:
+        'Variable "$slug" is never used in operation "BlogPostBySlug".\n\nGraphQL request:2:24\n1 |\n2 |   query BlogPostBySlug($slug: String!) {\n  |                        ^\n3 |     site {',
+    },
+    level: StructuredLogLevel.Error,
+    __typename: "StructuredLog",
+    activity: null,
+  },
+
+  {
+    id: "32d47075-c836-4343-9d9f-dc878da94a0e",
+    message: `There was an error in your GraphQL query:\n\nVariable "$missingVar" is not defined by operation "SomeQuery".\n\nGraphQL request:16:32\n15 |           frontmatter {\n16 |             date(formatString: $missingVar)\n   |                                ^\n17 |             title\n\nGraphQL request:2:3\n1 |\n2 |   query {\n  |   ^\n3 |     site {`,
+    code: "85901",
+    type: "GRAPHQL",
+    filePath: "templates/blog-post.js",
     location: {
       start: {
         line: 13,
