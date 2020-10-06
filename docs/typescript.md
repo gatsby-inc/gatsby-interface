@@ -22,6 +22,8 @@ This document's goal is to provide some guidelines and suggestions on using Type
   - [Event handlers](#event-handlers)
   - [Context](#context)
 - [Emotion](#emotion)
+  - [Inline CSS](#inline-css)
+  - [Styled components](#styled-components)
 - [Typing Third-party Libraries](#typing-third-party-libraries)
 
 ## Prop Types
@@ -287,38 +289,11 @@ return <button ref={ref}>Click me!</button>
 
 ### React.FC
 
-If you're a fan of declaring components as arrow functions, you can use a shortcut `React.FC<T>` &mdash; it injects `children: React.ReactNode` into the type `T` that you provide and provides a return type. So, instead of writing
-
-```typescript
-export type MyComponentProps = {
-  children?: React.ReactNode
-  someRandomNumber: number
-}
-
-function MyComponent({ children, someRandomNumber }: MyComponentProps) {
-  /* ... */
-}
-```
-
-you could have
-
-```typescript
-export type MyComponentProps = {
-    someRandomNumber: number;
-}
-
-const MyComponent: React.FC<MyComponentProps> = ({ children, someRandomNumber }: MyComponentProps) {
-    /* ... */
-}
-
-export default MyComponent
-```
-
-However, this can mess up prop types for components that import `MyComponentProps` since they might expect that `children` would be there which isn't true for the second case.
+Using `React.FC` in gatsby-interface is discouraged for several reasons such as lack of generics support and the implicit `children` props (you can read more on this in [this thread](https://github.com/facebook/create-react-app/pull/8177))
 
 ### React.forwardRef
 
-`React.forwardRef` accepts two generic types: ref type and prop types:
+In TypeScript, `React.forwardRef` accepts two generic types: ref type and prop types. The ref type represents what the forwarded ref is going to be. In the case of native HTML tags, it is to one of the React built-in types: `HTMLInputElement` for `<input>`, `HTMLAnchorElement` for `<a>` etc.
 
 ```typescript
 export type MyToggleProps = {
@@ -348,14 +323,36 @@ export default MyToggle
 
 ### Event handlers
 
-React has type aliases for basically all `onX` props that can be used on native HTML elements. Here are some examples (generic type `<T>` usually refers to the element that the event is attached to, i.e. `e.currentTarget`):
+For event callbacks passed to HTML elements, you can use built-in React types such as `React.MouseEventHandler` or `React.ChangeEventHandler`. This can be especially helpful if you need to extract the callback from JSX (or put it into `React.useCallback`):
 
-- `onClick`, `onMouseEnter`, `onMouseLeave`, `onMouseDown` etc &mdash; `React.MouseEventHandler<T>`
-- `onFocus`, `onBlur` &mdash; `React.FocusEventHandler<T>`
-- `onChange` for `input`, `select` and `textarea` &mdash; `React.ChangeEventHandler<T>`
-- `onSubmit` &mdash; `React.FormEventHandler<T>`
+```tsx
+function useLogButtonTypeOnClick() {
+  // No need to type "e",
+  // its type is inferred from React.MouseEventHandler<HTMLButtonElement>
+  const onClick: React.MouseEventHandler<HTMLButtonElement> = e => {
+    // even more cool, "currentTarget" infers its type from HTMLButtonElement
+    console.log(e.currentTarget.type)
+    e.preventDefault()
+  }
+}
+```
 
-You can use these aliases in your prop types for props.
+Here are some of the built-in types for event handlers:
+
+- `onClick`, `onMouseEnter`, `onMouseLeave`, `onMouseDown` etc — `React.MouseEventHandler<T>`
+- `onFocus`, `onBlur` — `React.FocusEventHandler<T>`
+- `onChange` for `input`, `select` and `textarea` — `React.ChangeEventHandler<T>`
+- `onSubmit` — `React.FormEventHandler<T>`
+
+For custom, manually called callbacks you can define their types like this:
+
+```tsx
+export type DopeComponentProps = {
+  onSuccess: (someValue: string, someOtherValue?: number) => void
+}
+```
+
+Here, we are declaring types for both accepted parameters (`someValue` and `someOtherValue`) as well as "return" type. It is generally better to make such callbacks return nothing (i.e. `undefined`, which is equivalent to `void` when typing functions), unless you really need to use the return value of the callback.
 
 ### Context
 
@@ -397,6 +394,98 @@ export function useToast() {
 ```
 
 ## Emotion
+
+The main benefit from using TypeScript with Emotion is to get autocompletion for theme scales — you won't need to [look up](https://gatsby-interface.netlify.app/?path=/story/theme-scales--font-weights) what font weights are available anymore. It will also prevent you from trying to access non-existing theme values, such as `theme.space[16]` or `theme.colors.purple[45]`.
+
+To get the best out of TypeScript when working with Emotion you'll need just one thing — provide types for your themed styles:
+
+```tsx
+// src/components/SomeComponent/SomeComponent.tsx
+import { ThemeCss } from "../../theme"
+
+const baseCss: ThemeCss = theme => ({
+  color: theme.colors.purple[50],
+})
+```
+
+### Inline CSS
+
+If you need to use inline styles in your `css` prop, there are several approaches you can try:
+
+#### Move inline styles into a typed variable
+
+This is the preferred approach for Cloud codebase, as it not only allows to get away with importing just `ThemeCss`, but also has an additional benefit of making your JSX cleaner:
+
+```tsx
+// src/components/StylishDopeComponent/StylishDopeComponent.tsx
+import { ThemeCss } from "../../theme"
+
+const baseCss: ThemeCss = theme => ({
+  color: theme.colors.purple[50],
+})
+
+export type StylishDopeComponentProps = {
+  backgroundImage: string
+}
+
+export function StylishDopeComponent({
+  backgroundImage,
+}: StylishDopeComponentProps) {
+  const styles: ThemeCss = theme => [baseCss(theme), { backgroundImage }]
+
+  return <div css={styles} />
+}
+```
+
+#### Use type casting
+
+Best not to use this, as it makes the JSX even less readable.
+
+```tsx
+// src/components/StylishDopeComponent/StylishDopeComponent.tsx
+import { ThemeCss } from "../../theme"
+
+const baseCss: ThemeCss = theme => ({
+  color: theme.colors.purple[50],
+})
+
+export type StylishDopeComponentProps = {
+  backgroundImage: string
+}
+
+export function StylishDopeComponent({
+  backgroundImage,
+}: StylishDopeComponentProps) {
+  return (
+    <div css={(theme => [baseCss(theme), { backgroundImage }]) as ThemeCss} />
+  )
+}
+```
+
+#### Use Theme type
+
+A middle-ground solution, useful in cases when you have too many inline `css` props to move them into separate variables.
+
+```tsx
+// src/components/StylishDopeComponent/StylishDopeComponent.tsx
+import { ThemeCss, Theme } from "../../theme"
+
+const baseCss: ThemeCss = theme => ({
+  color: theme.colors.purple[50],
+})
+
+export type StylishDopeComponentProps = {
+  backgroundImage: string
+}
+
+export function StylishDopeComponent({
+  backgroundImage,
+}: StylishDopeComponentProps) {
+  return <div css={(theme: Theme) => [baseCss(theme), { backgroundImage }]} />
+}
+```
+
+### Styled components
 
 It is possible to provide prop types for your `styled` components:
 

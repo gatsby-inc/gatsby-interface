@@ -26,12 +26,14 @@ let componentCmdValue = ``
 program
   .version(`0.0.1`)
   .arguments(`<name>`)
+  .option("-wv, --withVariant", "scaffold variant prop for the component")
   .action(name => (componentCmdValue = name))
   .parse(process.argv)
 
-scaffold(componentCmdValue)
+scaffold(componentCmdValue, program.opts())
+console.log(program.opts())
 
-function scaffold(componentName) {
+function scaffold(componentName, { withVariant = false } = {}) {
   if (!componentName) {
     console.error(
       `${chalk.red(`Error:`)} No component name specified, use ${chalk.cyan(
@@ -43,7 +45,9 @@ function scaffold(componentName) {
 
   const basePath = path.join(process.cwd(), `./src`)
 
-  scaffoldComponent(componentName.trim(), basePath, {})
+  scaffoldComponent(componentName.trim(), basePath, {
+    SCAFFOLD_VARIANT: Boolean(withVariant),
+  })
 }
 
 function scaffoldComponent(componentName, basePath, context) {
