@@ -13,7 +13,7 @@
   "sideEffects": false,
   "scripts": {
     "test": "jest --env=jest-environment-jsdom-sixteen",
-    "test:a11y": "jest __tests__/AccessiblityStoryshots.test.js --testPathIgnorePatterns=[]",
+    "test:a11y": "jest __tests__/AccessiblityStoryshots.test.js --testPathIgnorePatterns=[] --env=jest-environment-jsdom-sixteen",
     "test:watch": "jest --watch --env=jest-environment-jsdom-sixteen",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
