@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.211](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.210...v0.0.211) (2020-10-06)
+
+
+### Bug Fixes
+
+* **BuildLogs:** Handle multiple code blocks ([#404](https://github.com/gatsby-inc/gatsby-interface/issues/404)) ([4043fa3](https://github.com/gatsby-inc/gatsby-interface/commit/4043fa3c28bba49e2fa4f9f3621b5da9fce916ed))
+
 ### [0.0.210](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.209...v0.0.210) (2020-10-05)
 
 
