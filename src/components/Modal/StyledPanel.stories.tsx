@@ -141,18 +141,7 @@ UsageExample.story = {
 }
 
 export const Boilerplate = () => {
-  const [isOpen, setIsOpen] = React.useState<boolean>(false)
-
-  React.useEffect(() => {
-    // Open panel in Chromatic to keep track of visual regressions
-    if (!isChromatic()) {
-      return
-    }
-    const button = document.querySelector("button")
-    if (button) {
-      button.click()
-    }
-  }, [])
+  const [isOpen, setIsOpen] = React.useState<boolean>(true)
 
   return (
     <React.Fragment>
@@ -175,10 +164,10 @@ export const Boilerplate = () => {
   )
 }
 
-UsageExample.story = {
+Boilerplate.story = {
   decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
 }
 
-UsageExample.parameters = {
-  chromatic: { delay: 1000 },
+Boilerplate.parameters = {
+  chromatic: { delay: 150 },
 }
