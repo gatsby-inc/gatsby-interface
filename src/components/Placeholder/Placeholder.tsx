@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React, { useContext } from "react"
+import * as React from "react"
 import { ThemeCss, Theme } from "../../theme"
 import { SpacerSize } from "../Spacer"
 
@@ -55,7 +55,7 @@ export const PlaceholderBox: React.FC<PlaceholderBoxProps> = ({
   radii = 2,
   ...props
 }) => {
-  const { animation } = useContext(PlaceholderContext)
+  const { animation } = React.useContext(PlaceholderContext)
 
   return (
     <div
