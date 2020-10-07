@@ -147,7 +147,13 @@ export function StickyObserverSentinel(_props: StickyObserverSentinelProps) {
     }
   }, [lipShadowPosition, sentinelRef.current])
 
-  return <div ref={sentinelRef} css={{ height: `1px` }} aria-hidden />
+  return (
+    <div
+      ref={sentinelRef}
+      css={{ height: `1px`, backgroundColor: `inherit` }}
+      aria-hidden
+    />
+  )
 }
 
 export type StickyLipShadowProps = {}

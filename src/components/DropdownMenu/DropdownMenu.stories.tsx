@@ -8,6 +8,7 @@ import {
   DropdownMenuLink,
   DropdownMenuItem,
   DropdownMenuItems,
+  DropdownMenuItemsLowLevel,
   DropdownMenuButtonStyled,
   DropdownDivider,
   DropdownHeader,
@@ -22,6 +23,8 @@ import {
 } from "../../utils/storybook"
 import { DropdownMenuSize } from "./DropdownMenu"
 import { Notification } from "../Notification"
+import { Link } from "gatsby"
+import { positionRight } from "@reach/popover"
 
 export default {
   title: `DropdownMenu`,
@@ -31,6 +34,7 @@ export default {
     DropdownMenuButtonStyled,
     DropdownMenuPopover,
     DropdownMenuItems,
+    DropdownMenuItemsLowLevel,
     DropdownMenuLink,
     DropdownMenuItem,
   },
@@ -86,6 +90,10 @@ export const Basic = () => {
   )
 }
 
+Basic.parameters = {
+  chromatic: { delay: 150 },
+}
+
 export const Sandbox = () => {
   return (
     <DropdownMenu>
@@ -122,12 +130,17 @@ function ForceOpenMenu() {
   const selfRef = React.useRef<HTMLDivElement>(null)
   React.useEffect(() => {
     let menu: HTMLElement | null = selfRef.current
-    while (menu && !menu.hasAttribute("data-reach-menu")) {
-      menu = menu.parentElement
+    let menuContainer: HTMLElement | null = menu
+    while (menuContainer && !menuContainer.hasAttribute("data-reach-menu")) {
+      menu = menuContainer
+      menuContainer = menuContainer.parentElement
     }
 
-    if (menu) {
-      menu.removeAttribute("hidden")
+    if (menuContainer) {
+      menuContainer.removeAttribute("hidden")
+      if (menu) {
+        menu.removeAttribute("style")
+      }
     }
   })
 
@@ -172,6 +185,10 @@ export const Sizes = () => {
   )
 }
 
+Sizes.parameters = {
+  chromatic: { delay: 150 },
+}
+
 export const MenuLinks = () => {
   useOpenMenuOnMount()
 
@@ -181,20 +198,37 @@ export const MenuLinks = () => {
         <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
         <DropdownMenuItems>
           {["Ashalmawia", "Addadshashanammu", "Ularradallaku"].map(item => (
-            <DropdownMenuLink
-              href={`https://www.google.com/search?q=${item}`}
-              target="_blank"
-              rel="noreferrer noopener"
-              key={item}
-              onSelect={() => action("Select")(item)}
-            >
-              {item}
-            </DropdownMenuLink>
+            <React.Fragment>
+              <DropdownMenuLink
+                href={`https://www.google.com/search?q=${item}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                key={item}
+                as={"a"}
+                onSelect={() => action("Select")(item)}
+              >
+                {item} {`(as "<a>")`}
+              </DropdownMenuLink>
+              <DropdownMenuLink
+                to={`https://www.google.com/search?q=${item}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                key={item}
+                as={Link}
+                onSelect={() => action("Select")(item)}
+              >
+                {item} {`(as "<Link>")`}
+              </DropdownMenuLink>
+            </React.Fragment>
           ))}
         </DropdownMenuItems>
       </DropdownMenu>
     </div>
   )
+}
+
+MenuLinks.parameters = {
+  chromatic: { delay: 150 },
 }
 
 export const StyledButton = () => {
@@ -227,6 +261,36 @@ export const WithComponentPlaceholder = () => {
       </DropdownMenuItems>
     </DropdownMenu>
   )
+}
+
+export const WithCustomPositioning = () => {
+  useOpenMenuOnMount()
+
+  return (
+    <div css={{ minHeight: "100vh" }}>
+      <DropdownMenu>
+        <DropdownMenuButton onKeyDown={console.log}>
+          Click this button to open dropdown
+        </DropdownMenuButton>
+        <DropdownMenuPopover position={positionRight}>
+          <DropdownMenuItemsLowLevel size="MAX_CONTENT">
+            {items.map(item => (
+              <DropdownMenuItem
+                key={item}
+                onSelect={() => action("Select")(item)}
+              >
+                {item}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuItemsLowLevel>
+        </DropdownMenuPopover>
+      </DropdownMenu>
+    </div>
+  )
+}
+
+WithCustomPositioning.parameters = {
+  chromatic: { delay: 150 },
 }
 
 function useOpenMenuOnMount() {

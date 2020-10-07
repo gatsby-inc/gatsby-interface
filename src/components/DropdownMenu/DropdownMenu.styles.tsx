@@ -1,13 +1,5 @@
 import { ThemeCss } from "../../theme"
-import { keyframes } from "@emotion/core"
 import { DropdownMenuSize } from "./DropdownMenu"
-
-const enter = keyframes`
-to {
-  opacity: 1;
-  transform: scale(1);
-}
-`
 
 export const dropdownCss: ThemeCss = theme => ({
   background: theme.colors.primaryBackground,
@@ -15,9 +7,6 @@ export const dropdownCss: ThemeCss = theme => ({
   borderRadius: theme.radii[3],
   outline: "none",
   boxShadow: theme.shadows.floating,
-  opacity: 0,
-  transform: `scale(0.95)`,
-  animation: `${enter} ${theme.transitions.speed.default} ease forwards`,
   transformOrigin: "50% top",
   overflow: "auto",
   maxHeight: "20rem",

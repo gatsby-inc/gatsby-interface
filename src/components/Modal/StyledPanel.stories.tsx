@@ -16,6 +16,7 @@ import {
 import { Theme } from "../../theme"
 import { Button } from "../Button"
 import { disableAnimationsDecorator } from "../../utils/storybook"
+import { StyledPanelBoilerplate } from "./StyledPanel"
 
 export default {
   title: `Modal/StyledPanel`,
@@ -137,4 +138,36 @@ export const UsageExample = () => {
 
 UsageExample.story = {
   decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
+}
+
+export const Boilerplate = () => {
+  const [isOpen, setIsOpen] = React.useState<boolean>(true)
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setIsOpen(true)}>Open panel</Button>
+      <StyledPanelBoilerplate
+        aria-label="Some impressive content"
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        header="Boilerplate Header"
+        actions={
+          <React.Fragment>
+            <Button>Action 1</Button>
+            <Button>Action 2</Button>
+          </React.Fragment>
+        }
+      >
+        <StyledPanelBodySection>{LONG_TEXT}</StyledPanelBodySection>
+      </StyledPanelBoilerplate>
+    </React.Fragment>
+  )
+}
+
+Boilerplate.story = {
+  decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
+}
+
+Boilerplate.parameters = {
+  chromatic: { delay: 150 },
 }

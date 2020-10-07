@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.213](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.212...v0.0.213) (2020-10-06)
+
+
+### Features
+
+* **Modal:** add StyledPanelBoilerplate component ([#403](https://github.com/gatsby-inc/gatsby-interface/issues/403)) ([1158087](https://github.com/gatsby-inc/gatsby-interface/commit/11580878c6c3247f9e11ddbc933218ab415039fd))
+
+### [0.0.212](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.211...v0.0.212) (2020-10-06)
+
+### [0.0.211](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.210...v0.0.211) (2020-10-06)
+
+
+### Bug Fixes
+
+* **BuildLogs:** Handle multiple code blocks ([#404](https://github.com/gatsby-inc/gatsby-interface/issues/404)) ([4043fa3](https://github.com/gatsby-inc/gatsby-interface/commit/4043fa3c28bba49e2fa4f9f3621b5da9fce916ed))
+
+### [0.0.210](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.209...v0.0.210) (2020-10-05)
+
+
+### Bug Fixes
+
+* fix Toast throwing an error on render ([#402](https://github.com/gatsby-inc/gatsby-interface/issues/402)) ([4e08a26](https://github.com/gatsby-inc/gatsby-interface/commit/4e08a2633c834ef9b9bd849ff3d6cbd8e12fb133))
+
+### [0.0.209](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.208...v0.0.209) (2020-10-05)
+
+
+### Bug Fixes
+
+* replace keyframes with spring animation for DropdownMenu ([#401](https://github.com/gatsby-inc/gatsby-interface/issues/401)) ([0fbd388](https://github.com/gatsby-inc/gatsby-interface/commit/0fbd388b893cc033523c3bbb1b61841727ab8d24))
+
+### [0.0.208](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.207...v0.0.208) (2020-10-05)
+
+
+### Bug Fixes
+
+* various TypeScript fixes ([#400](https://github.com/gatsby-inc/gatsby-interface/issues/400)) ([0e1da56](https://github.com/gatsby-inc/gatsby-interface/commit/0e1da5655c768a88d39436ca280ae42c1d6c991a))
+
+### [0.0.207](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.206...v0.0.207) (2020-10-05)
+
+
+### Bug Fixes
+
+* **BuildLogs:** Updates location types to match graphql ([#399](https://github.com/gatsby-inc/gatsby-interface/issues/399)) ([5ca8ea1](https://github.com/gatsby-inc/gatsby-interface/commit/5ca8ea1d6b98af8ea7d43f2b7fb602b94c358891))
+
 ### [0.0.206](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.205...v0.0.206) (2020-10-02)
 
 
