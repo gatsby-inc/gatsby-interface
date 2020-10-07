@@ -20,25 +20,32 @@ export const CheckboxGroupConnectedField: React.FC<CheckboxGroupConnectedFieldPr
   )
   const value = connectedProps.value || []
 
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = React.useCallback(
+    e => {
+      const target = e.currentTarget
+      let newValue
+
+      if (target.checked) {
+        newValue = [...value, target.value]
+      } else {
+        newValue = value.filter(optionValue => optionValue !== target.value)
+      }
+
+      helpers.setValue(newValue)
+    },
+    [value, helpers.setValue]
+  )
+
+  const handleBlur: React.FocusEventHandler<HTMLInputElement> = React.useCallback(() => {
+    helpers.setTouched(true)
+  }, [helpers.setTouched])
+
   return (
     <CheckboxGroupFieldBlock
       {...connectedProps}
       {...props}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-        const target = e.currentTarget
-        let newValue
-
-        if (target.checked) {
-          newValue = [...value, target.value]
-        } else {
-          newValue = value.filter(optionValue => optionValue !== target.value)
-        }
-
-        helpers.setValue(newValue)
-      }}
-      onBlur={() => {
-        helpers.setTouched(true)
-      }}
+      onChange={handleChange}
+      onBlur={handleBlur}
     />
   )
 }

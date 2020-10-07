@@ -72,8 +72,8 @@ export function useAriaFormGroupField(
   const hintId = getHintId(fieldId)
   const errorId = getErrorId(fieldId)
 
-  return {
-    getLegendProps: (label: React.ReactNode) => ({
+  const getLegendProps: AriaFormGroupFieldData["getLegendProps"] = React.useCallback(
+    label => ({
       children: (
         <React.Fragment>
           {label}
@@ -84,13 +84,28 @@ export function useAriaFormGroupField(
         </React.Fragment>
       ),
     }),
-    getOptionControlProps: (optionValue: string) => ({
+    [hint, error]
+  )
+
+  const getOptionControlProps: AriaFormGroupFieldData["getOptionControlProps"] = React.useCallback(
+    optionValue => ({
       id: getGroupOptionId(fieldId, optionValue),
       required,
     }),
-    getOptionLabelProps: (optionValue: string) => ({
+    [fieldId, required]
+  )
+
+  const getOptionLabelProps: AriaFormGroupFieldData["getOptionLabelProps"] = React.useCallback(
+    optionValue => ({
       htmlFor: getGroupOptionId(fieldId, optionValue),
     }),
+    [fieldId]
+  )
+
+  return {
+    getLegendProps,
+    getOptionControlProps,
+    getOptionLabelProps,
     hintProps: {
       id: hintId,
       hidden: !hasHint,

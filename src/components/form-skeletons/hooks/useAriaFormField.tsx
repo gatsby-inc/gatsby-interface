@@ -1,3 +1,4 @@
+import * as React from "react"
 import { getHintId, getErrorId, getErrorAriaLiveAttribute } from "../utils"
 import { ErrorValidationMode } from "../types"
 
@@ -36,31 +37,33 @@ export function useAriaFormField(
     validationMode?: ErrorValidationMode
   }
 ): AriaFormFieldData {
-  const hintId = getHintId(fieldId)
-  const errorId = getErrorId(fieldId)
-  const controlDescribedBy =
-    [hasError && errorId, hasHint && hintId]
-      .filter(describedBy => describedBy)
-      .join(` `) || undefined
+  return React.useMemo(() => {
+    const hintId = getHintId(fieldId)
+    const errorId = getErrorId(fieldId)
+    const controlDescribedBy =
+      [hasError && errorId, hasHint && hintId]
+        .filter(describedBy => describedBy)
+        .join(` `) || undefined
 
-  return {
-    controlProps: {
-      id: fieldId,
-      "aria-describedby": controlDescribedBy,
-      "aria-invalid": hasError,
-      required,
-    },
-    labelProps: {
-      htmlFor: fieldId,
-    },
-    hintProps: {
-      id: hintId,
-      hidden: !hasHint,
-    },
-    errorProps: {
-      id: errorId,
-      hidden: !hasError,
-      "aria-live": getErrorAriaLiveAttribute(validationMode),
-    },
-  }
+    return {
+      controlProps: {
+        id: fieldId,
+        "aria-describedby": controlDescribedBy,
+        "aria-invalid": hasError,
+        required,
+      },
+      labelProps: {
+        htmlFor: fieldId,
+      },
+      hintProps: {
+        id: hintId,
+        hidden: !hasHint,
+      },
+      errorProps: {
+        id: errorId,
+        hidden: !hasError,
+        "aria-live": getErrorAriaLiveAttribute(validationMode),
+      },
+    }
+  }, [fieldId, required, hasError, hasHint, validationMode])
 }
