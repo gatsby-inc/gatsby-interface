@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.215](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.214...v0.0.215) (2020-10-08)
+
+
+### Features
+
+* **icons:** add monogram and cloud icons ([#407](https://github.com/gatsby-inc/gatsby-interface/issues/407)) ([c764aca](https://github.com/gatsby-inc/gatsby-interface/commit/c764aca5bb362eef636f18b717b288d36b045b10))
+
 ### [0.0.214](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.213...v0.0.214) (2020-10-08)
 
 ### [0.0.213](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.212...v0.0.213) (2020-10-06)
