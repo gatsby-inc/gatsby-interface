@@ -44,6 +44,7 @@ export * from "./components/Toast"
 export * from "./components/Toggle"
 export * from "./components/Tooltip"
 export * from "./components/VisuallyHidden"
+export * from "./components/Placeholder"
 
 export * from "./theme"
 export * from "./theme/styles/button"
