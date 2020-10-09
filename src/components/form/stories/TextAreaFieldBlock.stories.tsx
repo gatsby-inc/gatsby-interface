@@ -11,7 +11,10 @@ import {
   withErrorArgs,
   withHintArgs,
 } from "./stories.utils"
-import { withVariationsContainer } from "../../../utils/storybook"
+import {
+  disableAnimationsDecorator,
+  withVariationsContainer,
+} from "../../../utils/storybook"
 import {
   TextAreaFieldBlock,
   TextAreaFieldBlockProps,
@@ -47,6 +50,7 @@ export default {
       },
     },
   },
+  decorators: [disableAnimationsDecorator],
 } as Meta
 
 const Template: Story<TextAreaFieldBlockProps> = args => (

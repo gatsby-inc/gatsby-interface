@@ -11,7 +11,10 @@ import {
   withErrorArgs,
   withHintArgs,
 } from "./stories.utils"
-import { withVariationsContainer } from "../../../utils/storybook"
+import {
+  disableAnimationsDecorator,
+  withVariationsContainer,
+} from "../../../utils/storybook"
 import {
   CheckboxFieldBlock,
   CheckboxFieldBlockProps,
@@ -35,6 +38,7 @@ export default {
   argTypes: {
     ...commonFieldArgTypes,
   },
+  decorators: [disableAnimationsDecorator],
 } as Meta
 
 const Template: Story<CheckboxFieldBlockProps> = args => (

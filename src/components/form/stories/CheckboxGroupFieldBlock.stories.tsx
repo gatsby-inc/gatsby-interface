@@ -14,6 +14,7 @@ import {
 import {
   withVariationsContainer,
   getGroupFieldStoryOptions,
+  disableAnimationsDecorator,
 } from "../../../utils/storybook"
 import {
   CheckboxGroupFieldBlock,
@@ -38,6 +39,7 @@ export default {
     ...commonFieldArgTypes,
     ...commonGroupFieldArgTypes,
   },
+  decorators: [disableAnimationsDecorator],
 } as Meta
 
 const options = getGroupFieldStoryOptions("short")

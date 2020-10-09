@@ -11,7 +11,10 @@ import {
   withErrorArgs,
   withHintArgs,
 } from "./stories.utils"
-import { withVariationsContainer } from "../../../utils/storybook"
+import {
+  disableAnimationsDecorator,
+  withVariationsContainer,
+} from "../../../utils/storybook"
 import {
   InputFieldBlock,
   InputFieldBlockProps,
@@ -47,6 +50,7 @@ export default {
       },
     },
   },
+  decorators: [disableAnimationsDecorator],
 } as Meta
 
 const Template: Story<InputFieldBlockProps> = args => (
@@ -80,6 +84,10 @@ WithError.args = withErrorArgs
 export const WithErrorAndHint = Template.bind({})
 
 WithErrorAndHint.args = withErrorAndHintArgs
+
+WithErrorAndHint.parameters = {
+  chromatic: { pauseAnimationAtEnd: true },
+}
 
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
