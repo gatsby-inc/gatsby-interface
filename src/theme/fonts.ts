@@ -1,7 +1,15 @@
 import { FontToken } from "gatsby-design-tokens"
-export { fonts as default } from "gatsby-design-tokens"
+import { fonts as baseFonts } from "gatsby-design-tokens"
 
-export type Font = FontToken
+export type Font = FontToken | "headingUI"
+
+const fonts: Record<Font, string> = {
+  ...baseFonts,
+  headingUI:
+    "Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
+}
+
+export default fonts
 
 /*
 
