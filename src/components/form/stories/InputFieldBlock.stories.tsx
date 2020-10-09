@@ -85,10 +85,6 @@ export const WithErrorAndHint = Template.bind({})
 
 WithErrorAndHint.args = withErrorAndHintArgs
 
-WithErrorAndHint.parameters = {
-  chromatic: { pauseAnimationAtEnd: true },
-}
-
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
     <InputFieldBlock
