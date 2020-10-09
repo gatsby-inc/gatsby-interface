@@ -12,7 +12,7 @@ export const disableAnimationsDecorator: DecoratorFn = story => (
           // Make animations instant so that Chromatic can take proper snapshots
           "*, :before, :after": {
             animationDuration: `0s !important`,
-            animationDelay: `0s !important`,
+            animationDelay: `-100s !important`,
           },
         },
       ]}
