@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.216](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.215...v0.0.216) (2020-10-13)
+
+
+### Features
+
+* **icons:** add new plan icons ([#406](https://github.com/gatsby-inc/gatsby-interface/issues/406)) ([fbb6423](https://github.com/gatsby-inc/gatsby-interface/commit/fbb64232d0a5e5d940a0d566d96cb9ab7266bda7))
+
 ### [0.0.215](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.214...v0.0.215) (2020-10-08)
 
 ### Features
