@@ -35,6 +35,12 @@ const hiddenOnMobileCss: ThemeCss = theme => ({
   },
 })
 
+const statusTextCss: ThemeCss = theme => ({
+  color: theme.colors.grey[50],
+  fontSize: theme.fontSizes[0],
+  marginTop: theme.space[3],
+})
+
 const statusColorLookup = (
   theme: Theme
 ): Record<BuildActivityStatus, string> => ({
@@ -85,14 +91,17 @@ export function BuildActivityEntry({
     },
   ]
 
+  const message = activity.message || activity.name || standardLogData.message
+
+  // Often statusText is the same as the message
+  const showStatusText = activity.statusText && message !== activity.statusText
+
   return (
     <BuildLogEntrySkeleton
       icon={<ActivityStatusIcon activityId={activity.id} status={status} />}
       css={baseCss}
     >
-      <div id={`activity__message--${activity.id}`}>
-        {activity.message || activity.name || standardLogData.message}
-      </div>
+      <div id={`activity__message--${activity.id}`}>{message}</div>
       <div css={hiddenOnMobileCss}>
         {showProgressBar && (
           <ProgressBar
@@ -111,6 +120,12 @@ export function BuildActivityEntry({
           <span css={durationCss}>{formatDuration(duration)}</span>
         )}
       </div>
+      {showStatusText && (
+        <React.Fragment>
+          <div />
+          <div css={statusTextCss}>{activity.statusText}</div>
+        </React.Fragment>
+      )}
     </BuildLogEntrySkeleton>
   )
 }
