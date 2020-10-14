@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.217](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.216...v0.0.217) (2020-10-14)
+
+
+### Bug Fixes
+
+* **forms:** fix CheckboxConnectedField not properly applying 'checked' state ([#411](https://github.com/gatsby-inc/gatsby-interface/issues/411)) ([2ca386f](https://github.com/gatsby-inc/gatsby-interface/commit/2ca386fb86cd4979efffcc1caf69c33d65e04dee))
+
 ### [0.0.216](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.215...v0.0.216) (2020-10-13)
 
 
