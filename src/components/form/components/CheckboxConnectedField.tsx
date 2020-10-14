@@ -15,7 +15,10 @@ export const CheckboxConnectedField = React.forwardRef<
   HTMLInputElement,
   CheckboxConnectedFieldProps
 >(function CheckboxConnectedField(props, ref) {
-  const [connectedProps] = useConnectedField(props.name)
+  const [connectedProps] = useConnectedField({
+    name: props.name,
+    type: `checkbox`,
+  })
 
   return <CheckboxFieldBlock ref={ref} {...connectedProps} {...props} />
 })
