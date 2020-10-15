@@ -9,6 +9,8 @@ import { warn } from "../../utils/maintenance/warn"
 const baseCss: ThemeCss = theme => ({
   background: theme.colors.white,
   height: `100vh`,
+  bottom: 0,
+  top: 0,
   position: "fixed",
   overflowY: "auto",
 })
@@ -17,7 +19,7 @@ const DEFAULT_MAX_WIDTH = `432px`
 
 const sizesStyles: Record<PanelSize, ThemeCss> = {
   DEFAULT: _theme => ({
-    maxWidth: `100%`,
+    width: `100vw`,
     [`@media (min-width: ${DEFAULT_MAX_WIDTH})`]: {
       maxWidth: DEFAULT_MAX_WIDTH,
     },
