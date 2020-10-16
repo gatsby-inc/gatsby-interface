@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, InterpolationWithTheme } from "@emotion/core"
-import React from "react"
+import { jsx } from "@emotion/core"
+import * as React from "react"
 import { MdRefresh } from "react-icons/md"
 
 import { BaseButton, BaseButtonProps } from "../BaseButton"
@@ -10,8 +10,9 @@ import {
   ButtonTone,
   ButtonSize,
   ButtonTextVariant,
+  ButtonWidth,
 } from "../../theme/styles/button"
-import { Theme } from "../../theme"
+import { ThemeCss } from "../../theme"
 
 export type ButtonStyleProps = {
   size?: ButtonSize
@@ -20,6 +21,7 @@ export type ButtonStyleProps = {
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
   textVariant?: ButtonTextVariant
+  width?: ButtonWidth
 }
 
 export type ButtonProps = BaseButtonProps & ButtonStyleProps
@@ -33,11 +35,12 @@ export function getButtonStyles({
   leftIcon,
   rightIcon,
   textVariant = `DEFAULT`,
+  width,
 }: {
   children: React.ReactNode
   loading?: boolean
 } & ButtonStyleProps): {
-  css: InterpolationWithTheme<Theme>
+  css: ThemeCss
   children: React.ReactNode
 } {
   return {
@@ -49,6 +52,7 @@ export function getButtonStyles({
       leftIcon,
       rightIcon,
       textVariant,
+      width,
     }),
     children:
       leftIcon || rightIcon ? (
@@ -75,6 +79,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       leftIcon,
       rightIcon,
       textVariant,
+      width,
       ...rest
     } = props
 
@@ -89,6 +94,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           leftIcon,
           rightIcon,
           textVariant,
+          width,
         })}
         loading={loading}
         LoadingIcon={LoadingIcon}

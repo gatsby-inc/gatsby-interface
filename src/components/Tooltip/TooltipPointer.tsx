@@ -2,7 +2,7 @@
  * This component is based on the "Triangle pointers" example
  * from Reach UI docs: https://reacttraining.com/reach-ui/tooltip/#triangle-pointers-and-custom-styles
  */
-import React from "react"
+import * as React from "react"
 import Portal from "../Portal"
 import { TooltipPosition } from "./types"
 

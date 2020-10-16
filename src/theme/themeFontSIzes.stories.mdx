@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { FontSizesShowcase } from "./utils/FontSizesShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Font Sizes" />
+
+# Font Sizes
+
+<br />
+
+<ThemeProvider>
+    <FontSizesShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    fontSize: theme.fontSizes[1],
+  })}
+/>
+```

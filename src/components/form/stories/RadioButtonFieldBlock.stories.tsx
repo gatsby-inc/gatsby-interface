@@ -1,23 +1,32 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import { Meta, Story } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
-import { FormFieldLabelSize } from "../components/FormField.helpers"
-import { getGroupFieldSandboxProps } from "./stories.utils"
+import {
+  commonFieldArgTypes,
+  commonGroupFieldArgTypes,
+  disabledArgs,
+  requiredArgs,
+  withErrorAndHintArgs,
+  withErrorArgs,
+  withHintArgs,
+} from "./stories.utils"
 import {
   withVariationsContainer,
-  radioKnobOptions,
+  getGroupFieldStoryOptions,
 } from "../../../utils/storybook"
-import { getGroupFieldStoryOptions } from "../../form-skeletons/stories/storyUtils"
-import { radios } from "@storybook/addon-knobs"
 import {
   RadioButtonFieldBlock,
+  RadioButtonFieldBlockProps,
   RadioButtonFieldVariant,
   FormFieldBlockLayout,
+  StyledLabelSize,
+  FormGroupOptionsDirection,
 } from ".."
-import { FormGroupOptionsDirection } from "../components/FormGroupField"
-import RadioButtonFieldBlockDocs from "./RadioButtonFieldBlock.mdx"
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
+const VARIANTS: RadioButtonFieldVariant[] = ["default", "framed"]
+const OPTIONS_DIRECTIONS: FormGroupOptionsDirection[] = [`row`, `column`]
 
 export default {
   title: `Form/Styled Blocks/RadioButtonFieldBlock`,
@@ -26,12 +35,28 @@ export default {
     options: {
       showRoots: true,
     },
-    docs: {
-      page: RadioButtonFieldBlockDocs,
-    },
     chromatic: { pauseAnimationAtEnd: true },
   },
-}
+  argTypes: {
+    ...commonFieldArgTypes,
+    ...commonGroupFieldArgTypes,
+    variant: {
+      description: `Changes how the selected option is displayed`,
+      table: {
+        type: {
+          summary: VARIANTS.map(variant => `"${variant}"`).join(` | `),
+        },
+        defaultValue: {
+          summary: `default`,
+        },
+      },
+      control: {
+        type: `select`,
+        options: VARIANTS,
+      },
+    },
+  },
+} as Meta
 
 const options = getGroupFieldStoryOptions(`short`)
 const optionsWithDefaultCheck = options.map((option, idx) => {
@@ -44,86 +69,39 @@ const optionsWithDefaultCheck = options.map((option, idx) => {
   return option
 })
 
-export const Basic = () => (
-  <RadioButtonFieldBlock
-    id="basic"
-    name="basic"
-    options={options}
-    label="Field label"
-    onChange={e => action(`Change`)(e.target.value)}
-  />
+const Template: Story<RadioButtonFieldBlockProps> = args => (
+  <RadioButtonFieldBlock {...args} />
 )
 
-const VARIANTS: RadioButtonFieldVariant[] = ["default", "framed"]
+export const Basic = Template.bind({})
 
-export const Sandbox = () => {
-  return (
-    <RadioButtonFieldBlock
-      id="sandbox"
-      name="sandbox"
-      options={options}
-      variant={radios("variant", radioKnobOptions(VARIANTS), "default")}
-      {...getGroupFieldSandboxProps()}
-    />
-  )
+Basic.args = {
+  id: `basic`,
+  name: `basic`,
+  label: `Label`,
+  onChange: e => action(`Change`)(e.target.value),
+  options,
 }
 
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
-}
+export const Required = Template.bind({})
 
-export const Required = () => (
-  <RadioButtonFieldBlock
-    id="required"
-    name="required"
-    options={options}
-    label="Field label"
-    required
-  />
-)
+Required.args = { ...requiredArgs, options }
 
-export const Disabled = () => (
-  <RadioButtonFieldBlock
-    id="disabled"
-    name="disabled"
-    options={optionsWithDefaultCheck}
-    label="Field label"
-    disabled
-  />
-)
+export const Disabled = Template.bind({})
 
-export const WithHint = () => (
-  <RadioButtonFieldBlock
-    id="withHint"
-    name="withHint"
-    options={options}
-    label="Field label"
-    hint="Hint text"
-  />
-)
+Disabled.args = { ...disabledArgs, options: optionsWithDefaultCheck }
 
-export const WithError = () => (
-  <RadioButtonFieldBlock
-    id="withError"
-    name="withError"
-    options={optionsWithDefaultCheck}
-    label="Field label"
-    error="Error message"
-  />
-)
+export const WithHint = Template.bind({})
 
-export const WithErrorAndHint = () => (
-  <RadioButtonFieldBlock
-    id="withErrorAndHint"
-    name="withErrorAndHint"
-    options={options}
-    label="Field label"
-    hint="Hint text"
-    error="Error message"
-  />
-)
+WithHint.args = { ...withHintArgs, options }
+
+export const WithError = Template.bind({})
+
+WithError.args = { ...withErrorArgs, options: optionsWithDefaultCheck }
+
+export const WithErrorAndHint = Template.bind({})
+
+WithErrorAndHint.args = { ...withErrorAndHintArgs, options }
 
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (
@@ -159,8 +137,6 @@ export const Layouts = () =>
 Layouts.story = {
   decorators: [withVariationsContainer],
 }
-
-const OPTIONS_DIRECTIONS: FormGroupOptionsDirection[] = [`row`, `column`]
 
 export const OptionsDirections = () =>
   OPTIONS_DIRECTIONS.map(optionsDirection => (

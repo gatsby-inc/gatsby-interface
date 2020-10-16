@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-import { DialogOverlay, DialogOverlayProps } from "@reach/dialog"
+import * as React from "react"
+import { DialogOverlay } from "@reach/dialog"
 import colors from "../../theme/colors"
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
 import { keyframes } from "@emotion/core"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { ThemeCss } from "../../theme"
+import { PropsOf } from "../../utils/types"
 
 const buildFadeIn = (color: string) =>
   keyframes`
@@ -24,6 +25,7 @@ const fadeMap: Record<ModalType, ReturnType<typeof keyframes>> = {
   success: buildFadeIn(hexToRGBA(colors.green[50], 0.75)),
   warn: buildFadeIn(hexToRGBA(colors.orange[50], 0.75)),
   error: buildFadeIn(hexToRGBA(colors.red[50], 0.75)),
+  neutral: buildFadeIn(hexToRGBA(colors.grey[50], 0.75)),
 }
 
 const overlayCss: ThemeCss = theme => ({
@@ -33,13 +35,14 @@ const overlayCss: ThemeCss = theme => ({
   right: 0,
   bottom: 0,
   left: 0,
-  overflow: `auto`,
+  overflowX: `hidden`,
+  overflowY: `auto`,
   zIndex: theme.zIndices.modals,
 })
 
-export type ModalType = "success" | "info" | "warn" | "error"
+export type ModalType = "success" | "info" | "warn" | "error" | "neutral"
 
-export interface ModalProps extends Omit<DialogOverlayProps, "ref"> {
+export interface ModalProps extends Omit<PropsOf<typeof DialogOverlay>, "ref"> {
   type?: ModalType
 }
 

@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 /**
  * To mark our components built on top of ReachUI as safe for tree-shaking, we have to apply global styles
@@ -12,7 +12,13 @@ import React from "react"
 export function DisableReachStyleCheck({
   reachComponent,
 }: {
-  reachComponent: `dialog` | `tooltip` | `alert` | `combobox` | `menu-button`
+  reachComponent:
+    | `dialog`
+    | `tooltip`
+    | `alert`
+    | `combobox`
+    | `menu-button`
+    | `tabs`
 }) {
   React.useEffect(() => {
     const reachCheckProperty = `--reach-${reachComponent}`

@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { Global } from "@emotion/core"
 import { DecoratorFn } from "@storybook/react"
 import { text, radios } from "@storybook/addon-knobs"
-import isChromatic from "storybook-chromatic/isChromatic"
 import {
   radioKnobOptions,
   withVariationsContainer,
+  disableAnimationsDecorator,
 } from "../../utils/storybook"
 import {
   StyledModal,
@@ -15,20 +15,26 @@ import {
   StyledModalBody,
   StyledModalActions,
   StyledModalVariant,
+  Modal,
+  ModalCard,
 } from "./"
 import { Theme } from "../../theme"
 import { Button } from "../Button"
+import isChromatic from "storybook-chromatic/isChromatic"
 
 export default {
   title: `Modal/StyledModal`,
   component: StyledModal,
   subcomponents: { StyledModalHeader, StyledModalBody, StyledModalActions },
   parameters: {
+    componentSubtitle:
+      "Modals inform users about a task and can contain critical information, require decisions, or involve multiple tasks. They are purposefully interruptive, so they should be used sparingly.",
     options: {
       showRoots: true,
     },
   },
   decorators: [
+    disableAnimationsDecorator,
     story => (
       <React.Fragment>
         <Global
@@ -36,21 +42,21 @@ export default {
             {
               body: { background: theme.colors.grey[20] },
             },
-            isChromatic() && {
-              // Make animations instant so that Chromatic can take proper snapshots
-              "*, :before, :after": {
-                animationDuration: `0s !important`,
-                animationDelay: `0s !important`,
-              },
-            },
           ]}
         />
         {story()}
       </React.Fragment>
     ),
-    story => <div style={{ maxWidth: `620px` }}>{story()}</div>,
   ] as DecoratorFn[],
 }
+
+const fullSizeDecorator: DecoratorFn = story => (
+  <div style={{ width: `100vw`, height: `100vh` }}>{story()}</div>
+)
+
+const maxWidthDecorator: DecoratorFn = story => (
+  <div style={{ maxWidth: `620px` }}>{story()}</div>
+)
 
 const LONG_TEXT = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia recusandae nisi magni, dolore laboriosam maiores suscipit perspiciatis. Perspiciatis quod ipsum corporis officia necessitatibus, doloribus fuga culpa. Unde, molestiae repellendus.`
 
@@ -66,6 +72,10 @@ export const Basic = () => (
     </StyledModalBody>
   </StyledModal>
 )
+
+Basic.story = {
+  decorators: [maxWidthDecorator],
+}
 
 const VARIANTS: StyledModalVariant[] = [
   `DEFAULT`,
@@ -103,6 +113,7 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+  decorators: [maxWidthDecorator],
 }
 
 export const Variants = () =>
@@ -123,5 +134,46 @@ export const Variants = () =>
 
 Variants.story = {
   parameters: { layout: `padded` },
-  decorators: [withVariationsContainer],
+  decorators: [withVariationsContainer, maxWidthDecorator],
+}
+
+export const UsageExample = () => {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false)
+
+  React.useEffect(() => {
+    // Open panel in Chromatic to keep track of visual regressions
+    if (!isChromatic()) {
+      return
+    }
+    const button = document.querySelector("button")
+    if (button) {
+      button.click()
+    }
+  }, [])
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setIsOpen(true)}>Open modal</Button>
+      <Modal aria-label="Some impressive content" isOpen={isOpen}>
+        <ModalCard>
+          <StyledModal>
+            <StyledModalHeader onCloseButtonClick={() => setIsOpen(false)}>
+              Header
+            </StyledModalHeader>
+            <StyledModalBody>
+              {LONG_TEXT}
+              <StyledModalActions>
+                <Button>Action 1</Button>
+                <Button>Action 2</Button>
+              </StyledModalActions>
+            </StyledModalBody>
+          </StyledModal>
+        </ModalCard>
+      </Modal>
+    </React.Fragment>
+  )
+}
+
+UsageExample.story = {
+  decorators: [isChromatic() ? fullSizeDecorator : maxWidthDecorator],
 }

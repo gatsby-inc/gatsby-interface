@@ -1,87 +1,85 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
+import { Meta, Story } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
-import { TextAreaFieldBlock, FormFieldBlockLayout } from ".."
-import { FormFieldLabelSize } from "../components/FormField.helpers"
-import { getFieldBlockSandboxProps } from "./stories.utils"
-import { text } from "@storybook/addon-knobs"
+import Markdown from "markdown-to-jsx"
+import {
+  commonFieldArgTypes,
+  disabledArgs,
+  requiredArgs,
+  withErrorAndHintArgs,
+  withErrorArgs,
+  withHintArgs,
+} from "./stories.utils"
 import { withVariationsContainer } from "../../../utils/storybook"
-import TextAreaFieldBlockDocs from "./TextAreaFieldBlock.mdx"
+import {
+  TextAreaFieldBlock,
+  TextAreaFieldBlockProps,
+  FormFieldBlockLayout,
+  StyledLabelSize,
+} from ".."
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 export default {
   title: `Form/Styled Blocks/TextAreaFieldBlock`,
+  component: TextAreaFieldBlock,
   parameters: {
+    componentSubtitle: (
+      <Markdown>{`Accepts all of the props supported by \`<textarea />\` as well as the props shared between field block components`}</Markdown>
+    ),
     layout: `padded`,
     options: {
       showRoots: true,
     },
-    docs: {
-      page: TextAreaFieldBlockDocs,
-    },
     chromatic: { pauseAnimationAtEnd: true },
   },
-}
-
-export const Basic = () => (
-  <TextAreaFieldBlock
-    id="TextAreaFieldBlock"
-    label="Field label"
-    onChange={e => action(`Change`)(e.target.value)}
-  />
-)
-
-export const Sandbox = () => {
-  const placeholder = text(`Placeholder`, `This is a placeholder`)
-  return (
-    <TextAreaFieldBlock
-      id="TextAreaFieldBlock"
-      placeholder={placeholder}
-      {...getFieldBlockSandboxProps()}
-    />
-  )
-}
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
+  argTypes: {
+    ...commonFieldArgTypes,
+    placeholder: {
+      table: {
+        type: {
+          summary: `string`,
+        },
+      },
+      control: {
+        type: `text`,
+      },
+    },
   },
+} as Meta
+
+const Template: Story<TextAreaFieldBlockProps> = args => (
+  <TextAreaFieldBlock {...args} />
+)
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  id: `basic`,
+  label: `Label`,
+  onChange: e => action(`Change`)(e.target.value),
 }
 
-export const Required = () => (
-  <TextAreaFieldBlock id="TextAreaFieldBlock" label="Field label" required />
-)
+export const Required = Template.bind({})
 
-export const Disabled = () => (
-  <TextAreaFieldBlock id="TextAreaFieldBlock" label="Field label" disabled />
-)
+Required.args = requiredArgs
 
-export const WithHint = () => (
-  <TextAreaFieldBlock
-    id="TextAreaFieldBlock"
-    label="Field label"
-    hint="Hint text"
-  />
-)
+export const Disabled = Template.bind({})
 
-export const WithError = () => (
-  <TextAreaFieldBlock
-    id="TextAreaFieldBlock"
-    label="Field label"
-    error="Error message"
-  />
-)
+Disabled.args = disabledArgs
 
-export const WithErrorAndHint = () => (
-  <TextAreaFieldBlock
-    id="TextAreaFieldBlock"
-    label="Field label"
-    hint="Hint text"
-    error="Error message"
-  />
-)
+export const WithHint = Template.bind({})
+
+WithHint.args = withHintArgs
+
+export const WithError = Template.bind({})
+
+WithError.args = withErrorArgs
+
+export const WithErrorAndHint = Template.bind({})
+
+WithErrorAndHint.args = withErrorAndHintArgs
 
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (

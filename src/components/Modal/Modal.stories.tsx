@@ -7,7 +7,7 @@ import { Modal, ModalType, ModalCard, ModalPanel } from "./"
 import { radioKnobOptions } from "../../utils/storybook"
 import { Button } from "../Button"
 
-const TYPES: ModalType[] = ["info", "success", "warn", "error"]
+const TYPES: ModalType[] = ["info", "success", "warn", "error", "neutral"]
 
 export default {
   title: `Modal`,

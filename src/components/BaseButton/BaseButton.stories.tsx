@@ -1,40 +1,52 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-
-import { storiesOf } from "@storybook/react"
-
+import { Meta, Story } from "@storybook/react"
 import { MdSync } from "react-icons/md"
-import { BaseButton } from "./"
-import Readme from "./README.md"
-import { text, boolean } from "@storybook/addon-knobs"
-import { StoryUtils } from "../../utils/storybook"
+import { BaseButton, BaseButtonProps } from "./"
 
-storiesOf(`buttons/BaseButton`, module)
-  .addParameters({
-    options: {
-      showPanel: true,
+export default {
+  title: `BaseButton`,
+  component: BaseButton,
+  argTypes: {
+    LoadingIcon: {
+      control: {
+        type: "select",
+        options: ["None", "MdSync"],
+      },
     },
-    readme: {
-      sidebar: Readme,
+    ButtonComponent: {
+      control: {
+        disable: true,
+      },
     },
-  })
-  .add(`default`, () => (
-    <StoryUtils.Container>
-      <StoryUtils.Stack>
-        <BaseButton>Button</BaseButton>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
-  ))
-  .add(`with loading state`, () => (
-    <StoryUtils.Container>
-      <StoryUtils.Stack>
-        <BaseButton
-          loading={boolean(`loading`, true)}
-          loadingLabel={text(`loadingLabel`, `Loading...`)}
-          LoadingIcon={boolean(`show LoadingIcon`, true) ? MdSync : undefined}
-        >
-          Button
-        </BaseButton>
-      </StoryUtils.Stack>
-    </StoryUtils.Container>
-  ))
+  },
+} as Meta
+
+const Template: Story<BaseButtonProps> = args => (
+  <BaseButton
+    {...args}
+    LoadingIcon={
+      // @ts-expect-error
+      args.LoadingIcon === `MdSync`
+        ? MdSync
+        : // @ts-expect-error
+        args.LoadingIcon === `None`
+        ? undefined
+        : args.LoadingIcon
+    }
+  />
+)
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  children: `Button`,
+}
+
+export const WithLoadingState = Template.bind({})
+
+WithLoadingState.args = {
+  loading: true,
+  loadingLabel: `Loading…`,
+  LoadingIcon: MdSync,
+}

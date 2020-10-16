@@ -1,4 +1,5 @@
-import { ThemeCss } from "../../theme"
+import { Theme, ThemeCss } from "../../theme"
+import { Interpolation } from "@emotion/core"
 
 const hamburgerIconStylesShared: ThemeCss = theme => {
   return {
@@ -66,27 +67,46 @@ const baseNavigationItemCss: ThemeCss = theme => ({
   position: `relative`,
   color: theme.colors.black,
   // Show dropdown menu on hover, if exists
-  "&:hover > ul": baseNavigationDropdownOpenStyles(theme),
+  "&:hover > div": baseNavigationDropdownOpenStyles(theme),
 })
 
 const baseNavigationItemInvertedCss: ThemeCss = theme => ({
   color: theme.colors.white,
 })
 
-const baseNavigationDropdownOpenStyles: ThemeCss = theme => ({
-  display: `inline-block`,
+const baseNavigationDropdownStyles: (
+  theme: Theme,
+  mobileNavMediaQuery: string
+) => Interpolation = (_theme, mobileNavMediaQuery) => ({
+  display: `none`,
   position: `absolute`,
-  top: `95%`,
-  left: 0,
-  margin: 0,
-  padding: `${theme.space[4]} 0`,
+  top: `100%`,
+  left: `50%`,
+  transform: `translateX(-50%)`,
+
+  // regretably our mobileNavMediaQuery styling is NOT 'mobile-first'
+  // so we have to 'remove' default style for mobile version
+  [mobileNavMediaQuery]: {
+    position: `relative`,
+    left: `auto`,
+    transform: `none`,
+    top: `auto`,
+  },
 })
 
-const baseNavigationDropdownClosedStyles: ThemeCss = _theme => ({
-  display: `none`,
-  listStyle: `none`,
+const baseNavigationDropdownMeasureStyles: ThemeCss = _theme => ({
+  visibility: `hidden`,
+  display: `block`,
+})
+
+const baseNavigationDropdownOpenStyles: ThemeCss = _theme => ({
+  display: `block`,
+})
+
+const baseNavigationDropdownListStyles: ThemeCss = theme => ({
   margin: 0,
-  padding: 0,
+  padding: `${theme.space[4]} 0`,
+  listStyle: `none`,
 })
 
 const baseNavigationDropdownToggleCss: ThemeCss = theme => ({
@@ -188,11 +208,19 @@ const baseStyles = {
       isInverted && baseNavigationItemInvertedCss(theme),
     ]
   },
-  dropdown: (isDropdownOpen: boolean): ThemeCss => {
+  dropdown: (
+    isDropdownOpen: boolean,
+    isMeasured: boolean,
+    mobileNavMediaQuery: string
+  ): ThemeCss => {
     return theme => [
-      baseNavigationDropdownClosedStyles(theme),
+      baseNavigationDropdownStyles(theme, mobileNavMediaQuery),
+      isMeasured && baseNavigationDropdownMeasureStyles(theme),
       isDropdownOpen && baseNavigationDropdownOpenStyles(theme),
     ]
+  },
+  dropdownList: (): ThemeCss => {
+    return theme => baseNavigationDropdownListStyles(theme)
   },
   dropdownToggle: (isInverted: boolean): ThemeCss => {
     return theme => [

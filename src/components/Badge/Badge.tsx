@@ -71,12 +71,10 @@ export function Badge({
               height: iconSize,
             },
             variant === `PILL` && {
-              color: theme.colors.whiteFade[90],
+              color: theme.tones[tone].mediumInverted
+                ? theme.tones[tone].mediumInverted
+                : theme.colors.whiteFade[90],
             },
-            variant === `PILL` &&
-              tone === `WARNING` && {
-                color: theme.colors.blackFade[90],
-              },
           ]}
         />
       )}

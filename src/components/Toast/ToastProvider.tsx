@@ -1,24 +1,24 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core"
-import React from "react"
+import { jsx } from "@emotion/core"
+import * as React from "react"
 import { Toast } from "./Toast"
 import { ToastContext } from "./ToastContext"
 import { useToastActions } from "./hooks"
-import zIndices from "../../theme/zIndices"
+import { ThemeCss } from "../../theme"
 
 export const ToastConsumer = ToastContext.Consumer
 
-const containerCss = css`
-  align-items: center;
-  bottom: 0;
-  display: flex;
-  flex-direction: column-reverse;
-  left: 50%;
-  position: fixed;
-  transform: translate(-50%, 0);
-  width: 100%;
-  z-index: ${zIndices.base};
-`
+const containerCss: ThemeCss = theme => ({
+  alignItems: "center",
+  bottom: 0,
+  display: "flex",
+  flexDirection: "column-reverse",
+  left: "50%",
+  position: "fixed",
+  transform: "translate(-50%, 0)",
+  width: "100%",
+  zIndex: theme.zIndices.base,
+})
 
 export interface ToastProviderProps {
   closeButtonLabel?: string

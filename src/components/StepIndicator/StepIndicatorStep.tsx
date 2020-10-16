@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { Link as GatsbyLink, GatsbyLinkProps } from "gatsby"
 import { Theme } from "../../theme"
 import {
@@ -11,6 +11,7 @@ import {
   stepNumberActiveCss,
   stepNumberDoneCss,
   labelCss,
+  labelInactiveCss,
   labelActiveCss,
 } from "./StepIndicatorStep.styles"
 
@@ -41,6 +42,8 @@ export function StepIndicatorStep({
       <span
         css={(theme: Theme) => [
           labelCss(theme),
+          status === `DEFAULT` && labelInactiveCss(theme),
+          status === `DONE` && labelInactiveCss(theme),
           status === `ACTIVE` && labelActiveCss(theme),
         ]}
       >

@@ -1,22 +1,41 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { ThemeCss } from "../../theme"
-import { Badge } from "../Badge"
+import { Badge, BadgeProps } from "../Badge"
 import {
   FreePlanIcon,
   ProfessionalPlanIcon,
   BusinessPlanIcon,
   EnterprisePlanIcon,
+  IndividualPlanIcon,
+  TeamPlanIcon,
 } from "../icons"
-
 const baseCss: ThemeCss = _theme => ({
   fontWeight: 500,
 })
 
 const planTypeFreeCss: ThemeCss = theme => ({
+  borderColor: theme.colors.blue[10],
+  backgroundColor: theme.colors.blue[10],
+  color: theme.colors.blue[80],
+})
+
+const planTypeIndividualCss: ThemeCss = theme => ({
   borderColor: theme.colors.orange[10],
   backgroundColor: theme.colors.orange[10],
-  color: theme.colors.orange[90],
+  color: theme.colors.red[70],
+})
+
+const planTypeTeamCss: ThemeCss = theme => ({
+  borderColor: theme.colors.magenta[10],
+  backgroundColor: theme.colors.magenta[10],
+  color: theme.colors.magenta[70],
+})
+
+const planTypeEnterpriseCss: ThemeCss = theme => ({
+  borderColor: theme.colors.purple[80],
+  backgroundColor: theme.colors.purple[80],
+  color: theme.colors.white,
 })
 
 const planTypeProfessionalCss: ThemeCss = theme => ({
@@ -31,56 +50,66 @@ const planTypeBusinessCss: ThemeCss = theme => ({
   color: theme.colors.purple[70],
 })
 
-const planTypeEnterpriseCss: ThemeCss = theme => ({
-  borderColor: theme.colors.purple[80],
-  backgroundColor: theme.colors.purple[80],
-  color: theme.colors.white,
+const trialingCss: ThemeCss = theme => ({
+  borderColor: theme.colors.green[10],
+  backgroundColor: theme.colors.green[10],
+  color: theme.colors.green[90],
 })
 
 const planTypeCss: Record<PlanIndicatorPlanType, ThemeCss> = {
   FREE: planTypeFreeCss,
+  INDIVIDUAL: planTypeIndividualCss,
+  TEAM: planTypeTeamCss,
+  ENTERPRISE: planTypeEnterpriseCss,
   PROFESSIONAL: planTypeProfessionalCss,
   BUSINESS: planTypeBusinessCss,
-  ENTERPRISE: planTypeEnterpriseCss,
 }
 
-const planTypeLabels: Record<PlanIndicatorPlanType, string> = {
-  FREE: `Free`,
-  PROFESSIONAL: `Professional`,
-  BUSINESS: `Business`,
-  ENTERPRISE: `Enterprise`,
-}
-
-const planTypeIcons: Record<PlanIndicatorPlanType, React.ComponentType> = {
+const planTypeIcons: Record<PlanIndicatorPlanType, BadgeProps["Icon"]> = {
   FREE: FreePlanIcon,
+  INDIVIDUAL: IndividualPlanIcon,
+  TEAM: TeamPlanIcon,
+  ENTERPRISE: EnterprisePlanIcon,
   PROFESSIONAL: ProfessionalPlanIcon,
   BUSINESS: BusinessPlanIcon,
-  ENTERPRISE: EnterprisePlanIcon,
 }
 
 export type PlanIndicatorPlanType =
   | `FREE`
+  | `INDIVIDUAL`
+  | `TEAM`
+  | `ENTERPRISE`
+  // backwards compatibility for older plans
   | `PROFESSIONAL`
   | `BUSINESS`
-  | `ENTERPRISE`
 
 export type PlanIndicatorProps = {
   planType: PlanIndicatorPlanType
+  isTrialling?: boolean
+  children: React.ReactNode
+  "aria-label": string
 }
 
-export function PlanIndicator({ planType }: PlanIndicatorProps) {
-  const label = planTypeLabels[planType]
+export function PlanIndicator({
+  planType,
+  isTrialling = false,
+  children,
+  "aria-label": ariaLabel,
+}: PlanIndicatorProps) {
   const Icon = planTypeIcons[planType]
 
   return (
     <Badge
       size="M"
       textVariant="DEFAULT"
-      Icon={Icon}
-      aria-label={`Plan: ${label}`}
-      css={theme => [baseCss(theme), planTypeCss[planType](theme)]}
+      Icon={isTrialling ? undefined : Icon}
+      aria-label={ariaLabel}
+      css={theme => [
+        baseCss(theme),
+        isTrialling ? trialingCss(theme) : planTypeCss[planType](theme),
+      ]}
     >
-      {label}
+      {children}
     </Badge>
   )
 }

@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core"
 
 import { MdInfoOutline } from "react-icons/md"
 import colors from "../../theme/colors"
-import { Chip } from "../../components/Chip"
+import { Badge } from "../../components/Badge"
 
 type StoryUtilWrapperProps = Omit<JSX.IntrinsicElements["div"], "ref">
 
@@ -37,15 +37,14 @@ const StoryUtilsContainer = ({
   secondaryBg = false,
 }: StoryUtilWrapperProps & { secondaryBg?: boolean }) => (
   <div
-    css={{
+    css={theme => ({
       alignItems: `center`,
       background: secondaryBg ? colors.secondaryBackground : ``,
       display: `flex`,
-      minHeight: `100vh`,
       justifyContent: `center`,
       width: `100%`,
-      padding: `20px`,
-    }}
+      padding: theme.space[6],
+    })}
   >
     {children}
   </div>
@@ -76,12 +75,15 @@ const StoryUtilsContent = ({
 )
 
 const StoryUtilsDefault = () => (
-  <Chip
-    icon={<MdInfoOutline />}
-    css={theme => ({ marginLeft: theme.space[8], verticalAlign: `middle` })}
+  <Badge
+    Icon={MdInfoOutline}
+    size="S"
+    tone="NEUTRAL"
+    textVariant="DEFAULT"
+    css={theme => ({ marginLeft: theme.space[4], verticalAlign: `middle` })}
   >
     Default
-  </Chip>
+  </Badge>
 )
 
 export default {

@@ -1,0 +1,12 @@
+####
+# This file is used to automatically add PR reviewers.
+#
+####
+# Ref https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
+# Each line is a file pattern followed by one or more owners.
+# Order is important; the last matching pattern takes the most precedence.
+####
+
+* @gatsby-inc/cloud-frontend
+
+/src/ @gatsby-inc/cloud-frontend @fk

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { CheckboxFieldBlock } from "./CheckboxFieldBlock"
 import { CheckboxFieldBlockProps } from "./CheckboxFieldBlock"
 import { useConnectedField } from "../hooks/useConnectedField"
@@ -15,7 +15,10 @@ export const CheckboxConnectedField = React.forwardRef<
   HTMLInputElement,
   CheckboxConnectedFieldProps
 >(function CheckboxConnectedField(props, ref) {
-  const [connectedProps] = useConnectedField(props.name)
+  const [connectedProps] = useConnectedField({
+    name: props.name,
+    type: `checkbox`,
+  })
 
   return <CheckboxFieldBlock ref={ref} {...connectedProps} {...props} />
 })

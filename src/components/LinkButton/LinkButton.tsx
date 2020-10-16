@@ -7,7 +7,17 @@ export type LinkButtonProps<TState = any> = BaseLinkProps<TState> &
   ButtonStyleProps
 
 export function LinkButton<TState>(props: LinkButtonProps<TState>) {
-  const { children, size, tone, variant, leftIcon, rightIcon, ...rest } = props
+  const {
+    children,
+    size,
+    tone,
+    variant,
+    leftIcon,
+    rightIcon,
+    textVariant,
+    width,
+    ...rest
+  } = props
 
   return (
     <BaseLink
@@ -18,6 +28,8 @@ export function LinkButton<TState>(props: LinkButtonProps<TState>) {
         variant,
         leftIcon,
         rightIcon,
+        textVariant,
+        width,
       })}
       {...rest}
     />

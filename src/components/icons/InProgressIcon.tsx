@@ -1,16 +1,38 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
+import { keyframes } from "@emotion/core"
 import IconSkeleton from "./IconSkeleton"
 import { IconProps } from "./types"
+import { ThemeCss } from "../../theme"
+
+const rotating = keyframes`
+  100% {
+    transform: rotate(360deg);
+  }
+`
+
+const animatedCss: ThemeCss = _theme => ({
+  animation: `${rotating} 1s infinite`,
+  animationTimingFunction: `linear`,
+  transform: `rotate(0)`,
+})
 
 export default function InProgressIcon(props: IconProps) {
+  const mask0Id = `InProgressIcon__mask0--${props.id || "noid"}`
+  const mask1Id = `InProgressIcon__mask1--${props.id || "noid"}`
+  const mask2Id = `InProgressIcon__mask2--${props.id || "noid"}`
+  const filterId = `InProgressIcon__filter--${props.id || "noid"}`
+  const gradientId = `InProgressIcon__gradient--${props.id || "noid"}`
+
   return (
     <IconSkeleton
       {...props}
       iconName="InProgressIcon"
       applyColorToStroke={false}
+      css={animatedCss}
     >
       <mask
-        id="InProgressIcon__mask--0"
+        id={mask0Id}
         mask-type="alpha"
         maskUnits="userSpaceOnUse"
         x="2"
@@ -19,7 +41,7 @@ export default function InProgressIcon(props: IconProps) {
         height="20"
       >
         <mask
-          id="InProgressIcon__mask--1"
+          id={mask1Id}
           maskUnits="userSpaceOnUse"
           x="2"
           y="12"
@@ -31,7 +53,7 @@ export default function InProgressIcon(props: IconProps) {
             fill="#232129"
           />
         </mask>
-        <g mask="url(#InProgressIcon__mask--1)">
+        <g mask={`url(#${mask1Id}`}>
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -40,7 +62,7 @@ export default function InProgressIcon(props: IconProps) {
           />
         </g>
         <mask
-          id="InProgressIcon__mask--2"
+          id={mask2Id}
           maskUnits="userSpaceOnUse"
           x="2"
           y="2"
@@ -54,26 +76,26 @@ export default function InProgressIcon(props: IconProps) {
             fill="#2DE3DA"
           />
         </mask>
-        <g mask="url(#InProgressIcon__mask--2)">
+        <g mask={`url(#${mask2Id}`}>
           <path
             d="M12 2.00003C6.47714 2.00003 2 6.47718 2 12L22 12C22 6.47718 17.5228 2.00003 12 2.00003Z"
-            fill="url(#InProgressIcon__linear)"
+            fill={`url(#${gradientId})`}
           />
         </g>
       </mask>
-      <g mask="url(#InProgressIcon__mask--0)">
+      <g mask={`url(#${mask0Id}`}>
         <circle
           cx="12"
           cy="12"
           r="9.99998"
           fill="currentColor"
-          style={{ filter: `url(#InProgressIcon__filter)` }}
+          style={{ filter: `url(#${filterId})` }}
         />
       </g>
       <circle cx="12" cy="12" r="4" fill="currentColor" />
       <defs>
         <linearGradient
-          id="InProgressIcon__linear"
+          id={gradientId}
           x1="5.74999"
           y1="12"
           x2="18.25"
@@ -83,13 +105,7 @@ export default function InProgressIcon(props: IconProps) {
           <stop stopColor="#663399" stopOpacity="0" />
           <stop offset="1" />
         </linearGradient>
-        <filter
-          id="InProgressIcon__filter"
-          x="0"
-          y="0"
-          width="100%"
-          height="100%"
-        >
+        <filter id={filterId} x="0" y="0" width="100%" height="100%">
           <feComponentTransfer>
             <feFuncA type="linear" slope="0.3"></feFuncA>
           </feComponentTransfer>

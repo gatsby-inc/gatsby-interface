@@ -1,0 +1,26 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { LineHeightsShowcase } from "./utils/LineHeightsShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Line Heights" />
+
+# Line Heights
+
+<br />
+
+<ThemeProvider>
+    <LineHeightsShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    lineHeight: theme.lineHeights.dense,
+  })}
+/>
+```

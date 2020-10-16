@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import * as React from "react"
 import { TooltipPopup, TooltipParams } from "@reach/tooltip"
 import { TooltipPosition } from "./types"
 import TooltipPointer, { TooltipPointerProps } from "./TooltipPointer"
@@ -44,20 +45,23 @@ export default function TooltipContent({
     <TooltipPopup
       {...tooltipParams}
       {...rest}
-      label={label}
+      label={
+        <React.Fragment>
+          {tooltipParams.triggerRect && (
+            <TooltipPointer
+              triggerRect={tooltipParams.triggerRect}
+              position={position}
+              style={style}
+            />
+          )}
+          {label}
+        </React.Fragment>
+      }
       ariaLabel={ariaLabel}
+      aria-label={ariaLabel}
       css={baseCss}
       style={style}
       position={tooltipPosition[position]}
-    >
-      {tooltipParams.triggerRect && (
-        <TooltipPointer
-          triggerRect={tooltipParams.triggerRect}
-          position={position}
-          style={style}
-        />
-      )}
-      {label}
-    </TooltipPopup>
+    />
   )
 }

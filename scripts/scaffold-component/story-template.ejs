@@ -1,26 +1,40 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+<%_ if (SCAFFOLD_VARIANT) { _%>
 import { text, radios } from "@storybook/addon-knobs"
 import { radioKnobOptions, withVariationsContainer } from "../../utils/storybook"
+<%_ } else { _%>
+import { text } from "@storybook/addon-knobs"
+<%_ } _%>
+<%_ if (SCAFFOLD_VARIANT) { _%>
 import { <%= COMPONENT_NAME %>, <%= COMPONENT_NAME %>Variant } from "."
+<%_ } else { _%>
+import { <%= COMPONENT_NAME %> } from "."
+<%_ } _%>
 
 export default {
   title: `<%= COMPONENT_NAME %>`,
   component: <%= COMPONENT_NAME %>,
 }
+<%_ if (SCAFFOLD_VARIANT) { _%>
+
+const VARIANTS: <%= COMPONENT_NAME %>Variant[] = [`PRIMARY`, `SECONDARY`]
+<%_ } _%>
 
 export const Basic = () => <<%= COMPONENT_NAME %>>Hello world!</<%= COMPONENT_NAME %>>
 
-const VARIANTS: <%= COMPONENT_NAME %>Variant[] = [`PRIMARY`, `SECONDARY`]
-
 export const Sandbox = () => (
+  <%_ if (SCAFFOLD_VARIANT) { _%>
   <<%= COMPONENT_NAME %>
-    variant={radios(
-      `variant`,
-      radioKnobOptions<<%= COMPONENT_NAME %>Variant>(VARIANTS),
-      `PRIMARY`
-    )}
+      variant={radios(
+        `variant`,
+        radioKnobOptions<<%= COMPONENT_NAME %>Variant>(VARIANTS),
+        `PRIMARY`
+      )}
   >
+  <%_ } else { _%>
+  <<%= COMPONENT_NAME %>>
+  <%_ } _%>
     {text("content", "Hello world!")}
   </<%= COMPONENT_NAME %>>
 )
@@ -30,6 +44,7 @@ Sandbox.story = {
     chromatic: { disable: true },
   },
 };
+<%_ if (SCAFFOLD_VARIANT) { _%>
 
 export const Variants = () =>
   VARIANTS.map(variant => (
@@ -41,3 +56,4 @@ export const Variants = () =>
 Variants.story = {
   decorators: [withVariationsContainer]
 }
+<%_ } _%>

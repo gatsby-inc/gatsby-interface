@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { Link } from "gatsby"
 import { Theme, ThemeCss } from "../../theme"
 
@@ -16,18 +16,11 @@ export type SidebarNavOption = SidebarNavItem & {
   subItems?: SidebarNavItem[]
 }
 
-export type SidebarNavVariant = `DEFAULT` | `FULL`
-
 export type SidebarNavProps = JSX.IntrinsicElements["nav"] & {
   options?: SidebarNavOption[]
-  variant?: SidebarNavVariant
 }
 
-export default function SidebarNav({
-  options,
-  variant,
-  ...rest
-}: SidebarNavProps) {
+export default function SidebarNav({ options, ...rest }: SidebarNavProps) {
   return (
     <nav
       aria-label="sidebar navigation"
@@ -37,7 +30,7 @@ export default function SidebarNav({
       {...rest}
     >
       {options && (
-        <SidebarNavList variant={variant}>
+        <SidebarNavList>
           {options.map(option => {
             return <SidebarNavListItem key={option.to} {...option} />
           })}
@@ -47,11 +40,9 @@ export default function SidebarNav({
   )
 }
 
-type SidebarNavListProps = JSX.IntrinsicElements["ul"] & {
-  variant?: SidebarNavVariant
-}
+type SidebarNavListProps = JSX.IntrinsicElements["ul"]
 
-function SidebarNavList({ variant = `DEFAULT`, ...rest }: SidebarNavListProps) {
+function SidebarNavList(props: SidebarNavListProps) {
   return (
     <ul
       css={[
@@ -60,9 +51,8 @@ function SidebarNavList({ variant = `DEFAULT`, ...rest }: SidebarNavListProps) {
           margin: 0,
           padding: 0,
         },
-        variant === `FULL` && { maxWidth: `8rem` },
       ]}
-      {...rest}
+      {...props}
     />
   )
 }
@@ -153,8 +143,12 @@ function SidebarNavListItem({
               key={subItem.to}
               css={(theme: Theme) => [
                 {
-                  padding: `${theme.space[3]} ${theme.space[5]}`,
+                  paddingTop: theme.space[3],
+                  paddingRight: theme.space[5],
+                  paddingBottom: theme.space[3],
+                  paddingLeft: `calc(${theme.space[6]} + 1px)`,
                   marginBottom: `0`,
+                  marginLeft: `calc(-${theme.space[6]} - 2px)`,
                   borderLeft: `1px solid ${theme.colors.grey[30]}`,
                 },
                 subItem.active && {

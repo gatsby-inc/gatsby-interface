@@ -1,10 +1,11 @@
-import { InterpolationWithTheme, keyframes } from "@emotion/core"
+import { keyframes } from "@emotion/core"
 import { Theme, ThemeCss } from ".."
 
 export type ButtonSize = "XL" | "L" | "M" | "S"
 export type ButtonTone = "BRAND" | "SUCCESS" | "DANGER" | "NEUTRAL"
 export type ButtonVariant = "PRIMARY" | "SECONDARY" | "GHOST"
 export type ButtonTextVariant = "DEFAULT" | "BRAND"
+export type ButtonWidth = "AUTO" | "FIT_CONTAINER"
 
 export function getButtonCss({
   size = `L`,
@@ -14,6 +15,7 @@ export function getButtonCss({
   rightIcon,
   loading,
   textVariant = `DEFAULT`,
+  width = `AUTO`,
 }: {
   size?: ButtonSize
   tone?: ButtonTone
@@ -22,7 +24,8 @@ export function getButtonCss({
   rightIcon?: React.ReactNode
   loading?: boolean
   textVariant?: ButtonTextVariant
-}): InterpolationWithTheme<Theme> {
+  width?: ButtonWidth
+}): ThemeCss {
   return (theme: Theme) => [
     getButtonBaseCss(textVariant)(theme),
     getButtonIconsCss({
@@ -32,6 +35,7 @@ export function getButtonCss({
     getButtonLoadingCss({ loading })(theme),
     getButtonVariantCss(variant, tone)(theme),
     getButtonSizeCss(size, textVariant)(theme),
+    getButtonWidthCss(width)(theme),
   ]
 }
 
@@ -46,7 +50,7 @@ function getButtonBaseCss(textVariant?: ButtonTextVariant): ThemeCss {
     fontFamily:
       textVariant === "BRAND" ? theme.fonts.heading : theme.fonts.body,
     justifyContent: `center`,
-    transition: `background 0.5s, border 0.5s, color 0.5s`,
+    transition: `background ${theme.transitions.speed.default}, border ${theme.transitions.speed.default}, color ${theme.transitions.speed.default}`,
     lineHeight: theme.lineHeights.solid,
     textDecoration: `none`,
 
@@ -127,7 +131,8 @@ function getButtonSizeCss(
       return {
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[1] : theme.fontSizes[0],
-        minHeight: `calc(${theme.space[2]} * 7)`,
+        minHeight: theme.space[7],
+        minWidth: theme.space[7],
         padding: `${theme.space[2]} ${theme.space[3]}`,
       }
     }
@@ -135,7 +140,8 @@ function getButtonSizeCss(
       return {
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[2] : theme.fontSizes[1],
-        minHeight: `calc(${theme.space[2]} * 9)`,
+        minHeight: theme.space[8],
+        minWidth: theme.space[8],
         padding: `${theme.space[2]} ${theme.space[4]}`,
       }
     }
@@ -143,15 +149,17 @@ function getButtonSizeCss(
       return {
         fontSize:
           textVariant === "BRAND" ? theme.fontSizes[3] : theme.fontSizes[2],
-        minHeight: theme.space[9],
+        minHeight: `calc(${theme.space[8]} + ${theme.space[2]})`,
+        minWidth: `calc(${theme.space[8]} + ${theme.space[2]})`,
         padding: `${theme.space[2]} ${theme.space[5]}`,
       }
     }
     if (size === `XL`) {
       return {
         fontSize:
-          textVariant === "BRAND" ? theme.fontSizes[5] : theme.fontSizes[4],
+          textVariant === "BRAND" ? theme.fontSizes[5] : theme.fontSizes[3],
         minHeight: theme.space[10],
+        minWidth: theme.space[10],
         padding: `${theme.space[3]} ${theme.space[6]}`,
       }
     }
@@ -179,10 +187,11 @@ function getButtonVariantCss(
       return {
         background: `transparent`,
         border: `1px solid ${theme.tones[tone].light}`,
-        color: theme.tones[tone].dark,
+        color: theme.tones[tone].text,
         ":hover": {
           borderColor: theme.tones[tone].dark,
-          color: theme.tones[tone].dark,
+          background: theme.tones[tone].superLight,
+          color: theme.tones[tone].superDark,
         },
       }
     }
@@ -190,13 +199,19 @@ function getButtonVariantCss(
       return {
         background: `transparent`,
         border: `1px solid transparent`,
-        color: theme.tones[tone].dark,
+        color: theme.tones[tone].text,
         ":hover": {
           background: theme.tones[tone].superLight,
-          color: theme.tones[tone].dark,
+          color: theme.tones[tone].superDark,
         },
       }
     }
     return {}
   }
+}
+
+function getButtonWidthCss(buttonWidth?: ButtonWidth): ThemeCss {
+  return _theme => ({
+    width: buttonWidth === `FIT_CONTAINER` ? `100%` : undefined,
+  })
 }

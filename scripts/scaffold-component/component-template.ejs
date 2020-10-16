@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from 'react'
-import { ThemeCss, Theme } from "../../theme"
+import * as React from 'react'
+import { ThemeCss } from "../../theme"
 
 const baseCss: ThemeCss = theme => ({
   fontFamily: theme.fonts.body,
   fontSize: theme.fontSizes[3],
 })
+<%_ if (SCAFFOLD_VARIANT) { _%>
 
 const variantPrimaryCss: ThemeCss = theme => ({
   color: theme.colors.gatsby,
@@ -23,23 +24,36 @@ const variantCss: Record<<%= COMPONENT_NAME %>Variant, ThemeCss> = {
 
 export type <%= COMPONENT_NAME %>Variant = `PRIMARY` | `SECONDARY`
 
+<%_ } _%>
 export type <%= COMPONENT_NAME %>Props = {
+  <%_ if (SCAFFOLD_VARIANT) { _%>
   variant?: <%= COMPONENT_NAME %>Variant;
+  <%_ } _%>
   children?: React.ReactNode;
 }
 
 export function <%= COMPONENT_NAME %>({
+  <%_ if (SCAFFOLD_VARIANT) { _%>
   variant = `PRIMARY`,
+  <%_ } _%>
   children,
 }: <%= COMPONENT_NAME %>Props) {
+<%_ if (SCAFFOLD_VARIANT) { _%>
+  const finalCss: ThemeCss = theme => [
+    baseCss(theme),
+    variantCss[variant](theme),
+  ]
+
   return (
-    <div
-      css={(theme: Theme) => [
-        baseCss(theme),
-        variantCss[variant](theme),
-      ]}
-    >
+    <div css={finalCss}>
       {children}
     </div>
   )
+<%_ } else { _%>
+  return (
+    <div css={baseCss}>
+      {children}
+    </div>
+  )
+<%_ } _%>
 }

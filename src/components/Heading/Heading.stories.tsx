@@ -1,47 +1,24 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { select, text, radios } from "@storybook/addon-knobs"
-
-import {
-  radioKnobOptions,
-  withVariationsContainer,
-} from "../../utils/storybook"
-import { Heading, HeadingTone, HeadingVariant } from "."
+import { Meta, Story } from "@storybook/react"
+import { withVariationsContainer } from "../../utils/storybook"
+import { Heading, HeadingProps, HeadingTone, HeadingVariant } from "."
 
 export default {
   title: `Heading`,
   component: Heading,
-}
+} as Meta
 
-export const Basic = () => (
-  <Heading>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Heading>
-)
+const Template: Story<HeadingProps> = args => <Heading {...args} />
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  children: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+}
 
 const TONES: HeadingTone[] = ["BRAND", "SUCCESS", "DANGER", "NEUTRAL"]
 const VARIANTS: HeadingVariant[] = ["PRIMARY", `EMPHASIZED`, `LIGHT`]
-
-export const Sandbox = () => (
-  <Heading
-    as={select(
-      "HTML element",
-      ["h1", "h2", "h3", "h4", "h5", "h6", "span"],
-      `h2`
-    )}
-    tone={radios(`tone`, radioKnobOptions(TONES), `NEUTRAL`)}
-    variant={radios(`variant`, radioKnobOptions(VARIANTS), `PRIMARY`)}
-  >
-    {text(
-      "content",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-    )}
-  </Heading>
-)
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
-}
 
 export const Tones = () =>
   TONES.map(tone => (

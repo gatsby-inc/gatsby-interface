@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { fireEvent } from "@testing-library/react"
 import { CopyButton } from "../index"
 import { renderWithTheme } from "../../../utils/testing"
@@ -33,12 +33,6 @@ afterAll(() => {
 })
 
 describe(`<CopyButton>`, () => {
-  it(`renders unchanged`, async () => {
-    const { container } = render(<CopyButton content="test" />)
-
-    expect(container).toMatchSnapshot()
-  })
-
   it(`allows to configure button label`, async () => {
     const { container } = render(
       <CopyButton

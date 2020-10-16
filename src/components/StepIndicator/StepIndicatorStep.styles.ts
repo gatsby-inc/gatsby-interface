@@ -1,12 +1,16 @@
 import { ThemeCss } from "../../theme"
+import {
+  resetVisuallyHiddenCss,
+  visuallyHiddenCss,
+} from "../../stylesheets/a11y"
 
 export const baseCss: ThemeCss = theme => ({
   display: `inline-flex`,
   alignItems: `center`,
   borderRadius: `${theme.radii[2]} ${theme.radii[2]} 0 0`,
-  background: theme.colors.secondaryBackground,
+  backgroundColor: theme.colors.secondaryBackground,
   border: `1px solid ${theme.colors.standardLine}`,
-  color: theme.colors.grey[40],
+  color: theme.colors.blackFade[70],
   fontFamily: theme.fonts.heading,
   fontSize: theme.fontSizes[3],
   fontWeight: theme.fontWeights.bold,
@@ -51,29 +55,29 @@ export const linkCss: ThemeCss = theme => ({
   display: `flex`,
   alignItems: `center`,
   textDecoration: `none`,
-  color: theme.colors.purple[40],
+  color: theme.colors.purple[50],
   "&:active": {
     color: `inherit`,
   },
 })
 
-export const labelCss: ThemeCss = theme => ({
-  display: `none`,
-  [theme.mediaQueries.tablet]: {
-    display: `inline`,
-  },
-})
+export const labelCss: ThemeCss = _theme => ({})
 
-export const labelActiveCss: ThemeCss = _theme => ({
-  display: `inline`,
-})
+export const labelInactiveCss: ThemeCss = theme => [
+  visuallyHiddenCss,
+  {
+    [theme.mediaQueries.tablet]: resetVisuallyHiddenCss,
+  },
+]
+
+export const labelActiveCss: ThemeCss = _theme => ({})
 
 export const stepNumberCss: ThemeCss = theme => ({
   display: `flex`,
   alignItems: `center`,
   justifyContent: `center`,
   flexShrink: 0,
-  background: theme.colors.grey[30],
+  background: theme.colors.grey[40],
   color: theme.colors.white,
   fontFamily: theme.fonts.system,
   fontSize: theme.fontSizes[0],

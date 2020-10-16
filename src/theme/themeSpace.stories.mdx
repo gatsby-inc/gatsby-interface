@@ -1,0 +1,29 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { SpaceShowcase } from "./utils/SpaceShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Space" />
+
+# Space
+
+<br />
+
+<ThemeProvider>
+    <SpaceShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    marginTop: theme.space[3],
+    marginBottom: theme.space[3],
+    marginLeft: theme.space[5],
+    marginRight: theme.space[5],
+  })}
+/>
+```

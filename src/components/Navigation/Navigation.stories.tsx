@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Global } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { boolean, text } from "@storybook/addon-knobs"
 import { Navigation, NavigationItemOptions } from "."
 
@@ -86,6 +86,70 @@ const items2: NavigationItemOptions[] = [
   },
 ]
 
+const items3: NavigationItemOptions[] = [
+  {
+    name: `Why Gatsby?`,
+    linkTo: `/why-gatsby/`,
+    items: [
+      {
+        name: `Gatsby Data From Anywhere, Gatsby Data From Anywhere`,
+        linkTo: `/how-it-works/bring-data-from-anywhere/`,
+      },
+      {
+        name: `Write Modern Apps`,
+        linkTo: `/write-modern-apps/`,
+      },
+    ],
+  },
+  {
+    name: `How It Works`,
+    linkTo: `/how-it-works/`,
+  },
+  {
+    name: `Integrations`,
+    linkTo: `/integrations/`,
+  },
+  {
+    name: `About Us`,
+    linkTo: `/about-us/`,
+  },
+  {
+    name: `Resources`,
+    linkTo: `/resources/`,
+    items: [
+      {
+        name: `Gatsby Days`,
+        linkTo: `/resources/gatsby-days/`,
+      },
+      {
+        name: `Webinars`,
+        linkTo: `/resources/webinars/`,
+      },
+    ],
+  },
+]
+
+const secondaryItems2: NavigationItemOptions[] = [
+  {
+    name: `Docs`,
+    linkTo: `/docs/`,
+  },
+  {
+    name: `Contact Us`,
+    linkTo: `/contact/`,
+    items: [
+      {
+        name: `Lorem Ipsum is simply dummy text of the printing`,
+        linkTo: `/contact/1/`,
+      },
+      {
+        name: `Lorem Ipsum is not simply random text`,
+        linkTo: `/contact/2/`,
+      },
+    ],
+  },
+]
+
 export const Basic = () => (
   <Navigation items={items} secondaryItems={secondaryItems} />
 )
@@ -119,6 +183,10 @@ export const Inverted = () => (
     <Navigation items={items} secondaryItems={secondaryItems} isInverted />
     <InvertedBackground />
   </React.Fragment>
+)
+
+export const WithWideDropdowns = () => (
+  <Navigation items={items3} secondaryItems={secondaryItems2} />
 )
 
 export const WithItemLinksAsPropsAndChildren = () => (

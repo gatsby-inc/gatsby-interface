@@ -1,43 +1,30 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-import { number } from "@storybook/addon-knobs"
-import { ProgressBar } from "./ProgressBar"
+import * as React from "react"
+import { Meta, Story } from "@storybook/react"
 import { Theme } from "../../theme"
 import { withVariationsContainer } from "../../utils/storybook"
-import { DecoratorFn } from "@storybook/react"
+import { ProgressBar, ProgressBarProps } from "."
 
 export default {
   title: `ProgressBar`,
   component: ProgressBar,
   parameters: {
+    componentSubtitle:
+      "Progress Bars express a specified or unspecified time or display the length of a process.",
     layout: "padded",
   },
-  decorators: [
-    (story => <div css={{ width: "100px" }}>{story()}</div>) as DecoratorFn,
-  ],
-}
+  decorators: [story => <div css={{ width: "100px" }}>{story()}</div>],
+} as Meta
 
-export const Basic = () => (
-  <ProgressBar value={3} max={14} aria-describedby="remaining-days-1" />
-)
+const Template: Story<ProgressBarProps> = args => <ProgressBar {...args} />
 
-export const Sandbox = () => {
-  const value = number("Current value", 11)
+export const Basic = Template.bind({})
 
-  return (
-    <ProgressBar
-      value={value}
-      max={number("Max value", 14)}
-      aria-describedby="remaining-days-4"
-    />
-  )
-}
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
-  },
+Basic.args = {
+  value: 3,
+  max: 14,
+  "aria-describedby": "remaining-days-1",
 }
 
 const VALUES: number[] = [3, 8, 11, 14]

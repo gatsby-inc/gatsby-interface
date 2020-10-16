@@ -7,7 +7,7 @@ import { ThemeCss } from "../../theme"
 
 export type BreadcrumbProps = Omit<JSX.IntrinsicElements["nav"], "ref">
 
-export default function Breadcrumb({ children, ...rest }: BreadcrumbProps) {
+export function Breadcrumb({ children, ...rest }: BreadcrumbProps) {
   return (
     <nav aria-label="breadcrumb" {...rest}>
       <ol

@@ -1,6 +1,6 @@
 import { SuccessIcon } from "../icons"
 import { MdWarning, MdError } from "react-icons/md"
-import { NotificationTone, NotificationVariant } from "./types"
+import { NotificationTone, NotificationVariant } from "./Notification"
 import { ThemeCss } from "../../theme"
 
 export const iconByTone: Record<
@@ -45,17 +45,13 @@ const variants: Record<NotificationVariant, GetVariantStylesFn> = {
       {
         background: theme.tones[tone].dark,
         borderRadius: theme.radii[2],
-        color: theme.colors.white,
+        color: theme.tones[tone].textInverted
+          ? theme.tones[tone].textInverted
+          : theme.colors.white,
         padding: `${theme.space[5]} ${theme.space[7]}`,
         [theme.mediaQueries.desktop]: {
           padding: `${theme.space[7]} ${theme.space[9]}`,
         },
-      },
-      tone === `WARNING` && {
-        background: theme.colors.yellow[50],
-      },
-      tone === `SUCCESS` && {
-        background: theme.colors.green[80],
       },
     ]
   },

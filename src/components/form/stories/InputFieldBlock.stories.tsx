@@ -1,78 +1,85 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import { Meta, Story } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
-import { InputFieldBlock, FormFieldBlockLayout } from ".."
-import { FormFieldLabelSize } from "../components/FormField.helpers"
-import { getFieldBlockSandboxProps } from "./stories.utils"
-import { text } from "@storybook/addon-knobs"
+import Markdown from "markdown-to-jsx"
+import {
+  commonFieldArgTypes,
+  disabledArgs,
+  requiredArgs,
+  withErrorAndHintArgs,
+  withErrorArgs,
+  withHintArgs,
+} from "./stories.utils"
 import { withVariationsContainer } from "../../../utils/storybook"
-import InputFieldBlockDocs from "./InputFieldBlock.mdx"
+import {
+  InputFieldBlock,
+  InputFieldBlockProps,
+  FormFieldBlockLayout,
+  StyledLabelSize,
+} from ".."
 
-const LABEL_SIZES: FormFieldLabelSize[] = [`L`, `M`, `S`]
+const LABEL_SIZES: StyledLabelSize[] = [`L`, `M`, `S`]
 
 export default {
   title: `Form/Styled Blocks/InputFieldBlock`,
+  component: InputFieldBlock,
   parameters: {
+    componentSubtitle: (
+      <Markdown>{`Accepts all of the props supported by \`<input />\` as well as the props shared between field block components`}</Markdown>
+    ),
     layout: `padded`,
     options: {
       showRoots: true,
     },
-    docs: {
-      page: InputFieldBlockDocs,
-    },
     chromatic: { pauseAnimationAtEnd: true },
   },
-}
-
-export const Basic = () => (
-  <InputFieldBlock
-    id="basic"
-    label="Field label"
-    onChange={e => action(`Change`)(e.target.value)}
-  />
-)
-
-export const Sandbox = () => {
-  const placeholder = text(`Placeholder`, `This is a placeholder`)
-  return (
-    <InputFieldBlock
-      id="sandbox"
-      placeholder={placeholder}
-      {...getFieldBlockSandboxProps()}
-    />
-  )
-}
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
+  argTypes: {
+    ...commonFieldArgTypes,
+    placeholder: {
+      table: {
+        type: {
+          summary: `string`,
+        },
+      },
+      control: {
+        type: `text`,
+      },
+    },
   },
+} as Meta
+
+const Template: Story<InputFieldBlockProps> = args => (
+  <InputFieldBlock {...args} />
+)
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  id: `basic`,
+  label: `Label`,
+  onChange: e => action(`Change`)(e.target.value),
 }
 
-export const Required = () => (
-  <InputFieldBlock id="required" label="Field label" required />
-)
+export const Required = Template.bind({})
 
-export const Disabled = () => (
-  <InputFieldBlock id="disabled" label="Field label" disabled />
-)
+Required.args = requiredArgs
 
-export const WithHint = () => (
-  <InputFieldBlock id="withHint" label="Field label" hint="Hint text" />
-)
+export const Disabled = Template.bind({})
 
-export const WithError = () => (
-  <InputFieldBlock id="withError" label="Field label" error="Error message" />
-)
+Disabled.args = disabledArgs
 
-export const WithErrorAndHint = () => (
-  <InputFieldBlock
-    id="withErrorAndHint"
-    label="Field label"
-    hint="Hint text"
-    error="Error message"
-  />
-)
+export const WithHint = Template.bind({})
+
+WithHint.args = withHintArgs
+
+export const WithError = Template.bind({})
+
+WithError.args = withErrorArgs
+
+export const WithErrorAndHint = Template.bind({})
+
+WithErrorAndHint.args = withErrorAndHintArgs
 
 export const LabelSizes = () =>
   LABEL_SIZES.map(labelSize => (

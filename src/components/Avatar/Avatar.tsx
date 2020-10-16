@@ -3,7 +3,6 @@ import React from "react"
 import { jsx } from "@emotion/core"
 import { css } from "@emotion/core"
 import AvatarSkeleton from "./AvatarSkeleton"
-import { AvatarSize } from "./types"
 import { DEFAULT_SIZE, placeholderFontSizes } from "./constants"
 import { fitText } from "./Avatar.helpers"
 
@@ -23,6 +22,8 @@ const maxFallbackTextWidth: Record<AvatarSize, number> = {
   XL: 0.8,
   XXL: 0.8,
 }
+
+export type AvatarSize = "XS" | "S" | "M" | "L" | "XL" | "XXL"
 
 export type AvatarProps = {
   src: string

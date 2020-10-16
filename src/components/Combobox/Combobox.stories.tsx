@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import {
   Combobox,
   ComboboxInput,
@@ -10,7 +10,8 @@ import {
 } from "./"
 import { Theme } from "../../theme"
 import { ComboboxOptionProps } from "./Combobox"
-import { boolean } from "@storybook/addon-knobs"
+import { boolean, text } from "@storybook/addon-knobs"
+import { isA11yTest } from "../../utils/storybook"
 
 export default {
   title: `Combobox`,
@@ -58,12 +59,12 @@ const options: ComboboxOptionProps[] = [
 
 export const Basic = () => {
   return (
-    <div>
+    <div css={{ minHeight: `100vh` }}>
       <h4 id="demo">Basic, fixed List Combobox</h4>
       <Combobox>
         <ComboboxInput
           aria-labelledby="demo"
-          ref={element => element && element.focus()}
+          ref={element => !isA11yTest() && element && element.focus()}
         />
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
@@ -85,6 +86,8 @@ export const Sandbox = () => {
         <ComboboxInput
           aria-labelledby="demo"
           hasError={boolean(`hasError`, false)}
+          showToggleButton={boolean(`showToggleButton`, false)}
+          toggleButtonAriaLabel={text("toggleButtonAriaLabel", "Show options")}
         />
         <ComboboxPopover>
           <ComboboxList aria-labelledby="demo">
@@ -108,6 +111,50 @@ Sandbox.story = {
   parameters: {
     chromatic: { disable: true },
   },
+}
+
+export const WithToggleButton = () => {
+  return (
+    <div css={{ minHeight: `100vh` }}>
+      <h4 id="demo">Toggle Button</h4>
+      <Combobox>
+        <ComboboxInput
+          aria-labelledby="demo"
+          ref={element => !isA11yTest() && element && element.focus()}
+          showToggleButton
+          toggleButtonAriaLabel="Show available options"
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-labelledby="demo">
+            {options.map(({ value }) => {
+              return <ComboboxOption key={value} value={value} />
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  )
+}
+
+export const WithAccessibleNameForList = () => {
+  return (
+    <div>
+      <h4 id="demo">Combobox with an explicit accessible label</h4>
+      <Combobox>
+        <ComboboxInput
+          aria-labelledby="demo"
+          ref={element => !isA11yTest() && element && element.focus()}
+        />
+        <ComboboxPopover>
+          <ComboboxList aria-label="Grocery list">
+            {options.map(({ value }) => {
+              return <ComboboxOption key={value} value={value} />
+            })}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  )
 }
 
 export const WithSelect = () => {

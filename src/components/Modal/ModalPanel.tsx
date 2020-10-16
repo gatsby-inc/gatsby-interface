@@ -1,59 +1,99 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-import { keyframes } from "@emotion/core"
+import * as React from "react"
+import { animated, useSpring, UseSpringProps } from "react-spring"
 import { ModalContent, ModalContentProps } from "./ModalContent"
 import { ThemeCss } from "../../theme"
-
-const buildTranslation = (position: ModalPanelPosition) => keyframes`
-  0% {
-    transform: translate3d${position === `left` ? `(-100%, 0,0)` : `(100%,0,0)`}
-   }
- 
-   100% {
-    transform: translate3d(0,0,0);
-   }
- `
-
-const translateLeft = buildTranslation(`left`)
-const translateRight = buildTranslation(`right`)
+import { warn } from "../../utils/maintenance/warn"
 
 const baseCss: ThemeCss = theme => ({
   background: theme.colors.white,
   height: `100vh`,
-  position: "absolute",
-  animationDuration: `0.5s`,
-  animationFillMode: `forwards`,
-  animationTimingFunction: `ease`,
+  bottom: 0,
+  top: 0,
+  position: "fixed",
+  overflowY: "auto",
 })
+
+const DEFAULT_MAX_WIDTH = `432px`
+
+const sizesStyles: Record<PanelSize, ThemeCss> = {
+  DEFAULT: _theme => ({
+    width: `100vw`,
+    [`@media (min-width: ${DEFAULT_MAX_WIDTH})`]: {
+      maxWidth: DEFAULT_MAX_WIDTH,
+    },
+  }),
+}
+
+const AnimatedModalContent = animated(ModalContent)
+
+const springConfig: Record<
+  PanelPosition,
+  UseSpringProps<React.CSSProperties>
+> = {
+  right: {
+    from: {
+      transform: "translate3d(100%,0,0)",
+    },
+  },
+  left: {
+    from: {
+      transform: "translate3d(-100%,0,0)",
+    },
+  },
+}
 
 export type PanelPosition = "left" | "right"
 export type ModalPanelPosition = "left" | "right"
+export type PanelSize = "DEFAULT"
 
 export type ModalPanelProps = Omit<ModalContentProps, "ref"> & {
   position?: ModalPanelPosition
+  size?: PanelSize
+  // DEPRECATED, ONLY USE "size" INSTEAD
   maxWidth?: string
 }
 
 export const ModalPanel: React.FC<ModalPanelProps> = ({
-  maxWidth = `20%`,
+  maxWidth,
   position = `right`,
+  size = `DEFAULT`,
   ...props
-}) => (
-  <ModalContent
-    css={theme => [
-      baseCss(theme),
-      { maxWidth },
-      position === `right`
-        ? {
-            right: 0,
-            animationName: translateRight,
-          }
-        : {
-            left: 0,
-            animationName: translateLeft,
-          },
-    ]}
-    {...props}
-  />
-)
+}) => {
+  const styleProps = useSpring({
+    to: {
+      transform: "translate3d(0,0,0)",
+    },
+    config: {
+      tension: 400,
+      mass: 1,
+      friction: 40,
+    },
+    ...springConfig[position],
+  })
+
+  if (maxWidth) {
+    warn(
+      `"maxWidth" prop has been deprecated in favour of "size" (set to "DEFAULT" if not passed)`
+    )
+  }
+
+  return (
+    <AnimatedModalContent
+      style={styleProps}
+      css={theme => [
+        baseCss(theme),
+        maxWidth ? { maxWidth } : sizesStyles[size](theme),
+        position === `right`
+          ? {
+              right: 0,
+            }
+          : {
+              left: 0,
+            },
+      ]}
+      {...props}
+    />
+  )
+}

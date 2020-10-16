@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
+import * as React from "react"
 import { BaseAnchor, BaseAnchorProps } from "../BaseAnchor"
 import { ButtonStyleProps, getButtonStyles } from "../Button/Button"
 
@@ -18,6 +18,7 @@ export const AnchorButton = React.forwardRef<
     leftIcon,
     rightIcon,
     textVariant,
+    width,
     ...rest
   } = props
 
@@ -31,6 +32,7 @@ export const AnchorButton = React.forwardRef<
         leftIcon,
         rightIcon,
         textVariant,
+        width,
       })}
       {...rest}
       ref={ref}

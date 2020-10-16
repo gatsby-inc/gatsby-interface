@@ -1,0 +1,54 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { MediaQueriesShowcase } from "./utils/MediaQueriesShowcase"
+import { ThemeProvider } from "../components/ThemeProvider"
+
+<Meta title="Theme/Media Queries" />
+
+# Media Queries
+
+<br />
+
+<ThemeProvider>
+    <MediaQueriesShowcase />
+</ThemeProvider>
+
+<br />
+
+----
+## Usage
+
+```jsx
+<div
+  css={theme => ({
+    [theme.mediaQueries.desktop]: {
+      display: "none",
+    },
+  })}
+/>
+```
+
+### Breakpoints
+In addition to media queries, you can access raw breakpoint values which are defined as an array of numbers in ascending order,
+each representing a breakpoint in pixels, in order to be compatible with ThemeUI.
+
+```jsx
+<div
+  css={theme => ({
+    [`@media (min-width: ${theme.breakpoints[2]}px)`]: {
+      display: "none",
+    },
+  })}
+/>
+```
+
+You can also use `mediaBreakpoints`, which is an object that maps a certain "media" (e.g. "desktop" or "tablet") to a breakpoint in pixels:
+
+```jsx
+<div
+  css={theme => ({
+    [`@media (min-width: ${theme.mediaBreakpoints.tablet}px)`]: {
+      display: "none",
+    },
+  })}
+/>
+```

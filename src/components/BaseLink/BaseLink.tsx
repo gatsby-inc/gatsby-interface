@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Link, GatsbyLinkProps } from "gatsby"
 
 export type BaseLinkProps<TState> = Omit<GatsbyLinkProps<TState>, "ref">

@@ -4,7 +4,6 @@ import React, { Fragment } from "react"
 import { MdClose, MdArrowForward } from "react-icons/md"
 
 import { Button } from "../Button"
-import { NotificationVariant, NotificationTone } from "./types"
 import {
   getNotificationVariantStyles,
   iconByTone,
@@ -26,6 +25,7 @@ const NotificationContext = React.createContext<NotificationContextValue>({
 })
 
 const baseCss: ThemeCss = theme => ({
+  color: theme.colors.grey[90],
   display: `flex`,
   alignItems: `flex-start`,
   justifyContent: `space-between`,
@@ -34,6 +34,14 @@ const baseCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
   lineHeight: theme.lineHeights.default,
 })
+
+export type NotificationVariant = `PRIMARY` | `SECONDARY` | `SOLID`
+export type NotificationTone =
+  | `BRAND`
+  | `SUCCESS`
+  | `DANGER`
+  | `WARNING`
+  | `NEUTRAL`
 
 export type NotificationProps = Omit<JSX.IntrinsicElements["div"], "ref"> & {
   children?: React.ReactNode
@@ -51,7 +59,7 @@ export type NotificationProps = Omit<JSX.IntrinsicElements["div"], "ref"> & {
   Icon?: React.ComponentType<any>
 }
 
-export default function Notification({
+export function Notification({
   children,
   tone = `BRAND`,
   variant = `PRIMARY`,
@@ -88,12 +96,12 @@ export default function Notification({
         {content && (
           <NotificationContent
             as={contentAs}
-            css={theme => ({
-              color:
-                variant === `SOLID` && tone !== `WARNING`
-                  ? theme.colors.white
-                  : null,
-            })}
+            css={theme => [
+              linkUrl &&
+                linkText && {
+                  marginRight: theme.space[5],
+                },
+            ]}
           >
             {Icon && (
               <Icon
@@ -107,12 +115,10 @@ export default function Notification({
                     height: "1em",
                   },
                   variant === `SOLID` && {
-                    color: theme.colors.whiteFade[90],
+                    color: theme.tones[tone].mediumInverted
+                      ? theme.tones[tone].mediumInverted
+                      : theme.colors.whiteFade[90],
                   },
-                  variant === `SOLID` &&
-                    tone === `WARNING` && {
-                      color: theme.colors.blackFade[90],
-                    },
                 ]}
               />
             )}
@@ -125,6 +131,9 @@ export default function Notification({
             to={linkUrl}
             onClick={onLinkClick}
             css={theme => ({
+              // to push <Link> to the right also when there's a
+              // <NotificationDismissButton>
+              marginLeft: "auto",
               color: variant === `SOLID` ? theme.colors.white : null,
               ":hover": {
                 color: variant === `SOLID` ? theme.colors.whiteFade[80] : null,
@@ -163,11 +172,10 @@ function NotificationContent({
 }: NotificationContentProps) {
   return (
     <Component
-      css={(theme: Theme) => ({
+      css={{
         display: `flex`,
         alignItems: `flex-start`,
-        color: theme.tones[`NEUTRAL`].superDark,
-      })}
+      }}
       {...rest}
     />
   )

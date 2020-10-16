@@ -1,9 +1,8 @@
-import React, { Fragment } from "react"
+import * as React from "react"
 import { Global, css } from "@emotion/core"
 import { addDecorator } from "@storybook/react"
 import { withKnobs } from "@storybook/addon-knobs"
 import { withConsole } from "@storybook/addon-console"
-import { withA11y } from "@storybook/addon-a11y"
 import { action } from "@storybook/addon-actions"
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
 import { withTheme, docsMDXComponents, storybookThemeLight } from "./theming"
@@ -42,7 +41,7 @@ addDecorator(withKnobs)
 addDecorator(withTheme)
 
 const withGlobal = storyFn => (
-  <Fragment>
+  <React.Fragment>
     <Global
       styles={css`
         *,
@@ -55,7 +54,7 @@ const withGlobal = storyFn => (
         }
         body {
           font-family: ${fonts.system};
-          height: 100vh;
+          height: 100%;
           margin: 0;
           width: 100%;
         }
@@ -71,14 +70,12 @@ const withGlobal = storyFn => (
       `}
     />
     {storyFn()}
-  </Fragment>
+  </React.Fragment>
 )
 
 addDecorator(withGlobal)
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context))
-
-addDecorator(withA11y)
 
 // Storybook now has first-class support for hooks, but Storyshots for some reason still fails
 // so we only transform stories to React elements in test environment

@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Modal } from "./Modal"
 import { text, radios } from "@storybook/addon-knobs"
 import { ModalPanel, ModalPanelPosition } from "./"

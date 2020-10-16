@@ -1,5 +1,5 @@
 import { hexToRGBA } from "../../utils/helpers/hexToRgb"
-import { ThemeCss } from "../../theme"
+import { ThemeCss, Theme } from "../../theme"
 
 const liReset = {
   margin: 0,
@@ -39,7 +39,6 @@ export const navCss = (
     {
       display: `flex`,
       justifyContent: `space-between`,
-      padding: `0 ${theme.space[5]}`,
       width: "100%",
       [mobileNavMediaQuery]: {
         display: isMobileNavOpen ? `block` : `none`,
@@ -87,26 +86,36 @@ export const listCss = (mobileNavMediaQuery: string): ThemeCss => {
 const dropdownOpenCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
   fontFamily: theme.fonts.system,
-  right: 0,
   boxShadow: theme.shadows.dialog,
   background: theme.colors.white,
-  width: 450,
   borderRadius: theme.radii[1],
 
   ":after": {
     position: `absolute`,
     top: -6,
-    left: 30,
+    left: `50%`,
     width: 12,
     height: 12,
     content: `" "`,
-    transform: `rotate(45deg)`,
-    borderRadius: `2 0 0 0`,
+    borderRadius: `2px 0 0 0`,
     background: theme.colors.white,
     boxShadow: `-3px -3px 10px ${hexToRGBA(theme.colors.lilac, 0.1, true)}`,
     willChange: `transform`,
     transitionProperty: `transform`,
     transitionDuration: theme.transitions.speed.default,
+  },
+})
+
+export const dropdownListCss = (theme: Theme, mobileNavMediaQuery: string) => ({
+  display: `grid`,
+  gridTemplateColumns: `max-content`,
+
+  // regretably our mobileNavMediaQuery is NOT 'mobile-first' styling
+  // so we have to 'remove' default style for mobile version
+  [mobileNavMediaQuery]: {
+    display: `block`,
+    gridTemplateColumns: `none`,
+    padding: `0 0 ${theme.space[4]}`,
   },
 })
 
@@ -198,9 +207,21 @@ export const itemLinkCss = (
   ]
 }
 
-export const dropdownCss = (mobileNavMediaQuery: string): ThemeCss => {
+export const dropdownCss = (
+  mobileNavMediaQuery: string,
+  offset: string
+): ThemeCss => {
   return theme => [
     dropdownOpenCss(theme),
+    {
+      // offset is set when dropdown in default positioning hits left or right edge of he viewport
+      // if so the dropdown is shifted to the position when it fits into the viewport
+      transform: `translate(calc(-50% + ${offset}), -${theme.space[2]})`,
+      ":after": {
+        // to make the spout centered to parent menu item we shift it into the opposite direction
+        transform: `translateX(calc(-50% + (${offset} * -1))) rotate(45deg)`,
+      },
+    },
     {
       [mobileNavMediaQuery]: [
         {
@@ -210,6 +231,7 @@ export const dropdownCss = (mobileNavMediaQuery: string): ThemeCss => {
         dropdownMobileCss(theme),
       ],
     },
+    {},
   ]
 }
 
@@ -225,6 +247,10 @@ export const dropdownToggleCss = (mobileNavMediaQuery: string): ThemeCss => {
 
 export const dropdownItemCss = (mobileNavMediaQuery: string): ThemeCss => {
   return theme => ({
+    "&:first-of-type > a": {
+      margin: 0,
+    },
+
     a: {
       color: theme.colors.grey[50],
       textDecoration: `none`,
@@ -245,6 +271,7 @@ export const dropdownItemCss = (mobileNavMediaQuery: string): ThemeCss => {
         padding: 0,
         margin: `${theme.space[3]} 0 0 0`,
         fontSize: theme.fontSizes[1],
+
         "&:hover, &:focus-within": {
           opacity: 1,
           color: theme.colors.accent,

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import React from "react"
-import { DecoratorFn } from "@storybook/react"
+import * as React from "react"
+import { Meta, Story } from "@storybook/react"
 import { withDesign } from "storybook-addon-designs"
 import {
   IntegrationsIcon,
@@ -10,24 +10,12 @@ import {
   SkullIcon,
   GeneralIcon,
 } from "../icons"
-import {
-  SidebarNav,
-  SidebarNavOption,
-  SidebarNavProps,
-  SidebarNavVariant,
-} from "./"
-import {
-  radioKnobOptions,
-  withVariationsContainer,
-} from "../../utils/storybook"
-import { radios, text } from "@storybook/addon-knobs"
-
-const SIDEBAR_NAV_VARIANTS: SidebarNavVariant[] = [`DEFAULT`, `FULL`]
+import { SidebarNav, SidebarNavOption, SidebarNavProps } from "./"
 
 export default {
   title: `SidebarNav`,
   component: SidebarNav,
-  decorators: [withDesign] as DecoratorFn[],
+  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -35,40 +23,16 @@ export default {
         "https://www.figma.com/file/OfhYd2rjUTCeu65VGlzH1wtv/Menus?node-id=295%3A335",
     },
   },
-}
-
-export const Basic = () => <SidebarNavExample />
-
-export const Sandbox = () => (
-  <SidebarNavExample
-    variant={radios(
-      "variant",
-      radioKnobOptions(SIDEBAR_NAV_VARIANTS),
-      `DEFAULT`
-    )}
-    aria-label={text("accessible label", "Sandbox navigation")}
-  />
-)
-
-Sandbox.story = {
-  parameters: {
-    chromatic: { disable: true },
+  argTypes: {
+    options: {
+      control: {
+        disable: true,
+      },
+    },
   },
-}
+} as Meta
 
-export const Variants = () =>
-  SIDEBAR_NAV_VARIANTS.map(variant => (
-    <React.Fragment key={variant}>
-      <h3>{variant}:</h3>
-      <SidebarNavExample key={variant} variant={variant} />
-    </React.Fragment>
-  ))
-
-Variants.story = {
-  decorators: [withVariationsContainer],
-}
-
-const SidebarNavExample = (props: Partial<SidebarNavProps>) => {
+const Template: Story<SidebarNavProps> = args => {
   // The active prop should be managed by path rather than component state. This use case is for storybook only
   const [activeNav, setNav] = React.useState(`general`)
   const [subNav, setSubNav] = React.useState(`site`)
@@ -164,5 +128,11 @@ const SidebarNavExample = (props: Partial<SidebarNavProps>) => {
     },
   ]
 
-  return <SidebarNav options={options} {...props} />
+  return <SidebarNav options={options} {...args} />
+}
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  "aria-label": `sidebar navigation`,
 }
