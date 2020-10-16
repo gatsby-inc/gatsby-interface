@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.218](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.217...v0.0.218) (2020-10-16)
+
+
+### Bug Fixes
+
+* **form:** desctructure Formik's field props instead of copying them ([#414](https://github.com/gatsby-inc/gatsby-interface/issues/414)) ([adf717d](https://github.com/gatsby-inc/gatsby-interface/commit/adf717d86efcb0ac53c067ed33c00152cd29d505))
+
 ### [0.0.217](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.216...v0.0.217) (2020-10-14)
 
 
