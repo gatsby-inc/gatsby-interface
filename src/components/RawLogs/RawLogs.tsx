@@ -91,7 +91,7 @@ export function RawLogs({
 
           const itemCss: ThemeCss = theme => ({
             margin: 0,
-            display: `flex`,
+
             color:
               sourceStream === "STDERR"
                 ? theme.colors.red[40]
@@ -105,6 +105,15 @@ export function RawLogs({
             p: {
               margin: 0,
               whiteSpace: `pre-wrap`,
+              marginLeft: theme.space[5],
+            },
+
+            [theme.mediaQueries.desktop]: {
+              display: `flex`,
+
+              p: {
+                marginLeft: 0,
+              },
             },
           })
 
