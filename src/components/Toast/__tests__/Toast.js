@@ -1,12 +1,6 @@
 import * as React from "react"
 import { fireEvent, act } from "@testing-library/react"
-import {
-  ToastProvider,
-  ToastConsumer,
-  useShowSuccessToast,
-  useShowErrorToast,
-  useShowErrorAlert,
-} from "../"
+import { ToastProvider, ToastConsumer, useShowSuccessToast } from "../"
 import { Toast } from "../Toast"
 import { renderWithTheme } from "../../../utils/testing"
 
@@ -22,17 +16,6 @@ describe(`Toast`, () => {
     tone: `SUCCESS`,
     id: 0,
   }
-
-  it(`renders unchanged`, async () => {
-    const { container } = render(
-      <React.Fragment>
-        <Toast {...baseProps} />
-        <Toast {...baseProps} id={1} tone="DANGER" />
-      </React.Fragment>
-    )
-
-    expect(container).toMatchSnapshot()
-  })
 
   it(`displays the toast message`, async () => {
     const { queryByText } = render(<Toast {...baseProps} />)
@@ -163,105 +146,5 @@ describe(`useShowSuccessToast hook`, () => {
     })
 
     expect(queryByTestId(`toast`)).toBeTruthy()
-  })
-})
-
-describe(`useShowErrorToast hook`, () => {
-  it(`returns a method to show error toast`, () => {
-    function TestComponent() {
-      const showErrorToast = useShowErrorToast()
-
-      return (
-        <button onClick={() => showErrorToast(`Lorem ipsum`)}>
-          Show toast
-        </button>
-      )
-    }
-
-    const { getByText, queryByTestId } = render(
-      <ToastProvider>
-        <TestComponent />
-      </ToastProvider>
-    )
-
-    act(() => {
-      fireEvent.click(getByText(`Show toast`))
-    })
-
-    expect(queryByTestId(`toast`)).toBeTruthy()
-    setTimeout(() => expect(queryByTestId(`toast`)).toBeTruthy(), 600)
-  })
-})
-
-describe(`useShowErrorAlert hook`, () => {
-  it(`returns a method to show error alert`, () => {
-    function TestComponent() {
-      const showErrorAlert = useShowErrorAlert()
-
-      return (
-        <button
-          onClick={() =>
-            showErrorAlert(`Lorem ipsum`, {
-              linkLabel: `See details`,
-              href: `https://google.com`,
-              target: `_blank`,
-            })
-          }
-        >
-          Show toast
-        </button>
-      )
-    }
-
-    const { getByText, queryByTestId } = render(
-      <ToastProvider>
-        <TestComponent />
-      </ToastProvider>
-    )
-
-    act(() => {
-      fireEvent.click(getByText(`Show toast`))
-    })
-
-    expect(queryByTestId(`toast`)).toBeTruthy()
-    setTimeout(() => expect(queryByTestId(`toast`)).toBeTruthy(), 600)
-
-    const link = getByText(`See details`)
-    expect(link).toHaveAttribute(`href`, `https://google.com`)
-    expect(link).toHaveAttribute(`target`, `_blank`)
-  })
-
-  it(`allows to show error alert with an internal link`, () => {
-    function TestComponent() {
-      const showErrorAlert = useShowErrorAlert()
-
-      return (
-        <button
-          onClick={() =>
-            showErrorAlert(`Lorem ipsum`, {
-              linkLabel: `See details`,
-              to: `/local`,
-              target: `_blank`,
-            })
-          }
-        >
-          Show toast
-        </button>
-      )
-    }
-
-    const { getByText } = render(
-      <ToastProvider>
-        <TestComponent />
-      </ToastProvider>
-    )
-
-    act(() => {
-      fireEvent.click(getByText(`Show toast`))
-    })
-
-    const link = getByText(`See details`)
-    expect(link).toHaveAttribute(`href`, `/local`)
-    expect(link).not.toHaveAttribute(`target`)
   })
 })
