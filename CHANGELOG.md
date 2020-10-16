@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.219](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.218...v0.0.219) (2020-10-16)
+
+
+### Bug Fixes
+
+* **Modals:** animation improvements for panels ([#412](https://github.com/gatsby-inc/gatsby-interface/issues/412)) ([1bc1d3b](https://github.com/gatsby-inc/gatsby-interface/commit/1bc1d3b4b464fae0c89a70249ee1d660f6f032af))
+
 ### [0.0.218](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.217...v0.0.218) (2020-10-16)
 
 
