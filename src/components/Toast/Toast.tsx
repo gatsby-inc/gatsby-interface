@@ -20,7 +20,6 @@ const toastCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
   minHeight: MIN_HEIGHT,
   paddingLeft: theme.space[4],
-  pointerEvents: `auto`,
 })
 
 const iconCss: ThemeCss = theme => ({

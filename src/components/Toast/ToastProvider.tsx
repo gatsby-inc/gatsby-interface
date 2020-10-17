@@ -25,6 +25,7 @@ const containerCss: ThemeCss = theme => ({
 })
 
 const toastCss: ThemeCss = theme => ({
+  pointerEvents: `auto`,
   marginBottom: theme.space[1],
 
   "&:first-of-type": {
