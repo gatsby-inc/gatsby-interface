@@ -8,13 +8,13 @@ export type LipShadowPosition = `top` | `bottom`
 export type StickyObserverContextValue = {
   isStuck: boolean
   lipShadowPosition: LipShadowPosition
-  setIsIntersecting: (isIntersecting: boolean) => void
+  setIsStuck: (isStuck: boolean) => void
 }
 
 const StickyObserverContext = React.createContext<StickyObserverContextValue>({
   isStuck: false,
   lipShadowPosition: `bottom`,
-  setIsIntersecting: () => undefined,
+  setIsStuck: () => undefined,
 })
 
 export type StickyObserverProps = StickyObservedContainerProps & {
@@ -48,11 +48,11 @@ export function StickyObserverProvider({
   lipShadowPosition,
   children,
 }: StickyObserverProviderProps) {
-  const [isIntersecting, setIsIntersecting] = React.useState<boolean>(false)
+  const [isStuck, setIsStuck] = React.useState<boolean>(false)
 
   const contextValue: StickyObserverContextValue = {
-    isStuck: isIntersecting,
-    setIsIntersecting,
+    isStuck,
+    setIsStuck,
     lipShadowPosition,
   }
 
@@ -116,7 +116,7 @@ export type StickyObserverSentinelProps = {}
 // When the sticky element gets "stuck", it pushes the sentinel away from the screen, triggering an intersection entry
 // When the sticky element gets "unstuck", the sentinel appears on the screen, triggering an intersection entry
 export function StickyObserverSentinel(_props: StickyObserverSentinelProps) {
-  const { setIsIntersecting, lipShadowPosition } = useStickyObserver()
+  const { setIsStuck, lipShadowPosition } = useStickyObserver()
   const sentinelRef = React.useRef<HTMLDivElement | null>(null)
   const observerRef = React.useRef<IntersectionObserver | null>(null)
 
@@ -127,10 +127,10 @@ export function StickyObserverSentinel(_props: StickyObserverSentinelProps) {
 
     observerRef.current = new IntersectionObserver(
       entries => {
-        if (entries[0].intersectionRatio === 0) {
-          setIsIntersecting(true)
+        if (entries[0].intersectionRatio === 0 && !entries[0].isIntersecting) {
+          setIsStuck(true)
         } else if (entries[0].intersectionRatio === 1) {
-          setIsIntersecting(false)
+          setIsStuck(false)
         }
       },
       {
@@ -204,10 +204,10 @@ export function StickyLipShadow(_props: StickyLipShadowProps) {
 function getLipBoxShadow(theme: Theme, shadowDirection: LipShadowPosition) {
   return `
         0px ${shadowDirection === "top" ? -2 : 2}px 2px ${
-    theme.colors.blackFade[20]
+    theme.colors.blackFade[10]
   },
         0px ${shadowDirection === "top" ? -4 : 4}px 4px ${
-    theme.colors.blackFade[40]
+    theme.colors.blackFade[20]
   }
     `
 }

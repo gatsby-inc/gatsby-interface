@@ -24,13 +24,10 @@ export function useConnectedField<TValue = string>(
   const [field, meta, helpers] = useField<TValue>(propsOrFieldName)
 
   const connectedProps: ConnectedFieldProps<TValue> = {
+    ...field,
     id,
     label,
-    value: field.value,
-    checked: field.checked,
     error: meta.touched ? meta.error : "",
-    onBlur: field.onBlur,
-    onChange: field.onChange,
   }
 
   return [connectedProps, field, meta, helpers] as const

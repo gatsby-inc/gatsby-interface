@@ -130,9 +130,6 @@ export function StyledPanelBoilerplate({
       onDismiss={onClose}
       type="neutral"
       css={{
-        width: `100%`,
-        height: `auto`,
-        minHeight: `100%`,
         display: `flex`,
         flexDirection: `column`,
       }}
