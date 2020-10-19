@@ -91,10 +91,30 @@ export function RawLogs({
 
           const itemCss: ThemeCss = theme => ({
             margin: 0,
+
             color:
               sourceStream === "STDERR"
                 ? theme.colors.red[40]
                 : theme.colors.white,
+
+            time: {
+              whiteSpace: `nowrap`,
+              marginRight: theme.space[2],
+            },
+
+            p: {
+              margin: 0,
+              whiteSpace: `pre-wrap`,
+              marginLeft: theme.space[5],
+            },
+
+            [theme.mediaQueries.desktop]: {
+              display: `flex`,
+
+              p: {
+                marginLeft: 0,
+              },
+            },
           })
 
           return (
@@ -104,10 +124,9 @@ export function RawLogs({
                   <time dateTime={timestampDate.toString()}>
                     {format(timestampDate, timeFormat)}
                   </time>
-                  &nbsp;
                 </React.Fragment>
               )}
-              {message}
+              <p>{message}</p>
             </li>
           )
         })}
