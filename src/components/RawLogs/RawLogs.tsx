@@ -6,7 +6,7 @@ import { ThemeCss } from "../../theme"
 
 const baseCss: ThemeCss = theme => ({
   padding: theme.space[7],
-  backgroundColor: theme.colors.grey[90],
+  backgroundColor: theme.colors.grey[80],
   color: theme.colors.white,
   fontFamily: theme.fonts.monospace,
   fontSize: theme.fontSizes[1],
@@ -35,6 +35,17 @@ export type RawLogsProps = {
   "aria-label": string
   timeFormat?: string
   className?: string
+}
+
+function formatMessage(message: string): React.ReactNode {
+  const newMessage = message.replaceAll(
+    /(^|\n)(success|info|warning|error) /gi,
+    (_: string, match1: string, match2: string) => {
+      return `${match1}<span class="${match2.toLowerCase()}">${match2}</span> `
+    }
+  )
+
+  return <p dangerouslySetInnerHTML={{ __html: newMessage }} />
 }
 
 export function RawLogs({
@@ -78,7 +89,7 @@ export function RawLogs({
         css={listCss}
         onScroll={handleScroll}
       >
-        {logItems.map(({ id, timestamp, message, sourceStream }, idx) => {
+        {logItems.map(({ id, timestamp, message }, idx) => {
           let key: React.Key = idx
 
           if (id) {
@@ -91,21 +102,45 @@ export function RawLogs({
 
           const itemCss: ThemeCss = theme => ({
             margin: 0,
-
-            color:
-              sourceStream === "STDERR"
-                ? theme.colors.red[40]
-                : theme.colors.white,
+            lineHeight: 1.8,
+            color: theme.colors.grey[30],
 
             time: {
               whiteSpace: `nowrap`,
-              marginRight: theme.space[2],
+              marginRight: theme.space[3],
+              color: theme.colors.grey[40],
+              fontStyle: `italic`,
             },
 
             p: {
               margin: 0,
               whiteSpace: `pre-wrap`,
               marginLeft: theme.space[5],
+
+              span: {
+                fontWeight: `bold`,
+
+                "&.success": {
+                  color: theme.colors.green[40],
+                },
+                "&.info": {
+                  color: theme.colors.blue[40],
+                },
+                "&.warning": {
+                  color: theme.colors.orange[50],
+                },
+                "&.error": {
+                  color: theme.colors.red[10],
+                  background: theme.colors.red[90],
+                  padding: `${theme.space[1]} ${theme.space[2]}`,
+                  borderRadius: theme.radii[2],
+                  textTransform: `uppercase`,
+
+                  "&:after, &:before": {
+                    content: `"!"`,
+                  },
+                },
+              },
             },
 
             [theme.mediaQueries.desktop]: {
@@ -126,7 +161,7 @@ export function RawLogs({
                   </time>
                 </React.Fragment>
               )}
-              <p>{message}</p>
+              {formatMessage(message as string)}
             </li>
           )
         })}
