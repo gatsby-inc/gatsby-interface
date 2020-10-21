@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.222](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.221...v0.0.222) (2020-10-19)
+
+
+### Bug Fixes
+
+* **BuildLogs:** Display activity status text ([#410](https://github.com/gatsby-inc/gatsby-interface/issues/410)) ([c78ebaa](https://github.com/gatsby-inc/gatsby-interface/commit/c78ebaaccdbb1da54f0941bde0bffc9ba7e881cc))
+
+### [0.0.221](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.220...v0.0.221) (2020-10-19)
+
+
+### Bug Fixes
+
+* **icons:** prevent plan icons from having weird black borders ([#417](https://github.com/gatsby-inc/gatsby-interface/issues/417)) ([cf1fe6a](https://github.com/gatsby-inc/gatsby-interface/commit/cf1fe6a3d464f2f074c25c91e98ef671df5a7ba2))
+
 ### [0.0.220](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.219...v0.0.220) (2020-10-18)
 
 ### [0.0.219](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.218...v0.0.219) (2020-10-16)

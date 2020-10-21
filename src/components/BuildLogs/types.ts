@@ -45,6 +45,7 @@ export type BuildActivity = {
   id: string
   name?: string | null
   message?: string | null
+  statusText?: string | null
   type: BuildActivityType
   status: BuildActivityStatus
   duration?: number | null
