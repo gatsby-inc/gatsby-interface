@@ -95,8 +95,14 @@ const itemCss: ThemeCss = theme => [
   },
 ]
 
-function formatMessage(message: string): React.ReactNode {
-  const formated = message.replaceAll(
+function formatMessage(message: React.ReactNode): React.ReactNode {
+  const strMessage = message?.toString()
+
+  if (!strMessage) {
+    return message
+  }
+
+  const formated = strMessage.replaceAll(
     /(^|\n)(success|info|warning|error) /gi,
     (_: string, match1: string, match2: string) => {
       return `${match1}<span class="${match2.toLowerCase()}">${match2}</span> `
@@ -167,7 +173,7 @@ export function RawLogs({
                   </time>
                 </React.Fragment>
               )}
-              {formatMessage(message as string)}
+              {formatMessage(message)}
             </li>
           )
         })}
