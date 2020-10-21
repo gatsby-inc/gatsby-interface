@@ -96,14 +96,14 @@ const itemCss: ThemeCss = theme => [
 ]
 
 function formatMessage(message: string): React.ReactNode {
-  const newMessage = message.replaceAll(
+  const formated = message.replaceAll(
     /(^|\n)(success|info|warning|error) /gi,
     (_: string, match1: string, match2: string) => {
       return `${match1}<span class="${match2.toLowerCase()}">${match2}</span> `
     }
   )
 
-  return <p dangerouslySetInnerHTML={{ __html: newMessage }} />
+  return <p dangerouslySetInnerHTML={{ __html: formated }} />
 }
 
 export function RawLogs({
