@@ -5,12 +5,16 @@ import format from "date-fns/format"
 import { ThemeCss } from "../../theme"
 
 const baseCss: ThemeCss = theme => ({
-  padding: theme.space[7],
+  padding: theme.space[5],
   backgroundColor: theme.colors.grey[80],
   color: theme.colors.white,
   fontFamily: theme.fonts.monospace,
   fontSize: theme.fontSizes[1],
   lineHeight: theme.lineHeights.default,
+
+  [theme.mediaQueries.desktop]: {
+    padding: theme.space[7],
+  },
 })
 
 const listCss: ThemeCss = _theme => ({
@@ -36,6 +40,60 @@ export type RawLogsProps = {
   timeFormat?: string
   className?: string
 }
+
+const itemCss: ThemeCss = theme => [
+  {
+    margin: 0,
+    lineHeight: 1.8,
+    color: theme.colors.grey[30],
+
+    time: {
+      whiteSpace: `nowrap`,
+      marginRight: theme.space[3],
+      color: theme.colors.grey[40],
+      fontStyle: `italic`,
+    },
+
+    p: {
+      margin: 0,
+      whiteSpace: `pre-wrap`,
+      marginLeft: theme.space[5],
+
+      span: {
+        fontWeight: `bold`,
+
+        "&.success": {
+          color: theme.colors.green[40],
+        },
+        "&.info": {
+          color: theme.colors.blue[40],
+        },
+        "&.warning": {
+          color: theme.colors.orange[50],
+        },
+        "&.error": {
+          color: theme.colors.red[10],
+          background: theme.colors.red[90],
+          padding: `${theme.space[1]} ${theme.space[2]}`,
+          borderRadius: theme.radii[2],
+          textTransform: `uppercase`,
+
+          "&:after, &:before": {
+            content: `"!"`,
+          },
+        },
+      },
+    },
+
+    [theme.mediaQueries.desktop]: {
+      display: `flex`,
+
+      p: {
+        marginLeft: 0,
+      },
+    },
+  },
+]
 
 function formatMessage(message: string): React.ReactNode {
   const newMessage = message.replaceAll(
@@ -99,58 +157,6 @@ export function RawLogs({
           }
 
           const timestampDate = timestamp ? new Date(timestamp) : null
-
-          const itemCss: ThemeCss = theme => ({
-            margin: 0,
-            lineHeight: 1.8,
-            color: theme.colors.grey[30],
-
-            time: {
-              whiteSpace: `nowrap`,
-              marginRight: theme.space[3],
-              color: theme.colors.grey[40],
-              fontStyle: `italic`,
-            },
-
-            p: {
-              margin: 0,
-              whiteSpace: `pre-wrap`,
-              marginLeft: theme.space[5],
-
-              span: {
-                fontWeight: `bold`,
-
-                "&.success": {
-                  color: theme.colors.green[40],
-                },
-                "&.info": {
-                  color: theme.colors.blue[40],
-                },
-                "&.warning": {
-                  color: theme.colors.orange[50],
-                },
-                "&.error": {
-                  color: theme.colors.red[10],
-                  background: theme.colors.red[90],
-                  padding: `${theme.space[1]} ${theme.space[2]}`,
-                  borderRadius: theme.radii[2],
-                  textTransform: `uppercase`,
-
-                  "&:after, &:before": {
-                    content: `"!"`,
-                  },
-                },
-              },
-            },
-
-            [theme.mediaQueries.desktop]: {
-              display: `flex`,
-
-              p: {
-                marginLeft: 0,
-              },
-            },
-          })
 
           return (
             <li key={key} css={itemCss}>
