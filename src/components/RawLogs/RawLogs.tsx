@@ -96,6 +96,10 @@ const itemCss: ThemeCss = theme => [
 ]
 
 function formatMessage(message: string): React.ReactNode {
+  if (!message) {
+    return
+  }
+
   const formated = message.replace(
     /(^|\n)(success|info|warning|error) /gi,
     (_: string, match1: string, match2: string) => {
