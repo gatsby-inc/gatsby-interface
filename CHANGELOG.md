@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.225](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.224...v0.0.225) (2020-10-23)
+
+
+### Features
+
+* **Toast:** remove deprecated exports and cleanup code ([#415](https://github.com/gatsby-inc/gatsby-interface/issues/415)) ([22994c6](https://github.com/gatsby-inc/gatsby-interface/commit/22994c66b97d9982891f06e923da6e619cca2d80))
+
 ### [0.0.224](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.223...v0.0.224) (2020-10-22)
 
 ### [0.0.223](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.222...v0.0.223) (2020-10-21)
