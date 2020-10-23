@@ -1,1 +1,1 @@
-export type ToastTone = "SUCCESS" | "DANGER"
+export type ToastTone = "SUCCESS"
