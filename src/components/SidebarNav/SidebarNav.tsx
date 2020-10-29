@@ -7,6 +7,7 @@ import { Theme, ThemeCss } from "../../theme"
 export type SidebarNavItem = {
   label: React.ReactNode
   to?: string
+  href?: string
   active?: boolean
   onClick?: React.MouseEventHandler<HTMLAnchorElement>
 }
@@ -183,6 +184,7 @@ function SidebarBaseItem({
   active,
   onClick,
   current,
+  href,
   ...rest
 }: SidebarBaseItemProps) {
   return (
@@ -193,7 +195,7 @@ function SidebarBaseItem({
       ]}
       {...rest}
     >
-      {to ? (
+      {to && !href && (
         <Link
           to={to}
           onClick={onClick}
@@ -202,9 +204,20 @@ function SidebarBaseItem({
         >
           {label}
         </Link>
-      ) : (
-        label
       )}
+
+      {!to && href && (
+        <a
+          href={href}
+          onClick={onClick}
+          css={itemLinkCss}
+          aria-current={current}
+        >
+          {label}
+        </a>
+      )}
+
+      {!to && !href && label}
       {children}
     </li>
   )
