@@ -187,6 +187,15 @@ function SidebarBaseItem({
   href,
   ...rest
 }: SidebarBaseItemProps) {
+  const isOverwritten = to && href
+  const isText = (!to && !href) || isOverwritten
+
+  if (isOverwritten) {
+    console.warn(
+      `You can't set both 'to' and 'href' props on SidebarBaseItem at the same time! Check the '${label}' link.`
+    )
+  }
+
   return (
     <li
       css={theme => [
@@ -217,7 +226,7 @@ function SidebarBaseItem({
         </a>
       )}
 
-      {!to && !href && label}
+      {isText && label}
       {children}
     </li>
   )
