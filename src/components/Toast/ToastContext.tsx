@@ -7,7 +7,10 @@ export interface ToastOptions {
 }
 
 export interface ToastContextDefinition {
-  showToast: (message: React.ReactNode, toastArg?: ToastOptions) => void
+  showToast: (
+    message: React.ReactNode,
+    toastArg?: Partial<ToastOptions>
+  ) => void
 }
 
 export const ToastContext = React.createContext<ToastContextDefinition>({

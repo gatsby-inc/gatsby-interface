@@ -272,7 +272,7 @@ const LOG_ITEMS: RawLogItem[] = [
   },
   {
     id: "7c810567-9c9e-4ed6-8974-ee2566114e51",
-    message: "success source and transform nodes - 0.091s",
+    message: "info source and transform nodes - 0.091s",
     timestamp: "2020-08-26T15:54:41.744Z",
     sourceStream: "STDOUT",
     command: "Gatsby",
@@ -280,7 +280,7 @@ const LOG_ITEMS: RawLogItem[] = [
   },
   {
     id: "675b5ddf-5220-40b1-947c-d12b63f3d9e5",
-    message: "success building schema - 0.252s",
+    message: "info building schema - 0.252s",
     timestamp: "2020-08-26T15:54:41.997Z",
     sourceStream: "STDOUT",
     command: "Gatsby",

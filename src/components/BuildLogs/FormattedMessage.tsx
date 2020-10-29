@@ -6,16 +6,31 @@ import Markdown from "markdown-to-jsx"
 // to close the code block at the good position
 //
 // Example code block:
+//
 // 15 |           frontmatter {
 // 16 |             date(formatString: $invaludVar)
 //    |                                ^
+//
+// Example with a stacktrace:
+//
+// 1 | agilityNEW-RightOrLeftCaseStudyTestimonial-Dev
+//   | ^'. Stacktrace was 'GraphQLError: Syntax Error: Unexpected Name "agilityNEW"
+//     at syntaxError (/usr/src/app/www/node_modules/graphql/error/syntaxError.js:15:10)
+//     at Parser.unexpected (/usr/src/app/www/node_modules/graphql/language/parser.js:1463:41)
 //
 const formatCodeBlocks = (stringPartsByLines: string[]) => {
   let lastIndexFound = -1
   let codeBlockOpen = false
 
   const nextLines = stringPartsByLines.map((str, index) => {
-    if (str.match(/(\s|\t)*\d+\s\|/) || str.match(/(\s|\t)*\|(\s|\t)*\^/)) {
+    if (
+      str.match(/(\s|\t)*\d+\s\|/) ||
+      str.match(/(\s|\t)*\|(\s|\t)*\^/) ||
+      // There is no leading `|` if there is a stacktrace. To limit false
+      // positives we only check for a stacktrace if we are already inside
+      // a code block.
+      (codeBlockOpen && str.match(/(\s|\t)at \w+/))
+    ) {
       if (codeBlockOpen) {
         lastIndexFound = index
       } else {

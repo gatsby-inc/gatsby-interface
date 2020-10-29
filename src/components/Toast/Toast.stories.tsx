@@ -1,13 +1,8 @@
 import * as React from "react"
-import { Meta } from "@storybook/react"
+import { Meta, Story } from "@storybook/react"
 import { Button } from "../Button"
-import {
-  ToastProvider,
-  ToastConsumer,
-  useShowErrorToast,
-  useShowSuccessToast,
-  useShowErrorAlert,
-} from "."
+import { ToastProvider, ToastConsumer, useShowSuccessToast } from "."
+import { Toast, ToastProps } from "./Toast"
 
 export default {
   title: `Toast`,
@@ -21,33 +16,18 @@ export default {
   },
 } as Meta
 
-export const Basic = () => {
-  function ErrorToastExample() {
-    const showErrorToast = useShowErrorToast()
+const Template: Story<ToastProps> = args => <Toast {...args} />
 
-    return (
-      <Button onClick={() => showErrorToast(`An error occured`)}>
-        Show error toast
-      </Button>
-    )
-  }
-  function ErrorAlertExample() {
-    const showErrorAlert = useShowErrorAlert()
+export const Basic = Template.bind({})
 
-    return (
-      <Button
-        onClick={() =>
-          showErrorAlert(`An error occured`, {
-            href: `https://google.com`,
-            linkLabel: `See details`,
-            target: `_blank`,
-          })
-        }
-      >
-        Show error alert
-      </Button>
-    )
-  }
+Basic.args = {
+  message: `Some short toast message`,
+  closeButtonLabel: `Close`,
+  onClose: () => undefined,
+  tone: `SUCCESS`,
+}
+
+export const TriggerToast = () => {
   function NoTimeoutExample() {
     const showSuccessToast = useShowSuccessToast()
 
@@ -75,8 +55,6 @@ export const Basic = () => {
         )}
       </ToastConsumer>
       <NoTimeoutExample />
-      <ErrorToastExample />
-      <ErrorAlertExample />
     </ToastProvider>
   )
 }
