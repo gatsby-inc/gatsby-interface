@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core"
 import * as React from "react"
 import { Link } from "gatsby"
 import { Theme, ThemeCss } from "../../theme"
+import { warn } from "../../utils/maintenance/warn"
 
 export type SidebarNavItem = {
   label: React.ReactNode
@@ -191,8 +192,9 @@ function SidebarBaseItem({
   const isText = (!to && !href) || isOverwritten
 
   if (isOverwritten) {
-    console.warn(
-      `You can't set both 'to' and 'href' props on SidebarBaseItem at the same time! Check the '${label}' link.`
+    warn(
+      `You can't set both 'to' and 'href' props on SidebarBaseItem at the same time! Check the '${label}' link.`,
+      `warning`
     )
   }
 
