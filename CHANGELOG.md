@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.226](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.225...v0.0.226) (2020-10-29)
+
+
+### Bug Fixes
+
+* **BuildLogs:** Format gaphql errors with stacktraces ([#419](https://github.com/gatsby-inc/gatsby-interface/issues/419)) ([583e4c6](https://github.com/gatsby-inc/gatsby-interface/commit/583e4c6ee9191ff4c3de2df5442fee385312f173))
+
 ### [0.0.225](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.224...v0.0.225) (2020-10-23)
 
 
