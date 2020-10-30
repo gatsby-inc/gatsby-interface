@@ -7,6 +7,6 @@ package-lock.json
 .vscode
 .env.development
 .env.production
-assets/fonts
+assets/fonts/futura-pt
 .idea
 storybook-static 

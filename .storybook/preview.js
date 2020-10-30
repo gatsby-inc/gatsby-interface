@@ -14,6 +14,14 @@ if (process.env.NODE_ENV === "test") {
   require(`babel-plugin-require-context-hook/register`)()
 }
 
+if (process.env.NODE_ENV !== "test") {
+  try {
+    require("../assets/fonts/inter/stylesheet.css")
+  } catch (e) {
+    console.warn(e)
+  }
+}
+
 if (!process.env.STORYBOOK_CHROMATIC && process.env.NODE_ENV !== "test") {
   try {
     require("../assets/fonts/futura-pt/Webfonts/futurapt_book_macroman/stylesheet.css")
