@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.229](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.228...v0.0.229) (2020-10-30)
+
+
+### Features
+
+* **Heading:** support Inter font ([#408](https://github.com/gatsby-inc/gatsby-interface/issues/408)) ([e572140](https://github.com/gatsby-inc/gatsby-interface/commit/e572140937cc1d1c591144d46f0ec78d2dfe1c72))
+
 ### [0.0.228](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.227...v0.0.228) (2020-10-29)
 
 ### [0.0.227](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.226...v0.0.227) (2020-10-29)
