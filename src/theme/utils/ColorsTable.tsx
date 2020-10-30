@@ -152,7 +152,14 @@ export function ColorsTable() {
               {groupLabel}
             </td>
           )}
-          <td css={{ textTransform: `capitalize` }}>{color}</td>
+          <td
+            css={theme => ({
+              textTransform: `capitalize`,
+              paddingRight: theme.space[10],
+            })}
+          >
+            {color}
+          </td>
           {shades.map(shade => {
             const contrastScore = contrastScores[color][shade]
             return (
@@ -165,8 +172,8 @@ export function ColorsTable() {
                   verticalAlign: `bottom`,
                   lineHeight: 1,
                   textAlign: `start`,
-                  fontSize: theme.fontSizes[1],
-                  fontWeight: theme.fontWeights.body,
+                  fontSize: theme.fontSizes[0],
+                  fontWeight: theme.fontWeights.semiBold,
                   backgroundColor: theme.colors[color][shade],
                   color: invertTextColor[color][shade]
                     ? theme.colors.black
@@ -188,11 +195,12 @@ export function ColorsTable() {
   }
   return (
     <table
-      css={{
+      css={theme => ({
         verticalAlign: `baseline`,
         lineHeight: `40px`,
         borderSpacing: 8,
-      }}
+        fontFamily: theme.fonts.body,
+      })}
     >
       <thead>
         <tr>
