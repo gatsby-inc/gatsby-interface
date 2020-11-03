@@ -4,7 +4,9 @@
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
-    "dist"
+    "dist",
+    "babel-plugin-gatsby-interface/index.js",
+    "babel-plugin-gatsby-interface/README.md"
   ],
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -70,6 +72,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/helper-plugin-test-runner": "^7.10.4",
     "@babel/node": "^7.6.1",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
