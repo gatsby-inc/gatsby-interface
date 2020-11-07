@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.231](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.230...v0.0.231) (2020-11-06)
+
+
+### Features
+
+* **icons:** add HostingIcon component ([#423](https://github.com/gatsby-inc/gatsby-interface/issues/423)) ([599616a](https://github.com/gatsby-inc/gatsby-interface/commit/599616ac7aaa4ba9f450cafbd30a4d8d33d1494a))
+
 ### [0.0.230](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.229...v0.0.230) (2020-10-30)
 
 ### [0.0.229](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.228...v0.0.229) (2020-10-30)
