@@ -11,6 +11,7 @@ export type SidebarNavItem = {
   href?: string
   active?: boolean
   onClick?: React.MouseEventHandler<HTMLAnchorElement>
+  toggled?: boolean
 }
 
 export type SidebarNavOption = SidebarNavItem & {
@@ -103,7 +104,6 @@ function SidebarNavListItem({
   onClick,
   Icon,
   subItems,
-  open,
   toggled,
   ...rest
 }: SidebarNavItemProps) {
@@ -207,7 +207,7 @@ function SidebarBaseItem({
         baseNavItemCss(theme),
         active && baseNavItemActiveCss(theme),
       ]}
-      active={active}
+      className={active ? "active" : ""}
       {...rest}
     >
       {to && !href && (
