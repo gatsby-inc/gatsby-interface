@@ -103,6 +103,8 @@ function SidebarNavListItem({
   onClick,
   Icon,
   subItems,
+  open,
+  toggled,
   ...rest
 }: SidebarNavItemProps) {
   return (
@@ -128,12 +130,13 @@ function SidebarNavListItem({
         </React.Fragment>
       }
       to={to}
+      className={active ? "active" : undefined}
       active={active}
       onClick={onClick}
       current={active ? "page" : undefined}
       {...rest}
     >
-      {subItems && active && (
+      {subItems && (active ? !toggled : toggled) && (
         <SidebarNavList
           css={(theme: Theme) => ({
             paddingTop: theme.space[5],
@@ -204,6 +207,7 @@ function SidebarBaseItem({
         baseNavItemCss(theme),
         active && baseNavItemActiveCss(theme),
       ]}
+      active={active}
       {...rest}
     >
       {to && !href && (
