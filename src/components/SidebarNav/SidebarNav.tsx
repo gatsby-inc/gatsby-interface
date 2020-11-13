@@ -103,6 +103,7 @@ function SidebarNavListItem({
   active,
   onClick,
   Icon,
+  ToggleableCaretIconComponent
   subItems,
   toggled,
   ...rest
@@ -117,7 +118,7 @@ function SidebarNavListItem({
       ]}
       label={
         <React.Fragment>
-          {Icon && (
+          {ToggleableCaretIconComponent || (Icon && (
             <Icon
               css={(theme: Theme) => [
                 navItemIconCss(theme),
@@ -125,7 +126,7 @@ function SidebarNavListItem({
               ]}
               size="inherit"
             />
-          )}
+          ))}
           {label}
         </React.Fragment>
       }
