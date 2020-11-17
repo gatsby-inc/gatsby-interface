@@ -1,7 +1,0 @@
-{
-  "sourceType": "module",
-  "plugins": [
-    "C:\\Users\\Ward\\projects\\gatsby\\gatsby-interface\\babel-plugin-gatsby-interface\\index.js"
-  ],
-  "presets": ["@babel/preset-react"]
-}
