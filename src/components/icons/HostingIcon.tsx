@@ -11,7 +11,7 @@ export default function HostingIcon(props: IconProps) {
         width="16"
         height="18"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <rect
         x="4"
@@ -19,7 +19,7 @@ export default function HostingIcon(props: IconProps) {
         width="16"
         height="12"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <rect
         x="4"
@@ -27,7 +27,7 @@ export default function HostingIcon(props: IconProps) {
         width="16"
         height="4"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <rect x="7" y="12" width="2" height="2" fill="currentColor" />
       <rect x="7" y="18" width="2" height="2" fill="currentColor" />
