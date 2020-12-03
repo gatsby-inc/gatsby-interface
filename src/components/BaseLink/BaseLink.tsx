@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, GatsbyLinkProps } from "gatsby"
+import { default as Link, GatsbyLinkProps } from "gatsby-link"
 
 export type BaseLinkProps<TState> = Omit<GatsbyLinkProps<TState>, "ref">
 

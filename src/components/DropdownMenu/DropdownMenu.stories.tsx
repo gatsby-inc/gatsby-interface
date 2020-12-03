@@ -23,7 +23,7 @@ import {
 } from "../../utils/storybook"
 import { DropdownMenuSize } from "./DropdownMenu"
 import { Notification } from "../Notification"
-import { Link } from "gatsby"
+import Link from "gatsby-link"
 import { positionRight } from "@reach/popover"
 
 export default {

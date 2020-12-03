@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import { Link as GatsbyLink, GatsbyLinkProps } from "gatsby"
+import { default as GatsbyLink, GatsbyLinkProps } from "gatsby-link"
 import { BaseAnchorProps, BaseAnchor } from "../BaseAnchor"
 import { ThemeCss, Theme } from "../../theme"
 
