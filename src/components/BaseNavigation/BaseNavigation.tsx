@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import * as React from "react"
-import { Link, GatsbyLinkProps } from "gatsby"
+import { default as Link, GatsbyLinkProps } from "gatsby-link"
 import { MdArrowForward } from "react-icons/md"
 
 import { LinkButton, LinkButtonProps } from "../LinkButton"

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { Fragment } from "react"
-import { Link } from "gatsby"
+import Link from "gatsby-link"
 import { PropsOf } from "../../utils/types"
 import { ThemeCss } from "../../theme"
 

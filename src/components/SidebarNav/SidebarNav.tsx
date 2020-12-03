@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import * as React from "react"
-import { Link } from "gatsby"
+import Link from "gatsby-link"
 import { Theme, ThemeCss } from "../../theme"
 import { warn } from "../../utils/maintenance/warn"
 
