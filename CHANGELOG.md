@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.235](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.234...v0.0.235) (2020-12-04)
+
+
+### Features
+
+* Rework internal exports bundling to optimize treeshake ([#422](https://github.com/gatsby-inc/gatsby-interface/issues/422)) ([24c443a](https://github.com/gatsby-inc/gatsby-interface/commit/24c443aca5aa0585d10496ba7b475fd820375aed))
+
 ### [0.0.234](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.233...v0.0.234) (2020-12-01)
 
 
