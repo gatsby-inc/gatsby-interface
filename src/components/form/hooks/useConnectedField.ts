@@ -3,6 +3,7 @@ import Case from "case"
 import {
   useField,
   FormikHandlers,
+  FieldHookConfig,
   useFormikContext,
   FieldHelperProps,
 } from "formik"
@@ -11,24 +12,29 @@ export type ConnectedFieldProps<TValue = string> = {
   id: string
   label: string
   value: TValue
+  checked?: boolean
   error?: string
   onBlur: FormikHandlers["handleBlur"]
   onChange: FormikHandlers["handleBlur"]
 }
 
-export function useConnectedField<TValue = string>(fieldName: string) {
-  const id = `${fieldName}Field`
-  const label = Case.sentence(fieldName)
+export function useConnectedField<TValue = string>(
+  propsOrFieldName: string | FieldHookConfig<TValue>
+) {
+  const name =
+    typeof propsOrFieldName === `string`
+      ? propsOrFieldName
+      : propsOrFieldName.name
+  const id = `${name}Field`
+  const label = Case.sentence(name)
 
-  const [field, meta, helpers] = useFieldFast<TValue>(fieldName)
+  const [field, meta, helpers] = useFieldFast<TValue>(propsOrFieldName)
 
   const connectedProps: ConnectedFieldProps<TValue> = {
+    ...field,
     id,
     label,
-    value: field.value,
     error: meta.touched ? meta.error : "",
-    onBlur: field.onBlur,
-    onChange: field.onChange,
   }
 
   return [connectedProps, field, meta, helpers] as const
@@ -38,8 +44,10 @@ export function useConnectedField<TValue = string>(fieldName: string) {
  * Taken from this comment in Formik's issues:
  * https://github.com/formium/formik/issues/2268#issuecomment-682685788
  */
-function useFieldFast<TValue = string>(fieldName: string) {
-  const [field, meta] = useField<TValue>(fieldName)
+function useFieldFast<TValue = string>(
+  propsOrFieldName: string | FieldHookConfig<TValue>
+) {
+  const [field, meta] = useField<TValue>(propsOrFieldName)
 
   // `setField*` helpers from `useFormikContext` seem to be more "stable" than the ones returned by `useField`
   const { setFieldTouched, setFieldValue, setFieldError } = useFormikContext()

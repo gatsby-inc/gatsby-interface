@@ -98,6 +98,8 @@ const styledRadioButtonBoxCss: ThemeCss = theme => ({
   pointerEvents: `none`,
   color: `transparent`,
   transition: `color 0.15s ease-in-out`,
+  // This is needed to avoid "checked" dot pushed out of center for multiline labels
+  fontSize: `initial`,
 
   "::before": {
     cursor: `pointer`,
@@ -125,7 +127,7 @@ const styledRadioButtonBoxCss: ThemeCss = theme => ({
     height: DOT_SIZE,
     width: DOT_SIZE,
     position: `absolute`,
-    top: `calc((100% - ${DOT_SIZE}) / 2)`,
+    top: `calc((${RADIO_BOX_SIZE} - ${DOT_SIZE}) / 2)`,
     left: `calc((${RADIO_BOX_SIZE} - ${DOT_SIZE}) / 2)`,
   },
 })

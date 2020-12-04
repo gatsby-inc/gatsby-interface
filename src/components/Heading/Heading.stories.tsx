@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core"
 import { Meta, Story } from "@storybook/react"
 import { withVariationsContainer } from "../../utils/storybook"
 import { Heading, HeadingProps, HeadingTone, HeadingVariant } from "."
+import { HeadingFontVariant } from "./types"
 
 export default {
   title: `Heading`,
@@ -19,6 +20,7 @@ Basic.args = {
 
 const TONES: HeadingTone[] = ["BRAND", "SUCCESS", "DANGER", "NEUTRAL"]
 const VARIANTS: HeadingVariant[] = ["PRIMARY", `EMPHASIZED`, `LIGHT`]
+const FONT_VARIANTS: HeadingFontVariant[] = ["DISPLAY", "UI"]
 
 export const Tones = () =>
   TONES.map(tone => (
@@ -39,5 +41,16 @@ export const Variants = () =>
   ))
 
 Variants.story = {
+  decorators: [withVariationsContainer],
+}
+
+export const FontVariants = () =>
+  FONT_VARIANTS.map(fontVariant => (
+    <Heading key={fontVariant} fontVariant={fontVariant}>
+      Font Variant: {fontVariant}
+    </Heading>
+  ))
+
+FontVariants.story = {
   decorators: [withVariationsContainer],
 }

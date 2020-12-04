@@ -3,10 +3,12 @@ import { jsx } from "@emotion/core"
 import * as React from "react"
 import { Link } from "gatsby"
 import { Theme, ThemeCss } from "../../theme"
+import { warn } from "../../utils/maintenance/warn"
 
 export type SidebarNavItem = {
   label: React.ReactNode
   to?: string
+  href?: string
   active?: boolean
   onClick?: React.MouseEventHandler<HTMLAnchorElement>
 }
@@ -183,8 +185,19 @@ function SidebarBaseItem({
   active,
   onClick,
   current,
+  href,
   ...rest
 }: SidebarBaseItemProps) {
+  const isOverwritten = to && href
+  const isText = (!to && !href) || isOverwritten
+
+  if (isOverwritten) {
+    warn(
+      `You can't set both 'to' and 'href' props on SidebarBaseItem at the same time! Check the '${label}' link.`,
+      `warning`
+    )
+  }
+
   return (
     <li
       css={theme => [
@@ -193,7 +206,7 @@ function SidebarBaseItem({
       ]}
       {...rest}
     >
-      {to ? (
+      {to && !href && (
         <Link
           to={to}
           onClick={onClick}
@@ -202,9 +215,20 @@ function SidebarBaseItem({
         >
           {label}
         </Link>
-      ) : (
-        label
       )}
+
+      {!to && href && (
+        <a
+          href={href}
+          onClick={onClick}
+          css={itemLinkCss}
+          aria-current={current}
+        >
+          {label}
+        </a>
+      )}
+
+      {isText && label}
       {children}
     </li>
   )

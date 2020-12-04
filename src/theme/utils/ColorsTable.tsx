@@ -2,25 +2,15 @@
 import { jsx } from "@emotion/core"
 import * as React from "react"
 import { Shade } from "gatsby-design-tokens"
-import { Colors } from "../colors"
 import { copyToClipboard } from "../../utils/helpers"
 import { VisuallyHidden } from "../../components/VisuallyHidden"
-import { getTheme } from ".."
+import { getTheme, Theme } from ".."
+import { ColorPaletteModal, SupportedColors } from "./ColorPaletteModal"
 
 const baseTheme = getTheme()
 
-type ColorKey = Extract<
-  keyof Colors,
-  | "purple"
-  | "orange"
-  | "magenta"
-  | "blue"
-  | "teal"
-  | "yellow"
-  | "red"
-  | "green"
-  | "grey"
->
+type ColorKey = SupportedColors
+
 const primaryColors: ColorKey[] = ["purple", "orange"]
 const secondaryColors: ColorKey[] = [
   "magenta",
@@ -134,6 +124,9 @@ const invertTextColor: Record<ColorKey, Partial<Record<Shade, boolean>>> = {
 }
 
 export function ColorsTable() {
+  const [selectedColor, setSelectedColor] = React.useState<ColorKey | null>(
+    null
+  )
   const renderGroup = (group: ColorKey[], groupLabel: string) => {
     return group.map((color, idx, list) => {
       return (
@@ -152,7 +145,32 @@ export function ColorsTable() {
               {groupLabel}
             </td>
           )}
-          <td css={{ textTransform: `capitalize` }}>{color}</td>
+          <td
+            css={theme => ({
+              paddingRight: theme.space[10],
+            })}
+          >
+            <button
+              onClick={() => setSelectedColor(color)}
+              css={(theme: Theme) => ({
+                margin: 0,
+                padding: 0,
+                background: `none`,
+                border: `none`,
+                textTransform: `capitalize`,
+                cursor: `pointer`,
+                color: theme.colors.purple[50],
+                fontSize: theme.fontSizes[3],
+                fontFamily: theme.fonts.body,
+                borderBottom: `1px solid currentColor`,
+                "&:hover": {
+                  color: theme.colors.purple[70],
+                },
+              })}
+            >
+              {color}
+            </button>
+          </td>
           {shades.map(shade => {
             const contrastScore = contrastScores[color][shade]
             return (
@@ -165,8 +183,8 @@ export function ColorsTable() {
                   verticalAlign: `bottom`,
                   lineHeight: 1,
                   textAlign: `start`,
-                  fontSize: theme.fontSizes[1],
-                  fontWeight: theme.fontWeights.body,
+                  fontSize: theme.fontSizes[0],
+                  fontWeight: theme.fontWeights.semiBold,
                   backgroundColor: theme.colors[color][shade],
                   color: invertTextColor[color][shade]
                     ? theme.colors.black
@@ -187,30 +205,40 @@ export function ColorsTable() {
     })
   }
   return (
-    <table
-      css={{
-        verticalAlign: `baseline`,
-        lineHeight: `40px`,
-        borderSpacing: 8,
-      }}
-    >
-      <thead>
-        <tr>
-          <th>
-            <VisuallyHidden>Color group</VisuallyHidden>
-          </th>
-          <th>
-            <VisuallyHidden>Color</VisuallyHidden>
-          </th>
-          {shades.map(shade => (
-            <th key={shade}>{shade}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>{renderGroup(primaryColors, "Primary")}</tbody>
-      <tbody>{renderGroup(secondaryColors, "Secondary")}</tbody>
-      <tbody>{renderGroup(neutralColors, "Neutral")}</tbody>
-    </table>
+    <React.Fragment>
+      <table
+        css={theme => ({
+          verticalAlign: `baseline`,
+          lineHeight: `40px`,
+          borderSpacing: 8,
+          fontFamily: theme.fonts.body,
+        })}
+      >
+        <thead>
+          <tr>
+            <th>
+              <VisuallyHidden>Color group</VisuallyHidden>
+            </th>
+            <th>
+              <VisuallyHidden>Color</VisuallyHidden>
+            </th>
+            {shades.map(shade => (
+              <th key={shade}>{shade}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>{renderGroup(primaryColors, "Primary")}</tbody>
+        <tbody>{renderGroup(secondaryColors, "Secondary")}</tbody>
+        <tbody>{renderGroup(neutralColors, "Neutral")}</tbody>
+      </table>
+      {selectedColor && (
+        <ColorPaletteModal
+          isOpen={Boolean(selectedColor)}
+          color={selectedColor}
+          onClose={() => setSelectedColor(null)}
+        />
+      )}
+    </React.Fragment>
   )
 }
 
