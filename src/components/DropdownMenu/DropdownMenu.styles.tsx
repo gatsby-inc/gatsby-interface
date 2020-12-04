@@ -1,5 +1,5 @@
 import { ThemeCss } from "../../theme"
-import { DropdownMenuSize } from "./DropdownMenu"
+import { DropdownMenuItemVariant, DropdownMenuSize } from "./DropdownMenu"
 
 export const dropdownCss: ThemeCss = theme => ({
   background: theme.colors.primaryBackground,
@@ -55,6 +55,48 @@ export const menuItemCss: ThemeCss = theme => ({
   display: `block`,
   textDecoration: `none`,
 })
+
+export const menuItemVariantCss: Record<DropdownMenuItemVariant, ThemeCss> = {
+  DEFAULT: theme => ({
+    color: theme.colors.grey[90],
+    "[data-selected] > &": {
+      color: theme.colors.purple[50],
+    },
+  }),
+  CRITICAL: theme => ({
+    color: theme.colors.red[90],
+    "[data-selected] &": {
+      color: theme.colors.red[90],
+    },
+  }),
+}
+
+export const menuItemIconCss: ThemeCss = theme => ({
+  marginRight: theme.space[3],
+  verticalAlign: `middle`,
+  transition: `0.5s`,
+  "[data-selected] &": {
+    transform: "scale(1.2)",
+  },
+})
+
+export const menuItemIconVariantCss: Record<
+  DropdownMenuItemVariant,
+  ThemeCss
+> = {
+  DEFAULT: theme => ({
+    color: theme.colors.grey[40],
+    "[data-selected] &": {
+      color: theme.colors.purple[50],
+    },
+  }),
+  CRITICAL: theme => ({
+    color: theme.colors.red[20],
+    "[data-selected] &": {
+      color: theme.colors.red[90],
+    },
+  }),
+}
 
 export const dropdownButtonCss: ThemeCss = theme => ({
   cursor: "pointer",
