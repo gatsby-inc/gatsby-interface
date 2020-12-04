@@ -29,8 +29,9 @@ import {
   dropdownDividerCss,
   dropdownHeaderCss,
   menuItemCss,
+  menuItemToneCss,
   menuItemIconCss,
-  menuItemVariantCss,
+  menuItemIconToneCss,
 } from "./DropdownMenu.styles"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { ThemeCss } from "../../theme"
@@ -105,11 +106,11 @@ export const DropdownMenuItemsLowLevel: React.FC<DropdownMenuItemsLowLevelProps>
   return <AnimatedMenuItems style={styleProps} {...rest} css={finalCss} />
 }
 
-export type DropdownMenuItemVariant = "DEFAULT" | "CRITICAL"
+export type DropdownMenuItemTone = "DEFAULT" | "CRITICAL"
 
 export type StyledMenuItemProps = {
   Icon?: React.ComponentType
-  variant?: DropdownMenuItemVariant
+  tone?: DropdownMenuItemTone
 }
 
 export type DropdownMenuItemProps = MenuItemProps & StyledMenuItemProps
@@ -128,16 +129,16 @@ export const DropdownMenuLink = forwardRefWithAs<DropdownMenuLinkProps, "a">(
 
 function getStyledMenuItemProps({
   children,
-  variant = `DEFAULT`,
+  tone = `DEFAULT`,
   Icon,
 }: DropdownMenuItemProps | DropdownMenuLinkProps) {
   const itemCss: ThemeCss = theme => [
     menuItemCss(theme),
-    menuItemVariantCss[variant](theme),
+    menuItemToneCss[tone](theme),
   ]
   const iconCss: ThemeCss = theme => [
     menuItemIconCss(theme),
-    menuItemVariantCss[variant](theme),
+    menuItemIconToneCss[tone](theme),
   ]
 
   return {

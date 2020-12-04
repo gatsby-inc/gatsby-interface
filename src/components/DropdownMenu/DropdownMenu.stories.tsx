@@ -232,7 +232,7 @@ MenuLinks.parameters = {
   chromatic: { delay: 150 },
 }
 
-export const ItemVariants = () => {
+export const ItemTones = () => {
   useOpenMenuOnMount()
 
   return (
@@ -245,32 +245,32 @@ export const ItemVariants = () => {
             target="_blank"
             rel="noreferrer noopener"
             as={"a"}
-            onSelect={() => action("Select")(`Variant: DEFAULT`)}
+            onSelect={() => action("Select")(`Tone: DEFAULT`)}
           >
-            Variant: DEFAULT
+            Tone: DEFAULT
           </DropdownMenuLink>
           <DropdownMenuLink
             href={`https://www.google.com/search?q=Ashalmawia`}
             target="_blank"
             rel="noreferrer noopener"
             as={"a"}
-            variant="CRITICAL"
-            onSelect={() => action("Select")(`Variant: CRITICAL`)}
+            tone="CRITICAL"
+            onSelect={() => action("Select")(`Tone: CRITICAL`)}
           >
-            Variant: CRITICAL
+            Tone: CRITICAL
           </DropdownMenuLink>
           <DropdownMenuItem
             Icon={MdRefresh}
-            onSelect={() => action("Select")(`Variant: DEFAULT (with icon)`)}
+            onSelect={() => action("Select")(`Tone: DEFAULT (with icon)`)}
           >
-            Variant: DEFAULT (with icon)
+            Tone: DEFAULT (with icon)
           </DropdownMenuItem>
           <DropdownMenuItem
             Icon={MdDelete}
-            variant="CRITICAL"
-            onSelect={() => action("Select")(`Variant: CRITICAL (with icon)`)}
+            tone="CRITICAL"
+            onSelect={() => action("Select")(`Tone: CRITICAL (with icon)`)}
           >
-            Variant: CRITICAL (with icon)
+            Tone: CRITICAL (with icon)
           </DropdownMenuItem>
         </DropdownMenuItems>
       </DropdownMenu>
@@ -278,7 +278,7 @@ export const ItemVariants = () => {
   )
 }
 
-ItemVariants.parameters = {
+ItemTones.parameters = {
   chromatic: { delay: 150 },
 }
 

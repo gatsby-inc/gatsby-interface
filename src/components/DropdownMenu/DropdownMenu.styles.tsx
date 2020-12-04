@@ -1,5 +1,5 @@
 import { ThemeCss } from "../../theme"
-import { DropdownMenuItemVariant, DropdownMenuSize } from "./DropdownMenu"
+import { DropdownMenuItemTone, DropdownMenuSize } from "./DropdownMenu"
 
 export const dropdownCss: ThemeCss = theme => ({
   background: theme.colors.primaryBackground,
@@ -56,7 +56,7 @@ export const menuItemCss: ThemeCss = theme => ({
   textDecoration: `none`,
 })
 
-export const menuItemVariantCss: Record<DropdownMenuItemVariant, ThemeCss> = {
+export const menuItemToneCss: Record<DropdownMenuItemTone, ThemeCss> = {
   DEFAULT: theme => ({
     color: theme.colors.grey[90],
     "[data-selected] > &": {
@@ -80,10 +80,7 @@ export const menuItemIconCss: ThemeCss = theme => ({
   },
 })
 
-export const menuItemIconVariantCss: Record<
-  DropdownMenuItemVariant,
-  ThemeCss
-> = {
+export const menuItemIconToneCss: Record<DropdownMenuItemTone, ThemeCss> = {
   DEFAULT: theme => ({
     color: theme.colors.grey[40],
     "[data-selected] &": {
