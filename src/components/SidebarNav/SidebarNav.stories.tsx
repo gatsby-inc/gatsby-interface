@@ -132,44 +132,7 @@ const Template: Story<SidebarNavProps> = args => {
 }
 
 export const Basic = Template.bind({})
+
 Basic.args = {
   "aria-label": `sidebar navigation`,
-}
-
-export const DocsSidebar = Template.bind({})
-DocsSidebar.args = {
-  "aria-label": `docs sidebar navigation`,
-  options: [
-    {
-      label: "Documentation",
-      to: "/docs/",
-    },
-    {
-      label: "Quick Start",
-      to: "/docs/quick-start/",
-    },
-    {
-      label: "How-to Guides",
-      subItems: [
-        {
-          label: "Overview",
-          to: "/docs/how-to/ ",
-        },
-        {
-          label: "Setup and Local Development",
-          to: "/docs/local-development",
-          subItems: [
-            {
-              label: "How to install Gatsby",
-              to: "/docs/installing-gatsby/",
-            },
-            {
-              label: "How to create a new project from a starter",
-              to: "/docs/new-project-from-starter/",
-            },
-          ],
-        },
-      ],
-    },
-  ],
 }
