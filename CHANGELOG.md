@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.236](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.235...v0.0.236) (2020-12-08)
+
+
+### Features
+
+* **babel-plugin-gatsby-interface:** improve treeshaking in gatsby applications ([#426](https://github.com/gatsby-inc/gatsby-interface/issues/426)) ([3d40d07](https://github.com/gatsby-inc/gatsby-interface/commit/3d40d07b7be0028f2b2b8cf1574da41f73c49454))
+
 ### [0.0.235](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.234...v0.0.235) (2020-12-04)
 
 
