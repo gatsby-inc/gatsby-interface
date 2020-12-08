@@ -50,8 +50,6 @@ module.exports = function gatsbyInterface({ types }) {
             })
             specifier.remove()
           }
-        } else {
-          console.log(specifier)
         }
       }
 

@@ -4,5 +4,8 @@ import { LinkButton as _LinkButton } from "gatsby-interface/dist/components/Link
 import * as React from "react";
 import { space } from "gatsby-interface";
 export default function MyPage() {
-  return /*#__PURE__*/React.createElement(_Heading, null, /*#__PURE__*/React.createElement(_Avatar, null), /*#__PURE__*/React.createElement(_LinkButton, null));
+  return <_Heading>
+      <_Avatar />
+      <_LinkButton />
+    </_Heading>;
 }

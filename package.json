@@ -75,6 +75,7 @@
     "@babel/helper-plugin-test-runner": "^7.10.4",
     "@babel/node": "^7.6.1",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-syntax-jsx": "^7.12.1",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
