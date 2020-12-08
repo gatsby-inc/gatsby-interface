@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.237](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.236...v0.0.237) (2020-12-08)
+
+
+### Features
+
+* **Sidebar:** add toggle ability to sidebar ([#431](https://github.com/gatsby-inc/gatsby-interface/issues/431)) ([28d1bdb](https://github.com/gatsby-inc/gatsby-interface/commit/28d1bdb5d354760cfb613acf6d3e01f3be549655))
+
 ### [0.0.236](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.235...v0.0.236) (2020-12-08)
 
 
