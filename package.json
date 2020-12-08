@@ -4,7 +4,9 @@
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
-    "dist"
+    "dist",
+    "babel-plugin-gatsby-interface/index.js",
+    "babel-plugin-gatsby-interface/README.md"
   ],
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -26,7 +28,7 @@
     "stylelint": "stylelint './src/**/*.js'",
     "format": "prettier --write",
     "format:all": "yarn format \"{src,.storybook}/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "eslint -c .eslintrc --max-warnings=0 --fix --color --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
+    "lint": "eslint --max-warnings=0 --fix --color --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives",
     "lint:all": "yarn lint src .storybook",
     "chromatic": "cross-env STORYBOOK_CHROMATIC=1 chromatic test",
     "chromatic:ci": "cross-env STORYBOOK_CHROMATIC=1 babel-node --presets @babel/env scripts/run-chromatic.js",
@@ -70,8 +72,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/helper-plugin-test-runner": "^7.10.4",
     "@babel/node": "^7.6.1",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-syntax-jsx": "^7.12.1",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
