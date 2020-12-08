@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.238](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.237...v0.0.238) (2020-12-08)
+
+
+### Features
+
+* **Text:** support as='div' and margin reset props ([#430](https://github.com/gatsby-inc/gatsby-interface/issues/430)) ([03a922f](https://github.com/gatsby-inc/gatsby-interface/commit/03a922f734dae19d4edaa4d22042522a113bef03))
+
 ### [0.0.237](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.236...v0.0.237) (2020-12-08)
 
 
