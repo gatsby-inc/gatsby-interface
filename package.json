@@ -4,7 +4,9 @@
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
-    "dist"
+    "dist",
+    "babel-plugin-gatsby-interface/index.js",
+    "babel-plugin-gatsby-interface/README.md"
   ],
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
