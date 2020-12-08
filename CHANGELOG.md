@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.236](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.235...v0.0.236) (2020-12-08)
+
+
+### Features
+
+* **babel-plugin-gatsby-interface:** improve treeshaking in gatsby applications ([#426](https://github.com/gatsby-inc/gatsby-interface/issues/426)) ([3d40d07](https://github.com/gatsby-inc/gatsby-interface/commit/3d40d07b7be0028f2b2b8cf1574da41f73c49454))
+
+### [0.0.235](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.234...v0.0.235) (2020-12-04)
+
+
+### Features
+
+* Rework internal exports bundling to optimize treeshake ([#422](https://github.com/gatsby-inc/gatsby-interface/issues/422)) ([24c443a](https://github.com/gatsby-inc/gatsby-interface/commit/24c443aca5aa0585d10496ba7b475fd820375aed))
+
+### [0.0.234](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.233...v0.0.234) (2020-12-01)
+
+
+### Bug Fixes
+
+* HostingIcon svg property ([#427](https://github.com/gatsby-inc/gatsby-interface/issues/427)) ([da138a2](https://github.com/gatsby-inc/gatsby-interface/commit/da138a2d7149576be7c92159a0a108f5f930489a))
+
+### [0.0.233](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.232...v0.0.233) (2020-11-23)
+
+
+### Bug Fixes
+
+* **form:** fix styles for StyledRadio with multiline label ([#424](https://github.com/gatsby-inc/gatsby-interface/issues/424)) ([7e74f62](https://github.com/gatsby-inc/gatsby-interface/commit/7e74f623478cccfd846168ac1f8250c0e9ef8d79))
+
+### [0.0.232](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.231...v0.0.232) (2020-11-23)
+
 ### [0.0.231](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.230...v0.0.231) (2020-11-06)
 
 
