@@ -11,6 +11,7 @@ export type SidebarNavItem = {
   href?: string
   active?: boolean
   onClick?: React.MouseEventHandler<HTMLAnchorElement>
+  toggled?: boolean
 }
 
 export type SidebarNavOption = SidebarNavItem & {
@@ -103,6 +104,7 @@ function SidebarNavListItem({
   onClick,
   Icon,
   subItems,
+  toggled,
   ...rest
 }: SidebarNavItemProps) {
   return (
@@ -128,12 +130,13 @@ function SidebarNavListItem({
         </React.Fragment>
       }
       to={to}
+      className={active ? "active" : undefined}
       active={active}
       onClick={onClick}
       current={active ? "page" : undefined}
       {...rest}
     >
-      {subItems && active && (
+      {subItems && (active ? !toggled : toggled) && (
         <SidebarNavList
           css={(theme: Theme) => ({
             paddingTop: theme.space[5],
@@ -204,6 +207,7 @@ function SidebarBaseItem({
         baseNavItemCss(theme),
         active && baseNavItemActiveCss(theme),
       ]}
+      className={active ? "active" : ""}
       {...rest}
     >
       {to && !href && (

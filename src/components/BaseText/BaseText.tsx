@@ -1,7 +1,7 @@
 import * as React from "react"
 import { PropsOf } from "../../utils/types"
 
-type AllowedAs = "p" | "span"
+type AllowedAs = "p" | "span" | "div"
 
 export type BaseTextProps = Omit<PropsOf<AllowedAs>, "ref"> & {
   as?: AllowedAs
