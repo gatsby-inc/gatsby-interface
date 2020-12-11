@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.240](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.239...v0.0.240) (2020-12-11)
+
+
+### Features
+
+* **DropdownMenu:** add support for 'tone' and 'Icon' props ([#429](https://github.com/gatsby-inc/gatsby-interface/issues/429)) ([678910b](https://github.com/gatsby-inc/gatsby-interface/commit/678910bc55817250f4e074fff413105175fa39fe))
+
 ### [0.0.239](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.238...v0.0.239) (2020-12-11)
 
 
