@@ -275,6 +275,50 @@ const ALL_INCLUSIVE = [
   },
 
   {
+    id: "e42b5321-9239-44fb-859e-5ca3dc1e3f9b",
+    message: `Missing onError handler for invocation 'building-schema', error was 'Syntax Error: Unexpected Name "agilityNEW"
+
+GraphQL request:1:1
+1 | agilityNEW-RightOrLeftCaseStudyTestimonial-Dev
+  | ^'. Stacktrace was 'GraphQLError: Syntax Error: Unexpected Name "agilityNEW"
+    at syntaxError (/usr/src/app/www/node_modules/graphql/error/syntaxError.js:15:10)
+    at Parser.unexpected (/usr/src/app/www/node_modules/graphql/language/parser.js:1463:41)
+    at Parser.parseDefinition (/usr/src/app/www/node_modules/graphql/language/parser.js:157:16)
+    at Parser.many (/usr/src/app/www/node_modules/graphql/language/parser.js:1518:26)
+    at Parser.parseDocument (/usr/src/app/www/node_modules/graphql/language/parser.js:111:25)
+    at parse (/usr/src/app/www/node_modules/graphql/language/parser.js:36:17)
+    at TypeMapper.createType (/usr/src/app/www/node_modules/graphql-compose/lib/TypeMapper.js:113:43)
+    at Function.createTemp (/usr/src/app/www/node_modules/graphql-compose/lib/ObjectTypeComposer.js:80:28)
+    at Function.create (/usr/src/app/www/node_modules/graphql-compose/lib/ObjectTypeComposer.js:56:21)
+    at forEach (/usr/src/app/www/node_modules/gatsby/src/schema/infer/index.js:44:41)
+    at Array.forEach (<anonymous>)
+    at addInferredTypes (/usr/src/app/www/node_modules/gatsby/src/schema/infer/index.js:27:13)
+    at updateSchemaComposer (/usr/src/app/www/node_modules/gatsby/src/schema/schema.js:142:9)
+    at buildSchema (/usr/src/app/www/node_modules/gatsby/src/schema/schema.js:62:3)
+    at build (/usr/src/app/www/node_modules/gatsby/src/schema/index.js:105:18)
+    at buildSchema (/usr/src/app/www/node_modules/gatsby/src/services/build-schema.ts:19:3)'`,
+    code: "85901",
+    type: "GRAPHQL",
+    filePath: "templates/blog-post.js",
+    location: {
+      start: {
+        line: 13,
+        column: 5,
+      },
+    },
+    errorUrl:
+      "https://www.github.com/julienp-test-org/gatsby-starter-blog/blob/local-dev/src/pages/index3.js#L13",
+    docsUrl: "https://gatsby.dev/issue-how-to",
+    context: {
+      sourceMessage:
+        'Variable "$slug" is never used in operation "BlogPostBySlug".\n\nGraphQL request:2:24\n1 |\n2 |   query BlogPostBySlug($slug: String!) {\n  |                        ^\n3 |     site {',
+    },
+    level: StructuredLogLevel.Error,
+    __typename: "StructuredLog",
+    activity: null,
+  },
+
+  {
     id: "93e9769c-24a8-401c-865a-ca3ab1696057",
     message: 'Building static HTML failed for path "/index3/"',
     code: "95313",
@@ -310,10 +354,34 @@ const ALL_INCLUSIVE = [
       type: BuildActivityType.Spinner,
       message: null,
       status: BuildActivityStatus.InProgress,
-      statusText: null,
+      statusText: `Preparing Gatsby Build for Netlify deploy`,
       duration: null,
       current: null,
       total: null,
+      __typename: "BuildActivity",
+    },
+  },
+
+  {
+    id: "9e7c9134-e0df-4d02-8a63-df10f1d4fae5",
+    message: "Deploying Build to Netlify",
+    code: null,
+    type: null,
+    filePath: null,
+    docsUrl: null,
+    context: null,
+    level: StructuredLogLevel.Info,
+    __typename: "StructuredLog",
+    activity: {
+      id: "4d8ceedb-267a-4cea-8332-d0beb67151cb",
+      name: "Deploying Build to Netlify",
+      type: BuildActivityType.Progress,
+      message: null,
+      status: BuildActivityStatus.InProgress,
+      statusText: `Uploading files`,
+      duration: null,
+      current: 12,
+      total: 307,
       __typename: "BuildActivity",
     },
   },

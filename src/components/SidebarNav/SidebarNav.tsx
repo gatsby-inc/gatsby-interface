@@ -3,12 +3,15 @@ import { jsx } from "@emotion/core"
 import * as React from "react"
 import { Link } from "gatsby"
 import { Theme, ThemeCss } from "../../theme"
+import { warn } from "../../utils/maintenance/warn"
 
 export type SidebarNavItem = {
   label: React.ReactNode
   to?: string
+  href?: string
   active?: boolean
   onClick?: React.MouseEventHandler<HTMLAnchorElement>
+  toggled?: boolean
 }
 
 export type SidebarNavOption = SidebarNavItem & {
@@ -101,6 +104,7 @@ function SidebarNavListItem({
   onClick,
   Icon,
   subItems,
+  toggled,
   ...rest
 }: SidebarNavItemProps) {
   return (
@@ -126,12 +130,13 @@ function SidebarNavListItem({
         </React.Fragment>
       }
       to={to}
+      className={active ? "active" : undefined}
       active={active}
       onClick={onClick}
       current={active ? "page" : undefined}
       {...rest}
     >
-      {subItems && active && (
+      {subItems && (active ? !toggled : toggled) && (
         <SidebarNavList
           css={(theme: Theme) => ({
             paddingTop: theme.space[5],
@@ -183,17 +188,29 @@ function SidebarBaseItem({
   active,
   onClick,
   current,
+  href,
   ...rest
 }: SidebarBaseItemProps) {
+  const isOverwritten = to && href
+  const isText = (!to && !href) || isOverwritten
+
+  if (isOverwritten) {
+    warn(
+      `You can't set both 'to' and 'href' props on SidebarBaseItem at the same time! Check the '${label}' link.`,
+      `warning`
+    )
+  }
+
   return (
     <li
       css={theme => [
         baseNavItemCss(theme),
         active && baseNavItemActiveCss(theme),
       ]}
+      className={active ? "active" : ""}
       {...rest}
     >
-      {to ? (
+      {to && !href && (
         <Link
           to={to}
           onClick={onClick}
@@ -202,9 +219,20 @@ function SidebarBaseItem({
         >
           {label}
         </Link>
-      ) : (
-        label
       )}
+
+      {!to && href && (
+        <a
+          href={href}
+          onClick={onClick}
+          css={itemLinkCss}
+          aria-current={current}
+        >
+          {label}
+        </a>
+      )}
+
+      {isText && label}
       {children}
     </li>
   )

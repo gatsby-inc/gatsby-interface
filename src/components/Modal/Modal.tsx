@@ -35,7 +35,8 @@ const overlayCss: ThemeCss = theme => ({
   right: 0,
   bottom: 0,
   left: 0,
-  overflow: `auto`,
+  overflowX: `hidden`,
+  overflowY: `auto`,
   zIndex: theme.zIndices.modals,
 })
 

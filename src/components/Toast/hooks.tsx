@@ -1,6 +1,5 @@
-import React, { useState, useRef, useCallback } from "react"
-import { useToastContext } from "./ToastContext"
-import { MessageWithLink } from "./MessageWithLink"
+import * as React from "react"
+import { ToastOptions, useToastContext } from "./ToastContext"
 import { DEFAULT_TIMEOUT, DEFAULT_TONE } from "./constants"
 import { ToastTone } from "./types"
 
@@ -13,50 +12,28 @@ export const useShowToast = () => {
 export const useShowSuccessToast = () => {
   const showToast = useShowToast()
 
-  return useCallback(
-    (message, options = {}) => {
+  return React.useCallback(
+    (
+      message: React.ReactNode,
+      options: Omit<Partial<ToastOptions>, "tone"> = {}
+    ) => {
       showToast(message, { ...options, tone: `SUCCESS` })
     },
     [showToast]
   )
 }
 
-export const useShowErrorToast = () => {
-  const showToast = useShowToast()
-
-  return useCallback(
-    (message, options = {}) => {
-      showToast(message, { ...options, tone: `DANGER`, timeout: 0 })
-    },
-    [showToast]
-  )
-}
-
-export const useShowErrorAlert = () => {
-  const showToast = useShowErrorToast()
-
-  return useCallback(
-    (message, linkProps, options = {}) => {
-      showToast(
-        <MessageWithLink {...linkProps}>{message}</MessageWithLink>,
-        options
-      )
-    },
-    [showToast]
-  )
-}
-
-export interface Toast {
+export interface ToastData {
   id: symbol
   message: React.ReactNode
   tone: ToastTone
 }
 
 export const useToastActions = () => {
-  const [toasts, setToasts] = useState<Toast[]>([])
-  const timeoutsRef = useRef<Map<symbol, number>>(new Map())
+  const [toasts, setToasts] = React.useState<ToastData[]>([])
+  const timeoutsRef = React.useRef<Map<symbol, number>>(new Map())
 
-  const removeToast = useCallback((toastId: symbol) => {
+  const removeToast = React.useCallback((toastId: symbol) => {
     setToasts(prevToasts => prevToasts.filter(({ id }) => id !== toastId))
 
     window.clearTimeout(timeoutsRef.current.get(toastId))
@@ -64,8 +41,14 @@ export const useToastActions = () => {
     timeoutsRef.current.delete(toastId)
   }, [])
 
-  const showToast = useCallback(
-    (message, { tone = DEFAULT_TONE, timeout = DEFAULT_TIMEOUT } = {}) => {
+  const showToast = React.useCallback(
+    (
+      message: React.ReactNode,
+      {
+        tone = DEFAULT_TONE,
+        timeout = DEFAULT_TIMEOUT,
+      }: Partial<ToastOptions> = {}
+    ) => {
       const toastId = Symbol(`toast`)
 
       setToasts(prevToasts => [...prevToasts, { id: toastId, message, tone }])
@@ -80,6 +63,15 @@ export const useToastActions = () => {
     },
     []
   )
+
+  React.useEffect(() => {
+    // Clear all timeouts
+    return () => {
+      for (const timeout of timeoutsRef.current.values()) {
+        window.clearTimeout(timeout)
+      }
+    }
+  }, [])
 
   return { toasts, showToast, removeToast }
 }

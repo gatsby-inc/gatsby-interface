@@ -44,7 +44,7 @@ const Template: Story<SidebarNavProps> = args => {
       Icon: GeneralIcon,
       onClick: () => setNav(`general`),
       active: activeNav === `general`,
-      to: getPath(`#general`),
+      to: getPath(`/general`),
       subItems: [
         {
           label: `Site Details`,
@@ -83,14 +83,14 @@ const Template: Story<SidebarNavProps> = args => {
       Icon: BuildsIcon,
       onClick: () => setNav(`builds`),
       active: activeNav === `builds`,
-      to: getPath(`#builds`),
+      to: getPath(`/builds`),
     },
     {
       label: `Reports`,
       Icon: ReportsIcon,
       onClick: () => setNav(`reports`),
       active: activeNav === `reports`,
-      to: getPath(`#reports`),
+      to: getPath(`/reports`),
     },
     {
       label: `Integrations`,
@@ -124,7 +124,7 @@ const Template: Story<SidebarNavProps> = args => {
       Icon: SkullIcon,
       onClick: () => setNav(`danger`),
       active: activeNav === `danger`,
-      to: getPath(`#danger`),
+      to: getPath(`/danger`),
     },
   ]
 

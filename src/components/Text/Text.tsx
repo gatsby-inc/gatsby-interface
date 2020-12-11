@@ -9,12 +9,16 @@ export type TextProps = BaseTextProps & {
   tone?: TextTone
   variant?: TextVariant
   size?: TextSize
+  noMarginTop?: boolean
+  noMarginBottom?: boolean
 }
 
 function Text({
   tone = `NEUTRAL`,
   variant = `PRIMARY`,
   size = `M`,
+  noMarginTop = false,
+  noMarginBottom = false,
   ...rest
 }: TextProps) {
   return (
@@ -23,6 +27,12 @@ function Text({
         baseStyle(tone)(theme),
         sizeStyles[size](theme),
         variantStyles[variant](theme),
+        noMarginTop && {
+          marginTop: 0,
+        },
+        noMarginBottom && {
+          marginBottom: 0,
+        },
       ]}
       {...rest}
     />

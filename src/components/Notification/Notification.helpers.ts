@@ -32,6 +32,8 @@ const variants: Record<NotificationVariant, GetVariantStylesFn> = {
   SECONDARY: tone => {
     return theme => ({
       background: theme.tones[tone].superLight,
+      borderRadius: theme.radii[2],
+      boxShadow: `0 0 0 1px ${theme.tones[tone].light} inset`,
       padding: `${theme.space[5]} ${theme.space[7]}`,
       [theme.mediaQueries.desktop]: {
         padding: `${theme.space[7]} ${theme.space[9]}`,

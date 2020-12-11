@@ -1,5 +1,15 @@
 const babelOptions = {
-  presets: [`babel-preset-gatsby`, `@babel/typescript`],
+  presets: [
+    [
+      `@babel/preset-env`,
+      {
+        targets: {
+          node: "current",
+        },
+      },
+    ],
+    `@babel/typescript`,
+  ],
   plugins: [
     `emotion`,
     `@babel/plugin-proposal-optional-chaining`,
