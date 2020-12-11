@@ -2,10 +2,10 @@
 
 These are some patterns and best practices we use when contributing to Gatsby Interface:
 
-- Use `yarn scaffold:component` when adding new components to create code stubs: [/docs/scaffold-components.md]()
-- Use `yarn scaffold:icon` when adding new icon components to create code stubs: [/docs/icons.md]()
+- Use `yarn scaffold:component` when adding new components to create code stubs. [Read more here](/docs/scaffold-components.md).
+- Use `yarn scaffold:icon` when adding new icon components to create code stubs: [Read more here](/docs/icons.md).
 - Use React hooks and functional components: https://reactjs.org/docs/hooks-intro.html.
-- Gatsby Interface uses TypeScript almost everywhere, and there are some guidelines: [/docs/typescript.md]()
+- Gatsby Interface uses TypeScript almost everywhere, and there are some guidelines: [Read more here](/docs/typescript.md).
 - Use CSS props for styling: https://emotion.sh/docs/css-prop.
 - Use Emotion's theming (https://emotion.sh/docs/theming) and Gatsby Interface [Theme Scales](https://gatsby-interface.netlify.app/?path=/story/theme-scales--colors) for styling constants.
 - If your component becomes too big or complex, consider using compound components to make components more composable and flexible: https://kentcdodds.com/blog/compound-components-with-react-hooks.
