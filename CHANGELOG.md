@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.239](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.238...v0.0.239) (2020-12-11)
+
+
+### Bug Fixes
+
+* **form:** set StyledTextArea's height to 'auto' so that 'rows' attribute works ([#432](https://github.com/gatsby-inc/gatsby-interface/issues/432)) ([63ad8b6](https://github.com/gatsby-inc/gatsby-interface/commit/63ad8b6f55c1bcfc77e6d5489be0e93cf1787be5))
+
 ### [0.0.238](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.237...v0.0.238) (2020-12-08)
 
 
