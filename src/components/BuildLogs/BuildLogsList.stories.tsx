@@ -226,7 +226,7 @@ const ALL_INCLUSIVE = [
   },
 
   {
-    id: "32d47075-c836-4343-9d9f-dc878da94a0e",
+    id: "32d47075-c836-4343-9d9f-dc878da94a0c",
     message:
       'There was an error in your GraphQL query:\n\nVariable "$slug" is never used in operation "BlogPostBySlug".\n\nGraphQL request:2:24\n1 |\n2 |   query BlogPostBySlug($slug: String!) {\n  |                        ^\n3 |     site {',
     code: "85901",
@@ -373,7 +373,7 @@ GraphQL request:1:1
     level: StructuredLogLevel.Info,
     __typename: "StructuredLog",
     activity: {
-      id: "4d8ceedb-267a-4cea-8332-d0beb67151cb",
+      id: "9e7c9134-e0df-4d02-8a63-df10f1d4fae5",
       name: "Deploying Build to Netlify",
       type: BuildActivityType.Progress,
       message: null,
