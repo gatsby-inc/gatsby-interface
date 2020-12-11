@@ -19,6 +19,7 @@ export const StyledTextArea = React.forwardRef<
     baseInputCss(theme),
     {
       display: `block`,
+      height: `auto`,
       minHeight: `4.85em`,
       resize: `vertical`,
       padding: `${theme.space[2]} ${theme.space[3]}`,

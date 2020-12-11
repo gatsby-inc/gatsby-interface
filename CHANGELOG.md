@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.239](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.238...v0.0.239) (2020-12-11)
+
+
+### Bug Fixes
+
+* **form:** set StyledTextArea's height to 'auto' so that 'rows' attribute works ([#432](https://github.com/gatsby-inc/gatsby-interface/issues/432)) ([63ad8b6](https://github.com/gatsby-inc/gatsby-interface/commit/63ad8b6f55c1bcfc77e6d5489be0e93cf1787be5))
+
+### [0.0.238](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.237...v0.0.238) (2020-12-08)
+
+
+### Features
+
+* **Text:** support as='div' and margin reset props ([#430](https://github.com/gatsby-inc/gatsby-interface/issues/430)) ([03a922f](https://github.com/gatsby-inc/gatsby-interface/commit/03a922f734dae19d4edaa4d22042522a113bef03))
+
+### [0.0.237](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.236...v0.0.237) (2020-12-08)
+
+
+### Features
+
+* **Sidebar:** add toggle ability to sidebar ([#431](https://github.com/gatsby-inc/gatsby-interface/issues/431)) ([28d1bdb](https://github.com/gatsby-inc/gatsby-interface/commit/28d1bdb5d354760cfb613acf6d3e01f3be549655))
+
+### [0.0.236](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.235...v0.0.236) (2020-12-08)
+
+
+### Features
+
+* **babel-plugin-gatsby-interface:** improve treeshaking in gatsby applications ([#426](https://github.com/gatsby-inc/gatsby-interface/issues/426)) ([3d40d07](https://github.com/gatsby-inc/gatsby-interface/commit/3d40d07b7be0028f2b2b8cf1574da41f73c49454))
+
 ### [0.0.235](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.234...v0.0.235) (2020-12-04)
 
 
