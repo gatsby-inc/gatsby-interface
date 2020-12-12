@@ -25,7 +25,8 @@ import { DropdownMenuSize } from "./DropdownMenu"
 import { Notification } from "../Notification"
 import { Link } from "gatsby"
 import { positionRight } from "@reach/popover"
-import { MdDelete, MdRefresh } from "react-icons/md"
+import { MdDelete } from "react-icons/md"
+import { GatsbyCloudIcon } from "../icons"
 
 export default {
   title: `DropdownMenu`,
@@ -260,7 +261,7 @@ export const ItemTones = () => {
             Tone: CRITICAL
           </DropdownMenuLink>
           <DropdownMenuItem
-            Icon={MdRefresh}
+            Icon={GatsbyCloudIcon}
             onSelect={() => action("Select")(`Tone: DEFAULT (with icon)`)}
           >
             Tone: DEFAULT (with icon)

@@ -72,8 +72,12 @@ export const menuItemToneCss: Record<DropdownMenuItemTone, ThemeCss> = {
 }
 
 export const menuItemIconCss: ThemeCss = theme => ({
+  // Based on suggestion from https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+  top: `.125em`,
+  position: `relative`,
   marginRight: theme.space[3],
-  verticalAlign: `middle`,
+  width: theme.fontSizes[2],
+  height: theme.fontSizes[2],
   transition: `0.5s`,
   "[data-selected] &": {
     transform: "scale(1.2)",
@@ -82,13 +86,13 @@ export const menuItemIconCss: ThemeCss = theme => ({
 
 export const menuItemIconToneCss: Record<DropdownMenuItemTone, ThemeCss> = {
   DEFAULT: theme => ({
-    color: theme.colors.grey[40],
+    color: theme.colors.grey[50],
     "[data-selected] &": {
       color: theme.colors.purple[50],
     },
   }),
   CRITICAL: theme => ({
-    color: theme.colors.red[20],
+    color: theme.colors.red[30],
     "[data-selected] &": {
       color: theme.colors.red[90],
     },

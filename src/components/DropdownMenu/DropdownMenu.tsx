@@ -109,7 +109,7 @@ export const DropdownMenuItemsLowLevel: React.FC<DropdownMenuItemsLowLevelProps>
 export type DropdownMenuItemTone = "DEFAULT" | "CRITICAL"
 
 export type StyledMenuItemProps = {
-  Icon?: React.ComponentType
+  Icon?: React.ComponentType<React.ComponentPropsWithoutRef<"svg">>
   tone?: DropdownMenuItemTone
 }
 
@@ -145,7 +145,7 @@ function getStyledMenuItemProps({
     css: itemCss,
     children: Icon ? (
       <React.Fragment>
-        <Icon css={iconCss} />
+        <Icon css={iconCss} style={{ verticalAlign: `baseline` }} />
         {children}
       </React.Fragment>
     ) : (
