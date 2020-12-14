@@ -73,7 +73,7 @@ export const menuItemToneCss: Record<DropdownMenuItemTone, ThemeCss> = {
 
 export const menuItemIconCss: ThemeCss = theme => ({
   // Based on suggestion from https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
-  top: `.125em`,
+  top: `.125rem`,
   position: `relative`,
   marginRight: theme.space[3],
   width: theme.fontSizes[2],
