@@ -34,7 +34,7 @@ Tones.story = {
   decorators: [withVariationsContainer],
 }
 
-export const withBorder = () => (
+export const WithBorder = () => (
   <React.Fragment>
     <StoryPropVariant propName="withBorder" propValue={false}>
       <NumberBadge tone={`SUCCESS`}>80</NumberBadge>
@@ -47,6 +47,6 @@ export const withBorder = () => (
   </React.Fragment>
 )
 
-Tones.story = {
+WithBorder.story = {
   decorators: [withVariationsContainer],
 }
