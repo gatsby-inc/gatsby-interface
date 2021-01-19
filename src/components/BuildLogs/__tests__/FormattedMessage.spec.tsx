@@ -235,4 +235,66 @@ GraphQL request:1:1
     </div>
     `)
   })
+
+  it(`should format multiple code blocks`, () => {
+    const message = `There was an error in your GraphQL query:\n\nVariable "$missingVar" is not defined by operation "SomeQuery".\n\nGraphQL request:16:32\n15 |           frontmatter {\n16 |             date(formatString: $missingVar)\n   |                                ^\n17 |             title\n\nGraphQL request:2:3\n1 |\n2 |   query {\n  |   ^\n3 |     site {`
+
+    expect(render(<FormattedMessage rawMessage={message} />).container)
+      .toMatchInlineSnapshot(`
+      <div>
+        <div>
+          <p>
+            There was an error in your GraphQL query:
+          </p>
+          <p>
+            Variable "$missingVar" is not defined by operation "SomeQuery".
+          </p>
+          <p>
+            GraphQL request:16:32
+      
+            <code>
+              15 |           frontmatter {
+      16 |             date(formatString: $missingVar)
+         |                                ^
+      17 |             title
+            </code>
+            
+      GraphQL request:2:3
+      
+            <code>
+              1 |
+      2 |   query {
+        |   ^
+      3 |     site {
+            </code>
+          </p>
+        </div>
+      </div>
+    `)
+  })
+
+  it(`should preserve underscores (do not change them to <em>) in single quoted strings`, () => {
+    const message = `failed
+    
+Can't resolve '../lerna_node_version.json' in '/usr/src/app/www/lerna_version_node/src/pages'
+
+If you're trying to use a package make sure that '../lerna_node_version.json' is installed. If you're trying to use a local file make sure that the path is correct.`
+
+    expect(render(<FormattedMessage rawMessage={message} />).container)
+      .toMatchInlineSnapshot(`
+      <div>
+        <div>
+          <p>
+            failed
+          </p>
+          <p>
+            Can't resolve '../lerna_node_version.json' in '/usr/src/app/www/lerna_version_node/src/pages'
+          </p>
+          <p>
+            If you're trying to use a package make sure that '../lerna_node_version.json' is installed. If you're trying to use a local file make sure that the path is correct.
+          </p>
+        </div>
+      </div>
+      `)
+  })
 })

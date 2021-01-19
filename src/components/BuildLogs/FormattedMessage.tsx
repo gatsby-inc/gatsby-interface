@@ -22,7 +22,9 @@ const formatCodeBlocks = (stringPartsByLines: string[]) => {
   let lastIndexFound = -1
   let codeBlockOpen = false
 
-  const nextLines = stringPartsByLines.map((str, index) => {
+  const nextLines = stringPartsByLines.map((orgStr, index) => {
+    const str = orgStr.replace(/(?<='.*)_(?=.*')/gi, `\\_`)
+
     if (
       str.match(/(\s|\t)*\d+\s\|/) ||
       str.match(/(\s|\t)*\|(\s|\t)*\^/) ||

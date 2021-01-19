@@ -14,9 +14,9 @@
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "test": "jest --env=jest-environment-jsdom-sixteen",
+    "test": "jest --env=jest-environment-jsdom-sixteen --verbose",
     "test:a11y": "jest __tests__/AccessiblityStoryshots.test.js --testPathIgnorePatterns=[] --env=jest-environment-jsdom-sixteen",
-    "test:watch": "jest --watch --env=jest-environment-jsdom-sixteen",
+    "test:watch": "jest --watch --env=jest-environment-jsdom-sixteen --verbose",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "tsc": "tsc",
