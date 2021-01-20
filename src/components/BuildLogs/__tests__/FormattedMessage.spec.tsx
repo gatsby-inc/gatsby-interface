@@ -251,10 +251,21 @@ If you're trying to use a package make sure that '../lerna_node_version.json' is
             failed
           </p>
           <p>
-            Can't resolve '../lerna_node_version.json' in '/usr/src/app/www/lerna_version_node/src/pages'
+            Can't resolve 
+            <code>
+              ../lerna_node_version.json
+            </code>
+             in 
+            <code>
+              /usr/src/app/www/lerna_version_node/src/pages
+            </code>
           </p>
           <p>
-            If you're trying to use a package make sure that '../lerna_node_version.json' is installed. If you're trying to use a local file make sure that the path is correct.
+            If you're trying to use a package make sure that 
+            <code>
+              ../lerna_node_version.json
+            </code>
+             is installed. If you're trying to use a local file make sure that the path is correct.
           </p>
         </div>
       </div>
