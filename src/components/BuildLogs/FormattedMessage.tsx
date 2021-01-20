@@ -23,7 +23,6 @@ const formatCodeBlocks = (stringPartsByLines: string[]) => {
   let codeBlockOpen = false
 
   const nextLines = stringPartsByLines.map((orgStr, index) => {
-    //
     const str = orgStr.replace(/(')(\S*\/\S*)(')/gi, "`$2`")
 
     if (
