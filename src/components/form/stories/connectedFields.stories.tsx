@@ -167,6 +167,7 @@ export const Example = () => {
             name="description"
             hint={`Be concise, the field can't be longer than ${DESCRIPTION_MAX_LENGTH} characters`}
             layout={layout}
+            rows={7}
           />
 
           <SelectConnectedField

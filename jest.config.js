@@ -29,4 +29,8 @@ module.exports = {
   testURL: `http://localhost`,
   setupFiles: [`<rootDir>/jest-setup.js`],
   setupFilesAfterEnv: [`<rootDir>/setup-test-env.js`],
+  projects: [
+    "<rootDir>/babel-plugin-gatsby-interface/jest.config.js",
+    `<rootDir>/`,
+  ],
 }
