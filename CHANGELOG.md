@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.243](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.242...v0.0.243) (2021-01-21)
+
+### [0.0.242](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.241...v0.0.242) (2020-12-16)
+
+### [0.0.241](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.240...v0.0.241) (2020-12-14)
+
+
+### Bug Fixes
+
+* **DropdownMenu:** fix icon's vertical alignment and make it more opaque ([#436](https://github.com/gatsby-inc/gatsby-interface/issues/436)) ([ec949ca](https://github.com/gatsby-inc/gatsby-interface/commit/ec949caf42af76424d46c12339f91881f21c558e))
+
+### [0.0.240](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.239...v0.0.240) (2020-12-11)
+
+
+### Features
+
+* **DropdownMenu:** add support for 'tone' and 'Icon' props ([#429](https://github.com/gatsby-inc/gatsby-interface/issues/429)) ([678910b](https://github.com/gatsby-inc/gatsby-interface/commit/678910bc55817250f4e074fff413105175fa39fe))
+
 ### [0.0.239](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.238...v0.0.239) (2020-12-11)
 
 
