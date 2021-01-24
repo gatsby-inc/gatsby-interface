@@ -25,6 +25,8 @@ import { DropdownMenuSize } from "./DropdownMenu"
 import { Notification } from "../Notification"
 import { Link } from "gatsby"
 import { positionRight } from "@reach/popover"
+import { MdDelete } from "react-icons/md"
+import { GatsbyCloudIcon } from "../icons"
 
 export default {
   title: `DropdownMenu`,
@@ -228,6 +230,56 @@ export const MenuLinks = () => {
 }
 
 MenuLinks.parameters = {
+  chromatic: { delay: 150 },
+}
+
+export const ItemTones = () => {
+  useOpenMenuOnMount()
+
+  return (
+    <div css={{ minHeight: "100vh" }}>
+      <DropdownMenu>
+        <DropdownMenuButton>{text("label", "Actions")}</DropdownMenuButton>
+        <DropdownMenuItems>
+          <DropdownMenuLink
+            href={`https://www.google.com/search?q=Ashalmawia`}
+            target="_blank"
+            rel="noreferrer noopener"
+            as={"a"}
+            onSelect={() => action("Select")(`Tone: DEFAULT`)}
+          >
+            Tone: DEFAULT
+          </DropdownMenuLink>
+          <DropdownMenuLink
+            href={`https://www.google.com/search?q=Ashalmawia`}
+            target="_blank"
+            rel="noreferrer noopener"
+            as={"a"}
+            tone="CRITICAL"
+            onSelect={() => action("Select")(`Tone: CRITICAL`)}
+          >
+            Tone: CRITICAL
+          </DropdownMenuLink>
+          <DropdownMenuItem
+            Icon={GatsbyCloudIcon}
+            onSelect={() => action("Select")(`Tone: DEFAULT (with icon)`)}
+          >
+            Tone: DEFAULT (with icon)
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            Icon={MdDelete}
+            tone="CRITICAL"
+            onSelect={() => action("Select")(`Tone: CRITICAL (with icon)`)}
+          >
+            Tone: CRITICAL (with icon)
+          </DropdownMenuItem>
+        </DropdownMenuItems>
+      </DropdownMenu>
+    </div>
+  )
+}
+
+ItemTones.parameters = {
   chromatic: { delay: 150 },
 }
 

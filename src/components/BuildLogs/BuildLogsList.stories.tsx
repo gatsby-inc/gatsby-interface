@@ -422,6 +422,22 @@ GraphQL request:1:1
     total: null,
     __typename: "BuildActivity",
   },
+
+  {
+    activity: null,
+    code: "98124",
+    context: null,
+    docsUrl: "https://gatsby.dev/issue-how-to",
+    errorUrl: null,
+    filePath: "lerna_version_node/src/pages/index.js",
+    id: "a5c5d16a-b5f4-421c-8c05-7bea82c25c98",
+    level: StructuredLogLevel.Error,
+    location: null,
+    message:
+      "undefined failed\n\nCan't resolve '../lerna_node_version.json' in '/usr/src/app/www/lerna_version_node/src/pages'\n\nIf you're trying to use a package make sure that '../lerna_node_version.json' is installed. If you're trying to use a local file make sure that the path is correct.",
+    type: "WEBPACK",
+    __typename: "StructuredLog",
+  },
 ]
 
 export const Basic = () => (

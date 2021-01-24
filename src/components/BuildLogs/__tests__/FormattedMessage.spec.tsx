@@ -235,4 +235,40 @@ GraphQL request:1:1
     </div>
     `)
   })
+
+  it(`should preserve underscores (do not change them to <em>) in single quoted strings`, () => {
+    const message = `failed
+    
+Can't resolve '../lerna_node_version.json' in '/usr/src/app/www/lerna_version_node/src/pages'
+
+If you're trying to use a package make sure that '../lerna_node_version.json' is installed. If you're trying to use a local file make sure that the path is correct.`
+
+    expect(render(<FormattedMessage rawMessage={message} />).container)
+      .toMatchInlineSnapshot(`
+      <div>
+        <div>
+          <p>
+            failed
+          </p>
+          <p>
+            Can't resolve 
+            <code>
+              ../lerna_node_version.json
+            </code>
+             in 
+            <code>
+              /usr/src/app/www/lerna_version_node/src/pages
+            </code>
+          </p>
+          <p>
+            If you're trying to use a package make sure that 
+            <code>
+              ../lerna_node_version.json
+            </code>
+             is installed. If you're trying to use a local file make sure that the path is correct.
+          </p>
+        </div>
+      </div>
+      `)
+  })
 })

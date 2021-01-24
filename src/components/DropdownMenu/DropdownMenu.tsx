@@ -24,11 +24,14 @@ import { MdKeyboardArrowDown } from "react-icons/md"
 import {
   dropdownCss,
   dropdownButtonCss,
-  menuItemCss,
   dropdownButtonIconCss,
   dropdownSizeCss,
   dropdownDividerCss,
   dropdownHeaderCss,
+  menuItemCss,
+  menuItemToneCss,
+  menuItemIconCss,
+  menuItemIconToneCss,
 } from "./DropdownMenu.styles"
 import { DisableReachStyleCheck } from "../../utils/helpers/DisableReachStyleCheck"
 import { ThemeCss } from "../../theme"
@@ -103,19 +106,53 @@ export const DropdownMenuItemsLowLevel: React.FC<DropdownMenuItemsLowLevelProps>
   return <AnimatedMenuItems style={styleProps} {...rest} css={finalCss} />
 }
 
-export type DropdownMenuItemProps = MenuItemProps
+export type DropdownMenuItemTone = "DEFAULT" | "CRITICAL"
+
+export type StyledMenuItemProps = {
+  Icon?: React.ComponentType<React.ComponentPropsWithoutRef<"svg">>
+  tone?: DropdownMenuItemTone
+}
+
+export type DropdownMenuItemProps = MenuItemProps & StyledMenuItemProps
 
 export const DropdownMenuItem: React.FC<DropdownMenuItemProps> = props => (
-  <MenuItem {...props} css={menuItemCss} />
+  <MenuItem {...props} {...getStyledMenuItemProps(props)} />
 )
 
-export type DropdownMenuLinkProps = MenuLinkProps
+export type DropdownMenuLinkProps = MenuLinkProps & StyledMenuItemProps
 
 export const DropdownMenuLink = forwardRefWithAs<DropdownMenuLinkProps, "a">(
   function DropdownMenuLink(props, ref) {
-    return <MenuLink ref={ref} {...props} css={menuItemCss} />
+    return <MenuLink ref={ref} {...props} {...getStyledMenuItemProps(props)} />
   }
 )
+
+function getStyledMenuItemProps({
+  children,
+  tone = `DEFAULT`,
+  Icon,
+}: DropdownMenuItemProps | DropdownMenuLinkProps) {
+  const itemCss: ThemeCss = theme => [
+    menuItemCss(theme),
+    menuItemToneCss[tone](theme),
+  ]
+  const iconCss: ThemeCss = theme => [
+    menuItemIconCss(theme),
+    menuItemIconToneCss[tone](theme),
+  ]
+
+  return {
+    css: itemCss,
+    children: Icon ? (
+      <React.Fragment>
+        <Icon css={iconCss} style={{ verticalAlign: `baseline` }} />
+        {children}
+      </React.Fragment>
+    ) : (
+      children
+    ),
+  }
+}
 
 export type DropdownMenuPopoverProps = MenuPopoverProps
 
