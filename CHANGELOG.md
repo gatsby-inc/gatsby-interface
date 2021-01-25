@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.244](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.243...v0.0.244) (2021-01-24)
+
+
+### Bug Fixes
+
+* **docs:** "Z-Indices" docs story title ([#440](https://github.com/gatsby-inc/gatsby-interface/issues/440)) ([eb0867e](https://github.com/gatsby-inc/gatsby-interface/commit/eb0867e320290c3acc62af14d51b9b82d685ea00))
+
 ### [0.0.243](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.242...v0.0.243) (2021-01-21)
 
 ### [0.0.242](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.241...v0.0.242) (2020-12-16)
