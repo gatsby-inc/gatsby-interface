@@ -6,34 +6,34 @@ export default function StandardRequestsIcon(props: IconProps) {
   return (
     <IconSkeleton {...props} iconName="StandardRequestsIcon">
       <rect
-        x="5.66675"
-        y="14.5"
-        width="2.66667"
-        height="4"
+        x="2.8623"
+        y="15.8652"
+        width="3.9975"
+        height="5.99625"
         fill="currentColor"
         strokeWidth="0"
       />
       <rect
-        x="9.00024"
-        y="11.5"
-        width="2.66667"
-        height="7"
+        x="7.85938"
+        y="11.3681"
+        width="3.9975"
+        height="10.4934"
         fill="currentColor"
         strokeWidth="0"
       />
       <rect
-        x="12.3335"
-        y="8.5"
-        width="2.66667"
-        height="10"
+        x="12.8562"
+        y="6.87082"
+        width="3.9975"
+        height="14.9906"
         fill="#D9D7E0"
         strokeWidth="0"
       />
       <rect
-        x="15.6667"
-        y="5.5"
-        width="2.66667"
-        height="13"
+        x="17.8528"
+        y="2.37366"
+        width="3.9975"
+        height="19.4878"
         fill="#D9D7E0"
         strokeWidth="0"
       />

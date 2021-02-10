@@ -6,34 +6,34 @@ export default function FreeRequestsIcon(props: IconProps) {
   return (
     <IconSkeleton {...props} iconName="FreeRequestsIcon">
       <rect
-        x="5.6665"
-        y="14.5"
-        width="2.66667"
-        height="4"
+        x="2.86572"
+        y="15.6434"
+        width="3.99585"
+        height="5.82946"
         fill="currentColor"
         strokeWidth="0"
       />
       <rect
-        x="9"
-        y="11.5"
-        width="2.66667"
-        height="7"
+        x="7.86084"
+        y="11.2714"
+        width="3.99585"
+        height="10.2016"
         fill="#D9D7E0"
         strokeWidth="0"
       />
       <rect
-        x="12.3333"
-        y="8.5"
-        width="2.66667"
-        height="10"
+        x="12.8555"
+        y="6.89923"
+        width="3.99585"
+        height="14.5737"
         fill="#D9D7E0"
         strokeWidth="0"
       />
       <rect
-        x="15.6665"
-        y="5.5"
-        width="2.66667"
-        height="13"
+        x="17.8503"
+        y="2.52716"
+        width="3.99585"
+        height="18.9458"
         fill="#D9D7E0"
         strokeWidth="0"
       />
