@@ -4,14 +4,17 @@ import { IconProps } from "./types"
 
 export default function FreeRequestsIcon(props: IconProps) {
   return (
-    <IconSkeleton {...props} iconName="FreeRequestsIcon">
+    <IconSkeleton
+      {...props}
+      iconName="FreeRequestsIcon"
+      applyColorToStroke={false}
+    >
       <rect
         x="2.86572"
         y="15.6434"
         width="3.99585"
         height="5.82946"
         fill="currentColor"
-        strokeWidth="0"
       />
       <rect
         x="7.86084"
@@ -19,7 +22,6 @@ export default function FreeRequestsIcon(props: IconProps) {
         width="3.99585"
         height="10.2016"
         fill="#D9D7E0"
-        strokeWidth="0"
       />
       <rect
         x="12.8555"
@@ -27,7 +29,6 @@ export default function FreeRequestsIcon(props: IconProps) {
         width="3.99585"
         height="14.5737"
         fill="#D9D7E0"
-        strokeWidth="0"
       />
       <rect
         x="17.8503"
@@ -35,7 +36,6 @@ export default function FreeRequestsIcon(props: IconProps) {
         width="3.99585"
         height="18.9458"
         fill="#D9D7E0"
-        strokeWidth="0"
       />
     </IconSkeleton>
   )
