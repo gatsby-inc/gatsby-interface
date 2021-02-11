@@ -4,14 +4,17 @@ import { IconProps } from "./types"
 
 export default function ProRequestsIcon(props: IconProps) {
   return (
-    <IconSkeleton {...props} iconName="ProRequestsIcon">
+    <IconSkeleton
+      {...props}
+      iconName="ProRequestsIcon"
+      applyColorToStroke={false}
+    >
       <rect
         x="3.15381"
         y="15.746"
         width="3.99579"
         height="5.99368"
         fill="currentColor"
-        strokeWidth="0"
       />
       <rect
         x="8.14868"
@@ -19,7 +22,6 @@ export default function ProRequestsIcon(props: IconProps) {
         width="3.99579"
         height="10.4889"
         fill="currentColor"
-        strokeWidth="0"
       />
       <rect
         x="13.1433"
@@ -27,7 +29,6 @@ export default function ProRequestsIcon(props: IconProps) {
         width="3.99579"
         height="14.9842"
         fill="currentColor"
-        strokeWidth="0"
       />
       <rect
         x="18.1379"
@@ -35,7 +36,6 @@ export default function ProRequestsIcon(props: IconProps) {
         width="3.99579"
         height="19.4795"
         fill="#D9D7E0"
-        strokeWidth="0"
       />
     </IconSkeleton>
   )
