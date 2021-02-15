@@ -30,7 +30,7 @@ const progressCss = (
   display: "block",
   width: "100%",
   height: "6px",
-  borderRadius: theme.radii[2],
+  borderRadius: theme.radii[5],
   position: "relative",
 
   "&:before": {
@@ -39,7 +39,7 @@ const progressCss = (
     height: "6px",
     position: "absolute",
     backgroundColor: getProgressColor(theme, progression),
-    borderRadius: theme.radii[2],
+    borderRadius: theme.radii[5],
   },
 
   background: theme.colors.grey[20],
@@ -51,6 +51,7 @@ export interface ProgressBarProps {
   value: number
   "aria-describedby": string
   getProgressColor?: GetProgressColor
+  height?: number
 }
 
 export const ProgressBar: React.FC<ProgressBarProps> = ({
@@ -58,6 +59,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   min = 0,
   value,
   getProgressColor = defaultGetProgressColor,
+  height = 6,
   ...props
 }) => {
   const normalizedValue = value > max ? max : value < min ? min : value
@@ -70,7 +72,15 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
       aria-valuenow={normalizedValue}
       aria-valuemin={min}
       aria-valuemax={max}
-      css={theme => progressCss(theme, progression, getProgressColor)}
+      css={theme => [
+        progressCss(theme, progression, getProgressColor),
+        height && {
+          height: `${height}px`,
+          "&:before": {
+            height: `${height}px`,
+          },
+        },
+      ]}
     >
       <span css={visuallyHiddenCss}>
         {normalizedValue}/{max}
