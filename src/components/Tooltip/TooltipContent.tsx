@@ -27,8 +27,8 @@ const baseCss: ThemeCss = theme => ({
   color: theme.colors.whiteFade[80],
   fontSize: theme.fontSizes[1],
   border: "none",
-  borderRadius: "2px",
-  padding: `${theme.space[2]} ${theme.space[4]}`,
+  borderRadius: theme.radii[2],
+  padding: `${theme.space[2]} ${theme.space[3]}`,
   transformOrigin: "center",
   whiteSpace: "normal",
 })
