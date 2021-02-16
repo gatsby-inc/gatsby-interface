@@ -107,3 +107,21 @@ export const CustomHeight = () => {
 CustomHeight.story = {
   decorators: [withVariationsContainer],
 }
+
+export const WithSecondValue = () => {
+  return (
+    <React.Fragment>
+      <ProgressBar
+        value={30}
+        secondValue={50}
+        max={100}
+        aria-describedby="remaining-days-1"
+        height={10}
+      />
+    </React.Fragment>
+  )
+}
+
+WithSecondValue.story = {
+  decorators: [withVariationsContainer],
+}
