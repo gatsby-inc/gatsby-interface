@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.249](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.248...v0.0.249) (2021-02-16)
+
+
+### Features
+
+* ProgressBar custom height ([#445](https://github.com/gatsby-inc/gatsby-interface/issues/445)) ([9aa9b94](https://github.com/gatsby-inc/gatsby-interface/commit/9aa9b947b121474d60f7584fc85d22cc3862aaf6))
+
 ### [0.0.248](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.247...v0.0.248) (2021-02-11)
 
 ### [0.0.247](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.246...v0.0.247) (2021-02-11)
