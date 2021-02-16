@@ -115,7 +115,7 @@ export const WithSecondValue = () => {
         value={30}
         secondValue={50}
         max={100}
-        aria-describedby="remaining-days-1"
+        aria-describedby="main score, secondary score"
         height={10}
       />
     </React.Fragment>
