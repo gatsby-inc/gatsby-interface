@@ -22,6 +22,19 @@ const defaultGetProgressColor: GetProgressColor = (
   return theme.colors.green[50]
 }
 
+const sharedPseudoCss = (
+  theme: Theme,
+  progression: number,
+  getProgressColor: GetProgressColor
+): CSSObject => ({
+  content: "''",
+  width: `${progression}%`,
+  height: "6px",
+  position: "absolute",
+  backgroundColor: getProgressColor(theme, progression),
+  borderRadius: theme.radii[5],
+})
+
 const progressCss = (
   theme: Theme,
   progression: number,
@@ -32,17 +45,17 @@ const progressCss = (
   height: "6px",
   borderRadius: theme.radii[5],
   position: "relative",
-
-  "&:before": {
-    content: "''",
-    width: `${progression}%`,
-    height: "6px",
-    position: "absolute",
-    backgroundColor: getProgressColor(theme, progression),
-    borderRadius: theme.radii[5],
-  },
-
   background: theme.colors.grey[20],
+
+  "&:after": sharedPseudoCss(theme, progression, getProgressColor),
+})
+
+const secondProgressCss = (
+  theme: Theme,
+  progression: number,
+  getProgressColor: GetProgressColor
+): CSSObject => ({
+  "&:before": sharedPseudoCss(theme, progression, getProgressColor),
 })
 
 export interface ProgressBarProps {
@@ -50,7 +63,9 @@ export interface ProgressBarProps {
   min?: number
   value: number
   "aria-describedby": string
+  secondValue?: number
   getProgressColor?: GetProgressColor
+  getSecondProgressColor?: GetProgressColor
   height?: number
 }
 
@@ -58,12 +73,23 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   max,
   min = 0,
   value,
+  secondValue,
   getProgressColor = defaultGetProgressColor,
+  getSecondProgressColor = defaultGetProgressColor,
   height = 6,
   ...props
 }) => {
   const normalizedValue = value > max ? max : value < min ? min : value
   const progression = (normalizedValue / max) * 100
+
+  let normalizedSecondValue: null | number = null
+  let secondProgression: null | number = null
+
+  if (secondValue) {
+    normalizedSecondValue =
+      secondValue > max ? max : secondValue < min ? min : secondValue
+    secondProgression = (normalizedSecondValue / max) * 100
+  }
 
   return (
     <div
@@ -74,16 +100,20 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
       aria-valuemax={max}
       css={theme => [
         progressCss(theme, progression, getProgressColor),
+        secondProgression &&
+          secondProgressCss(theme, secondProgression, getSecondProgressColor),
         height && {
           height: `${height}px`,
-          "&:before": {
+          "&:before, &:after": {
             height: `${height}px`,
           },
         },
       ]}
     >
       <span css={visuallyHiddenCss}>
-        {normalizedValue}/{max}
+        {`${normalizedValue}/${max}${
+          secondProgression ? `, ${normalizedSecondValue}/${max}` : ``
+        }`}
       </span>
     </div>
   )
