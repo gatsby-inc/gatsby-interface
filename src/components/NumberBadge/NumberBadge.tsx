@@ -5,7 +5,7 @@ import { ThemeCss, Theme } from "../../theme"
 
 const baseCss: ThemeCss = theme => ({
   display: `inline-block`,
-  fontFamily: theme.fonts.sans,
+  fontFamily: theme.fonts.body,
   fontSize: theme.fontSizes[0],
   lineHeight: theme.lineHeights.solid,
   fontWeight: theme.fontWeights.semiBold,
