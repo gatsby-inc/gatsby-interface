@@ -66,7 +66,7 @@ const tabButtonCss: ThemeCss = theme => ({
   position: `relative`,
   overflowY: `hidden`,
   color: theme.colors.grey[60],
-  fontFamily: theme.fonts.system,
+  fontFamily: theme.fonts.body,
   fontSize: theme.fontSizes[2],
   background: `none`,
   border: `none`,

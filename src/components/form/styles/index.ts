@@ -54,7 +54,7 @@ export const baseInputCss: ThemeCss = theme => [
     borderRadius: theme.radii[2],
     background: theme.colors.white,
     color: theme.colors.grey[90],
-    fontFamily: theme.fonts.system,
+    fontFamily: theme.fonts.body,
     fontSize: theme.fontSizes[2],
     height: `2.25rem`,
     padding: `0 ${theme.space[3]}`,

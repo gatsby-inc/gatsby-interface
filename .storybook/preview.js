@@ -61,7 +61,7 @@ const withGlobal = storyFn => (
           font-size: 1rem;
         }
         body {
-          font-family: ${fonts.system};
+          font-family: ${fonts.body};
           height: 100%;
           margin: 0;
           width: 100%;

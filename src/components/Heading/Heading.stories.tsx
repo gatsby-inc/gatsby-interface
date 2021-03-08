@@ -20,7 +20,7 @@ Basic.args = {
 
 const TONES: HeadingTone[] = ["BRAND", "SUCCESS", "DANGER", "NEUTRAL"]
 const VARIANTS: HeadingVariant[] = ["PRIMARY", `EMPHASIZED`, `LIGHT`]
-const FONT_VARIANTS: HeadingFontVariant[] = ["DISPLAY", "UI"]
+const FONT_VARIANTS: HeadingFontVariant[] = ["UI", "DISPLAY"]
 
 export const Tones = () =>
   TONES.map(tone => (

@@ -85,7 +85,7 @@ export const listCss = (mobileNavMediaQuery: string): ThemeCss => {
 
 const dropdownOpenCss: ThemeCss = theme => ({
   fontSize: theme.fontSizes[1],
-  fontFamily: theme.fonts.system,
+  fontFamily: theme.fonts.body,
   boxShadow: theme.shadows.dialog,
   background: theme.colors.white,
   borderRadius: theme.radii[1],
@@ -157,7 +157,7 @@ export const itemLinkCss = (
       textDecoration: `none`,
       color: `inherit`,
       fontSize: theme.fontSizes[1],
-      fontFamily: theme.fonts.system,
+      fontFamily: theme.fonts.body,
       fontWeight: theme.fontWeights.body,
       transition: `opacity ${theme.transitions.speed.default}`,
       WebkitFontSmoothing: `antialiased`,
