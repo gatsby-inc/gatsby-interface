@@ -228,19 +228,22 @@ Imported from `gatsby-interface-tokens` and extended (added three additional val
 
 ## fonts
 
-Imported from `gatsby-interface-tokens` and re-exported with no changes:
+Imported from `gatsby-interface-tokens`, modified and re-exported
+
+- replacing `Futura PT` in `heading` with `Inter`
+- dropping `sans`, `serif`, and `system` — use `body`
+- adding `Inter` to `body`
 
 ```javascript
 fonts = {
   heading:
-    "Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
+    "Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
   monospace:
     "SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace",
-  serif: "Georgia,Times New Roman,Times,serif",
   body:
-    "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
-  system:
-    "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
+    "Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
+  brand:
+    "Futura PT,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
 }
 ```
 
@@ -368,7 +371,7 @@ transition = {
 
 # Local tokens
 
-The following are local tokens, independent of `gatsby-design-tokens`, at least for now. There are two options for them in the future. Adjust to `gatsby-design-tokens` that option need some tests. Coordinate updates in `gatsby-desing-tokens`, that need discussion and agreement with owners of the package. Or the third option, they will stay local for all.
+The following are local tokens, independent of the yet-to-be-deprecated-but-definitively-deprecated `gatsby-design-tokens`.
 
 ## breakpoints
 
@@ -381,8 +384,6 @@ breakpoints = {
   hd: 1300,
 }
 ```
-
-**Note**: There is a space to switch to breakpoints imported from `gatsby-desing-tokens` but it requires more testing of layout responsivnes on mobile viewports
 
 ## dimensions
 
@@ -415,7 +416,7 @@ dimensions = {
 }
 ```
 
-**Note**: Optional refactoring - change the name to `sizes`
+**TODO** Refactoring to `sizes` to stay in line with the `theme-ui` spec.
 
 ## zIndices
 
