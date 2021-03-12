@@ -12,7 +12,11 @@ describe("utils", () => {
         <div>
           <p>
             <span>
-              The GraphQL query in the non-page component "/usr/src/app/www/cloud/gatsbyjs.com/src/templates/get-started/index.js" will not be run.
+              The GraphQL query in the non-page component 
+              <code>
+                /usr/src/app/www/cloud/gatsbyjs.com/src/templates/get-started/index.js
+              </code>
+               will not be run.
             </span>
           </p>
         </div>
@@ -202,38 +206,38 @@ GraphQL request:1:1
 
     expect(render(<FormattedMessage rawMessage={message} />).container)
       .toMatchInlineSnapshot(`
-    <div>
-      <div>
-        <p>
-          Missing onError handler for invocation 'building-schema', error was 'Syntax Error: Unexpected Name "agilityNEW"
-        </p>
-        <p>
-          GraphQL request:1:1
+          <div>
+            <div>
+              <p>
+                Missing onError handler for invocation 'building-schema', error was 'Syntax Error: Unexpected Name "agilityNEW"
+              </p>
+              <p>
+                GraphQL request:1:1
 
-          <code>
-            1 | agilityNEW-RightOrLeftCaseStudyTestimonial-Dev
-      | ^'. Stacktrace was 'GraphQLError: Syntax Error: Unexpected Name "agilityNEW"
-        at syntaxError (/usr/src/app/www/node_modules/graphql/error/syntaxError.js:15:10)
-        at Parser.unexpected (/usr/src/app/www/node_modules/graphql/language/parser.js:1463:41)
-        at Parser.parseDefinition (/usr/src/app/www/node_modules/graphql/language/parser.js:157:16)
-        at Parser.many (/usr/src/app/www/node_modules/graphql/language/parser.js:1518:26)
-        at Parser.parseDocument (/usr/src/app/www/node_modules/graphql/language/parser.js:111:25)
-        at parse (/usr/src/app/www/node_modules/graphql/language/parser.js:36:17)
-        at TypeMapper.createType (/usr/src/app/www/node_modules/graphql-compose/lib/TypeMapper.js:113:43)
-        at Function.createTemp (/usr/src/app/www/node_modules/graphql-compose/lib/ObjectTypeComposer.js:80:28)
-        at Function.create (/usr/src/app/www/node_modules/graphql-compose/lib/ObjectTypeComposer.js:56:21)
-        at forEach (/usr/src/app/www/node_modules/gatsby/src/schema/infer/index.js:44:41)
-        at Array.forEach (&lt;anonymous&gt;)
-        at addInferredTypes (/usr/src/app/www/node_modules/gatsby/src/schema/infer/index.js:27:13)
-        at updateSchemaComposer (/usr/src/app/www/node_modules/gatsby/src/schema/schema.js:142:9)
-        at buildSchema (/usr/src/app/www/node_modules/gatsby/src/schema/schema.js:62:3)
-        at build (/usr/src/app/www/node_modules/gatsby/src/schema/index.js:105:18)
-        at buildSchema (/usr/src/app/www/node_modules/gatsby/src/services/build-schema.ts:19:3)'
-          </code>
-        </p>
-      </div>
-    </div>
-    `)
+                <code>
+                  1 | agilityNEW-RightOrLeftCaseStudyTestimonial-Dev
+            | ^'. Stacktrace was 'GraphQLError: Syntax Error: Unexpected Name "agilityNEW"
+              at syntaxError (/usr/src/app/www/node_modules/graphql/error/syntaxError.js:15:10)
+              at Parser.unexpected (/usr/src/app/www/node_modules/graphql/language/parser.js:1463:41)
+              at Parser.parseDefinition (/usr/src/app/www/node_modules/graphql/language/parser.js:157:16)
+              at Parser.many (/usr/src/app/www/node_modules/graphql/language/parser.js:1518:26)
+              at Parser.parseDocument (/usr/src/app/www/node_modules/graphql/language/parser.js:111:25)
+              at parse (/usr/src/app/www/node_modules/graphql/language/parser.js:36:17)
+              at TypeMapper.createType (/usr/src/app/www/node_modules/graphql-compose/lib/TypeMapper.js:113:43)
+              at Function.createTemp (/usr/src/app/www/node_modules/graphql-compose/lib/ObjectTypeComposer.js:80:28)
+              at Function.create (/usr/src/app/www/node_modules/graphql-compose/lib/ObjectTypeComposer.js:56:21)
+              at forEach (/usr/src/app/www/node_modules/gatsby/src/schema/infer/index.js:44:41)
+              at Array.forEach (&lt;anonymous&gt;)
+              at addInferredTypes (/usr/src/app/www/node_modules/gatsby/src/schema/infer/index.js:27:13)
+              at updateSchemaComposer (/usr/src/app/www/node_modules/gatsby/src/schema/schema.js:142:9)
+              at buildSchema (/usr/src/app/www/node_modules/gatsby/src/schema/schema.js:62:3)
+              at build (/usr/src/app/www/node_modules/gatsby/src/schema/index.js:105:18)
+              at buildSchema (/usr/src/app/www/node_modules/gatsby/src/services/build-schema.ts:19:3)'
+                </code>
+              </p>
+            </div>
+          </div>
+        `)
   })
 
   it(`should preserve underscores (do not change them to <em>) in single quoted strings`, () => {
