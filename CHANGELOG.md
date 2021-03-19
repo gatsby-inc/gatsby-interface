@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.250](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.249...v0.0.250) (2021-02-17)
+
+### [0.0.249](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.248...v0.0.249) (2021-02-16)
+
+
+### Features
+
+* ProgressBar custom height ([#445](https://github.com/gatsby-inc/gatsby-interface/issues/445)) ([9aa9b94](https://github.com/gatsby-inc/gatsby-interface/commit/9aa9b947b121474d60f7584fc85d22cc3862aaf6))
+
+### [0.0.248](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.247...v0.0.248) (2021-02-11)
+
+### [0.0.247](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.246...v0.0.247) (2021-02-11)
+
+### [0.0.246](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.245...v0.0.246) (2021-02-02)
+
+### [0.0.245](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.244...v0.0.245) (2021-01-29)
+
+### [0.0.244](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.243...v0.0.244) (2021-01-24)
+
+
+### Bug Fixes
+
+* **docs:** "Z-Indices" docs story title ([#440](https://github.com/gatsby-inc/gatsby-interface/issues/440)) ([eb0867e](https://github.com/gatsby-inc/gatsby-interface/commit/eb0867e320290c3acc62af14d51b9b82d685ea00))
+
 ### [0.0.243](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.242...v0.0.243) (2021-01-21)
 
 ### [0.0.242](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.241...v0.0.242) (2020-12-16)
