@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.252](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.251...v0.0.252) (2021-03-19)
+
 ### [0.0.251](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.250...v0.0.251) (2021-03-19)
 
 ### [0.0.250](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.249...v0.0.250) (2021-02-17)
