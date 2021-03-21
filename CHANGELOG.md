@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.253](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.252...v0.0.253) (2021-03-21)
+
+
+### Bug Fixes
+
+* add quoted paths to transformation to code ([#449](https://github.com/gatsby-inc/gatsby-interface/issues/449)) ([9bc5528](https://github.com/gatsby-inc/gatsby-interface/commit/9bc5528c7d09c69a8627f611addfd9c870dc1655))
+
 ### [0.0.252](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.251...v0.0.252) (2021-03-19)
 
 ### [0.0.251](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.250...v0.0.251) (2021-03-19)
