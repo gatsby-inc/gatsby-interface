@@ -77,7 +77,7 @@ function withAvailabilityWarning(componentNames: string[]): DecoratorFn {
         tone="WARNING"
         css={(theme: Theme) => ({ marginBottom: theme.space[4] })}
       >
-        Only availbale for {restComponents.join(", ")}
+        Only available for {restComponents.join(", ")}
         {restComponents.length > 0 ? " and " : ""}
         {lastComponent}
       </Notification>
