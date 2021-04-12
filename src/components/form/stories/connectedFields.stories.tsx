@@ -81,7 +81,7 @@ const Actions: React.FC<{ isSubmitting: boolean }> = ({
         variant="GHOST"
         onClick={() => setShowDebug(prevState => !prevState)}
       >
-        {showDebug ? `Hide` : `Show`} debuger
+        {showDebug ? `Hide` : `Show`} debugger
       </Button>
       {showDebug && <Debug />}
     </React.Fragment>
