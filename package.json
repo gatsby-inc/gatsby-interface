@@ -1,6 +1,6 @@
 {
   "name": "gatsby-interface",
-  "version": "0.0.255",
+  "version": "0.0.257",
   "description": "Component library for Gatsby projects",
   "source": "index.ts",
   "files": [
@@ -63,10 +63,10 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "formik": "^2.0.8",
-    "gatsby": "^2.6.0",
+    "gatsby": ">=2.6.0",
     "prop-types": "^15.6.1",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "react": ">=16.8.1",
+    "react-dom": ">=16.8.1",
     "react-icons": "^3.2.1",
     "yup": "^0.27.0"
   },
