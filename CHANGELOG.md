@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.263](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.262...v0.0.263) (2021-05-27)
+
+
+### Features
+
+* add GoogleIcon ([#460](https://github.com/gatsby-inc/gatsby-interface/issues/460)) ([c0aa8e4](https://github.com/gatsby-inc/gatsby-interface/commit/c0aa8e4657f18c9beb841e6d29d4233d72fcb3e4))
+
 ### [0.0.262](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.261...v0.0.262) (2021-05-27)
 
 ### [0.0.261](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.260...v0.0.261) (2021-05-27)
