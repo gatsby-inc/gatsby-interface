@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.264](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.263...v0.0.264) (2021-05-28)
+
+
+### Bug Fixes
+
+* displayMessage at BuildStandardLogEntry ([#461](https://github.com/gatsby-inc/gatsby-interface/issues/461)) ([1d435a0](https://github.com/gatsby-inc/gatsby-interface/commit/1d435a078ca5628f125703bbe788b2bf79b7f9cd))
+
 ### [0.0.263](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.262...v0.0.263) (2021-05-27)
 
 
