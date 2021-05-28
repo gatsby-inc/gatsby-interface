@@ -35,7 +35,7 @@ export type BuildLogItem = {
   level?: StructuredLogLevel | null
   activity?: BuildActivity | null
   filePath?: string | null
-  context?: { [k: string]: string } | null
+  context?: { [k: string]: string | undefined } | null
   docsUrl?: string | null
   errorUrl?: string | null
   location?: { start?: Location | null; end?: Location | null } | null

@@ -438,6 +438,21 @@ GraphQL request:1:1
     type: "WEBPACK",
     __typename: "StructuredLog",
   },
+  {
+    activity: null,
+    code: "98124",
+    context: { stageLabel: "Generating JavaScript bundles" },
+    docsUrl: "https://gatsby.dev/issue-how-to",
+    errorUrl: null,
+    filePath: "src/components/layout.tsx",
+    id: "1a3da811-6218-4afa-a31c-1cfed789c65b",
+    level: StructuredLogLevel.Error,
+    location: null,
+    message:
+      "Generating JavaScript bundles failed\n\nCan't resolve './BetSlipTwoStep' in '/usr/src/app/www/src/components'\n\nIf you're trying to use a package make sure that './BetSlipTwoStep' is installed. If you're trying to use a local file make sure that the path is correct.",
+    type: "WEBPACK",
+    __typename: "StructuredLog",
+  },
 ]
 
 export const Basic = () => (

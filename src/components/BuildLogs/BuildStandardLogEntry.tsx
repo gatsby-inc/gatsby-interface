@@ -44,7 +44,10 @@ export function BuildStandardLogEntry({
 }: BuildStandardLogEntryProps) {
   const displayMessage =
     context && context.stageLabel
-      ? `${context.stageLabel} failed at ${filePath}`
+      ? `${context.stageLabel} failed at ${filePath} ${message?.replace(
+          `${context.stageLabel} failed`,
+          ``
+        )}`
       : message
 
   return (
