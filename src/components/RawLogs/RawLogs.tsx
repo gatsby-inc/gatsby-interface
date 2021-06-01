@@ -11,6 +11,7 @@ const baseCss: ThemeCss = theme => ({
   fontFamily: theme.fonts.monospace,
   fontSize: theme.fontSizes[1],
   lineHeight: theme.lineHeights.default,
+  fontVariantLigatures: `none`,
 
   [theme.mediaQueries.desktop]: {
     padding: theme.space[7],
