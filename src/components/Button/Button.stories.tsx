@@ -430,3 +430,11 @@ export const ManuallyApplyStyles = () => (
     I'm a &lt;button&gt; but I look like a &lt;Button&gt;
   </button>
 )
+
+export const CustomButtonStyle = () => {
+  return (
+    <Button css={{ background: `black`, textTransform: `uppercase` }}>
+      Custom style
+    </Button>
+  )
+}
