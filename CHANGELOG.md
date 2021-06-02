@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.265](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.264...v0.0.265) (2021-06-02)
+
+
+### Bug Fixes
+
+* turn off ligetures ([#462](https://github.com/gatsby-inc/gatsby-interface/issues/462)) ([44f808b](https://github.com/gatsby-inc/gatsby-interface/commit/44f808b9eb710a3c51404e20aa05088602cd9a96))
+
 ### [0.0.264](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.263...v0.0.264) (2021-05-28)
 
 
