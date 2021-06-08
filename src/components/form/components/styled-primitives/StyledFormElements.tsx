@@ -211,18 +211,37 @@ const verticalOptionsCss: ThemeCss = theme => [
   },
 ]
 
+const maxHeightCss: ThemeCss = theme => [
+  {
+    border: `1px solid ${theme.colors.grey[30]}`,
+    borderRadius: theme.radii[2],
+    paddingTop: theme.space[5],
+    paddingBottom: theme.space[5],
+    paddingLeft: theme.space[5],
+    paddingRight: theme.space[5],
+    maxHeight: `150px`,
+    overflow: `auto`,
+  },
+]
+
 export type OptionsContainerProps = React.ComponentPropsWithoutRef<"div"> & {
   optionsDirection?: FormGroupOptionsDirection
+  maxHeight?: string
 }
 
 export function OptionsContainer({
   optionsDirection = `column`,
+  maxHeight,
   ...rest
 }: OptionsContainerProps) {
   const baseCss: ThemeCss = theme => [
     optionsDirection === `row`
       ? horizontalOptionsCss(theme)
       : verticalOptionsCss(theme),
+    maxHeight && maxHeightCss(theme),
+    maxHeight && {
+      maxHeight: maxHeight,
+    },
   ]
   return <div css={baseCss} {...rest} />
 }

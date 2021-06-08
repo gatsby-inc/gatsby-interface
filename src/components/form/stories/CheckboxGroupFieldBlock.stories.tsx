@@ -140,3 +140,19 @@ export const OptionsDirections = () =>
 OptionsDirections.story = {
   decorators: [withVariationsContainer],
 }
+
+export const MaxHeight = () => (
+  <CheckboxGroupFieldBlock
+    key={`fixedHeight`}
+    id={`fixedHeight`}
+    name={`fixedHeight`}
+    maxHeight="150px"
+    options={optionsWithDefaultCheck}
+    label={`Options Direction: 150px`}
+    onChange={e => action(`Change`)(e.target.value)}
+  />
+)
+
+MaxHeight.story = {
+  decorators: [withVariationsContainer],
+}
