@@ -22,6 +22,8 @@ export type CheckboxGroupFieldBlockProps = WithFormFieldBlock<
     options: CheckboxGroupFieldBlockOption[]
     optionsDirection?: FormGroupOptionsDirection
     value?: string[]
+    maxHeight?: string
+    utils?: React.ReactNode
   } & Omit<GroupControlProps, "value" | "type">
 >
 
@@ -41,6 +43,8 @@ export const CheckboxGroupFieldBlock = (
     validationMode,
     value: fieldValue,
     required,
+    maxHeight,
+    utils,
     ...rest
   } = props
 
@@ -57,7 +61,10 @@ export const CheckboxGroupFieldBlock = (
       className={className}
     >
       {({ getOptionControlProps, getOptionLabelProps }) => (
-        <OptionsContainer optionsDirection={optionsDirection}>
+        <OptionsContainer
+          maxHeight={maxHeight}
+          optionsDirection={optionsDirection}
+        >
           {options.map(({ value, label, ...restOption }) => (
             <div
               key={value}
@@ -98,6 +105,7 @@ export const CheckboxGroupFieldBlock = (
               </StyledCheckboxLabel>
             </div>
           ))}
+          {utils && utils}
         </OptionsContainer>
       )}
     </FormGroupFieldBlock>
