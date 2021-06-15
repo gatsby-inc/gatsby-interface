@@ -55,7 +55,6 @@ const primaryCtaCss: ThemeCss = theme => ({
 const secondaryCtaCss: ThemeCss = theme => ({
   lineHeight: theme.lineHeights.default,
   fontSize: theme.fontSizes[1],
-  textDecoration: `none`,
 })
 
 const paddedCss: ThemeCss = theme => ({
