@@ -32,7 +32,7 @@ const graphicCss: ThemeCss = theme => ({
 })
 
 const headingCss: ThemeCss = theme => ({
-  fontSize: theme.fontSizes[5],
+  fontSize: theme.fontSizes[4],
   marginTop: 0,
   marginBottom: theme.space[5],
 })
@@ -40,6 +40,7 @@ const headingCss: ThemeCss = theme => ({
 const textCss: ThemeCss = theme => ({
   marginTop: 0,
   marginBottom: 0,
+  fontSize: theme.fontSizes[1],
   "&:not(:last-child)": {
     marginBottom: theme.space[7],
   },
@@ -54,7 +55,6 @@ const primaryCtaCss: ThemeCss = theme => ({
 const secondaryCtaCss: ThemeCss = theme => ({
   lineHeight: theme.lineHeights.default,
   fontSize: theme.fontSizes[1],
-  textDecoration: `none`,
 })
 
 const paddedCss: ThemeCss = theme => ({
@@ -67,7 +67,7 @@ const paddedCss: ThemeCss = theme => ({
   paddingRight: theme.space[7],
 })
 
-const variantDefaultCss: ThemeCss = _theme => ({})
+const variantDefaultCss: ThemeCss = theme => [paddedCss(theme)]
 
 const variantBorderedCss: ThemeCss = theme => [
   paddedCss(theme),
@@ -113,15 +113,20 @@ export function EmptyState({
   variant = `DEFAULT`,
   primaryAction,
   secondaryAction,
+  ...rest
 }: EmptyStateProps) {
   return (
-    <div css={(theme: Theme) => [baseCss(theme), variantCss[variant](theme)]}>
+    <div
+      css={(theme: Theme) => [baseCss(theme), variantCss[variant](theme)]}
+      {...rest}
+    >
       <div css={innerCss}>
         {graphic && <div css={graphicCss}>{graphic}</div>}
         <Heading
           as={headingAs}
           css={headingCss}
           variant="PRIMARY"
+          fontVariant="UI"
           tone="NEUTRAL"
         >
           {heading}
