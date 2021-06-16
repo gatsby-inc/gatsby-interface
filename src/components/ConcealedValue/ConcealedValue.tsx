@@ -1,7 +1,10 @@
 /** @jsx jsx */
 import { useState } from "react"
 import { jsx } from "@emotion/core"
+import { MdVisibility, MdVisibilityOff } from "react-icons/md"
+
 import { Button } from "../Button"
+import { IconButton } from "../IconButton"
 import copyToClipboard from "../../utils/helpers/copyToClipboard"
 import {
   concealedValueContainerCss,
@@ -46,7 +49,7 @@ export function ConcealedValue({
           <input
             css={concealedValueInputCss}
             type="text"
-            value="&bull; &bull; &bull; &bull; &bull; &bull;"
+            value="&bull; &bull; &bull; &bull; &bull;"
             aria-label={`Hidden value of ${ariaLabel}`}
             readOnly
           />
@@ -71,15 +74,16 @@ export function ConcealedValue({
         >
           {isCopied ? `Copied` : `Copy`}
         </Button>
-        <Button
+        <IconButton
           size="S"
           tone="NEUTRAL"
           variant="SECONDARY"
           css={concealedValueButtonCss}
           onClick={revealHandler}
+          icon={isConcealed ? <MdVisibility /> : <MdVisibilityOff />}
         >
           {isConcealed ? `Reveal` : `Conceal`}
-        </Button>
+        </IconButton>
       </div>
     </div>
   )

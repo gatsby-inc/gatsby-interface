@@ -2,29 +2,37 @@ import { ThemeCss } from "../../theme"
 
 export const concealedValueContainerCss: ThemeCss = theme => ({
   display: `flex`,
-  alignItems: `center`,
   justifyContent: `space-between`,
-  padding: theme.space[2],
+  backgroundColor: theme.colors.grey[10],
+  border: `1px solid ${theme.colors.grey[30]}`,
+  borderRadius: theme.radii[2],
   width: `100%`,
 })
 
-export const concealedValueContentCss: ThemeCss = theme => ({
+export const concealedValueContentCss = {
   overflow: `hidden`,
   flexGrow: 1,
-  marginRight: theme.space[4],
+}
+
+export const concealedValueActionsCss: ThemeCss = theme => ({
+  display: `flex`,
+  padding: theme.space[2],
 })
 
-export const concealedValueActionsCss = {}
-
 export const concealedValueInputCss: ThemeCss = theme => ({
+  background: `transparent`,
   border: `none`,
   overflow: `hidden`,
-  fontFamily: theme.fonts.heading,
-  fontSize: theme.fontSizes[1],
+  fontFamily: theme.fonts.body,
+  fontSize: theme.fontSizes[2],
   color: theme.tones[`NEUTRAL`].text,
+  paddingLeft: theme.space[3],
+  paddingRight: theme.space[3],
+  height: `100%`,
   width: `100%`,
 })
 
 export const concealedValueButtonCss: ThemeCss = theme => ({
+  background: theme.colors.white,
   marginLeft: theme.space[2],
 })
