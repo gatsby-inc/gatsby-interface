@@ -7,15 +7,15 @@ import { HeadingTone, HeadingVariant, HeadingFontVariant } from "./types"
 
 const baseCss: ThemeCss = theme => ({
   margin: 0,
-  lineHeight: theme.lineHeights.heading, // Ask Flo about this
+  lineHeight: theme.lineHeights.heading,
 })
 
 const fontVariantCss: Record<HeadingFontVariant, ThemeCss> = {
   DISPLAY: theme => ({
-    fontFamily: theme.fonts.heading,
+    fontFamily: theme.fonts.brand,
   }),
   UI: theme => ({
-    fontFamily: theme.fonts.headingUI,
+    fontFamily: theme.fonts.heading,
   }),
 }
 
@@ -48,7 +48,7 @@ export type HeadingProps = BaseHeadingProps & {
 export function Heading({
   tone = `NEUTRAL`,
   variant = `PRIMARY`,
-  fontVariant = `DISPLAY`,
+  fontVariant = `UI`,
   as = `h2`,
   customCss,
   ...rest

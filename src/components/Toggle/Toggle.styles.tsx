@@ -5,5 +5,5 @@ export const toggleLabelCss = (theme: Theme) => ({
   display: `flex`,
   color: theme.colors.grey[90],
   cursor: `pointer`,
-  fontFamily: theme.fonts.system,
+  fontFamily: theme.fonts.body,
 })

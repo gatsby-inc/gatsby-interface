@@ -79,7 +79,7 @@ export const stepNumberCss: ThemeCss = theme => ({
   flexShrink: 0,
   background: theme.colors.grey[40],
   color: theme.colors.white,
-  fontFamily: theme.fonts.system,
+  fontFamily: theme.fonts.body,
   fontSize: theme.fontSizes[0],
   fontWeight: theme.fontWeights.bold,
   lineHeight: theme.lineHeights.solid,

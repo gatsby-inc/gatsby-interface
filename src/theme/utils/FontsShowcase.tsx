@@ -13,7 +13,7 @@ export function FontsShowcase() {
           <TextShowCaseItem
             key={token}
             token={token}
-            rawValues={[]}
+            rawValues={[fontFamily]}
             css={{ fontFamily }}
           />
         )

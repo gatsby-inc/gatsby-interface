@@ -8,7 +8,7 @@ const baseCss: ThemeCss = theme => ({
   background: theme.colors.teal[5],
   color: theme.colors.blackFade[70],
   fontSize: theme.fontSizes[1],
-  fontFamily: theme.fonts.system,
+  fontFamily: theme.fonts.body,
 
   [`&:not(:first-child)`]: {
     borderTop: `1px solid ${theme.colors.teal[10]}`,

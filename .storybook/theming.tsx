@@ -60,7 +60,11 @@ function createHeadingComponent(level) {
   const HeadingComponent = function(props) {
     return (
       <ThemeProvider>
-        <Heading as={level} {...props} />
+        <Heading
+          as={level}
+          variant={level === "h1" && "EMPHASIZED"}
+          {...props}
+        />
       </ThemeProvider>
     )
   }
