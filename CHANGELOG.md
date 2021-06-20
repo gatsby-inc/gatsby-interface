@@ -132,42 +132,37 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.235](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.234...v0.0.235) (2020-12-04)
 
-
 ### Features
 
-* Rework internal exports bundling to optimize treeshake ([#422](https://github.com/gatsby-inc/gatsby-interface/issues/422)) ([24c443a](https://github.com/gatsby-inc/gatsby-interface/commit/24c443aca5aa0585d10496ba7b475fd820375aed))
+- Rework internal exports bundling to optimize treeshake ([#422](https://github.com/gatsby-inc/gatsby-interface/issues/422)) ([24c443a](https://github.com/gatsby-inc/gatsby-interface/commit/24c443aca5aa0585d10496ba7b475fd820375aed))
 
 ### [0.0.234](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.233...v0.0.234) (2020-12-01)
 
-
 ### Bug Fixes
 
-* HostingIcon svg property ([#427](https://github.com/gatsby-inc/gatsby-interface/issues/427)) ([da138a2](https://github.com/gatsby-inc/gatsby-interface/commit/da138a2d7149576be7c92159a0a108f5f930489a))
+- HostingIcon svg property ([#427](https://github.com/gatsby-inc/gatsby-interface/issues/427)) ([da138a2](https://github.com/gatsby-inc/gatsby-interface/commit/da138a2d7149576be7c92159a0a108f5f930489a))
 
 ### [0.0.233](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.232...v0.0.233) (2020-11-23)
 
-
 ### Bug Fixes
 
-* **form:** fix styles for StyledRadio with multiline label ([#424](https://github.com/gatsby-inc/gatsby-interface/issues/424)) ([7e74f62](https://github.com/gatsby-inc/gatsby-interface/commit/7e74f623478cccfd846168ac1f8250c0e9ef8d79))
+- **form:** fix styles for StyledRadio with multiline label ([#424](https://github.com/gatsby-inc/gatsby-interface/issues/424)) ([7e74f62](https://github.com/gatsby-inc/gatsby-interface/commit/7e74f623478cccfd846168ac1f8250c0e9ef8d79))
 
 ### [0.0.232](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.231...v0.0.232) (2020-11-23)
 
 ### [0.0.231](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.230...v0.0.231) (2020-11-06)
 
-
 ### Features
 
-* **icons:** add HostingIcon component ([#423](https://github.com/gatsby-inc/gatsby-interface/issues/423)) ([599616a](https://github.com/gatsby-inc/gatsby-interface/commit/599616ac7aaa4ba9f450cafbd30a4d8d33d1494a))
+- **icons:** add HostingIcon component ([#423](https://github.com/gatsby-inc/gatsby-interface/issues/423)) ([599616a](https://github.com/gatsby-inc/gatsby-interface/commit/599616ac7aaa4ba9f450cafbd30a4d8d33d1494a))
 
 ### [0.0.230](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.229...v0.0.230) (2020-10-30)
 
 ### [0.0.229](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.228...v0.0.229) (2020-10-30)
 
-
 ### Features
 
-* **Heading:** support Inter font ([#408](https://github.com/gatsby-inc/gatsby-interface/issues/408)) ([e572140](https://github.com/gatsby-inc/gatsby-interface/commit/e572140937cc1d1c591144d46f0ec78d2dfe1c72))
+- **Heading:** support Inter font ([#408](https://github.com/gatsby-inc/gatsby-interface/issues/408)) ([e572140](https://github.com/gatsby-inc/gatsby-interface/commit/e572140937cc1d1c591144d46f0ec78d2dfe1c72))
 
 ### [0.0.228](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.227...v0.0.228) (2020-10-29)
 
@@ -175,17 +170,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.226](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.225...v0.0.226) (2020-10-29)
 
-
 ### Bug Fixes
 
-* **BuildLogs:** Format gaphql errors with stacktraces ([#419](https://github.com/gatsby-inc/gatsby-interface/issues/419)) ([583e4c6](https://github.com/gatsby-inc/gatsby-interface/commit/583e4c6ee9191ff4c3de2df5442fee385312f173))
+- **BuildLogs:** Format gaphql errors with stacktraces ([#419](https://github.com/gatsby-inc/gatsby-interface/issues/419)) ([583e4c6](https://github.com/gatsby-inc/gatsby-interface/commit/583e4c6ee9191ff4c3de2df5442fee385312f173))
 
 ### [0.0.225](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.224...v0.0.225) (2020-10-23)
 
-
 ### Features
 
-* **Toast:** remove deprecated exports and cleanup code ([#415](https://github.com/gatsby-inc/gatsby-interface/issues/415)) ([22994c6](https://github.com/gatsby-inc/gatsby-interface/commit/22994c66b97d9982891f06e923da6e619cca2d80))
+- **Toast:** remove deprecated exports and cleanup code ([#415](https://github.com/gatsby-inc/gatsby-interface/issues/415)) ([22994c6](https://github.com/gatsby-inc/gatsby-interface/commit/22994c66b97d9982891f06e923da6e619cca2d80))
 
 ### [0.0.224](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.223...v0.0.224) (2020-10-22)
 
@@ -193,47 +186,41 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.222](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.221...v0.0.222) (2020-10-19)
 
-
 ### Bug Fixes
 
-* **BuildLogs:** Display activity status text ([#410](https://github.com/gatsby-inc/gatsby-interface/issues/410)) ([c78ebaa](https://github.com/gatsby-inc/gatsby-interface/commit/c78ebaaccdbb1da54f0941bde0bffc9ba7e881cc))
+- **BuildLogs:** Display activity status text ([#410](https://github.com/gatsby-inc/gatsby-interface/issues/410)) ([c78ebaa](https://github.com/gatsby-inc/gatsby-interface/commit/c78ebaaccdbb1da54f0941bde0bffc9ba7e881cc))
 
 ### [0.0.221](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.220...v0.0.221) (2020-10-19)
 
-
 ### Bug Fixes
 
-* **icons:** prevent plan icons from having weird black borders ([#417](https://github.com/gatsby-inc/gatsby-interface/issues/417)) ([cf1fe6a](https://github.com/gatsby-inc/gatsby-interface/commit/cf1fe6a3d464f2f074c25c91e98ef671df5a7ba2))
+- **icons:** prevent plan icons from having weird black borders ([#417](https://github.com/gatsby-inc/gatsby-interface/issues/417)) ([cf1fe6a](https://github.com/gatsby-inc/gatsby-interface/commit/cf1fe6a3d464f2f074c25c91e98ef671df5a7ba2))
 
 ### [0.0.220](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.219...v0.0.220) (2020-10-18)
 
 ### [0.0.219](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.218...v0.0.219) (2020-10-16)
 
-
 ### Bug Fixes
 
-* **Modals:** animation improvements for panels ([#412](https://github.com/gatsby-inc/gatsby-interface/issues/412)) ([1bc1d3b](https://github.com/gatsby-inc/gatsby-interface/commit/1bc1d3b4b464fae0c89a70249ee1d660f6f032af))
+- **Modals:** animation improvements for panels ([#412](https://github.com/gatsby-inc/gatsby-interface/issues/412)) ([1bc1d3b](https://github.com/gatsby-inc/gatsby-interface/commit/1bc1d3b4b464fae0c89a70249ee1d660f6f032af))
 
 ### [0.0.218](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.217...v0.0.218) (2020-10-16)
 
-
 ### Bug Fixes
 
-* **form:** desctructure Formik's field props instead of copying them ([#414](https://github.com/gatsby-inc/gatsby-interface/issues/414)) ([adf717d](https://github.com/gatsby-inc/gatsby-interface/commit/adf717d86efcb0ac53c067ed33c00152cd29d505))
+- **form:** desctructure Formik's field props instead of copying them ([#414](https://github.com/gatsby-inc/gatsby-interface/issues/414)) ([adf717d](https://github.com/gatsby-inc/gatsby-interface/commit/adf717d86efcb0ac53c067ed33c00152cd29d505))
 
 ### [0.0.217](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.216...v0.0.217) (2020-10-14)
 
-
 ### Bug Fixes
 
-* **forms:** fix CheckboxConnectedField not properly applying 'checked' state ([#411](https://github.com/gatsby-inc/gatsby-interface/issues/411)) ([2ca386f](https://github.com/gatsby-inc/gatsby-interface/commit/2ca386fb86cd4979efffcc1caf69c33d65e04dee))
+- **forms:** fix CheckboxConnectedField not properly applying 'checked' state ([#411](https://github.com/gatsby-inc/gatsby-interface/issues/411)) ([2ca386f](https://github.com/gatsby-inc/gatsby-interface/commit/2ca386fb86cd4979efffcc1caf69c33d65e04dee))
 
 ### [0.0.216](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.215...v0.0.216) (2020-10-13)
 
-
 ### Features
 
-* **icons:** add new plan icons ([#406](https://github.com/gatsby-inc/gatsby-interface/issues/406)) ([fbb6423](https://github.com/gatsby-inc/gatsby-interface/commit/fbb64232d0a5e5d940a0d566d96cb9ab7266bda7))
+- **icons:** add new plan icons ([#406](https://github.com/gatsby-inc/gatsby-interface/issues/406)) ([fbb6423](https://github.com/gatsby-inc/gatsby-interface/commit/fbb64232d0a5e5d940a0d566d96cb9ab7266bda7))
 
 ### [0.0.215](https://github.com/gatsby-inc/gatsby-interface/compare/v0.0.214...v0.0.215) (2020-10-08)
 

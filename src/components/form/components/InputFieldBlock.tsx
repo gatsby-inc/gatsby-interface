@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import * as React from "react"
-
-import { FormFieldBlock, WithFormFieldBlock } from "./FormFieldBlock"
+import { useAriaFormField } from "../../form-skeletons"
+import { FormFieldBlockBoilerplate, WithFormFieldBlock } from "./FormFieldBlock"
 import { StyledInput, StyledInputProps } from "./styled-primitives/StyledInput"
 
 export type InputFieldBlockProps = WithFormFieldBlock<StyledInputProps>
@@ -24,26 +24,30 @@ export const InputFieldBlock = React.forwardRef<
     ...rest
   } = props
 
+  const fieldData = useAriaFormField(id, {
+    required: required,
+    hasError: !!error,
+    hasHint: !!hint,
+    validationMode,
+  })
+
   return (
-    <FormFieldBlock
+    <FormFieldBlockBoilerplate
+      fieldData={fieldData}
       id={id}
       label={label}
       error={error}
       hint={hint}
-      required={required}
       labelSize={labelSize}
-      validationMode={validationMode}
       layout={layout}
       className={className}
     >
-      {controlProps => (
-        <StyledInput
-          ref={ref}
-          {...controlProps}
-          css={{ width: `100%` }}
-          {...rest}
-        />
-      )}
-    </FormFieldBlock>
+      <StyledInput
+        ref={ref}
+        {...fieldData.controlProps}
+        css={{ width: `100%` }}
+        {...rest}
+      />
+    </FormFieldBlockBoilerplate>
   )
 })
