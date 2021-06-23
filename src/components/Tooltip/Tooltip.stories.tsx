@@ -131,6 +131,7 @@ export const WithLongTooltipText = Template.bind({})
 WithLongTooltipText.args = {
   label: LONG_TEXT,
   children: <button>Hover on me!</button>,
+  position: "bottom",
 }
 
 export const LinkWithTooltip = Template.bind({})
