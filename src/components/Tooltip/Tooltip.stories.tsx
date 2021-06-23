@@ -20,6 +20,11 @@ export default {
     readme: {
       sidebar: README,
     },
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/WyBPGOvsiiElvusYrXQ6bY/Tooltip?node-id=19%3A4",
+    },
   },
   argTypes: {
     position: {
