@@ -8,12 +8,6 @@ import { TooltipPosition } from "./types"
 
 const AnimatedTooltipContent = animated(TooltipContent)
 
-const transitionConfig = {
-  from: { opacity: 0, transform: "translateY(10px)" },
-  enter: { opacity: 1, transform: "translateY(0px)" },
-  leave: { opacity: 0, transform: "translateY(10px)" },
-}
-
 export type TooltipProps = Omit<
   React.ComponentPropsWithoutRef<"div">,
   "ref" | "label" | "children"
@@ -27,6 +21,7 @@ export default function Tooltip({
   children,
   id,
   label,
+  position = "top",
   ...rest
 }: TooltipProps) {
   // COPIED FROM @reach/tooltip source:
@@ -47,11 +42,18 @@ export default function Tooltip({
     ref: child.ref,
   })
 
-  const transitions = useTransition(
-    isVisible ? tooltipParams : null,
-    null,
-    transitionConfig
-  )
+  const transitions = useTransition(isVisible ? tooltipParams : null, null, {
+    from: { opacity: 0, transform: "translateY(0px)" },
+    enter: {
+      opacity: 1,
+      transform: `translateY(${position === "top" ? `-4px` : `4px`})`,
+    },
+    leave: { opacity: 0, transform: "translateY(0px)" },
+    config: {
+      tension: 200,
+      friction: 20,
+    },
+  })
 
   return (
     <React.Fragment>
@@ -68,6 +70,7 @@ export default function Tooltip({
             label={label}
             tooltipParams={tooltip}
             style={transitionStyles}
+            position={position}
             {...rest}
           />
         )
