@@ -116,7 +116,7 @@ export const WithRichTooltip = Template.bind({})
 
 WithRichTooltip.args = {
   label: (
-    <span css={{ display: `inline-flex`, alignItems: `center` }}>
+    <span css={{ display: `inline-flex`, alignItems: `center`, gap: 4 }}>
       <MdInfoOutline />
       <span>
         This is a <strong>rich</strong> tooltip
