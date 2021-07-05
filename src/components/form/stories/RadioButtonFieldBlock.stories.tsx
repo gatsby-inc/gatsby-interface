@@ -14,6 +14,7 @@ import {
 import {
   withVariationsContainer,
   getGroupFieldStoryOptions,
+  disableAnimationsDecorator,
 } from "../../../utils/storybook"
 import {
   RadioButtonFieldBlock,
@@ -56,6 +57,7 @@ export default {
       },
     },
   },
+  decorators: [disableAnimationsDecorator],
 } as Meta
 
 const options = getGroupFieldStoryOptions(`short`)

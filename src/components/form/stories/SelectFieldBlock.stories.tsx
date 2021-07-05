@@ -14,6 +14,7 @@ import {
 import {
   withVariationsContainer,
   getGroupFieldStoryOptions,
+  disableAnimationsDecorator,
 } from "../../../utils/storybook"
 import {
   SelectFieldBlock,
@@ -41,6 +42,7 @@ export default {
   argTypes: {
     ...commonFieldArgTypes,
   },
+  decorators: [disableAnimationsDecorator],
 } as Meta
 
 const Template: Story<SelectFieldBlockProps> = args => (
