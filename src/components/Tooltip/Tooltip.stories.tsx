@@ -20,6 +20,11 @@ export default {
     readme: {
       sidebar: README,
     },
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/WyBPGOvsiiElvusYrXQ6bY/Tooltip?node-id=19%3A4",
+    },
   },
   argTypes: {
     position: {
@@ -116,7 +121,7 @@ export const WithRichTooltip = Template.bind({})
 
 WithRichTooltip.args = {
   label: (
-    <span css={{ display: `inline-flex`, alignItems: `center` }}>
+    <span css={{ display: `inline-flex`, alignItems: `center`, gap: 4 }}>
       <MdInfoOutline />
       <span>
         This is a <strong>rich</strong> tooltip
@@ -131,6 +136,7 @@ export const WithLongTooltipText = Template.bind({})
 WithLongTooltipText.args = {
   label: LONG_TEXT,
   children: <button>Hover on me!</button>,
+  position: "bottom",
 }
 
 export const LinkWithTooltip = Template.bind({})

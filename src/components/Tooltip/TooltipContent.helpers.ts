@@ -7,7 +7,7 @@ export const tooltipPosition: Record<TooltipPosition, Position> = {
   bottom: positionBottom,
 }
 
-const MIN_WINDOW_SPACING = 4
+const MIN_WINDOW_SPACING = 8
 
 function positionBottom(
   triggerRect: PRect | null | undefined,

@@ -24,13 +24,15 @@ const baseCss: ThemeCss = theme => ({
   boxShadow: `2px 2px 10px hsla(0, 0%, 0%, 0.1)`,
   // gatsby-interface styles
   background: theme.colors.black,
-  color: theme.colors.whiteFade[80],
-  fontSize: theme.fontSizes[1],
+  color: theme.colors.white,
+  fontSize: theme.fontSizes[0],
   border: "none",
   borderRadius: theme.radii[2],
-  padding: `${theme.space[2]} ${theme.space[3]}`,
+  padding: `${theme.space[3]} ${theme.space[4]}`,
   transformOrigin: "center",
   whiteSpace: "normal",
+  maxWidth: "16rem",
+  lineHeight: theme.lineHeights.dense,
 })
 
 export default function TooltipContent({

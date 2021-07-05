@@ -48,7 +48,7 @@ export default function TooltipPointer({
 }
 
 export const TOOLTIP_POINTER_SIZE = 6
-export const TOOLTIP_POINTER_ADJUST = 1
+export const TOOLTIP_POINTER_ADJUST = 0
 
 const pointerBorderTransparent = `${TOOLTIP_POINTER_SIZE}px solid transparent`
 const pointerBorderFilled = `${TOOLTIP_POINTER_SIZE}px solid black`
